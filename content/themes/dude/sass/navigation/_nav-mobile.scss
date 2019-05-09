@@ -1,0 +1,357 @@
+// ---------------------------------------------------------
+// Site navigation mobile layout
+//
+// The main layout for the website navigation, for the mobile
+// version only.
+// -----------------------------------------------------------
+$nav-toggle-color: #333;
+$nav-toggle-active-color: #fff;
+$nav-background-color: #232426;
+$hamburger-padding-x: 1.5rem;
+$hamburger-padding-y: 5rem;
+$hamburger-layer-width: 4rem;
+$hamburger-layer-height: .2rem;
+$hamburger-layer-spacing: .6rem;
+$hamburger-layer-color: $nav-toggle-color;
+$hamburger-layer-border-radius: 0;
+$hamburger-hover-opacity: .8;
+$hamburger-hover-transition-duration: .15s;
+$hamburger-hover-transition-timing-function: linear;
+$nav-open-from-right: false;
+$nav-open-from-left: false;
+$nav-open-from-bottom: false;
+$nav-open-from-top: true;
+
+@charset 'utf-8';
+
+@import 'hamburgers/_sass/hamburgers/hamburgers';
+
+// Choose hamburger animation here
+// Choices: https://jonsuh.com/hamburgers/
+.hamburger {
+  @extend .hamburger--spin;
+}
+
+// Mobile styles
+@media screen and (max-width: $responsivenav - 1px) {
+
+  // Users that don't have Javascript enabled
+  .no-js .site-header {
+    position: static;
+
+    // Use the same color than navigation
+    background: $nav-background-color;
+  }
+
+  // Disable scroll on html body when menu is opened.
+  .disable-scroll {
+    overflow: hidden;
+  }
+
+  // Ensure nav stays in the same position when activated
+  .js {
+    &.js-nav-active {
+      overflow: hidden;
+
+      .nav-primary {
+        visibility: visible;
+        height: 100vh;
+        overflow: auto;
+        top: 0;
+
+        .menu-items {
+          opacity: 1;
+        }
+
+        @if $nav-open-from-right == true {
+          width: 100vw;
+          right: 0;
+        }
+
+        @if $nav-open-from-left == true {
+          width: 100vw;
+          left: 0;
+        }
+
+        @if $nav-open-from-bottom == true {
+          width: 100vw;
+          bottom: 0;
+          top: initial;
+        }
+
+        @if $nav-open-from-top == true {
+          width: 100vw;
+          top: 0;
+        }
+      }
+    }
+  }
+
+  .js .nav-primary {
+    // Hide mobile navigation by default while enabling use of animations
+    visibility: hidden;
+    height: 100vh;
+    width: 100%;
+    clip: auto;
+    position: fixed;
+    right: 0;
+    top: -100%;
+
+    @if $nav-open-from-right == true {
+      right: -100%;
+      top: 0;
+    }
+
+    @if $nav-open-from-left == true {
+      left: -100%;
+      top: 0;
+    }
+
+    @if $nav-open-from-bottom == true {
+      bottom: -100%;
+      top: initial;
+    }
+
+    @if $nav-open-from-top == true {
+      top: -100%;
+    }
+
+    .menu-items {
+      padding: 15% 0;
+    }
+  }
+
+  .nav-primary {
+    background: $nav-background-color;
+    transition: all .55s;
+    margin: 0;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+
+    .menu-items {
+      transition: all .55s;
+      opacity: 0;
+      margin: 0;
+      width: 100%;
+      float: none;
+      padding: 2rem 0;
+      // We have color here, so it's okay to remove outline
+      outline: none;
+
+      a {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 5%;
+        padding-right: 5.8rem; // Make room for the toggle button (sub indicator)
+        color: #fff;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 1.7rem;
+        text-decoration: none;
+        position: relative;
+        z-index: 0;
+        display: block;
+        outline: none; // We have color here, so it's okay to remove outline
+      }
+
+      a:focus {
+        outline: none;
+      }
+
+      // Prevent nav item overlapping with dropdown opening toggle
+      a.has-submenu {
+        width: 80%;
+        position: static;
+      }
+
+      a:hover,
+      a:focus,
+      a:active {
+        color: $color-links;
+      }
+
+      .current {
+        color: #d23600;
+      }
+
+      .disabled {
+        color: #bbb;
+      }
+
+      .highlighted .sub-arrow:before {
+        display: block;
+        content: '-';
+      }
+
+
+      // Dropdown toggle
+      .dropdown-toggle {
+        position: absolute;
+        top: 0;
+        margin-top: 0;
+        left: auto;
+        right: 2rem;
+        width: 3.7rem;
+        height: 3.7rem;
+        overflow: hidden;
+        font: bold 18px/37px monospace;
+        text-align: center;
+        background: #202020;
+        color: #fff;
+        padding: 0;
+        z-index: 9999;
+        border: 0;
+      }
+
+      .dropdown-toggle:focus {
+        z-index: 10000;
+      }
+
+      .dropdown-toggle:before {
+        content: '+';
+      }
+
+      .dropdown-toggle:hover {
+        background-color: #3e4853;
+        color: #fff;
+      }
+
+      .dropdown-toggle.toggled-on:before {
+        display: block;
+        content: '-';
+      }
+
+      // Dropdowns
+      ul {
+        background: rgba(#666, .1);
+        margin-left: 0;
+        padding: 0;
+      }
+
+      ul a {
+        font-size: 1.4rem;
+      }
+
+      // Slight margins to improve readability of sub-navs
+      // Second level
+      ul > li {
+        padding-left: 1.5rem;
+      }
+
+      // Third level
+      ul > li ul {
+        margin-left: -1.5rem;
+      }
+
+      ul > li ul li {
+        padding-left: 3rem;
+      }
+
+      // Fourth level
+      ul > li ul li ul {
+        margin-left: -3rem;
+      }
+
+      ul > li ul li ul li {
+        padding-left: 4.5rem;
+      }
+    }
+  }
+}
+
+// Hamburger menu icon
+.nav-toggle {
+  list-style: none;
+  z-index: 100000;
+  -webkit-tap-highlight-color: rgba(#000, 0);
+  border: 0;
+  overflow: visible;
+  color: #fff;
+  font-weight: 700;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-touch-callout: none;
+  user-select: none;
+  text-decoration: none;
+  padding: 2rem;
+  margin: 0 -2rem 0 0;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+
+  // Hide from desktops
+  display: none;
+
+  span {
+    color: $nav-toggle-color;
+    font-size: 1.2em;
+  }
+
+  // Alternative focus for mobile nav
+  &:focus {
+    outline: none;
+
+    span span {
+      background-color: $nav-toggle-color;
+    }
+
+    span span:before,
+    span span:after {
+      background-color: $nav-toggle-color;
+    }
+  }
+
+  &:hover,
+  &:active {
+    color: $nav-toggle-color;
+
+    span {
+      color: $nav-toggle-color;
+    }
+  }
+
+  @media (max-width: $responsivenav - 1px) {
+    display: block;
+  }
+
+  // Separate active colors for opened state
+  &.is-active {
+    color: $nav-toggle-active-color;
+  }
+
+  &.is-active span:focus,
+  &.is-active span.focus {
+    .hamburger-box .hamburger-inner {
+      background-color: $nav-toggle-active-color;
+    }
+
+    .hamburger-box .hamburger-inner:after {
+      background-color: $nav-toggle-active-color;
+    }
+  }
+
+  &.is-active span.hamburger-box {
+    .hamburger-inner {
+      background-color: $nav-toggle-active-color;
+    }
+
+    .hamburger-inner:after {
+      background-color: $nav-toggle-active-color;
+    }
+  }
+
+  &.is-active span:focus,
+  &.is-active span:hover,
+  &.is-active span:active {
+    color: $nav-toggle-active-color;
+
+    span {
+      color: $nav-toggle-active-color;
+    }
+  }
+
+  &.is-active span {
+    color: $nav-toggle-active-color;
+  }
+}

@@ -1,0 +1,44 @@
+// --------------------------------------------------------------
+// Theme options
+//
+// Start here!
+// This is the core file where most of the theme magic happens.
+// --------------------------------------------------------------
+
+// Colors
+$color-links: #045d30;
+$color-hover: #111;
+$color-body: #222;
+$color-headings: #222;
+$color-darkgrey: #4f5964;
+
+// Font settings
+// You can use these font stacks normally with `font-family: $font-sans;` for instance.`
+// Please set up fonts in sass/layout/_typography.scss
+$font-base: 'Karla', 'Helvetica Neue', Helvetica, sans-serif;
+$font-headings: 'Karla', 'Helvetica Neue', Helvetica, sans-serif;
+$font-monospace: 'Menlo', 'Courier', monospace;
+
+// Font settings
+$font-min-size: 19px; // Minimum font size, on mobile
+$font-max-size: 18px; // Maximum font size, on desktop
+$font-base-line-height: 1.78; // Line height for paragraphs
+$font-base-line-height-elements: 1.68; // Line height for other elements like table cells and spans
+$headings-weight: 700; // Default title weight. Usually 700 or 900 works pretty well
+
+// Breakpoints
+$grid-type: fluid; // 'fluid' or 'snappy'
+$layout-max-width: 100%;
+
+// Container settings
+$container-default-pad-x: 2rem; // Default padding between containers horizontally. Tweak _general.scss if needed.
+$container-default-pad-y: 6.4rem; // Default vertical padding for containers
+$grid-base-size: 960px; // Layout container max width on desktop. This is default .container size
+$article-max-width: 800px; // Max width for articles (see also $content_width in functions.php!)
+$container-mobile: 480px;
+$container-ipad: 770px;
+$container-ipad-landscape: 1024px;
+$container-desktop: 1200px;
+
+// Where navigation transforms into responsive - scale your window width down to test
+$responsivenav: 960px;

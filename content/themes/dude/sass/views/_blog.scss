@@ -1,0 +1,321 @@
+// ------------------------------------------------
+// WordPress blog & articles view
+//
+// The styles for most of the TinyMCE produced
+// classes and other WordPress editor formatting.
+// ------------------------------------------------
+
+// WordPress alignments
+.cat-links,
+.tags-links {
+  display: block;
+}
+
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 20px;
+}
+
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 20px;
+}
+
+.aligncenter {
+  clear: both;
+  display: block;
+  margin: 0 auto;
+}
+
+del {
+  text-decoration: line-through;
+  color: #666;
+}
+
+.container.container-article {
+  max-width: $article-max-width;
+}
+
+// Required sticky class
+.sticky {
+  background-color: #fafafa;
+  border: 1px solid #e0e0e0;
+  padding: 3rem;
+}
+
+// Required post author comment
+.comments-area .comment-list li.bypostauthor {
+  background-color: #fff6e8;
+  padding: 3rem;
+}
+
+// WordPress captions
+.wp-caption {
+  max-width: 100%;
+
+  img[class*="wp-image-"] {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .wp-caption-text {
+    text-align: left;
+    font-style: italic;
+    padding: 1rem 0;
+    margin-bottom: 20px;
+  }
+}
+
+// Embeds
+.entry-content {
+  margin-bottom: 2em;
+
+  embed,
+  iframe,
+  object,
+  video {
+    max-width: 100%;
+  }
+
+  // Don't add extra margin on top of first title
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+// Tables, codes and pres
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+td,
+th {
+  font-family: $font-base;
+  height: 3rem;
+  padding: 1rem;
+
+  @media (max-width: 600px) {
+    @include stack();
+    display: inline-block;
+    height: auto;
+    padding: 10px 0;
+    text-align: center;
+  }
+}
+
+// Table heading cells
+th {
+  font-weight: 700;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+kbd {
+  border: 1px solid #ccc;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  box-shadow: 0 1px 0 rgba(#000, .2), 0 0 0 2px #fff inset;
+  border-radius: 4px;
+  display: inline-block;
+  text-shadow: 0 1px 0 #fff;
+  line-height: 1.4;
+  white-space: nowrap;
+  padding: 0 .5rem;
+}
+
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 .625rem;
+  color: #333;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: auto;
+
+  &.debug {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  code {
+    padding: 0;
+    font-size: inherit;
+    color: inherit;
+    white-space: pre-wrap;
+    background-color: transparent;
+    border-radius: 0;
+  }
+}
+
+// Taxonomies
+.taxonomy-description {
+  margin-bottom: 2rem;
+}
+
+.post {
+  margin-bottom: 30px;
+}
+
+.entry-header {
+  .entry-title {
+    margin-bottom: .1em;
+
+    a {
+      color: $color-body;
+    }
+  }
+}
+
+.entry-meta {
+  * {
+    color: $color-darkgrey;
+  }
+}
+
+.entry-time {
+  margin-bottom: 1.5em;
+}
+
+.cat {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  a {
+    @extend %small;
+    font-weight: 600;
+  }
+}
+
+ul.tags {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  padding-left: 0;
+
+  li {
+    margin-left: 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding-left: 0;
+    display: inline-block;
+    float: left;
+    margin-top: 0;
+
+    a {
+      font-size: 1.2rem;
+      color: #333;
+      padding: .5rem 1rem;
+      display: inline;
+      border-radius: 4px;
+      background: #f0f0f0;
+      opacity: .8;
+    }
+
+    a:hover {
+      color: #fff;
+      background: #aaa;
+      opacity: 1;
+    }
+  }
+}
+
+.comments-link {
+  @extend %small;
+  text-align: right;
+  display: block;
+
+  svg {
+    fill: #777;
+    position: relative;
+    top: 1px;
+    margin-right: 2px;
+  }
+
+  &:hover,
+  &:focus {
+    color: #111;
+
+    a,
+    a:link,
+    a:visited,
+    svg {
+      color: #111;
+      fill: #111;
+    }
+  }
+}
+
+.entry-footer {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  a {
+    color: $color-darkgrey;
+
+    &:hover {
+      color: $color-links;
+      text-decoration: none;
+    }
+  }
+}
+
+// Posts and comments navigation
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+  @include clearfix;
+  margin: 1.5em 0;
+  overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+  float: left;
+  width: 50%;
+}
+
+.comment-navigation .nav-previous a:before,
+.posts-navigation .nav-previous a:before,
+.post-navigation .nav-previous a:before {
+  content: '← ';
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+  float: right;
+  text-align: right;
+  width: 50%;
+}
+
+.comment-navigation .nav-next a:after,
+.posts-navigation .nav-next a:after,
+.post-navigation .nav-next a:after {
+  content: ' →';
+}
