@@ -16,13 +16,13 @@ get_header();
 <div id="content" class="content-area">
   <main role="main" id="main" class="site-main">
 
-    <!-- hard coded hero -->
+    <!-- static hero -->
 
     <!-- dynamic services -->
 
     <!-- dynamic references -->
 
-    <!-- partially dynamic cta -->
+    <!-- dynamic cta -->
 
     <!-- dynamic blog -->
 
