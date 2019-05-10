@@ -1,0 +1,70 @@
+{
+    "key": "group_5cd57870829a3",
+    "title": "Modulaarinen sisältö",
+    "fields": [
+        {
+            "key": "field_5cd57881b8204",
+            "label": "Modulaarinen sisältö",
+            "name": "modular",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_5cd5788f56b28": {
+                    "key": "layout_5cd5788f56b28",
+                    "name": "example-static",
+                    "label": "ESIMERKKI: staattinen lohko",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5cd57a1ab8205",
+                            "label": "",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Tämän lohkon sisällöt eivät ole muutettavissa.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Lisää rivi",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1557494333
+}
