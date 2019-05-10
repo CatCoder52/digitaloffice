@@ -15,6 +15,13 @@ require get_theme_file_path( '/inc/menus.php' );
 require get_theme_file_path( '/inc/nav-walker.php' );
 
 /**
+ *  Content.
+ */
+require get_theme_file_path( '/inc/cpt/reference.php' );
+require get_theme_file_path( '/inc/cpt/person.php' );
+require get_theme_file_path( '/inc/cpt/merch.php' );
+
+/**
  * Enable theme support for essential features.
  */
 add_theme_support( 'automatic-feed-links' );
