@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:05:23
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-05-10 16:05:31
+ * @Last Modified time: 2019-05-10 16:07:25
  *
  * @package dude2019
  */
@@ -49,7 +49,7 @@ if ( have_rows( 'modular', $have_rows_id ) ) :
      *  Make cache key.
      *  Key contains $have_rows_id to differiate modules if same module is used on multiple pages
      */
-    $template_part_cache_key = "siteprefix_modular_{$have_rows_id}_{$template_part_name}|{$template_row_index}";
+    $template_part_cache_key = "dude_modular_{$have_rows_id}_{$template_part_name}|{$template_row_index}";
 
     /**
      *  Check if module needs to bypass cache or we are in development envarioment.

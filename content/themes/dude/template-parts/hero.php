@@ -1,28 +1,18 @@
 <?php
 /**
- * Default hero template file.
+ * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
+ * @Date:               2019-05-10 16:05:23
+ * @Last Modified by:   Timi Wahalahti
+ * @Last Modified time: 2019-05-10 16:14:06
  *
- * This is the default hero image for page templates, called
- * 'block'. Strictly air specific.
- *
- * @package dude
+ * @package dude2019
  */
 
-// Block settings
-if ( is_front_page() ) :
-	$block_class = ' block-front';
-else :
-	$block_class = ' block-' . get_post_type();
-endif;
 
-// Featured image
-if ( has_post_thumbnail() ) :
-	$featured_image = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
-else :
-	$featured_image = get_theme_file_uri( 'images/default.jpg' );
-endif;
-?>
-
-<div class="block<?php echo $block_class; ?>" style="background-image: url('<?php echo esc_url( $featured_image ); ?>');">
-  <div class="shade"></div>
-</div>
+if ( is_front_page() ) {
+  include get_theme_file_path( 'template-parts/hero-fp.php' );
+} else if ( 10 === get_the_id() ) {
+  include get_theme_file_path( 'template-parts/hero-fp.php' );
+} else {
+  include get_theme_file_path( 'template-parts/hero-normal.php' );
+}
