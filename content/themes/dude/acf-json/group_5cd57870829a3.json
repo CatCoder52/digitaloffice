@@ -42,6 +42,60 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5cd5810ec53d0": {
+                    "key": "layout_5cd5810ec53d0",
+                    "name": "our-services",
+                    "label": "Mitä me teemme?",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5cd58127c53d1",
+                            "label": "",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Tämä alue on kovakoodattu ja sitä ei voi muokata hallintapaneelista.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5cd58187c53d2": {
+                    "key": "layout_5cd58187c53d2",
+                    "name": "references",
+                    "label": "Referenssit",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5cd58190c53d3",
+                            "label": "",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Tässä näytetään automaattisesti uusimmat referenssit.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Lisää rivi",
@@ -66,5 +120,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1557494333
+    "modified": 1557496252
 }
