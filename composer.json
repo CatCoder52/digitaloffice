@@ -46,6 +46,34 @@
     {
       "type": "vcs",
       "url": "https://github.com/digitoimistodude/gulp-sitemap-generator"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "advanced-custom-fields/advanced-custom-fields-pro",
+        "version": "5.8.0",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download"
+        },
+        "require": {
+          "philippbaschke/acf-pro-installer": "^1.0",
+          "composer/installers": "^1.0"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "relevanssi/relevanssi-premium",
+        "version": "2.2.5",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://www.relevanssi.com/update/fetch_latest_version.php?api_key=11879452"
+        }
+      }
     }
   ],
   "require": {
@@ -68,7 +96,9 @@
     "wpackagist-plugin/worker": "*",
     "wpackagist-plugin/redis-cache": "*",
     "wpackagist-plugin/autodescription": "*",
-    "aucor/dynamic-mo-loader": "*"
+    "aucor/dynamic-mo-loader": "*",
+    "advanced-custom-fields/advanced-custom-fields-pro": "^5.8.0",
+    "relevanssi/relevanssi-premium": "^2.2.5"
   },
   "require-dev": {
     "rarst/wps": "*",

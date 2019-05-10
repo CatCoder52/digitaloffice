@@ -4,9 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2908fb477dd3547d28019cec0a2f4c59",
-    "content-hash": "cc8dfc9af12c7bed7fc18afc83b0b034",
+    "hash": "cbff7fec67dff629a8524c3ea7ba474f",
+    "content-hash": "6cd4b215302aaafac5686a6740d3bf61",
     "packages": [
+        {
+            "name": "advanced-custom-fields/advanced-custom-fields-pro",
+            "version": "5.8.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&t=5.8.0",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "^1.0",
+                "philippbaschke/acf-pro-installer": "^1.0"
+            },
+            "type": "wordpress-plugin"
+        },
         {
             "name": "aucor/dynamic-mo-loader",
             "version": "1.1.4",
@@ -1508,6 +1523,62 @@
             "time": "2013-02-24 15:01:54"
         },
         {
+            "name": "philippbaschke/acf-pro-installer",
+            "version": "v1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PhilippBaschke/acf-pro-installer.git",
+                "reference": "f18e537183958159ef5f6cb1f5b684f59d55f3eb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PhilippBaschke/acf-pro-installer/zipball/f18e537183958159ef5f6cb1f5b684f59d55f3eb",
+                "reference": "f18e537183958159ef5f6cb1f5b684f59d55f3eb",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0",
+                "php": ">=5.5",
+                "vlucas/phpdotenv": "^2.2"
+            },
+            "require-dev": {
+                "composer/composer": "1.0.*",
+                "phpunit/phpunit": "4.8.*",
+                "satooshi/php-coveralls": "1.*",
+                "squizlabs/php_codesniffer": "2.*"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "PhilippBaschke\\ACFProInstaller\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "PhilippBaschke\\ACFProInstaller\\": "src/ACFProInstaller"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Philipp Baschke",
+                    "email": "philipp@baschke.com"
+                }
+            ],
+            "description": "An install helper for Advanced Custom Fields PRO",
+            "keywords": [
+                "acf",
+                "composer",
+                "env",
+                "plugin",
+                "pro",
+                "wordpress",
+                "wp"
+            ],
+            "time": "2016-07-20 10:19:36"
+        },
+        {
             "name": "psr/log",
             "version": "1.1.0",
             "source": {
@@ -1553,6 +1624,17 @@
                 "psr-3"
             ],
             "time": "2018-11-20 15:27:04"
+        },
+        {
+            "name": "relevanssi/relevanssi-premium",
+            "version": "2.2.5",
+            "dist": {
+                "type": "zip",
+                "url": "https://www.relevanssi.com/update/fetch_latest_version.php?api_key=11879452",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "wordpress-plugin"
         },
         {
             "name": "rmccue/requests",
@@ -4193,15 +4275,15 @@
         },
         {
             "name": "wpackagist-plugin/imagify",
-            "version": "1.9.0",
+            "version": "1.9.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/imagify/",
-                "reference": "trunk"
+                "reference": "tags/1.9.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/imagify.zip?timestamp=1557156296",
+                "url": "https://downloads.wordpress.org/plugin/imagify.1.9.1.zip",
                 "reference": null,
                 "shasum": null
             },
