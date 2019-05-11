@@ -36,15 +36,15 @@
     color: $color-dude-white;
     display: flex;
 
-    .cta-link:after {
-      background: $color-dude-white;
-    }
-
     // Let's reset the padding from the hero container, no need in full width hero
     padding-top: 0;
     padding-bottom: 0;
     padding-left: 0;
     padding-right: 0;
+
+    .cta-link:after {
+      background: $color-dude-white;
+    }
 
     @media (max-width: 600px) {
       overflow: hidden;
@@ -111,10 +111,6 @@
     a {
       color: $color-dude-white;
     }
-
-    a {
-      text-decoration: none;
-    }
   }
 
   .content.content-select-service {
@@ -132,6 +128,7 @@
 
     ul {
       margin-bottom: 6rem;
+      width: 100%;
     }
 
     li {

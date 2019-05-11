@@ -2,7 +2,10 @@
   background: $color-dude-darkgrey;
   color: $color-dude-white;
   height: 100vh;
-  padding-top: 30rem;
+
+  @media (min-width: 600px) {
+    padding-right: 0;
+  }
 
   .block-title {
     color: $color-dude-white;
@@ -10,11 +13,31 @@
     margin: 0;
   }
 
+  .block-head {
+    padding-top: 20rem;
+    padding-bottom: 15rem;
+  }
+
+  .cta-link a {
+    color: $color-dude-white;
+  }
+
+  .cta-link:after {
+    background: $color-dude-white;
+  }
+
   h3 {
-    color: #fff;
+    color: $color-dude-white;
   }
 
   .cols {
-    @include grid(3);
+    @include grid(3, $gutter_x: 10rem, $gutter_y: 0);
+  }
+
+  .image {
+    @include background-cover();
+    width: 40vw;
+    height: 75rem;
+    margin-top: -20vh;
   }
 }

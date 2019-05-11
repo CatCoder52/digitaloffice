@@ -127,7 +127,7 @@ a.global-link {
 }
 
 .cta-link {
-  display: inline;
+  display: inline-block;
 
   &:hover:after {
     width: 100%;
