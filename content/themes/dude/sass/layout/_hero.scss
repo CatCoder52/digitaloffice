@@ -90,7 +90,8 @@
       opacity: .2;
     }
 
-    ul:hover a:hover {
+    ul:hover a:hover,
+    ul:hover li:hover a {
       opacity: 1;
     }
 
