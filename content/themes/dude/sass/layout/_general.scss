@@ -15,6 +15,22 @@
   max-width: $layout-max-width;
   padding-left: $margin-default-cols;
   padding-right: $margin-default-cols;
+  padding-top: $padding-default-rows;
+  padding-bottom: $padding-default-rows;
+
+  @media (max-width: $container-ipad) {
+    padding-left: $padding-default-cols-ipad;
+    padding-right: $padding-default-cols-ipad;
+    padding-top: $padding-default-rows-ipad;
+    padding-bottom: $padding-default-rows-ipad;
+  }
+
+  @media (max-width: $container-mobile) {
+    padding-left: $padding-default-cols-mobile;
+    padding-right: $padding-default-cols-mobile;
+    padding-top: $padding-default-rows-mobile;
+    padding-bottom: $padding-default-rows-mobile;
+  }
 }
 
 // Default shade on top of blocks
@@ -41,43 +57,13 @@
 // Containers
 .container {
   margin: 0 auto;
-  padding-top: $padding-default-rows;
-  padding-bottom: $padding-default-rows;
-  padding-left: $padding-default-cols;
-  padding-right: $padding-default-cols;
-
-  @if $grid-type == fluid {
-    max-width: $grid-base-size;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: $padding-default-cols;
-    padding-right: $padding-default-cols;
-  }
-
-  @else if $grid-type == snappy {
-    width: 100%;
-
-    @media (min-width: $container-ipad) {
-      width: 700px;
-    }
-
-    @media (min-width: $container-ipad-landscape) {
-      width: 900px;
-    }
-
-    @media (min-width: $container-desktop) {
-      width: $grid-base-size;
-    }
-  }
-
-  @else {
-    @include center($max_width: $grid-base-size, $pad: 0);
-  }
-
-  @media (max-width: $container-ipad - 10px) {
-    padding-top: $padding-default-rows / 2;
-    padding-bottom: $padding-default-rows / 2;
-  }
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  max-width: $grid-base-size;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 // Clear block containers by default
@@ -136,6 +122,6 @@ a.global-link {
 .block-title-pre {
   @extend %h4;
   opacity: .5;
-  margin-bottom: 3.5rem;
+  margin-bottom: $margin-reasonable-space;
   margin-top: 0;
 }
