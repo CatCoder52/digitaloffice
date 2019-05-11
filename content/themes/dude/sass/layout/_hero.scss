@@ -1,0 +1,17 @@
+.block.block-hero {
+  &.block-hero-frontpage {
+    height: 100vh;
+    background: $color-dude-deep-black;
+    color: $color-dude-white;
+
+    h1,
+    h2,
+    a {
+      color: $color-dude-white;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}

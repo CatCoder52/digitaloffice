@@ -5,16 +5,19 @@
 // This is the core file where most of the theme magic happens.
 // --------------------------------------------------------------
 
-// Colors
-$color-links: #000;
-$color-hover: #111;
-$color-body: #222;
-$color-headings: #222;
+// Brand colors
+$color-dude-black: #222;
+$color-dude-deep-black: #050505;
+$color-dude-white: #fff;
+
+// Default colors
+$color-links: $color-dude-deep-black;
+$color-hover: $color-dude-black;
+$color-body: $color-dude-black;
+$color-headings: $color-dude-black;
 $color-darkgrey: #4f5964;
 
-// Font settings
-// You can use these font stacks normally with `font-family: $font-sans;` for instance.`
-// Please set up fonts in sass/layout/_typography.scss
+// Fonts
 $font-base: 'Neuzeit Grotesk', 'Helvetica Neue', Helvetica, sans-serif;
 $font-headings: 'Neuzeit Grotesk', 'Helvetica Neue', Helvetica, sans-serif;
 $font-monospace: 'Menlo', 'Courier', monospace;
