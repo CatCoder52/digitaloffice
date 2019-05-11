@@ -9,4 +9,12 @@
     max-width: 35vw;
     margin: 0;
   }
+
+  h3 {
+    color: #fff;
+  }
+
+  .cols {
+    @include grid(3);
+  }
 }

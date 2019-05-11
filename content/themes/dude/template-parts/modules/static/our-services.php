@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:49:22
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-11 15:54:45
+ * @Last Modified time: 2019-05-11 16:15:18
  *
  * @package dude2019
  */
@@ -29,6 +29,10 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut ex consequat, facilisis.</p>
 
         <p class="cta-link"><a href="#">Tutustu</a></p>
+      </div>
+
+      <div class="col col-featured-image">
+        <div class="image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/placeholder-2.png');"></div>
       </div>
     </div>
 
