@@ -42,11 +42,11 @@ a {
 
 // Preset for small fonts
 %small {
-  @include responsive-font(1.2vw, 14px, 17px);
+  @include responsive-font(14px, 17px);
 }
 
 %extrasmall {
-  @include responsive-font(1.2vw, 12px, 14px);
+  @include responsive-font(12px, 14px);
 }
 
 // Defaults
@@ -69,7 +69,7 @@ td,
 table,
 tr,
 %default {
-  @include responsive-font(3vw, $font-min-size, $font-max-size, $font-max-size);
+  @include responsive-font($font-min-size, $font-max-size);
   letter-spacing: -.003em;
   line-height: $font-base-line-height-elements;
 }
@@ -100,36 +100,38 @@ h6 {
   font-weight: $headings-weight;
 }
 
-// Define heading scales
-// Current: Perfect fourth: https://type-scale.com/
+// Based on type-scale with 14.255 base size where h1 is max 60px.
+// See model that these are based on: https://www.dude.fi/type-scale.png
+// And Versett.com: https://versett.com/
+// Define your type scale here: https://type-scale.com/
 h1,
 %h1 {
-  @include responsive-font(3.2vw, 32px, 51px);
+  @include responsive-font(30px, 60px);
 }
 
 h2,
 %h2 {
-  @include responsive-font(2.4vw, 24px, 38px);
+  @include responsive-font(25px, 45px);
 }
 
 h3,
 %h3 {
-  @include responsive-font(1.6vw, 21px, 28px);
+  @include responsive-font(25px, 35px);
 }
 
 h4,
 %h4 {
-  @include responsive-font(1.4vw, 18px, 21px);
+  @include responsive-font(19px, 25px);
 }
 
 h5,
 %h5 {
-  @include responsive-font(1.2vw, 14px, 17px);
+  @include responsive-font(19px, 22px);
 }
 
 h6,
 %h6 {
-  @include responsive-font(1.2vw, 14px, 12px);
+  @include responsive-font(16px, 18px);
 }
 
 // Lists
@@ -207,7 +209,6 @@ blockquote {
   margin: 0;
 
   p {
-    @include responsive-font(2vw, 17px, 25px, 25px);
     font-style: italic;
     margin-bottom: 0;
     position: relative;

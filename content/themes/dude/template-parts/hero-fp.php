@@ -3,10 +3,11 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-11 12:53:40
+ * @Last Modified time: 2019-05-11 12:58:07
  *
  * @package dude2019
  */
+
 ?>
 
 <section class="block block-hero block-hero-frontpage">
