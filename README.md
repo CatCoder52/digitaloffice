@@ -1,11 +1,5 @@
-# dude2019
+# Dude.fi - 2019
 ![based_on_air_version 4.6.5_](https://img.shields.io/badge/based_on_air_version-4.6.5_-brightgreen.svg?style=flat-square) ![project_created 09_May_2019](https://img.shields.io/badge/project_created-09_May_2019-blue.svg?style=flat-square) ![Tested_up_to WordPress_5.0.3](https://img.shields.io/badge/Tested_up_to-WordPress_5.0.3-blue.svg?style=flat-square) ![Compatible_with PHP_7.2](https://img.shields.io/badge/Compatible_with-PHP_7.2-green.svg?style=flat-square)
-
-This project is hand made for customer. Customer basic details are here:
-
-**Company name:** (Please fill)
-**Contact person:** (Please fill)
-**Contact email:** (Please fill)
 
 ## Stack
 
@@ -17,8 +11,8 @@ This project is built on [digitoimistodude/dudestack](https://github.com/digitoi
 
 ## Basic details
 
-**Developers:** [ronilaukkarinen](https://github.com/ronilaukkarinen)
-**Custom post type plugin:** ACF Pro
+**Developers:** [ronilaukkarinen](https://github.com/ronilaukkarinen), [timiwahalahti](https://github.com/timiwahalahti)  
+**Custom post type plugin:** ACF Pro  
 
 ## Theme screenshot
 
