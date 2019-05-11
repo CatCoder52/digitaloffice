@@ -5,6 +5,11 @@
   .featured-image.featured-image-side {
     @include background-cover();
     width: 50vw;
+    height: 110vh;
+    position: relative;
+    z-index: 2;
+    transition: all $transition-duration;
+    top: 0;
   }
 
   &.block-hero-frontpage {
@@ -21,6 +26,9 @@
 
     .container {
       @include grid(2, $gutter_x: 0, $gutter_y: 0);
+
+      // Let's show overlapping featured-image
+      overflow: visible;
 
       // Let's reset the padding from the hero container, no need in full width hero
       padding: 0;
