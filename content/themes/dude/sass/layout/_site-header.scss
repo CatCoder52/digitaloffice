@@ -3,8 +3,6 @@
   z-index: 15;
   padding-bottom: 2rem;
   padding-top: 2rem;
-  padding-left: $padding-default-cols;
-  padding-right: $padding-default-cols;
   max-width: $grid-base-size;
   margin-left: auto;
   margin-right: auto;
@@ -13,6 +11,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-left: $padding-default-cols;
+  padding-right: $padding-default-cols;
+
+  @media (max-width: $container-ipad) {
+    padding-left: $padding-default-cols-ipad;
+    padding-right: $padding-default-cols-ipad;
+  }
+
+  @media (max-width: $container-mobile) {
+    padding-left: $padding-default-cols-mobile;
+    padding-right: $padding-default-cols-mobile;
+  }
 }
 
 .site-title {
