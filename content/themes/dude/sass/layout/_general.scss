@@ -13,8 +13,8 @@
   position: relative;
   min-height: 100px;
   max-width: $layout-max-width;
-  margin-left: $margin-default-cols;
-  margin-right: $margin-default-cols;
+  padding-left: $margin-default-cols;
+  padding-right: $margin-default-cols;
 }
 
 // Default shade on top of blocks
@@ -126,4 +126,16 @@ a.global-link {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+// Dude specific general typography related styles
+.block-title {
+  line-height: 1.33;
+}
+
+.block-title-pre {
+  @extend %h4;
+  opacity: .5;
+  margin-bottom: 3.5rem;
+  margin-top: 0;
 }

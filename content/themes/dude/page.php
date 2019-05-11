@@ -20,7 +20,11 @@ get_header(); ?>
   <main role="main" id="main" class="site-main">
 
     <?php include get_theme_file_path( 'template-parts/hero.php' );
-    include get_theme_file_path( 'template-parts/content-modular.php' ); ?>
+    include get_theme_file_path( 'template-parts/content-modular.php' );
+
+    // Temp (didn't get modular to show up
+    include get_theme_file_path( 'template-parts/modules/static/our-services.php' );
+    ?>
 
   </main><!-- #main -->
 </div><!-- #primary -->
