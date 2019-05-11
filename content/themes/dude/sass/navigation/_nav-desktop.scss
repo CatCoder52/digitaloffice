@@ -11,7 +11,7 @@ $icon-arrow-right: '../svg/chevron-right-dark.svg';
 $icon-arrow-down: '../svg/chevron-down-dark.svg';
 $icon-arrow-left: '../svg/chevron-left-dark.svg';
 $hover-intent: .3s;
-$absolute-navigation: false;
+$absolute-navigation: true;
 
 @if $absolute-navigation == true {
   $icon-arrow-down: '../svg/chevron-down.svg';

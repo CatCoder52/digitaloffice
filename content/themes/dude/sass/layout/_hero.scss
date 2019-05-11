@@ -23,12 +23,26 @@
       list-style: none;
     }
 
+    li {
+      margin-bottom: 3rem;
+    }
+
+    li:last-of-type {
+      margin-bottom: 0;
+    }
+
     li a {
       @extend %h1;
       font-weight: 300;
     }
 
-    .animate.animate-underline-idle:after {
+    li a:hover:after,
+    .animate.animate-underline-idle:hover:after {
+      animation-name: none;
+      width: 30rem;
+    }
+
+    li a:after {
       width: 0;
       height: .2rem;
       background: $color-dude-white;
@@ -36,6 +50,9 @@
       content: '';
       display: block;
       margin-top: -1.2rem;
+    }
+
+    .animate.animate-underline-idle:after {
       animation-name: underline-idle;
       animation-duration: 20s;
       animation-iteration-count: infinite;
