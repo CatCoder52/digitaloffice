@@ -23,3 +23,14 @@
     color: #111;
   }
 }
+
+// If dark hero, show lighter links and logo
+.has-dark-hero {
+  nav ul li a {
+    color: #fff;
+  }
+
+  .site-title svg {
+    fill: #fff;
+  }
+}

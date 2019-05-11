@@ -20,8 +20,9 @@
   <?php wp_head(); ?>
 </head>
 
-<body <?php body_class( 'no-js' );; ?>>
-  <div id="page" class="site">
+<body <?php body_class( 'no-js' ); ?>>
+  <!-- TODO: Move .has-dark-hero class to body -->
+  <div id="page" class="site has-dark-hero">
    <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'dude' ); ?></a>
 
    <div class="nav-container">
