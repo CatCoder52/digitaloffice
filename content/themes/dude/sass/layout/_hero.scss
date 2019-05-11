@@ -3,6 +3,14 @@
     height: 100vh;
     background: $color-dude-deep-black;
     color: $color-dude-white;
+    display: flex;
+    align-items: center;
+
+    .container {
+      display: flex;
+      align-items: center;
+      width: 100%;
+    }
 
     h1,
     h2,
