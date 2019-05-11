@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-11 13:46:46
+ * @Last Modified time: 2019-05-11 14:44:34
  *
  * @package dude2019
  */
@@ -15,13 +15,17 @@
 
     <div class="content content-select-service">
 
-      <ul>
-        <li><a href="#" class="animate animate-underline-idle">Haluan uudet verkkosivut</a></li>
-        <li><a href="#">Tarvitsen visuaalista suunnittelua</a></li>
-        <li><a href="#">Kunhan vaan kahtelen...</a></li>
-      </ul>
+      <div class="selection">
+        <ul>
+          <li><a href="#">Haluan uudet verkkosivut</a></li>
+          <li><a href="#">Tarvitsen visuaalista suunnittelua</a></li>
+          <li><a href="#">Kunhan vaan kahtelen...</a></li>
+        </ul>
+      </div>
 
     </div>
+
+    <div class="featured-image featured-image-side" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/placeholder.png');"></div>
 
   </div>
 </section>

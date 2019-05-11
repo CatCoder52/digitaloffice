@@ -1,13 +1,16 @@
 @keyframes underline-idle {
   0% {
     width: 0%;
+    opacity: .7;
   }
 
   50% {
-    width: 40rem;
+    width: 100%;
+    opacity: 1;
   }
 
   100% {
     width: 0;
+    opacity: .7;
   }
 }

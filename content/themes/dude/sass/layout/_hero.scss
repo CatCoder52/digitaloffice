@@ -2,17 +2,33 @@
   margin-left: 0;
   margin-right: 0;
 
+  .featured-image.featured-image-side {
+    @include background-cover();
+    width: 50vw;
+  }
+
   &.block-hero-frontpage {
     height: 100vh;
     background: $color-dude-deep-black;
     color: $color-dude-white;
     display: flex;
-    align-items: center;
 
     .container {
+      @include grid(2, $gutter_x: 0, $gutter_y: 0);
+
+      // Let's reset the padding from the hero container, no need in full width hero
+      padding: 0;
+    }
+
+    .selection {
       display: flex;
       align-items: center;
-      width: 100%;
+
+      // These are the same values than in general containers
+      padding-top: $padding-default-rows;
+      padding-bottom: $padding-default-rows;
+      padding-left: $padding-default-cols;
+      padding-right: $padding-default-cols;
     }
 
     h1,
@@ -27,15 +43,19 @@
   }
 
   .content.content-select-service {
+    display: flex;
+    align-items: center;
+
     ul,
     li {
       margin: 0;
       padding: 0;
       list-style: none;
+      transition: all $transition-duration;
     }
 
     li {
-      margin-bottom: 3rem;
+      margin-bottom: $padding-default-rows;
     }
 
     li:last-of-type {
@@ -45,12 +65,22 @@
     li a {
       @extend %h1;
       font-weight: 300;
+      line-height: 1.2;
+      display: inline-block;
+      transition: all $transition-duration;
     }
 
-    li a:hover:after,
-    .animate.animate-underline-idle:hover:after {
-      animation-name: none;
-      width: 30rem;
+    // Fade all out except hovered one
+    ul:hover li a {
+      opacity: .2;
+    }
+
+    ul:hover a:hover {
+      opacity: 1;
+    }
+
+    li a:hover:after {
+      width: 100%;
     }
 
     li a:after {
@@ -60,14 +90,15 @@
       position: relative;
       content: '';
       display: block;
-      margin-top: -1.2rem;
+      transition: all $transition-duration;
     }
 
-    .animate.animate-underline-idle:after {
-      animation-name: underline-idle;
-      animation-duration: 20s;
-      animation-iteration-count: infinite;
-      animation-timing-function: ease-in-out;
+    .init:after {
+      width: 100%;
+    }
+
+    .init:hover:after {
+      width: 0;
     }
   }
 }
