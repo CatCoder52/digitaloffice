@@ -14,4 +14,32 @@
       text-decoration: none;
     }
   }
+
+  .content.content-select-service {
+    ul,
+    li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    li a {
+      @extend %h1;
+      font-weight: 300;
+    }
+
+    .animate.animate-underline-idle:after {
+      width: 0;
+      height: .2rem;
+      background: $color-dude-white;
+      position: relative;
+      content: '';
+      display: block;
+      margin-top: -1.2rem;
+      animation-name: underline-idle;
+      animation-duration: 20s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
+  }
 }
