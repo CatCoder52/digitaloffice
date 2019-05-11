@@ -7,10 +7,10 @@
 // -----------------------------------------------------------
 
 // Set up self-hosted fonts here
-@include fontFace('Karla', '../fonts/karla-regular', 400);
-@include fontFace('Karla', '../fonts/karla-italic', 400, italic);
-@include fontFace('Karla', '../fonts/karla-bold', 700);
-@include fontFace('Karla', '../fonts/karla-bolditalic', 700, italic);
+@include fontFace('Neuzeit Grotesk', '../fonts/32E13D_0_0', 300);
+@include fontFace('Neuzeit Grotesk', '../fonts/32E13D_2_0', 400);
+@include fontFace('Neuzeit Grotesk', '../fonts/32E13D_3_0', 700);
+@include fontFace('Neuzeit Grotesk', '../fonts/32E13D_1_0', 900);
 
 // Set root size for rems
 :root {

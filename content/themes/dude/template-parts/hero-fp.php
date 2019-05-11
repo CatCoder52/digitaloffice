@@ -2,8 +2,8 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-05-10 16:17:03
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2019-05-11 12:53:40
  *
  * @package dude2019
  */
@@ -15,8 +15,8 @@
     <div class="content">
 
       <h2><a href="#">Haluan uudet verkkosivut</a></h2>
-      <h2><a href="#">Tarvtsen visuaalista suunnittelua</a></h2>
-      <h2><a href="#">Kuhan vaan kahtelen...</a></h2>
+      <h2><a href="#">Tarvitsen visuaalista suunnittelua</a></h2>
+      <h2><a href="#">Kunhan vaan kahtelen...</a></h2>
 
     </div>
 

@@ -20,11 +20,11 @@ $font-headings: 'Neuzeit Grotesk', 'Helvetica Neue', Helvetica, sans-serif;
 $font-monospace: 'Menlo', 'Courier', monospace;
 
 // Font settings
-$font-min-size: 16px; // Minimum font size, on mobile
-$font-max-size: 22px; // Maximum font size, on desktop
-$font-base-line-height: 1.55; // Line height for paragraphs
-$font-base-line-height-elements: 1.55; // Line height for other elements like table cells and spans
-$headings-weight: 900; // Default title weight. Usually 700 or 900 works pretty well
+$font-min-size: 16px;
+$font-max-size: 22px;
+$font-base-line-height: 1.55;
+$font-base-line-height-elements: 1.55;
+$headings-weight: 300;
 
 // Breakpoints
 $grid-type: fluid; // 'fluid' or 'snappy'
