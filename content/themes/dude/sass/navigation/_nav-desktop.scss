@@ -13,6 +13,23 @@ $icon-arrow-left: '../svg/chevron-left-dark.svg';
 $hover-intent: .3s;
 $absolute-navigation: true;
 
+.has-dark-hero {
+  .hamburger-inner,
+  .hamburger-inner::after,
+  .hamburger-inner::before,
+  .hamburger-inner:focus,
+  .hamburger-inner:focus::after,
+  .hamburger-inner:focus::before,
+  .nav-toggle:focus .hamburger-inner,
+  .nav-toggle:focus .hamburger-inner::after,
+  .nav-toggle:focus .hamburger-inner::before,
+  .nav-toggle:focus .hamburger-inner:focus,
+  .nav-toggle:focus .hamburger-inner:focus::after,
+  .nav-toggle:focus .hamburger-inner:focus::before {
+    background-color: #fff;
+  }
+}
+
 @if $absolute-navigation == true {
   $icon-arrow-down: '../svg/chevron-down.svg';
 
