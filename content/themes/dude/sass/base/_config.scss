@@ -15,8 +15,8 @@ $color-darkgrey: #4f5964;
 // Font settings
 // You can use these font stacks normally with `font-family: $font-sans;` for instance.`
 // Please set up fonts in sass/layout/_typography.scss
-$font-base: 'Karla', 'Helvetica Neue', Helvetica, sans-serif;
-$font-headings: 'Karla', 'Helvetica Neue', Helvetica, sans-serif;
+$font-base: 'Neuzeit Grotesk', 'Helvetica Neue', Helvetica, sans-serif;
+$font-headings: 'Neuzeit Grotesk', 'Helvetica Neue', Helvetica, sans-serif;
 $font-monospace: 'Menlo', 'Courier', monospace;
 
 // Font settings
@@ -41,19 +41,16 @@ $container-ipad-landscape: 1024px;
 $container-desktop: 1662px;
 
 // Margins
-$margin-default-cols: 9rem; // General default margins horizontally, between blocks
-$margin-default-rows: 7.5rem; // General default margins vertically, between blocks
+$margin-default-cols: 9rem;
+$margin-default-rows: 7.5rem;
 
 // Paddings
-$padding-default-cols: 9rem; // Default padding between containers horizontally. Tweak _general.scss if needed.
-$padding-default-rows: 7.5rem; // Default vertical padding for containers
+$padding-default-cols: 5rem;
+$padding-default-rows: 5rem;
 $padding-default-cols-ipad: 4rem;
 $padding-default-rows-ipad: 4rem;
 $padding-default-rows-mobile: 2rem;
 $padding-default-cols-mobile: 2rem;
-$padding-upsell-box: 6.5rem;
-$padding-accordion-content: 4rem;
-$padding-accordion-content-mobile: 2rem;
 
 // Where navigation transforms into responsive - scale your window width down to test
 $responsivenav: 800px;
