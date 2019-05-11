@@ -28,9 +28,9 @@ On top of features included in [digitoimistodude/air-light](https://github.com/d
 
 Green checkmarks show if the environment is already set up and running, red cross indicates if it's not yet there or disabled.
 
-✅ Development: [dude2019.test](http://dude2019.test)
-❌ Staging: [asiakas.dude.fi/dude2019](https://asiakas.dude.fi/dude2019)
-❌ Production: [dude2019.fi](https://dude2019.fi/)
+✅ Development: [dude2019.test](http://dude2019.test)  
+❌ Staging: [asiakas.dude.fi/dude2019](https://dude.vaiheessa.fi)  
+❌ Production: [dude2019.fi](https://www.dude.fi/)  
 
 ## Setting it up initially
 
@@ -40,7 +40,7 @@ If dev environment is indeed running, you're ready to version control the projec
 
 There are npm packages in both project root and theme folder. If you come later to this project, please run:
 
-1. `composer in\stall` (in project folder)
+1. `composer install` (in project folder)
 2. `npm install` (in project folder)
 2. `npm install` (in theme folder)
 
