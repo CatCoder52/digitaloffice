@@ -13,6 +13,10 @@
     color: $color-dude-white;
     display: flex;
 
+    // Let's reset the padding from the hero container, no need in full width hero
+    padding-left: 0;
+    padding-right: 0;
+
     .container {
       @include grid(2, $gutter_x: 0, $gutter_y: 0);
 
@@ -55,7 +59,8 @@
     }
 
     li {
-      margin-bottom: $padding-default-rows;
+      margin-bottom: 5rem;
+      line-height: 1.22;
     }
 
     li:last-of-type {
