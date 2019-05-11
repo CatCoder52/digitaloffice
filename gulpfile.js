@@ -79,7 +79,7 @@ gulp.task('browsersync', function() {
   ];
 
   browsersync.init(files, {
-    proxy: "dude2019.test",
+    proxy: "dude.test",
     browser: "Google Chrome",
     open: false,
     notify: true,
