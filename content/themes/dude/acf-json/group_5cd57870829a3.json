@@ -755,6 +755,33 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5ce02fdd6fad8": {
+                    "key": "layout_5ce02fdd6fad8",
+                    "name": "dudes",
+                    "label": "Duuuuuds",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5ce030236fad9",
+                            "label": "",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Tämä alue on kovakoodattu ja sitä ei voi muokata hallintapaneelista.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Lisää moduuli",
@@ -779,5 +806,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1558194858
+    "modified": 1558196275
 }
