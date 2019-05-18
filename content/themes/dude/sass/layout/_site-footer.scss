@@ -1,6 +1,81 @@
-/*
-* @Author: Roni Laukkarinen
-* @Date:   2019-05-11 12:43:21
-* @Last Modified by:   Roni Laukkarinen
-* @Last Modified time: 2019-05-11 12:43:30
-*/
+.logo-square {
+  width: 18rem;
+  height: 18rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $color-dude-deep-black;
+  margin-left: -3.8rem;
+
+  svg {
+    fill: $color-dude-white;
+    width: 100px;
+    height: 26px;
+  }
+}
+
+.site-footer {
+  margin-top: $padding-default-cols;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: $color-dude-whitegreyish;
+  }
+
+  .contact-details {
+    width: 50%;
+    padding: $padding-general-content-box;
+
+    .block-title {
+      display: inline-block;
+      padding-bottom: 0;
+      line-height: 1;
+    }
+
+    .block-title a:after,
+    .foot-note a:after {
+      width: 100%;
+      height: .2rem;
+      background: $color-links;
+      position: relative;
+      content: '';
+      display: block;
+      transition: all $transition-duration;
+    }
+
+    .block-title a:hover:after,
+    .foot-note a:hover:after {
+      width: 0;
+    }
+
+    .foot-note a {
+      position: relative;
+      display: inline-block;
+      line-height: 1;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &.hashtag {
+        font-weight: bold;
+        opacity: .7;
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    .foot-note a:after {
+      height: .1rem;
+    }
+  }
+
+  .foot-note a:after {
+    opacity: .5;
+  }
+}
