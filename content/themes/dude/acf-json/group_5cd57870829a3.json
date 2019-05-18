@@ -640,6 +640,121 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5ce027a8c6d7e": {
+                    "key": "layout_5ce027a8c6d7e",
+                    "name": "text-numbers",
+                    "label": "Teksti ja luvut",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5ce027b7c6d7f",
+                            "label": "Tekstisisältö",
+                            "name": "content",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_5ce027d7c6d80",
+                            "label": "Numerot",
+                            "name": "numbers",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "table",
+                            "button_label": "Lisää numero",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5ce027efc6d81",
+                                    "label": "Numero",
+                                    "name": "number",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_5ce027f5c6d82",
+                                    "label": "Selite",
+                                    "name": "label",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5ce02a8b07903": {
+                    "key": "layout_5ce02a8b07903",
+                    "name": "timeline",
+                    "label": "Aikajana",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5ce02a9907904",
+                            "label": "",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Tämä alue on kovakoodattu ja sitä ei voi muokata hallintapaneelista.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Lisää moduuli",
@@ -664,5 +779,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1558192074
+    "modified": 1558194858
 }
