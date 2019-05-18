@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:49:22
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-18 16:55:46
+ * @Last Modified time: 2019-05-18 17:14:29
  *
  * @package dude2019
  */
@@ -34,6 +34,37 @@
         <blockquote>Sievo edustaa kansainvälisesti huipputason IT-osaamista. Suunnitellessamme uusia verkkosivuja haimme kumppania, jolta löytyy sekä kivenkovaa WordPress-osaamista että selkeän suomalaista visuaalista jälkeä. Duden kanssa suunnittelu, toteutus ja tuki on onnistunut asiakaslähtöisesti ja tehokkaasti. Kaikilla mittareilla mitattuna uudet verkkosivut ovat toimineet entistä paremmin ja myös asiakkaamme ovat huomanneet eron.</blockquote>
         <footer><strong>Lari Numminen</strong> Product owner</footer>
       </div>
+
+    </div>
+
+    <div class="cols cols-references">
+
+      <div class="col">
+        <div class="col-featured-image">
+          <div class="image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/placeholder-nodeon.png');"></div>
+        </div>
+
+        <div class="content">
+          <h3 class="block-title>">Nodeon</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porta condimentum tortor at fermentum. Donec sodales in massa in volutpat.</p>
+
+          <p class="arrow-link-wrapper"><a href="#" class="arrow-link">Tsekkaa case<span class="arrow"></span></a></p>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="col-featured-image">
+          <div class="image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/placeholder-blackbruin.png');"></div>
+        </div>
+
+        <div class="content">
+          <h3 class="block-title>">Black Bruin</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus porta condimentum tortor at fermentum. Donec sodales in massa in volutpat.</p>
+
+          <p class="arrow-link-wrapper"><a href="#" class="arrow-link">Tsekkaa case<span class="arrow"></span></a></p>
+        </div>
+      </div>
+
     </div>
 
   </div>
