@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:49:22
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-18 16:45:28
+ * @Last Modified time: 2019-05-18 16:55:46
  *
  * @package dude2019
  */
@@ -30,7 +30,9 @@
         <p class="arrow-link-wrapper"><a href="#" class="arrow-link">Tsekkaa case<span class="arrow"></span></a></p>
       </div>
 
-      <div class="col">
+      <div class="co col-quote">
+        <blockquote>Sievo edustaa kansainvälisesti huipputason IT-osaamista. Suunnitellessamme uusia verkkosivuja haimme kumppania, jolta löytyy sekä kivenkovaa WordPress-osaamista että selkeän suomalaista visuaalista jälkeä. Duden kanssa suunnittelu, toteutus ja tuki on onnistunut asiakaslähtöisesti ja tehokkaasti. Kaikilla mittareilla mitattuna uudet verkkosivut ovat toimineet entistä paremmin ja myös asiakkaamme ovat huomanneet eron.</blockquote>
+        <footer><strong>Lari Numminen</strong> Product owner</footer>
       </div>
     </div>
 
