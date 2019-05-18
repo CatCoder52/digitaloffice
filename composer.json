@@ -74,6 +74,18 @@
           "url": "https://www.relevanssi.com/update/fetch_latest_version.php?api_key=11879452"
         }
       }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "rocketgenius/gravity-forms",
+        "type": "wordpress-plugin",
+        "version": "2.3.6",
+        "dist": {
+          "type": "zip",
+          "url": "https://dudedev:Y4ktW427dBzH^n(dqn>LKTRq7@plugins.dude.fi/gravityforms_2.3.6.zip"
+        }
+      }
     }
   ],
   "require": {
@@ -98,7 +110,8 @@
     "wpackagist-plugin/autodescription": "*",
     "aucor/dynamic-mo-loader": "*",
     "advanced-custom-fields/advanced-custom-fields-pro": "^5.8.0",
-    "relevanssi/relevanssi-premium": "^2.2.5"
+    "relevanssi/relevanssi-premium": "^2.2.5",
+    "rocketgenius/gravity-forms": "2.3.6"
   },
   "require-dev": {
     "rarst/wps": "*",
