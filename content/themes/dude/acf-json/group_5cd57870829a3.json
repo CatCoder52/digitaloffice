@@ -50,6 +50,28 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_5ce008a5a6a6d",
+                            "label": "Pääreferenssi",
+                            "name": "main_reference",
+                            "type": "post_object",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "reference"
+                            ],
+                            "taxonomy": "",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "return_format": "id",
+                            "ui": 1
+                        },
+                        {
                             "key": "field_5cd58190c53d3",
                             "label": "",
                             "name": "",
@@ -62,7 +84,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "message": "Tässä näytetään automaattisesti uusimmat referenssit.",
+                            "message": "Kaksi pienempää referenssiä arvotaan kerran päivässä.",
                             "new_lines": "wpautop",
                             "esc_html": 0
                         }
@@ -227,5 +249,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1558185026
+    "modified": 1558186222
 }
