@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "cbff7fec67dff629a8524c3ea7ba474f",
-    "content-hash": "6cd4b215302aaafac5686a6740d3bf61",
+    "hash": "470500a031251176a1a4f3d9fe443baf",
+    "content-hash": "0505c235731a4b18eb65b58c4d7c2d1f",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -470,16 +470,16 @@
         },
         {
             "name": "digitoimistodude/air-helper",
-            "version": "1.9.0",
+            "version": "1.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/digitoimistodude/air-helper.git",
-                "reference": "4274898ba47e2fcd2e6ad974b6d7ea951e68160a"
+                "reference": "8b5e757168b84bb16f0f7c6714933cf48df40344"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/digitoimistodude/air-helper/zipball/4274898ba47e2fcd2e6ad974b6d7ea951e68160a",
-                "reference": "4274898ba47e2fcd2e6ad974b6d7ea951e68160a",
+                "url": "https://api.github.com/repos/digitoimistodude/air-helper/zipball/8b5e757168b84bb16f0f7c6714933cf48df40344",
+                "reference": "8b5e757168b84bb16f0f7c6714933cf48df40344",
                 "shasum": ""
             },
             "type": "wordpress-plugin",
@@ -500,7 +500,7 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2019-03-25 07:18:49"
+            "time": "2019-05-08 14:23:03"
         },
         {
             "name": "gettext/gettext",
@@ -887,10 +887,10 @@
         },
         {
             "name": "koodimonni-plugin-language/akismet-en_gb",
-            "version": "4.1.1",
+            "version": "4.1.2",
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/translation/plugin/akismet/4.1.1/en_GB.zip",
+                "url": "https://downloads.wordpress.org/translation/plugin/akismet/4.1.2/en_GB.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -971,10 +971,10 @@
         },
         {
             "name": "koodimonni-plugin-language/woocommerce-en_gb",
-            "version": "3.6.2",
+            "version": "3.6.3",
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/translation/plugin/woocommerce/3.6.2/en_GB.zip",
+                "url": "https://downloads.wordpress.org/translation/plugin/woocommerce/3.6.3/en_GB.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -992,10 +992,10 @@
         },
         {
             "name": "koodimonni-plugin-language/woocommerce-fi",
-            "version": "3.6.2",
+            "version": "3.6.3",
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/translation/plugin/woocommerce/3.6.2/fi.zip",
+                "url": "https://downloads.wordpress.org/translation/plugin/woocommerce/3.6.3/fi.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -1684,6 +1684,17 @@
                 "sockets"
             ],
             "time": "2016-10-13 00:11:37"
+        },
+        {
+            "name": "rocketgenius/gravity-forms",
+            "version": "2.3.6",
+            "dist": {
+                "type": "zip",
+                "url": "https://dudedev:Y4ktW427dBzH^n(dqn>LKTRq7@plugins.dude.fi/gravityforms_2.3.6.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "wordpress-plugin"
         },
         {
             "name": "seld/jsonlint",
@@ -4275,15 +4286,15 @@
         },
         {
             "name": "wpackagist-plugin/imagify",
-            "version": "1.9.1",
+            "version": "1.9.2",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/imagify/",
-                "reference": "tags/1.9.1"
+                "reference": "tags/1.9.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/imagify.1.9.1.zip",
+                "url": "https://downloads.wordpress.org/plugin/imagify.1.9.2.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -4355,7 +4366,7 @@
         },
         {
             "name": "wpackagist-plugin/worker",
-            "version": "4.7.7",
+            "version": "4.8.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/worker/",
@@ -4363,7 +4374,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/worker.zip?timestamp=1552477457",
+                "url": "https://downloads.wordpress.org/plugin/worker.zip?timestamp=1557836488",
                 "reference": null,
                 "shasum": null
             },
@@ -4738,15 +4749,15 @@
         },
         {
             "name": "wpackagist-plugin/query-monitor",
-            "version": "3.3.4",
+            "version": "3.3.5",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/query-monitor/",
-                "reference": "tags/3.3.4"
+                "reference": "tags/3.3.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/query-monitor.3.3.4.zip",
+                "url": "https://downloads.wordpress.org/plugin/query-monitor.3.3.5.zip",
                 "reference": null,
                 "shasum": null
             },
