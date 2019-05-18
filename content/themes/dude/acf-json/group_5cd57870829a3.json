@@ -16,33 +16,6 @@
                 "id": ""
             },
             "layouts": {
-                "layout_5cd5788f56b28": {
-                    "key": "layout_5cd5788f56b28",
-                    "name": "example-static",
-                    "label": "ESIMERKKI: staattinen lohko",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_5cd57a1ab8205",
-                            "label": "",
-                            "name": "",
-                            "type": "message",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "message": "Tämän lohkon sisällöt eivät ole muutettavissa.",
-                            "new_lines": "wpautop",
-                            "esc_html": 0
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
                 "layout_5cd5810ec53d0": {
                     "key": "layout_5cd5810ec53d0",
                     "name": "our-services",
@@ -203,6 +176,33 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5ce0041f3583b": {
+                    "key": "layout_5ce0041f3583b",
+                    "name": "process",
+                    "label": "Prosessi",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5ce0042c3583c",
+                            "label": "",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Tämä alue on kovakoodattu ja sitä ei voi muokata hallintapaneelista.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Lisää rivi",
@@ -227,5 +227,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1558182352
+    "modified": 1558185026
 }
