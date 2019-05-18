@@ -3,7 +3,6 @@
   color: $color-dude-white;
   overflow: visible;
   z-index: 2;
-  height: 100vh;
 
   .block-title {
     color: $color-dude-white;
@@ -36,8 +35,14 @@
 
   .image {
     @include background-cover();
+    position: absolute;
     width: 40vw;
     height: 75rem;
-    margin-top: -32rem;
+    margin-top: -338px;
+  }
+
+  .col-featured-image {
+    position: relative;
+    min-width: 33vw;
   }
 }
