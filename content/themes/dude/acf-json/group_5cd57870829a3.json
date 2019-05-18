@@ -728,6 +728,33 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5ce02a8b07903": {
+                    "key": "layout_5ce02a8b07903",
+                    "name": "timeline",
+                    "label": "Aikajana",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5ce02a9907904",
+                            "label": "",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Tämä alue on kovakoodattu ja sitä ei voi muokata hallintapaneelista.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Lisää moduuli",
@@ -752,5 +779,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1558194183
+    "modified": 1558194858
 }
