@@ -12,13 +12,13 @@
   input[type="reset"],
   input[type="submit"],
   input[type="button"] {
-    font-size: 1.6rem;
+    @extend %default;
     background: $color-links;
     color: #fff;
     border: 0;
     width: auto;
     display: inline-block;
-    padding: 1.2rem 3rem;
+    padding: 2.5rem 3rem;
     margin-bottom: 1rem;
     text-decoration: none;
     position: relative;
@@ -96,29 +96,29 @@ input[type="email"],
 input[type="search"] {
   @extend %default;
   font-family: $font-base;
-  background: #f0f0f0;
+  background: transparent;
   border: 0;
   padding: 15px 20px;
   line-height: 24px;
-  transition: background .55s;
   text-decoration: none;
   position: relative;
   appearance: none;
   margin-bottom: 0;
+  transition: all $transition-duration;
 
   &::placeholder {
-    color: #434343;
-    opacity: .4;
+    color: $color-placeholder;
+    opacity: 1;
+    transition: all $transition-duration;
   }
 
   &:focus {
-    background: #dfdfdf;
+    background: transparent;
     border-color: rgba(#222, 1);
     outline: 0;
 
     &::placeholder {
-      color: #222;
-      opacity: .8;
+      opacity: .3;
     }
   }
 }
