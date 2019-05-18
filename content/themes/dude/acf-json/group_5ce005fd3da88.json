@@ -3,6 +3,25 @@
     "title": "Työ",
     "fields": [
         {
+            "key": "field_5ce010b39fc91",
+            "label": "Logotiedoston nimi",
+            "name": "logo_svg",
+            "type": "text",
+            "instructions": "Ilman etu- tai tiedostoliitettä. Kaikkien logojen oletetaan olevan svg-muotoisia.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5ce0061367e23",
             "label": "Lainaus",
             "name": "quote",
@@ -101,5 +120,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1558185567
+    "modified": 1558188259
 }
