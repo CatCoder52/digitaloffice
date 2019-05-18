@@ -2,8 +2,8 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 15:07:09
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-05-18 15:14:08
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2019-05-18 15:36:26
  *
  * @package dude2019
  */
@@ -19,7 +19,7 @@ if ( empty( $bg_image ) || empty( $title ) || empty( $content ) ) {
 <section class="block block-cta-left-image">
   <div class="container">
 
-    <div class="image" style="background-image:url('<?php echo esc_url( wp_get_attachment_url( $bg_image ) ) ?>')"></div>
+    <div class="image" style="background-image: url('<?php echo esc_url( wp_get_attachment_url( $bg_image ) ) ?>');"></div>
 
     <div class="content">
 

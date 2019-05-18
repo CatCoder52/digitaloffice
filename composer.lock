@@ -1,10 +1,9 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "hash": "470500a031251176a1a4f3d9fe443baf",
     "content-hash": "0505c235731a4b18eb65b58c4d7c2d1f",
     "packages": [
         {
@@ -57,7 +56,7 @@
             ],
             "description": "Better text domain loading with object cache support for WordPress",
             "homepage": "https://github.com/aucor/dynamic-mo-loader",
-            "time": "2019-02-27 13:58:37"
+            "time": "2019-02-27T13:58:37+00:00"
         },
         {
             "name": "composer/ca-bundle",
@@ -113,7 +112,7 @@
                 "ssl",
                 "tls"
             ],
-            "time": "2019-01-28 09:30:10"
+            "time": "2019-01-28T09:30:10+00:00"
         },
         {
             "name": "composer/composer",
@@ -193,7 +192,7 @@
                 "dependency",
                 "package"
             ],
-            "time": "2019-04-09 15:46:48"
+            "time": "2019-04-09T15:46:48+00:00"
         },
         {
             "name": "composer/installers",
@@ -300,7 +299,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2016-08-13 20:53:52"
+            "time": "2016-08-13T20:53:52+00:00"
         },
         {
             "name": "composer/semver",
@@ -362,7 +361,7 @@
                 "validation",
                 "versioning"
             ],
-            "time": "2019-03-19 17:25:45"
+            "time": "2019-03-19T17:25:45+00:00"
         },
         {
             "name": "composer/spdx-licenses",
@@ -422,7 +421,7 @@
                 "spdx",
                 "validator"
             ],
-            "time": "2019-03-26 10:23:26"
+            "time": "2019-03-26T10:23:26+00:00"
         },
         {
             "name": "composer/xdebug-handler",
@@ -466,7 +465,7 @@
                 "Xdebug",
                 "performance"
             ],
-            "time": "2019-01-28 20:25:53"
+            "time": "2019-01-28T20:25:53+00:00"
         },
         {
             "name": "digitoimistodude/air-helper",
@@ -500,7 +499,7 @@
                 "plugin",
                 "wordpress"
             ],
-            "time": "2019-05-08 14:23:03"
+            "time": "2019-05-08T14:23:03+00:00"
         },
         {
             "name": "gettext/gettext",
@@ -562,7 +561,7 @@
                 "po",
                 "translation"
             ],
-            "time": "2019-01-12 18:40:56"
+            "time": "2019-01-12T18:40:56+00:00"
         },
         {
             "name": "gettext/languages",
@@ -623,7 +622,7 @@
                 "translations",
                 "unicode"
             ],
-            "time": "2018-11-13 22:06:07"
+            "time": "2018-11-13T22:06:07+00:00"
         },
         {
             "name": "johnpbloch/wordpress",
@@ -662,7 +661,7 @@
                 "cms",
                 "wordpress"
             ],
-            "time": "2019-01-09 18:42:21"
+            "time": "2019-01-09T18:42:21+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core",
@@ -702,7 +701,7 @@
                 "cms",
                 "wordpress"
             ],
-            "time": "2019-01-09 18:42:15"
+            "time": "2019-01-09T18:42:15+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -751,7 +750,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2018-11-09 20:10:38"
+            "time": "2018-11-09T20:10:38+00:00"
         },
         {
             "name": "justinrainbow/json-schema",
@@ -817,7 +816,7 @@
                 "json",
                 "schema"
             ],
-            "time": "2019-01-14 23:55:14"
+            "time": "2019-01-14T23:55:14+00:00"
         },
         {
             "name": "koodimonni-language/en_gb",
@@ -1388,7 +1387,7 @@
                 }
             ],
             "description": "Install packages or a few files from packages into custom paths without overwriting existing stuff.",
-            "time": "2018-02-04 10:56:35"
+            "time": "2018-02-04T10:56:35+00:00"
         },
         {
             "name": "mck89/peast",
@@ -1433,7 +1432,7 @@
                 }
             ],
             "description": "Peast is PHP library that generates AST for JavaScript code",
-            "time": "2019-01-16 11:24:32"
+            "time": "2019-01-16T11:24:32+00:00"
         },
         {
             "name": "mustache/mustache",
@@ -1479,7 +1478,7 @@
                 "mustache",
                 "templating"
             ],
-            "time": "2017-07-11 12:54:05"
+            "time": "2017-07-11T12:54:05+00:00"
         },
         {
             "name": "nb/oxymel",
@@ -1520,7 +1519,7 @@
             "keywords": [
                 "xml"
             ],
-            "time": "2013-02-24 15:01:54"
+            "time": "2013-02-24T15:01:54+00:00"
         },
         {
             "name": "philippbaschke/acf-pro-installer",
@@ -1576,7 +1575,7 @@
                 "wordpress",
                 "wp"
             ],
-            "time": "2016-07-20 10:19:36"
+            "time": "2016-07-20T10:19:36+00:00"
         },
         {
             "name": "psr/log",
@@ -1623,7 +1622,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2018-11-20 15:27:04"
+            "time": "2018-11-20T15:27:04+00:00"
         },
         {
             "name": "relevanssi/relevanssi-premium",
@@ -1683,7 +1682,7 @@
                 "iri",
                 "sockets"
             ],
-            "time": "2016-10-13 00:11:37"
+            "time": "2016-10-13T00:11:37+00:00"
         },
         {
             "name": "rocketgenius/gravity-forms",
@@ -1743,7 +1742,7 @@
                 "parser",
                 "validator"
             ],
-            "time": "2018-01-24 12:46:19"
+            "time": "2018-01-24T12:46:19+00:00"
         },
         {
             "name": "seld/phar-utils",
@@ -1787,7 +1786,7 @@
             "keywords": [
                 "phra"
             ],
-            "time": "2015-10-13 18:44:15"
+            "time": "2015-10-13T18:44:15+00:00"
         },
         {
             "name": "symfony/console",
@@ -1859,7 +1858,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2019-04-08 14:23:48"
+            "time": "2019-04-08T14:23:48+00:00"
         },
         {
             "name": "symfony/contracts",
@@ -1930,7 +1929,7 @@
                 "interoperability",
                 "standards"
             ],
-            "time": "2019-04-27 14:29:50"
+            "time": "2019-04-27T14:29:50+00:00"
         },
         {
             "name": "symfony/filesystem",
@@ -1980,7 +1979,7 @@
             ],
             "description": "Symfony Filesystem Component",
             "homepage": "https://symfony.com",
-            "time": "2019-02-07 11:40:08"
+            "time": "2019-02-07T11:40:08+00:00"
         },
         {
             "name": "symfony/finder",
@@ -2029,7 +2028,7 @@
             ],
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
-            "time": "2019-04-06 13:51:08"
+            "time": "2019-04-06T13:51:08+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -2087,7 +2086,7 @@
                 "polyfill",
                 "portable"
             ],
-            "time": "2019-02-06 07:57:58"
+            "time": "2019-02-06T07:57:58+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -2146,7 +2145,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2019-02-06 07:57:58"
+            "time": "2019-02-06T07:57:58+00:00"
         },
         {
             "name": "symfony/process",
@@ -2195,7 +2194,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2019-04-10 16:20:36"
+            "time": "2019-04-10T16:20:36+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -2246,7 +2245,7 @@
                 "env",
                 "environment"
             ],
-            "time": "2019-01-29 11:11:52"
+            "time": "2019-01-29T11:11:52+00:00"
         },
         {
             "name": "wp-cli/cache-command",
@@ -2315,7 +2314,7 @@
             ],
             "description": "Manages object and transient caches.",
             "homepage": "https://github.com/wp-cli/cache-command",
-            "time": "2019-04-19 15:13:51"
+            "time": "2019-04-19T15:13:51+00:00"
         },
         {
             "name": "wp-cli/checksum-command",
@@ -2370,7 +2369,7 @@
             ],
             "description": "Verifies file integrity by comparing to published checksums.",
             "homepage": "https://github.com/wp-cli/checksum-command",
-            "time": "2019-04-25 00:28:02"
+            "time": "2019-04-25T00:28:02+00:00"
         },
         {
             "name": "wp-cli/config-command",
@@ -2439,7 +2438,7 @@
             ],
             "description": "Generates and reads the wp-config.php file.",
             "homepage": "https://github.com/wp-cli/config-command",
-            "time": "2019-04-25 00:28:22"
+            "time": "2019-04-25T00:28:22+00:00"
         },
         {
             "name": "wp-cli/core-command",
@@ -2506,7 +2505,7 @@
             ],
             "description": "Downloads, installs, updates, and manages a WordPress installation.",
             "homepage": "https://github.com/wp-cli/core-command",
-            "time": "2019-04-25 05:45:44"
+            "time": "2019-04-25T05:45:44+00:00"
         },
         {
             "name": "wp-cli/cron-command",
@@ -2568,7 +2567,7 @@
             ],
             "description": "Tests, runs, and deletes WP-Cron events; manages WP-Cron schedules.",
             "homepage": "https://github.com/wp-cli/cron-command",
-            "time": "2019-04-24 07:31:46"
+            "time": "2019-04-24T07:31:46+00:00"
         },
         {
             "name": "wp-cli/db-command",
@@ -2638,7 +2637,7 @@
             ],
             "description": "Performs basic database operations using credentials stored in wp-config.php.",
             "homepage": "https://github.com/wp-cli/db-command",
-            "time": "2019-04-25 00:28:40"
+            "time": "2019-04-25T00:28:40+00:00"
         },
         {
             "name": "wp-cli/embed-command",
@@ -2701,7 +2700,7 @@
             ],
             "description": "Inspects oEmbed providers, clears embed cache, and more.",
             "homepage": "https://github.com/wp-cli/embed-command",
-            "time": "2019-04-25 00:28:56"
+            "time": "2019-04-25T00:28:56+00:00"
         },
         {
             "name": "wp-cli/entity-command",
@@ -2907,7 +2906,7 @@
             ],
             "description": "Manage WordPress comments, menus, options, posts, sites, terms, and users.",
             "homepage": "https://github.com/wp-cli/entity-command",
-            "time": "2019-04-25 04:51:40"
+            "time": "2019-04-25T04:51:40+00:00"
         },
         {
             "name": "wp-cli/eval-command",
@@ -2961,7 +2960,7 @@
             ],
             "description": "Executes arbitrary PHP code or files.",
             "homepage": "https://github.com/wp-cli/eval-command",
-            "time": "2019-04-20 18:22:05"
+            "time": "2019-04-20T18:22:05+00:00"
         },
         {
             "name": "wp-cli/export-command",
@@ -3019,7 +3018,7 @@
             ],
             "description": "Exports WordPress content to a WXR file.",
             "homepage": "https://github.com/wp-cli/export-command",
-            "time": "2019-04-24 19:55:58"
+            "time": "2019-04-24T19:55:58+00:00"
         },
         {
             "name": "wp-cli/extension-command",
@@ -3106,7 +3105,7 @@
             ],
             "description": "Manages plugins and themes, including installs, activations, and updates.",
             "homepage": "https://github.com/wp-cli/extension-command",
-            "time": "2019-04-25 00:29:33"
+            "time": "2019-04-25T00:29:33+00:00"
         },
         {
             "name": "wp-cli/i18n-command",
@@ -3163,7 +3162,7 @@
             ],
             "description": "Provides internationalization tools for WordPress projects.",
             "homepage": "https://github.com/wp-cli/i18n-command",
-            "time": "2019-04-25 00:31:04"
+            "time": "2019-04-25T00:31:04+00:00"
         },
         {
             "name": "wp-cli/import-command",
@@ -3219,7 +3218,7 @@
             ],
             "description": "Imports content from a given WXR file.",
             "homepage": "https://github.com/wp-cli/import-command",
-            "time": "2019-04-19 14:32:57"
+            "time": "2019-04-19T14:32:57+00:00"
         },
         {
             "name": "wp-cli/language-command",
@@ -3294,7 +3293,7 @@
             ],
             "description": "Installs, activates, and manages language packs.",
             "homepage": "https://github.com/wp-cli/language-command",
-            "time": "2019-04-25 00:31:43"
+            "time": "2019-04-25T00:31:43+00:00"
         },
         {
             "name": "wp-cli/maintenance-mode-command",
@@ -3351,7 +3350,7 @@
             ],
             "description": "Activates, deactivates or checks the status of the maintenance mode of a site.",
             "homepage": "https://github.com/wp-cli/maintenance-mode-command",
-            "time": "2019-04-19 15:37:30"
+            "time": "2019-04-19T15:37:30+00:00"
         },
         {
             "name": "wp-cli/media-command",
@@ -3408,7 +3407,7 @@
             ],
             "description": "Imports files as attachments, regenerates thumbnails, or lists registered image sizes.",
             "homepage": "https://github.com/wp-cli/media-command",
-            "time": "2019-04-21 04:50:58"
+            "time": "2019-04-21T04:50:58+00:00"
         },
         {
             "name": "wp-cli/mustangostang-spyc",
@@ -3456,7 +3455,7 @@
             ],
             "description": "A simple YAML loader/dumper class for PHP (WP-CLI fork)",
             "homepage": "https://github.com/mustangostang/spyc/",
-            "time": "2017-04-25 11:26:20"
+            "time": "2017-04-25T11:26:20+00:00"
         },
         {
             "name": "wp-cli/package-command",
@@ -3517,7 +3516,7 @@
             ],
             "description": "Lists, installs, and removes WP-CLI packages.",
             "homepage": "https://github.com/wp-cli/package-command",
-            "time": "2019-04-24 09:34:35"
+            "time": "2019-04-24T09:34:35+00:00"
         },
         {
             "name": "wp-cli/php-cli-tools",
@@ -3567,7 +3566,7 @@
                 "cli",
                 "console"
             ],
-            "time": "2018-09-04 13:28:00"
+            "time": "2018-09-04T13:28:00+00:00"
         },
         {
             "name": "wp-cli/rewrite-command",
@@ -3624,7 +3623,7 @@
             ],
             "description": "Lists or flushes the site's rewrite rules, updates the permalink structure.",
             "homepage": "https://github.com/wp-cli/rewrite-command",
-            "time": "2019-04-25 00:32:04"
+            "time": "2019-04-25T00:32:04+00:00"
         },
         {
             "name": "wp-cli/role-command",
@@ -3686,7 +3685,7 @@
             ],
             "description": "Adds, removes, lists, and resets roles and capabilities.",
             "homepage": "https://github.com/wp-cli/role-command",
-            "time": "2019-04-25 00:32:18"
+            "time": "2019-04-25T00:32:18+00:00"
         },
         {
             "name": "wp-cli/scaffold-command",
@@ -3748,7 +3747,7 @@
             ],
             "description": "Generates code for post types, taxonomies, blocks, plugins, child themes, etc.",
             "homepage": "https://github.com/wp-cli/scaffold-command",
-            "time": "2019-04-25 00:44:34"
+            "time": "2019-04-25T00:44:34+00:00"
         },
         {
             "name": "wp-cli/search-replace-command",
@@ -3804,7 +3803,7 @@
             ],
             "description": "Searches/replaces strings in the database.",
             "homepage": "https://github.com/wp-cli/search-replace-command",
-            "time": "2019-04-25 00:32:46"
+            "time": "2019-04-25T00:32:46+00:00"
         },
         {
             "name": "wp-cli/server-command",
@@ -3857,7 +3856,7 @@
             ],
             "description": "Launches PHP's built-in web server for a specific WordPress installation.",
             "homepage": "https://github.com/wp-cli/server-command",
-            "time": "2019-04-21 09:58:15"
+            "time": "2019-04-21T09:58:15+00:00"
         },
         {
             "name": "wp-cli/shell-command",
@@ -3911,7 +3910,7 @@
             ],
             "description": "Opens an interactive PHP console for running and testing PHP code.",
             "homepage": "https://github.com/wp-cli/shell-command",
-            "time": "2019-04-22 13:16:49"
+            "time": "2019-04-22T13:16:49+00:00"
         },
         {
             "name": "wp-cli/super-admin-command",
@@ -3968,7 +3967,7 @@
             ],
             "description": "Lists, adds, or removes super admin users on a multisite installation.",
             "homepage": "https://github.com/wp-cli/super-admin-command",
-            "time": "2019-04-20 20:47:36"
+            "time": "2019-04-20T20:47:36+00:00"
         },
         {
             "name": "wp-cli/widget-command",
@@ -4031,7 +4030,7 @@
             ],
             "description": "Adds, moves, and removes widgets; lists sidebars.",
             "homepage": "https://github.com/wp-cli/widget-command",
-            "time": "2019-04-25 00:25:21"
+            "time": "2019-04-25T00:25:21+00:00"
         },
         {
             "name": "wp-cli/wp-cli",
@@ -4093,7 +4092,7 @@
                 "cli",
                 "wordpress"
             ],
-            "time": "2019-04-25 05:38:33"
+            "time": "2019-04-25T05:38:33+00:00"
         },
         {
             "name": "wp-cli/wp-cli-bundle",
@@ -4161,7 +4160,7 @@
                 "cli",
                 "wordpress"
             ],
-            "time": "2019-04-25 06:30:44"
+            "time": "2019-04-25T06:30:44+00:00"
         },
         {
             "name": "wp-cli/wp-config-transformer",
@@ -4202,7 +4201,7 @@
                 }
             ],
             "description": "Programmatically edit a wp-config.php file.",
-            "time": "2019-04-01 15:03:00"
+            "time": "2019-04-01T15:03:00+00:00"
         },
         {
             "name": "wpackagist-plugin/autodescription",
@@ -4441,7 +4440,7 @@
                 "source": "https://github.com/digitoimistodude/gulp-sitemap-generator/tree/master",
                 "issues": "https://github.com/digitoimistodude/gulp-sitemap-generator/issues"
             },
-            "time": "2017-03-17 11:19:24"
+            "time": "2017-03-17T11:19:24+00:00"
         },
         {
             "name": "filp/whoops",
@@ -4502,7 +4501,7 @@
                 "throwable",
                 "whoops"
             ],
-            "time": "2018-10-23 09:00:00"
+            "time": "2018-10-23T09:00:00+00:00"
         },
         {
             "name": "pimple/pimple",
@@ -4552,7 +4551,7 @@
                 "container",
                 "dependency injection"
             ],
-            "time": "2018-01-21 07:42:36"
+            "time": "2018-01-21T07:42:36+00:00"
         },
         {
             "name": "psr/container",
@@ -4601,7 +4600,7 @@
                 "container-interop",
                 "psr"
             ],
-            "time": "2017-02-14 16:28:37"
+            "time": "2017-02-14T16:28:37+00:00"
         },
         {
             "name": "rarst/laps",
@@ -4651,7 +4650,7 @@
                 "performance",
                 "wordpress"
             ],
-            "time": "2018-02-26 08:42:11"
+            "time": "2018-02-26T08:42:11+00:00"
         },
         {
             "name": "rarst/wps",
@@ -4696,7 +4695,7 @@
                 "whoops",
                 "wordpress"
             ],
-            "time": "2017-10-27 09:44:01"
+            "time": "2017-10-27T09:44:01+00:00"
         },
         {
             "name": "symfony/stopwatch",
@@ -4745,7 +4744,7 @@
             ],
             "description": "Symfony Stopwatch Component",
             "homepage": "https://symfony.com",
-            "time": "2019-01-16 09:39:14"
+            "time": "2019-01-16T09:39:14+00:00"
         },
         {
             "name": "wpackagist-plugin/query-monitor",
