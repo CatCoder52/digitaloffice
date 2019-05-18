@@ -133,6 +133,7 @@ a.global-link {
   margin-top: 0;
 }
 
+// Special links
 .cta-link {
   display: inline-block;
 
@@ -200,6 +201,12 @@ a.global-link {
   }
 }
 
+// Descriptions and notes
 .col-description {
   opacity: .5;
+}
+
+// Positions
+.is-centered {
+  text-align: center;
 }
