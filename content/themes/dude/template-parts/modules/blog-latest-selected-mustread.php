@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 15:26:12
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-18 17:38:43
+ * @Last Modified time: 2019-05-18 17:39:24
  *
  * @package dude2019
  */
@@ -56,7 +56,7 @@ if ( ! $query->have_posts() || empty( $mustread ) ) {
             <div class="image" style="background-image:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post ) ) ?>')"></div>
             <div class="content">
               <h4><a href="<?php echo get_the_permalink( $post ) ?>"><?php echo get_the_title( $post ) ?></a></h4>
-              <?php echo get_the_excerpt( $post ) ?>
+              <?php echo wpautop( get_the_excerpt( $post ) ) ?>
             </div>
           </div>
         <?php endforeach; ?>
