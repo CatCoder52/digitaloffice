@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:30:53
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-05-10 16:33:50
+ * @Last Modified time: 2019-05-18 16:19:43
  *
  * @package dude2019
  */
@@ -46,36 +46,6 @@ function dude_register_cpt_reference() {
   );
 
   register_post_type( 'reference', $args );
-
-  $labels = array(
-    'name'                       => _x( 'Palvelut', 'taxonomy general name', 'dude' ),
-    'singular_name'              => _x( 'Palvelu', 'taxonomy singular name', 'dude' ),
-    'search_items'               => __( 'Etsi palveluita', 'dude' ),
-    'popular_items'              => __( 'Suositut palvelut', 'dude' ),
-    'all_items'                  => __( 'Kaikki palvelut', 'dude' ),
-    'parent_item'                => null,
-    'parent_item_colon'          => null,
-    'edit_item'                  => __( 'Muokkaa palvelua', 'dude' ),
-    'update_item'                => __( 'Päivitä palvelua', 'dude' ),
-    'add_new_item'               => __( 'Lisää uusi palvelu', 'dude' ),
-    'new_item_name'              => __( 'Lisää uusi palvelu', 'dude' ),
-    'separate_items_with_commas' => __( 'Erottele palvelut pilkuin', 'dude' ),
-    'add_or_remove_items'        => __( 'Lisää tai poista palveluita', 'dude' ),
-    'choose_from_most_used'      => __( 'Valitse useimmiten käytetyistä palveluista', 'dude' ),
-    'not_found'                  => __( 'Palveluita ei löytynyt.', 'dude' ),
-    'menu_name'                  => __( 'Palvelut', 'dude' ),
-  );
-
-  $args = array(
-    'hierarchical'          => true,
-    'labels'                => $labels,
-    'show_ui'               => true,
-    'show_admin_column'     => true,
-    'query_var'             => false,
-    'public'                => false
-  );
-
-  register_taxonomy( 'service', 'reference', $args );
 }
 
 add_action( 'init', 'dude_register_cpt_reference' );
