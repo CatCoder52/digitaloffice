@@ -154,6 +154,52 @@ a.global-link {
   opacity: .5;
 }
 
+.arrow-link-wrapper {
+  margin: 0;
+}
+
+.arrow-link {
+  display: flex;
+  align-items: center;
+}
+
+.arrow-link:hover .arrow {
+  width: 15rem;
+}
+
+.arrow-link .arrow {
+  width: 6rem;
+  height: 1px;
+  background: $color-body;
+  position: relative;
+  display: inline-block;
+  margin-left: 1.5rem;
+  transition: all 1s;
+  bottom: -1px;
+
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    background: $color-body;
+    width: 7px;
+    height: 1px;
+    right: 0;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+    bottom: 2px;
+    right: -3px;
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+    bottom: -2px;
+    right: -3px;
+  }
+}
+
 .col-description {
   opacity: .5;
 }
