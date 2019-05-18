@@ -1,10 +1,16 @@
 .block.block-our-services {
   background: $color-dude-darkgrey;
   color: $color-dude-white;
+  overflow: visible;
+  z-index: 2;
   height: 100vh;
 
   .block-title {
     color: $color-dude-white;
+  }
+
+  .container {
+    overflow: visible;
   }
 
   @media (min-width: 600px) {
@@ -21,6 +27,7 @@
 
   h3 {
     color: $color-dude-white;
+    margin-top: 0;
   }
 
   .cols {
@@ -31,6 +38,6 @@
     @include background-cover();
     width: 40vw;
     height: 75rem;
-    margin-top: -20vh;
+    margin-top: -37.5rem;
   }
 }
