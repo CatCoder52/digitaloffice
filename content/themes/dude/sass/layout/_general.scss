@@ -133,6 +133,12 @@ a.global-link {
   margin-top: 0;
 }
 
+// Text styles
+.text-smaller,
+%text-smaller {
+  @include responsive-font(16px, 18px);
+}
+
 // Special links
 .cta-link {
   display: inline-block;
