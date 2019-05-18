@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 15:07:09
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-18 15:52:24
+ * @Last Modified time: 2019-05-18 16:32:28
  *
  * @package dude2019
  */
@@ -29,7 +29,7 @@ if ( empty( $bg_image ) || empty( $title ) || empty( $content ) ) {
           <h2 class="block-title"><?php echo esc_html( $title ) ?></h2>
           <?php echo wpautop( $content );
           echo do_shortcode( '[gravityform id=1 title=false description=false ajax=true tabindex=49]' ); ?>
-          <p>Fuck the phone, I wanna send <a href="https://www.dude.fi/yhteystiedot">email</a></p>
+          <p class="end-note is-centered">Fuck the phone, I wanna send <a href="https://www.dude.fi/yhteystiedot">email</a></p>
         </div>
       </div>
     </div>
