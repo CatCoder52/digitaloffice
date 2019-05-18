@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 15:26:12
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-18 17:39:24
+ * @Last Modified time: 2019-05-18 17:57:40
  *
  * @package dude2019
  */
@@ -37,7 +37,7 @@ if ( ! $query->have_posts() || empty( $mustread ) ) {
         <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
           <div class="post">
-            <img src="<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>" alt="<?php get_the_post_thumbnail_caption( get_the_id() ) ?>" />
+            <div class="image" style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>');"></div>
 
             <div class="content">
               <h3><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
@@ -53,26 +53,27 @@ if ( ! $query->have_posts() || empty( $mustread ) ) {
 
         <?php foreach ( $mustread as $post ) : ?>
           <div class="post">
-            <div class="image" style="background-image:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post ) ) ?>')"></div>
+            <div class="image" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post ) ) ?>');"></div>
             <div class="content">
-              <h4><a href="<?php echo get_the_permalink( $post ) ?>"><?php echo get_the_title( $post ) ?></a></h4>
+              <h3><a href="<?php echo get_the_permalink( $post ) ?>"><?php echo get_the_title( $post ) ?></a></h3>
               <?php echo wpautop( get_the_excerpt( $post ) ) ?>
             </div>
           </div>
         <?php endforeach; ?>
       </div>
+    </div>
 
-      <div class="newsletter">
-        <form action="https://dude.us8.list-manage.com/subscribe/post?u=bda4635b58bba8d9716eb90a6&amp;id=efe9db80e6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
-          <h2>Tilaa bittivirtojen pulloposti</h2>
-          <label for="mce-EMAIL" class="screen-reader-text">Virtuaalisen satamasi osoite:</label>
-          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Virtuaalisen satamasi osoite">
+    <div class="newsletter has-grey-bg has-grey-bg-extend-right">
+      <form action="https://dude.us8.list-manage.com/subscribe/post?u=bda4635b58bba8d9716eb90a6&amp;id=efe9db80e6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+        <h2 class="block-title">Tilaa bittivirtojen pulloposti</h2>
+        <label for="mce-EMAIL" class="screen-reader-text">Sähköpostiosoite:</label>
+
+        <div class="inputs">
+          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Sähköpostiosoite">
           <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_bda4635b58bba8d9716eb90a6_efe9db80e6" tabindex="-1" value=""></div>
           <input type="submit" value="Lähetä" name="subscribe" id="mc-embedded-subscribe" class="button">
-          <p class="note">Spämmätään vain 3kk välein. Myö luvataan.</p>
-        </form>
-      </div>
-
+        </div>
+      </form>
     </div>
 
   </div>

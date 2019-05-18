@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:49:22
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-18 17:14:29
+ * @Last Modified time: 2019-05-18 17:54:02
  *
  * @package dude2019
  */
@@ -22,7 +22,7 @@
 
     <div class="cols">
 
-      <div class="col has-grey-bg has-grey-bg-extended">
+      <div class="col has-grey-bg has-grey-bg-extend-left">
         <?php include get_theme_file_path( '/svg/logo-sievo.svg' ); ?>
         <h3 class="screen-reader-text">Sievo</h3>
         <p>Kuten kaikki hyvät tarinat, alkaa tämäkin yhdestä twiitistä. Twiitistä joka johti Skype-palaveriin, reissuun isolle kirkolle ja lopulta jatkuvasti kehittyvän WordPress -sivuston toteuttamiseen...</p>
