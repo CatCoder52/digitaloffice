@@ -168,6 +168,41 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5cdff955285b6": {
+                    "key": "layout_5cdff955285b6",
+                    "name": "blog-latest-selected-mustread",
+                    "label": "Blogi: uusin ja nostot",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5cdff997285b7",
+                            "label": "Nostetut artikkelit",
+                            "name": "mustread",
+                            "type": "relationship",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "post"
+                            ],
+                            "taxonomy": "",
+                            "filters": [
+                                "search"
+                            ],
+                            "elements": "",
+                            "min": "",
+                            "max": 3,
+                            "return_format": "id"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Lisää rivi",
@@ -192,5 +227,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1558180285
+    "modified": 1558182352
 }
