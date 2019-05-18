@@ -133,6 +133,12 @@ a.global-link {
   margin-top: 0;
 }
 
+// Text styles
+.text-smaller,
+%text-smaller {
+  @include responsive-font(16px, 18px);
+}
+
 // Special links
 .cta-link {
   display: inline-block;
@@ -214,8 +220,9 @@ a.global-link {
 // General backgrounds of cols and boxes
 .has-grey-bg {
   background: $color-dude-whitegreyish;
+  position: relative;
 
-  &.has-grey-bg-extended:before {
+  &.has-grey-bg-extend-left:before {
     background: $color-dude-whitegreyish;
     position: absolute;
     height: 100%;
@@ -225,5 +232,17 @@ a.global-link {
     z-index: 0;
     top: 0;
     left: -50vw;
+  }
+
+  &.has-grey-bg-extend-right:after {
+    background: $color-dude-whitegreyish;
+    position: absolute;
+    height: 100%;
+    width: 50vw;
+    content: '';
+    display: block;
+    z-index: 0;
+    top: 0;
+    right: -50vw;
   }
 }
