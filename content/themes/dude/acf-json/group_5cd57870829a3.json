@@ -281,8 +281,8 @@
                 },
                 "layout_5ce00cda12090": {
                     "key": "layout_5ce00cda12090",
-                    "name": "teknik-services",
-                    "label": "Verkkopalvelut: tarjonta",
+                    "name": "content-side-switch",
+                    "label": "Sisältö sivussa olevalla vaihtajalla",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -450,5 +450,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1558188444
+    "modified": 1558189416
 }
