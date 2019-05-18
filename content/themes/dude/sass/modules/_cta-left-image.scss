@@ -1,2 +1,42 @@
 .block.block-cta-left-image {
+  position: relative;
+  z-index: 3;
+
+  .container {
+    overflow: visible;
+  }
+
+  .cols {
+    @include grid(2, $gutter_x: 0, $gutter_y: 0);
+    grid-template-columns: 7fr 3fr;
+  }
+
+  .image {
+    @include background-cover();
+    width: 100%;
+    height: 60rem;
+    margin-top: -10rem;
+  }
+
+  .content {
+    background: $color-dude-whitegreyish;
+    padding: 8rem;
+    max-width: 65rem;
+    margin-left: -20rem;
+  }
+
+  .gform_wrapper {
+    label {
+      @extend .screen-reader-text;
+    }
+
+    div input {
+      width: 100%;
+    }
+
+    input,
+    .button {
+      @extend %default;
+    }
+  }
 }
