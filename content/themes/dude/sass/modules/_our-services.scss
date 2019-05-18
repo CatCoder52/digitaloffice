@@ -3,19 +3,12 @@
   color: $color-dude-white;
   height: 100vh;
 
-  @media (min-width: 600px) {
-    padding-right: 0;
-  }
-
   .block-title {
     color: $color-dude-white;
-    max-width: 35vw;
-    margin: 0;
   }
 
-  .block-head {
-    padding-top: 20rem;
-    padding-bottom: 15rem;
+  @media (min-width: 600px) {
+    padding-right: 0;
   }
 
   .cta-link a {
