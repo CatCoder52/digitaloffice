@@ -6,4 +6,19 @@
   .block-head {
     padding-bottom: 7rem;
   }
+
+  .cols {
+    @include grid(2, $gutter_x: 0, $gutter_y: 0);
+  }
+
+  .col {
+    padding: $padding-general-content-box;
+    position: relative;
+    padding-left: 2rem;
+
+    * {
+      position: relative;
+      z-index: 2;
+    }
+  }
 }

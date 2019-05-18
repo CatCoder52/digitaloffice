@@ -20,7 +20,7 @@
 
   .content {
     background: $color-dude-whitegreyish;
-    padding: 8rem;
+    padding: $padding-general-content-box;
     max-width: 65rem;
     margin-left: -20rem;
   }

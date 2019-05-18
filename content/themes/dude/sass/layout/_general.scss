@@ -211,3 +211,19 @@ a.global-link {
   text-align: center;
 }
 
+// General backgrounds of cols and boxes
+.has-grey-bg {
+  background: $color-dude-whitegreyish;
+
+  &.has-grey-bg-extended:before {
+    background: $color-dude-whitegreyish;
+    position: absolute;
+    height: 100%;
+    width: 50vw;
+    content: '';
+    display: block;
+    z-index: 0;
+    top: 0;
+    left: -50vw;
+  }
+}
