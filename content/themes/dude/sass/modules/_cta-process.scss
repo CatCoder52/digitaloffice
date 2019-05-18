@@ -1,0 +1,39 @@
+.block.block-cta-process {
+  .cols {
+    @include grid(2, $gutter_x: 0, $gutter_y: 0);
+
+    .col {
+      min-width: 50%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  }
+
+  .process {
+    display: flex;
+    overflow: visible;
+  }
+
+  .long-arrow {
+    position: absolute;
+    top: 50%;
+    margin-left: 170px;
+    z-index: 1;
+  }
+
+  .circle {
+    position: relative;
+    overflow: visible;
+    min-height: 25rem;
+    height: 25rem;
+    display: flex;
+    margin-left: -5rem;
+    z-index: 0;
+
+    svg,
+    circle {
+      fill: transparent;
+    }
+  }
+}
