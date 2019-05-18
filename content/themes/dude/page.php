@@ -23,7 +23,7 @@ get_header(); ?>
     include get_theme_file_path( 'template-parts/content-modular.php' );
 
     // Temp (didn't get modular to show up
-    include get_theme_file_path( 'template-parts/modules/static/our-services.php' );
+    //include get_theme_file_path( 'template-parts/modules/static/our-services.php' );
     ?>
 
   </main><!-- #main -->

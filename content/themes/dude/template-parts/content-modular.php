@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:05:23
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-05-10 16:07:25
+ * @Last Modified time: 2019-05-18 14:46:31
  *
  * @package dude2019
  */
@@ -24,7 +24,9 @@ $have_rows_id = get_the_id();
  *  NOTE! these cheks assumes you use air-helper, polylang and
  *  page for post type (humanmade/page-for-post-type) plugins.
  */
-if ( is_home() ) {
+if ( is_front_page() ) {
+  $have_rows_id = pll_get_post( get_option( 'page_on_front' ) );
+} elseif ( is_home() ) {
   $have_rows_id = pll_get_post( get_option( 'page_for_posts' ) );
 } elseif ( is_post_type_archive() ) {
   $post_type = get_post_type();
