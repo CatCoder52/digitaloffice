@@ -21,9 +21,6 @@ get_header(); ?>
 
     <?php include get_theme_file_path( 'template-parts/hero.php' );
     include get_theme_file_path( 'template-parts/content-modular.php' );
-
-    // Temp (didn't get modular to show up
-    include get_theme_file_path( 'template-parts/modules/static/references.php' );
     ?>
 
   </main><!-- #main -->
