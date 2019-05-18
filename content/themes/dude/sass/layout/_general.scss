@@ -174,7 +174,8 @@ a.global-link {
   width: 15rem;
 }
 
-.arrow-link .arrow {
+.arrow-link .arrow,
+.long-arrow {
   width: 6rem;
   height: 1px;
   background: $color-body;
