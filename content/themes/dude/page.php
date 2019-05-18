@@ -24,6 +24,7 @@ get_header(); ?>
 
     // Temp (didn't get modular to show up
     include get_theme_file_path( 'template-parts/modules/static/our-services.php' );
+    include get_theme_file_path( 'template-parts/modules/static/references.php' );
     ?>
 
   </main><!-- #main -->
