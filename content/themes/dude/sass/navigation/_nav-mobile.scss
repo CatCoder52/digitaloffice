@@ -32,233 +32,234 @@ $nav-open-from-top: false;
   @extend .hamburger--spin;
 }
 
-// Mobile styles
-@media screen and (max-width: 2000px - 1px) {
+// Mobile nav styles
 
-  // Users that don't have Javascript enabled
-  .no-js .site-header {
-    position: static;
+// Users that don't have Javascript enabled
+.no-js .site-header {
+  position: static;
 
-    // Use the same color than navigation
-    background: $nav-background-color;
-  }
+  // Use the same color than navigation
+  background: $nav-background-color;
+}
 
-  // Disable scroll on html body when menu is opened.
-  .disable-scroll {
+// Disable scroll on html body when menu is opened.
+.disable-scroll {
+  overflow: hidden;
+}
+
+// Ensure nav stays in the same position when activated
+.js {
+  &.js-nav-active {
     overflow: hidden;
-  }
 
-  // Ensure nav stays in the same position when activated
-  .js {
-    &.js-nav-active {
-      overflow: hidden;
-
-      .nav-primary {
-        visibility: visible;
-        height: 100vh;
-        overflow: auto;
-        top: 0;
-
-        .menu-items {
-          opacity: 1;
-        }
-
-        @if $nav-open-from-right == true {
-          width: 100vw;
-          right: 0;
-        }
-
-        @if $nav-open-from-left == true {
-          width: 100vw;
-          left: 0;
-        }
-
-        @if $nav-open-from-bottom == true {
-          width: 100vw;
-          bottom: 0;
-          top: initial;
-        }
-
-        @if $nav-open-from-top == true {
-          width: 100vw;
-          top: 0;
-        }
-      }
-    }
-  }
-
-  .js .nav-primary {
-    // Hide mobile navigation by default while enabling use of animations
-    visibility: hidden;
-    height: 100vh;
-    width: 100%;
-    clip: auto;
-    position: fixed;
-    right: 0;
-    top: -100%;
-
-    @if $nav-open-from-right == true {
-      right: -100%;
+    .nav-primary {
+      visibility: visible;
+      height: 100vh;
+      overflow: auto;
       top: 0;
-    }
+      transform: translate3d(0, 0, 0);
+      transition: all .75s 50ms cubic-bezier(.19, 1, .22, 1);
+      z-index: 2;
 
-    @if $nav-open-from-left == true {
-      left: -100%;
-      top: 0;
-    }
-
-    @if $nav-open-from-bottom == true {
-      bottom: -100%;
-      top: initial;
-    }
-
-    @if $nav-open-from-top == true {
-      top: -100%;
-    }
-
-    .menu-items {
-      padding: 15% 0;
-    }
-  }
-
-  .nav-primary {
-    background: $nav-background-color;
-    transition: all .55s;
-    margin: 0;
-    overflow: hidden;
-    display: block;
-    width: 100%;
-
-    .menu-items {
-      transition: all .55s;
-      opacity: 0;
-      margin: 0;
-      width: 100%;
-      float: none;
-      padding: 2rem 0;
-      // We have color here, so it's okay to remove outline
-      outline: none;
-
-      a {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        padding-left: 5%;
-        padding-right: 5.8rem; // Make room for the toggle button (sub indicator)
-        color: #fff;
-        font-size: 1.6rem;
-        font-weight: 400;
-        line-height: 1.7rem;
-        text-decoration: none;
-        position: relative;
-        z-index: 0;
-        display: block;
-        outline: none; // We have color here, so it's okay to remove outline
+      .menu-items {
+        opacity: 1;
       }
 
-      a:focus {
-        outline: none;
+      @if $nav-open-from-right == true {
+        width: 50vw;
+        right: 0;
       }
 
-      // Prevent nav item overlapping with dropdown opening toggle
-      a.has-submenu {
-        width: 80%;
-        position: static;
+      @if $nav-open-from-left == true {
+        width: 100vw;
+        left: 0;
       }
 
-      a:hover,
-      a:focus,
-      a:active {
-        color: $color-links;
+      @if $nav-open-from-bottom == true {
+        width: 100vw;
+        bottom: 0;
+        top: initial;
       }
 
-      .current {
-        color: #d23600;
-      }
-
-      .disabled {
-        color: #bbb;
-      }
-
-      .highlighted .sub-arrow:before {
-        display: block;
-        content: '-';
-      }
-
-
-      // Dropdown toggle
-      .dropdown-toggle {
-        position: absolute;
+      @if $nav-open-from-top == true {
+        width: 100vw;
         top: 0;
-        margin-top: 0;
-        left: auto;
-        right: 2rem;
-        width: 3.7rem;
-        height: 3.7rem;
-        overflow: hidden;
-        font: bold 18px/37px monospace;
-        text-align: center;
-        background: #202020;
-        color: #fff;
-        padding: 0;
-        z-index: 9999;
-        border: 0;
-      }
-
-      .dropdown-toggle:focus {
-        z-index: 10000;
-      }
-
-      .dropdown-toggle:before {
-        content: '+';
-      }
-
-      .dropdown-toggle:hover {
-        background-color: #3e4853;
-        color: #fff;
-      }
-
-      .dropdown-toggle.toggled-on:before {
-        display: block;
-        content: '-';
-      }
-
-      // Dropdowns
-      ul {
-        background: rgba(#666, .1);
-        margin-left: 0;
-        padding: 0;
-      }
-
-      ul a {
-        font-size: 1.4rem;
-      }
-
-      // Slight margins to improve readability of sub-navs
-      // Second level
-      ul > li {
-        padding-left: 1.5rem;
-      }
-
-      // Third level
-      ul > li ul {
-        margin-left: -1.5rem;
-      }
-
-      ul > li ul li {
-        padding-left: 3rem;
-      }
-
-      // Fourth level
-      ul > li ul li ul {
-        margin-left: -3rem;
-      }
-
-      ul > li ul li ul li {
-        padding-left: 4.5rem;
       }
     }
   }
 }
+
+.js .nav-primary {
+  // Hide mobile navigation by default while enabling use of animations
+  height: 100vh;
+  width: 100%;
+  clip: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform: translate3d(100%, 0, 0);
+  transition: all .5s cubic-bezier(.66, 1, .66, 1);
+  backface-visibility: hidden;
+
+  @if $nav-open-from-right == true {
+    right: -100%;
+    top: 0;
+  }
+
+  @if $nav-open-from-left == true {
+    left: -100%;
+    top: 0;
+  }
+
+  @if $nav-open-from-bottom == true {
+    bottom: -100%;
+    top: initial;
+  }
+
+  @if $nav-open-from-top == true {
+    top: -100%;
+  }
+}
+
+.nav-primary {
+  background: $nav-background-color;
+  transition: all .55s;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+
+  .menu-items {
+    transition: all .55s;
+    opacity: 0;
+    margin: 0;
+    width: 100%;
+    float: none;
+    padding: 2rem 0;
+    // We have color here, so it's okay to remove outline
+    outline: none;
+
+    a {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      padding-left: 5%;
+      padding-right: 5.8rem; // Make room for the toggle button (sub indicator)
+      color: #fff;
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 1.7rem;
+      text-decoration: none;
+      position: relative;
+      z-index: 0;
+      display: block;
+      outline: none; // We have color here, so it's okay to remove outline
+    }
+
+    a:focus {
+      outline: none;
+    }
+
+    // Prevent nav item overlapping with dropdown opening toggle
+    a.has-submenu {
+      width: 80%;
+      position: static;
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+      color: $color-links;
+    }
+
+    .current {
+      color: #d23600;
+    }
+
+    .disabled {
+      color: #bbb;
+    }
+
+    .highlighted .sub-arrow:before {
+      display: block;
+      content: '-';
+    }
+
+    // Dropdown toggle
+    .dropdown-toggle {
+      position: absolute;
+      top: 0;
+      margin-top: 0;
+      left: auto;
+      right: 2rem;
+      width: 3.7rem;
+      height: 3.7rem;
+      overflow: hidden;
+      font: bold 18px/37px monospace;
+      text-align: center;
+      background: #202020;
+      color: #fff;
+      padding: 0;
+      z-index: 9999;
+      border: 0;
+    }
+
+    .dropdown-toggle:focus {
+      z-index: 10000;
+    }
+
+    .dropdown-toggle:before {
+      content: '+';
+    }
+
+    .dropdown-toggle:hover {
+      background-color: #3e4853;
+      color: #fff;
+    }
+
+    .dropdown-toggle.toggled-on:before {
+      display: block;
+      content: '-';
+    }
+
+    // Dropdowns
+    ul {
+      background: rgba(#666, .1);
+      margin-left: 0;
+      padding: 0;
+    }
+
+    ul a {
+      font-size: 1.4rem;
+    }
+
+    // Slight margins to improve readability of sub-navs
+    // Second level
+    ul > li {
+      padding-left: 1.5rem;
+    }
+
+    // Third level
+    ul > li ul {
+      margin-left: -1.5rem;
+    }
+
+    ul > li ul li {
+      padding-left: 3rem;
+    }
+
+    // Fourth level
+    ul > li ul li ul {
+      margin-left: -3rem;
+    }
+
+    ul > li ul li ul li {
+      padding-left: 4.5rem;
+    }
+  }
+}
+
 
 // Hamburger menu icon
 .nav-toggle {
