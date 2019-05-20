@@ -35,6 +35,15 @@ document.body.classList.add('js');
   // Document ready start
   $(function() {
 
+    // Fade out other menu items when selected more-item
+    $( '.dude-nav-more a' ).hover(
+      function() {
+        $( this ).parent().parent().addClass('fade-out');
+      }, function() {
+        $( this ).parent().parent().removeClass('fade-out');
+      }
+    );
+
     // Apple.com fade in all content that have opacity-on-load class
     setTimeout(function() {
       $('.opacity-on-load').addClass('fade-in');

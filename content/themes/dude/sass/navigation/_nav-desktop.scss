@@ -163,6 +163,20 @@ $absolute-navigation: true;
   color: $color-dude-white;
 }
 
+.menu-items {
+  transition: all $transition-duration;
+}
+
+// Fade out other items when hovering the last one
+.menu-items.fade-out .menu-item a,
+.menu-items.fade-out .menu-item a:after {
+  opacity: .2;
+}
+
+.menu-items.fade-out .menu-item.dude-nav-more a {
+  opacity: 1;
+}
+
 @media only screen and (min-width: $responsivenav) {
 
   // Use display block based hovers if no animations enabled
@@ -279,6 +293,7 @@ $absolute-navigation: true;
         color: $color-nav-links;
         padding: 2rem 0;
         font-weight: 400;
+        transition: all $transition-duration;
 
         &:after {
           width: 0;
