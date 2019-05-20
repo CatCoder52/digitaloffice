@@ -1,4 +1,8 @@
 .block.block-cta-process {
+  .container {
+    overflow: visible;
+  }
+
   .cols {
     @include grid(2, $gutter_x: 0, $gutter_y: 0);
 
@@ -30,6 +34,16 @@
     display: flex;
     margin-left: -5rem;
     z-index: 0;
+    transition: all $transition-duration;
+    opacity: .3;
+
+    &:hover {
+      opacity: 1;
+
+      .long-arrow {
+        width: 10rem;
+      }
+    }
 
     svg,
     circle {
