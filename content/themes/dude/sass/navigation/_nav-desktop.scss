@@ -156,6 +156,13 @@ $absolute-navigation: true;
   }
 }
 
+// Nav on front-page
+.home .nav-primary .menu-items .menu-item a,
+.home .nav-primary .menu-items .menu-item a:hover,
+.home .nav-primary .menu-items .menu-item a:focus {
+  color: $color-dude-white;
+}
+
 @media only screen and (min-width: $responsivenav) {
 
   // Use display block based hovers if no animations enabled
@@ -252,17 +259,36 @@ $absolute-navigation: true;
     }
 
     // General menu items
-    .menu-item {
+    .menu-items .menu-item {
       position: relative;
       float: left;
-      margin: 0;
+      margin-top: 0;
+      margin-left: 0;
+      margin-right: 3rem;
+      margin-bottom: 0;
+
+      &:last-child,
+      &:last-of-type {
+        margin-right: 0;
+      }
 
       // Main level
       a {
-        @include responsive-font(17px, 19px);
+        // "+" icon works best with 18px, sharpest
+        font-size: 18px;
         color: $color-nav-links;
-        padding: 2rem;
+        padding: 2rem 0;
         font-weight: 400;
+
+        &:after {
+          width: 0;
+          height: .1rem;
+          background: $color-dude-white;
+          position: relative;
+          content: '';
+          display: block;
+          transition: all $transition-duration;
+        }
 
         &.disabled {
           color: #bbb;
@@ -275,6 +301,10 @@ $absolute-navigation: true;
         &.highlighted,
         &.current {
           color: $color-nav-links;
+
+          &:after {
+            width: 100%;
+          }
         }
       }
 
@@ -355,7 +385,6 @@ $absolute-navigation: true;
 
         a {
           padding: .8rem 1.5rem;
-          font-size: 1.4rem;
           color: $color-nav-dropdown-links;
           display: block;
         }
