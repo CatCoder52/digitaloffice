@@ -6,7 +6,7 @@
 // -----------------------------------------------------------
 $nav-toggle-color: $color-dude-white;
 $nav-toggle-active-color: $color-dude-white;
-$nav-background-color: $color-dude-darkgrey;
+$nav-background-color: $color-dark-blueish;
 $hamburger-padding-x: 1.5rem;
 $hamburger-padding-y: 5rem;
 $hamburger-layer-width: 4rem;
@@ -44,6 +44,28 @@ $nav-open-from-top: false;
 
 // Disable scroll on html body when menu is opened.
 .disable-scroll {
+  overflow: hidden;
+}
+
+// Move body "out of the way" when nav activated
+.site-content {
+  transition: all .75s 50ms cubic-bezier(.19, 1, .22, 1);
+}
+
+body:after {
+  content: '';
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  height: 120vh;
+  background: $nav-background-color;
+}
+
+.js-nav-active .site-content {
+  transform: translate3d(-50vw, 0, 0);
+
+  // Prevent body scrolling when navigation is open
   overflow: hidden;
 }
 
