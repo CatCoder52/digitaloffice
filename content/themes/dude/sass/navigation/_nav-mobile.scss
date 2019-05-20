@@ -6,7 +6,7 @@
 // -----------------------------------------------------------
 $nav-toggle-color: $color-dude-white;
 $nav-toggle-active-color: $color-dude-white;
-$nav-background-color: $color-dude-deep-black;
+$nav-background-color: $color-dude-darkgrey;
 $hamburger-padding-x: 1.5rem;
 $hamburger-padding-y: 5rem;
 $hamburger-layer-width: 4rem;
@@ -142,14 +142,14 @@ $nav-open-from-top: false;
     outline: none;
 
     a {
+      @include responsive-font(20px, 42px);
       padding-top: 1rem;
       padding-bottom: 1rem;
       padding-left: 5%;
       padding-right: 5.8rem; // Make room for the toggle button (sub indicator)
       color: #fff;
-      font-size: 1.6rem;
-      font-weight: 400;
-      line-height: 1.7rem;
+      font-weight: 300;
+      line-height: 1.55;
       text-decoration: none;
       position: relative;
       z-index: 0;
