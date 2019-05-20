@@ -7,15 +7,44 @@
   background: $color-dude-deep-black;
   margin-left: -3.8rem;
 
+  @media (max-width: 640px) {
+    margin-left: auto;
+    margin-top: -3.8rem;
+    margin-bottom: 0;
+    margin-right: auto;
+    width: 11rem;
+    height: 11rem;
+  }
+
   svg {
     fill: $color-dude-white;
     width: 100px;
     height: 26px;
+
+    @media (max-width: 640px) {
+      width: 80px;
+      height: 15px;
+    }
   }
 }
 
 .site-footer {
   margin-top: $padding-default-cols;
+
+  .block-head {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+
+    @media (max-width: 1000px) {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+
+    @media (max-width: 640px) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
 
   .container {
     display: flex;
@@ -23,11 +52,31 @@
     align-items: center;
     width: 100%;
     background: $color-dude-whitegreyish;
+
+    @media (max-width: 640px) {
+      flex-wrap: wrap;
+    }
   }
 
   .contact-details {
     width: 50%;
     padding: $padding-general-content-box;
+
+    @media (max-width: 640px) {
+      padding: $padding-general-content-box-mobile;
+    }
+
+    @media (max-width: 1700px) {
+      width: 70%;
+    }
+
+    @media (max-width: 800px) {
+      width: 80%;
+    }
+
+    @media (max-width: 640px) {
+      width: 100%;
+    }
 
     .block-title {
       display: inline-block;
@@ -63,10 +112,10 @@
       &.hashtag {
         font-weight: bold;
         opacity: .7;
+      }
 
-        &:after {
-          display: none;
-        }
+      &.hashtag:after {
+        display: none;
       }
     }
 
