@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-11 17:09:27
+ * @Last Modified time: 2019-05-20 20:22:24
  *
  * @package dude2019
  */
@@ -26,7 +26,7 @@
       </div>
     </div>
 
-    <div class="featured-image featured-image-side" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/placeholder.png');"></div>
+    <div class="featured-image featured-image-side" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/placeholder.png');"><div class="shade"></div></div>
 
   </div>
 </section>

@@ -2,6 +2,11 @@
   margin-left: 0;
   margin-right: 0;
 
+  .shade {
+    background: linear-gradient(to bottom, #28392a 0%, transparent 50%);
+    opacity: .6;
+  }
+
   @media (max-width: 600px) {
     height: auto;
     display: block;
