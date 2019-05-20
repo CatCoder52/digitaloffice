@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-20 20:22:24
+ * @Last Modified time: 2019-05-20 21:21:40
  *
  * @package dude2019
  */
@@ -11,7 +11,7 @@
 ?>
 
 <section class="block block-hero block-hero-frontpage">
-  <div class="container">
+  <div class="container opacity-on-load-instant">
 
     <div class="content content-select-service">
 

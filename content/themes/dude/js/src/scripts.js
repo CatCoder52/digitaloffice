@@ -35,6 +35,14 @@ document.body.classList.add('js');
   // Document ready start
   $(function() {
 
+    // Apple.com fade in all content that have opacity-on-load class
+    setTimeout(function() {
+      $('.opacity-on-load').addClass('fade-in');
+    }, 500);
+
+    // Instant fade in
+    $('.opacity-on-load-instant').addClass('fade-in');
+
     // Set up back to top link
     var moveTo = new MoveTo();
     var target = document.getElementById('target');

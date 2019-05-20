@@ -26,7 +26,7 @@
    <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'dude' ); ?></a>
 
    <div class="nav-container">
-    <header class="site-header" role="banner">
+    <header class="site-header opacity-on-load" role="banner">
 
       <div class="site-branding">
         <?php if ( is_front_page() && is_home() ) : ?>
