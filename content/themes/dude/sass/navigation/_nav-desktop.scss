@@ -288,6 +288,8 @@ $absolute-navigation: true;
           content: '';
           display: block;
           transition: all $transition-duration;
+          bottom: -.4rem;
+          opacity: .5;
         }
 
         &.disabled {
@@ -304,6 +306,7 @@ $absolute-navigation: true;
 
           &:after {
             width: 100%;
+            opacity: 1;
           }
         }
       }
