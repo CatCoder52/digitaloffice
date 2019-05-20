@@ -36,6 +36,10 @@
     color: $color-dude-white;
     display: flex;
 
+    @media (min-width: $container-ipad-landscape) {
+      min-height: 70rem;
+    }
+
     // Let's reset the padding from the hero container, no need in full width hero
     padding-top: 0;
     padding-bottom: 0;
@@ -116,7 +120,12 @@
   .content.content-select-service {
     display: flex;
     align-items: center;
-    margin-bottom: -6rem;
+
+    .selection {
+
+      // Nav offset
+      margin-bottom: -6rem;
+    }
 
     ul,
     li {
