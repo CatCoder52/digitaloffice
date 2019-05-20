@@ -37,6 +37,23 @@
     transition: all $transition-duration;
     opacity: .3;
 
+    // Animations
+    &:nth-child(1) {
+      animation-name: pulse-opacity;
+      animation-duration: 12s;
+      animation-delay: 0s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+
+      .long-arrow {
+        animation-name: pulse-width;
+        animation-duration: 12s;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+      }
+    }
+
     &:hover {
       opacity: 1;
 
