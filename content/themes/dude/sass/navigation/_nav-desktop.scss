@@ -38,12 +38,14 @@ $absolute-navigation: true;
     width: 100%;
 
     // Main level links
-    .nav-primary > ul > li > a {
+    .nav-primary > ul > li > a,
+    .nav-primary-desktop > ul > li > a {
       color: #fff;
       position: relative;
     }
 
-    .nav-primary > ul > li > a:hover {
+    .nav-primary > ul > li > a:hover,
+    .nav-primary-desktop > ul > li > a:hover {
       color: #fff;
     }
   }
@@ -68,7 +70,8 @@ $absolute-navigation: true;
       }
     }
 
-    .nav-primary ul .sub-menu.toggled-on {
+    .nav-primary ul .sub-menu.toggled-on,
+    .nav-primary-desktop ul .sub-menu.toggled-on {
       visibility: visible;
       opacity: 1;
       z-index: 1;
@@ -82,7 +85,9 @@ $absolute-navigation: true;
     }
 
     [data-whatinput="mouse"] .nav-primary ul .menu-item-has-children,
-    [data-whatintent="mouse"] .nav-primary ul .menu-item-has-children {
+    [data-whatintent="mouse"] .nav-primary ul .menu-item-has-children,
+    [data-whatinput="mouse"] .nav-primary-desktop ul .menu-item-has-children,
+    [data-whatintent="mouse"] .nav-primary-desktop ul .menu-item-has-children {
       &:focus > .sub-menu,
       &:hover > .sub-menu {
         visibility: visible;
@@ -108,7 +113,9 @@ $absolute-navigation: true;
       }
 
       .nav-primary ul .menu-item-has-children:focus > .sub-menu,
-      .nav-primary ul .menu-item-has-children:hover > .sub-menu {
+      .nav-primary ul .menu-item-has-children:hover > .sub-menu,
+      .nav-primary-desktop ul .menu-item-has-children:focus > .sub-menu,
+      .nav-primary-desktop ul .menu-item-has-children:hover > .sub-menu {
         visibility: visible;
         opacity: 1;
         z-index: 1;
@@ -119,7 +126,8 @@ $absolute-navigation: true;
 
     // Disable animations and improve styles on IE10 + IE11
     @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-      .nav-primary .menu-items .sub-menu {
+      .nav-primary .menu-items .sub-menu,
+      .nav-primary-desktop .menu-items .sub-menu {
         width: $dropdown-width;
         visibility: visible;
         opacity: 1;
@@ -142,7 +150,8 @@ $absolute-navigation: true;
         }
       }
 
-      .nav-primary ul .menu-item-has-children {
+      .nav-primary ul .menu-item-has-children,
+      .nav-primary-desktop ul .menu-item-has-children {
         &:focus > .sub-menu,
         &:hover > .sub-menu {
           visibility: visible;
@@ -157,9 +166,9 @@ $absolute-navigation: true;
 }
 
 // Nav on front-page
-.home .nav-primary .menu-items .menu-item a,
-.home .nav-primary .menu-items .menu-item a:hover,
-.home .nav-primary .menu-items .menu-item a:focus {
+.home .nav-primary-desktop .menu-items .menu-item a,
+.home .nav-primary-desktop .menu-items .menu-item a:hover,
+.home .nav-primary-desktop .menu-items .menu-item a:focus {
   color: $color-dude-white;
 }
 
@@ -177,24 +186,72 @@ $absolute-navigation: true;
   opacity: 1;
 }
 
+// Plus to cross animation
+.nav-primary-desktop .menu-items .menu-item.dude-nav-more a {
+  position: relative;
+  padding-right: 2rem;
+  display: flex;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  .plus-cross {
+    font-size: 2.6rem;
+    transform: rotate(0deg);
+    transition: all $transition-duration;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 4.7rem;
+    margin-top: -.4rem;
+  }
+
+  &:hover .plus-cross {
+    transform: rotate(180deg);
+  }
+}
+
+// Toggled state, "cross"
+.nav-primary-desktop .menu-items .menu-item.dude-nav-more[aria-expanded="true"] .plus-cross {
+  transform: rotate(45deg);
+}
+
+.nav-primary-desktop .menu-items .menu-item.dude-nav-more[aria-expanded="true"] a:hover .plus-cross {
+  transform: rotate(90deg);
+}
+
+// When desktop nav open, hide links excepts More-link
+.js-nav-active .nav-primary-desktop .menu-items a,
+.js-nav-active .nav-primary-desktop .menu-items a:after,
+.js-nav-active .nav-primary-desktop .menu-items a:hover,
+.js-nav-active .nav-primary-desktop .menu-items a:hover:after {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.js-nav-active .nav-primary-desktop .menu-items .menu-item.dude-nav-more a,
+.js-nav-active .nav-primary-desktop .menu-items .menu-item.dude-nav-more a:after {
+  opacity: 1;
+  visibility: visible;
+}
+
 @media only screen and (min-width: $responsivenav) {
 
   // Use display block based hovers if no animations enabled
   @if $enable-animations == false {
     // Enable hovers
-    .nav-primary ul li:hover > ul {
+    .nav-primary-desktop ul li:hover > ul {
       display: block;
     }
 
     // Support for non-js users
-    .no-js .nav-primary ul li:hover > ul,
-    .no-js .nav-primary ul li:focus > ul {
+    .no-js .nav-primary-desktop ul li:hover > ul,
+    .no-js .nav-primary-desktop ul li:focus > ul {
       display: block;
     }
   }
 
   @media only screen and (max-width: $responsivenav) {
-    .nav-primary ul li:hover > ul {
+    .nav-primary-desktop ul li:hover > ul {
       display: block;
     }
   }
@@ -202,13 +259,13 @@ $absolute-navigation: true;
   // Disable animations on IE10 + IE11
   @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
     // Enable hovers
-    .nav-primary ul li:hover > ul {
+    .nav-primary-desktop ul li:hover > ul {
       display: block;
     }
   }
 
   // Dropdown arrows for no-js users
-  .no-js .nav-primary .menu-items .menu-item-has-children {
+  .no-js .nav-primary-desktop .menu-items .menu-item-has-children {
     &:after {
       @include vertical-align();
       text-indent: -9999px;
@@ -252,30 +309,27 @@ $absolute-navigation: true;
   }
 
   // Make sure mobile nav-toggle is hidden on desktop
-  .nav-toggle {
+  .nav-toggle-mobile {
     display: none;
   }
 
   // Start navigation
-  .nav-primary {
-    // Set based on logo height, for example air logo is about 62px
-    // menu links height are 12px, so paddings are (60/2)-12:
-    padding-top: 1.7rem;
-    padding-bottom: 1.7rem;
-    float: right;
+  .nav-primary-desktop {
+    padding-top: 0;
+    padding-bottom: 0;
 
     .menu-items {
       margin: 0;
       padding: 0;
       background: transparent;
       position: relative;
-      float: left;
+      display: flex;
+      align-items: center;
     }
 
     // General menu items
     .menu-items .menu-item {
       position: relative;
-      float: left;
       margin-top: 0;
       margin-left: 0;
       margin-right: 3rem;
@@ -318,11 +372,15 @@ $absolute-navigation: true;
         &.highlighted,
         &.current {
           color: $color-nav-links;
+        }
 
-          &:after {
-            width: 100%;
-            opacity: 1;
-          }
+        &:hover:after,
+        &:focus:after,
+        &:active:after,
+        &.highlighted:after,
+        &.current:after {
+          width: 100%;
+          opacity: 1;
         }
       }
 
@@ -465,5 +523,11 @@ $absolute-navigation: true;
         margin-bottom: .8rem;
       }
     }
+  }
+}
+
+@media (max-width: $responsivenav) {
+  .nav-primary-desktop {
+    display: none;
   }
 }

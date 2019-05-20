@@ -6,7 +6,8 @@
 // -----------------------------------------------------------
 $enable-animations: false;
 
-.nav-primary .menu-items {
+.nav-primary .menu-items,
+.nav-primary-desktop .menu-items {
   position: relative;
   z-index: 9999;
 
@@ -45,7 +46,8 @@ $enable-animations: false;
 // Hide by default if no animations enabled
 @if $enable-animations == false {
   @media only screen and (min-width: $responsivenav) {
-    .nav-primary .menu-items ul {
+    .nav-primary .menu-items ul,
+    .nav-primary-desktop .menu-items ul {
       display: none;
     }
   }
@@ -54,19 +56,22 @@ $enable-animations: false;
 // Disable animations on IE10 + IE11
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   @media only screen and (min-width: $responsivenav) {
-    .nav-primary .menu-items ul {
+    .nav-primary .menu-items ul,
+    .nav-primary-desktop .menu-items ul {
       display: none;
     }
   }
 }
 
 @media only screen and (max-width: $responsivenav) {
-  .js .nav-primary .menu-items ul {
+  .js .nav-primary .menu-items ul,
+  .js .nav-primary-desktop .menu-items ul {
     display: none;
   }
 }
 
-.nav-primary ul ul {
+.nav-primary ul ul,
+.nav-primary-desktop ul ul {
   margin-top: 0;
   margin-left: 25px;
 
@@ -77,7 +82,8 @@ $enable-animations: false;
 
 @if $enable-animations == false {
   @media only screen and (min-width: $responsivenav) {
-    .js .nav-primary ul .sub-menu.toggled-on {
+    .js .nav-primary ul .sub-menu.toggled-on,
+    .js .nav-primary-desktop ul .sub-menu.toggled-on {
       display: block;
     }
   }
@@ -86,14 +92,16 @@ $enable-animations: false;
 // Disable animations on IE10 + IE11
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   @media only screen and (min-width: $responsivenav) {
-    .js .nav-primary ul .sub-menu.toggled-on {
+    .js .nav-primary ul .sub-menu.toggled-on,
+    .js .nav-primary-desktop ul .sub-menu.toggled-on {
       display: block;
     }
   }
 }
 
 @media only screen and (max-width: $responsivenav) {
-  .js .nav-primary ul .sub-menu.toggled-on {
+  .js .nav-primary ul .sub-menu.toggled-on,
+  .js .nav-primary-desktop ul .sub-menu.toggled-on {
     display: block;
   }
 }

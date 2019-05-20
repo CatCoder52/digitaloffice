@@ -13,7 +13,7 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
 (function($) {
 
     var menuContainer    = $('.nav-container');
-    var menuToggle       = menuContainer.find( '#nav-toggle' );
+    var menuToggle       = menuContainer.find( '.nav-toggle' );
     var siteHeaderMenu   = menuContainer.find( '#main-navigation-wrapper' );
     var siteNavigation   = menuContainer.find( '#nav' );
     var dropdownToggle   = $('<button />', {'class': 'dropdown-toggle','aria-expanded': false})
@@ -30,6 +30,8 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
 
         menuToggle.on('click', function() {
         $(this).add(siteHeaderMenu).toggleClass('toggled-on');
+        $(this).toggleClass('toggled-on');
+        $('body').toggleClass('js-nav-active');
 
         // jscs:disable
         $(this).add( siteNavigation )

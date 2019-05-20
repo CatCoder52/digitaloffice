@@ -1,8 +1,6 @@
 .site-header {
   position: relative;
   z-index: 15;
-  padding-bottom: 2rem;
-  padding-top: 2rem;
   max-width: $grid-base-size;
   margin-left: auto;
   margin-right: auto;
@@ -13,6 +11,8 @@
   justify-content: space-between;
   padding-left: $padding-default-cols;
   padding-right: $padding-default-cols;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 
   @media (max-width: $container-ipad) {
     padding-left: $padding-default-cols-ipad;
