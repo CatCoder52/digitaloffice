@@ -51,6 +51,15 @@
     padding-left: 0;
     padding-right: 0;
 
+    .cta-link {
+      opacity: 0;
+      animation-name: fade-in-down;
+      animation-timing-function: ease-in both;
+      animation-fill-mode: forwards;
+      animation-duration: 1s;
+      animation-delay: 2.5s;
+    }
+
     .cta-link:after {
       background: $color-dude-white;
     }
@@ -166,15 +175,6 @@
       &:nth-child(3) {
         animation-duration: 1s;
         animation-delay: 2s;
-      }
-
-      .cta-link {
-        opacity: 0;
-        animation-name: fade-in-down;
-        animation-timing-function: ease-in both;
-        animation-fill-mode: forwards;
-        animation-duration: 1s;
-        animation-delay: 2.5s;
       }
     }
 
