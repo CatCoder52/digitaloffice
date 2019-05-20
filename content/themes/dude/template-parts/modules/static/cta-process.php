@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 16:10:53
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-18 19:28:12
+ * @Last Modified time: 2019-05-20 19:57:47
  *
  * @package dude2019
  */
@@ -27,22 +27,22 @@
 
         <div class="process">
           <div class="circle">
-            <svg cheight="250" width="250"><circle cx="125" cy="125" r="125" stroke="#050505" stroke-width="1" fill="#fff" /></svg>
+            <svg height="250" width="250"><circle cx="125" cy="125" r="125" stroke="#050505" stroke-width="1" fill="#fff" /></svg>
             <span class="long-arrow"></span>
           </div>
 
           <div class="circle">
-            <svg cheight="250" width="250"><circle cx="125" cy="125" r="125" stroke="#050505" stroke-width="1" fill="#fff" /></svg>
+            <svg height="250" width="250"><circle cx="125" cy="125" r="125" stroke="#050505" stroke-width="1" fill="#fff" /></svg>
             <span class="long-arrow"></span>
           </div>
 
           <div class="circle">
-            <svg cheight="250" width="250"><circle cx="125" cy="125" r="125" stroke="#050505" stroke-width="1" fill="#fff" /></svg>
+            <svg height="250" width="250"><circle cx="125" cy="125" r="125" stroke="#050505" stroke-width="1" fill="#fff" /></svg>
             <span class="long-arrow"></span>
           </div>
 
           <div class="circle">
-            <svg cheight="250" width="250"><circle cx="125" cy="125" r="125" stroke="#050505" stroke-width="1" fill="#fff" /></svg>
+            <svg height="250" width="250"><circle cx="125" cy="125" r="125" stroke="#050505" stroke-width="1" fill="#fff" /></svg>
             <span class="long-arrow"></span>
           </div>
         </div>

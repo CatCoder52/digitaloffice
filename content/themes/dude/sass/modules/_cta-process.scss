@@ -4,19 +4,36 @@
   }
 
   .cols {
-    @include grid(2, $gutter_x: 0, $gutter_y: 0);
+    @include grid(2, $gutter_x: 10rem, $gutter_y: 0);
+
+    @media (max-width: 1260px) {
+      grid-template-columns: 60vw 40vw;
+      grid-column-gap: 0;
+    }
+
+    @media (max-width: $container-ipad) {
+      display: block;
+    }
 
     .col {
       min-width: 50%;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
+
+      @media (max-width: $container-ipad) {
+        width: 100%;
+      }
     }
   }
 
   .process {
     display: flex;
     overflow: visible;
+
+    @media (max-width: $container-ipad) {
+      padding-left: 4rem;
+    }
   }
 
   .long-arrow {
@@ -31,6 +48,7 @@
     overflow: visible;
     min-height: 25rem;
     height: 25rem;
+    width: 25rem;
     display: flex;
     margin-left: -5rem;
     z-index: 0;

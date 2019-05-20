@@ -123,6 +123,10 @@ a.global-link {
   @media (max-width: 1200px) {
     max-width: 60%;
   }
+
+  @media (max-width: $container-mobile) {
+    max-width: 100%;
+  }
 }
 
 .block-head {
