@@ -119,6 +119,10 @@ a.global-link {
   max-width: 35vw;
   margin: 0;
   line-height: 1.33;
+
+  @media (max-width: 1200px) {
+    max-width: 60%;
+  }
 }
 
 .block-head {
