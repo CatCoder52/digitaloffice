@@ -70,6 +70,11 @@ document.body.classList.add('js');
       $('.opacity-on-load').addClass('fade-in');
     }, 500);
 
+    // Add transition class after all animations are completed
+    setTimeout(function() {
+      $('.block-hero').addClass('block-hero-enable-transition');
+    }, 3000);
+
     // Instant fade in
     $('.opacity-on-load-instant').addClass('fade-in');
 
