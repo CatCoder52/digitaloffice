@@ -1,6 +1,17 @@
 .block.block-hero {
   margin-left: 0;
   margin-right: 0;
+  height: 100vh;
+  display: flex;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  padding: 0;
+  align-items: center;
+
+  @media (min-width: $container-ipad-landscape) {
+    min-height: 70rem;
+  }
 
   .shade {
     background: linear-gradient(to bottom, #28392a 0%, transparent 50%);
@@ -22,14 +33,8 @@
 
   // Hero for front page
   &.block-hero-frontpage {
-    height: 100vh;
     background: $color-dude-deep-black;
     color: $color-dude-white;
-    display: flex;
-
-    @media (min-width: $container-ipad-landscape) {
-      min-height: 70rem;
-    }
 
     // Let's reset the padding from the hero container, no need in full width hero
     padding-top: 0;
@@ -60,6 +65,7 @@
       @include grid(2, $gutter_x: 0, $gutter_y: 0);
       width: 100%;
       margin: 0;
+      text-align: left;
 
       @media (max-width: 1400px) {
         grid-template-columns: 60vw 40vw;
@@ -220,44 +226,6 @@
 
       .init:hover:after {
         width: 0;
-      }
-    }
-  }
-
-  // Hero for services
-  &.block-hero-service {
-    .content {
-      max-width: 70rem;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 7rem;
-    }
-
-    .customer-logos svg {
-      display: block;
-      max-width: 100px;
-    }
-
-    .customer-logos svg,
-    .customer-logos path {
-      fill: #fff;
-    }
-
-    .customer-logos-list {
-      margin-top: 3.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      list-style: none;
-      padding: 0;
-
-      li {
-        display: inline-block;
-      }
-
-      > * {
-        margin: 0 2.5rem 2.5rem;
       }
     }
   }
