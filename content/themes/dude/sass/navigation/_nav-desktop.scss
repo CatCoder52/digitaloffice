@@ -388,8 +388,6 @@ $absolute-navigation: true;
         }
 
         &:hover:after,
-        &:focus:after,
-        &:active:after,
         &.highlighted:after,
         &.current:after {
           width: 100%;
