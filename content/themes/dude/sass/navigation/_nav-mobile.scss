@@ -6,7 +6,7 @@
 // -----------------------------------------------------------
 $nav-toggle-color: $color-dude-white;
 $nav-toggle-active-color: $color-dude-white;
-$nav-background-color: $color-dark-blueish;
+$nav-background-color: $color-dude-deep-black;
 $hamburger-padding-x: 1.5rem;
 $hamburger-padding-y: 5rem;
 $hamburger-layer-width: 4rem;
@@ -159,24 +159,41 @@ body:after {
     margin: 0;
     width: 100%;
     float: none;
-    padding: 2rem 0;
-    // We have color here, so it's okay to remove outline
-    outline: none;
+    outline: none; // We have color here, so it's okay to remove outline
+    padding-left: $padding-default-cols;
+    padding-right: $padding-default-cols;
+    padding-top: $padding-default-rows;
+    padding-bottom: $padding-default-rows;
+
+    @media (max-width: $container-ipad) {
+      padding-left: $padding-default-cols-ipad;
+      padding-right: $padding-default-cols-ipad;
+      padding-top: $padding-default-rows-ipad;
+      padding-bottom: $padding-default-rows-ipad;
+    }
+
+    @media (max-width: $container-mobile) {
+      padding-left: $padding-default-cols-mobile;
+      padding-right: $padding-default-cols-mobile;
+      padding-top: $padding-default-rows-mobile;
+      padding-bottom: $padding-default-rows-mobile;
+    }
 
     a {
-      @include responsive-font(20px, 42px);
+      @include responsive-font(20px, 32px);
       padding-top: 1rem;
       padding-bottom: 1rem;
-      padding-left: 5%;
-      padding-right: 5.8rem; // Make room for the toggle button (sub indicator)
+      padding-left: 0;
+      padding-right: 0;
       color: #fff;
       font-weight: 300;
-      line-height: 1.55;
+      line-height: 1.33;
       text-decoration: none;
       position: relative;
       z-index: 0;
       display: block;
       outline: none; // We have color here, so it's okay to remove outline
+      text-align: right;
     }
 
     a:focus {
