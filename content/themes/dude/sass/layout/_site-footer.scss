@@ -61,6 +61,7 @@
   .contact-details {
     width: 50%;
     padding: $padding-general-content-box;
+    max-width: 80rem;
 
     @media (max-width: 640px) {
       padding: $padding-general-content-box-mobile;
