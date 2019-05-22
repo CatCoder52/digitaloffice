@@ -99,12 +99,24 @@ body:after {
         width: 50vw;
         right: 0;
 
+        .nav-items {
+          width: 50vw;
+        }
+
         @media (max-width: 1400px) {
           width: 60vw;
+
+          .nav-items {
+            width: 60vw;
+          }
         }
 
         @media (max-width: 1020px) {
           width: 70vw;
+
+          .nav-items {
+            width: 70vw;
+          }
         }
 
         @media (max-width: $responsivenav) {
