@@ -20,21 +20,7 @@
     }
   }
 
-  .featured-image.featured-image-side {
-    @include background-cover();
-    width: 50vw;
-    height: 110vh;
-    position: relative;
-    z-index: 2;
-    transition: all $transition-duration;
-    top: 0;
-
-    @media (max-width: 600px) {
-      width: 100%;
-      height: 50rem;
-    }
-  }
-
+  // Hero for front page
   &.block-hero-frontpage {
     height: 100vh;
     background: $color-dude-deep-black;
@@ -98,6 +84,21 @@
       }
     }
 
+    .featured-image.featured-image-side {
+      @include background-cover();
+      width: 50vw;
+      height: 110vh;
+      position: relative;
+      z-index: 2;
+      transition: all $transition-duration;
+      top: 0;
+
+      @media (max-width: 600px) {
+        width: 100%;
+        height: 50rem;
+      }
+    }
+
     .selection {
       display: flex;
       align-items: center;
@@ -129,97 +130,135 @@
     a {
       color: $color-dude-white;
     }
+
+    .content.content-select-service {
+      display: flex;
+      align-items: center;
+
+      .selection {
+
+        // Nav offset
+        margin-bottom: -6rem;
+      }
+
+      ul,
+      li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        transition: all $transition-duration;
+      }
+
+      ul {
+        margin-bottom: 6rem;
+        width: 100%;
+      }
+
+      li {
+        margin-bottom: $margin-reasonable-space;
+        line-height: 1.22;
+        animation-name: fade-in-down;
+        animation-timing-function: ease-in both;
+        animation-fill-mode: forwards;
+        opacity: 0;
+
+        &:nth-child(1) {
+          animation-duration: 1s;
+          animation-delay: 1s;
+        }
+
+        &:nth-child(2) {
+          animation-duration: 1s;
+          animation-delay: 1.5s;
+        }
+
+        &:nth-child(3) {
+          animation-duration: 1s;
+          animation-delay: 2s;
+        }
+      }
+
+      li:last-of-type {
+        margin-bottom: 0;
+      }
+
+      li a {
+        @extend %h2;
+        font-weight: 300;
+        line-height: 1.2;
+        display: inline-block;
+        transition: all $transition-duration;
+      }
+
+      // Fade all out except hovered one
+      ul:hover li a {
+        opacity: .2;
+      }
+
+      ul:hover a:hover,
+      ul:hover li:hover a {
+        opacity: 1;
+      }
+
+      li a:hover:after {
+        width: 100%;
+      }
+
+      li a:after {
+        width: 0;
+        height: .2rem;
+        background: $color-dude-white;
+        position: relative;
+        content: '';
+        display: block;
+        transition: all $transition-duration;
+      }
+
+      .init:after {
+        width: 100%;
+      }
+
+      .init:hover:after {
+        width: 0;
+      }
+    }
   }
 
-  .content.content-select-service {
-    display: flex;
-    align-items: center;
-
-    .selection {
-
-      // Nav offset
-      margin-bottom: -6rem;
+  // Hero for services
+  &.block-hero-service {
+    .content {
+      max-width: 70rem;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 7rem;
     }
 
-    ul,
-    li {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      transition: all $transition-duration;
-    }
-
-    ul {
-      margin-bottom: 6rem;
-      width: 100%;
-    }
-
-    li {
-      margin-bottom: $margin-reasonable-space;
-      line-height: 1.22;
-      animation-name: fade-in-down;
-      animation-timing-function: ease-in both;
-      animation-fill-mode: forwards;
-      opacity: 0;
-
-      &:nth-child(1) {
-        animation-duration: 1s;
-        animation-delay: 1s;
-      }
-
-      &:nth-child(2) {
-        animation-duration: 1s;
-        animation-delay: 1.5s;
-      }
-
-      &:nth-child(3) {
-        animation-duration: 1s;
-        animation-delay: 2s;
-      }
-    }
-
-    li:last-of-type {
-      margin-bottom: 0;
-    }
-
-    li a {
-      @extend %h2;
-      font-weight: 300;
-      line-height: 1.2;
-      display: inline-block;
-      transition: all $transition-duration;
-    }
-
-    // Fade all out except hovered one
-    ul:hover li a {
-      opacity: .2;
-    }
-
-    ul:hover a:hover,
-    ul:hover li:hover a {
-      opacity: 1;
-    }
-
-    li a:hover:after {
-      width: 100%;
-    }
-
-    li a:after {
-      width: 0;
-      height: .2rem;
-      background: $color-dude-white;
-      position: relative;
-      content: '';
+    .customer-logos svg {
       display: block;
-      transition: all $transition-duration;
+      max-width: 100px;
     }
 
-    .init:after {
-      width: 100%;
+    .customer-logos svg,
+    .customer-logos path {
+      fill: #fff;
     }
 
-    .init:hover:after {
-      width: 0;
+    .customer-logos-list {
+      margin-top: 3.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      padding: 0;
+
+      li {
+        display: inline-block;
+      }
+
+      > * {
+        margin: 0 2.5rem 2.5rem;
+      }
     }
   }
 }
