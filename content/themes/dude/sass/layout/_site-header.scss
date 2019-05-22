@@ -36,7 +36,8 @@
 
 // If dark hero, fix colors according to the situation
 .has-dark-hero {
-  nav ul li a {
+  nav ul li a,
+  nav ul li button {
     color: #fff;
   }
 

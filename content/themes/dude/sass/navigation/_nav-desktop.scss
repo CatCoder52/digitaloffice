@@ -4,8 +4,8 @@
 // The main layout for the website navigation, for a desktop
 // devices only.
 // -----------------------------------------------------------
-$color-nav-dropdown-links: #333;
-$color-nav-links: #333;
+$color-nav-dropdown-links: #fff;
+$color-nav-links: #fff;
 $dropdown-width: 19rem;
 $icon-arrow-right: '../svg/chevron-right-dark.svg';
 $icon-arrow-down: '../svg/chevron-down-dark.svg';
@@ -178,21 +178,29 @@ $absolute-navigation: true;
 
 // Fade out other items when hovering the last one
 .menu-items.fade-out .menu-item a,
-.menu-items.fade-out .menu-item a:after {
+.menu-items.fade-out .menu-item a:after,
+.menu-items.fade-out .menu-item button,
+.menu-items.fade-out .menu-item button:after {
   opacity: .2;
 }
 
-.menu-items.fade-out .menu-item.dude-nav-more a {
+.menu-items.fade-out .menu-item.dude-nav-more button {
   opacity: 1;
 }
 
 // Plus to cross animation
-.nav-primary-desktop .menu-items .menu-item.dude-nav-more a {
+.nav-primary-desktop .menu-items .menu-item.dude-nav-more button {
   position: relative;
   padding-right: 2rem;
-  display: flex;
+  display: block;
   padding-top: 0;
   padding-bottom: 0;
+  background: transparent;
+  border: 0;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   .plus-cross {
     font-size: 2.6rem;
@@ -215,7 +223,7 @@ $absolute-navigation: true;
   transform: rotate(45deg);
 }
 
-.nav-primary-desktop .menu-items .menu-item.dude-nav-more[aria-expanded="true"] a:hover .plus-cross {
+.nav-primary-desktop .menu-items .menu-item.dude-nav-more[aria-expanded="true"] button:hover .plus-cross {
   transform: rotate(90deg);
 }
 
@@ -223,13 +231,17 @@ $absolute-navigation: true;
 .js-nav-active .nav-primary-desktop .menu-items a,
 .js-nav-active .nav-primary-desktop .menu-items a:after,
 .js-nav-active .nav-primary-desktop .menu-items a:hover,
-.js-nav-active .nav-primary-desktop .menu-items a:hover:after {
+.js-nav-active .nav-primary-desktop .menu-items a:hover:after,
+.js-nav-active .nav-primary-desktop .menu-items button,
+.js-nav-active .nav-primary-desktop .menu-items button:after,
+.js-nav-active .nav-primary-desktop .menu-items button:hover,
+.js-nav-active .nav-primary-desktop .menu-items button:hover:after {
   opacity: 0;
   visibility: hidden;
 }
 
-.js-nav-active .nav-primary-desktop .menu-items .menu-item.dude-nav-more a,
-.js-nav-active .nav-primary-desktop .menu-items .menu-item.dude-nav-more a:after {
+.js-nav-active .nav-primary-desktop .menu-items .menu-item.dude-nav-more button,
+.js-nav-active .nav-primary-desktop .menu-items .menu-item.dude-nav-more button:after {
   opacity: 1;
   visibility: visible;
 }
@@ -341,7 +353,8 @@ $absolute-navigation: true;
       }
 
       // Main level
-      a {
+      a,
+      button {
         // "+" icon works best with 18px, sharpest
         font-size: 18px;
         color: $color-nav-links;
@@ -459,7 +472,8 @@ $absolute-navigation: true;
           margin-top: -5px;
         }
 
-        a {
+        a,
+        button {
           padding: .8rem 1.5rem;
           color: $color-nav-dropdown-links;
           display: block;
@@ -468,13 +482,12 @@ $absolute-navigation: true;
         a:hover,
         a:focus,
         a:active,
-        a.highlighted {
+        a.highlighted,
+        button:hover,
+        button:focus,
+        button:active,
+        button.highlighted {
           color: $color-links;
-        }
-
-        .disabled {
-          background: #fff;
-          color: #ccc;
         }
       }
 

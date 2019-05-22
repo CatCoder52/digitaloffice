@@ -81,7 +81,7 @@
           <ul class="menu-items nav-menu"><li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-18"><a href="//192.168.2.108:3000/verkkosivut">Verkkosivut</a></li>
             <li id="menu-item-19" class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-19"><a href="#">Visuaalinen suunnittelu</a></li>
             <li id="menu-item-22" class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-22"><a href="#">Ota yhteyttä</a></li>
-            <li id="menu-item-4477" class="dude-nav-more nav-toggle menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4477"><a href="#">Lisää <span class="plus-cross">+</span></a></li>
+            <li id="menu-item-4477" class="dude-nav-more nav-toggle menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4477"><button>Lisää <span class="plus-cross">+</span></button></li>
           </ul>
 
         </nav><!-- #nav -->
