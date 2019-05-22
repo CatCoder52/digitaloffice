@@ -41,7 +41,9 @@
     color: #fff;
   }
 
-  .site-title svg {
+  .site-title svg,
+  .site-title g,
+  .site-title path {
     fill: #fff;
   }
 }
