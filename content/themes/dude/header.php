@@ -66,25 +66,25 @@
           <div class="content">
             <h2>Palvelumme</h2>
             <ul class="menu-items nav-menu" aria-expanded="false">
-              <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-18"><a href="//192.168.2.110:3000/verkkosivut">Verkkosivut</a></li>
-              <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-19"><a href="#">Visuaalinen suunnittelu</a></li>
+              <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-18"><a href="<?php echo get_page_link( 9 ); ?>">Verkkosivut</a></li>
+              <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-19"><a href="<?php echo get_page_link( 4485 ); ?>">Visuaalinen suunnittelu</a></li>
             </ul>
           </div>
 
           <div class="content">
             <h2>Refut ja koodit</h2>
             <ul class="menu-items nav-menu" aria-expanded="false">
-              <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4482"><a href="#">Työt</a></li>
-              <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4480"><a href="#">Nörteille</a></li>
+              <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4482"><a href="<?php echo get_page_link( 4493 ); ?>">Työt</a></li>
+              <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4480"><a href="<?php echo get_page_link( 4489 ); ?>">Nörteille</a></li>
             </ul>
           </div>
 
           <div class="content">
             <h2>Meistä lisää</h2>
             <ul class="menu-items nav-menu" aria-expanded="false">
-              <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-4478"><a href="#">Yritys</a></li>
-              <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4481"><a href="#">Työpaikat</a></li>
-              <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-4479"><a href="#">Blogi</a></li>
+              <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-4478"><a href="<?php echo get_page_link( 4449 ); ?>">Yritys</a></li>
+              <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4481"><a href="<?php echo get_page_link( 4491 ); ?>">Työpaikat</a></li>
+              <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-4479"><a href="<?php echo get_page_link( 11 ); ?>">Blogi</a></li>
             </ul>
           </div>
 
@@ -92,7 +92,7 @@
             <h2>Yhteydet</h2>
 
             <ul class="menu-items nav-menu" aria-expanded="false">
-              <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-22"><a href="#">Ota yhteyttä</a></li>
+              <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-22"><a href="<?php echo get_page_link( 4487 ); ?>">Yhteystiedot</a></li>
             </ul>
 
             <p class="contact-details">Kauppakatu 14<br />
@@ -112,9 +112,9 @@
         <nav id="nav-desktop" class="nav-primary-desktop" role="navigation">
 
           <ul class="menu-items nav-menu">
-            <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-18"><a href="//192.168.2.108:3000/verkkosivut">Verkkosivut</a></li>
-            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-19"><a href="#">Visuaalinen suunnittelu</a></li>
-            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-22"><a href="#">Ota yhteyttä</a></li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-18"><a href="<?php echo get_page_link( 9 ); ?>">Verkkosivut</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-19"><a href="<?php echo get_page_link( 4485 ); ?>">Visuaalinen suunnittelu</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-22"><a href="<?php echo get_page_link( 4487 ); ?>">Ota yhteyttä</a></li>
             <li class="dude-nav-more nav-toggle menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4477"><button>Lisää <span class="plus-cross">+</span></button></li>
           </ul>
 
