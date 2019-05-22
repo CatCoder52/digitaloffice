@@ -67,6 +67,14 @@ body:after {
 
   // Prevent body scrolling when navigation is open
   overflow: hidden;
+
+  @media (max-width: 1400px) {
+    transform: translate3d(-60vw, 0, 0);
+  }
+
+  @media (max-width: 1020px) {
+    transform: translate3d(-70vw, 0, 0);
+  }
 }
 
 // Ensure nav stays in the same position when activated
@@ -90,6 +98,18 @@ body:after {
       @if $nav-open-from-right == true {
         width: 50vw;
         right: 0;
+
+        @media (max-width: 1400px) {
+          width: 60vw;
+        }
+
+        @media (max-width: 1020px) {
+          width: 70vw;
+        }
+
+        @media (max-width: $responsivenav) {
+          width: 100vw;
+        }
       }
 
       @if $nav-open-from-left == true {
