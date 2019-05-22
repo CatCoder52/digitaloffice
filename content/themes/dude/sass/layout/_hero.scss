@@ -6,6 +6,7 @@
   display: flex;
   padding: 0;
   align-items: center;
+  transition: all $transition-duration;
 
   @media (min-width: $container-ipad-landscape) {
     min-height: 70rem;

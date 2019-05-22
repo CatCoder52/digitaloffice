@@ -63,11 +63,20 @@ body:after {
 }
 
 .js-nav-active .site-content {
+  // Scale needed in images because of hollow "borders" in blur effect
   transform: translate3d(-50vw, 0, 0);
 
   // Prevent body scrolling when navigation is open
   overflow: hidden;
 
+  // Add blur effect to hero
+  .block-hero {
+    filter: blur(8px);
+    transform: scale(1.03);
+    margin-left: -1rem;
+  }
+
+  // Scale needed in images because of hollow "borders" in blur effect
   @media (max-width: 1400px) {
     transform: translate3d(-60vw, 0, 0);
   }
