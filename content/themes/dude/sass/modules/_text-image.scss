@@ -1,0 +1,36 @@
+.block.block-text-image {
+  padding-right: 0;
+
+  .container {
+    @include grid(2, $gutter_x: 10rem, $gutter_y: 0);
+  }
+
+  .image {
+    @include background-cover();
+  }
+
+  ul,
+  li {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+
+    svg {
+      margin-right: 2rem;
+      width: 3rem;
+      height: 3rem;
+      min-width: 3rem;
+      position: relative;
+      top: 2px;
+    }
+  }
+
+  li {
+    margin-bottom: 3rem;
+    display: flex;
+  }
+
+  li:last-child {
+    margin-bottom: 0;
+  }
+}
