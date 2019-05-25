@@ -1,12 +1,15 @@
 .block.block-content-side-switch {
-  padding: 20rem;
+  padding-top: 20rem;
+  padding-bottom: 20rem;
 
   @media (max-width: 1500px) {
-    padding: 15rem;
+    padding-top: 15rem;
+    padding-bottom: 15rem;
   }
 
   @media (max-width: 1000px) {
-    padding: 10rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
   }
 
   @media (max-width: $container-ipad) {
@@ -43,7 +46,10 @@
   }
 
   .col.col-switch {
-    margin-right: 30rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    padding-right: 10rem;
 
     ul,
     li {
@@ -64,5 +70,10 @@
 
   .col.col-content {
     opacity: .8;
+
+    p {
+      width: 80%;
+      max-width: 85rem;
+    }
   }
 }
