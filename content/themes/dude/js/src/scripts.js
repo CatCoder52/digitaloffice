@@ -30,10 +30,50 @@ document.body.classList.add('js');
       $( link_class ).removeClass('fade-out');
     }
 
-	});
+  });
 
   // Document ready start
   $(function() {
+
+    // Gutter and switch effect in content-side-switch module
+    var doc = document;
+    var anchors = doc.getElementById('service-switcher').getElementsByTagName('button');
+    var highlight = doc.getElementById('highlight');
+
+    for(var i = 0, len = anchors.length; i < len; i++) {
+      anchors[i].addEventListener('mouseover', function(e) {
+        var target = e.target;
+        var init = doc.getElementById('init');
+
+        jQuery('.service-switcher button').removeClass('has-focus');
+        target.classList.remove('clicked');
+        target.classList.add('has-focus');
+        highlight.style.top = target.offsetTop + 'px';
+      });
+
+      anchors[i].addEventListener('mouseout', function(e) {
+        var target = e.target;
+        var init = doc.getElementById('init');
+
+        if ( target.classList.contains('clicked') ) {
+          console.log('clicked');
+        } else {
+          highlight.style.top = 0;
+          init.classList.add('has-focus');
+          target.classList.remove('has-focus');
+          target.classList.remove('clicked');
+        }
+      });
+
+      anchors[i].addEventListener('click', function(e) {
+        var target = e.target;
+        jQuery('.service-switcher button').removeClass('has-focus clicked');
+        target.classList.add('clicked');
+        target.classList.add('has-focus');
+        highlight.style.top = target.offsetTop + 'px';
+      });
+
+    }
 
     // Morph logo when hovered
     // var svgMorpheus = new SVGMorpheus('.loader');
