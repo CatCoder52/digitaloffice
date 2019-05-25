@@ -838,7 +838,7 @@
                             "label": "Kuvat",
                             "name": "images",
                             "type": "gallery",
-                            "instructions": "Voit lisätä kuvia loputtomasti. Ruudukkoon arvotaan vuorokauden välein uudet seitsemän kuvaa kuvaa, loput ovat ovat nähtävissä koko ruudulle avattavssa galleriassa.",
+                            "instructions": "Voit lisätä kuvia loputtomasti. Ruudukkoon arvotaan vuorokauden välein uudet seitsemän kuvaa kuvaa, loput ovat ovat nähtävissä koko ruudulle avattavssa galleriassa.\r\n\r\n<b>Muista asettaa kuville kuvaava vaihtoehtoinen teksti<\/b>, se luetaan ruudunlukijoille.",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -885,5 +885,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1558783944
+    "modified": 1558785422
 }
