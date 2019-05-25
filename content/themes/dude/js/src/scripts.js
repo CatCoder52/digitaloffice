@@ -66,13 +66,11 @@ document.body.classList.add('js');
         if ( target.classList.contains('clicked') ) {
           highlight.style.top = clickedPosition;
           target.classList.add('has-focus');
-          console.log('clicked');
         } else {
 
           // If no clicked position, move back to start
           if ( typeof clickedPosition !== 'undefined') {
             highlight.style.top = clickedPosition;
-            console.log(clickedPosition);
           } else {
             highlight.style.top = 0;
             init.classList.add('has-focus');
@@ -104,8 +102,6 @@ document.body.classList.add('js');
         jQuery('.content-tab').fadeOut(600, function() {
           $(this).removeClass('is-visible');
         });
-
-        console.log(tabId);
 
         // Add class to the content that is corresponding to the clicked item
         jQuery('#' + tabId).addClass('animating');
