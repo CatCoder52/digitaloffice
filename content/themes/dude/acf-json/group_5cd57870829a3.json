@@ -826,6 +826,41 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5ce924d0b1466": {
+                    "key": "layout_5ce924d0b1466",
+                    "name": "gallery",
+                    "label": "Galleria",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5ce92516b1467",
+                            "label": "Kuvat",
+                            "name": "images",
+                            "type": "gallery",
+                            "instructions": "Voit lisätä kuvia loputtomasti. Ruudukkoon arvotaan vuorokauden välein uudet seitsemän kuvaa kuvaa, loput ovat ovat nähtävissä koko ruudulle avattavssa galleriassa.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "min": "",
+                            "max": "",
+                            "insert": "append",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Lisää moduuli",
@@ -850,5 +885,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1558197184
+    "modified": 1558783944
 }
