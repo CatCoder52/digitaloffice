@@ -14,6 +14,8 @@ var highlight = doc.getElementById('highlight');
 for(var i = 0, len = anchors.length; i < len; i++) {
   anchors[i].addEventListener('mouseover', function(e) {
     var target = e.target;
+    var init = doc.getElementById('init');
+    init.classList.remove('active');
     target.classList.add('active');
     highlight.style.top = target.offsetTop + 'px';
   });
