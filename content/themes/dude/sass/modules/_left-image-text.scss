@@ -3,6 +3,10 @@
   z-index: 3;
   padding-left: 0;
   padding-right: 0;
+  background: transparent;
+
+  // Because of process module, let's remove the bottom padding
+  padding-bottom: 0;
 
   @media (max-width: $container-ipad) {
     margin-top: 5rem;
@@ -42,6 +46,5 @@
 
   .cols {
     @include grid(2, $gutter_x: 0, $gutter_y: 0);
-    // grid-template-columns: 3fr 7fr;
   }
 }
