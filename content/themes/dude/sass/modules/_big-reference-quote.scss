@@ -2,6 +2,10 @@
   background: #f4f4f4;
   padding: 0;
 
+  .container {
+    overflow: visible;
+  }
+
   .cols {
     @include grid(2, $gutter_x: 10rem, $gutter_y: 0);
     grid-template-columns: 25vw 75vw;
@@ -23,7 +27,11 @@
     padding-left: $padding-default-cols;
     padding-right: $padding-default-cols;
     padding-top: $padding-default-rows;
-    padding-bottom: $padding-default-rows;
+    padding-bottom: 0;
+    margin-bottom: -5rem;
+    overflow: visible;
+    position: relative;
+    z-index: 2;
 
     blockquote {
       margin: 0;
