@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 17:24:23
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-25 16:22:17
+ * @Last Modified time: 2019-05-25 16:51:43
  *
  * @package dude2019
  */
@@ -15,11 +15,19 @@
     <div class="cols">
 
       <div class="col col-switch">
-        <ul>
-          <li><button class="active" data-tab="verkkosivut">Verkkosivut</button></li>
-          <li><button data-tab="verkkopalvelut">Verkkopalvelut</button></li>
-          <li><button data-tab="integraatiot">Integraatiot</button></li>
-        </ul>
+
+        <div class="service-switcher">
+          <ul>
+            <li><button class="active" data-tab="verkkosivut">Verkkosivut</button></li>
+            <li><button data-tab="verkkopalvelut">Verkkopalvelut</button></li>
+            <li><button data-tab="integraatiot">Integraatiot</button></li>
+          </ul>
+
+          <div class="gutter">
+            <span class="hilight"></span>
+          </div>
+        </div>
+
       </div>
 
       <div class="col col-content">

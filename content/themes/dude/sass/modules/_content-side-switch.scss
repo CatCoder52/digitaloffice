@@ -49,13 +49,43 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
+    align-items: flex-start;
     padding-right: 10rem;
+    position: relative;
 
     ul,
     li {
       margin: 0;
       padding: 0;
       list-style: none;
+    }
+
+    .service-switcher {
+      position: relative;
+      padding-left: 5rem;
+      display: block;
+    }
+
+    .hilight {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      border: 2px solid $color-dude-deep-black;
+      position: absolute;
+      top: 0;
+      left: -14.9px;
+      transition: all $transition-duration;
+      background: $color-dude-white;
+    }
+
+    .gutter {
+      width: 1px;
+      background: $color-dude-deep-black;
+      height: 100%;
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 1rem;
     }
 
     button {
@@ -65,6 +95,10 @@
       color: $color-body;
       font-weight: 300;
       margin-bottom: 5rem;
+    }
+
+    li:last-child button {
+      margin-bottom: 0;
     }
   }
 
