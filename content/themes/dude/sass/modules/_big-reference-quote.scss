@@ -28,7 +28,7 @@
   .col.col-person-image {
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: bottom left;
 
     @media (max-width: 900px) {
       height: 70rem;
