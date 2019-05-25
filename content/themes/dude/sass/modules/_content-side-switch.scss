@@ -126,7 +126,8 @@
       }
 
       &.active,
-      &.has-focus {
+      &.has-focus,
+      &:hover {
         opacity: 1;
       }
     }
