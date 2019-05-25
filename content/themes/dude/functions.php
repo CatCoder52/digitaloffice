@@ -21,6 +21,7 @@ require get_theme_file_path( '/inc/nav-walker.php' );
 require get_theme_file_path( '/inc/cpt/reference.php' );
 require get_theme_file_path( '/inc/cpt/person.php' );
 require get_theme_file_path( '/inc/cpt/merch.php' );
+require get_theme_file_path( '/inc/cpt/order.php' );
 
 /**
  * Enable theme support for essential features.
