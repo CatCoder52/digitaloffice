@@ -2,8 +2,8 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 17:34:24
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-05-18 17:38:04
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2019-05-25 18:52:37
  *
  * @package dude2019
  */
@@ -23,7 +23,7 @@ if ( empty( $bg_image ) || empty( $content ) ) {
         <div class="image" style="background-image: url('<?php echo esc_url( wp_get_attachment_url( $bg_image ) ) ?>');"></div>
       </div>
 
-      <div class="col">
+      <div class="col has-grey-bg has-grey-bg-extend-right">
         <div class="content">
           <?php echo wpautop( $content ); ?>
         </div>
