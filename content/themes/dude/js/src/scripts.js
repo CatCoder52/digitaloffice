@@ -133,6 +133,69 @@ document.body.classList.add('js');
   // Document ready start
   $(function() {
 
+// Linkable accordion sections
+  $('.accordion').each(function() {
+    var $t = $(this);
+    var hash = location.hash;
+
+    if($t.attr("data-href") == hash) {
+      if($t.next('.accordion-content').is(':hidden')) {
+        $('.accordion-content').stop(true, false).slideUp(225);
+        $t.next('.accordion-content').stop(true, false).slideDown(250, function() {
+          $(this).css({
+            display: "grid"
+          });
+          $('html, body').animate({ scrollTop: $t.offset().top - 100 }, 200);
+        });
+
+        $t.addClass('open-accordion');
+        $('.accordion').children('.arr').removeClass('open');
+        $t.children('.arr').addClass('open');
+        window.location.hash = $t.attr("data-href");
+
+      } else {
+        $t.removeClass('open-accordion');
+        $('.accordion').children('.arr').removeClass('open');
+        $('.accordion-content').stop(true, false).slideUp(250);
+
+        var slug = $(this).attr("data-href");
+        window.location.hash = $t.attr("data-href");
+      }
+
+      return false;
+    }
+  });
+
+    $('.accordion').on('click', function() {
+      var $t = $(this);
+
+      // Remove all open-accordion classes by default when clicking
+      $('.accordion').removeClass('open-accordion');
+
+      if($t.next('.accordion-content').is(':hidden')) {
+        $('.accordion-content').stop(true, false).slideUp(225);
+        $t.next('.accordion-content').stop(true, false).slideDown(250, function() {
+          $(this).css({
+            display: "grid"
+          });
+          $('html, body').animate({ scrollTop: $t.offset().top - 100 }, 200);
+        });
+
+        $t.addClass('open-accordion');
+        $('.accordion').children('.arr').removeClass('open');
+        $t.children('.arr').addClass('open');
+        window.location.hash = $t.attr("data-href");
+
+        } else {
+          $t.removeClass('open-accordion');
+          $('.accordion').children('.arr').removeClass('open');
+          $('.accordion-content').stop(true, false).slideUp(250);
+
+          var slug = $(this).attr("data-href");
+          window.location.hash = $t.attr("data-href");
+        }
+    });
+
     // Gutter and switch effect in content-side-switch module
     var doc = document;
     if ( $( '#service-switcher' ).length) {

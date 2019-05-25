@@ -34,10 +34,10 @@
 
   .cols {
     @include grid(2, $gutter_x: 10rem, $gutter_y: 0);
-    grid-template-columns: 25vw 75vw;
+    grid-template-columns: 1fr 2fr;
 
     @media (max-width: 1400px) {
-      grid-template-columns: 35vw 65vw;
+      grid-template-columns: 35% 65%;
       grid-column-gap: 5rem;
 
       .button:hover .long-arrow {

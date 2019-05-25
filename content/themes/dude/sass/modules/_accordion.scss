@@ -1,10 +1,19 @@
 .block.block-accordion {
+  .container {
+    overflow: visible;
+  }
+
+  h2,
+  a {
+    transition: all $transition-duration;
+  }
+
   .cols {
     @include grid(2, $gutter_x: 10rem, $gutter_y: 0);
-    grid-template-columns: 25vw 75vw;
+    grid-template-columns: 1fr 2fr;
 
     @media (max-width: 1400px) {
-      grid-template-columns: 35vw 65vw;
+      grid-template-columns: 35% 65%;
       grid-column-gap: 5rem;
 
       .button:hover .long-arrow {
@@ -15,6 +24,14 @@
     @media (max-width: 700px) {
       display: flex;
       flex-wrap: wrap;
+    }
+  }
+
+  .accordion {
+    width: 80%;
+
+    @media (max-width: 700px) {
+      max-width: 100%;
     }
   }
 
@@ -64,3 +81,121 @@
     }
   }
 }
+
+
+// Accordion styles
+.accordion-content {
+  display: none;
+  padding-top: 0;
+  padding-bottom: $padding-accordion-content;
+
+  @media (max-width: $container-mobile) {
+    padding-bottom: $padding-accordion-content-mobile;
+    padding-left: $padding-accordion-content-mobile;
+    padding-right: $padding-accordion-content-mobile;
+  }
+
+  p {
+    opacity: .6;
+    width: 80%;
+    max-width: 85rem;
+
+    @media (max-width: 1300px) {
+      max-width: 90%;
+      width: 100%;
+    }
+
+    @media (max-width: 700px) {
+      max-width: 100%;
+    }
+  }
+}
+
+.accordion {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid $color-superlightgrey;
+  cursor: pointer;
+  position: relative;
+  margin: 0;
+  padding-top: $padding-accordion-content;
+  padding-bottom: $padding-accordion-content;
+
+  @media (max-width: $container-mobile) {
+    padding: $padding-accordion-content-mobile;
+  }
+
+  .arr {
+    background-image: url('../svg/plus-bauerblue.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 5rem;
+    height: 5rem;
+
+    @media (max-width: 800px) {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  h2 {
+    @extend %h3;
+    color: $color-lightgrey;
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+  }
+
+  &:first-child {
+    border-top: 0;
+  }
+
+  &:hover {
+    .arr {
+      background-image: url('../svg/plus-white.svg');
+    }
+
+    h2 {
+      color: $color-dude-deep-black;
+    }
+  }
+
+  &.open-accordion {
+    cursor: default;
+
+    .arr {
+      display: none;
+    }
+
+    h2 {
+      color: $color-dude-deep-black;
+    }
+
+    &:hover {
+      background-color: transparent;
+      cursor: default;
+
+      h2 {
+        color: $color-dude-deep-black;
+      }
+    }
+  }
+}
+
+.accordion.open-accordion {
+  pointer-events: none;
+  cursor: default;
+
+  &:hover {
+    background-color: $color-dude-white;
+    pointer-events: none;
+    cursor: default;
+
+    h2 {
+      color: $color-lightgrey;
+    }
+  }
+}
+
