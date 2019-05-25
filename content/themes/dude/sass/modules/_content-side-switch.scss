@@ -100,7 +100,8 @@
       transition: all $transition-duration;
       opacity: .5;
 
-      &.active {
+      &.active,
+      &.has-focus {
         opacity: 1;
       }
     }
