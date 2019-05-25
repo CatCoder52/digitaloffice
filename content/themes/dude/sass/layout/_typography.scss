@@ -204,35 +204,14 @@ blockquote {
   clear: both;
   border: 0 none;
   position: relative;
-  margin-top: 3rem;
-  padding-bottom: 3rem;
   margin: 0;
 
-  p {
-    font-style: italic;
+  p:first-child {
+    margin-top: 0;
+  }
+
+  p:last-child {
     margin-bottom: 0;
-    position: relative;
-    overflow: visible;
-    color: #666;
-  }
-
-  @media (min-width: $container-ipad) {
-    margin-top: 4rem;
-    padding-bottom: 4rem;
-  }
-
-  &:before {
-    content: '';
-    display: block;
-    height: 4px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    max-width: 147px;
-
-    @media (min-width: $container-mobile) {
-      width: 30%;
-    }
   }
 }
 

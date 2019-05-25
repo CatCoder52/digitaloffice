@@ -1,0 +1,6 @@
+{
+  "defaults": {
+    "standard": "WCAG2A"
+  },
+  "urls": ["http:\/\/dude.test\/tyot","http:\/\/dude.test\/tyopaikat","http:\/\/dude.test\/koodiluola","http:\/\/dude.test\/yhteystiedot","http:\/\/dude.test\/visuaalinen-suunnittelu","http:\/\/dude.test\/dudet\/henri-avoketo","http:\/\/dude.test\/dudet\/timi-wahalahti","http:\/\/dude.test\/dudet\/kristian-hohkavaara","http:\/\/dude.test\/dudet\/juha-laitinen","http:\/\/dude.test\/dudet\/roni-laukkarinen","http:\/\/dude.test\/yritys","http:\/\/dude.test\/reference\/bauer-media","http:\/\/dude.test\/reference\/black-bruin","http:\/\/dude.test\/reference\/nodeon","http:\/\/dude.test\/reference\/sievo-2","http:\/\/dude.test\/reference\/sievo","http:\/\/dude.test\/blogi","http:\/\/dude.test\/verkkosivut","http:\/\/dude.test\/"]
+}
