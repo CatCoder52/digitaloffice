@@ -28,8 +28,8 @@
   }
 }
 
-.site-footer {
-  margin-top: $padding-default-cols;
+.block.block-footer.site-footer {
+  padding-top: 0;
 
   .block-head {
     padding-top: 10rem;
