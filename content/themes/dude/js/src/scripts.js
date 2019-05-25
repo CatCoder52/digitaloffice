@@ -44,23 +44,33 @@ document.body.classList.add('js');
       anchors[i].addEventListener('mouseover', function(e) {
         var target = e.target;
         var init = doc.getElementById('init');
-
-        jQuery('.service-switcher button').removeClass('has-focus');
-        target.classList.remove('clicked');
-        target.classList.add('has-focus');
         highlight.style.top = target.offsetTop + 'px';
       });
 
       anchors[i].addEventListener('mouseout', function(e) {
         var target = e.target;
         var init = doc.getElementById('init');
+        var getClicked = document.getElementsByClassName('clicked');
+
+        if ( typeof getClicked !== 'undefined') {
+          var clickedElement = getClicked[0];
+          var clickedPosition = clickedElement.offsetTop + 'px';
+        }
 
         if ( target.classList.contains('clicked') ) {
+          highlight.style.top = clickedPosition;
+          target.classList.add('has-focus');
           console.log('clicked');
         } else {
-          highlight.style.top = 0;
-          init.classList.add('has-focus');
-          target.classList.remove('has-focus');
+
+          if ( typeof clickedPosition !== 'undefined') {
+            highlight.style.top = clickedPosition;
+            console.log(clickedPosition);
+          } else {
+            highlight.style.top = 0;
+            init.classList.add('has-focus');
+          }
+
           target.classList.remove('clicked');
         }
       });
