@@ -9,12 +9,37 @@
   .cols {
     @include grid(2, $gutter_x: 10rem, $gutter_y: 0);
     grid-template-columns: 25vw 75vw;
+
+    @media (max-width: 1400px) {
+      grid-template-columns: 35vw 65vw;
+      grid-column-gap: 5rem;
+
+      .button:hover .long-arrow {
+        width: 7rem;
+      }
+    }
+
+    @media (max-width: 900px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 
   .col.col-person-image {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
+
+    @media (max-width: 900px) {
+      height: 70rem;
+      background-position: bottom left;
+      width: 100%;
+      order: 2;
+    }
+
+    @media (max-width: $container-mobile) {
+      height: 60rem;
+    }
   }
 
   .block-title-pre.block-title-pre-quote-person {
@@ -40,6 +65,10 @@
       color: $color-dude-grey-text;
       max-width: 70%;
 
+      @media (max-width: 1400px) {
+        max-width: 90%;
+      }
+
       footer {
         color: $color-dude-grey-text;
       }
@@ -47,6 +76,10 @@
 
     svg {
       margin-bottom: 3.5rem;
+    }
+
+    @media (max-width: 900px) {
+      order: 1;
     }
 
     @media (max-width: $container-ipad) {
