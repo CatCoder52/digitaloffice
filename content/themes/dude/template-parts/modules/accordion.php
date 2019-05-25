@@ -2,8 +2,8 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 17:54:33
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-05-18 18:01:50
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2019-05-25 20:29:10
  *
  * @package dude2019
  */
@@ -41,27 +41,32 @@ if ( empty( $accordion ) ) {
 <section class="block block-accordion">
   <div class="container">
 
-    <div class="col col-left">
-      <h2><?php echo esc_html( $title ) ?></h2>
+    <div class="cols">
+      <div class="col col-left">
 
-      <?php if ( ! empty( $subtitle ) ) : ?>
-        <h3><?php echo esc_html( $subtitle ) ?></h3>
-      <?php endif; ?>
+        <header class="block-head">
+          <h2><?php echo esc_html( $title ) ?></h2>
+
+          <?php if ( ! empty( $subtitle ) ) : ?>
+            <p><?php echo esc_html( $subtitle ) ?></p>
+          <?php endif; ?>
+        </header>
+      </div>
+
+      <div class="col col-right">
+
+        <?php foreach ( $accordion as $item ) : ?>
+          <div class="accordion<?php if ( $first_open && $i === $accordion_count ) { echo ' open-accordion'; } ?>" data-href="<?php echo esc_attr( sanitize_title( $item['title'] ) ) ?>">
+            <h2><?php echo esc_html( $item['title'] ) ?></h2>
+          </div>
+
+          <div class="accordion-content wrapper" <?php if ( $first_open && $i === $accordion_count ) { echo 'style="display: grid;"'; } ?>>
+            <?php echo wpautop( $item['content'] ) ?>
+          </div>
+          <?php $i--; endforeach; ?>
+
+      </div>
     </div>
 
-    <div class="col col-right">
-
-      <?php foreach ( $accordion as $item ) : ?>
-        <div class="accordion<?php if ( $first_open && $i === $accordion_count ) { echo ' open-accordion'; } ?>" data-href="<?php echo esc_attr( sanitize_title( $item['title'] ) ) ?>">
-          <h2><?php echo esc_html( $item['title'] ) ?></h2>
-        </div>
-
-        <div class="accordion-content wrapper" <?php if ( $first_open && $i === $accordion_count ) { echo 'style="display: grid;"'; } ?>>
-          <?php echo wpautop( $item['content'] ) ?>
-        </div>
-      <?php $i--; endforeach; ?>
-
     </div>
-
-  </div>
-</section>
+  </section>

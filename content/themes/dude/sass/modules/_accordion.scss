@@ -1,0 +1,66 @@
+.block.block-accordion {
+  .cols {
+    @include grid(2, $gutter_x: 10rem, $gutter_y: 0);
+    grid-template-columns: 25vw 75vw;
+
+    @media (max-width: 1400px) {
+      grid-template-columns: 35vw 65vw;
+      grid-column-gap: 5rem;
+
+      .button:hover .long-arrow {
+        width: 7rem;
+      }
+    }
+
+    @media (max-width: 700px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .col-left {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    position: relative;
+    padding-right: 5rem;
+
+    .block-head {
+      padding: 0;
+    }
+
+    h2,
+    p {
+      width: 100%;
+    }
+
+    h2 {
+      @include responsive-font(32px, 100px);
+      font-weight: 500;
+      margin-top: 0;
+      margin-bottom: 2rem;
+    }
+
+    p {
+      @extend %h3;
+      margin: 0;
+      font-weight: 300;
+    }
+
+    @media (min-width: 850px) {
+      padding-right: 10rem;
+    }
+
+    @media (max-width: 700px) {
+      width: 100%;
+      margin-bottom: 4rem;
+      justify-content: flex-start;
+    }
+
+    @media (max-width: $container-mobile) {
+      margin-top: 3rem;
+      margin-left: 3rem;
+    }
+  }
+}
