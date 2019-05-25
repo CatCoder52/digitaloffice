@@ -2,8 +2,8 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 18:08:24
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-05-18 18:24:47
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2019-05-25 20:52:23
  *
  * @package dude2019
  */
@@ -18,7 +18,7 @@ if ( empty( $title_placeholder ) || empty( $articles ) ) {
 <section class="block block-blog-articles-upsell">
   <div class="container">
 
-    <h2><?php printf( 'Blogauksii <span>%s</span>', $title_placeholder ) ?></h2>
+    <h2 class="block-title"><?php printf( 'Blogauksii <span>%s</span>', $title_placeholder ) ?></h2>
 
     <div class="cols">
       <?php foreach ( $articles as $article ) :
@@ -28,8 +28,12 @@ if ( empty( $title_placeholder ) || empty( $articles ) ) {
 
         <div class="col">
           <h3><?php echo get_the_title( $article ) ?></h3>
-          <?php echo get_the_excerpt( $article ) ?>
-          <p><a href="<?php echo get_the_permalink( $article ) ?>">Lue kirjoitus</a></p>
+
+          <div class="excerpt">
+            <?php echo wpautop( get_the_excerpt( $article ) ) ?>
+          </div>
+
+          <p><a class="cta-link" href="<?php echo get_the_permalink( $article ) ?>">Lue kirjoitus</a></p>
         </div>
 
       <?php endforeach; ?>

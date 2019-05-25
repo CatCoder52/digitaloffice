@@ -1,0 +1,30 @@
+.block.block-blog-articles-upsell {
+  .container {
+    overflow: visible;
+  }
+
+  .cols {
+    @include grid(2, $gutter_x: 10rem, $gutter_y: 0);
+
+    @media (max-width: 1260px) {
+      grid-template-columns: 60vw 40vw;
+      grid-column-gap: 0;
+    }
+
+    @media (max-width: $container-ipad) {
+      display: block;
+    }
+  }
+
+  .block-title {
+    margin-bottom: 4rem;
+
+    span {
+      border-bottom: 1px solid $color-dude-deep-black;
+    }
+  }
+
+  .excerpt {
+    opacity: .6;
+  }
+}
