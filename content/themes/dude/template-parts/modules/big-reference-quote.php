@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 17:07:55
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-25 14:50:20
+ * @Last Modified time: 2019-05-25 15:34:55
  *
  * @package dude2019
  */
@@ -42,7 +42,7 @@ if ( empty( $button_text ) ) {
     <div class="cols">
 
       <?php if ( ! empty( $person_image ) ) : ?>
-        <div class="col col-person-image" style="background-image:url('<?php echo wp_get_attachment_url( $person_image ) ?>'"></div>
+        <div class="col col-person-image" style="background-image: url('<?php echo wp_get_attachment_url( $person_image ) ?>'"></div>
       <?php endif; ?>
 
       <div class="col col-content">
@@ -51,15 +51,19 @@ if ( empty( $button_text ) ) {
         }
 
         if ( ! empty( $quote_person ) && ! empty( $quote_person_title ) ) : ?>
-          <p class="quote-person"><?php echo "{$quote_person}, {$quote_person_title}" ?></p>
-      <?php endif; ?>
+          <p class="block-title-pre block-title-pre-quote-person" aria-describedby="<?php echo sanitize_title( $quote_person ); ?>"><?php echo "{$quote_person}, {$quote_person_title}" ?></p>
+        <?php endif; ?>
 
-      <h2><?php echo get_the_title( $reference ) ?></h2>
-      <?php echo wpautop( $quote ); ?>
-      <p><a href="<?php echo get_the_permalink( $reference ) ?>" class="button"><?php echo esc_html( $button_text ) ?></a></p>
+        <h2 class="block-title" id="<?php echo sanitize_title( $quote_person ); ?>"><?php echo get_the_title( $reference ) ?></h2>
+
+        <blockquote>
+          <?php echo wpautop( $quote ); ?>
+        </blockquote>
+
+        <p><a href="<?php echo get_the_permalink( $reference ) ?>" class="button"><?php echo esc_html( $button_text ) ?></a></p>
+      </div>
+
     </div>
-
-  </div>
 
 </div>
 </section>
