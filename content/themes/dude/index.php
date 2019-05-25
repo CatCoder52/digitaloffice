@@ -57,6 +57,36 @@ get_header(); ?>
       </div>
     </section>
 
+    <?php if ( ! is_paged() ) : ?>
+      <section class="block block-cta-left-image">
+        <div class="container">
+
+          <div class="cols">
+            <div class="col">
+              <div class="image" style="background-image: url('<?php echo esc_url( get_theme_file_uri( 'images/placeholder.png' ) ) ?>');"></div>
+            </div>
+
+            <div class="col">
+              <div class="content">
+                <h2 class="block-title">Pullopostia?</h2>
+                <p>Koottuja kuulumisia sisältävä bittivirtojen pulloposti saapuu rantaasi noin kolmen kuukauden välein.</p>
+                <form action="https://dude.us8.list-manage.com/subscribe/post?u=bda4635b58bba8d9716eb90a6&amp;id=efe9db80e6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+                  <label for="mce-EMAIL" class="screen-reader-text">Sähköpostiosoite:</label>
+
+                  <div class="inputs">
+                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Sähköpostiosoite">
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_bda4635b58bba8d9716eb90a6_efe9db80e6" tabindex="-1" value=""></div>
+                    <input type="submit" value="Lähetä" name="subscribe" id="mc-embedded-subscribe" class="button">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    <?php endif; ?>
+
 	</main><!-- #main -->
 </div><!-- #primary -->
 
