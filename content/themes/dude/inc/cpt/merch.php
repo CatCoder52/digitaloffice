@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:33:00
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-05-25 15:36:29
+ * @Last Modified time: 2019-05-25 19:21:10
  *
  * @package dude2019
  */
@@ -14,11 +14,11 @@ function dude_register_cpt_merch() {
     'singular_name'      => _x( 'Merch', 'post type singular name', 'dude' ),
     'menu_name'          => _x( 'Merchit', 'admin menu', 'dude' ),
     'name_admin_bar'     => _x( 'Merch', 'add new on admin bar', 'dude' ),
-    'add_new'            => _x( 'Lisää merch', 'example', 'dude' ),
-    'add_new_item'       => __( 'Lisää uusi merch', 'dude' ),
-    'new_item'           => __( 'Uusi merch', 'dude' ),
-    'edit_item'          => __( 'Muokkaa merchä', 'dude' ),
-    'view_item'          => __( 'Katsele merchä', 'dude' ),
+    'add_new'            => _x( 'Lisää merchi', 'example', 'dude' ),
+    'add_new_item'       => __( 'Lisää uusi merchi', 'dude' ),
+    'new_item'           => __( 'Uusi merchi', 'dude' ),
+    'edit_item'          => __( 'Muokkaa merchiä', 'dude' ),
+    'view_item'          => __( 'Katsele merchiä', 'dude' ),
     'all_items'          => __( 'Kaikki merchit', 'dude' ),
     'search_items'       => __( 'Etsi merchiä', 'dude' ),
     'parent_item_colon'  => __( 'Tyypin isäntä:', 'dude' ),
@@ -40,7 +40,6 @@ function dude_register_cpt_merch() {
     'menu_icon'          => 'dashicons-palmtree',
     'supports'           => array(
       'title',
-      'editor',
       'thumbnail',
       'page-attributes',
       'revisions'
