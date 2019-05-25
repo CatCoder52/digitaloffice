@@ -1,11 +1,11 @@
 .block.block-text-image {
   padding-right: 0;
 
-  .container {
+  .cols {
     @include grid(2, $gutter_x: 10rem, $gutter_y: 0);
   }
 
-  .image {
+  .col-image {
     @include background-cover();
   }
 

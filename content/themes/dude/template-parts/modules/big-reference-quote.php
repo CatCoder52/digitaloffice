@@ -2,8 +2,8 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 17:07:55
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-05-18 17:19:40
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2019-05-25 15:34:55
  *
  * @package dude2019
  */
@@ -39,27 +39,31 @@ if ( empty( $button_text ) ) {
 <section class="block block-big-reference-quote<?php if ( ! empty( $person_image ) ) { echo ' has-person-image'; } ?>">
   <div class="container">
 
-    <?php if ( ! empty( $person_image ) ) : ?>
-      <div class="col col-person-image" style="background-image:url('<?php echo wp_get_attachment_url( $person_image ) ?>'"></div>
-    <?php endif; ?>
+    <div class="cols">
 
-    <div class="col col-content">
-
-      <?php if ( ! empty( $logo ) ) {
-        include get_theme_file_path( "svg/logos/{$logo}.svg" );
-      }
-
-      if ( ! empty( $quote_person ) && ! empty( $quote_person_title ) ) : ?>
-        <p class="quote-person"><?php echo "{$quote_person}, {$quote_person_title}" ?></p>
+      <?php if ( ! empty( $person_image ) ) : ?>
+        <div class="col col-person-image" style="background-image: url('<?php echo wp_get_attachment_url( $person_image ) ?>'"></div>
       <?php endif; ?>
 
-      <h2><?php echo get_the_title( $reference ) ?></h2>
+      <div class="col col-content">
+        <?php if ( ! empty( $logo ) ) {
+          include get_theme_file_path( "svg/logos/{$logo}.svg" );
+        }
 
-      <?php echo wpautop( $quote ); ?>
+        if ( ! empty( $quote_person ) && ! empty( $quote_person_title ) ) : ?>
+          <p class="block-title-pre block-title-pre-quote-person" aria-describedby="<?php echo sanitize_title( $quote_person ); ?>"><?php echo "{$quote_person}, {$quote_person_title}" ?></p>
+        <?php endif; ?>
 
-      <p><a href="<?php echo get_the_permalink( $reference ) ?>" class="button"><?php echo esc_html( $button_text ) ?></a></p>
+        <h2 class="block-title" id="<?php echo sanitize_title( $quote_person ); ?>"><?php echo get_the_title( $reference ) ?></h2>
+
+        <blockquote>
+          <?php echo wpautop( $quote ); ?>
+        </blockquote>
+
+        <p><a href="<?php echo get_the_permalink( $reference ) ?>" class="button"><?php echo esc_html( $button_text ) ?></a></p>
+      </div>
 
     </div>
 
-  </div>
+</div>
 </section>
