@@ -12,34 +12,46 @@
  * @package dude
  */
 
-get_header();
-
-get_template_part( 'template-parts/hero', get_post_type() ); ?>
+get_header(); ?>
 
 <div id="content" class="content-area">
 	<main role="main" id="main" class="site-main">
 
-    <div class="container">
+    <?php while( have_posts() ) : the_post(); ?>
+      <section class="block block-blog-big">
+        <div class="container">
 
-			<?php if ( have_posts() ) {
-				if ( is_home() && ! is_front_page() ) { ?>
-					<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-					</header>
-				<?php }
+          <div class="col col-image" style="background-image:url('<?php echo the_post_thumbnail_url( 'large' ); ?>')"></div>
 
-				while ( have_posts() ) {
-					the_post();
-					get_template_part( 'template-parts/content', get_post_type() );
-				}
+          <div class="col col-content">
+            <p class="date"><?php echo ucfirst( date_i18n( 'l' ) ) ?>na, <?php echo get_the_date( 'j.n.Y' ) ?></p>
+            <h1><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h1>
+            <?php the_excerpt() ?>
 
-				the_posts_navigation();
+            <p class="arrow-link-wrapper"><a href="<?php the_permalink() ?>" class="arrow-link">Lue ploki<span class="arrow"></span></a></p>
+          </div>
 
-			} else {
-				get_template_part( 'template-parts/content', 'none' );
-			} ?>
+        </div>
+      </section>
+    <?php break; endwhile; ?>
 
-    </div><!-- .container -->
+    <section class="block block-blog">
+      <div class="container">
+
+        <div class="cols">
+          <?php while( have_posts() ) : the_post(); ?>
+            <div class="col">
+              <div class="image" style="background-image:url('<?php echo the_post_thumbnail_url( 'medium' ); ?>')"></div>
+              <h2><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
+              <p class="date"><?php echo ucfirst( date_i18n( 'l' ) ) ?>na, <?php echo get_the_date( 'j.n.Y' ) ?></p>
+            </div>
+          <?php endwhile; ?>
+        </div>
+
+        <p class="button-wrapper"><?php echo previous_posts_link(); ?><?php echo next_posts_link(); ?></p>
+
+      </div>
+    </section>
 
 	</main><!-- #main -->
 </div><!-- #primary -->
