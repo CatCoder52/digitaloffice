@@ -861,6 +861,41 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5ce94a3b202aa": {
+                    "key": "layout_5ce94a3b202aa",
+                    "name": "contact-list",
+                    "label": "Yhteystietolista",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5ce94a5c202ab",
+                            "label": "Henkilöt",
+                            "name": "persons",
+                            "type": "relationship",
+                            "instructions": "Keitä henkilöitä näytetään? Ensimmäinen on \"pääjehu\" jonka puhelinnumero näkyy ja joka korostetaan myyntihenkilöksi.",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "person"
+                            ],
+                            "taxonomy": "",
+                            "filters": [
+                                "search"
+                            ],
+                            "elements": "",
+                            "min": "",
+                            "max": "",
+                            "return_format": "id"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Lisää moduuli",
@@ -885,5 +920,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1558785422
+    "modified": 1558792884
 }
