@@ -17,23 +17,27 @@ get_header(); ?>
 <div id="content" class="content-area">
 	<main role="main" id="main" class="site-main">
 
-    <?php while( have_posts() ) : the_post(); ?>
-      <section class="block block-blog-big">
-        <div class="container">
+    <?php if ( ! is_paged() && ! is_category() && ! is_tag() && ! is_author() ) :
+      while( have_posts() ) : the_post(); ?>
+        <section class="block block-blog-big">
+          <div class="container">
 
-          <div class="col col-image" style="background-image:url('<?php echo the_post_thumbnail_url( 'large' ); ?>')"></div>
+            <div class="col col-image" style="background-image:url('<?php echo the_post_thumbnail_url( 'large' ); ?>')"></div>
 
-          <div class="col col-content">
-            <p class="date"><?php echo ucfirst( date_i18n( 'l' ) ) ?>na, <?php echo get_the_date( 'j.n.Y' ) ?></p>
-            <h1><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h1>
-            <?php the_excerpt() ?>
+            <div class="col col-content">
+              <p class="date"><?php echo ucfirst( date_i18n( 'l' ) ) ?>na, <?php echo get_the_date( 'j.n.Y' ) ?></p>
+              <h1><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h1>
+              <?php the_excerpt() ?>
 
-            <p class="arrow-link-wrapper"><a href="<?php the_permalink() ?>" class="arrow-link">Lue ploki<span class="arrow"></span></a></p>
+              <p class="arrow-link-wrapper"><a href="<?php the_permalink() ?>" class="arrow-link">Lue ploki<span class="arrow"></span></a></p>
+            </div>
+
           </div>
-
-        </div>
-      </section>
-    <?php break; endwhile; ?>
+        </section>
+      <?php break; endwhile; ?>
+    <?php else :
+      include get_theme_file_path( 'template-parts/hero.php' );
+    endif; ?>
 
     <section class="block block-blog">
       <div class="container">
