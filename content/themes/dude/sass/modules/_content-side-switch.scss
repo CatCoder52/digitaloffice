@@ -1,0 +1,122 @@
+.block.block-content-side-switch {
+  padding-top: 20rem;
+  padding-bottom: 20rem;
+
+  @media (max-width: 1500px) {
+    padding-top: 15rem;
+    padding-bottom: 15rem;
+  }
+
+  @media (max-width: 1000px) {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+
+  @media (max-width: $container-ipad) {
+    padding-left: $padding-default-cols-ipad;
+    padding-right: $padding-default-cols-ipad;
+    padding-top: $padding-default-rows-ipad;
+    padding-bottom: $padding-default-rows-ipad;
+  }
+
+  @media (max-width: $container-mobile) {
+    padding-left: $padding-default-cols-mobile;
+    padding-right: $padding-default-cols-mobile;
+    padding-top: $padding-default-rows-mobile;
+    padding-bottom: $padding-default-rows-mobile;
+  }
+
+  .cols {
+    @include grid(2, $gutter_x: 10rem, $gutter_y: 0);
+    grid-template-columns: 25vw 75vw;
+
+    @media (max-width: 1400px) {
+      grid-template-columns: 35vw 65vw;
+      grid-column-gap: 5rem;
+
+      .button:hover .long-arrow {
+        width: 7rem;
+      }
+    }
+
+    @media (max-width: 900px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .col.col-switch {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-right: 10rem;
+    position: relative;
+
+    ul,
+    li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .service-switcher {
+      position: relative;
+      padding-left: 5rem;
+      display: block;
+    }
+
+    .hilight {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      border: 2px solid $color-dude-deep-black;
+      position: absolute;
+      top: 0;
+      left: -14.9px;
+      transition: all $transition-duration;
+      background: $color-dude-white;
+    }
+
+    .gutter {
+      width: 1px;
+      background: $color-dude-deep-black;
+      height: 90%;
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      margin-top: 1.4rem;
+      opacity: .5;
+    }
+
+    button {
+      @extend %h3;
+      padding: 0;
+      background: none;
+      color: $color-body;
+      font-weight: 300;
+      margin-bottom: 5rem;
+      transition: all $transition-duration;
+      opacity: .5;
+
+      &.active,
+      &.has-focus {
+        opacity: 1;
+      }
+    }
+
+    li:last-child button {
+      margin-bottom: 0;
+    }
+  }
+
+  .col.col-content {
+    opacity: .8;
+
+    p {
+      width: 80%;
+      max-width: 85rem;
+    }
+  }
+}

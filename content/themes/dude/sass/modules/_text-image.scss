@@ -1,8 +1,15 @@
 .block.block-text-image {
-  padding-right: 0;
-
   .cols {
     @include grid(2, $gutter_x: 10rem, $gutter_y: 0);
+
+    @media (max-width: 1260px) {
+      grid-template-columns: 60vw 40vw;
+      grid-column-gap: 0;
+    }
+
+    @media (max-width: $container-ipad) {
+      display: block;
+    }
   }
 
   .col-image {
@@ -32,5 +39,9 @@
 
   li:last-child {
     margin-bottom: 0;
+  }
+
+  @media (min-width: $container-ipad) {
+    padding-right: 0;
   }
 }

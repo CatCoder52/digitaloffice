@@ -216,6 +216,21 @@ a.global-link {
   }
 }
 
+.arrow-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.button:hover .long-arrow {
+  width: 15rem;
+}
+
+.button .long-arrow,
+.button .long-arrow:after,
+.button .long-arrow:before {
+  background: $color-dude-white;
+}
+
 // Descriptions and notes
 .col-description {
   opacity: .5;
