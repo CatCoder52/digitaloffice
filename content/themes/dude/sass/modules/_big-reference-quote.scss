@@ -1,0 +1,12 @@
+.block.block-big-reference-quote {
+  background: #f4f4f4;
+
+  .cols {
+    @include grid(2, $gutter_x: 20rem, $gutter_y: 0);
+    grid-template-columns: 30vw 70vw;
+  }
+
+  .col.col-person-image {
+    @include background-cover();
+  }
+}
