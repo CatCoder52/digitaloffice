@@ -2,8 +2,8 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-25 14:37:31
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-05-25 15:23:50
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2019-05-25 19:46:56
  *
  * @package dude2019
  */
@@ -47,25 +47,18 @@ $visible_images = array_slice( $images, 0, 7 ); ?>
         <div class="col" style="background-image:url('<?php echo esc_url( $image['url'] ) ?>');">
           <span class="screen-reader-text"><?php echo esc_html( $image['alt'] ) ?></span>
         </div>
-      <?php endforeach;
-
-      // this is for JS gallery use
-      foreach ( $images as $image ) : ?>
-        <span style="background-image:url('<?php echo esc_url( $image['url'] ) ?>');"></span>
       <?php endforeach; ?>
     </div>
+
+    <?php
+      // This is for JS gallery use
+    foreach ( $images as $image ) : ?>
+      <figure class="image hidden">
+        <a href="<?php echo esc_url( $image['url'] ) ?>" class="gallery-item"><?php echo $image['alt'] ?></a>
+      </figure>
+    <?php endforeach; ?>
 
     <p><button>Kaikki kuvat</button></p>
 
   </div>
 </section>
-
-<!-- TODO: remove, just for back-end testing -->
-<style type="text/css">
-  .block-gallery .col {
-    display: inline-block;
-    background-size: cover;
-    height: 400px;
-    width: 400px;
-  }
-</style>
