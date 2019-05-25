@@ -1,134 +1,163 @@
-// Built to work with:
-// http://dimsemenov.com/plugins/magnific-popup/
-// https://github.com/digitoimistodude/air
-//
-// Import this file after magnific-popup/dist/magnific-popup
-
-.mfp-bg {
-  background: rgba(#000, .8);
-  opacity: 1;
-  z-index: 99999 !important;
-}
-
-.mfp-title {
-  font-family: $font-base;
-  color: $color-body;
-  opacity: 1;
-  font-size: 1.5rem;
-  margin-left: 1.5rem;
-}
-
-.mfp-wrap {
-  opacity: 1;
-  transition: all .3s ease-out;
-  z-index: 999999 !important;
-
-  .mfp-bottom-bar {
-    width: 98%;
+body {
+  .mfp-bg {
+    background: $color-dude-white;
+    opacity: 1;
   }
 
-  .mfp-img {
-    margin: 0;
-    padding: 0;
+  div[class^="mfp-"] {
+    transition: all $transition-duration ease-out;
   }
 
-  button.mfp-arrow-left,
-  button.mfp-arrow-right {
-    background-size: 64px 64px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    width: 64px;
-    height: 64px;
-    position: absolute;
-    margin-bottom: 0;
-    margin-top: 0;
-
-    &:hover {
-      background-color: transparent;
-    }
-  }
-
-  .mfp-arrow-left {
-    background-image: url('../svg/left-arrow.svg');
-
-    &:hover,
-    &:focus {
-      background-image: url('../svg/left-arrow.svg');
-    }
-
-    &:before,
-    &:after {
-      display: none;
-    }
-  }
-
-  .mfp-arrow-right {
-    background: url('../svg/right-arrow.svg');
-
-    &:hover,
-    &:focus {
-      background-image: url('../svg/right-arrow.svg');
-    }
-
-    &:before,
-    &:after {
-      display: none;
-    }
-  }
-
-  &.mfp-animate {
-    transform: scale(1.2);
+  // Fade in in load
+  .mfp-wrap.mfp-gallery {
     opacity: 0;
-  }
 
-  .mfp-figure {
-    transform: scale(.95);
-    transition: all .3s ease-out;
-    opacity: .5;
-
-    &:after {
-      display: none;
-    }
-  }
-
-  &.mfp-image-loaded {
-    .mfp-figure {
-      transform: scale(1);
+    &.mfp-ready.mfp-image-loaded {
       opacity: 1;
+
+      &.mfp-animate {
+        transform: scale(1.2);
+        opacity: 0;
+      }
     }
   }
 
-  .mfp-iframe-holder .mfp-content .mfp-iframe-scaler {
-    .mfp-close {
-      color: #fff;
-      margin-top: 40px;
-      margin-right: 5px;
+  .mfp-wrap .mfp-iframe-holder {
+    .mfp-content {
+      max-width: 80%;
+    }
+
+    .mfp-iframe-scaler iframe {
+      box-shadow: none;
+    }
+
+    .mfp-iframe-scaler button {
+      color: $color-dude-deep-black;
     }
   }
 
   .mfp-content {
-    background: transparent;
-    padding: 0;
-
-    .mfp-close {
-      width: 70px;
-      height: 70px;
-      text-align: center;
-      border: 2px solid transparent;
-      line-height: 38px;
+    .mfp-img {
+      max-height: 100vh !important;
       padding: 0;
-      transition: all .3s ease-out;
-      color: #fff;
-      background: #000;
-      margin-right: 5px;
-      position: absolute;
-      font-size: 40px;
-      border-radius: 0;
-      opacity: 1;
+      max-width: 100vw;
+      height: auto;
+      min-width: 100%;
+      min-height: 100%;
 
-      &:hover {
-        background: $color-links;
+      // Let's hide this, because we already have bg as background-image inside .mfp-wrap
+      display: none;
+    }
+  }
+
+  // The wrap item contains background-image
+  .mfp-wrap {
+    @include background-cover();
+    opacity: 1;
+    transition: all $transition-duration ease-out;
+
+    .mfp-counter,
+    .mfp-bottom-bar {
+      @extend %default;
+      margin-top: 0;
+      position: fixed;
+      top: auto;
+      left: 0;
+      width: 100%;
+      height: 10rem;
+      cursor: auto;
+      bottom: 0;
+      text-align: center;
+      color: $color-dude-white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mfp-container {
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mfp-arrow-left {
+      // background-image: url('../svg/left-arrow.svg');
+      background-size: 64px 64px;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 20vw;
+      height: 100vh;
+      top: 0;
+      margin: 0;
+      z-index: 5 !important;
+
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+
+    .mfp-arrow-right {
+      // background: url('../svg/right-arrow.svg');
+      background-size: 64px 64px;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 20vw;
+      height: 100vh;
+      top: 0;
+      margin: 0;
+      z-index: 5 !important;
+
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+
+    &.mfp-animate {
+      transform: scale(1.2);
+      opacity: 0;
+    }
+
+    .mfp-figure {
+      transform: none;
+      transition: all $transition-duration ease-out;
+      opacity: .5;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &.mfp-image-loaded {
+      .mfp-figure {
+        transform: none;
+        opacity: 1;
+      }
+    }
+
+    .mfp-content {
+      .mfp-close {
+        position: fixed;
+        width: 5rem;
+        height: 5rem;
+        right: 3rem;
+        top: 3rem;
+        text-align: center;
+        border-radius: 100px;
+        border: 2px solid transparent;
+        line-height: 38px;
+        padding: 0;
+        transition: all $transition-duration ease-out;
+        color: $color-dude-white;
+        font-size: 5rem;
+        z-index: 99999 !important;
+      }
+
+      .mfp-close:hover {
+        border: 2px solid $color-dude-white;
+        transform: scale(.8) rotateZ(90deg);
       }
     }
   }

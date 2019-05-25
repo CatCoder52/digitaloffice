@@ -40,6 +40,7 @@
     "jeet": "^7.2.0",
     "moveto": "^1.7.4",
     "slick-carousel": "^1.8.1",
-    "what-input": "^5.1.2"
+    "what-input": "^5.1.2",
+    "magnific-popup": "^1.1.0"
   }
 }
