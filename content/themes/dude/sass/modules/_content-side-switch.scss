@@ -2,6 +2,12 @@
   padding-top: 20rem;
   padding-bottom: 20rem;
 
+  .container,
+  .cols,
+  .col {
+    overflow: visible;
+  }
+
   @media (max-width: 1500px) {
     padding-top: 15rem;
     padding-bottom: 15rem;
@@ -113,10 +119,25 @@
 
   .col.col-content {
     opacity: .8;
+    position: relative;
 
     p {
       width: 80%;
       max-width: 85rem;
+    }
+  }
+
+  .content-tab {
+    display: none;
+    width: 100%;
+
+    &.is-visible {
+      display: block;
+    }
+
+    &.animating {
+      position: absolute;
+      top: 0;
     }
   }
 }
