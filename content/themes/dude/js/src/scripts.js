@@ -6,6 +6,27 @@
 document.body.classList.remove('no-js');
 document.body.classList.add('js');
 
+// Pure JavaScript gutter and switch effect in content-side-switch module
+var doc = document;
+var anchors = doc.getElementById('service-switcher').getElementsByTagName('button');
+var highlight = doc.getElementById('highlight');
+
+for(var i = 0, len = anchors.length; i < len; i++) {
+  anchors[i].addEventListener('mouseover', function(e) {
+    var target = e.target;
+    target.classList.add('active');
+    highlight.style.top = target.offsetTop + 'px';
+  });
+
+  anchors[i].addEventListener('mouseout', function(e) {
+    var target = e.target;
+    var init = doc.getElementById('init');
+    init.classList.add('active');
+    target.classList.remove('active');
+    highlight.style.top = 0;
+  });
+}
+
 // jQuery start
 ( function( $ ) {
 
