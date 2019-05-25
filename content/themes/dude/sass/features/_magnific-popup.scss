@@ -10,9 +10,11 @@ body {
 
   // Fade in in load
   .mfp-wrap.mfp-gallery {
+    transform: scale(1.2);
     opacity: 0;
 
     &.mfp-ready.mfp-image-loaded {
+      transform: scale(1);
       opacity: 1;
 
       &.mfp-animate {
