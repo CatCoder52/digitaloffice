@@ -2,8 +2,8 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 17:43:02
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-05-18 18:39:30
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2019-05-25 19:10:49
  *
  * @package dude2019
  */
@@ -12,15 +12,21 @@
 <section class="block block-process">
   <div class="container">
 
-    <h2>Hommahan haisee sille että se ei ois ihan kusetusta. Mitäs tää käytännössä menee?</h2>
-    <h3>Hyvin suunniteltu on viel kokonaan tekemättä:</h3>
+    <header class="block-head">
+      <p class="block-title-pre" aria-describedby="block-title-process">Hommahan haisee sille että se ei ois ihan kusetusta. Mitäs tää käytännössä menee?</p>
+      <h2 class="block-title" id="block-title-process">Hyvin suunniteltu on viel kokonaan tekemättä:</h2>
+    </header>
 
     <div class="cols">
 
       <div class="col">
-        <div class="round">
-          <h4>Määritellään</h4>
+
+        <div class="circle">
+          <svg height="250" width="250"><circle cx="125" cy="125" r="125" stroke="#fff" stroke-width="1" fill="#262626" /></svg>
+          <span class="long-arrow"></span>
+          <h3>Määritellään</h3>
         </div>
+
         <div class="content">
           <p>Otat yhteyttä, jonka jälkeen meidän Kristian palaa pian asiaan ja käy homman läpi teidän kanssa. Tarvittaessa palaveerataan etä- tai lähiyhteydellä.</p>
 
@@ -31,9 +37,13 @@
       </div>
 
       <div class="col">
-        <div class="round">
-          <h4>Suunnitellaan</h4>
+
+        <div class="circle">
+          <svg height="250" width="250"><circle cx="125" cy="125" r="125" stroke="#fff" stroke-width="1" fill="#262626" /></svg>
+          <span class="long-arrow"></span>
+          <h3>Suunnitellaan</h3>
         </div>
+
         <div class="content">
           <p>Visuaalinen työstö käynnistyy ja verkkopalvelu alkaa saamaan konkreettisia muotoja. Suunnittelija on tiiviissä yhteydessä teidän kanssa, muokaten mielenmaisemaa iteratiivisesti kohti yhteistä tavoitetta.</p>
 
@@ -42,9 +52,13 @@
       </div>
 
       <div class="col">
-        <div class="round">
-          <h4>Toteutetaan</h4>
+
+        <div class="circle">
+          <svg height="250" width="250"><circle cx="125" cy="125" r="125" stroke="#fff" stroke-width="1" fill="#262626" /></svg>
+          <span class="long-arrow"></span>
+          <h3>Toteutetaan</h3>
         </div>
+
         <div class="content">
           <p>Visuaalisen ilmeen pääpiirteiden hyväksymisen jälkeen aloitetaan tekninen työstö, jonka aikana sivusto herätetään henkiin toiminnallisuuksien kautta.</p>
 

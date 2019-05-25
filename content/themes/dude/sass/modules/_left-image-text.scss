@@ -1,0 +1,50 @@
+.block.block-left-image-text {
+  position: relative;
+  z-index: 3;
+  padding-left: 0;
+  padding-right: 0;
+  background: transparent;
+
+  // Because of process module, let's remove the bottom padding
+  padding-bottom: 0;
+
+  @media (max-width: $container-ipad) {
+    margin-top: 5rem;
+  }
+
+  .container {
+    overflow: visible;
+  }
+
+  .image {
+    @include background-cover();
+    width: 100%;
+    height: 55rem;
+    margin-top: -10rem;
+
+    @media (max-width: $container-ipad) {
+      margin-top: -5rem;
+    }
+  }
+
+  .content {
+    background: $color-dude-whitegreyish;
+    padding: $padding-general-content-box;
+    max-width: 75rem;
+    margin-left: -20rem;
+
+    @media (max-width: $container-mobile) {
+      padding: $padding-general-content-box-ipad;
+    }
+
+    p {
+      @extend %h3;
+      font-weight: 300;
+      line-height: 1.4;
+    }
+  }
+
+  .cols {
+    @include grid(2, $gutter_x: 0, $gutter_y: 0);
+  }
+}

@@ -37,42 +37,82 @@ document.body.classList.add('js');
 
     // Gutter and switch effect in content-side-switch module
     var doc = document;
-    var anchors = doc.getElementById('service-switcher').getElementsByTagName('button');
-    var highlight = doc.getElementById('highlight');
+    if ( $( '#service-switcher' ).length) {
 
-    for(var i = 0, len = anchors.length; i < len; i++) {
-      anchors[i].addEventListener('mouseover', function(e) {
-        var target = e.target;
-        var init = doc.getElementById('init');
+      var anchors = doc.getElementById('service-switcher').getElementsByTagName('button');
+      var highlight = doc.getElementById('highlight');
 
-        jQuery('.service-switcher button').removeClass('has-focus');
-        target.classList.remove('clicked');
-        target.classList.add('has-focus');
-        highlight.style.top = target.offsetTop + 'px';
-      });
+      // Loop through buttons
+      for (var i = 0, len = anchors.length; i < len; i++) {
 
-      anchors[i].addEventListener('mouseout', function(e) {
-        var target = e.target;
-        var init = doc.getElementById('init');
+        // When mouse overing, move tha ball to target position
+        anchors[i].addEventListener('mouseover', function(e) {
+          var target = e.target;
+          var init = doc.getElementById('init');
+          highlight.style.top = target.offsetTop + 'px';
+        });
 
-        if ( target.classList.contains('clicked') ) {
-          console.log('clicked');
-        } else {
-          highlight.style.top = 0;
-          init.classList.add('has-focus');
-          target.classList.remove('has-focus');
-          target.classList.remove('clicked');
-        }
-      });
+        // When mouse out, move back to original position, or position where clicked
+        anchors[i].addEventListener('mouseout', function(e) {
+          var target = e.target;
+          var init = doc.getElementById('init');
+          var getClicked = document.getElementsByClassName('clicked');
 
-      anchors[i].addEventListener('click', function(e) {
-        var target = e.target;
-        jQuery('.service-switcher button').removeClass('has-focus clicked');
-        target.classList.add('clicked');
-        target.classList.add('has-focus');
-        highlight.style.top = target.offsetTop + 'px';
-      });
+          // Let's check if there's clicked position
+          if ( typeof getClicked !== 'undefined') {
+            var clickedElement = getClicked[0];
+            var clickedPosition = clickedElement.offsetTop + 'px';
+          }
 
+          // If there's clicked position, move ball to content
+          if ( target.classList.contains('clicked') ) {
+            highlight.style.top = clickedPosition;
+            target.classList.add('has-focus');
+          } else {
+
+            // If no clicked position, move back to start
+            if ( typeof clickedPosition !== 'undefined') {
+              highlight.style.top = clickedPosition;
+            } else {
+              highlight.style.top = 0;
+              init.classList.add('has-focus');
+            }
+
+            // Let's make sure there's no clicked items if clicked position undefined
+            target.classList.remove('clicked');
+          }
+        });
+
+        // What happens when we click the list item
+        anchors[i].addEventListener('click', function(e) {
+          var target = e.target;
+
+          // Let's remove classes from all other list items
+          jQuery('.service-switcher button').removeClass('has-focus clicked');
+
+          // Adding classes to clicked item
+          target.classList.add('clicked');
+          target.classList.add('has-focus');
+
+          // Moving to position
+          highlight.style.top = target.offsetTop + 'px';
+
+          // Getting right content to show
+          var tabId = target.getAttribute('data-tab');
+
+          // Fade out old content
+          jQuery('.content-tab').fadeOut(600, function() {
+            $(this).removeClass('is-visible');
+          });
+
+          // Add class to the content that is corresponding to the clicked item
+          jQuery('#' + tabId).addClass('animating');
+          jQuery('#' + tabId).fadeIn(600, function() {
+            $(this).addClass('is-visible');
+            $(this).removeClass('animating');
+          });
+        });
+      }
     }
 
     // Morph logo when hovered
