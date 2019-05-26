@@ -34,9 +34,10 @@
       </div>
 
       <div class="col col-featured-image">
-        <div class="image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/placeholder-2.png');"></div>
       </div>
     </div>
+
+    <div class="image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/placeholder-2.png');"></div>
 
   </div>
 </section>
