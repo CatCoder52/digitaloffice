@@ -70,10 +70,16 @@ body:after {
 
 .js-nav-active .block-hero {
   // Scale needed in images because of hollow "borders" in blur effect
-  transform: translate3d(-50vw, 0, 0) scale(1.03);
+  transform: translate3d(-50vw, 0, 0) scale(1.03) translateZ(0);
 
   // Prevent body scrolling when navigation is open
   overflow: hidden;
+
+  // Add blur effect to hero
+  &.add-blur {
+    filter: blur(8px);
+    margin-left: -1rem;
+  }
 
   @media (max-width: 1400px) {
     transform: translate3d(-60vw, 0, 0);
@@ -94,7 +100,7 @@ body:after {
       height: 100vh;
       overflow: auto;
       top: 0;
-      transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0) translateZ(0);
       transition: all .75s 50ms cubic-bezier(.19, 1, .22, 1);
       z-index: 2;
 
