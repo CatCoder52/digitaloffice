@@ -17,6 +17,11 @@
 
   .cols {
     @include grid(2, $gutter_x: $padding-general-content-box, $gutter_y: 0);
+
+    @media (max-width: 1160px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 
   .content {
@@ -39,17 +44,35 @@
   .col-latest .image {
     @include background-cover();
     height: 50rem;
+
+    @media (max-width: 1000px) {
+      height: 35rem;
+    }
   }
 
   .col-mustread {
     .post {
       @include grid(2, $gutter_x: 4rem, $gutter_y: 0);
       grid-template-columns: 3fr 7fr;
+
+      @media (max-width: 1400px) {
+        grid-template-columns: 4fr 6fr;
+      }
+
+      @media (max-width: 600px) {
+        display: flex;
+        flex-wrap: wrap;
+      }
     }
 
     .image {
       @include background-cover();
       height: 15rem;
+      width: 100%;
+
+      @media (max-width: 600px) {
+        margin-bottom: 4rem;
+      }
     }
 
     h3 {
@@ -68,6 +91,15 @@
     float: right;
     width: 50%;
     z-index: 1;
+
+    @media (max-width: 1000px) {
+      width: 100%;
+    }
+
+    @media (max-width: $container-mobile) {
+      padding-left: 3rem;
+      padding-right: 0;
+    }
 
     .block-title {
       @extend %h3;
@@ -89,6 +121,19 @@
     .inputs {
       @include grid(2, $gutter_x: 4rem, $gutter_y: 0);
       grid-template-columns: 7fr 3fr;
+
+      @media (max-width: 1200px) {
+        display: flex;
+        flex-wrap: wrap;
+
+        > input {
+          width: 100%;
+        }
+
+        input[type="email"] {
+          margin-bottom: 1rem;
+        }
+      }
     }
   }
 }
