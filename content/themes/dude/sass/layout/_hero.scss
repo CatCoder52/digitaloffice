@@ -38,6 +38,8 @@
 
   // Hero for contact page
   &.block-hero-contact {
+    position: relative;
+
     h1,
     .contact-details {
       width: 100%;
@@ -73,6 +75,46 @@
     a:hover:after {
       width: 0;
       opacity: 0;
+    }
+
+    .form-box {
+      background: $color-dude-white;
+      color: $color-body;
+      padding: 6rem;
+      max-width: 45rem;
+      overflow: visible;
+      position: absolute;
+      left: calc(50% - 8rem);
+      bottom: 8rem;
+      z-index: 4;
+
+      h3 {
+        @extend %h4;
+        font-weight: 600;
+        margin-bottom: 3rem;
+        width: 50vw;
+      }
+
+      h3 a {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+      }
+
+      p {
+        @extend .text-smaller;
+        margin: 0;
+        font-weight: 300;
+      }
+
+      p,
+      a {
+        color: $color-body;
+      }
+
+      a:after {
+        display: none;
+      }
     }
   }
 

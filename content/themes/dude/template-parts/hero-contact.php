@@ -30,16 +30,16 @@
           <a class="phone" href="tel:0408351033">040 835 1033</a>
         </p>
 
+        <div class="form-box">
+          <h3 class="arrow-link-wrapper"><a href="#" class="arrow-link">Miten voimme auttaa?<span class="arrow"></span></a></h3>
+          <p>Kerro lyhyesti projektin tavoitteista niin jutellaan lisää</p>
+        </div>
+
       </div>
 
     </div>
 
     <div class="featured-image featured-image-side" style="background-image: url('https://api.mapbox.com/styles/v1/digitoimistodude/cjw3jzbgb12cd1cqn94r05ms1/static/url-https%3A%2F%2Fmaamerkit.dude.fi%2Fdude-map-marker.png(25.7424,62.2395)/25.7421,62.2398,16,140,1/1280x1280@2x?access_token=pk.eyJ1IjoiZGlnaXRvaW1pc3RvZHVkZSIsImEiOiJjanczajdiNWgwajcxNGJxcjBwcG5rd3VmIn0.iE0hH1uYfZIyyHOJsdGPNQ&attribution=false&logo=false');"><div class="shade"></div></div>
-
-    <div class="form-box">
-      <h3 class="arrow-link-wrapper"><a href="#" class="arrow-link">Miten voimme auttaa?<span class="arrow"></span></a></h3>
-      <p>Kerro lyhyesti projektin tavoitteista niin jutellaan lisää</p>
-    </div>
 
   </div>
 </section>
