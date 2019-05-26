@@ -48,11 +48,16 @@ $nav-open-from-top: false;
 }
 
 // Move body "out of the way" when nav activated
-.site-content {
+.block.block-hero.block-hero-enable-transition {
   transition: all .75s 50ms cubic-bezier(.19, 1, .22, 1);
   will-change: transform;
+  transition: all $transition-duration;
+  backface-visibility: hidden;
+  perspective: 1000;
+  transform: translate3d(0, 0, 0);
 }
 
+// This layer ensures there is no white flickering in the background when nav is opening
 body:after {
   content: '';
   width: 100%;
@@ -63,21 +68,17 @@ body:after {
   background: $nav-background-color;
 }
 
-.js-nav-active .site-content {
-  // Scale needed in images because of hollow "borders" in blur effect
-  transform: translate3d(-50vw, 0, 0);
+// Animate left content when opening nav
+.js-nav-active .block.block-hero.block-hero-enable-transition {
 
-  // Prevent body scrolling when navigation is open
-  overflow: hidden;
+  // Move to left
+  // Scale needed in images because of hollow "borders" in blur effect
+  transform: translate3d(-50vw, 0, 0) scale(1.03);
 
   // Add blur effect to hero
-  .block-hero {
-    filter: blur(8px);
-    transform: scale(1.03);
-    margin-left: -1rem;
-  }
+  filter: blur(8px);
+  margin-left: -1rem;
 
-  // Scale needed in images because of hollow "borders" in blur effect
   @media (max-width: 1400px) {
     transform: translate3d(-60vw, 0, 0);
   }
@@ -90,6 +91,7 @@ body:after {
 // Ensure nav stays in the same position when activated
 .js {
   &.js-nav-active {
+    // Prevent body scrolling when navigation is open
     overflow: hidden;
 
     .nav-primary {

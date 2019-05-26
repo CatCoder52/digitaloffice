@@ -7,17 +7,6 @@
   padding: 0;
   align-items: center;
 
-  &.block-hero-enable-transition {
-    transition: all $transition-duration;
-    backface-visibility: hidden;
-    perspective: 1000;
-    will-change: transform;
-  }
-
-  @media (min-width: $container-ipad-landscape) {
-    min-height: 70rem;
-  }
-
   .shade {
     background: linear-gradient(to bottom, #28392a 0%, transparent 50%);
     opacity: .6;
