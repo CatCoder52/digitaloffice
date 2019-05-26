@@ -7,6 +7,16 @@
   padding: 0;
   align-items: center;
 
+  .block.block-hero.block-hero-enable-transition {
+    transition: all $transition-duration;
+    will-change: transform;
+
+    // Force Hardware Acceleration in WebKit with translate3d
+    // https://davidwalsh.name/translate3d
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+  }
+
   .shade {
     background: linear-gradient(to bottom, #28392a 0%, transparent 50%);
     opacity: .6;
