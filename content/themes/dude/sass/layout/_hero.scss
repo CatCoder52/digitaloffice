@@ -88,6 +88,10 @@
       bottom: 8rem;
       z-index: 4;
 
+      @media (max-width: 700px) {
+        position: static;
+      }
+
       h3 {
         @extend %h4;
         font-weight: 600;
