@@ -46,6 +46,8 @@ get_header(); ?>
       </section>
     <?php break; endwhile; ?>
 
+    <?php echo do_shortcode( '[simpay id="4535"]' ); ?>
+
 	</main><!-- #main -->
 </div><!-- #primary -->
 
