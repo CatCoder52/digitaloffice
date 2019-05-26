@@ -102,11 +102,9 @@ if ( empty( $main_reference ) && empty( $small_references ) ) {
 
         <?php foreach ( $small_references as $reference ) : ?>
           <div class="col">
-            <div class="col-featured-image">
               <div class="image" style="background-image: url('<?php echo esc_url( $reference['image_url'] ) ?>');"></div>
-            </div>
 
-            <div class="content">
+            <div class="col-content">
               <h3 class="block-title>"><?php echo esc_html( $reference['title'] ) ?></h3>
               <p><?php echo esc_html( $reference['excerpt'] ) ?></p>
 
