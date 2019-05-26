@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 5.2.x - Development package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-05-08 08:20:17+0000\n"
+"PO-Revision-Date: 2019-05-11 08:13:31+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -51,6 +51,30 @@ msgctxt "text direction"
 msgid "ltr"
 msgstr "ltr"
 
+#. translators: closing curly single quote
+#: wp-includes/formatting.php:113
+msgctxt "closing curly single quote"
+msgid "&#8217;"
+msgstr "&#8217;"
+
+#. translators: opening curly single quote
+#: wp-includes/formatting.php:111
+msgctxt "opening curly single quote"
+msgid "&#8216;"
+msgstr "&#8217;"
+
+#. translators: closing curly double quote
+#: wp-includes/formatting.php:100
+msgctxt "closing curly double quote"
+msgid "&#8221;"
+msgstr "&#8221;"
+
+#. translators: opening curly double quote
+#: wp-includes/formatting.php:98 wp-includes/formatting.php:5237
+msgctxt "opening curly double quote"
+msgid "&#8220;"
+msgstr "&#8221;"
+
 #. translators: $thousands_sep argument for
 #. https://secure.php.net/number_format, default is ,
 #: wp-includes/class-wp-locale.php:200
@@ -95,17 +119,17 @@ msgid ""
 msgstr ""
 "Tervehdys!\n"
 "\n"
-"WordPressissä on versiosta 5.2 lähtien sisäänrakennettu ominaisuus, joka havaitsee mikäli sivustollasi tapahtuu kriittinen virhe jonkin lisäosan tai teeman vuoksi ja ilmoittaa tästä sinulle automaattisesti tällaisella sähköpostilla.\n"
+"WordPressissä on versiosta 5.2 lähtien sisäänrakennettu ominaisuus, joka havaitsee lisäosan tai teeman mahdollisesti aiheuttaman kriittisen virheen sivustollasi ja ilmoittaa siitä automaattisesti tällaisella sähköpostilla.\n"
 "###CAUSE###\n"
-"Käy aivan ensiksi tarkistamassa onko sivustollasi (###SITEURL###) havaittavissa mitään näkyviä ongelmia. Tarkista sen jälkeen vielä erikseen sivu (###PAGEURL###), jolla virhe varsinaisesti havaittiin.\n"
+"Käy ensin tarkistamassa onko sivustollasi (###SITEURL###) havaittavissa mitään näkyviä ongelmia. Tarkista sen jälkeen vielä erikseen sivu (###PAGEURL###), jolla virhe varsinaisesti havaittiin.\n"
 "\n"
 "###SUPPORT###\n"
 "\n"
-"Jos sivustosi vaikuttaa olevan rikki, etkä pääse kirjautumaan normaalisti sen hallintapaneeliin, voit käyttää WordPressin uutta palautustilaa. Sen avulla voit turvallisesti kirjautua hallintapaneeliisi ja tutkia ongelmaa lähemmin.\n"
+"Jos sivustosi vaikuttaa olevan rikki etkä pääse kirjautumaan normaalisti sen hallintapaneeliin, voit käyttää WordPressin uutta palautustilaa. Sen avulla voit turvallisesti kirjautua hallintapaneeliisi ja tutkia ongelmaa lähemmin.\n"
 "\n"
 "###LINK###\n"
 "\n"
-"Jotta sivustosi pysyy turvallisena, tämä linkki raukeaa seuraavana ajankohtana: ###EXPIRES###. Ei ole kuitenkaan syytä hätäillä: mikäli ongelmatilanne jatkuu vielä linkin raukeamisen jälkeen, tulet saamaan sähköpostitse uuden linkin.\n"
+"Jotta sivustosi pysyy turvallisena, raukeaa tämä linkki ajankohtana: ###EXPIRES###. Ei ole kuitenkaan syytä hätäillä. Mikäli ongelmatilanne jatkuu vielä linkin raukeamisen jälkeen, saat sähköpostitse uuden linkin.\n"
 "\n"
 "###DETAILS###"
 
@@ -498,7 +522,7 @@ msgstr "Virheen lisätiedot"
 msgid "A recovery link was already sent %1$s ago. Please wait another %2$s before requesting a new email."
 msgstr "Palautuslinkki on jo lähetetty, %1$s sitten. Ole hyvä ja odota %2$s ennen kuin pyydät sitä uudelleen."
 
-#: wp-includes/class-wp-recovery-mode-email-service.php:65
+#: wp-login.php:429 wp-includes/class-wp-recovery-mode-email-service.php:65
 msgid "The email could not be sent. Possible reason: your host may have disabled the mail() function."
 msgstr "Sähköpostia ei voitu lähettää. Mahdollinen syy on se, että palveluntarjoajasi on estänyt mail() -toiminnallisuuden käytön."
 
@@ -1030,7 +1054,7 @@ msgstr "Pilkku"
 
 #: wp-includes/js/dist/api-fetch.js:683
 msgid "The response is not a valid JSON response."
-msgstr "Vastaus ei ole kelvollista JSONia"
+msgstr "Vastaus ei ole kelvollista JSONia."
 
 #: wp-includes/js/dist/format-library.js:1167
 msgid "Link edited."
@@ -2129,7 +2153,7 @@ msgstr "Sulje lisäosa"
 
 #: wp-includes/js/dist/edit-post.js:6644
 msgid "Editor plugins"
-msgstr "Muokkain lisäosat"
+msgstr "Muokkaimen lisäosat"
 
 #: wp-includes/js/dist/edit-post.js:4643
 msgid "Advanced Panels"
@@ -11646,10 +11670,6 @@ msgstr "Web-selaintasi ei voida käyttää tiedostojen siirtoon. Voit ehkä käy
 msgid "<strong>ERROR</strong>: Couldn&#8217;t register you&hellip; please contact the <a href=\"mailto:%s\">webmaster</a> !"
 msgstr "<strong>VIRHE</strong>: Rekisteröitymisesi ei onnistunut&hellip; ota yhteyttä <a href=\"mailto:%s\">ylläpitäjään</a> !"
 
-#: wp-login.php:429
-msgid "Possible reason: your host may have disabled the mail() function."
-msgstr "Mahdollinen syy: palveluntarjoajasi on kenties estänyt mail()-funktion käytön."
-
 #: wp-includes/post-template.php:298
 msgid "(more&hellip;)"
 msgstr "(lisää&hellip;)"
@@ -12582,18 +12602,6 @@ msgctxt "yearly archives date format"
 msgid "Y"
 msgstr "Y"
 
-#. translators: closing curly single quote
-#: wp-includes/formatting.php:113
-msgctxt "closing curly single quote"
-msgid "&#8217;"
-msgstr "&#8217;"
-
-#. translators: opening curly single quote
-#: wp-includes/formatting.php:111
-msgctxt "opening curly single quote"
-msgid "&#8216;"
-msgstr "&#8217;"
-
 #. translators: double prime, for example in 9" (nine inches)
 #: wp-includes/formatting.php:108
 msgctxt "double prime"
@@ -12611,18 +12619,6 @@ msgstr "&#8242;"
 msgctxt "apostrophe"
 msgid "&#8217;"
 msgstr "&#8217;"
-
-#. translators: closing curly double quote
-#: wp-includes/formatting.php:100
-msgctxt "closing curly double quote"
-msgid "&#8221;"
-msgstr "&#8221;"
-
-#. translators: opening curly double quote
-#: wp-includes/formatting.php:98 wp-includes/formatting.php:5237
-msgctxt "opening curly double quote"
-msgid "&#8220;"
-msgstr "&#8221;"
 
 #: wp-signup.php:198
 msgid "Allow search engines to index this site."
@@ -14107,10 +14103,6 @@ msgstr "<strong>VIRHE</strong>: Syötä sähköpostiosoitteesi."
 #: wp-includes/user.php:3621
 msgid "Invalid key."
 msgstr "Avain ei kelpaa."
-
-#: wp-login.php:429
-msgid "The email could not be sent."
-msgstr "Sähköpostiviestiä ei voitu lähettää."
 
 #. translators: Password reset notification email subject. %s: Site title
 #: wp-login.php:399

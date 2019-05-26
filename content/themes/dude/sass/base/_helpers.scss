@@ -20,7 +20,8 @@
 
     > div {
       $grid_width: 100% / $columns;
-      width: calc(#{$grid_width} - #{$gutter_x});
+      $offset: $gutter_x / 2;
+      width: calc(#{$grid_width} - #{$offset});
       margin-right: $gutter_x;
       margin-bottom: $gutter_y;
 
@@ -38,7 +39,8 @@
 
     > div {
       $grid_width: 100% / $columns;
-      width: calc(#{$grid_width} - #{$gutter_x});
+      $offset: $gutter_x / 2;
+      width: calc(#{$grid_width} - #{$offset});
       margin-right: $gutter_x;
       margin-bottom: $gutter_y;
 

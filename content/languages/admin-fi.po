@@ -106,18 +106,13 @@ msgstr "Sivuston eheystarkistus"
 msgid "WordPress 5.2 gives you even more robust tools for identifying and fixing configuration issues and fatal errors. Whether you are a developer helping clients or you manage your site solo, these tools can help get you the right information when you need it."
 msgstr "WordPress 5.2 tarjoaa käyttöösi entistä vahvemmat työkalut asetusongelmien ja kriittisten virheiden havaitsemiseen ja korjaamiseen. Näiden työkalujen avulla voit kaivaa esiin relevanttia tietoa, riippumatta siitä työskenteletkö itsellesi vai pidätkö huolta jonkun toisen osapuolen sivustosta."
 
-#: wp-admin/credits.php:23 wp-admin/freedoms.php:33 wp-admin/about.php:27
+#: wp-admin/credits.php:28 wp-admin/freedoms.php:42 wp-admin/about.php:27
 msgid "Congratulations on updating to WordPress 5.2! This update makes it easier than ever to fix your site if something goes wrong."
 msgstr "Onnittelut WordPressin versioon 5.2 päivittämisestä! Tämän päivityksen myötä on entistä helpompaa korjata sivustosi, mikäli jokin sattuisi menemään vikaan."
 
 #: wp-admin/about.php:44
 msgid "Keeping Your Site Safe"
 msgstr "Pitää sivustosi turvallisena"
-
-#. translators: 1: The filename of the package.
-#: wp-admin/includes/file.php:1191
-msgid "The authenticity of %1$s could not be verified as signature verification is unavailable on this system."
-msgstr "Tiedoston %1$s aitoutta ei voitu varmistaa, sillä digitaalisen allekirjoituksen varmennusta ei ole tässä järjestelmässä saatavilla."
 
 #. translators: tab heading for Site Health Status page
 #: wp-admin/site-health-info.php:52
@@ -186,6 +181,7 @@ msgid "https://wordpress.org/support/article/debugging-in-wordpress/"
 msgstr "https://wordpress.org/support/article/debugging-in-wordpress/"
 
 #: wp-admin/includes/class-wp-site-health.php:652
+#: wp-admin/includes/dashboard.php:1631
 msgid "PHP is the programming language we use to build and maintain WordPress. Newer versions of PHP are both faster and more secure, so updating will have a positive effect on your site&#8217;s performance."
 msgstr "PHP on ohjelmointikieli, jolla WordPress on rakennettu. PHP:n uudemmat versiot ovat sekä nopeampia että turvallisempia, joten sen päivittämisellä on positiivinen vaikutus sivustosi suorituskykyyn."
 
@@ -338,7 +334,7 @@ msgid "The authenticity of %s could not be verified as no signature was found."
 msgstr "Tiedoston %s aitoutta ei voitu todentaa koska digitaalista allekirjoitusta ei löytynyt."
 
 #. translators: %s: The filename of the package.
-#: wp-admin/includes/file.php:1171
+#: wp-admin/includes/file.php:1171 wp-admin/includes/file.php:1191
 msgid "The authenticity of %s could not be verified as signature verification is unavailable on this system."
 msgstr "Tiedoston %s aitoutta ei voitu varmistaa, sillä digitaalisen allekirjoituksen varmennusta ei ole tässä järjestelmässä saatavilla. "
 
@@ -480,7 +476,7 @@ msgstr "Uusi versio lisäosasta %1$s on saatavilla, mutta se ei toimi nykyisen P
 msgid "You are in recovery mode. This means there may be an error with a theme or plugin. To exit recovery mode, log out or use the Exit button."
 msgstr "Olet vikasietotilassa. Tämä tarkoittaa, että käyttämässäsi teemassa tai lisäosassa saattaa olla ongelma. Poistu vikasietotilasta kirjautumalla ulos tai painamalla poistu-painiketta."
 
-#: wp-admin/includes/theme.php:905
+#: wp-admin/includes/theme.php:910
 msgid "Go to the Themes screen"
 msgstr "Siirry Teemoihin"
 
@@ -499,11 +495,6 @@ msgstr "Hakemiston koon laskeminen kesti liian kauan ja keskeytyi. Tämä johtuu
 #: wp-admin/includes/class-wp-plugins-list-table.php:879
 msgid "This plugin failed to load properly and is paused during recovery mode."
 msgstr "Tämä lisäosa ei latautunut oikein ja sen toiminta on keskeytetty vikasietotilassa."
-
-#. translators: %s: number of ratings
-#: wp-admin/includes/theme.php:727
-msgid "(%s ratings) <span class=\"screen-reader-text\">link to view ratings opens in a new tab</span>"
-msgstr "(%s arviota) <span class=\"screen-reader-text\">linkki arvioiden listaamiseksi avautuu uuteen välilehteen</span>"
 
 #: wp-admin/includes/class-wp-debug-data.php:218
 msgid "These settings alter where and how parts of WordPress are loaded."
@@ -539,9 +530,9 @@ msgstr[1] "%s kohdetta ilman ongelmia"
 msgid "Everything is running smoothly here."
 msgstr "Kaikki näyttää täällä rullaavan mainiosti."
 
-#: wp-admin/credits.php:27 wp-admin/includes/ms.php:1137
-#: wp-admin/nav-menus.php:630 wp-admin/site-health-info.php:48
-#: wp-admin/freedoms.php:37 wp-admin/about.php:36 wp-admin/site-health.php:53
+#: wp-admin/credits.php:37 wp-admin/includes/ms.php:1141
+#: wp-admin/nav-menus.php:632 wp-admin/site-health-info.php:48
+#: wp-admin/freedoms.php:51 wp-admin/about.php:36 wp-admin/site-health.php:53
 msgid "Secondary menu"
 msgstr "Toissijainen valikko"
 
@@ -1643,27 +1634,27 @@ msgstr "Et voi päivittää koska <a href=\"%1$s\">WordPress %2$s</a> vaatii MyS
 msgid "You can update to <a href=\"%1$s\">WordPress %2$s</a> automatically:"
 msgstr "Voit päivittää <a href=\"%1$s\">WordPress %2$s</a> versioon automaattisesti:"
 
-#: wp-admin/nav-menus.php:747
+#: wp-admin/nav-menus.php:751
 msgid "Create your first menu below."
 msgstr "Luo ensimmäinen valikko alta."
 
-#: wp-admin/nav-menus.php:766 wp-admin/nav-menus.php:827
+#: wp-admin/nav-menus.php:770 wp-admin/nav-menus.php:831
 msgid "Click the Save Menu button to save your changes."
 msgstr "Napsauta Tallenna valikko -painiketta tallentaaksesi muutokset."
 
-#: wp-admin/nav-menus.php:754
+#: wp-admin/nav-menus.php:758
 msgid "Edit your menu below, or <a href=\"%s\">create a new menu</a>. Don&#8217;t forget to save your changes!"
 msgstr "Muokkaa valikkoa alta, tai <a href=\"%s\">luo uusi valikko</a>. Älä unohda tallentaa muutoksesi!"
 
-#: wp-admin/nav-menus.php:815
+#: wp-admin/nav-menus.php:819
 msgid "or <a href=\"%s\">create a new menu</a>. Don&#8217;t forget to save your changes!"
 msgstr "tai <a href=\"%s\">luo uusi valikko</a>. Älä unohda tallentaa muutoksesi!"
 
-#: wp-admin/nav-menus.php:848
+#: wp-admin/nav-menus.php:852
 msgid "Add menu items"
 msgstr "Lisää valikkokohteet"
 
-#: wp-admin/nav-menus.php:748
+#: wp-admin/nav-menus.php:752
 msgid "Fill in the Menu Name and click the Create Menu button to create your first menu."
 msgstr "Anna valikolle nimi ja napsauta Luo valikko -painikette luodaksesi ensimmäisen valikkosi."
 
@@ -1683,10 +1674,6 @@ msgstr "Asennus ei onnistu koska <a href=\"%1$s\">WordPress %2$s</a> vaatii PHP 
 #: wp-admin/includes/dashboard.php:1638
 msgid "Learn more about updating PHP"
 msgstr "Lue lisää PHP:n version päivittämisestä"
-
-#: wp-admin/includes/dashboard.php:1631
-msgid "PHP is the programming language we use to build and maintain WordPress. Newer versions of PHP are both faster and more secure, so updating will have a positive effect on your site’s performance."
-msgstr "PHP on ohjelmointikieli, jolla rakennamme ja ylläpidämme WordPressiä. PHP:n uudemmat versiot ovat sekä nopeampia että turvallisempia, joten päivittämisellä on positiivinen vaikutus sivustosi suoritus- sekä toimintakykyyn."
 
 #: wp-admin/includes/dashboard.php:1708
 msgid "Set up your homepage"
@@ -1835,15 +1822,15 @@ msgctxt "plugin"
 msgid "Resume %s"
 msgstr "Jatka: %s"
 
-#: wp-admin/includes/theme.php:902
+#: wp-admin/includes/theme.php:907
 msgid "One or more themes failed to load properly."
 msgstr "Yhden tai useamman teeman lataaminen epäonnistui."
 
-#: wp-admin/includes/theme.php:875
+#: wp-admin/includes/theme.php:880
 msgid "Could not resume the theme."
 msgstr "Teeman jatkaminen ei onnistunut."
 
-#: wp-admin/includes/theme.php:903
+#: wp-admin/includes/theme.php:908
 msgid "You can find more details and make changes on the Themes screen."
 msgstr "Löydät lisätietoja ja voit tehdä muutoksia Teemat-näytöltä."
 
@@ -1879,35 +1866,35 @@ msgstr "Ole hyvä ja asenna <a href=\"%s\">Classic Editor -lisäosa</a> käyttä
 msgid "This meta box isn't compatible with the block editor."
 msgstr "Tämä metalaatikko ei ole yhteensopiva lohkomuokkaimen kanssa."
 
-#: wp-admin/freedoms.php:64
+#: wp-admin/freedoms.php:93
 msgid "The 1st Freedom"
 msgstr "Ensimmäinen vapaus"
 
-#: wp-admin/freedoms.php:65
+#: wp-admin/freedoms.php:94
 msgid "To run the program for any purpose."
 msgstr "Käyttää ohjelmistoa mihin tahansa tarkoitukseen."
 
-#: wp-admin/freedoms.php:69
+#: wp-admin/freedoms.php:98
 msgid "The 2nd Freedom"
 msgstr "Toinen vapaus"
 
-#: wp-admin/freedoms.php:70
+#: wp-admin/freedoms.php:99
 msgid "To study how the program works and change it to make it do what you wish."
 msgstr "Tutkia kuinka ohjelmisto toimii ja muokata sitä tekemään sen mitä sen haluat tekevän."
 
-#: wp-admin/freedoms.php:74
+#: wp-admin/freedoms.php:103
 msgid "The 3rd Freedom"
 msgstr "Kolmas vapaus"
 
-#: wp-admin/freedoms.php:75
+#: wp-admin/freedoms.php:104
 msgid "To redistribute."
 msgstr "Jakaa edelleen."
 
-#: wp-admin/freedoms.php:79
+#: wp-admin/freedoms.php:108
 msgid "The 4th Freedom"
 msgstr "Neljäs vapaus"
 
-#: wp-admin/freedoms.php:80
+#: wp-admin/freedoms.php:109
 msgid "To distribute copies of your modified versions to others."
 msgstr "Jakaa muokkaamaasi versiota edelleen muille."
 
@@ -2867,7 +2854,8 @@ msgstr "Vaatii PHP-version:"
 msgid "This changeset cannot be further modified."
 msgstr "Näitä muutoksia ei voi enää muokata."
 
-#: wp-admin/freedoms.php:49
+#. translators: %s: https://wordpress.org/about/stats
+#: wp-admin/freedoms.php:66
 msgid "This data is used to provide general enhancements to WordPress, which includes helping to protect your site by finding and automatically installing new updates. It is also used to calculate statistics, such as those shown on the <a href=\"%s\">WordPress.org stats page</a>."
 msgstr "Tätä tietoa käytetään WordPressin yleisiin parannuksiin, esimerkiksi sivustosi suojaamiseen asentamalla automaattisesti päivityksiä. Siitä myös lasketaan tilastoja, joita näytetään esimerkiksi <a href=\"%s\">WordPress.org:n tilastosivulla</a>."
 
@@ -2880,7 +2868,7 @@ msgstr "Sinun ei tarvitse muuttaa CSS-koodiasi tässä &mdash; voit muokata ja e
 msgid "Did you know?"
 msgstr "Tiesitkö?"
 
-#: wp-admin/credits.php:127
+#: wp-admin/credits.php:138
 msgid "Noteworthy Contributors"
 msgstr "Merkittävät avustajat"
 
@@ -2947,11 +2935,12 @@ msgstr "Syötä tähän osoite, jos haluat <a href=\"%s\">sivustosi kotisivun ol
 msgid "Developer Happiness"
 msgstr "Kehittäjätyytyväisyys"
 
-#: wp-admin/freedoms.php:51
+#. translators: %s: https://wordpress.org/about/privacy
+#: wp-admin/freedoms.php:73
 msgid "We take privacy and transparency very seriously. To learn more about what data we collect, and how we use it, please visit <a href=\"%s\">WordPress.org/about/privacy</a>."
 msgstr "Suhtaudumme tietosuojaan ja läpinäkyvyyteen hyvin vakavasti. Lisätietoa keräämästämme tiedosta ja sen käytöstä löytyy sivulta <a href=\"%s\">WordPress.org/about/privacy</a>."
 
-#: wp-admin/freedoms.php:47
+#: wp-admin/freedoms.php:61
 msgid "From time to time, your WordPress site may send data to WordPress.org &#8212; including, but not limited to &#8212; the version of WordPress you are using, and a list of installed plugins and themes."
 msgstr "WordPress-sivustosi saattaa lähetttää ajoittain tietoa WordPress.org:iin. Tieto saattaa sisältää esimerkiksi käyttämäsi WordPressin version ja listan käytössä olevista lisäosista ja teemoista."
 
@@ -3157,7 +3146,7 @@ msgstr "%s muokkaa jo tätä artikkelia."
 msgid "%s is already editing this post. Do you want to take over?"
 msgstr "%s muokkaa jo tätä artikkelia. Haluatko ottaa ohjat?"
 
-#: wp-admin/includes/ms.php:1171
+#: wp-admin/includes/ms.php:1175
 msgid "<a href=\"https://codex.wordpress.org/Network_Admin_Sites_Screen\">Documentation on Site Management</a>"
 msgstr "<a href=\"https://codex.wordpress.org/Network_Admin_Sites_Screen\">Sivustojen ylläpidon dokumentaatio</a>"
 
@@ -3173,19 +3162,19 @@ msgstr "Lisäosan asennus"
 msgid "Custom installation script."
 msgstr "Mukautettu komentosarja asennukselle."
 
-#: wp-admin/includes/ms.php:1158
+#: wp-admin/includes/ms.php:1162
 msgid "<strong>Settings</strong> &mdash; This page shows a list of all settings associated with this site. Some are created by WordPress and others are created by plugins you activate. Note that some fields are grayed out and say Serialized Data. You cannot modify these values due to the way the setting is stored in the database."
 msgstr "<strong>Asetukset</strong> &mdash; Tällä sivulla on kaikki tämän sivuston asetukset. Jotkut näistä ovat WordPressin luomia, osa on peräisin lisäosista. Jotkut kentistä ovat harmaita ja niissä on sarjallistettua dataa. Näitä arvoja ei voi muokata tältä sivulta."
 
-#: wp-admin/includes/ms.php:1157
+#: wp-admin/includes/ms.php:1161
 msgid "<strong>Themes</strong> &mdash; This area shows themes that are not already enabled across the network. Enabling a theme in this menu makes it accessible to this site. It does not activate the theme, but allows it to show in the site&#8217;s Appearance menu. To enable a theme for the entire network, see the <a href=\"%s\">Network Themes</a> screen."
 msgstr "<strong>Teemat</strong> &mdash; Tällä alueella näet teemat, jotka eivät ole käytössä koko verkostossa. Jos kytket teeman päälle tässä valikossa, se tulee saataville tälle sivustolle. Teemaa ei aktivoida, mutta se näkyy sivuston ulkoasuvalikossa. Jos haluat kytkeä teeman päälle koko verkostolle, katso <a href=\"%s\">verkoston teemat</a> -sivua."
 
-#: wp-admin/includes/ms.php:1156
+#: wp-admin/includes/ms.php:1160
 msgid "<strong>Users</strong> &mdash; This displays the users associated with this site. You can also change their role, reset their password, or remove them from the site. Removing the user from the site does not remove the user from the network."
 msgstr "<strong>Käyttäjät</strong> &mdash; Tästä näet sivuston käyttäjät. Voit vaihtaa heidän roolejaan, resetoida salasanat tai poistaa käyttäjät sivustolta. Käyttäjän poistaminen sivustolta ei poista käyttäjää verkostosta."
 
-#: wp-admin/includes/ms.php:1155
+#: wp-admin/includes/ms.php:1159
 msgid "<strong>Info</strong> &mdash; The site URL is rarely edited as this can cause the site to not work properly. The Registered date and Last Updated date are displayed. Network admins can mark a site as archived, spam, deleted and mature, to remove from public listings or disable."
 msgstr "<strong>Tietoa</strong> &mdash; Sivuston URLia ei yleensä muokata, koska se voi rikkoa sivuston. Rekisteröintipäivä ja päivityspäivä ovat näkyviä tietoja. Verkoston ylläpitäjät voivat merkitä sivustoja arkistoiduiksi, roskapostiksi, tuhotuksi tai aikuisille suunnatuiksi, poistaa sivuja listoilta tai kytkeä niitä pois päältä."
 
@@ -3193,7 +3182,7 @@ msgstr "<strong>Tietoa</strong> &mdash; Sivuston URLia ei yleensä muokata, kosk
 msgid "Unable to write to file."
 msgstr "Tiedostoon kirjoittaminen epäonnistui."
 
-#: wp-admin/includes/ms.php:1154
+#: wp-admin/includes/ms.php:1158
 msgid "The menu is for editing information specific to individual sites, particularly if the admin area of a site is unavailable."
 msgstr "Valikko on sivustojen tietojen muokkaamista varten, etenkin jos sivuston ylläpitoon ei pääse muuten."
 
@@ -3345,7 +3334,7 @@ msgstr "Piilota valinnat"
 msgid "Expand Sidebar"
 msgstr "Laajenna sivupalkki"
 
-#: wp-admin/nav-menus.php:951
+#: wp-admin/nav-menus.php:955
 msgid "Display location"
 msgstr "Näytä valikko sijainnissa"
 
@@ -3409,7 +3398,7 @@ msgid "Search plugins..."
 msgstr "Etsi lisäosia…"
 
 #. translators: %s: number of ratings
-#: wp-admin/theme-install.php:341
+#: wp-admin/includes/theme.php:729 wp-admin/theme-install.php:341
 msgid "(%s ratings)"
 msgstr "(%s arviota)"
 
@@ -3424,7 +3413,7 @@ msgid "Less Than 10"
 msgstr "Alle 10"
 
 #: wp-admin/includes/plugin-install.php:262
-#: wp-admin/includes/plugin-install.php:679 wp-admin/freedoms.php:89
+#: wp-admin/includes/plugin-install.php:679 wp-admin/freedoms.php:123
 #: wp-admin/plugins.php:444 wp-admin/plugin-install.php:86
 msgid "https://wordpress.org/plugins/"
 msgstr "https://fi.wordpress.org/plugins/"
@@ -3869,11 +3858,11 @@ msgstr "Sulje mukautin ja palaa edelliselle sivulle"
 msgid "Sorry, you are not allowed to import content."
 msgstr "Sinulla ei ole oikeutta tuoda sisältöä."
 
-#: wp-admin/credits.php:131
+#: wp-admin/credits.php:142
 msgid "Release Design Lead"
 msgstr "Julkaisun design-vastaava"
 
-#: wp-admin/credits.php:132
+#: wp-admin/credits.php:143
 msgid "Release Deputy"
 msgstr "Julkaisun varavastaava"
 
@@ -4024,7 +4013,7 @@ msgstr "Tietokannan käyttäjätunnus."
 msgid "Your database password."
 msgstr "Tietokannan salasana."
 
-#: wp-admin/freedoms.php:90 wp-admin/themes.php:114
+#: wp-admin/freedoms.php:124 wp-admin/themes.php:114
 #: wp-admin/theme-install.php:97
 msgid "https://wordpress.org/themes/"
 msgstr "https://fi.wordpress.org/themes/"
@@ -4328,7 +4317,8 @@ msgstr "Lähetä käyttäjälle ilmoitus"
 msgid "Send the new user an email about their account."
 msgstr "Lähetä uudelle käyttäjälle sähköpostilla tietoa hänen tilistään."
 
-#: wp-admin/nav-menus.php:961
+#. translators: %s: menu name
+#: wp-admin/nav-menus.php:965
 msgctxt "menu location"
 msgid "(Currently set to: %s)"
 msgstr "(Tämänhetkinen asetus: %s)"
@@ -5007,7 +4997,7 @@ msgstr "Kun muokkaat %1$s-tiedostoasi, varmista samalla, että siellä on kaikki
 msgid "Show more details"
 msgstr "Näytä lisätietoja"
 
-#: wp-admin/nav-menus.php:654
+#: wp-admin/nav-menus.php:658
 msgid "Your theme supports %s menu. Select which menu appears in each location."
 msgid_plural "Your theme supports %s menus. Select which menu appears in each location."
 msgstr[0] "Teemassasi on %s valikkopaikka. Valitse mitä valikkoa haluat käyttää."
@@ -5738,7 +5728,7 @@ msgstr "Nimi"
 msgid "If you like, you may enter custom structures for your category and tag URLs here. For example, using <code>topics</code> as your category base would make your category links like <code>%s/topics/uncategorized/</code>. If you leave these blank the defaults will be used."
 msgstr "Kategorioiden ja avainsanojen URL-osoitteille voi antaa oman etuliitteen. Syöttämällä tähän esimerkiksi <code>arkisto</code> kategorioiden osoitteet olisivat muotoa <code>%s/arkisto/yleinen/</code>. Jos tämä kenttä on tyhjä, oletusarvo tulee käyttöön."
 
-#: wp-admin/credits.php:130
+#: wp-admin/credits.php:141
 msgid "Release Lead"
 msgstr "Julkaisuvastaava"
 
@@ -6029,11 +6019,11 @@ msgstr "Tyyppi"
 msgid "Thank you for creating with <a href=\"%s\">WordPress</a>."
 msgstr "Kiitos <a href=\"%s\">WordPressin</a> käytöstä."
 
-#: wp-admin/includes/ms.php:1172
+#: wp-admin/includes/ms.php:1176
 msgid "<a href=\"https://wordpress.org/support/forum/multisite/\">Support Forums</a>"
 msgstr "<a href=\"https://fi.forums.wordpress.org\" target=\"_blank\">Tukifoorumi</a>"
 
-#: wp-admin/credits.php:45 wp-admin/credits.php:59
+#: wp-admin/credits.php:55 wp-admin/credits.php:69
 msgid "https://make.wordpress.org/"
 msgstr "https://make.wordpress.org/"
 
@@ -6090,7 +6080,7 @@ msgid "On this screen, you can update to the latest version of WordPress, as wel
 msgstr "Tällä ruudulla voit päivittää uusimpaan WordPressin versioon, lisäksi voit päivittää teemat ja lisäosat WordPress.orgin uusimpaan versioon."
 
 #. translators: %s: The current WordPress version number
-#: wp-admin/about.php:23
+#: wp-admin/credits.php:24 wp-admin/freedoms.php:38 wp-admin/about.php:23
 msgid "Welcome to WordPress&nbsp;%s"
 msgstr "Tervetuloa WordPress-versioon&nbsp;%s"
 
@@ -6138,7 +6128,7 @@ msgstr "Kun tämä asetus on voimassa, ohjauspaneelin &#8221;Sivustosi sisällö
 msgid "Accessibility Ready"
 msgstr "Saavutettava"
 
-#: wp-admin/includes/theme.php:741 wp-admin/themes.php:559
+#: wp-admin/includes/theme.php:746 wp-admin/themes.php:559
 msgid "This is a child theme of %s."
 msgstr "Tämä on teeman %s lapsiteema"
 
@@ -6154,13 +6144,13 @@ msgstr "Tätä näkymää käytetään asennettujen teemojen hallintaan. WordPre
 msgid "When previewing on smaller monitors, you can use the collapse icon at the bottom of the left-hand pane. This will hide the pane, giving you more room to preview your site in the new theme. To bring the pane back, click on the collapse icon again."
 msgstr "Kun esikatselet pienemmällä ruudulla, voit käyttää piilotusikonia vasemman sivupalkin alaosassa. Saat palkin takaisin näkyviin napsauttamalla ikonia uudelleen."
 
-#: wp-admin/themes.php:130
-msgid "The theme being previewed is fully interactive &mdash; navigate to different pages to see how the theme handles posts, archives, and other page templates. The settings may differ depending on what theme features the theme being previewed supports. To accept the new settings and activate the theme all in one step, click the Publish &amp; Activate button above the menu."
-msgstr "Esikatseltava teema on täysin vuorovaikutteinen: voit selata sivustollasi olevia sivuja nähdäksesi miten teema näyttää artikkelit, arkistot ja muut sivupohjat. Saatavilla olevat asetukset saattavat vaihdella teemasta toiseen. Hyväksy uudet asetukset ja ota teema käyttöön kerralla napsauttamalla Tallenna ja ota käyttöön -painiketta valikon yläpuolella."
-
 #: wp-admin/themes.php:95
 msgid "Click on the theme to see the theme name, version, author, description, tags, and the Delete link"
 msgstr "Napsauta teemaa nähdäksesi teeman nimen, version, tekijän, kuvauksen, avainsanat ja poista-linkin."
+
+#: wp-admin/themes.php:130
+msgid "The theme being previewed is fully interactive &mdash; navigate to different pages to see how the theme handles posts, archives, and other page templates. The settings may differ depending on what theme features the theme being previewed supports. To accept the new settings and activate the theme all in one step, click the Publish &amp; Activate button above the menu."
+msgstr "Esikatseltava teema on täysin vuorovaikutteinen: voit selata sivustollasi olevia sivuja nähdäksesi miten teema näyttää artikkelit, arkistot ja muut sivupohjat. Saatavilla olevat asetukset saattavat vaihdella teemasta toiseen. Hyväksy uudet asetukset ja ota teema käyttöön kerralla napsauttamalla Tallenna ja ota käyttöön -painiketta valikon yläpuolella."
 
 #: wp-admin/themes.php:129
 msgid "Tap or hover on any theme then click the Live Preview button to see a live preview of that theme and change theme options in a separate, full-screen view. You can also find a Live Preview button at the bottom of the theme details screen. Any installed theme can be previewed and customized in this way."
@@ -6231,7 +6221,7 @@ msgstr "Seuraavien teemojen päivitys ei onnistunut:"
 msgid "The following translations failed to update:"
 msgstr "Seuraavien käännösten päivitys ei onnistunut:"
 
-#: wp-admin/includes/theme.php:735 wp-admin/themes.php:552
+#: wp-admin/includes/theme.php:740 wp-admin/themes.php:552
 msgid "Update Available"
 msgstr "Päivitys saatavilla"
 
@@ -6828,7 +6818,7 @@ msgstr "Kohdetta, jota yrität palauttaa roskakorista ei ole enää olemassa."
 msgid "This item has already been deleted."
 msgstr "Tämä kohde on jo poistettu."
 
-#: wp-admin/nav-menus.php:900
+#: wp-admin/nav-menus.php:904
 msgid "Drag each item into the order you prefer. Click the arrow on the right of the item to reveal additional configuration options."
 msgstr "Raahaa valikkolinkit haluamaasi järjestykseen. Napsauta kohteen vieressä olevaa nuolta nähdäksesi lisää asetuksia."
 
@@ -6937,33 +6927,33 @@ msgstr "Olemassa olevan valikon muokkaamiseksi, <strong>valitse pudotusvalikosta
 msgid "Menu Management"
 msgstr "Valikoiden hallinta"
 
-#: wp-admin/nav-menus.php:662
+#: wp-admin/nav-menus.php:666
 msgid "Theme Location"
 msgstr "Sijainti teemassa"
 
-#: wp-admin/nav-menus.php:663
+#: wp-admin/nav-menus.php:667
 msgid "Assigned Menu"
 msgstr "Valittu valikko"
 
-#: wp-admin/nav-menus.php:672
+#: wp-admin/nav-menus.php:676
 msgid "Select a Menu"
 msgstr "Valitse valikko"
 
-#: wp-admin/nav-menus.php:702
+#: wp-admin/nav-menus.php:706
 msgctxt "menu"
 msgid "Edit"
 msgstr "Muokkaa"
 
-#: wp-admin/nav-menus.php:721
+#: wp-admin/nav-menus.php:725
 msgctxt "menu"
 msgid "Use new menu"
 msgstr "Käytä uutta valikkoa"
 
-#: wp-admin/nav-menus.php:631
+#: wp-admin/nav-menus.php:633
 msgid "Edit Menus"
 msgstr "Muokkaa valikoita"
 
-#: wp-admin/nav-menus.php:639
+#: wp-admin/nav-menus.php:643
 msgid "Manage Locations"
 msgstr "Valikoiden sijainnit"
 
@@ -7035,11 +7025,11 @@ msgstr "Yksi alaspäin"
 msgid "To the top"
 msgstr "Ylimmäksi"
 
-#: wp-admin/nav-menus.php:862
+#: wp-admin/nav-menus.php:866
 msgid "Menu structure"
 msgstr "Valikon rakenne"
 
-#: wp-admin/nav-menus.php:927
+#: wp-admin/nav-menus.php:931
 msgid "Menu Settings"
 msgstr "Valikon asetukset"
 
@@ -7064,7 +7054,7 @@ msgstr "%s on ottanut ohjat ja muokkaa tätä sisältöä parhaillaan."
 msgid "You cannot move this item to the Trash. %s is currently editing."
 msgstr "Et voi siirtää tätä kohdetta roskakoriin. %s muokkaa sitä parhaillaan."
 
-#: wp-admin/nav-menus.php:771
+#: wp-admin/nav-menus.php:775
 msgid "Select a menu to edit:"
 msgstr "Valitse muokattava valikko:"
 
@@ -7088,15 +7078,15 @@ msgstr "alavalinta"
 msgid "Selected menus have been successfully deleted."
 msgstr "Valitut valikot on poistettu onnistuneesti."
 
-#: wp-admin/nav-menus.php:942
+#: wp-admin/nav-menus.php:946
 msgid "Auto add pages"
 msgstr "Lisää sivut automaattisesti"
 
-#: wp-admin/nav-menus.php:914
+#: wp-admin/nav-menus.php:918
 msgid "Give your menu a name, then click Create Menu."
 msgstr "Nimeä valikkosi, napsauta sitten Luo valikko."
 
-#: wp-admin/nav-menus.php:900
+#: wp-admin/nav-menus.php:904
 msgid "Edit your default menu by adding or removing items. Drag each item into the order you prefer. Click Create Menu to save your changes."
 msgstr "Muokkaa oletusvalikkoasi lisäämällä tai poistamalla valintoja. Raahaa kukin valinta haluamaasi järjestykseen. Tallenna muutokset napsauttamalla \"Luo valikko\"."
 
@@ -7142,13 +7132,13 @@ msgstr "Älä unohda napsauttaa Tallenna Muutokset -painiketta kun olet valmis."
 msgid "Several boxes on this screen contain settings for how your content will be published, including:"
 msgstr "Monet osiot tässä näkymässä sisältävät asetuksia siihen, miten sisältö julkaistaan. Näihin kuuluvat:"
 
-#: wp-admin/custom-background.php:91
-msgid "To use a background image, simply upload it or choose an image that has already been uploaded to your Media Library by clicking the &#8220;Choose Image&#8221; button. You can display a single instance of your image, or tile it to fill the screen. You can have your background fixed in place, so your site content moves on top of it, or you can have it scroll with your site."
-msgstr "Käyttääksesi taustakuvaa, tallenna se, tai valitse kuva Mediakirjastosta painamalla &#8220;Valitse kuva&#8221; nappia. Kuva voidaan näyttää kertaalleen tai sitten se voidaan monistaa, jotta se täyttää koko ruudun. Taustakuva voi olla kiinnitetty paikalleen niin, että sisältö liikkuu sen päällä, tai sitten kuva voi vieriä sivun mukana alaspäin."
-
 #: wp-admin/widgets.php:77
 msgid "When changing themes, there is often some variation in the number and setup of widget areas/sidebars and sometimes these conflicts make the transition a bit less smooth. If you changed themes and seem to be missing widgets, scroll down on this screen to the Inactive Widgets area, where all of your widgets and their settings will have been saved."
 msgstr "Teemoja vaihdettaessa niissä on yleensä eroja vimpainalueissa/sivupalkeissa ja niinpä niiden suhteen saattaa joskus ilmetä ongelmia. Jos vaihdoit teemaa ja vimpaimia näyttäisi puuttuvan, mene tämän sivun lopussa olevaan Poissa käytöstä olevat vimpaimet-kohtaan, johon kaikki vimpaimet ovat asetuksineen tallennettu."
+
+#: wp-admin/custom-background.php:91
+msgid "To use a background image, simply upload it or choose an image that has already been uploaded to your Media Library by clicking the &#8220;Choose Image&#8221; button. You can display a single instance of your image, or tile it to fill the screen. You can have your background fixed in place, so your site content moves on top of it, or you can have it scroll with your site."
+msgstr "Käyttääksesi taustakuvaa, tallenna se, tai valitse kuva Mediakirjastosta painamalla &#8220;Valitse kuva&#8221; nappia. Kuva voidaan näyttää kertaalleen tai sitten se voidaan monistaa, jotta se täyttää koko ruudun. Taustakuva voi olla kiinnitetty paikalleen niin, että sisältö liikkuu sen päällä, tai sitten kuva voi vieriä sivun mukana alaspäin."
 
 #: wp-admin/edit-form-advanced.php:338
 msgid "Inserting Media"
@@ -8111,7 +8101,7 @@ msgstr "Tietoturvapäivitys"
 msgid "Maintenance Release"
 msgstr "Huoltopäivitys"
 
-#: wp-admin/credits.php:28 wp-admin/freedoms.php:38 wp-admin/about.php:37
+#: wp-admin/credits.php:38 wp-admin/freedoms.php:52 wp-admin/about.php:37
 msgid "What&#8217;s New"
 msgstr "Uudet ominaisuudet"
 
@@ -8396,10 +8386,6 @@ msgstr "<strong>Muokkaa</strong> vie sinut kyseisen käyttäjän muokattavalle p
 msgid "Because this is a multisite installation, you may add accounts that already exist on the Network by specifying a username or email, and defining a role. For more options, such as specifying a password, you have to be a Network Administrator and use the hover link under an existing user&#8217;s name to Edit the user profile under Network Admin > All Users."
 msgstr "Koska tämä on multisite-asennus, voit lisätä jo olemassaolevia tilejä antamalla käyttäjätunnuksen tai sähköpostin ja määrittämällä käyttäjälle roolin tälle sivustolle. Muiden käyttäjäasetusten (kuten käyttäjän salasanan) muokkaamiseksi tarvitset järjestelmänvalvojan oikeudet."
 
-#: wp-admin/credits.php:21 wp-admin/freedoms.php:31
-msgid "Welcome to WordPress %s"
-msgstr "Tervetuloa käyttämään WordPress-versiota %s"
-
 #: wp-admin/about.php:153
 msgid "Go to Dashboard &rarr; Home"
 msgstr "Mene ohjausnäkymän etusivulle"
@@ -8408,7 +8394,7 @@ msgstr "Mene ohjausnäkymän etusivulle"
 msgid "Return to Dashboard &rarr; Updates"
 msgstr "Palaa sivulle Ohjausnäkymä &rarr; Päivitykset"
 
-#: wp-admin/credits.php:54
+#: wp-admin/credits.php:64
 msgid "WordPress is created by a worldwide team of passionate individuals."
 msgstr "WordPressiä kehittää maailmanlaajuinen joukko innostuneita yksilöitä."
 
@@ -8439,7 +8425,7 @@ msgstr ""
 "Hyväksy kutsu napsauttamalla seuraavaa linkkiä:\n"
 "%4$s"
 
-#: wp-admin/credits.php:133
+#: wp-admin/credits.php:144
 msgid "Core Developer"
 msgstr "Core-kehittäjät"
 
@@ -8554,7 +8540,7 @@ msgstr "Navigointi"
 
 #: wp-admin/options-reading.php:24 wp-admin/edit-tags.php:261
 #: wp-admin/link-manager.php:53 wp-admin/options-writing.php:22
-#: wp-admin/includes/ms.php:1152 wp-admin/includes/class-wp-screen.php:816
+#: wp-admin/includes/ms.php:1156 wp-admin/includes/class-wp-screen.php:816
 #: wp-admin/my-sites.php:43 wp-admin/options-general.php:41
 #: wp-admin/comment.php:47 wp-admin/theme-editor.php:27
 #: wp-admin/plugin-editor.php:123 wp-admin/nav-menus.php:546
@@ -8588,18 +8574,18 @@ msgid_plural "Update Available <span class=\"count\">(%s)</span>"
 msgstr[0] "Päivitys saatavilla <span class=\"count\">(%s)</span>"
 msgstr[1] "Päivityksiä saatavilla <span class=\"count\">(%s)</span>"
 
+#. translators: %s: The current WordPress version number
 #. translators: %s: Plugin version number.
 #. translators: %s: Theme version number.
 #. translators: %s: plugin version number
 #. translators: %s: Plugin version
-#. translators: %s: The current WordPress version number
-#: wp-admin/credits.php:25 wp-admin/includes/class-wp-debug-data.php:789
+#: wp-admin/credits.php:33 wp-admin/includes/class-wp-debug-data.php:789
 #: wp-admin/includes/class-wp-debug-data.php:827
 #: wp-admin/includes/class-wp-debug-data.php:940
 #: wp-admin/includes/class-wp-plugins-list-table.php:825
 #: wp-admin/includes/update.php:210 wp-admin/includes/update.php:240
 #: wp-admin/includes/ajax-actions.php:4182
-#: wp-admin/includes/ajax-actions.php:4225 wp-admin/freedoms.php:35
+#: wp-admin/includes/ajax-actions.php:4225 wp-admin/freedoms.php:47
 #: wp-admin/about.php:32
 msgid "Version %s"
 msgstr "Versio %s"
@@ -8656,11 +8642,22 @@ msgstr "Et voi poistaa käyttäjiä."
 msgid "Confirm Deletion"
 msgstr "Vahvista poistaminen"
 
+#: wp-admin/user-new.php:209 wp-admin/user-new.php:330
+#: wp-admin/user-new.php:439 wp-admin/user-new.php:565 wp-admin/menu.php:256
+#: wp-admin/menu.php:258
+msgid "Add New User"
+msgstr "Lisää uusi käyttäjä"
+
+#: wp-admin/comment.php:156 wp-admin/theme-editor.php:303
+#: wp-admin/plugins.php:319 wp-admin/plugins.php:325
+msgid "Caution:"
+msgstr "Varoitus:"
+
 #. translators: %s: plugin name
 #: wp-admin/includes/class-wp-links-list-table.php:88
 #: wp-admin/includes/class-wp-links-list-table.php:323
 #: wp-admin/includes/class-wp-themes-list-table.php:200
-#: wp-admin/includes/theme.php:758
+#: wp-admin/includes/theme.php:763
 #: wp-admin/includes/class-wp-plugins-list-table.php:500
 #: wp-admin/includes/class-wp-plugins-list-table.php:654
 #: wp-admin/includes/class-wp-plugins-list-table.php:683
@@ -8675,17 +8672,6 @@ msgstr "Vahvista poistaminen"
 #: wp-admin/edit-tag-form.php:278
 msgid "Delete"
 msgstr "Poista"
-
-#: wp-admin/user-new.php:209 wp-admin/user-new.php:330
-#: wp-admin/user-new.php:439 wp-admin/user-new.php:565 wp-admin/menu.php:256
-#: wp-admin/menu.php:258
-msgid "Add New User"
-msgstr "Lisää uusi käyttäjä"
-
-#: wp-admin/comment.php:156 wp-admin/theme-editor.php:303
-#: wp-admin/plugins.php:319 wp-admin/plugins.php:325
-msgid "Caution:"
-msgstr "Varoitus:"
 
 #: wp-admin/ms-delete-site.php:32 wp-admin/menu.php:268
 msgid "Delete Site"
@@ -8715,26 +8701,9 @@ msgstr "Päivitykset %s"
 msgid "Super Admin"
 msgstr "Järjestelmänvalvoja"
 
-#. translators: %s: number of pending plugin updates
-#: wp-admin/menu.php:224
-msgid "Plugins %s"
-msgstr "Lisäosat %s"
-
-#: wp-admin/users.php:503
-msgid "Changed roles."
-msgstr "Roolit päivitetty."
-
-#. translators: %s: plugin name
-#: wp-admin/includes/theme.php:763
-#: wp-admin/includes/class-wp-theme-install-list-table.php:478
-#: wp-admin/includes/deprecated.php:1381 wp-admin/theme-install.php:299
-#: wp-admin/theme-install.php:319
-msgid "Install"
-msgstr "Asenna"
-
 #: wp-admin/options-reading.php:42 wp-admin/edit-tags.php:297
 #: wp-admin/link-manager.php:70 wp-admin/options-writing.php:51
-#: wp-admin/includes/ms.php:1170 wp-admin/my-sites.php:50
+#: wp-admin/includes/ms.php:1174 wp-admin/my-sites.php:50
 #: wp-admin/options-general.php:47 wp-admin/comment.php:55
 #: wp-admin/theme-editor.php:50 wp-admin/plugin-editor.php:140
 #: wp-admin/nav-menus.php:594 wp-admin/update-core.php:648
@@ -8752,6 +8721,23 @@ msgstr "Asenna"
 #: wp-admin/export.php:56 wp-admin/custom-header.php:128
 msgid "For more information:"
 msgstr "Lisätietoja:"
+
+#. translators: %s: number of pending plugin updates
+#: wp-admin/menu.php:224
+msgid "Plugins %s"
+msgstr "Lisäosat %s"
+
+#: wp-admin/users.php:503
+msgid "Changed roles."
+msgstr "Roolit päivitetty."
+
+#. translators: %s: plugin name
+#: wp-admin/includes/theme.php:768
+#: wp-admin/includes/class-wp-theme-install-list-table.php:478
+#: wp-admin/includes/deprecated.php:1381 wp-admin/theme-install.php:299
+#: wp-admin/theme-install.php:319
+msgid "Install"
+msgstr "Asenna"
 
 #. translators: %s: Plugin author name.
 #. translators: %s: Theme author name.
@@ -8910,7 +8896,7 @@ msgstr "Siirretty tiedosto ylittää php.ini:ssä määritellyn upload_max_files
 msgid "The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the HTML form."
 msgstr "Siirretty tiedosto ylittää HTML-lomakkeessa määritellyn MAX_FILE_SIZE -tiedostokoon."
 
-#: wp-admin/credits.php:134
+#: wp-admin/credits.php:145
 msgid "External Libraries"
 msgstr "Ulkoiset kirjastot"
 
@@ -8922,29 +8908,32 @@ msgstr "Saatavilla olevat työkalut"
 msgid "Network Setup"
 msgstr "Verkon asennus"
 
-#: wp-admin/credits.php:66
+#: wp-admin/credits.php:76
 msgctxt "Translate this to be the equivalent of English Translators in your language for the credits page Translators section"
 msgid "Translators"
 msgstr "Suomenkielinen käännös"
 
-#: wp-admin/freedoms.php:85
+#. translators: %s: https://wordpressfoundation.org/trademark-policy
+#: wp-admin/freedoms.php:117
 msgid "WordPress grows when people like you tell their friends about it, and the thousands of businesses and services that are built on and around WordPress share that fact with their users. We&#8217;re flattered every time someone spreads the good word, just make sure to <a href=\"%s\">check out our trademark guidelines</a> first."
 msgstr "WordPress kasvaa kun sinunkaltaisesi ihmiset kertovat siitä kavereilleen, ja kun tuhannet yritykset ja palvelut, jotka käyttävät WordPressiä kertovat sen käyttäjilleen ja asiakkailleen. Olemme otettuja joka kerta kun joku kehuu ja pistää sanaa eteenpäin, mutta tarkistathan silti <a href=\"%s\">tavaramerkkiämme koskevat ohjeet</a> ensin."
 
-#: wp-admin/freedoms.php:92
+#. translators: %s: https://wordpress.org/about/license
+#: wp-admin/freedoms.php:126
 msgid "Every plugin and theme in WordPress.org&#8217;s directory is 100%% GPL or a similarly free and compatible license, so you can feel safe finding <a href=\"%1$s\">plugins</a> and <a href=\"%2$s\">themes</a> there. If you get a plugin or theme from another source, make sure to <a href=\"%3$s\">ask them if it&#8217;s GPL</a> first. If they don&#8217;t respect the WordPress license, we don&#8217;t recommend them."
 msgstr "Kaikki WordPress.org:in hakemistossa olevat lisäosat ja teemat ovat 100%% GPL-koodia, tai käyttävät jotakin muuta yhteensopivaa, vapaata lisenssiä. Voit siis turvallisesti asentaa ja käyttää sieltä löytyviä <a href=\"%1$s\">lisäosia</a> ja <a href=\"%2$s\">teemoja</a>. Jos hankit teeman tai lisäosan muualta, <a href=\"%3$s\">kysy onko se varustettu GPL-lisenssillä</a> ensin. Emme suosittele käyttämään ohjelmistoja, jotka eivät kunnioita WordPressin lisenssiä."
 
-#: wp-admin/freedoms.php:58
+#. translators: %s: https://wordpress.org/about/license
+#: wp-admin/freedoms.php:85
 msgid "WordPress is Free and open source software, built by a distributed community of mostly volunteer developers from around the world. WordPress comes with some awesome, worldview-changing rights courtesy of its <a href=\"%s\">license</a>, the GPL."
 msgstr "WordPress on vapaa, avoimen lähdekoodin ohjelmisto, jota on kehittänyt suuri enimmäkseen vapaaehtoisista kehittäjistä koostuva maailmanlaajuinen yhteisö. WordPressin mukana seuraa mainio <a href=\"%s\">GPL-lisenssi</a>."
 
-#: wp-admin/credits.php:129
+#: wp-admin/credits.php:140
 msgid "Lead Developer"
 msgstr "Pääkehittäjä"
 
 #. translators: %s: https://make.wordpress.org
-#: wp-admin/credits.php:58
+#: wp-admin/credits.php:68
 msgid "Want to see your name in lights on this page? <a href=\"%s\">Get involved in WordPress</a>."
 msgstr "Haluatko nähdä nimesi tässä? <a href=\"%s\">Osallistu WordPressin kehittämiseen</a>."
 
@@ -8953,12 +8942,12 @@ msgctxt "removing-widget"
 msgid "Deactivate"
 msgstr "Poista käytöstä"
 
-#: wp-admin/credits.php:13 wp-admin/credits.php:29 wp-admin/freedoms.php:39
+#: wp-admin/credits.php:13 wp-admin/credits.php:39 wp-admin/freedoms.php:53
 #: wp-admin/about.php:38
 msgid "Credits"
 msgstr "Tekijät"
 
-#: wp-admin/credits.php:128
+#: wp-admin/credits.php:139
 msgid "Cofounder, Project Lead"
 msgstr "Perustaja, projektin johtaja"
 
@@ -8966,15 +8955,17 @@ msgstr "Perustaja, projektin johtaja"
 msgid "All Comments"
 msgstr "Kaikki kommentit"
 
-#: wp-admin/credits.php:125
+#: wp-admin/credits.php:135
 msgid "Project Leaders"
 msgstr "Projektivastaavat"
 
-#: wp-admin/credits.php:126
+#. translators: %s: The current WordPress version number
+#: wp-admin/credits.php:137
 msgid "Core Contributors to WordPress %s"
 msgstr "Muut WordPress %s -versiossa avustaneet"
 
-#: wp-admin/credits.php:43
+#. translators: 1: https://wordpress.org/about/, 2: https://make.wordpress.org
+#: wp-admin/credits.php:53
 msgid "WordPress is created by a <a href=\"%1$s\">worldwide team</a> of passionate individuals. <a href=\"%2$s\">Get involved in WordPress</a>."
 msgstr "WordPressiä kehittää <a href=\"%1$s\">maailmanlaajuinen joukko</a> innokkaita ihmisiä. <a href=\"%2$s\">Osallistu WordPressin kehitykseen</a>."
 
@@ -8986,12 +8977,12 @@ msgstr "Käytät selainta, jonka tietoturva on heikko!"
 msgid "Your browser is out of date!"
 msgstr "Selaimesi on vanhentunut."
 
-#: wp-admin/credits.php:30 wp-admin/freedoms.php:12 wp-admin/freedoms.php:40
-#: wp-admin/freedoms.php:57 wp-admin/about.php:39
+#: wp-admin/credits.php:40 wp-admin/freedoms.php:12 wp-admin/freedoms.php:54
+#: wp-admin/freedoms.php:81 wp-admin/about.php:39
 msgid "Freedoms"
 msgstr "Vapaudet"
 
-#: wp-admin/freedoms.php:96
+#: wp-admin/freedoms.php:130
 msgid "Don&#8217;t you wish all software came with these freedoms? So do we! For more information, check out the <a href=\"https://www.fsf.org/\">Free Software Foundation</a>."
 msgstr "Eikö olisi mukavaa, jos kaikki ohjelmistot olisivat näin vapaita? Niin mekin! Tutustu <a href=\"https://www.fsf.org/\">Free Software Foundationiin</a>."
 
@@ -9781,7 +9772,7 @@ msgstr "Voit suodattaa listausta näyttämään artikkelit vain tietystä katego
 msgid "Search Installed Plugins"
 msgstr "Hae asennettuja lisäosia"
 
-#: wp-admin/nav-menus.php:652
+#: wp-admin/nav-menus.php:656
 msgid "Your theme supports one menu. Select which menu you would like to use."
 msgstr "Teemassasi on %s paikka valikolle. Valitse mitä valikkoa haluaisit käyttää."
 
@@ -10120,7 +10111,7 @@ msgstr "Linkin kohde"
 msgid "CSS Classes (optional)"
 msgstr "CSS-luokat (vapaaehtoinen)"
 
-#: wp-admin/nav-menus.php:888 wp-admin/nav-menus.php:999
+#: wp-admin/nav-menus.php:892 wp-admin/nav-menus.php:1003
 msgid "Save Menu"
 msgstr "Tallenna valikko"
 
@@ -10574,7 +10565,7 @@ msgstr "Kirjoittaminen"
 msgid "Reading"
 msgstr "Lukeminen"
 
-#: wp-admin/credits.php:31 wp-admin/freedoms.php:41 wp-admin/about.php:40
+#: wp-admin/credits.php:41 wp-admin/freedoms.php:55 wp-admin/about.php:40
 #: wp-admin/menu.php:281
 msgid "Privacy"
 msgstr "Tietosuoja"
@@ -10992,7 +10983,7 @@ msgid_plural "Inactive <span class=\"count\">(%s)</span>"
 msgstr[0] "Poissa käytöstä <span class=\"count\">(%s)</span>"
 msgstr[1] "Poissa käytöstä <span class=\"count\">(%s)</span>"
 
-#: wp-admin/includes/theme.php:747 wp-admin/themes.php:563
+#: wp-admin/includes/theme.php:752 wp-admin/themes.php:563
 msgid "Tags:"
 msgstr "Avainsanat:"
 
@@ -11594,7 +11585,7 @@ msgstr "Hyväksy kommentti"
 msgid "Unknown action."
 msgstr "Tuntematon toiminto."
 
-#: wp-admin/includes/template.php:2289 wp-admin/nav-menus.php:730
+#: wp-admin/includes/template.php:2289 wp-admin/nav-menus.php:734
 #: wp-admin/options.php:364
 msgid "Save Changes"
 msgstr "Tallenna muutokset"

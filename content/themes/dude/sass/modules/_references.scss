@@ -14,6 +14,14 @@
 
   .col.has-grey-bg {
     margin-top: $margin-general-offset;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      margin-top: 0;
+    }
+
+    @supports (-ms-ime-align: auto) {
+      margin-top: 0;
+    }
   }
 
   .col {
@@ -38,7 +46,7 @@
     }
   }
 
-  .col-featured-image .image {
+  .image {
     @include background-cover();
     width: 100%;
     height: 47rem;

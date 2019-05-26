@@ -33,6 +33,12 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
         $(this).toggleClass('toggled-on');
         $('body').toggleClass('js-nav-active');
 
+        // Add blur effect after nav opened
+        setTimeout(
+          function() {
+            $('.block-hero-enable-transition').toggleClass('add-blur');
+        }, 500);
+
         // jscs:disable
         $(this).add( siteNavigation )
         .attr('aria-expanded', $( this )

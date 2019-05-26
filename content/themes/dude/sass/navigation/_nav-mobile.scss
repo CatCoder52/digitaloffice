@@ -48,8 +48,14 @@ $nav-open-from-top: false;
 }
 
 // Move body "out of the way" when nav activated
-.site-content {
+.block-hero {
   transition: all .75s 50ms cubic-bezier(.19, 1, .22, 1);
+  will-change: transform;
+
+  // Force Hardware Acceleration in WebKit with translate3d
+  // https://davidwalsh.name/translate3d
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
 }
 
 body:after {
@@ -62,21 +68,19 @@ body:after {
   background: $nav-background-color;
 }
 
-.js-nav-active .site-content {
+.js-nav-active .block-hero {
   // Scale needed in images because of hollow "borders" in blur effect
-  transform: translate3d(-50vw, 0, 0);
+  transform: translate3d(-50vw, 0, 0) scale(1.03) translateZ(0);
 
   // Prevent body scrolling when navigation is open
   overflow: hidden;
 
   // Add blur effect to hero
-  .block-hero {
+  &.add-blur {
     filter: blur(8px);
-    transform: scale(1.03);
     margin-left: -1rem;
   }
 
-  // Scale needed in images because of hollow "borders" in blur effect
   @media (max-width: 1400px) {
     transform: translate3d(-60vw, 0, 0);
   }
@@ -96,7 +100,7 @@ body:after {
       height: 100vh;
       overflow: auto;
       top: 0;
-      transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0) translateZ(0);
       transition: all .75s 50ms cubic-bezier(.19, 1, .22, 1);
       z-index: 2;
 
@@ -163,6 +167,7 @@ body:after {
   transform: translate3d(100%, 0, 0);
   transition: all .5s cubic-bezier(.66, 1, .66, 1);
   backface-visibility: hidden;
+  will-change: transform;
 
   @if $nav-open-from-right == true {
     right: -100%;
@@ -215,6 +220,12 @@ body:after {
 
   .content {
     text-align: left;
+
+    .contact-details,
+    .email,
+    .phone {
+      font-weight: 300;
+    }
 
     h2 {
       @include responsive-font(16px, 20px);
