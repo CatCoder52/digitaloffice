@@ -190,6 +190,15 @@
       z-index: 2;
       transition: all $transition-duration;
       top: 0;
+      right: 0;
+
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        width: 50%;
+      }
+
+      @supports (-ms-ime-align: auto) {
+        width: 50%;
+      }
 
       @media (max-width: 600px) {
         width: 100%;
@@ -235,6 +244,14 @@
     .content {
       display: flex;
       align-items: center;
+
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        width: 50%;
+      }
+
+      @supports (-ms-ime-align: auto) {
+        width: 50%;
+      }
 
       ul,
       li {

@@ -33,6 +33,12 @@
     display: flex;
     flex-wrap: wrap;
 
+    .col {
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        width: 25%;
+      }
+    }
+
     @media (min-width: 1100px) {
       @include grid(3, $gutter_x: 10rem, $gutter_y: 0);
     }
@@ -71,6 +77,7 @@
     margin-top: 0;
     position: relative;
     bottom: -10rem;
+    left: 0;
 
     @media (min-width: 1100px) {
       position: absolute;
