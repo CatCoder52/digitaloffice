@@ -319,6 +319,9 @@ document.body.classList.add('js');
     // Instant fade in
     $('.opacity-on-load-instant').addClass('fade-in');
 
+    // Show selection only until loaded
+    $('.block-hero-enable-transition .content').addClass('has-loaded');
+
     // Set up back to top link
     var moveTo = new MoveTo();
     var target = document.getElementById('target');
