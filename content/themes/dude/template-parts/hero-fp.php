@@ -15,7 +15,7 @@
 
     <div class="content content-select-service">
 
-      <div class="selection">
+      <div class="side-content-box selection">
         <ul>
           <li><a href="#">Haluan uudet verkkosivut</a></li>
           <li><a href="#">Tarvitsen visuaalista suunnittelua</a></li>
