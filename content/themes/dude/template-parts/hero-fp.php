@@ -10,7 +10,7 @@
 
 ?>
 
-<section class="block block-hero block-hero-frontpage">
+<section class="block block-hero block-hero-frontpage block-hero-enable-transition">
   <div class="container opacity-on-load-instant">
 
     <div class="content content-select-service">

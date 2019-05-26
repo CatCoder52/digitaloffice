@@ -9,6 +9,9 @@
 
   &.block-hero-enable-transition {
     transition: all $transition-duration;
+    backface-visibility: hidden;
+    perspective: 1000;
+    will-change: transform;
   }
 
   @media (min-width: $container-ipad-landscape) {

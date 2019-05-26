@@ -10,7 +10,7 @@
 
 ?>
 
-<section class="block block-hero block-hero-side-columns block-hero-contact">
+<section class="block block-hero block-hero-side-columns block-hero-contact block-hero-enable-transition">
   <div class="container opacity-on-load-instant">
 
     <div class="content content-contant">
