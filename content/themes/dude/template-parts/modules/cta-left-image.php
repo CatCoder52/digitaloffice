@@ -20,11 +20,11 @@ if ( empty( $bg_image ) || empty( $title ) || empty( $content ) ) {
   <div class="container">
 
     <div class="cols">
-      <div class="col">
+      <div class="col col-image">
         <div class="image" style="background-image: url('<?php echo esc_url( wp_get_attachment_url( $bg_image ) ) ?>');"></div>
       </div>
 
-      <div class="col">
+      <div class="col col-content">
         <div class="content">
           <h2 class="block-title"><?php echo esc_html( $title ) ?></h2>
           <?php echo wpautop( $content );

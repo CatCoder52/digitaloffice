@@ -21,6 +21,14 @@
       flex-wrap: wrap;
       align-items: center;
 
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        margin: 0;
+      }
+
+      @supports (-ms-ime-align: auto) {
+        margin: 0;
+      }
+
       @media (max-width: $container-ipad) {
         width: 100%;
       }

@@ -6,6 +6,26 @@
     overflow: visible;
   }
 
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .cols .col-image {
+      width: 70%;
+    }
+
+    .cols .col-content {
+      width: 30%;
+    }
+  }
+
+  @supports (-ms-ime-align: auto) {
+    .cols .col-image {
+      width: 70%;
+    }
+
+    .cols .col-content {
+      width: 30%;
+    }
+  }
+
   .cols {
     @include grid(2, $gutter_x: 0, $gutter_y: 0);
     grid-template-columns: 7fr 3fr;
