@@ -26,7 +26,14 @@
       </div>
     </div>
 
-    <div class="featured-image featured-image-side" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/placeholder.png');"><div class="shade"></div></div>
+    <div class="featured-image featured-image-side">
+      <div class="shade"></div>
+
+      <div class="background-image preview lazyload" style="background-image: url('background-image: url('<?php echo get_template_directory_uri(); ?>/images/placeholder-tiny.png');" data-src="<?php echo get_template_directory_uri(); ?>/images/placeholder-tiny.png"></div>
+      <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/placeholder.png');"<?php endif; ?>></div>
+      <noscript><div class="background-image full-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/placeholder.png');"></div></noscript>
+
+    </div>
 
   </div>
 </section>
