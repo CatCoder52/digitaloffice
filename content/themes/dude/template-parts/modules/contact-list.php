@@ -26,7 +26,7 @@ foreach ( $persons as $key => $person_id ) {
 
 <section class="block block-contact-list">
   <div class="container">
-    <h2>A - Ö</h2>
+    <h2 class="block-title">A - Ö</h2>
 
     <div class="cols">
       <?php $x = 0; foreach ( $persons as $person ) : ?>
