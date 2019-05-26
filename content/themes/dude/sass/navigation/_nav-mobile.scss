@@ -216,6 +216,12 @@ body:after {
   .content {
     text-align: left;
 
+    .contact-details,
+    .email,
+    .phone {
+      font-weight: 300;
+    }
+
     h2 {
       @include responsive-font(16px, 20px);
       color: #fff;
