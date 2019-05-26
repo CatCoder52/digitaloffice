@@ -2,8 +2,8 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-05-25 16:57:42
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2019-05-27 00:33:25
  *
  * @package dude2019
  */
@@ -39,7 +39,15 @@
 
     </div>
 
-    <div class="featured-image featured-image-side" style="background-image: url('https://api.mapbox.com/styles/v1/digitoimistodude/cjw3jzbgb12cd1cqn94r05ms1/static/url-https%3A%2F%2Fmaamerkit.dude.fi%2Fdude-map-marker.png(25.7424,62.2395)/25.7421,62.2398,16,140,1/1280x1280@2x?access_token=pk.eyJ1IjoiZGlnaXRvaW1pc3RvZHVkZSIsImEiOiJjanczajdiNWgwajcxNGJxcjBwcG5rd3VmIn0.iE0hH1uYfZIyyHOJsdGPNQ&attribution=false&logo=false');"><div class="shade"></div></div>
+    <div class="featured-image featured-image-side">
+
+      <div class="shade"></div>
+
+      <div class="background-image preview lazyload" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/dude-map-tiny.jpg');" data-src="<?php echo get_template_directory_uri(); ?>/images/dude-map.jpg"></div>
+      <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/dude-map.jpg');"<?php endif; ?>></div>
+      <noscript><div class="background-image full-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/dude-map.jpg');"></div></noscript>
+
+    </div>
 
   </div>
 </section>

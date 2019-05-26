@@ -14,12 +14,13 @@
   }
 
   &.preview {
-    filter: blur(2vw);
+    filter: blur(1vw);
     transform: scale(1.05);
   }
 
   &.full-image {
     z-index: 1;
+    transition: all $transition-duration;
   }
 }
 

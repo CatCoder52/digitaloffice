@@ -76,9 +76,8 @@ body:after {
   overflow: hidden;
 
   // Add blur effect to hero
-  &.add-blur {
-    filter: blur(8px);
-    margin-left: -1rem;
+  &.add-blur .full-image {
+    opacity: 0;
   }
 
   @media (max-width: 1400px) {

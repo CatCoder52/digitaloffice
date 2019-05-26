@@ -20,6 +20,7 @@
   .shade {
     background: linear-gradient(to bottom, #28392a 0%, transparent 50%);
     opacity: .6;
+    z-index: 3;
   }
 
   @media (max-width: 600px) {
