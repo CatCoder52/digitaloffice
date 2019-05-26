@@ -394,6 +394,7 @@ gulp.task('js', function() {
           themeDir + '/js/src/navigation.js',
           themeDir + '/js/src/svg-morpheus.js',
           themeDir + '/js/src/magnific-popup.custom.js',
+          themeDir + '/js/src/lazyload.js',
           themeDir + '/js/src/scripts.js'
         ])
         .pipe(concat('all.js'))

@@ -182,7 +182,6 @@
     }
 
     .featured-image.featured-image-side {
-      @include background-cover();
       width: 50vw;
       height: 110vh;
       position: relative;
@@ -190,6 +189,7 @@
       transition: all $transition-duration;
       top: 0;
       right: 0;
+      overflow: hidden;
 
       @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
         width: 50%;
