@@ -393,6 +393,7 @@ gulp.task('js', function() {
           themeDir + '/node_modules/what-input/dist/what-input.js',
           themeDir + '/js/src/navigation.js',
           themeDir + '/js/src/svg-morpheus.js',
+          themeDir + '/js/src/magnific-popup.custom.js',
           themeDir + '/js/src/scripts.js'
         ])
         .pipe(concat('all.js'))

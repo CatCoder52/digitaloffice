@@ -1,0 +1,68 @@
+.block.block-gallery {
+  .cols {
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40rem 40rem 80rem 40rem 40rem;
+    grid-auto-flow: dense;
+    grid-auto-rows: 80rem;
+    background-color: #fff;
+    color: #444;
+  }
+
+  .col {
+    @include background-cover();
+    position: relative;
+
+    &:first-child,
+    &:nth-child(5n) {
+      grid-row: span 2;
+      grid-column: 1 / span 1;
+    }
+
+    &:nth-child(4n) {
+      grid-column: span 2;
+      display: block;
+    }
+  }
+
+  // These will be in the popup
+  .hidden {
+    display: none;
+  }
+}
+
+// Please rotate your device -notification
+.please-rotate-nag {
+  text-align: center;
+  transition: all .6s;
+  visibility: hidden;
+  opacity: 0;
+
+  .phone {
+    height: 50px;
+    width: 100px;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    animation: rotate 1.5s ease-in-out infinite alternate;
+    margin: 0 auto;
+  }
+
+  .message {
+    color: #fff;
+    font-size: 1em;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: $container-mobile) {
+  .please-rotate-nag {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .mfp-wrap .mfp-container {
+    background: rgba(#000, .5);
+    transition: all .6s;
+  }
+}

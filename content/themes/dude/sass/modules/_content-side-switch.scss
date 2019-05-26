@@ -2,6 +2,12 @@
   padding-top: 20rem;
   padding-bottom: 20rem;
 
+  .container,
+  .cols,
+  .col {
+    overflow: visible;
+  }
+
   @media (max-width: 1500px) {
     padding-top: 15rem;
     padding-bottom: 15rem;
@@ -28,10 +34,10 @@
 
   .cols {
     @include grid(2, $gutter_x: 10rem, $gutter_y: 0);
-    grid-template-columns: 25vw 75vw;
+    grid-template-columns: 1fr 2fr;
 
     @media (max-width: 1400px) {
-      grid-template-columns: 35vw 65vw;
+      grid-template-columns: 35% 65%;
       grid-column-gap: 5rem;
 
       .button:hover .long-arrow {
@@ -39,7 +45,7 @@
       }
     }
 
-    @media (max-width: 900px) {
+    @media (max-width: 700px) {
       display: flex;
       flex-wrap: wrap;
     }
@@ -50,8 +56,23 @@
     flex-wrap: wrap;
     justify-content: flex-end;
     align-items: flex-start;
-    padding-right: 10rem;
     position: relative;
+    padding-right: 5rem;
+
+    @media (min-width: 850px) {
+      padding-right: 10rem;
+    }
+
+    @media (max-width: 700px) {
+      width: 100%;
+      margin-bottom: 4rem;
+      justify-content: flex-start;
+    }
+
+    @media (max-width: $container-mobile) {
+      margin-top: 3rem;
+      margin-left: 3rem;
+    }
 
     ul,
     li {
@@ -100,8 +121,13 @@
       transition: all $transition-duration;
       opacity: .5;
 
+      @media (max-width: $container-mobile) {
+        margin-bottom: 2.5rem;
+      }
+
       &.active,
-      &.has-focus {
+      &.has-focus,
+      &:hover {
         opacity: 1;
       }
     }
@@ -113,10 +139,34 @@
 
   .col.col-content {
     opacity: .8;
+    position: relative;
 
     p {
       width: 80%;
       max-width: 85rem;
+
+      @media (max-width: 1300px) {
+        max-width: 70%;
+        width: 100%;
+      }
+
+      @media (max-width: 700px) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .content-tab {
+    display: none;
+    width: 100%;
+
+    &.is-visible {
+      display: block;
+    }
+
+    &.animating {
+      position: absolute;
+      top: 0;
     }
   }
 }

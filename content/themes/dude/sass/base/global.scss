@@ -20,6 +20,12 @@
 @import '../layout/hero';
 @import '../layout/hero-service';
 
+// Global features
+@import '../features/top';
+@import '../features/animations';
+@import 'magnific-popup/dist/magnific-popup';
+@import '../features/magnific-popup';
+
 // Modules
 @import '../modules/our-services';
 @import '../modules/references';
@@ -29,15 +35,16 @@
 @import '../modules/text-image';
 @import '../modules/big-reference-quote';
 @import '../modules/content-side-switch';
+@import '../modules/left-image-text';
+@import '../modules/process';
+@import '../modules/gallery';
+@import '../modules/accordion';
+@import '../modules/blog-articles-upsell';
 
 // Navigation
 @import '../navigation/nav-core';
 @import '../navigation/nav-desktop';
 @import '../navigation/nav-mobile';
-
-// Global features
-@import '../features/top';
-@import '../features/animations';
 
 // Views
 @import '../views/front-page';
