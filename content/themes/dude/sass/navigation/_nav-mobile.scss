@@ -75,10 +75,6 @@ body:after {
   // Prevent body scrolling when navigation is open
   overflow: hidden;
 
-  // Add blur effect to hero
-  filter: blur(8px);
-  margin-left: -1rem;
-
   @media (max-width: 1400px) {
     transform: translate3d(-60vw, 0, 0);
   }
