@@ -64,11 +64,7 @@ body:after {
 }
 
 .js-nav-active .block-hero {
-  // Scale needed in images because of hollow "borders" in blur effect
-  transform: translateX(-50vw) scale(1.03);
-
-  // Prevent body scrolling when navigation is open
-  overflow: hidden;
+  transform: translateX(-50vw);
 
   // Add blur effect to hero
   &.add-blur .full-image {
@@ -84,101 +80,43 @@ body:after {
   }
 }
 
-// Ensure nav stays in the same position when activated
+// Opening animations
 .js {
   &.js-nav-active {
-    overflow: hidden;
-
     .nav-primary {
-      visibility: visible;
-      height: 100vh;
-      overflow: auto;
-      top: 0;
-      transition: all .75s 50ms cubic-bezier(.19, 1, .22, 1);
-      z-index: 2;
+      transform: translateX(0);
 
       .menu-items {
         opacity: 1;
-      }
-
-      @if $nav-open-from-right == true {
-        width: 50vw;
-        right: 0;
-
-        .nav-items {
-          width: 50vw;
-        }
-
-        @media (max-width: 1400px) {
-          width: 60vw;
-
-          .nav-items {
-            width: 60vw;
-          }
-        }
-
-        @media (max-width: 1020px) {
-          width: 70vw;
-
-          .nav-items {
-            width: 70vw;
-          }
-        }
-
-        @media (max-width: $responsivenav) {
-          width: 100vw;
-        }
       }
     }
   }
 }
 
-.js .nav-primary {
-  // Hide mobile navigation by default while enabling use of animations
+.nav-primary {
   height: 100vh;
-  width: 100%;
+  width: 50vw;
   clip: auto;
   position: fixed;
+  z-index: 2;
   right: 0;
   top: 0;
-  transition: all .5s cubic-bezier(.66, 1, .66, 1);
-  backface-visibility: hidden;
+  transform: translateX(50vw);
+  transition: transform .5s cubic-bezier(.66, 1, .66, 1);
   will-change: transform;
-
-  @if $nav-open-from-right == true {
-    right: -100%;
-    top: 0;
-  }
-
-  @if $nav-open-from-left == true {
-    left: -100%;
-    top: 0;
-  }
-
-  @if $nav-open-from-bottom == true {
-    bottom: -100%;
-    top: initial;
-  }
-
-  @if $nav-open-from-top == true {
-    top: -100%;
-  }
-}
-
-.nav-primary {
   background: $nav-background-color;
-  transition: all .55s;
   margin: 0;
   overflow: hidden;
   display: flex;
-  width: 100%;
-  height: 100vh;
   align-items: center;
   flex-wrap: wrap;
   padding-left: $padding-default-cols;
   padding-right: $padding-default-cols;
   padding-top: $padding-default-rows;
   padding-bottom: $padding-default-rows;
+
+  // Prevent body scrolling when navigation is open
+  overflow: hidden;
 
   @media (max-width: $container-ipad) {
     padding-left: $padding-default-cols-ipad;
