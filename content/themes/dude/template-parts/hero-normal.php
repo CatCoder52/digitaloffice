@@ -2,11 +2,12 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-05-25 17:39:44
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2019-05-27 22:39:13
  *
  * @package dude2019
  */
+
 $title = get_the_title();
 $content = get_post_meta( get_the_id(), 'hero_content', true );
 
@@ -15,7 +16,7 @@ if ( is_post_type_archive( 'reference' ) ) {
   $content = 'Olemme tehneet paljon kaikenlaista ja suurimmasta osasta hommia olemme ylpeitä. Muutamiin niistä voit tutustua täällä tarkemmin.';
 } ?>
 
-<section class="block block-hero block-hero-normal">
+<section class="block block-hero block-hero-normal block-hero-enable-transition">
   <div class="container">
 
     <div class="content">

@@ -3,14 +3,14 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-22 20:18:27
+ * @Last Modified time: 2019-05-27 22:34:37
  *
  * @package dude2019
  */
 
 $hero_content = get_post_meta( get_the_id(), 'hero_content', true ); ?>
 
-<section class="block block-hero block-hero-service">
+<section class="block block-hero block-hero-service block-hero-enable-transition">
   <div class="container">
 
     <h1><?php the_title() ?></h1>

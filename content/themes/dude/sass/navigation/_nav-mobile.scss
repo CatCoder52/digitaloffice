@@ -60,11 +60,6 @@ body:after {
 .js-nav-active .block-hero {
   transform: translateX(-50vw);
 
-  // Add blur effect to hero
-  &.add-blur .full-image {
-    opacity: 0;
-  }
-
   @media (max-width: 1400px) {
     transform: translateX(-60vw);
   }
@@ -76,6 +71,34 @@ body:after {
   @media (max-width: 760px) {
     transform: translateX(-100vw);
   }
+}
+
+// Blurs
+.block-hero-service .container,
+.block-hero-normal .container {
+  transition: all .75s;
+  will-change: filter;
+}
+
+.block-hero .full-image {
+  transition: all .75s;
+  will-change: opacity;
+}
+
+// Add blur effect to hero by hiding the full image and showing the preload-blur image from the background
+.js-nav-active .block-hero.add-blur .full-image {
+  opacity: 0;
+}
+
+// Just blur other heros
+.js-nav-active .block-hero-service.add-blur .container,
+.js-nav-active .block-hero-normal.add-blur .container {
+  filter: blur(1rem);
+}
+
+.js-nav-active .block-hero-service.add-blur .container,
+.js-nav-active .block-hero-normal.add-blur .container {
+  filter: blur(1rem);
 }
 
 // Opening animations
