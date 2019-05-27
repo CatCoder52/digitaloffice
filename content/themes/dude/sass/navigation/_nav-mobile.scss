@@ -47,12 +47,6 @@ $nav-open-from-top: false;
   overflow: hidden;
 }
 
-// Move body "out of the way" when nav activated
-.block-hero {
-  // transition: all .75s 50ms cubic-bezier(.19, 1, .22, 1);
-  will-change: transform;
-}
-
 body:after {
   content: '';
   width: 100%;
@@ -78,6 +72,10 @@ body:after {
   @media (max-width: 1020px) {
     transform: translateX(-70vw);
   }
+
+  @media (max-width: 760px) {
+    transform: translateX(-100vw);
+  }
 }
 
 // Opening animations
@@ -100,6 +98,10 @@ body:after {
   transition: all .75s 50ms cubic-bezier(.19, 1, .22, 1);
 }
 
+.block.block-hero.block-hero-enable-transition {
+  will-change: transform;
+}
+
 .nav-primary {
   height: 100vh;
   width: 50vw;
@@ -119,6 +121,21 @@ body:after {
   padding-right: $padding-default-cols;
   padding-top: $padding-default-rows;
   padding-bottom: $padding-default-rows;
+
+  @media (max-width: 1400px) {
+    transform: translateX(60vw);
+    width: 60vw;
+  }
+
+  @media (max-width: 1020px) {
+    transform: translateX(70vw);
+    width: 70vw;
+  }
+
+  @media (max-width: 760px) {
+    width: 100vw;
+    transform: translateX(100vw);
+  }
 
   // Prevent body scrolling when navigation is open
   overflow: hidden;
