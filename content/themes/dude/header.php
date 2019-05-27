@@ -51,7 +51,7 @@
         <?php endif; ?>
       </div><!-- .site-branding -->
 
-      <div class="main-navigation-wrapper" id="main-navigation-wrapper">
+      <div class="main-navigation-wrapper opacity-on-load" id="main-navigation-wrapper">
 
         <button id="nav-toggle" class="nav-toggle nav-toggle-mobile hamburger" type="button" aria-label="<?php esc_attr_e( 'Menu', 'dude' ); ?>">
           <span class="hamburger-box">
