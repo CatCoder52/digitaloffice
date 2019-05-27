@@ -31,8 +31,13 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
       animatedNav.classList.remove('is-animatable');
     }
 
-    animatedHero.addEventListener('transitionend', OnTransitionEndHero, false);
-    animatedNav.addEventListener('transitionend', OnTransitionEndNav, false);
+    if ( $( '.block-hero-enable-transition' ).length) {
+      animatedHero.addEventListener('transitionend', OnTransitionEndHero, false);
+    }
+
+    if ( $( '.nav-primary' ).length) {
+      animatedNav.addEventListener('transitionend', OnTransitionEndNav, false);
+    }
 
     // Toggles the menu button
     (function() {
