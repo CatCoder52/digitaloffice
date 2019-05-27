@@ -85,32 +85,27 @@ body:after {
   will-change: opacity;
 }
 
-// Add blur effect to hero by hiding the full image and showing the preload-blur image from the background
-.js-nav-active .block-hero.add-blur .full-image {
-  opacity: 0;
-}
+.js-nav-active {
+  // Add blur effect to hero by hiding the full image and showing the preload-blur image from the background
+  .block-hero.add-blur .full-image {
+    opacity: 0;
+  }
 
-// Just blur other heros
-.js-nav-active .block-hero-service.add-blur .container,
-.js-nav-active .block-hero-normal.add-blur .container {
-  filter: blur(1rem);
-}
-
-.js-nav-active .block-hero-service.add-blur .container,
-.js-nav-active .block-hero-normal.add-blur .container {
-  filter: blur(1rem);
+  // Just blur other heros
+  .block-hero-service.add-blur .container,
+  .block-hero-normal.add-blur .container {
+    filter: blur(1rem);
+  }
 }
 
 // Opening animations
-.js {
-  &.js-nav-active {
-    .nav-primary {
-      transform: translateX(0);
+.js.js-nav-active {
+  .nav-primary {
+    transform: translateX(0);
+  }
 
-      .menu-items {
-        opacity: 1;
-      }
-    }
+  .menu-items {
+    opacity: 1;
   }
 }
 
