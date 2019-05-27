@@ -29,8 +29,8 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
         menuToggle.add(siteNavigation).attr('aria-expanded', 'false');
 
         menuToggle.on('click', function() {
-        $(this).add(siteHeaderMenu).toggleClass('toggled-on');
-        $(this).toggleClass('toggled-on');
+        // $(this).add(siteHeaderMenu).toggleClass('toggled-on');
+        // $(this).toggleClass('toggled-on');
         $('body').toggleClass('js-nav-active');
 
         // Add blur effect after one second from nav triggered open

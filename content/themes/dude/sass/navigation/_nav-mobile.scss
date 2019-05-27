@@ -102,11 +102,10 @@ body:after {
   right: 0;
   top: 0;
   transform: translateX(50vw);
-  transition: transform .5s cubic-bezier(.66, 1, .66, 1);
+  transition: all .75s 50ms cubic-bezier(.19, 1, .22, 1);
   will-change: transform;
   background: $nav-background-color;
   margin: 0;
-  overflow: hidden;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
