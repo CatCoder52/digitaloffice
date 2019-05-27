@@ -51,11 +51,6 @@ $nav-open-from-top: false;
 .block-hero {
   transition: all .75s 50ms cubic-bezier(.19, 1, .22, 1);
   will-change: transform;
-
-  // Force Hardware Acceleration in WebKit with translate3d
-  // https://davidwalsh.name/translate3d
-  -webkit-backface-visibility: hidden;
-  -webkit-perspective: 1000;
 }
 
 body:after {
@@ -70,7 +65,7 @@ body:after {
 
 .js-nav-active .block-hero {
   // Scale needed in images because of hollow "borders" in blur effect
-  transform: translate3d(-50vw, 0, 0) scale(1.03);
+  transform: translateX(-50vw) scale(1.03);
 
   // Prevent body scrolling when navigation is open
   overflow: hidden;
@@ -81,11 +76,11 @@ body:after {
   }
 
   @media (max-width: 1400px) {
-    transform: translate3d(-60vw, 0, 0);
+    transform: translateX(-60vw);
   }
 
   @media (max-width: 1020px) {
-    transform: translate3d(-70vw, 0, 0);
+    transform: translateX(-70vw);
   }
 }
 
@@ -99,7 +94,6 @@ body:after {
       height: 100vh;
       overflow: auto;
       top: 0;
-      transform: translate3d(0, 0, 0);
       transition: all .75s 50ms cubic-bezier(.19, 1, .22, 1);
       z-index: 2;
 
@@ -135,22 +129,6 @@ body:after {
           width: 100vw;
         }
       }
-
-      @if $nav-open-from-left == true {
-        width: 100vw;
-        left: 0;
-      }
-
-      @if $nav-open-from-bottom == true {
-        width: 100vw;
-        bottom: 0;
-        top: initial;
-      }
-
-      @if $nav-open-from-top == true {
-        width: 100vw;
-        top: 0;
-      }
     }
   }
 }
@@ -163,7 +141,6 @@ body:after {
   position: fixed;
   right: 0;
   top: 0;
-  transform: translate3d(100%, 0, 0);
   transition: all .5s cubic-bezier(.66, 1, .66, 1);
   backface-visibility: hidden;
   will-change: transform;
