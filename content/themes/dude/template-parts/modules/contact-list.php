@@ -2,8 +2,8 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-25 17:01:29
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-05-25 17:23:20
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2019-05-27 10:46:54
  *
  * @package dude2019
  */
@@ -28,9 +28,9 @@ foreach ( $persons as $key => $person_id ) {
   <div class="container">
     <h2 class="block-title">A - Ö</h2>
 
-    <div class="cols">
+    <div class="cols columns">
       <?php $x = 0; foreach ( $persons as $person ) : ?>
-        <div class="col<?php if ( 0 === $x ) { echo ' col-go-to'; } ?>">
+        <div class="col<?php if ( 0 === $x ) { echo ' col-go-to'; } ?> column">
           <?php if ( 0 === $x ) : ?>
             <p class="name-pre" aria-describedby="your-goto">Your go-to dude</p>
             <h3 id="your-goto"><?php echo esc_html( $person['name'] ) ?></h3>
