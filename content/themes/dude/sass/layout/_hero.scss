@@ -8,7 +8,7 @@
   align-items: center;
 
   .block.block-hero.block-hero-enable-transition {
-    transition: all $transition-duration;
+    transition: all 750ms 50ms cubic-bezier(.19, 1, .22, 1);
     will-change: transform;
 
     // Force Hardware Acceleration in WebKit with translate3d

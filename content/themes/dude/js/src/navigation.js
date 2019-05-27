@@ -33,7 +33,7 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
         $(this).toggleClass('toggled-on');
         $('body').toggleClass('js-nav-active');
 
-        // Add blur effect after nav opened
+        // Add blur effect after one second from nav triggered open
         $('.block-hero-enable-transition').toggleClass('add-blur');
 
         // jscs:disable
