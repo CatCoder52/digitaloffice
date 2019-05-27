@@ -41,7 +41,6 @@
   .content {
     background: $color-dude-whitegreyish;
     padding: $padding-general-content-box;
-    max-width: 65rem;
     margin-left: -20rem;
 
     @media (max-width: $container-mobile) {
