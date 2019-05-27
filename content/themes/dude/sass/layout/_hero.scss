@@ -86,7 +86,7 @@
       position: absolute;
       left: calc(50% - 8rem);
       bottom: 8rem;
-      z-index: 4;
+      z-index: 6;
 
       @media (max-width: 700px) {
         position: static;
@@ -246,6 +246,7 @@
       align-items: center;
       opacity: 0;
       transition: all $transition-duration;
+      z-index: 4;
 
       &.has-loaded {
         opacity: 1;
