@@ -186,17 +186,19 @@ $absolute-navigation: true;
 
 .menu-items.fade-out .menu-item.dude-nav-more button {
   opacity: 1;
+  padding-top: 0;
 }
 
 // Plus to cross animation
 .nav-primary-desktop .menu-items .menu-item.dude-nav-more button {
   position: relative;
   padding-right: 2rem;
-  display: block;
+  display: flex;
   padding-top: 0;
   padding-bottom: 0;
   background: transparent;
   border: 0;
+  align-items: center;
 
   &:hover {
     cursor: pointer;
@@ -207,10 +209,9 @@ $absolute-navigation: true;
     transform: rotate(0deg);
     transition: all $transition-duration;
     position: absolute;
-    top: 0;
+    top: -.4rem;
     left: 0;
     margin-left: 4.7rem;
-    margin-top: -.4rem;
   }
 
   &:hover .plus-cross {
