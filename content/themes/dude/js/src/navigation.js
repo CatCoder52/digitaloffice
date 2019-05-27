@@ -12,12 +12,27 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
 
 (function($) {
 
+    // Define nav stuff
     var menuContainer    = $('.nav-container');
     var menuToggle       = menuContainer.find( '.nav-toggle' );
     var siteHeaderMenu   = menuContainer.find( '#main-navigation-wrapper' );
     var siteNavigation   = menuContainer.find( '#nav' );
+    var animatedNav      = document.querySelector('.nav-primary');
+    var animatedHero     = document.querySelector('.block-hero-enable-transition');
     var dropdownToggle   = $('<button />', {'class': 'dropdown-toggle','aria-expanded': false})
     .append($('<span />', {'class': 'screen-reader-text',text: dude_screenReaderText.expand}));
+
+    // Transition end function
+    function OnTransitionEndHero() {
+      animatedHero.classList.remove('is-animatable');
+    }
+
+    function OnTransitionEndNav() {
+      animatedNav.classList.remove('is-animatable');
+    }
+
+    animatedHero.addEventListener('transitionend', OnTransitionEndHero, false);
+    animatedNav.addEventListener('transitionend', OnTransitionEndNav, false);
 
     // Toggles the menu button
     (function() {
@@ -27,7 +42,6 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
         }
 
         menuToggle.add(siteNavigation).attr('aria-expanded', 'false');
-
         menuToggle.on('click', function() {
         // $(this).add(siteHeaderMenu).toggleClass('toggled-on');
         // $(this).toggleClass('toggled-on');
@@ -35,6 +49,11 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
 
         // Add blur effect after one second from nav triggered open
         $('.block-hero-enable-transition').toggleClass('add-blur');
+
+        // The 60 FPS Smooth as Butter Solution
+        // Source: https://medium.com/outsystems-experts/how-to-achieve-60-fps-animations-with-css3-db7b98610108
+        $('.nav-primary').addClass('is-animatable');
+        $('.block-hero-enable-transition').addClass('is-animatable');
 
         // jscs:disable
         $(this).add( siteNavigation )
@@ -87,9 +106,10 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
                 e.stopPropagation();
 
                 if ($(this).hasClass('dropdown-toggle')){
-                $(this).prev('a').focus();
-              }
-              else {
+                  $(this).prev('a').focus();
+                }
+
+                else {
 
                 if ($(this).parent().prev().children('button.dropdown-toggle').length) {
                   $(this).parent().prev().children('button.dropdown-toggle').focus();

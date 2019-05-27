@@ -49,7 +49,7 @@ $nav-open-from-top: false;
 
 // Move body "out of the way" when nav activated
 .block-hero {
-  transition: all .75s 50ms cubic-bezier(.19, 1, .22, 1);
+  // transition: all .75s 50ms cubic-bezier(.19, 1, .22, 1);
   will-change: transform;
 }
 
@@ -93,6 +93,13 @@ body:after {
   }
 }
 
+// 60fps performance trick
+// Source: https://medium.com/outsystems-experts/how-to-achieve-60-fps-animations-with-css3-db7b98610108
+.nav-primary.is-animatable,
+.block.block-hero.block-hero-enable-transition.is-animatable {
+  transition: all .75s 50ms cubic-bezier(.19, 1, .22, 1);
+}
+
 .nav-primary {
   height: 100vh;
   width: 50vw;
@@ -102,7 +109,6 @@ body:after {
   right: 0;
   top: 0;
   transform: translateX(50vw);
-  transition: all .75s 50ms cubic-bezier(.19, 1, .22, 1);
   will-change: transform;
   background: $nav-background-color;
   margin: 0;
