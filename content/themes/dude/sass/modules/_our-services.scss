@@ -76,7 +76,6 @@
   }
 
   .image {
-    @include background-cover();
     height: 40rem;
     width: 100%;
     margin-right: -10rem;
@@ -86,6 +85,7 @@
     bottom: -10rem;
     right: 0;
     z-index: 3;
+    overflow: hidden;
 
     @media (min-width: 1100px) {
       position: absolute;
