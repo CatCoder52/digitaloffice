@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-25 17:01:29
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-27 10:46:54
+ * @Last Modified time: 2019-05-30 16:31:57
  *
  * @package dude2019
  */
@@ -28,12 +28,12 @@ foreach ( $persons as $key => $person_id ) {
   <div class="container">
     <h2 class="block-title">A - Ö</h2>
 
-    <div class="cols columns">
+    <div class="cols columns is-mobile is-tablet is-multiline">
       <?php $x = 0; foreach ( $persons as $person ) : ?>
         <div class="col<?php if ( 0 === $x ) { echo ' col-go-to'; } ?> column">
           <?php if ( 0 === $x ) : ?>
-            <p class="name-pre" aria-describedby="your-goto">Your go-to dude</p>
-            <h3 id="your-goto"><?php echo esc_html( $person['name'] ) ?></h3>
+            <p class="name-pre" aria-describedby="your-go-to">Your go-to dude</p>
+            <h3 id="your-go-to"><?php echo esc_html( $person['name'] ) ?></h3>
           <?php else : ?>
             <h3><?php echo esc_html( $person['name'] ) ?></h3>
           <?php endif; ?>

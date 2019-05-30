@@ -20,7 +20,7 @@
 @import '../layout/hero';
 @import '../layout/hero-service';
 @import '../layout/lazyload';
-@import '../layout/columns-equal';
+@import '../layout/columns';
 
 // Global features
 @import '../features/top';
@@ -43,6 +43,7 @@
 @import '../modules/accordion';
 @import '../modules/blog-articles-upsell';
 @import '../modules/contact-list';
+@import '../modules/text-numbers';
 
 // Navigation
 @import '../navigation/nav-core';
