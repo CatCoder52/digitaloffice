@@ -66,6 +66,7 @@
 
     .block-head {
       padding: 0;
+      width: 100%;
     }
 
     h2,
@@ -83,6 +84,14 @@
         @extend .block-title;
         @extend %h2;
         font-weight: 300;
+
+        @media (max-width: $container-ipad) {
+          max-width: 80%;
+        }
+      }
+
+      @media (max-width: $container-ipad) {
+        max-width: 80%;
       }
     }
 
