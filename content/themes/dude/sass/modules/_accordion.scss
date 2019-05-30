@@ -165,6 +165,7 @@
   color: $color-body;
   z-index: 2;
   overflow: visible;
+  background: transparent;
 
   &:focus {
     z-index: 4;
