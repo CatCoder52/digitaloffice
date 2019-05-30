@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-25 17:40:42
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-05-25 19:51:11
+ * @Last Modified time: 2019-05-30 12:57:26
  *
  * @package dude2019
  */
@@ -85,3 +85,12 @@ function dude_merch_stock( $value, $post_id, $field ) {
 
   return $value;
 } // end function dude_merch_stock
+
+add_filter( 'use_block_editor_for_post_type', 'dude_gutenberg_can_edit_post_type', 10, 2 );
+function dude_gutenberg_can_edit_post_type( $can_edit, $post_type ) {
+  if ( 'page' === $post_type ) {
+    return false;
+  }
+
+  return $can_edit;
+}
