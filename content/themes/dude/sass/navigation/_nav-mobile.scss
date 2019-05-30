@@ -139,6 +139,7 @@ body:after {
   padding-right: $padding-default-cols;
   padding-top: $padding-default-rows;
   padding-bottom: $padding-default-rows;
+  overflow: auto;
 
   @media (max-width: 1400px) {
     transform: translateX(60vw);
@@ -154,9 +155,6 @@ body:after {
     width: 100vw;
     transform: translateX(100vw);
   }
-
-  // Prevent body scrolling when navigation is open
-  overflow: hidden;
 
   @media (max-width: $container-ipad) {
     padding-left: $padding-default-cols-ipad;

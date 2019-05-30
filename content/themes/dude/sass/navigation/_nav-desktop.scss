@@ -13,6 +13,11 @@ $icon-arrow-left: '../svg/chevron-left-dark.svg';
 $hover-intent: .3s;
 $absolute-navigation: true;
 
+// Prevent scrolling when nav open
+body.js-nav-active {
+  overflow: hidden;
+}
+
 .has-dark-hero {
   .hamburger-inner,
   .hamburger-inner::after,
