@@ -84,14 +84,11 @@
         @extend .block-title;
         @extend %h2;
         font-weight: 300;
-
-        @media (max-width: $container-ipad) {
-          max-width: 80%;
-        }
+        max-width: 70%;
       }
 
       @media (max-width: $container-ipad) {
-        max-width: 80%;
+        max-width: 70%;
       }
     }
 
@@ -150,6 +147,7 @@
 }
 
 .block-accordion button.accordion {
+  max-width: 85rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
