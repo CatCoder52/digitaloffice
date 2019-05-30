@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-05-30 13:37:12
+ * @Last Modified time: 2019-05-30 14:04:22
  *
  * @package dude2019
  */
@@ -26,6 +26,8 @@ $url = get_post_meta( get_the_id(), 'url', true );
     </div>
 
     <div class="content">
+      <p><a href="<?php echo get_post_type_archive_link( 'reference' ) ?>">Työt</a> <?php the_title() ?></p>
+
       <?php if ( ! empty( $logofile ) && file_exists( get_theme_file_path( "svg/logos/{$logofile}.svg" ) ) ) {
         include get_theme_file_path( "svg/logos/{$logofile}.svg" );
       } ?>
