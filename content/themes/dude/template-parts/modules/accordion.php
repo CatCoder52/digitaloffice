@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 17:54:33
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-30 17:02:55
+ * @Last Modified time: 2019-05-30 17:18:57
  *
  * @package dude2019
  */
@@ -56,9 +56,9 @@ if ( empty( $accordion ) ) {
       <div class="col col-right">
 
         <?php foreach ( $accordion as $item ) : ?>
-          <div class="accordion<?php if ( $first_open && $i === $accordion_count ) { echo ' open-accordion'; } ?>" data-href="<?php echo esc_attr( sanitize_title( $item['title'] ) ) ?>">
-            <h2><?php echo esc_html( $item['title'] ) ?></h2>
-          </div>
+          <button class="accordion<?php if ( $first_open && $i === $accordion_count ) { echo ' open-accordion'; } ?>" data-href="<?php echo esc_attr( sanitize_title( $item['title'] ) ) ?>">
+            <span><?php echo esc_html( $item['title'] ) ?></span>
+          </button>
 
           <div class="accordion-content wrapper" <?php if ( $first_open && $i === $accordion_count ) { echo 'style="display: grid;"'; } ?>>
             <?php echo wpautop( $item['content'] ) ?>
