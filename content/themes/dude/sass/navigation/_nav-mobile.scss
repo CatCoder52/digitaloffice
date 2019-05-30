@@ -244,6 +244,18 @@ body:after {
 
   .nav-items {
     @include grid(2, $gutter_x: 8rem, $gutter_y: 10rem);
+
+    @media (max-width: 600px) {
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+
+      .content {
+        width: 100%;
+        margin-bottom: 3rem;
+      }
+    }
   }
 
   .menu-items {
@@ -254,6 +266,10 @@ body:after {
     width: 100%;
     float: none;
     outline: none; // We have color here, so it's okay to remove outline
+
+    @media (max-width: 600px) {
+      width: 100%;
+    }
 
     a {
       @include responsive-font(20px, 32px);
