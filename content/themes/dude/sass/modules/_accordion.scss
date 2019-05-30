@@ -54,6 +54,14 @@
 
   .col-right {
     overflow: visible;
+    background: transparent;
+
+    p,
+    .accordion-content,
+    button.accordion,
+    button.accordion span {
+      background: transparent;
+    }
   }
 
   .col-left {
@@ -64,9 +72,24 @@
     position: relative;
     padding-right: 5rem;
 
+    svg {
+      width: 40rem;
+      height: 64.973rem;
+      position: absolute;
+      left: -20rem;
+      z-index: 0;
+    }
+
     .block-head {
       padding: 0;
       width: 100%;
+      position: relative;
+      z-index: 1;
+      background-color: transparent;
+
+      .block-title {
+        background: transparent;
+      }
     }
 
     h2,

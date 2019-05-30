@@ -43,6 +43,9 @@ if ( empty( $accordion ) ) {
 
     <div class="cols">
       <div class="col col-left">
+        <?php if ( is_page( 4449 ) ) : 
+          include get_theme_file_path( "svg/neckbeard-hairline.svg" );
+        endif; ?>
 
         <header class="block-head">
           <h2<?php if ( is_page( 4449 ) ) : ?> class="block-title"<?php endif; ?>><?php echo esc_html( $title ) ?></h2>
