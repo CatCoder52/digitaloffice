@@ -29,6 +29,18 @@
   .cols {
     @include grid(2, $gutter_x: 0, $gutter_y: 0);
     grid-template-columns: 7fr 3fr;
+
+    @media (max-width: $container-ipad) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (max-width: $container-ipad) {
+    .col-image {
+      height: 40rem;
+      width: 100%;
+    }
   }
 
   .image {
@@ -43,8 +55,13 @@
     padding: $padding-general-content-box;
     margin-left: -20rem;
 
+    @media (max-width: $container-ipad) {
+      padding: 4rem;
+      margin-left: 0;
+    }
+
     @media (max-width: $container-mobile) {
-      padding: $padding-general-content-box-ipad;
+      padding: $padding-general-content-box-mobile;
     }
   }
 
