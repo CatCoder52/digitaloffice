@@ -18,8 +18,8 @@ if ( empty( $title ) || empty( $link ) ) {
 <section class="block block-cta-text">
   <div class="container">
 
-    <h2><?php echo esc_html( $title ) ?></h2>
-    <p><a href="<?php echo esc_url( $link['url'] ) ?>"><?php echo esc_html( $link['title'] ) ?></a></p>
+    <h2 class="block-title"><?php echo esc_html( $title ) ?></h2>
+    <p><a class="cta-link" href="<?php echo esc_url( $link['url'] ) ?>"><?php echo esc_html( $link['title'] ) ?></a></p>
 
   </div>
 </section>

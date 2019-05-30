@@ -1,0 +1,17 @@
+.block.block-cta-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 60rem;
+
+  .container {
+    overflow: visible;
+  }
+
+  h2 {
+    margin-top: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+}
