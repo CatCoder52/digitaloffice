@@ -115,7 +115,7 @@ var stylefmtfile = function( file ) {
 };
 
 gulp.task('scss-lint', function() {
-  gulp.src([sassSrc, '!' + themeDir + '/sass/navigation/_burger.scss', '!' + themeDir + '/sass/layout/_columns-equal.sass', '!' + themeDir + '/sass/base/_normalize.scss'])
+  gulp.src([sassSrc, '!' + themeDir + '/sass/navigation/_burger.scss', '!' + themeDir + '/sass/layout/_columns.scss', '!' + themeDir + '/sass/base/_normalize.scss'])
 
     // Cache this action to prevent watch loop
     .pipe(cache('scsslintrunning'))

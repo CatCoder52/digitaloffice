@@ -1,4 +1,53 @@
+$column-gap: 4rem;
+
 .block.block-contact-list {
-  .cols {
+  .columns {
+    margin-left: -$column-gap;
+    margin-right: -$column-gap;
+
+    h3 {
+      // A bit smaller than %h3
+      @include responsive-font(22px, 28px);
+      margin-bottom: 1rem;
+      white-space: nowrap;
+    }
+
+    p {
+      font-weight: 300;
+
+      &.name-pre {
+        @extend .text-smaller;
+        margin-bottom: 0;
+      }
+
+      &.job-title {
+        margin-top: 0;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-bottom: calc(1.5rem - #{$column-gap});
+    }
+
+    .column {
+      padding-left: $column-gap;
+      padding-right: $column-gap;
+      padding-top: $column-gap + 2.7rem;
+      padding-bottom: $column-gap;
+
+      > * {
+        padding-left: $column-gap;
+        padding-right: $column-gap;
+      }
+    }
+
+    .column.col-go-to {
+      background: $color-superlightgrey;
+      padding-top: $column-gap;
+    }
+  }
+
+  .block-title {
+    margin-bottom: 6rem;
   }
 }
