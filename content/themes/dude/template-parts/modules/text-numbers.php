@@ -2,8 +2,8 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 18:43:31
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-05-18 18:49:00
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2019-05-30 16:01:43
  *
  * @package dude2019
  */
@@ -28,19 +28,21 @@ if ( empty( $numbers ) ) {
 <section class="block block-text-numbers">
   <div class="container">
 
-    <div class="col">
-      <?php echo wpautop( $content ) ?>
-    </div>
+    <h2 class="block-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
 
-    <div class="col col-numbers">
+    <div class="columns is-multiline is-mobile">
+      <div class="col column">
+        <?php echo wpautop( $content ) ?>
+      </div>
 
-      <?php foreach ( $numbers as $number ) : ?>
-        <div class="number">
-          <h2><?php echo esc_html( $number['number'] ) ?></h2>
-          <p><?php echo esc_html( $number['label'] ) ?></p>
-        </div>
-      <?php endforeach; ?>
-
+      <div class="col column col-numbers columns is-multiline is-mobile">
+        <?php foreach ( $numbers as $number ) : ?>
+          <div class="col col-number column is-half">
+            <h2><?php echo esc_html( $number['number'] ) ?></h2>
+            <p><?php echo esc_html( $number['label'] ) ?></p>
+          </div>
+        <?php endforeach; ?>
+      </div>
     </div>
 
   </div>
