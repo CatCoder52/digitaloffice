@@ -8,6 +8,18 @@
   align-items: center;
   z-index: 1;
 
+  h1 {
+    margin-top: 0;
+  }
+
+  .hero-description {
+    margin-bottom: 5rem;
+
+    p {
+      font-weight: 300;
+    }
+  }
+
   .shade {
     background: linear-gradient(to bottom, #28392a 0%, transparent 50%);
     opacity: .5;
@@ -272,17 +284,27 @@
         opacity: 0;
       }
 
-      li:nth-child(1) {
+      .animate {
+        animation-name: fade-in-down;
+        animation-timing-function: ease-in both;
+        animation-fill-mode: forwards;
+        opacity: 0;
+      }
+
+      li:nth-child(1),
+      .animate-1 {
         animation-duration: 1s;
         animation-delay: 1s;
       }
 
-      li:nth-child(2) {
+      li:nth-child(2),
+      .animate-2 {
         animation-duration: 1s;
         animation-delay: 1.5s;
       }
 
-      li:nth-child(3) {
+      li:nth-child(3),
+      .animate-3 {
         animation-duration: 1s;
         animation-delay: 2s;
       }

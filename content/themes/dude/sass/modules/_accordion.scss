@@ -1,9 +1,34 @@
 .block.block-accordion {
+  button {
+    border: 0;
+    padding: 0;
+  }
+
+  &.block-accordion-company {
+    background-color: $color-dude-darkgrey;
+
+    button.accordion,
+    *,
+    *:focus,
+    .accordion,
+    .accordion-content,
+    .accordion.open-accordion:hover,
+    .accordion.open-accordion:focus {
+      color: $color-dude-white;
+      background-color: $color-dude-darkgrey;
+      border-color: rgba($color-dude-whitegreyish, .3);
+
+      span {
+        color: $color-dude-white;
+      }
+    }
+  }
+
   .container {
     overflow: visible;
   }
 
-  h2,
+  span,
   a {
     transition: all $transition-duration;
   }
@@ -27,12 +52,8 @@
     }
   }
 
-  .accordion {
-    width: 80%;
-
-    @media (max-width: 700px) {
-      max-width: 100%;
-    }
+  .col-right {
+    overflow: visible;
   }
 
   .col-left {
@@ -45,6 +66,7 @@
 
     .block-head {
       padding: 0;
+      width: 100%;
     }
 
     h2,
@@ -57,6 +79,20 @@
       font-weight: 500;
       margin-top: 0;
       margin-bottom: 2rem;
+
+      &.block-title {
+        @extend .block-title;
+        @extend %h2;
+        font-weight: 300;
+
+        @media (max-width: $container-ipad) {
+          max-width: 80%;
+        }
+      }
+
+      @media (max-width: $container-ipad) {
+        max-width: 80%;
+      }
     }
 
     p {
@@ -88,6 +124,8 @@
   display: none;
   padding-top: 0;
   padding-bottom: $padding-accordion-content;
+  z-index: 0;
+  position: relative;
 
   @media (max-width: $container-mobile) {
     padding-bottom: $padding-accordion-content-mobile;
@@ -111,17 +149,36 @@
   }
 }
 
-.accordion {
+.block-accordion button.accordion {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid $color-superlightgrey;
   cursor: pointer;
   position: relative;
   margin: 0;
+  border-top: 1px solid $color-superlightgrey;
   padding-top: $padding-accordion-content;
   padding-bottom: $padding-accordion-content;
+  width: 100%;
+  border-left: 0;
+  border-right: 0;
+  font-weight: 300;
+  color: $color-body;
+  z-index: 2;
+  overflow: visible;
+
+  &:focus {
+    z-index: 4;
+  }
+
+  &:first-of-type {
+    border-top: 0;
+  }
+
+  @media (max-width: 700px) {
+    max-width: 100%;
+  }
 
   @media (max-width: $container-mobile) {
     padding: $padding-accordion-content-mobile;
@@ -140,16 +197,14 @@
     }
   }
 
-  h2 {
+  span {
     @extend %h3;
+    width: 80%;
     color: $color-lightgrey;
     margin-top: 0;
     margin-right: auto;
     margin-bottom: 0;
-  }
-
-  &:first-child {
-    border-top: 0;
+    text-align: left;
   }
 
   &:hover {
@@ -169,7 +224,7 @@
       display: none;
     }
 
-    h2 {
+    span {
       color: $color-dude-deep-black;
     }
 
@@ -177,7 +232,7 @@
       background-color: transparent;
       cursor: default;
 
-      h2 {
+      span {
         color: $color-dude-deep-black;
       }
     }
@@ -193,9 +248,8 @@
     pointer-events: none;
     cursor: default;
 
-    h2 {
+    span {
       color: $color-lightgrey;
     }
   }
 }
-

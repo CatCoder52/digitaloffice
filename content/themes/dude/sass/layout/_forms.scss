@@ -7,7 +7,7 @@
 
 // Buttons
 .content-area {
-  button,
+  button:not(.accordion),
   .button,
   input[type="reset"],
   input[type="submit"],

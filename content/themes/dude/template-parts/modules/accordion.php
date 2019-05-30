@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 17:54:33
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-25 20:29:10
+ * @Last Modified time: 2019-05-30 17:18:57
  *
  * @package dude2019
  */
@@ -38,14 +38,14 @@ if ( empty( $accordion ) ) {
   return;
 } ?>
 
-<section class="block block-accordion">
+<section class="block block-accordion<?php if ( is_page( 4449 ) ) : ?> block-accordion-company<?php endif; ?>">
   <div class="container">
 
     <div class="cols">
       <div class="col col-left">
 
         <header class="block-head">
-          <h2><?php echo esc_html( $title ) ?></h2>
+          <h2<?php if ( is_page( 4449 ) ) : ?> class="block-title"<?php endif; ?>><?php echo esc_html( $title ) ?></h2>
 
           <?php if ( ! empty( $subtitle ) ) : ?>
             <p><?php echo esc_html( $subtitle ) ?></p>
@@ -56,9 +56,9 @@ if ( empty( $accordion ) ) {
       <div class="col col-right">
 
         <?php foreach ( $accordion as $item ) : ?>
-          <div class="accordion<?php if ( $first_open && $i === $accordion_count ) { echo ' open-accordion'; } ?>" data-href="<?php echo esc_attr( sanitize_title( $item['title'] ) ) ?>">
-            <h2><?php echo esc_html( $item['title'] ) ?></h2>
-          </div>
+          <button class="accordion<?php if ( $first_open && $i === $accordion_count ) { echo ' open-accordion'; } ?>" data-href="<?php echo esc_attr( sanitize_title( $item['title'] ) ) ?>">
+            <span><?php echo esc_html( $item['title'] ) ?></span>
+          </button>
 
           <div class="accordion-content wrapper" <?php if ( $first_open && $i === $accordion_count ) { echo 'style="display: grid;"'; } ?>>
             <?php echo wpautop( $item['content'] ) ?>
