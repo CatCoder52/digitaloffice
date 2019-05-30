@@ -74,6 +74,7 @@
       &.block-title {
         @extend .block-title;
         @extend %h2;
+        font-weight: 300;
       }
     }
 
