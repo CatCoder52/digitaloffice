@@ -1,4 +1,17 @@
 .block.block-accordion {
+  &.block-accordion-company {
+    background-color: $color-dude-darkgrey;
+
+    *,
+    *:focus,
+    .accordion,
+    .accordion-content {
+      color: $color-dude-white;
+      background-color: $color-dude-darkgrey;
+      border-color: rgba($color-dude-whitegreyish, .3);
+    }
+  }
+
   .container {
     overflow: visible;
   }
@@ -57,6 +70,11 @@
       font-weight: 500;
       margin-top: 0;
       margin-bottom: 2rem;
+
+      &.block-title {
+        @extend .block-title;
+        @extend %h2;
+      }
     }
 
     p {
@@ -198,4 +216,3 @@
     }
   }
 }
-
