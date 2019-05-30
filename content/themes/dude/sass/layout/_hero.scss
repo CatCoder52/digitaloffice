@@ -6,6 +6,7 @@
   display: flex;
   padding: 0;
   align-items: center;
+  z-index: 1;
 
   .shade {
     background: linear-gradient(to bottom, #28392a 0%, transparent 50%);
