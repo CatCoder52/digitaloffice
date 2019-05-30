@@ -2,12 +2,13 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 18:43:31
- * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-30 16:01:43
+ * @Last Modified by:   Timi Wahalahti
+ * @Last Modified time: 2019-05-30 16:36:13
  *
  * @package dude2019
  */
 
+$title = get_sub_field( 'title' );
 $content = get_sub_field( 'content' );
 $numbers = get_sub_field( 'numbers' );
 
@@ -28,7 +29,9 @@ if ( empty( $numbers ) ) {
 <section class="block block-text-numbers">
   <div class="container">
 
-    <h2 class="block-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+    <?php if ( ! empty( $title ) ) : ?>
+      <h2 class="block-title"><?php echo esc_html( $title ) ?></h2>
+    <?php endif; ?>
 
     <div class="columns is-multiline is-mobile">
       <div class="col column">

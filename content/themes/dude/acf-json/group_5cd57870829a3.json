@@ -672,6 +672,25 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_5cefdc068907f",
+                            "label": "Otsikko",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
                             "key": "field_5ce027b7c6d7f",
                             "label": "Tekstisisältö",
                             "name": "content",
@@ -944,5 +963,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1559041626
+    "modified": 1559042715
 }
