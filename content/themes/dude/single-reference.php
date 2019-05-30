@@ -95,6 +95,8 @@ get_header(); ?>
       <section class="block block-references">
         <div class="container">
 
+          <h4>Tsekkaa myös nämä</h4>
+
           <div class="cols cols-references">
             <?php foreach ( $small_references as $reference ) : ?>
               <div class="col">
