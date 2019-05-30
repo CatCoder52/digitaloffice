@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 18:43:31
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-30 16:01:43
+ * @Last Modified time: 2019-05-30 16:53:00
  *
  * @package dude2019
  */
@@ -28,14 +28,16 @@ if ( empty( $numbers ) ) {
 <section class="block block-text-numbers">
   <div class="container">
 
-    <h2 class="block-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+    <header class="block-head">
+      <h2 class="block-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+    </header>
 
-    <div class="columns is-multiline is-mobile">
-      <div class="col column">
+    <div class="columns is-variable is-mobile is-tablet is-multiline">
+      <div class="col col-main column is-half">
         <?php echo wpautop( $content ) ?>
       </div>
 
-      <div class="col column col-numbers columns is-multiline is-mobile">
+      <div class="col col-main column is-variable is-half col-numbers columns is-multiline">
         <?php foreach ( $numbers as $number ) : ?>
           <div class="col col-number column is-half">
             <h2><?php echo esc_html( $number['number'] ) ?></h2>
