@@ -51,6 +51,8 @@
         <?php endif; ?>
       </div><!-- .site-branding -->
 
+      <p class="call-me-maybe"><a href="tel:0408351033"><?php include get_theme_file_path( '/svg/phone.svg' ); ?> <span>Kilauta</span></a></p>
+
       <div class="main-navigation-wrapper opacity-on-load" id="main-navigation-wrapper">
 
         <button id="nav-toggle" class="nav-toggle nav-toggle-mobile hamburger" type="button" aria-label="<?php esc_attr_e( 'Menu', 'dude' ); ?>">
