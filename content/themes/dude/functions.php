@@ -99,3 +99,8 @@ function dude_scripts() {
   ) );
 }
 add_action( 'wp_enqueue_scripts', 'dude_scripts' );
+
+add_action( 'after_setup_theme', 'dude_add_image_sizes' );
+function dude_add_image_sizes() {
+  add_image_size( 'preload', 20 );
+}
