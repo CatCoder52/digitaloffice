@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:50:23
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-30 15:10:13
+ * @Last Modified time: 2019-05-30 15:19:51
  *
  * @package dude2019
  */

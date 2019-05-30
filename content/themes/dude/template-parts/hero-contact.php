@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-27 00:33:25
+ * @Last Modified time: 2019-05-30 15:22:48
  *
  * @package dude2019
  */
@@ -13,7 +13,7 @@
 <section class="block block-hero block-hero-side-columns block-hero-contact block-hero-enable-transition">
   <div class="container opacity-on-load-instant">
 
-    <div class="content content-contant">
+    <div class="content content-contact">
 
       <div class="side-content-box contact-information">
         <h1>Yhteystiedot</h1>
