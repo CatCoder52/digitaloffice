@@ -15,23 +15,25 @@ $hero_content = get_post_meta( get_the_id(), 'hero_content', true ); ?>
 
     <h1 class="animate animate-1"><?php the_title() ?></h1>
 
-    <div class="content animate animate-2">
-      <?php if ( ! empty( $hero_content ) ) {
-        echo wpautop( $hero_content );
-      } ?>
-    </div>
+    <div class="service-hero-wrap">
+      <div class="content animate animate-2">
+        <?php if ( ! empty( $hero_content ) ) {
+          echo wpautop( $hero_content );
+        } ?>
+      </div>
 
-    <?php if ( isset( $logos ) ) : ?>
-      <section class="customer-logos animate animate-3">
-        <ul class="customer-logos-list">
-          <?php foreach ( $logos as $logo ) : ?>
-            <li>
-              <?php include get_theme_file_path( "svg/logos/{$logo}.svg" ) ?>
-            </li>
-          <?php endforeach; ?>
-        </ul>
-      </section>
-    <?php endif; ?>
+      <?php if ( isset( $logos ) ) : ?>
+        <section class="customer-logos animate animate-3">
+          <ul class="customer-logos-list">
+            <?php foreach ( $logos as $logo ) : ?>
+              <li>
+                <?php include get_theme_file_path( "svg/logos/{$logo}.svg" ) ?>
+              </li>
+            <?php endforeach; ?>
+          </ul>
+        </section>
+      <?php endif; ?>
+    </div>
 
   </div>
 </section>
