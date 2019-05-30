@@ -2,8 +2,8 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:50:23
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-05-25 16:01:25
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2019-05-30 15:10:13
  *
  * @package dude2019
  */
