@@ -1,27 +1,76 @@
 .block.block-timeline {
+  @media (max-width: 1200px) {
+    padding-left: $padding-default-cols-ipad;
+    padding-right: $padding-default-cols-ipad;
+
+    .columns {
+      flex-wrap: wrap;
+    }
+
+    .columns .column.col {
+      width: 100%;
+    }
+
+    .col-timeline {
+      margin-bottom: 5rem;
+    }
+  }
+
+  @media (max-width: 680px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   .col-timeline .row {
     display: flex;
-    margin-bottom: 7.5rem;
+    padding: 4rem 7.5rem;
+
+    @media (max-width: $container-ipad) {
+      padding-top: $padding-default-rows-ipad;
+      padding-bottom: $padding-default-rows-ipad;
+      padding-left: $padding-default-cols-ipad;
+      padding-right: $padding-default-cols-ipad;
+    }
+
+    @media (max-width: $container-mobile) {
+      padding-top: $padding-default-rows-mobile;
+      padding-bottom: $padding-default-rows-mobile;
+      padding-left: $padding-default-cols-mobile;
+      padding-right: $padding-default-cols-mobile;
+    }
 
     .row,
     h2,
-    p {
+    p,
+    .action {
       transition: all $transition-duration;
     }
 
-    &:hover h2 {
+    &:hover h2,
+    &.active h2 {
       color: $color-dude-black;
     }
 
-    &:hover p {
+    &:hover p,
+    &:hover .action,
+    &.active .action {
       opacity: 1;
     }
 
-    p {
+    p,
+    .action,
+    .action:focus {
+      @extend %default;
+
       @include responsive-font(17px, 19px);
+      cursor: pointer;
       opacity: .75;
       width: 80%;
       padding-left: 4rem;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+      text-align: left;
 
       &:first-of-type {
         margin-top: 0;
@@ -58,9 +107,31 @@
     }
   }
 
+  .col-image .image {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 65rem;
+    max-height: 75rem;
+    margin-top: -7.5rem;
+    margin-left: -5rem;
+    display: block;
+    z-index: 0;
+
+    .background-image {
+      background-position: bottom;
+      max-height: 75rem;
+    }
+  }
+
   .label {
     @extend %h3;
     background: $color-dude-black;
     color: $color-dude-white;
+    padding: 6rem 4rem;
+    font-weight: 300;
+    max-width: 45rem;
+    position: relative;
+    z-index: 1;
   }
 }
