@@ -8,6 +8,7 @@
  */
 the_post();
 
+$quote_pre_title = get_post_meta( get_the_id(), 'quote_pre_title', true );
 $quote = get_post_meta( get_the_id(), 'quote', true );
 $quote_person = get_post_meta( get_the_id(), 'quote_person', true );
 $quote_person_title = get_post_meta( get_the_id(), 'quote_person_title', true );
@@ -70,7 +71,11 @@ get_header(); ?>
       <section class="block block-reference-quote">
         <div class="container">
 
-          <?php echo wpautop( $quote ); ?>
+          <?php if ( ! empty( $quote_pre_title ) ) : ?>
+            <h3><?php echo esc_html( $quote_pre_title ) ?></h3>
+          <?php endif;
+
+          echo wpautop( $quote ); ?>
 
           <p><?php echo esc_html( $quote_person ) ?><br /><?php echo esc_html( $quote_person_title ) ?></p>
 

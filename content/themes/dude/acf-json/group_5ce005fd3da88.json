@@ -19,11 +19,49 @@
             "placeholder": ""
         },
         {
+            "key": "field_5cefba950d7f6",
+            "label": "Otsikko esittelyssä",
+            "name": "singular_alt_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5ce010b39fc91",
             "label": "Logotiedoston nimi",
             "name": "logo_svg",
             "type": "text",
             "instructions": "Ilman etu- tai tiedostoliitettä. Kaikkien logojen oletetaan olevan svg-muotoisia.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5cefba850d7f5",
+            "label": "Otsikko ennen lainausta",
+            "name": "quote_pre_title",
+            "type": "text",
+            "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -136,5 +174,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1559030481
+    "modified": 1559034171
 }

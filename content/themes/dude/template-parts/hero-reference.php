@@ -3,15 +3,19 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-05-30 14:04:22
+ * @Last Modified time: 2019-05-30 14:17:54
  *
  * @package dude2019
  */
 
+$title = get_the_title();
+$title_alt = get_post_meta( get_the_id(), 'title_alt', true );
 $logofile = get_post_meta( get_the_id(), 'logo_svg', true );
 $url = get_post_meta( get_the_id(), 'url', true );
 
-?>
+if ( ! empty( $title_alt ) ) {
+  $title = $title_alt;
+} ?>
 
 <section class="block block-hero block-hero-reference">
   <div class="container">
@@ -32,7 +36,7 @@ $url = get_post_meta( get_the_id(), 'url', true );
         include get_theme_file_path( "svg/logos/{$logofile}.svg" );
       } ?>
 
-      <h1><?php the_title() ?></h1>
+      <h1><?php echo esc_html( $title ) ?></h1>
       <?php the_excerpt(); ?>
 
       <p class="arrow-link-wrapper"><a href="<?php echo esc_url( $url ) ?>" class="arrow-link">Vieraile sivustolla<span class="arrow"></span></a></p>
