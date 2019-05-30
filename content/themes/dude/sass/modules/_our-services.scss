@@ -104,11 +104,12 @@
       }
     }
 
-    @media (max-width: $container-mobile) {
+    @media (max-width: 600px) {
       margin-left: -2rem;
       width: calc(100% + 4rem);
-      position: static;
+      position: relative;
       margin-top: 8rem;
+      bottom: 0;
     }
   }
 

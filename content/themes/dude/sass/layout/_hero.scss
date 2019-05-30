@@ -252,11 +252,15 @@
         padding-bottom: $padding-default-rows-ipad;
       }
 
+      @media (max-width: 600px) {
+        height: auto;
+        padding-top: 20rem;
+        padding-bottom: 20rem;
+      }
+
       @media (max-width: $container-mobile) {
         padding-left: $padding-default-cols-mobile;
         padding-right: $padding-default-cols-mobile;
-        padding-top: $padding-default-rows-mobile;
-        padding-bottom: $padding-default-rows-mobile;
       }
     }
 

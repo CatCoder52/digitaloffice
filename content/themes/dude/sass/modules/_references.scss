@@ -12,6 +12,14 @@
     margin-bottom: $padding-general-content-box * 2;
     position: relative;
     z-index: 2;
+
+    @media (max-width: 900px) {
+      @include grid(2, $gutter_x: $padding-general-content-box-mobile, $gutter_y: 0);
+    }
+
+    @media (max-width: 640px) {
+      display: block;
+    }
   }
 
   .col.has-grey-bg {
@@ -30,6 +38,10 @@
     padding: $padding-general-content-box;
     position: relative;
     padding-left: 2rem;
+
+    @media (max-width: 900px) {
+      padding-right: $padding-general-content-box-mobile;
+    }
   }
 
   blockquote {
@@ -45,9 +57,22 @@
 
   .reference-image {
     width: 100%;
-    height: 47rem;
     position: relative;
     overflow: hidden;
+
+    @media (min-width: 1300px) {
+      height: 47rem;
+    }
+
+    @media (max-width: 1300px) {
+      &:not(.reference-image-main) .background-image:after,
+      &:not(.reference-image-main):after {
+        height: auto;
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+      }
+    }
 
     &.reference-image-main {
       height: 70rem;
@@ -62,8 +87,20 @@
     @include grid(2, $gutter_x: $padding-general-content-box, $gutter_y: $padding-general-content-box);
     margin-top: $padding-default-rows;
 
+    @media (max-width: $container-ipad) {
+      display: block;
+    }
+
     .col {
       padding: 0;
+
+      @media (max-width: $container-ipad) {
+        margin-bottom: 5rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
     }
   }
 }
