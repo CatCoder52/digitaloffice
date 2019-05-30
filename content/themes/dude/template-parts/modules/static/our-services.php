@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:49:22
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-20 18:52:18
+ * @Last Modified time: 2019-05-28 09:54:18
  *
  * @package dude2019
  */
@@ -37,7 +37,13 @@
       </div>
     </div>
 
-    <div class="image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/placeholder-2.png');"></div>
+    <div class="image">
+
+      <div class="background-image preview lazyload" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/placeholder-2-tiny.png');" data-src="<?php echo get_template_directory_uri(); ?>/images/placeholder-2.png"></div>
+      <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/placeholder-2.png');"<?php endif; ?>></div>
+      <noscript><div class="background-image full-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/placeholder-2.png');"></div></noscript>
+
+    </div>
 
   </div>
 </section>
