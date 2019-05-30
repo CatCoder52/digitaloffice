@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 18:54:41
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-30 17:32:34
+ * @Last Modified time: 2019-05-30 17:48:08
  *
  * @package dude2019
  */
@@ -13,7 +13,7 @@
   <div class="container">
 
     <div class="columns">
-      <div class="column col col-timeline">
+      <div class="column col col-timeline is-three-fifths">
 
         <div class="row" data-label="Kristian virittelee nyrkkiä hanuriin. Kuva vänäriltä." data-image="<?php echo get_theme_file_uri( 'images/timeline/risella.jpg' ) ?>">
           <h2>2013</h2>
@@ -43,8 +43,8 @@
       </div>
 
       <div class="column col col-image">
-        <div class="label"><p>Kristian virittelee nyrkkiä hanuriin. Kuva vänäriltä.</p></div>
-        <img src="<?php echo get_theme_file_uri( 'images/timeline/risella.png' ) ?>" />
+        <p class="label">Kristian virittelee nyrkkiä hanuriin. Kuva vänäriltä.</p>
+        <img src="<?php echo get_theme_file_uri( 'images/timeline/risella.png' ) ?>" alt="Kristian" />
       </div>
     </div>
 
