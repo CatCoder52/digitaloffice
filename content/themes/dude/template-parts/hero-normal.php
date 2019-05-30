@@ -2,8 +2,8 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-05-30 16:07:43
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2019-05-30 16:42:03
  *
  * @package dude2019
  */
@@ -34,14 +34,17 @@ if ( is_post_type_archive( 'reference' ) ) {
 
     <div class="content">
       <div class="side-content-box contact-information">
-        <h1><?php echo $title ?></h1>
+        <h1 class="animate animate-1"><?php echo $title ?></h1>
 
-        <?php if ( ! empty( $content ) ) {
-          echo wpautop( $content );
-        }
+        <div class="hero-description animate animate-2">
+          <?php if ( ! empty( $content ) ) {
+            echo wpautop( $content );
+          }
+          ?>
+        </div>
 
-        if ( 4449 === get_the_id() ) : ?>
-          <p class="cta-link"><a href="<?php echo get_post_type_archive_link( 'reference' ) ?>">Mitä helvettiä? Missä työnäytteet?</a></p>
+        <?php if ( 4449 === get_the_id() ) : ?>
+          <p class="cta-link animate animate-3"><a href="<?php echo get_post_type_archive_link( 'reference' ) ?>">Mitä helvettiä? Missä työnäytteet?</a></p>
         <?php endif; ?>
       </div>
     </div>
