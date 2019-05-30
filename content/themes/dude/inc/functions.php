@@ -5,11 +5,6 @@
  *  @package dude
  */
 
-/**
- * Custom image sizes
- */
-add_image_size( 'tiny-preload-thumbnail', 20, 20 );
-
 if ( ! function_exists( 'dude_entry_footer' ) ) {
 	/**
 	 *  Show categories, tags, comment and edit links after post.
