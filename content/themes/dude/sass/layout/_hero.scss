@@ -32,15 +32,8 @@
 
   @media (max-width: 600px) {
     height: auto;
-    display: block;
-    clear: both;
-    overflow: hidden;
-  }
-
-  .content {
-    @media (max-width: 600px) {
-      height: 100vh;
-    }
+    padding-top: 20rem;
+    padding-bottom: 20rem;
   }
 
   // Hero for contact page
@@ -131,7 +124,7 @@
   // Animation stuff
   .animate {
     animation-name: fade-in-down;
-    animation-timing-function: ease-in both;
+    animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
     opacity: 0;
   }
@@ -169,7 +162,7 @@
     .cta-link {
       opacity: 0;
       animation-name: fade-in-down;
-      animation-timing-function: ease-in both;
+      animation-timing-function: ease-in-out;
       animation-fill-mode: forwards;
       animation-duration: 1s;
       animation-delay: 2.5s;
@@ -309,7 +302,7 @@
         margin-bottom: $margin-reasonable-space;
         line-height: 1.22;
         animation-name: fade-in-down;
-        animation-timing-function: ease-in both;
+        animation-timing-function: ease-in-out;
         animation-fill-mode: forwards;
         opacity: 0;
       }
