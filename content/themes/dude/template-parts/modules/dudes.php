@@ -25,27 +25,34 @@ if ( ! $query->have_posts() ) {
 } ?>
 
 <section class="block block-dudes">
+
+  <h2 class="screen-reader-text">Henkilöt</h2>
+
   <div class="container">
 
-    <?php while ( $query->have_posts() ) : $query->the_post();
-      $image = get_post_meta( get_the_id(), 'image_square', true );
-      $title = get_post_meta( get_the_id(), 'title', true );
+    <div class="cols">
+      <?php while ( $query->have_posts() ) : $query->the_post();
+        $image = get_post_meta( get_the_id(), 'image_square', true );
+        $title = get_post_meta( get_the_id(), 'title', true );
+  
+        if ( empty( $image ) ) {
+          continue;
+        } ?>
 
-      if ( empty( $image ) ) {
-        continue;
-      } ?>
+        <div class="col" style="background-image:url('<?php echo wp_get_attachment_url( $image ) ?>')">
+          <div class="content">
+            <h3><?php the_title() ?></h3>
+            <?php if ( ! empty( $title ) ) : ?>
+              <p class="person-title"><?php echo esc_html( $title ) ?></p>
+            <?php endif; ?>
 
-      <div class="col" style="background-image:url('<?php echo wp_get_attachment_url( $image ) ?>')">
-        <div class="content">
-          <h2><?php the_title() ?></h2>
-          <?php if ( ! empty( $title ) ) : ?>
-            <p><?php echo esc_html( $title ) ?></p>
-          <?php endif; ?>
+            <p class="arrow-link-wrapper"><span href="<?php the_permalink() ?>" class="arrow-link"><span class="screen-reader-text">Lue lisää tyypistä</span><span class="arrow"></span></span></p>
+          </div>
+          <a href="<?php the_permalink() ?>" class="global-link"></a>
         </div>
-        <a href="<?php the_permalink() ?>" class="global-link"></a>
-      </div>
 
-    <?php endwhile; wp_reset_postdata(); ?>
+      <?php endwhile; wp_reset_postdata(); ?>
+    </div>
 
   </div>
 </section>

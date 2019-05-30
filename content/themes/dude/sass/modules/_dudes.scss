@@ -1,0 +1,81 @@
+.block.block-dudes {
+  background: #f0f0f0;
+
+  .container {
+    overflow: visible;
+  }
+
+  .cols {
+    @include grid(3, $gutter_x: 6rem, $gutter_y: 8rem);
+
+    @media (max-width: 1000px) {
+      @include grid(2, $gutter_x: 5rem, $gutter_y: 5rem);
+    }
+
+    @media (max-width: 660px) {
+      display: block;
+    }
+  }
+
+  .col {
+    @include background-cover();
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+
+    @media (max-width: 660px) {
+      margin-bottom: 6rem;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      padding-bottom: 100%;
+    }
+  }
+
+  .content {
+    background: $color-dude-white;
+    width: 80%;
+    margin-left: -3rem;
+    margin-bottom: -3rem;
+    padding: 5rem;
+
+    @media (max-width: 1300px) {
+      margin-left: -2rem;
+      margin-bottom: -3rem;
+      padding: 3rem;
+    }
+
+    @media (max-width: 1200px) {
+      margin-bottom: -3.5rem;
+    }
+
+    h3 {
+      // A bit smaller than %h3, same than in _contact-list.scss
+      @include responsive-font(16px, 28px);
+      margin-bottom: 1rem;
+      margin-top: 0;
+      font-weight: 500;
+    }
+
+    p {
+      @include responsive-font(14px, 22px);
+      font-weight: 300;
+      margin: 0;
+
+      &.person-title {
+        margin-bottom: 2rem;
+      }
+    }
+
+    .arrow-link-wrapper {
+      margin: 0;
+    }
+
+    .arrow-link-wrapper .arrow {
+      left: 0;
+      margin: 0;
+    }
+  }
+}
