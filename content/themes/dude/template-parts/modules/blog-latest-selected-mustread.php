@@ -2,8 +2,8 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 15:26:12
- * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-18 17:57:40
+ * @Last Modified by:   Timi Wahalahti
+ * @Last Modified time: 2019-05-31 13:42:45
  *
  * @package dude2019
  */
@@ -37,7 +37,11 @@ if ( ! $query->have_posts() || empty( $mustread ) ) {
         <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
           <div class="post">
-            <div class="image" style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>');"></div>
+            <div class="image">
+              <div class="background-image preview lazyload" style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'tiny-preload-thumbnail' ) ?>');" data-src="<?php echo $image ?>"></div>
+              <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>');"<?php endif; ?>></div>
+              <noscript><div class="background-image full-image" style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>');"></div></noscript>
+            </div>
 
             <div class="content">
               <h3><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
@@ -53,7 +57,12 @@ if ( ! $query->have_posts() || empty( $mustread ) ) {
 
         <?php foreach ( $mustread as $post ) : ?>
           <div class="post">
-            <div class="image" style="background-image: url('<?php echo wp_get_attachment_url( get_post_thumbnail_id( $post ) ) ?>');"></div>
+            <div class="image">
+              <div class="background-image preview lazyload" style="background-image: url('<?php echo get_the_post_thumbnail_url( $post, 'tiny-preload-thumbnail' ) ?>');" data-src="<?php echo $image ?>"></div>
+              <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo get_the_post_thumbnail_url( $post, 'large' ) ?>');"<?php endif; ?>></div>
+              <noscript><div class="background-image full-image" style="background-image: url('<?php echo get_the_post_thumbnail_url( $post, 'large' ) ?>');"></div></noscript>
+            </div>
+
             <div class="content">
               <h3><a href="<?php echo get_the_permalink( $post ) ?>"><?php echo get_the_title( $post ) ?></a></h3>
               <?php echo wpautop( get_the_excerpt( $post ) ) ?>

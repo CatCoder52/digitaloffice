@@ -38,11 +38,12 @@ if ( ! $small_references ) {
       $query->the_post();
 
       $small_references[] = array(
-        'id'        => get_the_id(),
-        'title'     => get_the_title(),
-        'image_url' => get_the_post_thumbnail_url( get_the_id(), 'large' ),
-        'excerpt'   => get_the_excerpt(),
-        'permalink' => get_the_permalink(),
+        'id'                => get_the_id(),
+        'title'             => get_the_title(),
+        'image_url'         => get_the_post_thumbnail_url( get_the_id(), 'large' ),
+        'image_preload_url' => get_the_post_thumbnail_url( get_the_id(), 'tiny-preload-thumbnail' ),
+        'excerpt'           => get_the_excerpt(),
+        'permalink'         => get_the_permalink(),
       );
     }
   }
@@ -105,7 +106,11 @@ get_header(); ?>
           <div class="cols cols-references">
             <?php foreach ( $small_references as $reference ) : ?>
               <div class="col">
-                  <div class="image" style="background-image: url('<?php echo esc_url( $reference['image_url'] ) ?>');"></div>
+                <div class="reference-image">
+                  <div class="background-image preview lazyload" style="background-image: url('<?php echo $reference['image_preload_url']; ?>');" data-src="<?php echo $reference['image_url']; ?>"></div>
+                  <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo $reference['image_url']; ?>');"<?php endif; ?>></div>
+                  <noscript><div class="background-image full-image" style="background-image: url('<?php echo $reference['image_url']; ?>');"></div></noscript>
+                </div>
 
                 <div class="col-content">
                   <h3 class="block-title>"><?php echo esc_html( $reference['title'] ) ?></h3>

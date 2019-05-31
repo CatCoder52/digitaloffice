@@ -2,8 +2,8 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 16:50:02
- * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-25 14:51:15
+ * @Last Modified by:   Timi Wahalahti
+ * @Last Modified time: 2019-05-31 14:14:06
  *
  * @package dude2019
  */
@@ -23,7 +23,11 @@ if ( empty( $content ) || empty( $image ) ) {
         <?php echo wpautop( $content ) ?>
       </div>
 
-      <div class="col col-image" style="background-image: url('<?php echo wp_get_attachment_url( $image ) ?>')"></div>
+      <div class="col col-image">
+        <div class="background-image preview lazyload" style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'tiny-preload-thumbnail' ) ?>');" data-src="<?php echo $image ?>"></div>
+        <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>');"<?php endif; ?>></div>
+        <noscript><div class="background-image full-image" style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>');"></div></noscript>
+      </div>
     </div>
 
   </div>
