@@ -345,6 +345,24 @@ document.body.classList.add('js');
     var trigger = document.getElementsByClassName('js-trigger')[0];
     moveTo.registerTrigger(trigger);
 
+    // Chat
+    if ( typeof( Storage ) !== 'undefined' ) {
+      if( localStorage.getItem( 'chat_greeting_sent' ) == null ) {
+        TimeMe.initialize({
+          currentPageName: '<?php the_title() ?>',
+          idleTimeoutInSeconds: 10
+        });
+
+        TimeMe.callAfterTimeElapsedInSeconds(30, function() {
+          if( ! $crisp.is("session:ongoing") && $(window).width() > 560 ) {
+            // show chat
+
+            localStorage.setItem( 'chat_greeting_sent', new Date().toLocaleString() );
+          }
+        });
+      }
+    }
+
   });
 
 } )( jQuery );
