@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-31 09:53:49
+ * @Last Modified time: 2019-05-31 09:58:43
  *
  * @package dude2019
  */
@@ -29,7 +29,7 @@ if ( is_post_type_archive( 'reference' ) ) {
   $content = 'Olemme tehneet paljon kaikenlaista ja suurimmasta osasta hommia olemme ylpeitä. Muutamiin niistä voit tutustua täällä tarkemmin.';
 } ?>
 
-<section class="block block-hero<?php if ( $bg_image ) { ?> block-hero-side-columns<?php } ?> block-hero-enable-transition">
+<section class="block block-hero-jobs block-hero<?php if ( $bg_image ) { ?> block-hero-side-columns<?php } ?> block-hero-enable-transition">
   <div class="container opacity-on-load-instant">
 
     <div class="content">
@@ -43,9 +43,10 @@ if ( is_post_type_archive( 'reference' ) ) {
           ?>
         </div>
 
-        <?php if ( 4449 === get_the_id() ) : ?>
-          <p class="cta-link animate animate-3"><a href="<?php echo get_post_type_archive_link( 'reference' ) ?>">Mitä helvettiä? Missä työnäytteet?</a></p>
-        <?php endif; ?>
+        <ul class="jobs">
+          <li><a href="#">WordPress-kehittäjää back-end-painotuksella <span class="label">Haku päällä nyt!</span></a></li>
+          <li><a href="#">Visuaalista suunnittelijaa project lead-viballa <span class="label">Haku päällä nyt!</span></a></li>
+        </ul>
       </div>
     </div>
 
