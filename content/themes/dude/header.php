@@ -11,7 +11,7 @@
 
 ?>
 <!doctype html>
-<html <?php language_attributes(); ?>>><script>
+<html <?php language_attributes(); ?>><script>
 /**
  *
  * 👋 Moi!
