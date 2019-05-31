@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 18:54:41
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-30 18:41:05
+ * @Last Modified time: 2019-05-31 09:25:09
  *
  * @package dude2019
  */
@@ -17,7 +17,7 @@
 
         <div class="row">
           <h2>2013</h2>
-          <button class="action" data-label="Kristian virittelee nyrkkiä hanuriin. Kuva vänäriltä." data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2013.jpg' ) ?>">Roni ja Juha perustavat yrityksen keväällä 2013 vähän niinkun vahingossa. Pitkiä päiviä sekä opettelua yrittäjyyden ihmeelliseen maailmaan.</button>
+          <button class="action" data-label="Vanha toimisto irtisanomisajalla. Kuvan Macbook ja iPad eivät ole edes omia." data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2013.jpg' ) ?>">Roni ja Juha perustavat yrityksen keväällä 2013 vähän niinkun vahingossa. Pitkiä päiviä sekä opettelua yrittäjyyden ihmeelliseen maailmaan.</button>
         </div>
 
         <div class="row">
@@ -43,7 +43,7 @@
       </div>
 
       <div class="column col col-image">
-        <p class="label">Kristian virittelee nyrkkiä hanuriin. Kuva vänäriltä.</p>
+        <p class="label" id="dynamiclabel"><span>Kristian virittelee nyrkkiä hanuriin. Kuva vänäriltä.</span></p>
 
         <div class="image">
           <div class="background-image preview lazyload" style="background-image: url('<?php echo get_theme_file_uri( 'images/timeline/risella-tiny.png' ) ?>');" data-src="<?php echo get_theme_file_uri( 'images/timeline/risella.png' ) ?>"></div>

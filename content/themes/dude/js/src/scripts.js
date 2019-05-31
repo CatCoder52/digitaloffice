@@ -138,9 +138,12 @@ document.body.classList.add('js');
     $('.col-timeline .row').removeClass('active');
 
     var dynamicimage = $(this).attr('data-image');
-    console.log(dynamicimage);
+    var dynamiclabel = $(this).attr('data-label');
     $(this).parent().addClass('active');
     document.getElementById("dynamicimage").style.backgroundImage = "url(" + dynamicimage + ")";
+    $('#dynamiclabel span').animate({'opacity': 0}, 500, function () {
+      $(this).text(dynamiclabel);
+    }).animate({'opacity': 1}, 500);
   });
 
   // Linkable accordion sections
