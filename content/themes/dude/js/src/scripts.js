@@ -388,7 +388,11 @@ document.body.classList.add('js');
               var greeter = greeters[ Math.floor( Math.random() * greeters.length ) ];
 
               // show greeting
-              $('body').append('<div class="chat-greeting"><div class="col col-image" style="background-image:url(' + greeter.image + ')"></div><div class="col col-message"><p class="head">Viesti henkilöltä ' + greeter.name + '</p><p>' + greeting + '</p></div>')
+              $('body').append('<div class="chat-greeting open-chat"><div class="col col-image" style="background-image:url(' + greeter.image + ')"></div><div class="col col-message"><p class="head">Viesti henkilöltä ' + greeter.name + '</p><p>' + greeting + '</p></div>')
+
+              $crisp.push(['on', 'chat:opened', function() {
+                $crisp.push(['do', 'message:show', ['text', greeting]]);
+              }]);
 
               // save that we have shown the greeting multiple times
               localStorage.setItem( 'chat_greeting_sent', new Date().toLocaleString() );
@@ -399,8 +403,9 @@ document.body.classList.add('js');
     } // end storage check
 
     // Open chat if element is clicked
-    $('.open-chat').on('click', function(event) {
+    $('body').on( 'click', '.open-chat', function(event) {
       event.preventDefault();
+      $('.chat-greeting').remove();
       $crisp.push(['do', 'chat:show']);
       $crisp.push(['do', 'chat:open']);
     });
