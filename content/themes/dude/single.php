@@ -36,7 +36,7 @@ get_header(); ?>
             $user_id = get_the_author_meta( 'ID' );
             $person_id = $wpdb->get_results(
               $wpdb->prepare(
-                "SELECT post_id FROM {$wpdb->prefix}postmeta WHERE meta_key = %s AND meta_value = %d",
+                "SELECT post_id FROM {$wpdb->prefix}postmeta WHERE meta_key = %s AND meta_value = %s",
                 "email", get_the_author_meta( 'email' )
               )
             );
@@ -63,6 +63,10 @@ get_header(); ?>
 
       </div>
     </section>
+
+    <?php if ( is_singular( 'post' ) && function_exists( 'relevanssi_the_related_posts' ) ) {
+      relevanssi_the_related_posts();
+    } ?>
 
 	</main><!-- #main -->
 </div><!-- #primary -->
