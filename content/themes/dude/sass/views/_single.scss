@@ -20,12 +20,21 @@
 
 .block.block-single {
   padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
   z-index: 2;
   margin-top: -15rem;
   background: transparent;
 
   .container {
     padding-top: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .wp-block-image {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
   }
 
   .entry-content > *,
@@ -38,13 +47,17 @@
     background-color: $color-dude-white;
 
     &.alignwide {
-      max-width: 85vw;
+      max-width: 1300px;
       width: 100%;
+      padding-left: 0;
+      padding-right: 0;
     }
 
     &.alignfull {
       max-width: 100%;
       width: 100%;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 
