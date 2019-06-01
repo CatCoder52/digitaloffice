@@ -68,7 +68,7 @@ get_header(); ?>
                 <noscript><div class="background-image full-image" style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>');"></div></noscript>
               </div>
 
-              <h2><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
+              <h3><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
               <p class="date"><?php echo ucfirst( date_i18n( 'l' ) ) ?>na, <?php echo get_the_date( 'j.n.Y' ) ?></p>
             </div>
           <?php endwhile; ?>
