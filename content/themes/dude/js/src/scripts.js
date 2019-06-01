@@ -348,20 +348,24 @@ document.body.classList.add('js');
     // Chat
     if ( typeof( Storage ) !== 'undefined' ) {
       if( localStorage.getItem( 'chat_greeting_sent' ) == null ) {
-        TimeMe.initialize({
-          currentPageName: '<?php the_title() ?>',
-          idleTimeoutInSeconds: 10
-        });
+        // show message on every else page than blog or singular post, but allow on singular when explicity setted as so
+        if ( ! $('body').hasClass('blog') && ( ! $('body').hasClass('single-post') || $('body').hasClass('send-chat-greeting') ) ) {
+          // init timer
+          TimeMe.initialize({
+            currentPageName: document.title ,
+            idleTimeoutInSeconds: 10
+          });
 
-        TimeMe.callAfterTimeElapsedInSeconds(30, function() {
-          if( ! $crisp.is("session:ongoing") && $(window).width() > 560 ) {
-            // show chat
+          TimeMe.callAfterTimeElapsedInSeconds( 30, function() {
+            // do nothing if
+            if( ! $crisp.is('session:ongoing') && ! $crisp.is('chat:opened') ) {
 
-            localStorage.setItem( 'chat_greeting_sent', new Date().toLocaleString() );
-          }
-        });
-      }
-    }
+              localStorage.setItem( 'chat_greeting_sent', new Date().toLocaleString() );
+            }
+          });
+        } // end chat allowed check
+      } // end chat already sent check
+    } // end storage check
 
   });
 
