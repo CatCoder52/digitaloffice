@@ -99,6 +99,16 @@
     margin-bottom: 8rem;
   }
 
+  &.block-single-reference {
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+    .container {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
   .entry-content {
     padding: $padding-general-content-box;
 

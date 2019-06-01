@@ -93,16 +93,19 @@ get_header(); ?>
         <div class="container">
 
           <?php if ( ! empty( $quote_pre_title ) ) : ?>
-            <h3><?php echo esc_html( $quote_pre_title ) ?></h3>
-          <?php endif;
-
-          echo wpautop( $quote ); ?>
-
-          <p><?php echo esc_html( $quote_person ) ?><br /><?php echo esc_html( $quote_person_title ) ?></p>
-
-          <?php if ( ! empty( $quote_person_image ) ) : ?>
-            <img src="<?php wp_get_attachment_image_url( $quote_person_image, 'medium' ) ?>" />
+            <h2><?php echo esc_html( $quote_pre_title ) ?></h2>
           <?php endif; ?>
+
+          <blockquote>
+            <?php echo wpautop( $quote ); ?>
+          </blockquote>
+
+          <div class="quote-author-info">
+            <?php if ( ! empty( $quote_person_image ) ) : ?>
+              <img src="<?php wp_get_attachment_image_url( $quote_person_image, 'medium' ) ?>" />
+            <?php endif; ?>
+            <p><?php echo esc_html( $quote_person ) ?><br /><?php echo esc_html( $quote_person_title ) ?></p>
+          </div>
 
         </div>
       </section>
