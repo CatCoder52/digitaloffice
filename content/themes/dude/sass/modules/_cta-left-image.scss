@@ -44,16 +44,19 @@
   }
 
   .image {
-    @include background-cover();
     width: 100%;
     height: 60rem;
     margin-top: -10rem;
+    overflow: hidden;
+    position: relative;
   }
 
   .content {
     background: $color-dude-whitegreyish;
     padding: $padding-general-content-box;
     margin-left: -20rem;
+    position: relative;
+    z-index: 1;
 
     @media (max-width: $container-ipad) {
       padding: 4rem;
