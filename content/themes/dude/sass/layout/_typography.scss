@@ -73,6 +73,7 @@ tr,
   @include responsive-font($font-min-size, $font-max-size);
   letter-spacing: -.003em;
   line-height: $font-base-line-height-elements;
+  font-weight: 300;
 }
 
 p {
@@ -137,8 +138,8 @@ h6,
 
 // Lists
 ul {
-  list-style: disc outside;
-  padding-left: 1.375rem;
+  list-style: circle;
+  padding-left: 2.7rem;
 
   li {
     padding-left: .35rem;

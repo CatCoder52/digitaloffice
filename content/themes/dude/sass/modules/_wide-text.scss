@@ -1,0 +1,135 @@
+body.page-id-4487 .block.block-wide-text {
+  padding-top: 0;
+}
+
+body .block.block-wide-text {
+  form {
+
+    // Hide validation header
+    > .validation_error {
+      display: none;
+    }
+
+    // Validation and errors
+    .validation_error {
+      font-size: 1.2em;
+      font-weight: bold;
+      padding-bottom: 15px;
+    }
+
+    li.gfield {
+      &.gfield_error {
+        background: transparent;
+        margin-bottom: 15px;
+        padding-top: 15px;
+        border: 0;
+        font-weight: 300;
+        color: #ef5f5b;
+
+        * {
+          color: #ef5f5b;
+          font-weight: 400;
+        }
+      }
+
+      .validation_message {
+        font-weight: 400;
+        margin-top: 10px;
+      }
+    }
+
+    input,
+    textarea,
+    input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']) {
+      max-width: 90rem;
+      border: 1px solid $color-superlightgrey;
+      padding: 2rem;
+
+      &:focus {
+        outline: 0;
+        border-color: $color-dude-deep-black;
+      }
+
+      @media (max-width: 1300px) {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+      &::placeholder {
+        opacity: 1;
+        color: $color-dude-grey-text;
+      }
+    }
+
+    ul {
+      @extend .columns;
+      @extend .is-multiline;
+
+      @media (max-width: 1300px) {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      > li {
+        @extend .column;
+        @extend .is-half;
+        @extend .is-multiline;
+        margin-top: 0;
+        padding-top: 0;
+        padding-left: 0;
+
+        @media (max-width: 1300px) {
+          display: block !important;
+          width: 100% !important;
+          max-width: 100% !important;
+          padding: 0 !important;
+        }
+      }
+
+      > li label,
+      div:not(.gfield_time_hour):not(.gfield_time_minute):not(.gfield_time_ampm):not(.ginput_container_date):not(.ginput_quantity):not(.datepicker) {
+        margin-top: 0;
+      }
+
+      #field_2_3 {
+        @media (min-width: 1300px) {
+          margin-top: 10rem;
+        }
+      }
+
+      #field_2_9,
+      #field_2_4 {
+        @media (min-width: 1300px) {
+          margin-top: -9.4rem;
+        }
+      }
+    }
+
+    ul,
+    li,
+    span {
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+
+    li label,
+    li h2 {
+      @extend %h2;
+      font-weight: 300;
+      margin-top: 4rem;
+      margin-bottom: 1rem;
+
+      @media (max-width: 1300px) {
+        margin-top: 4rem !important;
+        margin-bottom: 1rem;
+      }
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
+  }
+}
