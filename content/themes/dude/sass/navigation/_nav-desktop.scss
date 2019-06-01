@@ -18,7 +18,7 @@ body.js-nav-active {
   overflow: hidden;
 }
 
-.has-dark-hero {
+body {
   .hamburger-inner,
   .hamburger-inner::after,
   .hamburger-inner::before,
@@ -31,7 +31,7 @@ body.js-nav-active {
   .nav-toggle:focus .hamburger-inner:focus,
   .nav-toggle:focus .hamburger-inner:focus::after,
   .nav-toggle:focus .hamburger-inner:focus::before {
-    background-color: #fff;
+    background-color: $color-dude-white;
   }
 }
 

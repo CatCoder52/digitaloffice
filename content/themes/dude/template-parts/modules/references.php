@@ -2,8 +2,8 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:50:23
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-05-30 17:22:31
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2019-06-01 13:44:10
  *
  * @package dude2019
  */
@@ -79,7 +79,7 @@ if ( empty( $main_reference ) && empty( $small_references ) ) {
     </header>
 
     <?php if ( ! empty( $main_reference ) ) : ?>
-      <div class="reference-image reference-image-main">
+      <div class="reference-image reference-image-main has-lazyload">
         <div class="background-image preview lazyload" style="background-image: url('<?php echo $main_reference['image_preload_url']; ?>');" data-src="<?php echo $main_reference['image_url']; ?>"></div>
         <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo $main_reference['image_url']; ?>');"<?php endif; ?>></div>
         <noscript><div class="background-image full-image" style="background-image: url('<?php echo $main_reference['image_url']; ?>');"></div></noscript>

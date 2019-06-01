@@ -2,8 +2,8 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 16:50:02
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-06-01 13:39:54
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2019-06-01 13:44:15
  *
  * @package dude2019
  */
@@ -23,7 +23,7 @@ if ( empty( $content ) || empty( $image ) ) {
         <?php echo wpautop( $content ) ?>
       </div>
 
-      <div class="col col-image">
+      <div class="col col-image has-lazyload">
         <div class="background-image preview lazyload" style="background-image: url('<?php echo wp_get_attachment_image_url( $image, 'tiny-preload-thumbnail' ) ?>');" data-src="<?php echo wp_get_attachment_image_url( $image, 'large' ) ?>"></div>
         <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo wp_get_attachment_image_url( $image, 'large' ) ?>');"<?php endif; ?>></div>
         <noscript><div class="background-image full-image" style="background-image: url('<?php echo wp_get_attachment_image_url( $image, 'large' ) ?>');"></div></noscript>

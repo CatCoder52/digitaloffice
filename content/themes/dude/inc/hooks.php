@@ -2,16 +2,33 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-25 17:40:42
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-05-31 13:09:30
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2019-06-01 16:41:10
  *
  * @package dude2019
  */
 
-// show archives
+/**
+ * Show archives
+ */
 add_filter( 'air_helper_disable_views_tag', '__return_false' );
 add_filter( 'air_helper_disable_views_category', '__return_false' );
 add_filter( 'air_helper_disable_views_author', '__return_false' );
+
+/**
+ * Disable the custom color picker in Gutenberg.
+ */
+function bauermedia_gutenberg_disable_custom_colors() {
+  add_theme_support( 'editor-color-palette' );
+  add_theme_support( 'disable-custom-colors' );
+}
+add_action( 'after_setup_theme', 'bauermedia_gutenberg_disable_custom_colors' );
+
+/**
+ * Enable Gutenberg extra features.
+ */
+add_theme_support( 'align-wide' );
+add_theme_support( 'wp-block-styles' );
 
 add_action( 'admin_init', 'dude_maybe_hide_editor' );
 function dude_maybe_hide_editor() {
@@ -32,7 +49,7 @@ function dude_maybe_hide_editor() {
   }
 }
 
-// pre_get_posts for some archives
+// Pre_get_posts for some archives
 add_action( 'pre_get_posts', 'dude_pre_get_posts' );
 function dude_pre_get_posts( $query ) {
   if ( $query->is_main_query() && $query->is_post_type_archive( 'reference' ) ) {
@@ -40,10 +57,11 @@ function dude_pre_get_posts( $query ) {
   }
 }
 
-// save merch stock to our custom post meta instead of ACF's
+// Save merch stock to our custom post meta instead of ACF's
 add_filter( 'acf/save_post', 'dude_merch_stock_save', 5 );
 function dude_merch_stock_save( $post_id ) {
-  // bail early if no ACF data
+
+  // Bail early if no ACF data
   if ( empty( $_POST['acf'] ) ) { // phpcs:ignore
     return;
   }
@@ -54,16 +72,17 @@ function dude_merch_stock_save( $post_id ) {
     return;
   }
 
-  // loop models
+  // Loop models
   foreach ( $_POST['acf']['field_5ce9670017057'] as $model ) { // phpcs:ignore
-    // continue to next if no stock
+
+    // Continue to next if no stock
     if ( empty( $model['field_5ce967501705b'] ) || empty( $model['field_5ce9672317058'] ) ) {
       continue;
     }
 
     $stock_key = sanitize_title( $model['field_5ce9672317058'] );
 
-    // loop stock
+    // Loop stock
     foreach ( $model['field_5ce967501705b'] as $stock_item ) {
       $stock[ $stock_key ][ $stock_item['field_5ce967681705c'] ] = $stock_item['field_5ce967731705d'];
     }
@@ -71,9 +90,9 @@ function dude_merch_stock_save( $post_id ) {
 
   update_post_meta( $post_id, '_stock', $stock );
 
-  // unset the acf field and prevent it from saving
+  // Unset the acf field and prevent it from saving
   unset( $_POST['acf']['field_5cb59e0006657'] );
-} // end function dude_merch_stock_save
+} // End function dude_merch_stock_save
 
 add_filter( 'acf/load_value/name=models', 'dude_merch_stock', 10, 3 );
 function dude_merch_stock( $value, $post_id, $field ) {
@@ -103,7 +122,7 @@ function dude_merch_stock( $value, $post_id, $field ) {
   }
 
   return $value;
-} // end function dude_merch_stock
+} // End function dude_merch_stock
 
 add_filter( 'use_block_editor_for_post_type', 'dude_gutenberg_can_edit_post_type', 10, 2 );
 function dude_gutenberg_can_edit_post_type( $can_edit, $post_type ) {
@@ -131,7 +150,7 @@ function dude_gform_submit_button( $button, $form ) {
   $new_button->appendChild( $new_arrow );
   $input->removeAttribute( 'value' );
 
-  foreach( $input->attributes as $attribute ) {
+  foreach ( $input->attributes as $attribute ) {
     $new_button->setAttribute( $attribute->name, $attribute->value );
   }
 

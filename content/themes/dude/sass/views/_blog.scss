@@ -5,6 +5,50 @@
 // classes and other WordPress editor formatting.
 // ------------------------------------------------
 
+// Nav on white background when in blog
+body.blog {
+  .site-header nav > ul > li > a,
+  .site-header nav > ul > li > button {
+    color: $color-body;
+  }
+
+  .site-header .site-title svg,
+  .site-header .site-title g,
+  .site-header .site-title path {
+    fill: $color-body;
+  }
+
+  .site-header .hamburger-inner,
+  .site-header .hamburger-inner::after,
+  .site-header .hamburger-inner::before,
+  .site-header .hamburger-inner:focus,
+  .site-header .hamburger-inner:focus::after,
+  .site-header .hamburger-inner:focus::before,
+  .site-header .nav-toggle:focus .hamburger-inner,
+  .site-header .nav-toggle:focus .hamburger-inner::after,
+  .site-header .nav-toggle:focus .hamburger-inner::before,
+  .site-header .nav-toggle:focus .hamburger-inner:focus,
+  .site-header .nav-toggle:focus .hamburger-inner:focus::after,
+  .site-header .nav-toggle:focus .hamburger-inner:focus::before {
+    background-color: $color-body;
+  }
+
+  @media (min-width: $responsivenav) {
+    &:not(.js-nav-active) {
+      .nav-primary-desktop .menu-items > .menu-item > a,
+      .nav-primary-desktop .menu-items > .menu-item button,
+      .nav-primary-desktop .menu-items > .menu-item.dude-nav-more button .plus-cross {
+        color: $color-body;
+      }
+
+      .nav-primary-desktop .menu-items > .menu-item > a:after,
+      .nav-primary-desktop .menu-items > .menu-item button:after {
+        background: $color-body;
+      }
+    }
+  }
+}
+
 // WordPress alignments
 .cat-links,
 .tags-links {
@@ -32,10 +76,6 @@
 del {
   text-decoration: line-through;
   color: #666;
-}
-
-.container.container-article {
-  max-width: $article-max-width;
 }
 
 // Required sticky class
