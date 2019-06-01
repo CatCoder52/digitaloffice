@@ -31,6 +31,8 @@
     padding: $padding-general-content-box;
     max-width: 75rem;
     margin-left: -20rem;
+    position: relative;
+    z-index: 1;
 
     @media (max-width: $container-mobile) {
       padding: $padding-general-content-box-ipad;
