@@ -13,7 +13,7 @@
 
     <header class="block-head">
       <p class="block-title-pre" aria-describedby="block-title-<?php echo sanitize_title( get_the_title() ) ?>"><?php echo ucfirst( date_i18n( 'l' ) ) ?>na, <?php echo get_the_date( 'j.n.Y' ) ?></p>
-      <h1 class="block-title" id="block-title-<?php echo sanitize_title( get_the_title() ) ?>"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h1>
+      <h1 class="block-title" id="block-title-<?php echo sanitize_title( get_the_title() ) ?>"><?php the_title() ?></h1>
     </header>
 
     <div class="entry-content">

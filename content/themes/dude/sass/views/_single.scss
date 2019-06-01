@@ -3,8 +3,8 @@
 }
 
 .single .block.block-hero.block-hero-single {
-  height: 60vh;
-  min-height: 65rem;
+  height: 70vh;
+  min-height: 55rem;
   background: $color-dude-white;
 
   .container,
@@ -21,7 +21,7 @@
 .block.block-single {
   padding-top: 0;
   z-index: 2;
-  margin-top: -8rem;
+  margin-top: -15rem;
   background: transparent;
 
   .container {
@@ -37,10 +37,36 @@
   }
 
   .block-head {
-    padding-top: 0;
+    padding: $padding-general-content-box;
+    background: $color-dude-whitegreyish;
+
+    @media (max-width: $container-ipad) {
+      padding: $padding-general-content-box-ipad;
+    }
+
+    @media (max-width: $container-mobile) {
+      padding: $padding-general-content-box-mobile;
+    }
   }
 
   .block-head .block-title {
     @extend %h2;
+  }
+
+  .entry-content {
+    padding: $padding-general-content-box;
+
+    @media (max-width: $container-ipad) {
+      padding: $padding-general-content-box-ipad;
+    }
+
+    @media (max-width: $container-mobile) {
+      padding: $padding-general-content-box-mobile;
+    }
+
+    p {
+      @include responsive-font($font-min-size, 23px);
+      font-weight: 300;
+    }
   }
 }
