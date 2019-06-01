@@ -73,8 +73,19 @@
       @extend .screen-reader-text;
     }
 
-    div input {
+    div input,
+    div button {
       width: 100%;
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+
+      @media (min-width: $container-ipad) {
+        white-space: nowrap;
+      }
     }
 
     input,

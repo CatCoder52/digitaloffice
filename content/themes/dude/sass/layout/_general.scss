@@ -183,8 +183,13 @@ a.global-link {
   width: 15rem;
 }
 
+.block.block-cta-left-image form button:hover .arrow {
+  width: 10rem;
+}
+
 .arrow-link .arrow,
-.long-arrow {
+.long-arrow,
+.block.block-cta-left-image form button .arrow {
   width: 6rem;
   height: 1px;
   background: $color-body;
@@ -228,7 +233,10 @@ a.global-link {
 
 .button .long-arrow,
 .button .long-arrow:after,
-.button .long-arrow:before {
+.button .long-arrow:before,
+.block.block-cta-left-image form button .arrow,
+.block.block-cta-left-image form button .arrow:before,
+.block.block-cta-left-image form button .arrow:after {
   background: $color-dude-white;
 }
 
