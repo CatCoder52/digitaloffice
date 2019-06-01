@@ -1,0 +1,39 @@
+body .block.block-hero-reference {
+  // Padding here is navigation height plus regular padding which is exactly 100px in total
+  padding-top: calc(15rem + 113px);
+
+  .cols {
+    @include grid(2, $gutter_x: 0, $gutter_y: 0);
+    grid-template-columns: 6fr 4fr;
+
+    @media (max-width: $container-ipad) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .col.has-grey-bg {
+    background: transparent;
+  }
+
+  .breadcrumb {
+    font-size: 16px;
+    margin-bottom: 0;
+    margin-top: -4rem;
+    padding: 4rem;
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+
+    a {
+      font-weight: 400;
+    }
+
+    svg {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      width: 12px;
+      height: 12px;
+    }
+  }
+}

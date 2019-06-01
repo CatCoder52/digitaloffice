@@ -59,7 +59,8 @@ body:after {
 
 body.single .site-content,
 body.archive .site-content,
-body.blog .site-content {
+body.blog .site-content,
+body.single-reference {
   transition: all .75s 50ms cubic-bezier(.19, 1, .22, 1);
   will-change: transform;
 }
@@ -67,7 +68,8 @@ body.blog .site-content {
 .js-nav-active .block-hero,
 body.single.js-nav-active .site-content,
 body.archive.js-nav-active .site-content,
-body.blog.js-nav-active .site-content {
+body.blog.js-nav-active .site-content,
+body.single-reference.js-nav-active .site-content {
   transform: translateX(-50vw);
 
   .block-hero {
