@@ -111,7 +111,7 @@ get_header(); ?>
       </section>
     <?php endif; ?>
 
-    <section class="block block-cta-text">
+    <section class="block block-cta-text block-cta-text-single-reference">
       <div class="container">
 
         <h2 class="block-title">Kova meno. Olen vakuuttunut, haluan ottaa yhteyttä.</h2>
@@ -121,10 +121,13 @@ get_header(); ?>
     </section>
 
     <?php if ( ! empty( $small_references ) ) : ?>
-      <section class="block block-references">
+      <section class="block block-references block-references-related">
         <div class="container">
 
-          <h4>Tsekkaa myös nämä</h4>
+         <header class="block-head block-head-related">
+          <p class="block-title-pre" aria-describedby="block-title-related-references">Muita referenssejä</p>
+          <h2 class="block-title" id="block-title-related-references">Tsekkaa myös nämä</h2>
+        </header>
 
           <div class="cols cols-references">
             <?php foreach ( $small_references as $reference ) : ?>

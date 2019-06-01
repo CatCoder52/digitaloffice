@@ -1,10 +1,22 @@
+.block.block-cta-text.block-cta-text-single-reference {
+  background: $color-dude-whitegreyish;
+}
+
 .block.block-references {
+  &.block-references-related {
+    padding-top: 0;
+  }
+
   .container {
     overflow: visible;
   }
 
   .block-head {
     padding-bottom: 7rem;
+
+    &.block-head-related {
+      padding-bottom: 0;
+    }
   }
 
   .cols {
