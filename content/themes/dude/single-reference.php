@@ -60,10 +60,30 @@ get_header(); ?>
 
     <?php get_template_part( 'template-parts/hero', get_post_type() ); ?>
 
-    <section class="block block-refernce-content">
+    <section class="block block-single block-single-reference">
       <div class="container">
 
-        <?php the_content(); ?>
+        <div class="entry-content">
+          <?php
+          the_content( sprintf(
+            wp_kses(
+              /* translators: %s: Name of current post. Only visible to screen readers */
+              __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'dude' ),
+              array(
+                'span' => array(
+                  'class' => array(),
+                ),
+              )
+            ),
+            get_the_title()
+          ) );
+
+          wp_link_pages( array(
+            'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'dude' ),
+            'after'  => '</div>',
+          ) );
+          ?>
+        </div><!-- .entry-content -->
 
       </div>
     </section>
@@ -73,16 +93,19 @@ get_header(); ?>
         <div class="container">
 
           <?php if ( ! empty( $quote_pre_title ) ) : ?>
-            <h3><?php echo esc_html( $quote_pre_title ) ?></h3>
-          <?php endif;
-
-          echo wpautop( $quote ); ?>
-
-          <p><?php echo esc_html( $quote_person ) ?><br /><?php echo esc_html( $quote_person_title ) ?></p>
-
-          <?php if ( ! empty( $quote_person_image ) ) : ?>
-            <img src="<?php wp_get_attachment_image_url( $quote_person_image, 'medium' ) ?>" />
+            <h2><?php echo esc_html( $quote_pre_title ) ?></h2>
           <?php endif; ?>
+
+          <blockquote>
+            <?php echo wpautop( $quote ); ?>
+          </blockquote>
+
+          <div class="quote-author-info">
+            <?php if ( ! empty( $quote_person_image ) ) : ?>
+              <img src="<?php wp_get_attachment_image_url( $quote_person_image, 'medium' ) ?>" />
+            <?php endif; ?>
+            <p><?php echo esc_html( $quote_person ) ?><br /><?php echo esc_html( $quote_person_title ) ?></p>
+          </div>
 
         </div>
       </section>
@@ -91,8 +114,8 @@ get_header(); ?>
     <section class="block block-cta-text">
       <div class="container">
 
-        <h2>Kova meno. Olen vakuuttunut, haluan ottaa yhteyttä.</h2>
-        <p><a href="/yhteystiedot">Ota yhteyttä</a></p>
+        <h2 class="block-title">Kova meno. Olen vakuuttunut, haluan ottaa yhteyttä.</h2>
+        <p><a class="cta-link" href="/yhteystiedot">Ota yhteyttä</a></p>
 
       </div>
     </section>

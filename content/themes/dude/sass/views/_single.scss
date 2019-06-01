@@ -93,8 +93,34 @@
     @extend %h2;
   }
 
+  &.block-single-reference .entry-content .wp-block-gallery,
+  &.block-single-reference .entry-content .wp-block-image {
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+  }
+
+  &.block-single-reference {
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+    .container {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
   .entry-content {
     padding: $padding-general-content-box;
+
+    .wp-block-gallery {
+      @extend .columns;
+      width: 100%;
+      max-width: 100%;
+
+      > * {
+        @extend .column;
+      }
+    }
 
     @media (max-width: $container-ipad) {
       padding: $padding-general-content-box-ipad;
