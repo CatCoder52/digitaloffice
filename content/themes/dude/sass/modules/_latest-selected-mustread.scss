@@ -42,8 +42,9 @@
   }
 
   .col-latest .image {
-    @include background-cover();
     height: 50rem;
+    position: relative;
+    overflow: hidden;
 
     @media (max-width: 1000px) {
       height: 35rem;
@@ -66,7 +67,8 @@
     }
 
     .image {
-      @include background-cover();
+      position: relative;
+      overflow: hidden;
       height: 15rem;
       width: 100%;
 
