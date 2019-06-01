@@ -91,8 +91,8 @@ get_header(); ?>
     <section class="block block-cta-text">
       <div class="container">
 
-        <h2>Kova meno. Olen vakuuttunut, haluan ottaa yhteyttä.</h2>
-        <p><a href="/yhteystiedot">Ota yhteyttä</a></p>
+        <h2 class="block-title">Kova meno. Olen vakuuttunut, haluan ottaa yhteyttä.</h2>
+        <p><a class="cta-link" href="/yhteystiedot">Ota yhteyttä</a></p>
 
       </div>
     </section>
