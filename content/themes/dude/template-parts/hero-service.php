@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-30 17:49:45
+ * @Last Modified time: 2019-06-01 17:25:37
  *
  * @package dude2019
  */
@@ -23,7 +23,7 @@ $hero_content = get_post_meta( get_the_id(), 'hero_content', true ); ?>
       </div>
 
       <?php if ( isset( $logos ) ) : ?>
-        <section class="customer-logos animate animate-3">
+        <div class="customer-logos animate animate-3">
           <ul class="customer-logos-list">
             <?php foreach ( $logos as $logo ) : ?>
               <li>
@@ -31,7 +31,7 @@ $hero_content = get_post_meta( get_the_id(), 'hero_content', true ); ?>
               </li>
             <?php endforeach; ?>
           </ul>
-        </section>
+        </div>
       <?php endif; ?>
     </div>
 
