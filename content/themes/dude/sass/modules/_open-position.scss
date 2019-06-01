@@ -7,5 +7,22 @@
       display: flex;
       flex-wrap: wrap;
     }
+
+    a {
+      background-image: linear-gradient(to top, $color-dude-deep-black, $color-dude-deep-black);
+      background-size: 100% .1rem;
+      background-position: left bottom;
+      background-repeat: no-repeat;
+      transition: .3s all;
+      text-decoration: none;
+      overflow: visible;
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+      background-size: 100% 2.8rem;
+      color: $color-dude-white;
+    }
   }
 }
