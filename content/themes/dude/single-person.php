@@ -15,14 +15,6 @@ get_header(); ?>
 
     <?php get_template_part( 'template-parts/hero', get_post_type() ); ?>
 
-    <section class="block block-reference-content">
-      <div class="container">
-
-
-
-      </div>
-    </section>
-
 	</main><!-- #main -->
 </div><!-- #primary -->
 
