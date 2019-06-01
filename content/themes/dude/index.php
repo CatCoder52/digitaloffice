@@ -12,13 +12,15 @@
  * @package dude
  */
 
+$newsletter_cta_bg_image_id = 4435;
+
 get_header(); ?>
 
 <div id="content" class="content-area">
 	<main role="main" id="main" class="site-main">
 
     <?php if ( ! is_paged() && ! is_category() && ! is_tag() && ! is_author() ) :
-      while( have_posts() ) : the_post(); ?>
+      while ( have_posts() ) : the_post(); ?>
         <section class="block block-blog-big">
           <div class="container">
 
@@ -62,7 +64,7 @@ get_header(); ?>
         </header>
 
         <div class="cols">
-          <?php while( have_posts() ) : the_post(); ?>
+          <?php while ( have_posts() ) : the_post(); ?>
             <div class="col">
               <div class="image has-lazyload">
                 <div class="background-image preview lazyload" style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'tiny-preload-thumbnail' ) ?>');" data-src="<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>"></div>
@@ -87,7 +89,11 @@ get_header(); ?>
 
           <div class="cols">
             <div class="col">
-              <div class="image" style="background-image: url('<?php echo esc_url( get_theme_file_uri( 'images/placeholder.png' ) ) ?>');"></div>
+              <div class="image has-lazyload">
+                <div class="background-image preview lazyload" style="background-image: url('<?php echo wp_get_attachment_image_url( $newsletter_cta_bg_image_id, 'tiny-preload-thumbnail' ) ?>');" data-src="<?php echo wp_get_attachment_image_url( $newsletter_cta_bg_image_id, 'large' ) ?>"></div>
+                <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo wp_get_attachment_image_url( $newsletter_cta_bg_image_id, 'large' ) ?>');"<?php endif; ?>></div>
+                <noscript><div class="background-image full-image" style="background-image: url('<?php echo wp_get_attachment_image_url( $newsletter_cta_bg_image_id, 'large' ) ?>');"></div></noscript>
+              </div>
             </div>
 
             <div class="col">
