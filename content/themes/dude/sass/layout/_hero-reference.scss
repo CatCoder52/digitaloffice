@@ -1,4 +1,5 @@
-body .block.block-hero-reference {
+body .block.block-hero-reference,
+body .block-hero-person {
   // Padding here is navigation height plus regular padding which is exactly 100px in total
   padding-top: calc(15rem + 113px);
 

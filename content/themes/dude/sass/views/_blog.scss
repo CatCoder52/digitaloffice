@@ -7,7 +7,8 @@
 
 // Nav on white background when in blog
 body.blog,
-body.single-reference {
+body.single-reference,
+body.single-person {
   .site-header nav > ul > li > a,
   .site-header nav > ul > li > button {
     color: $color-body;
