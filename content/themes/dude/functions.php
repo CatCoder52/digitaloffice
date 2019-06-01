@@ -81,7 +81,6 @@ function dude_scripts() {
   wp_localize_script( 'scripts', 'dude_screenReaderText', array(
     'expand'      => esc_html__( 'Open child menu', 'dude' ),
     'collapse'    => esc_html__( 'Close child menu', 'dude' ),
-    'rotatedevice' => esc_html__( 'Käännä älylaitteesi vaakatasoon', 'dude' ),
   ) );
 }
 add_action( 'wp_enqueue_scripts', 'dude_scripts' );

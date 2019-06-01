@@ -102,6 +102,7 @@ if ( $show_chat_greeting ) {
       <a class="play-pause"></a>
       <ol class="indicator"></ol>
       <div class="numbers"><span id="pos"></span> / <span id="count"></span></div>
+      <div class="please-rotate-nag"><div class="content"><div class="phone"></div><div class="message">Käännä älylaitteesi vaakatasoon</div></div></div>
     </div>
   <?php endif; ?>
 

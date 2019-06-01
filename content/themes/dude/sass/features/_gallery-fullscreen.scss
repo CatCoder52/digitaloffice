@@ -12,6 +12,40 @@
   }
 }
 
+// Please rotate your device -notification
+.please-rotate-nag {
+  text-align: center;
+  transition: all $transition-duration;
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(#000, .5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .phone {
+    height: 50px;
+    width: 100px;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    animation: rotate 1.5s ease-in-out infinite alternate;
+    margin: 0 auto;
+  }
+
+  .message {
+    color: #fff;
+    font-size: 1em;
+    margin-top: 40px;
+  }
+}
+
 .blueimp-gallery,
 .blueimp-gallery > .slides > .slide > .slide-content {
   position: absolute;
