@@ -1,5 +1,12 @@
 .block.block-blog-big {
-  padding-top: 10rem;
+  // Padding here is navigation height plus regular padding which is exactly 100px in total
+  padding-top: calc(5rem + 113px);
+  padding-bottom: 0;
+
+  .container {
+    overflow: visible;
+    padding-bottom: 0;
+  }
 
   .cols {
     @include grid(2, $gutter_x: 0, $gutter_y: 0);
@@ -8,5 +15,52 @@
   .col-content {
     background: $color-dude-whitegreyish;
     padding: $padding-general-content-box;
+    position: relative;
+  }
+
+  .block-head {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .arrow-link-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+
+  .arrow-link-wrapper a {
+    @extend %default;
+    background: $color-links;
+    color: #fff;
+    border: 0;
+    width: auto;
+    display: flex;
+    justify-content: flex-start;
+    padding: 2.5rem 3rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 150ms linear background;
+    font-family: $font-base;
+    position: absolute;
+    text-align: left;
+    right: -2rem;
+    bottom: -5rem;
+    align-items: center;
+
+    a,
+    span,
+    *:before,
+    *:after {
+      color: $color-dude-white;
+    }
+
+    *:before,
+    *:after,
+    .arrow {
+      background: $color-dude-white;
+    }
   }
 }

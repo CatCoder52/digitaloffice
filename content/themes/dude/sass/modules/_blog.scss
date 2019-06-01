@@ -1,0 +1,17 @@
+.block.block-blog {
+  padding-top: 0;
+
+  .cols {
+    @include grid(3, $gutter_x: 10rem, $gutter_y: 10rem);
+
+    .image {
+      margin-bottom: 6rem;
+
+      &:after {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+      }
+    }
+  }
+}
