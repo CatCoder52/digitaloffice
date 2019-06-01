@@ -28,17 +28,44 @@
     padding-top: 0;
   }
 
-  article > * {
+  .entry-content > *,
+  .entry-content figcaption,
+  .block-head {
     width: 100%;
     max-width: $article-max-width;
     margin-left: auto;
     margin-right: auto;
     background-color: $color-dude-white;
+
+    &.alignwide {
+      max-width: 85vw;
+      width: 100%;
+    }
+
+    &.alignfull {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  .entry-content > * {
+    padding-left: $padding-general-content-box;
+    padding-right: $padding-general-content-box;
+
+    @media (max-width: $container-ipad) {
+      padding-left: $padding-general-content-box-ipad;
+      padding-right: $padding-general-content-box-ipad;
+    }
+
+    @media (max-width: $container-mobile) {
+      padding-left: $padding-general-content-box-mobile;
+      padding-right: $padding-general-content-box-mobile;
+    }
   }
 
   .block-head {
-    padding: $padding-general-content-box;
     background: $color-dude-whitegreyish;
+    padding: $padding-general-content-box;
 
     @media (max-width: $container-ipad) {
       padding: $padding-general-content-box-ipad;
@@ -77,7 +104,34 @@
       transition: .3s all;
       text-decoration: none;
       overflow: visible;
-      padding-bottom: .3rem;
+    }
+
+    blockquote {
+      margin-left: auto;
+      margin-right: auto;
+      border-left: 2px solid $color-dude-deep-black;
+      padding: $padding-general-content-box-ipad $padding-general-content-box;
+
+      @media (max-width: $container-ipad) {
+        padding: $padding-general-content-box-ipad;
+      }
+
+      @media (max-width: $container-mobile) {
+        padding: $padding-general-content-box-mobile;
+      }
+
+      p {
+        @include responsive-font($font-min-size, 30px);
+      }
+    }
+
+    figure figcaption,
+    cite {
+      max-width: 1100px;
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+      padding-left: 4rem;
+      font-weight: 300;
     }
 
     a:hover,

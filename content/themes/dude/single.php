@@ -17,7 +17,7 @@ get_header(); ?>
       include get_theme_file_path( 'template-parts/hero.php' );
     ?>
 
-    <div class="block block-single">
+    <section class="block block-single">
       <div class="container">
         <?php while ( have_posts() ) {
       	 the_post();
@@ -25,7 +25,7 @@ get_header(); ?>
 			   }
        ?>
       </div>
-    </div>
+    </section>
 
 	</main><!-- #main -->
 </div><!-- #primary -->
