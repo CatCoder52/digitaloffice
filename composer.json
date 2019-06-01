@@ -110,7 +110,8 @@
     "aucor/dynamic-mo-loader": "*",
     "advanced-custom-fields/advanced-custom-fields-pro": "^5.8.0",
     "relevanssi/relevanssi-premium": "^2.2.5",
-    "rocketgenius/gravity-forms": "2.3.6"
+    "rocketgenius/gravity-forms": "2.3.6",
+    "humanmade/page-for-post-type": "dev-master"
   },
   "require-dev": {
     "rarst/wps": "*",

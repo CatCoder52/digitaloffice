@@ -71,6 +71,7 @@ function dude_scripts() {
   wp_enqueue_style( 'styles', get_theme_file_uri( "css/{$dude_template}.css" ), array(), filemtime( get_theme_file_path( "css/{$dude_template}.css" ) ) );
 
   // Scripts.
+  wp_enqueue_script( 'jquery' );
   wp_enqueue_script( 'scripts', get_theme_file_uri( 'js/all.js' ), array(), filemtime( get_theme_file_path( 'js/all.js' ) ), true );
 
   wp_localize_script( 'scripts', 'dude', array(
