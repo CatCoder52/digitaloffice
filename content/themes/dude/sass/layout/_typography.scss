@@ -73,6 +73,7 @@ tr,
   @include responsive-font($font-min-size, $font-max-size);
   letter-spacing: -.003em;
   line-height: $font-base-line-height-elements;
+  font-weight: 300;
 }
 
 p {
