@@ -36,7 +36,6 @@ add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list'
  * Load textdomain.
  */
 load_theme_textdomain( 'dude', get_template_directory() . '/languages' );
-
 /**
  * Define content width in articles
  */
@@ -63,18 +62,6 @@ function _dude_widgets_init() {
 add_action( 'widgets_init', '_dude_widgets_init' );
 
 /**
- * Move jQuery to footer
- */
-function dude_move_jquery_into_footer( $wp_scripts ) {
-  if ( ! is_admin() ) {
-    $wp_scripts->add_data( 'jquery',         'group', 1 );
-    $wp_scripts->add_data( 'jquery-core',    'group', 1 );
-    $wp_scripts->add_data( 'jquery-migrate', 'group', 1 );
-  }
-}
-add_action( 'wp_default_scripts', 'dude_move_jquery_into_footer' );
-
-/**
  * Enqueue scripts and styles.
  */
 function dude_scripts() {
@@ -84,13 +71,7 @@ function dude_scripts() {
   wp_enqueue_style( 'styles', get_theme_file_uri( "css/{$dude_template}.css" ), array(), filemtime( get_theme_file_path( "css/{$dude_template}.css" ) ) );
 
   // Scripts.
-  wp_enqueue_script( 'jquery-core' );
   wp_enqueue_script( 'scripts', get_theme_file_uri( 'js/all.js' ), array(), filemtime( get_theme_file_path( 'js/all.js' ) ), true );
-
-  // Required comment-reply script
-  if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-    wp_enqueue_script( 'comment-reply' );
-  }
 
   wp_localize_script( 'scripts', 'dude', array(
     'theme_base'  => get_template_directory_uri(),

@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-25 17:40:42
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-05-31 13:09:30
+ * @Last Modified time: 2019-06-01 16:56:39
  *
  * @package dude2019
  */
@@ -114,7 +114,7 @@ function dude_gutenberg_can_edit_post_type( $can_edit, $post_type ) {
   return $can_edit;
 }
 
-add_filter( 'gform_submit_button', 'dude_gform_submit_button', 10, 2 );
+//add_filter( 'gform_submit_button', 'dude_gform_submit_button', 10, 2 );
 function dude_gform_submit_button( $button, $form ) {
 
   $arrow_dom = new DOMDocument();
