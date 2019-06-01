@@ -1,6 +1,12 @@
-.block.block-blog.big {
-  .col-image {
-    position: relative;
-    overflow: hidden;
+.block.block-blog-big {
+  padding-top: 10rem;
+
+  .cols {
+    @include grid(2, $gutter_x: 0, $gutter_y: 0);
+  }
+
+  .col-content {
+    background: $color-dude-whitegreyish;
+    padding: $padding-general-content-box;
   }
 }
