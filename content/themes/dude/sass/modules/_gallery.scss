@@ -8,11 +8,20 @@
     grid-auto-rows: 80rem;
     background-color: #fff;
     color: #444;
+
+    @media (max-width: 700px) {
+      display: block;
+      margin-bottom: 10rem;
+    }
   }
 
   .col {
     @include background-cover();
     position: relative;
+
+    @media (max-width: 700px) {
+      height: 50rem;
+    }
 
     &:first-child,
     &:nth-child(5n) {

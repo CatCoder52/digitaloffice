@@ -2,8 +2,8 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-25 14:37:31
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-06-01 19:40:22
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2019-06-01 23:55:25
  *
  * @package dude2019
  */
@@ -40,18 +40,18 @@ if ( empty( $images ) ) {
 <section class="block block-gallery">
   <div class="container">
 
-    <div class="cols">
-      <?php $x = 0; foreach ( $images as $image ) :
-        if ( $x < 7 ) : ?>
-          <div id="<?php echo $image['id'] ?>" class="col" style="background-image: url('<?php echo esc_url( $image['url'] ) ?>');">
-            <a class="global-link gallery-item" href="<?php echo esc_url( $image['url'] ) ?>"><span class="screen-reader-text">Avaa galleria kuvaan "<?php echo esc_html( $image['alt'] ) ?>"</span></a>
-          </div>
-        <?php else: ?>
-          <figure id="<?php echo $image['id'] ?>" class="image hidden">
-            <a href="<?php echo esc_url( $image['url'] ) ?>" class="gallery-item"><?php echo $image['alt'] ?></a>
-          </figure>
-        <?php endif; ?>
-      <?php $x++; endforeach; ?>
+    <div class="cols" id="gallery">
+      <?php foreach ( $visible_images as $image ) : ?>
+        <div class="col" style="background-image: url('<?php echo esc_url( $image['url'] ) ?>');">
+          <a class="global-link gallery-item" href="<?php echo esc_url( $image['url'] ) ?>"><span class="screen-reader-text">Avaa galleria kuvaan "<?php echo esc_html( $image['alt'] ) ?>"</span></a>
+        </div>
+      <?php endforeach; ?>
+
+      <?php
+      // This is for JS gallery use
+      foreach ( $images as $image ) : ?>
+        <a class="hidden" href="<?php echo esc_url( $image['url'] ) ?>" class="gallery-item"><?php echo $image['alt'] ?></a>
+      <?php endforeach; ?>
     </div>
 
   </div>
