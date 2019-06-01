@@ -45,6 +45,11 @@ body .block.block-wide-text {
       border: 1px solid $color-superlightgrey;
       padding: 2rem;
 
+      &:focus {
+        outline: 0;
+        border-color: $color-dude-deep-black;
+      }
+
       @media (max-width: 1300px) {
         display: block !important;
         width: 100% !important;

@@ -41,6 +41,20 @@
     padding-bottom: 20rem;
   }
 
+  // Contact thanks
+  &.block-hero-contact-thanks {
+    margin-bottom: 8rem;
+
+    .container {
+      width: 100%;
+      max-width: 80rem;
+    }
+
+    .content {
+      margin-bottom: 0;
+    }
+  }
+
   // Jobs hero
   &.block-hero-jobs .jobs {
     list-style: none;
