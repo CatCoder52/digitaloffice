@@ -60,7 +60,7 @@ body:after {
 body.single .site-content,
 body.archive .site-content,
 body.blog .site-content,
-body.single-reference {
+body.single-reference .site-content {
   transition: all .75s 50ms cubic-bezier(.19, 1, .22, 1);
   will-change: transform;
 }
