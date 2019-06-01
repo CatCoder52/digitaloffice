@@ -939,6 +939,35 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5cf27add8d163": {
+                    "key": "layout_5cf27add8d163",
+                    "name": "wide-text",
+                    "label": "Leveä tekstisisältö",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5cf27aef8d164",
+                            "label": "Tekstisisältö",
+                            "name": "content",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "full",
+                            "media_upload": 0,
+                            "delay": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Lisää moduuli",
@@ -963,5 +992,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1559042715
+    "modified": 1559087913
 }
