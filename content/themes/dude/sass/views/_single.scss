@@ -1,0 +1,46 @@
+.single:after {
+  display: none;
+}
+
+.single .block.block-hero.block-hero-single {
+  height: 60vh;
+  min-height: 65rem;
+  background: $color-dude-white;
+
+  .container,
+  .featured-image {
+    background: $color-dude-white;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.block.block-single {
+  padding-top: 0;
+  z-index: 2;
+  margin-top: -8rem;
+  background: transparent;
+
+  .container {
+    padding-top: 0;
+  }
+
+  article > * {
+    width: 100%;
+    max-width: $article-max-width;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $color-dude-white;
+  }
+
+  .block-head {
+    padding-top: 0;
+  }
+
+  .block-head .block-title {
+    @extend %h2;
+  }
+}

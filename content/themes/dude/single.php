@@ -7,26 +7,25 @@
  * @package dude
  */
 
-get_header();
+get_header(); ?>
 
-get_template_part( 'template-parts/hero', get_post_type() ); ?>
 
 <div id="content" class="content-area">
 	<main role="main" id="main" class="site-main">
 
-    <div class="container container-article">
-      <?php while ( have_posts() ) {
-      	the_post();
-				get_template_part( 'template-parts/content', get_post_type() );
+    <?php
+      include get_theme_file_path( 'template-parts/hero.php' );
+    ?>
 
-				the_post_navigation();
-
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) {
-					comments_template();
-				}
-			} ?>
-    </div><!-- .container -->
+    <div class="block block-single">
+      <div class="container">
+        <?php while ( have_posts() ) {
+      	 the_post();
+				  get_template_part( 'template-parts/content', get_post_type() );
+			   }
+       ?>
+      </div>
+    </div>
 
 	</main><!-- #main -->
 </div><!-- #primary -->
