@@ -38,7 +38,9 @@ get_header(); ?>
                   <h2 class="block-title" id="block-title-<?php echo sanitize_title( get_the_title() ) ?>"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
                 </header>
 
-                <?php the_excerpt() ?>
+                <div class="description">
+                  <?php the_excerpt() ?>
+                </div>
 
                 <p class="arrow-link-wrapper"><a href="<?php the_permalink() ?>" class="arrow-link">Lue artikkeli<span class="arrow"></span></a></p>
               </div>
