@@ -57,8 +57,34 @@ body:after {
   background: $nav-background-color;
 }
 
-.js-nav-active .block-hero {
+body.single .site-content,
+body.archive .site-content,
+body.blog .site-content {
+  transition: all .75s 50ms cubic-bezier(.19, 1, .22, 1);
+  will-change: transform;
+}
+
+.js-nav-active .block-hero,
+body.single.js-nav-active .site-content,
+body.archive.js-nav-active .site-content,
+body.blog.js-nav-active .site-content {
   transform: translateX(-50vw);
+
+  .block-hero {
+    transform: translateX(0);
+
+    @media (max-width: 1400px) {
+      transform: translateX(0);
+    }
+
+    @media (max-width: 1020px) {
+      transform: translateX(0);
+    }
+
+    @media (max-width: 760px) {
+      transform: translateX(0);
+    }
+  }
 
   @media (max-width: 1400px) {
     transform: translateX(-60vw);

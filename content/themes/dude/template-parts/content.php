@@ -10,24 +10,11 @@
 ?>
 
   <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <header class="entry-header">
-      <?php
-      if ( is_single() ) {
-        the_title( '<h1 class="entry-title">', '</h1>' );
-      } else {
-        the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-      }
 
-      if ( 'post' === get_post_type() ) :
-      ?>
-      <div class="entry-meta">
-        <p class="entry-time">
-          <time datetime="<?php the_time( 'c' ); ?>"><?php echo get_the_date( get_option( 'date_format' ) ); ?></time>
-        </p>
-      </div><!-- .entry-meta -->
-      <?php
-      endif; ?>
-    </header><!-- .entry-header -->
+    <header class="block-head">
+      <p class="block-title-pre" aria-describedby="block-title-<?php echo sanitize_title( get_the_title() ) ?>"><?php echo ucfirst( date_i18n( 'l' ) ) ?>na, <?php echo get_the_date( 'j.n.Y' ) ?></p>
+      <h1 class="block-title" id="block-title-<?php echo sanitize_title( get_the_title() ) ?>"><?php the_title() ?></h1>
+    </header>
 
     <div class="entry-content">
       <?php

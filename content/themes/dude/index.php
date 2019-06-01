@@ -22,19 +22,27 @@ get_header(); ?>
         <section class="block block-blog-big">
           <div class="container">
 
+            <h1 class="screen-reader-text">Blogi</h1>
+
             <div class="cols">
-              <div class="col col-image">
+              <div class="col col-image has-lazyload">
                 <div class="background-image preview lazyload" style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'tiny-preload-thumbnail' ) ?>');" data-src="<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>"></div>
                 <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>');"<?php endif; ?>></div>
                 <noscript><div class="background-image full-image" style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>');"></div></noscript>
               </div>
 
               <div class="col col-content">
-                <p class="date"><?php echo ucfirst( date_i18n( 'l' ) ) ?>na, <?php echo get_the_date( 'j.n.Y' ) ?></p>
-                <h1><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h1>
-                <?php the_excerpt() ?>
 
-                <p class="arrow-link-wrapper"><a href="<?php the_permalink() ?>" class="arrow-link">Lue ploki<span class="arrow"></span></a></p>
+                <header class="block-head">
+                  <p class="block-title-pre" aria-describedby="block-title-<?php echo sanitize_title( get_the_title() ) ?>"><?php echo ucfirst( date_i18n( 'l' ) ) ?>na, <?php echo get_the_date( 'j.n.Y' ) ?></p>
+                  <h2 class="block-title" id="block-title-<?php echo sanitize_title( get_the_title() ) ?>"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
+                </header>
+
+                <div class="description">
+                  <?php the_excerpt() ?>
+                </div>
+
+                <p class="arrow-link-wrapper"><a href="<?php the_permalink() ?>" class="arrow-link">Lue artikkeli<span class="arrow"></span></a></p>
               </div>
             </div>
 
@@ -48,16 +56,21 @@ get_header(); ?>
     <section class="block block-blog">
       <div class="container">
 
+        <header class="block-head">
+          <p class="block-title-pre" aria-describedby="block-title-block-blog">Tekijöiden ajatuksia</p>
+          <h2 class="block-title" id="block-title-block-blog">Blogin kaikki jorinat</h2>
+        </header>
+
         <div class="cols">
           <?php while( have_posts() ) : the_post(); ?>
             <div class="col">
-              <div class="image">
+              <div class="image has-lazyload">
                 <div class="background-image preview lazyload" style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'tiny-preload-thumbnail' ) ?>');" data-src="<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>"></div>
                 <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>');"<?php endif; ?>></div>
                 <noscript><div class="background-image full-image" style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>');"></div></noscript>
               </div>
 
-              <h2><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
+              <h3><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
               <p class="date"><?php echo ucfirst( date_i18n( 'l' ) ) ?>na, <?php echo get_the_date( 'j.n.Y' ) ?></p>
             </div>
           <?php endwhile; ?>

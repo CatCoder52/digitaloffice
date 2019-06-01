@@ -90,9 +90,8 @@ if ( $show_chat_greeting ) {
   <?php wp_head(); ?>
 </head>
 
-<body <?php body_class( $body_class ); ?>>
-  <!-- TODO: Move .has-dark-hero class to body -->
-  <div id="page" class="site has-dark-hero">
+<body <?php body_class( 'no-js' ); ?>>
+  <div id="page" class="site">
    <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'dude' ); ?></a>
 
    <div class="nav-container">

@@ -18,7 +18,7 @@ $color-lightgrey: #808080;
 
 // Default colors
 $color-links: $color-dude-deep-black;
-$color-hover: $color-dude-black;
+$color-hover: rgba($color-dude-black, .8);
 $color-body: $color-dude-black;
 $color-headings: $color-dude-black;
 $color-darkgrey: #4f5964;
@@ -42,7 +42,7 @@ $layout-max-width: 100%;
 
 // Container widths
 $grid-base-size: 100%; // Layout container max width on desktop. This is default .container size
-$article-max-width: 800px; // Max width for articles (see also $content_width in functions.php!)
+$article-max-width: 1000px; // Max width for articles (see also $content_width in functions.php!)
 
 // Breakpoints
 $container-mobile: 480px;

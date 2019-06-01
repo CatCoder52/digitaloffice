@@ -12,10 +12,6 @@
     }
   }
 
-  .col-image {
-    @include background-cover();
-  }
-
   ul,
   li {
     margin: 0;

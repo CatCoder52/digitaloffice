@@ -1,6 +1,106 @@
-.block.block-blog.big {
-  .col-image {
+.block.block-blog-big {
+  // Padding here is navigation height plus regular padding which is exactly 100px in total
+  padding-top: calc(5rem + 113px);
+  padding-bottom: 0;
+  position: relative;
+  z-index: 2;
+
+  .container {
+    overflow: visible;
+    padding-bottom: 0;
+  }
+
+  .description p {
+    font-weight: 300;
+  }
+
+  .cols {
+    @include grid(2, $gutter_x: 0, $gutter_y: 0);
+
+    @media (max-width: 900px) {
+      display: flex;
+      flex-wrap: wrap;
+
+      .col {
+        width: 100%;
+      }
+
+      .col.col-image {
+        height: 50rem;
+      }
+    }
+  }
+
+  .col-content {
+    background: $color-dude-whitegreyish;
+    padding: $padding-general-content-box;
     position: relative;
-    overflow: hidden;
+  }
+
+  .block-head {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .block-title {
+      margin-bottom: 2.7rem;
+    }
+  }
+
+  .arrow-link-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+
+  .arrow-link-wrapper a {
+    @extend %default;
+
+    // Needs fixed width, otherwise arrow will spread the box
+    width: 243.98px;
+    background: $color-links;
+    color: $color-dude-white;
+    border: 0;
+    display: block;
+    padding: 2.5rem 3rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 150ms linear background;
+    font-family: $font-base;
+    position: absolute;
+    text-align: left;
+    right: -2rem;
+    bottom: -5rem;
+    align-items: center;
+    white-space: nowrap;
+    overflow: visible;
+
+    .arrow {
+      position: relative;
+      top: -4px;
+    }
+
+    &:hover .arrow {
+      background: $color-links;
+
+      &:before,
+      &:after {
+        background: $color-links;
+      }
+    }
+
+    span,
+    *:before,
+    *:after {
+      color: $color-dude-white;
+    }
+
+    *:before,
+    *:after,
+    .arrow {
+      background: $color-dude-white;
+      transition: all $transition-duration;
+    }
   }
 }
