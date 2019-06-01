@@ -68,5 +68,23 @@
       @include responsive-font($font-min-size, 23px);
       font-weight: 300;
     }
+
+    a {
+      background-image: linear-gradient(to top, rgba(#0572b6, .6), rgba(#0572b6, .6));
+      background-size: 100% .3rem;
+      background-position: left bottom;
+      background-repeat: no-repeat;
+      transition: .3s all;
+      text-decoration: none;
+      overflow: visible;
+      padding-bottom: .3rem;
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+      background-size: 100% 2.8rem;
+      color: $color-dude-white;
+    }
   }
 }
