@@ -9,6 +9,17 @@
  * @package dude
  */
 
+$show_chat_greeting = true;
+if ( is_singular( 'post' ) ) {
+  $show_chat_greeting = get_post_meta( get_the_id(), 'show_chat_greeting', true );
+}
+
+$body_class = 'no-js';
+
+if ( $show_chat_greeting ) {
+  $body_class .= ' send-chat-greeting';
+}
+
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>><script>
@@ -79,7 +90,7 @@
   <?php wp_head(); ?>
 </head>
 
-<body <?php body_class( 'no-js send-chat-greeting' ); ?>>
+<body <?php body_class( $body_class ); ?>>
   <!-- TODO: Move .has-dark-hero class to body -->
   <div id="page" class="site has-dark-hero">
    <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'dude' ); ?></a>
