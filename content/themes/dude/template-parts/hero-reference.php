@@ -2,14 +2,14 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
- * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-06-01 17:50:59
+ * @Last Modified by:   Timi Wahalahti
+ * @Last Modified time: 2019-06-01 18:39:41
  *
  * @package dude2019
  */
 
 $title = get_the_title();
-$title_alt = get_post_meta( get_the_id(), 'title_alt', true );
+$title_alt = get_post_meta( get_the_id(), 'singular_alt_title', true );
 $logofile = get_post_meta( get_the_id(), 'logo_svg', true );
 $url = get_post_meta( get_the_id(), 'url', true );
 
