@@ -394,8 +394,15 @@ gulp.task('js', function() {
           themeDir + '/node_modules/timeme.js/timeme.js',
           themeDir + '/js/src/navigation.js',
           themeDir + '/js/src/svg-morpheus.js',
-          themeDir + '/js/src/magnific-popup.custom.js',
           themeDir + '/js/src/lazyload.js',
+          themeDir + '/node_modules/blueimp-gallery/js/blueimp-helper.js',
+          themeDir + '/node_modules/blueimp-gallery/js/blueimp-gallery.js',
+          themeDir + '/node_modules/blueimp-gallery/js/blueimp-gallery-fullscreen.js',
+          themeDir + '/node_modules/blueimp-gallery/js/blueimp-gallery-indicator.js',
+          themeDir + '/node_modules/blueimp-gallery/js/blueimp-gallery-video.js',
+          themeDir + '/node_modules/blueimp-gallery/js/blueimp-gallery-vimeo.js',
+          themeDir + '/node_modules/blueimp-gallery/js/blueimp-gallery-youtube.js',
+          themeDir + '/node_modules/blueimp-gallery/js/jquery.blueimp-gallery.js',
           themeDir + '/js/src/scripts.js'
         ])
         .pipe(concat('all.js'))

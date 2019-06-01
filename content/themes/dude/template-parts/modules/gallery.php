@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-25 14:37:31
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-25 20:03:05
+ * @Last Modified time: 2019-06-01 23:37:16
  *
  * @package dude2019
  */
@@ -42,21 +42,19 @@ $visible_images = array_slice( $images, 0, 7 ); ?>
 <section class="block block-gallery">
   <div class="container">
 
-    <div class="cols">
+    <div class="cols" id="gallery">
       <?php foreach ( $visible_images as $image ) : ?>
         <div class="col" style="background-image: url('<?php echo esc_url( $image['url'] ) ?>');">
           <a class="global-link gallery-item" href="<?php echo esc_url( $image['url'] ) ?>"><span class="screen-reader-text">Avaa galleria kuvaan "<?php echo esc_html( $image['alt'] ) ?>"</span></a>
         </div>
       <?php endforeach; ?>
-    </div>
 
-    <?php
-    // This is for JS gallery use
-    foreach ( $images as $image ) : ?>
-      <figure class="image hidden">
-        <a href="<?php echo esc_url( $image['url'] ) ?>" class="gallery-item"><?php echo $image['alt'] ?></a>
-      </figure>
-    <?php endforeach; ?>
+      <?php
+      // This is for JS gallery use
+      foreach ( $images as $image ) : ?>
+        <a class="hidden" href="<?php echo esc_url( $image['url'] ) ?>" class="gallery-item"><?php echo $image['alt'] ?></a>
+      <?php endforeach; ?>
+    </div>
 
   </div>
 </section>

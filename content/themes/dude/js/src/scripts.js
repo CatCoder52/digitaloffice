@@ -10,86 +10,31 @@ document.body.classList.add('js');
 ( function( $ ) {
 
     // Gallery
-    $('a.gallery-item[href$=jpg], a.gallery-item[href$=gif], a.gallery-item[href$=png], .gallery-item a[href$=jpg], .gallery-item a[href$=png], .gallery-item a[href$=gif]').magnificPopup({
-      type: 'image',
-      removalDelay: 600, // Delay removal by X to allow out-animation
-      gallery: {
-        enabled : true,
-        tCounter: '<span class="mfp-counter">%curr% / %total%</span>'
-      },
-      callbacks: {
-
-        beforeClose: function() {
-          var self = this;
-          self.wrap.addClass('mfp-animate');
+    document.getElementById('gallery').onclick = function (event) {
+      event = event || window.event;
+      var target = event.target || event.srcElement,
+      link = target.src ? target.parentNode : target,
+      options = {
+        index: link,
+        event: event,
+        fullScreen: false,
+        stretchImages: 'cover',
+        onopen: function (index, slide) {
+          current = this.getIndex();
+          total = this.getNumber();
+          document.getElementById('pos').textContent = current + 1;
+          document.getElementById('count').textContent = total;
         },
-
-        close: function() {
-          var self = this;
-          self.wrap.removeClass('mfp-animate');
-        },
-
-        open: function() {
-
-          // Add as bg image
-          this.wrap.css('background-image', 'url(' + this.currItem.src + ')');
-
-          // Overwrite default prev + next function. Add timeout for CSS3 crossfade animation
-          $.magnificPopup.instance.next = function() {
-            var self = this;
-            self.wrap.removeClass('mfp-image-loaded');
-            setTimeout(function() { $.magnificPopup.proto.next.call(self); }, 120);
-
-            // Add as bg image
-            this.wrap.css('background-image', 'url(' + this.currItem.src + ')');
-
-          }
-          $.magnificPopup.instance.prev = function() {
-            var self = this;
-            self.wrap.removeClass('mfp-image-loaded');
-            setTimeout(function() { $.magnificPopup.proto.prev.call(self); }, 120);
-
-            // Add as bg image
-            this.wrap.css('background-image', 'url(' + this.currItem.src + ')');
-          }
-
-          // Add custom CSS class for different styling
-          if( this.st.el && this.st.el.data('mfp-dudestyles') ) {
-            this.wrap.addClass( this.currItem.el.data('mfp-dudestyles') );
-          }
-
-        },
-
-        imageLoadComplete: function() {
-          var self = this;
-          setTimeout(function() { self.wrap.addClass('mfp-image-loaded'); }, 16);
-        },
-
-        change: function() {
-          var img = this.content.find('img');
-          img.css('max-height', parseFloat(img.css('max-height')) -200);
-          if (this.isOpen) {
-            this.wrap.addClass('mfp-open');
-          }
-        },
-
-        resize: function() {
-          var img = this.content.find('img');
-          img.css('max-height', parseFloat(img.css('max-height')) -200);
+        onslide: function (index, slide) {
+          current = this.getIndex();
+          total = this.getNumber();
+          document.getElementById('pos').textContent = current + 1;
+          document.getElementById('count').textContent = total;
         }
-
       },
-      image : {
-        markup : '<div class="please-rotate-nag"><div class="phone"></div><div class="message">' + dude_screenReaderText.rotatedevice + '</div></div><div class="mfp-figure">' +
-        '<div class="mfp-close"></div>' +
-        '<div class="mfp-img"></div>' +
-        '<div class="mfp-bottom-bar">' +
-        '<div class="mfp-title"></div>' +
-        '<div class="mfp-counter"></div>' +
-        '</div>' +
-        '</div>'
-      }
-    });
+      links = this.getElementsByTagName('a');
+      blueimp.Gallery(links, options);
+    };
 
     // Check if gallery is portrait and show/hide notification accordingly
     if(window.innerHeight < window.innerWidth) {

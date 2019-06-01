@@ -91,6 +91,20 @@ if ( $show_chat_greeting ) {
 </head>
 
 <body <?php body_class( 'no-js' ); ?>>
+
+  <?php if ( is_page( 4485 ) ) : ?>
+    <div id="blueimp-gallery" class="blueimp-gallery">
+      <div class="slides"></div>
+      <h3 class="title"></h3>
+      <a class="prev">‹</a>
+      <a class="next">›</a>
+      <a class="close">×</a>
+      <a class="play-pause"></a>
+      <ol class="indicator"></ol>
+      <div class="numbers"><span id="pos"></span> / <span id="count"></span></div>
+    </div>
+  <?php endif; ?>
+
   <div id="page" class="site">
    <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'dude' ); ?></a>
 
