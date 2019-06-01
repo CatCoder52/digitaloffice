@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 15:07:09
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-05-31 14:10:45
+ * @Last Modified time: 2019-06-01 13:20:11
  *
  * @package dude2019
  */
@@ -22,7 +22,7 @@ if ( empty( $bg_image ) || empty( $title ) || empty( $content ) ) {
     <div class="cols">
       <div class="col col-image">
         <div class="image">
-          <div class="background-image preview lazyload" style="background-image: url('<?php echo wp_get_attachment_image_url( $bg_image, 'tiny-preload-thumbnail' ) ?>');" data-src="<?php echo $image ?>"></div>
+          <div class="background-image preview lazyload" style="background-image: url('<?php echo wp_get_attachment_image_url( $bg_image, 'tiny-preload-thumbnail' ) ?>');" data-src="<?php echo wp_get_attachment_image_url( $bg_image, 'large' ) ?>"></div>
           <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo wp_get_attachment_image_url( $bg_image, 'large' ) ?>');"<?php endif; ?>></div>
           <noscript><div class="background-image full-image" style="background-image: url('<?php echo wp_get_attachment_image_url( $bg_image, 'large' ) ?>');"></div></noscript>
         </div>
