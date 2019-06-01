@@ -34,6 +34,7 @@ body {
 a {
   color: $color-links;
   text-decoration: none;
+  transition: all $transition-duration;
 
   &:hover {
     color: $color-hover;

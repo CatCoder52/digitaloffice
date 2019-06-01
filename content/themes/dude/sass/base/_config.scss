@@ -18,7 +18,7 @@ $color-lightgrey: #808080;
 
 // Default colors
 $color-links: $color-dude-deep-black;
-$color-hover: $color-dude-black;
+$color-hover: rgba($color-dude-black, .8);
 $color-body: $color-dude-black;
 $color-headings: $color-dude-black;
 $color-darkgrey: #4f5964;

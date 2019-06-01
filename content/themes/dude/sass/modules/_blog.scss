@@ -4,8 +4,28 @@
   .cols {
     @include grid(3, $gutter_x: 10rem, $gutter_y: 10rem);
 
+    @media (max-width: 1100px) {
+      @include grid(2, $gutter_x: 10rem, $gutter_y: 10rem);
+    }
+
+    @media (max-width: 900px) {
+      @include grid(2, $gutter_x: 5rem, $gutter_y: 5rem);
+    }
+
+    @media (max-width: 580px) {
+      display: block;
+
+      .col {
+        margin-bottom: 8rem;
+      }
+
+      .col:last-child {
+        margin-bottom: 0;
+      }
+    }
+
     .image {
-      margin-bottom: 6rem;
+      margin-bottom: 4rem;
 
       &:after {
         content: '';
