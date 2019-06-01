@@ -4,7 +4,10 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "hash": "6d47fff148037031e6c830b98349c570",
+=======
+>>>>>>> front-end
     "content-hash": "469acaa12be9b712bf2cb6fecff25e39",
     "packages": [
         {
@@ -660,6 +663,42 @@
                 "wordpress"
             ],
             "time": "2017-12-15 09:20:14"
+        },
+        {
+            "name": "humanmade/page-for-post-type",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/humanmade/page-for-post-type.git",
+                "reference": "b603f30fea65328002789dffd73cf7ef2030ecbb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/humanmade/page-for-post-type/zipball/b603f30fea65328002789dffd73cf7ef2030ecbb",
+                "reference": "b603f30fea65328002789dffd73cf7ef2030ecbb",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Human Made Limited",
+                    "email": "support@humanmade.com",
+                    "homepage": "https://humanmade.com"
+                }
+            ],
+            "description": "Allows you to set pages for any custom post type archive",
+            "homepage": "https://github.com/humanmade/page-for-post-type",
+            "keywords": [
+                "wordpress"
+            ],
+            "time": "2017-12-15T09:20:14+00:00"
         },
         {
             "name": "johnpbloch/wordpress",

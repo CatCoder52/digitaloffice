@@ -60,7 +60,8 @@ body:after {
 body.single .site-content,
 body.archive .site-content,
 body.blog .site-content,
-body.single-reference {
+body.single-reference .site-content,
+body.single-person .site-content {
   transition: all .75s 50ms cubic-bezier(.19, 1, .22, 1);
   will-change: transform;
 }
@@ -69,7 +70,8 @@ body.single-reference {
 body.single.js-nav-active .site-content,
 body.archive.js-nav-active .site-content,
 body.blog.js-nav-active .site-content,
-body.single-reference.js-nav-active .site-content {
+body.single-reference.js-nav-active .site-content,
+body.single-person.js-nav-active .site-content {
   transform: translateX(-50vw);
 
   .block-hero {
