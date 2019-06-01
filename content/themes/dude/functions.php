@@ -92,6 +92,10 @@ function dude_scripts() {
     wp_enqueue_script( 'comment-reply' );
   }
 
+  wp_localize_script( 'scripts', 'dude', array(
+    'theme_base'  => get_template_directory_uri(),
+  ) );
+
   wp_localize_script( 'scripts', 'dude_screenReaderText', array(
     'expand'      => esc_html__( 'Open child menu', 'dude' ),
     'collapse'    => esc_html__( 'Close child menu', 'dude' ),

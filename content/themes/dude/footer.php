@@ -38,6 +38,9 @@
 
 <?php wp_footer(); ?>
 
+<script>CRISP_WEBSITE_ID = "-K90vfAnyk27kD-pZAep"</script>
+<script async src="https://client.crisp.im/l.js"></script>
+
 <script src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"></script>
 
 </body>

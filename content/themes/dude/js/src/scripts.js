@@ -345,21 +345,52 @@ document.body.classList.add('js');
     var trigger = document.getElementsByClassName('js-trigger')[0];
     moveTo.registerTrigger(trigger);
 
-    // Chat
+    // Chat greeting
     if ( typeof( Storage ) !== 'undefined' ) {
-      if( localStorage.getItem( 'chat_greeting_sent' ) == null ) {
+
+      var greetings = [
+        'Moottoritie on kuuma mutta webisivut pitäs saada?',
+        'Etsitkö tekijää seuraavaan projektiisi? Heitä viestiä jos voidaan auttaa :)',
+        'Etsitkö hyvää tekijää projektiisi? Pistä viestiä niin kerron vähän lisää meidän palveluista.',
+      ];
+
+      var greeters = [
+        {
+          name: 'Roni',
+          image: dude.theme_base + '/images/chat-roni.jpg',
+        },
+        {
+          name: 'Timi',
+          image: dude.theme_base + '/images/chat-timi.jpg',
+        },
+      ]
+
+      // show only when not already shown and chat is available
+      if ( localStorage.getItem( 'chat_greeting_sent' ) == null ) {
+
         // show message on every else page than blog or singular post, but allow on singular when explicity setted as so
         if ( ! $('body').hasClass('blog') && ( ! $('body').hasClass('single-post') || $('body').hasClass('send-chat-greeting') ) ) {
+
           // init timer
           TimeMe.initialize({
             currentPageName: document.title ,
             idleTimeoutInSeconds: 10
           });
 
-          TimeMe.callAfterTimeElapsedInSeconds( 30, function() {
-            // do nothing if
-            if( ! $crisp.is('session:ongoing') && ! $crisp.is('chat:opened') ) {
+          // trigger chat after 30 seconds
+          TimeMe.callAfterTimeElapsedInSeconds( 15, function() {
 
+            // do nothing if session is ongoing or user has opened the chat
+            if ( $crisp.is('website:available') && ! $crisp.is('session:ongoing') && ! $crisp.is('chat:opened') ) {
+
+              // get random greeting and greeter
+              var greeting = greetings[ Math.floor( Math.random() * greetings.length ) ];
+              var greeter = greeters[ Math.floor( Math.random() * greeters.length ) ];
+
+              // show greeting
+              $('body').append('<div class="chat-greeting"><div class="col col-image" style="background-image:url(' + greeter.image + ')"></div><div class="col col-message"><p class="head">Viesti henkilöltä ' + greeter.name + '</p><p>' + greeting + '</p></div>')
+
+              // save that we have shown the greeting multiple times
               localStorage.setItem( 'chat_greeting_sent', new Date().toLocaleString() );
             }
           });
@@ -367,6 +398,26 @@ document.body.classList.add('js');
       } // end chat already sent check
     } // end storage check
 
+    // Open chat if element is clicked
+    $('.open-chat').on('click', function(event) {
+      event.preventDefault();
+      $crisp.push(['do', 'chat:show']);
+      $crisp.push(['do', 'chat:open']);
+    });
+
   });
 
 } )( jQuery );
+
+// If there is unread posts, show the chat
+window.CRISP_READY_TRIGGER = function() {
+  setTimeout( function() {
+    // Hide chat circle by default unless there is unread messages
+    if ( $crisp.get('chat:unread:count') > 0 ) {
+      $crisp.push(['do', 'chat:show']);
+      $crisp.push(['do', 'chat:open']);
+    } else {
+      $crisp.push(['do', 'chat:hide']);
+    }
+  }, 50 );
+};
