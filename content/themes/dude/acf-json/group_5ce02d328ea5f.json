@@ -140,6 +140,25 @@
                     "maxlength": ""
                 }
             ]
+        },
+        {
+            "key": "field_5cf2a02f6d05c",
+            "label": "Lyhyt esittely",
+            "name": "short_desc_blog",
+            "type": "textarea",
+            "instructions": "Käytetään blogin kirjoittajan esittelyssä.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         }
     ],
     "location": [
@@ -159,5 +178,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1559038792
+    "modified": 1559097459
 }
