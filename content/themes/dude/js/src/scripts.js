@@ -392,6 +392,7 @@ document.body.classList.add('js');
 
               $crisp.push(['on', 'chat:opened', function() {
                 $crisp.push(['do', 'message:show', ['text', greeting]]);
+                $crisp.push(['off', 'chat:opened']);
               }]);
 
               // save that we have shown the greeting multiple times
