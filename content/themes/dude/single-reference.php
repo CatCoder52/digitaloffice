@@ -64,25 +64,7 @@ get_header(); ?>
       <div class="container">
 
         <div class="entry-content">
-          <?php
-          the_content( sprintf(
-            wp_kses(
-              /* translators: %s: Name of current post. Only visible to screen readers */
-              __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'dude' ),
-              array(
-                'span' => array(
-                  'class' => array(),
-                ),
-              )
-            ),
-            get_the_title()
-          ) );
-
-          wp_link_pages( array(
-            'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'dude' ),
-            'after'  => '</div>',
-          ) );
-          ?>
+          <?php the_content() ?>
         </div><!-- .entry-content -->
 
       </div>
@@ -102,7 +84,7 @@ get_header(); ?>
 
           <div class="quote-author-info">
             <?php if ( ! empty( $quote_person_image ) ) : ?>
-              <img src="<?php wp_get_attachment_image_url( $quote_person_image, 'medium' ) ?>" />
+              <img src="<?php echo wp_get_attachment_image_url( $quote_person_image, 'medium' ) ?>" />
             <?php endif; ?>
             <p><?php echo esc_html( $quote_person ) ?><br /><?php echo esc_html( $quote_person_title ) ?></p>
           </div>
