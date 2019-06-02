@@ -41,11 +41,15 @@ if ( empty( $images ) ) {
   <div class="container">
 
     <div class="cols" id="gallery">
-      <?php foreach ( $images as $image ) : ?>
+      <?php $x = 0; foreach ( $images as $image ) :
+        if ( $x < 7 ) : ?>
         <div class="col" style="background-image: url('<?php echo esc_url( $image['url'] ) ?>');">
-          <a class="global-link gallery-item" href="<?php echo esc_url( $image['url'] ) ?>"><span class="screen-reader-text">Avaa galleria kuvaan "<?php echo esc_html( $image['alt'] ) ?>"</span></a>
+          <a class="global-link" href="<?php echo esc_url( $image['url'] ) ?>"><span class="screen-reader-text">Avaa galleria kuvaan "<?php echo esc_html( $image['alt'] ) ?>"</span></a>
         </div>
-      <?php endforeach; ?>
+      <?php else: ?>
+          <a class="global-link hidden" href="<?php echo esc_url( $image['url'] ) ?>"><span class="screen-reader-text">Avaa galleria kuvaan "<?php echo esc_html( $image['alt'] ) ?>"</span></a>
+        <?php endif; ?>
+      <?php $x++; endforeach; ?>
     </div>
 
   </div>
