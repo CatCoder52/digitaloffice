@@ -41,16 +41,10 @@ if ( empty( $images ) ) {
   <div class="container">
 
     <div class="cols" id="gallery">
-      <?php foreach ( $visible_images as $image ) : ?>
+      <?php foreach ( $images as $image ) : ?>
         <div class="col" style="background-image: url('<?php echo esc_url( $image['url'] ) ?>');">
           <a class="global-link gallery-item" href="<?php echo esc_url( $image['url'] ) ?>"><span class="screen-reader-text">Avaa galleria kuvaan "<?php echo esc_html( $image['alt'] ) ?>"</span></a>
         </div>
-      <?php endforeach; ?>
-
-      <?php
-      // This is for JS gallery use
-      foreach ( $images as $image ) : ?>
-        <a class="hidden" href="<?php echo esc_url( $image['url'] ) ?>" class="gallery-item"><?php echo $image['alt'] ?></a>
       <?php endforeach; ?>
     </div>
 

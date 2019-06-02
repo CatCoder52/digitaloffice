@@ -20,7 +20,8 @@ document.body.classList.add('js');
     });
 
     // Gallery
-    if ( $( '#gallery' ).length) {
+    var galleryelement = document.getElementById('gallery');
+    if (typeof(galleryelement) != 'undefined' && element != null) {
       document.getElementById('gallery').onclick = function (event) {
         event = event || window.event;
         var target = event.target || event.srcElement,
