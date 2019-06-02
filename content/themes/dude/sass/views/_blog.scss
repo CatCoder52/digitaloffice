@@ -1,14 +1,8 @@
-// ------------------------------------------------
-// WordPress blog & articles view
-//
-// The styles for most of the TinyMCE produced
-// classes and other WordPress editor formatting.
-// ------------------------------------------------
-
 // Nav on white background when in blog
 body.blog,
 body.single-reference,
-body.single-person {
+body.single-person,
+body.archive.category {
   .site-header nav > ul > li > a,
   .site-header nav > ul > li > button {
     color: $color-body;
