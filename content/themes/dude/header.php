@@ -93,7 +93,7 @@ if ( $show_chat_greeting ) {
 <body <?php body_class( 'no-js' ); ?>>
 
   <?php if ( is_page( 4485 ) ) : ?>
-    <div id="blueimp-gallery" class="blueimp-gallery">
+    <div id="blueimp-gallery" class="blueimp-gallery" aria-hidden="true">
       <div class="slides"></div>
       <h3 class="title"></h3>
       <a class="prev">‹</a>
