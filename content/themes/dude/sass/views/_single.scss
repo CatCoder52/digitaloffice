@@ -39,7 +39,8 @@
 
   .entry-content > *,
   .entry-content figcaption,
-  .block-head {
+  .block-head,
+  .entry-footer {
     width: 100%;
     max-width: $article-max-width;
     margin-left: auto;
@@ -64,20 +65,20 @@
   .entry-content ol li,
   .entry-content ul li {
     margin-left: 3rem;
+
+    @media (max-width: 1000px) {
+      margin-left: 2rem;
+    }
   }
 
-  .entry-content > * {
+  .entry-content > *,
+  .entry-footer {
     padding-left: $padding-general-content-box;
     padding-right: $padding-general-content-box;
 
-    @media (max-width: $container-ipad) {
-      padding-left: $padding-general-content-box-ipad;
-      padding-right: $padding-general-content-box-ipad;
-    }
-
-    @media (max-width: $container-mobile) {
-      padding-left: $padding-general-content-box-mobile;
-      padding-right: $padding-general-content-box-mobile;
+    @media (max-width: 1200px) {
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 
@@ -85,7 +86,7 @@
     background: $color-dude-whitegreyish;
     padding: $padding-general-content-box;
 
-    @media (max-width: $container-ipad) {
+    @media (max-width: 1000px) {
       padding: $padding-general-content-box-ipad;
     }
 

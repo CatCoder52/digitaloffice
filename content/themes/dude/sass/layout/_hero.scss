@@ -36,9 +36,11 @@
   }
 
   @media (max-width: 600px) {
-    height: auto;
-    padding-top: 20rem;
-    padding-bottom: 20rem;
+    &:not(.block-hero-single) {
+      height: auto;
+      padding-top: 20rem;
+      padding-bottom: 20rem;
+    }
   }
 
   // Contact thanks

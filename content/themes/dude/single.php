@@ -31,6 +31,10 @@ get_header(); ?>
             <?php the_content(); ?>
           </div><!-- .entry-content -->
 
+          <footer class="entry-footer">
+            <?php dude_entry_footer(); ?>
+          </footer><!-- .entry-footer -->
+
           <div class="entry-author">
             <?php // get author and person corresponding author
             $user_id = get_the_author_meta( 'ID' );
