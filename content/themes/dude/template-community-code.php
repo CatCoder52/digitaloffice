@@ -15,15 +15,20 @@ get_header(); ?>
 
     <?php include get_theme_file_path( 'template-parts/hero.php' ); ?>
 
-
     <div class="block block-community">
 
       <div class="container">
-        <h2>Duden osallistuminen WordPress-yhteisön toimintaan</h2>
+        <header class="block-head">
+          <p class="block-title-pre" aria-describedby="block-title-wordpress">WordPress & Dude</p>
+          <h2 class="block-title" id="block-title-wordpress">Duden osallistuminen WordPress-yhteisön toimintaan</h2>
+        </header>
 
-        <p>WordPress on avoimen lähdekoodin julkaisujärjestelmä, jota kehitetään yhteisön vapaaehtoistyön voimin. Dude on ollut WordPressin yhteisön toiminnassa mukana alusta asti ei ainoastaan koodipuolella, mutta myös esimerkiksi järjestämässä <a href="https://www.meetup.com/topics/wordpress">WordPress Meetuppeja</a> ja <a href="https://central.wordcamp.org/">WordCampeja</a> Suomessa.</p>
+        <div class="cols">
+          <div class="col col-content">
+            <div class="content">
+              <p>WordPress on avoimen lähdekoodin julkaisujärjestelmä, jota kehitetään yhteisön vapaaehtoistyön voimin. Dude on ollut WordPressin yhteisön toiminnassa mukana alusta asti ei ainoastaan koodipuolella, mutta myös esimerkiksi järjestämässä <a href="https://www.meetup.com/topics/wordpress">WordPress Meetuppeja</a> ja <a href="https://central.wordcamp.org/">WordCampeja</a> Suomessa.</p>
 
-        <p><small>Dude on ansainnut seuraavat WordPress-maailman viralliset <a href="https://make.wordpress.org/meta/handbook/documentation/profile-badges/">ansiomerkit</a> WordPress-kontribuutioistaan (käyttäjät <a href="https://profiles.wordpress.org/digitoimistodude">digitoimistodude</a>, <a href="https://profiles.wordpress.org/rolle">rolle</a>, <a href="https://profiles.wordpress.org/sippis">sippis</a>):</small></p>
+              <p><small>Dude on ansainnut seuraavat WordPress-maailman viralliset <a href="https://make.wordpress.org/meta/handbook/documentation/profile-badges/">ansiomerkit</a> WordPress-kontribuutioistaan (käyttäjät <a href="https://profiles.wordpress.org/digitoimistodude">digitoimistodude</a>, <a href="https://profiles.wordpress.org/rolle">rolle</a>, <a href="https://profiles.wordpress.org/sippis">sippis</a>):</small></p>
 
         <ul class="item-list" role="main">
           <li>
@@ -82,6 +87,14 @@ get_header(); ?>
             Meetup Organizer
           </li>
         </ul>
+        
+        </div>
+          </div>
+
+          <div class="col col-image">
+          </div>
+        </div>
+        
       </div>
 
     </div>
