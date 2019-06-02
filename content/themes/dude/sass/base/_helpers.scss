@@ -41,7 +41,7 @@
       $grid_width: 100% / $columns;
       $offset: $gutter_x / 2;
       width: calc(#{$grid_width} - #{$offset});
-      margin-right: $gutter_x;
+      margin-right: $offset;
       margin-bottom: $gutter_y;
 
       &:nth-child(#{$columns}n+#{$columns}) {

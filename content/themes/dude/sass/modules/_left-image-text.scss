@@ -21,8 +21,20 @@
     height: 55rem;
     margin-top: -10rem;
 
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      width: 50vw;
+    }
+
+    @supports (-ms-ime-align: auto) {
+      width: 50vw;
+    }
+
     @media (max-width: $container-ipad) {
       margin-top: -5rem;
+    }
+
+    @media (max-width: $container-mobile) {
+      height: 35rem;
     }
   }
 
@@ -30,9 +42,12 @@
     background: $color-dude-whitegreyish;
     padding: $padding-general-content-box;
     max-width: 75rem;
-    margin-left: -20rem;
     position: relative;
     z-index: 1;
+
+    @media (min-width: 860px) {
+      margin-left: -20rem;
+    }
 
     @media (max-width: $container-mobile) {
       padding: $padding-general-content-box-ipad;
@@ -47,5 +62,14 @@
 
   .cols {
     @include grid(2, $gutter_x: 0, $gutter_y: 0);
+
+    @media (max-width: 860px) {
+      display: flex;
+      flex-wrap: wrap;
+
+      > * {
+        width: 100%;
+      }
+    }
   }
 }
