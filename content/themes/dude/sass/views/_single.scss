@@ -188,8 +188,6 @@
 }
 
 .block.block-hero-person {
-  padding-bottom: 0;
-
   .container {
     padding-bottom: 0;
   }
@@ -247,11 +245,15 @@
   .social {
     margin-left: 0;
     margin-top: 0;
-    margin-right: .5rem;
+    margin-right: 0;
     margin-bottom: 0;
     padding: 0;
     list-style: none;
     display: flex;
+
+    li {
+      margin-right: .5rem;
+    }
   }
 
   .social svg {
