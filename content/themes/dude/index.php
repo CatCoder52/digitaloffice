@@ -60,11 +60,11 @@ get_header(); ?>
         <header class="block-head<?php if ( is_category() || is_tag() || is_author() || is_date() ) : ?> block-head-archive<?php endif; ?>">
         
         <?php if ( is_tag() ) : ?>
-          <p class="block-title-pre" aria-describedby="block-title-block-blog">Avainsana</p>
-          <h1 class="block-title block-title-archive" id="block-title-block-blog"><?php echo $tag; ?></h1>
-        <?php endif; ?>
 
-        <?php if ( is_category() ) : ?>
+          <p class="block-title-pre" aria-describedby="block-title-block-blog">Avainsana</p>
+          <h1 class="block-title block-title-archive" id="block-title-block-blog"><?php echo single_tag_title(); ?></h1>
+        
+        <?php elseif ( is_category() ) : ?>
 
           <p class="block-title-pre" aria-describedby="block-title-block-blog">Kategoria</p>
           <h1 class="block-title block-title-archive" id="block-title-block-blog"><?php echo single_cat_title(); ?></h1>
@@ -98,9 +98,7 @@ get_header(); ?>
         <?php elseif ( is_search() ) : ?>
 
           <p class="block-title-pre" aria-describedby="block-title-block-blog">Hakutulokset</p>
-          <h1 class="block-title block-title-archive" id="block-title-block-blog"><?php $cat = get_the_category();
-          $cat = $cat[0];
-          echo $cat->category_count; ?> löytyi</h2>
+          <h1 class="block-title block-title-archive" id="block-title-block-blog"><?php $cat = get_the_category(); $cat = $cat[0]; echo $cat->category_count; ?> löytyi</h2>
 
         <?php elseif ( is_author() ) : ?>
 
