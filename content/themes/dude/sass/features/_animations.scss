@@ -11,19 +11,6 @@
   }
 }
 
-// If no JavaScript enabled
-.no-js .opacity-on-load,
-.no-js .opacity-on-load-instant,
-.no-js .animate,
-.no-js .block.block-hero.block-hero-frontpage .cta-link,
-.no-js .block.block-hero.block-hero-side-columns .cta-link,
-.no-js .block.block-hero.block-hero-frontpage .content,
-.no-js .block.block-hero.block-hero-side-columns .content {
-  opacity: 1 !important;
-  visibility: visible !important;
-  transition: none !important;
-}
-
 @keyframes underline-idle {
   0% {
     width: 0%;
