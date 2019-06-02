@@ -233,25 +233,28 @@ pre {
   }
 }
 
-.entry-time {
-  margin-bottom: 1.5em;
-}
-
 .cat {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 2rem;
 
   a {
-    @extend %small;
-    font-weight: 600;
+    @extend .cta-link;
   }
 }
 
 ul.tags {
   overflow: hidden;
-  margin: 0;
+  margin-top: 4rem;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 4rem;
   padding: 0;
   padding-left: 0;
+
+  li,
+  a {
+    line-height: 1.1;
+  }
 
   li {
     margin-left: 0;
@@ -261,21 +264,89 @@ ul.tags {
     display: inline-block;
     float: left;
     margin-top: 0;
+    position: relative;
+    background: transparent;
+
+    &:before,
+    &:after {
+      content: '';
+      width: 0;
+      height: 1px;
+      position: absolute;
+      transition: all .2s linear;
+      background: $color-dude-deep-black;
+    }
+
+    a:before,
+    a:after {
+      content: '';
+      width: 1px;
+      height: 0;
+      position: absolute;
+      transition: all .1s linear;
+      background: $color-dude-deep-black;
+    }
+
+    &:hover:before,
+    &:hover:after {
+      width: 100%;
+    }
+
+    &:hover a:before,
+    &:hover a:after {
+      height: 100%;
+    }
 
     a {
-      font-size: 1.2rem;
-      color: #333;
-      padding: .5rem 1rem;
-      display: inline;
-      border-radius: 4px;
-      background: #f0f0f0;
-      opacity: .8;
+      @include responsive-font(16px, 18px);
+      display: inline-block;
+      position: relative;
+      padding: 3px 5px;
+      border: 1px solid rgba($color-dude-deep-black, .1);
     }
 
     a:hover {
-      color: #fff;
-      background: #aaa;
-      opacity: 1;
+      color: $color-dude-deep-black;
+    }
+
+    &:after {
+      left: 0;
+      bottom: 0;
+      transition-delay: .6;
+    }
+
+    a:after {
+      transition-delay: .4s;
+      right: -1px;
+      bottom: 0;
+    }
+
+    &:before {
+      right: 0;
+      top: 0;
+      transition-delay: .2s;
+    }
+
+    a:before {
+      transition-delay: 0s;
+      left: -1px;
+      top: 0;
+    }
+
+    &:hover:after {
+      transition-delay: 0s;
+    }
+
+    &:hover a:after {
+      transition-delay: .2s;
+    }
+
+    &:hover:before {
+      transition-delay: .4s;
+    }
+
+    &:hover a:before {
+      transition-delay: .6s;
     }
   }
 }

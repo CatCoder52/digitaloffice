@@ -82,6 +82,10 @@
     }
   }
 
+  .entry-footer {
+    margin-top: 5rem;
+  }
+
   .block-head {
     background: $color-dude-whitegreyish;
     padding: $padding-general-content-box;
@@ -116,7 +120,10 @@
   }
 
   .entry-content {
-    padding: $padding-general-content-box;
+    padding-top: $padding-general-content-box;
+    padding-left: $padding-general-content-box;
+    padding-right: $padding-general-content-box;
+    padding-bottom: 0;
 
     .wp-block-gallery {
       @extend .columns;
