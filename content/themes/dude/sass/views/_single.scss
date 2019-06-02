@@ -40,7 +40,8 @@
   .entry-content > *,
   .entry-content figcaption,
   .block-head,
-  .entry-footer {
+  .entry-footer,
+  .entry-author {
     width: 100%;
     max-width: $article-max-width;
     margin-left: auto;
@@ -72,7 +73,7 @@
   }
 
   .entry-content > *,
-  .entry-footer {
+  .entry-author {
     padding-left: $padding-general-content-box;
     padding-right: $padding-general-content-box;
 
@@ -84,6 +85,64 @@
 
   .entry-footer {
     margin-top: 5rem;
+    padding-left: $padding-general-content-box;
+    padding-right: $padding-general-content-box;
+
+    @media (max-width: $container-ipad) {
+      padding-left: $padding-general-content-box-ipad;
+      padding-right: $padding-general-content-box-ipad;
+    }
+
+    @media (max-width: $container-mobile) {
+      padding-left: $padding-general-content-box-mobile;
+      padding-right: $padding-general-content-box-mobile;
+    }
+  }
+
+  .entry-author {
+    text-align: center;
+    padding-top: 8rem;
+    margin-top: 2rem;
+    border-top: 1px solid $color-superlightgrey;
+    padding-left: $padding-general-content-box;
+    padding-right: $padding-general-content-box;
+
+    @media (max-width: $container-ipad) {
+      padding-left: $padding-general-content-box-ipad;
+      padding-right: $padding-general-content-box-ipad;
+      padding-bottom: $padding-general-content-box-ipad;
+    }
+
+    @media (max-width: $container-mobile) {
+      padding-left: $padding-general-content-box-mobile;
+      padding-right: $padding-general-content-box-mobile;
+      padding-bottom: $padding-general-content-box-mobile;
+    }
+
+    .avatar {
+      width: 15rem;
+      height: 15rem;
+      border-radius: 50%;
+      margin-bottom: 2rem;
+    }
+
+    h3 {
+      @extend %h4;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .job-title {
+      @extend %h5;
+      margin-top: 0;
+    }
+
+    .person-description {
+      @include responsive-font(17px, 19px);
+      max-width: 50rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   .block-head {

@@ -50,7 +50,7 @@ get_header(); ?>
               $desc = get_post_meta( $person_id[0]->post_id, 'short_desc_blog', true ); ?>
 
               <a href="<?php echo get_the_permalink( $user_id ) ?>"><?php echo get_avatar( $user_id, '512' ); ?></a>
-              <h3><?php echo get_the_author_meta( 'display_name' ); ?></h3>
+              <h3><?php echo get_the_author_meta( 'first_name' ); ?> <?php echo get_the_author_meta( 'last_name' ); ?></h3>
 
               <!-- Temp -->
               <p class="job-title">Teknologiajohtaja, perustaja</p>
