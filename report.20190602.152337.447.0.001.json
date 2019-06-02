@@ -1,0 +1,263 @@
+
+{
+  "header": {
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20190602.152337.447.0.001.json",
+    "dumpEventTime": "2019-06-02T15:23:37Z",
+    "dumpEventTimeStamp": "1559478217496",
+    "processId": 447,
+    "cwd": "/mnt/c/Users/Optimus/Projects/dude",
+    "commandLine": [
+      "node",
+      "/usr/local/bin/gulp"
+    ],
+    "nodejsVersion": "v11.15.0",
+    "glibcVersionRuntime": "2.23",
+    "glibcVersionCompiler": "2.12",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "linux",
+    "componentVersions": {
+      "node": "11.15.0",
+      "v8": "7.0.276.38-node.19",
+      "uv": "1.27.0",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "67",
+      "nghttp2": "1.37.0",
+      "napi": "4",
+      "llhttp": "1.1.1",
+      "http_parser": "2.8.0",
+      "openssl": "1.1.1b",
+      "cldr": "34.0",
+      "icu": "63.1",
+      "tz": "2018e",
+      "unicode": "11.0"
+    },
+    "release": {
+      "name": "node",
+      "headersUrl": "https://nodejs.org/download/release/v11.15.0/node-v11.15.0-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v11.15.0/node-v11.15.0.tar.gz"
+    },
+    "osName": "Linux",
+    "osRelease": "4.4.0-17134-Microsoft",
+    "osVersion": "#706-Microsoft Mon Apr 01 18:13:00 PST 2019",
+    "osMachine": "x86_64",
+    "host": "Optimus"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x0000000000a702fd",
+      "symbol": "report::TriggerNodeReport(v8::Isolate*, node::Environment*, char const*, char const*, std::string const&, v8::Local<v8::String>) [gulp]"
+    },
+    {
+      "pc": "0x000000000095ccb3",
+      "symbol": "node::OnFatalError(char const*, char const*) [gulp]"
+    },
+    {
+      "pc": "0x0000000000b3dbde",
+      "symbol": "v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [gulp]"
+    },
+    {
+      "pc": "0x0000000000b3de14",
+      "symbol": "v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [gulp]"
+    },
+    {
+      "pc": "0x0000000000f3ce52",
+      "symbol": " [gulp]"
+    },
+    {
+      "pc": "0x0000000000f3cf58",
+      "symbol": "v8::internal::Heap::CheckIneffectiveMarkCompact(unsigned long, double) [gulp]"
+    },
+    {
+      "pc": "0x0000000000f49678",
+      "symbol": "v8::internal::Heap::PerformGarbageCollection(v8::internal::GarbageCollector, v8::GCCallbackFlags) [gulp]"
+    },
+    {
+      "pc": "0x0000000000f4a18b",
+      "symbol": "v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason, v8::GCCallbackFlags) [gulp]"
+    },
+    {
+      "pc": "0x0000000000f4cec1",
+      "symbol": "v8::internal::Heap::AllocateRawWithRetryOrFail(int, v8::internal::AllocationSpace, v8::internal::AllocationAlignment) [gulp]"
+    },
+    {
+      "pc": "0x0000000000f170f4",
+      "symbol": "v8::internal::Factory::NewFillerObject(int, bool, v8::internal::AllocationSpace) [gulp]"
+    },
+    {
+      "pc": "0x00000000011cd3fe",
+      "symbol": "v8::internal::Runtime_AllocateInNewSpace(int, v8::internal::Object**, v8::internal::Isolate*) [gulp]"
+    },
+    {
+      "pc": "0x000001168a6cfc5d",
+      "symbol": ""
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 1497890816,
+    "totalCommittedMemory": 1493467176,
+    "usedMemory": 1459381640,
+    "availableMemory": 31421520,
+    "memoryLimit": 1526909922,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 524288,
+        "committedMemory": 42224,
+        "capacity": 515584,
+        "used": 33520,
+        "available": 482064
+      },
+      "new_space": {
+        "memorySize": 4194304,
+        "committedMemory": 1342496,
+        "capacity": 2062336,
+        "used": 241744,
+        "available": 1820592
+      },
+      "old_space": {
+        "memorySize": 1471352832,
+        "committedMemory": 1470558136,
+        "capacity": 1440252664,
+        "used": 1439960936,
+        "available": 291728
+      },
+      "code_space": {
+        "memorySize": 3145728,
+        "committedMemory": 2875264,
+        "capacity": 2590304,
+        "used": 2590304,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 3158016,
+        "committedMemory": 3133408,
+        "capacity": 2503520,
+        "used": 2503520,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 15515648,
+        "committedMemory": 15515648,
+        "capacity": 42878752,
+        "used": 14051616,
+        "available": 28827136
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 0,
+        "used": 0,
+        "available": 0
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 90.5,
+    "kernelCpuSeconds": 287.812,
+    "cpuConsumptionPercent": 67.9197,
+    "maxRss": 2779852800,
+    "pageFaults": {
+      "IORequired": 0,
+      "IONotRequired": 2227690
+    },
+    "fsActivity": {
+      "reads": 0,
+      "writes": 0
+    }
+  },
+  "uvthreadResourceUsage": {
+    "userCpuSeconds": 39.75,
+    "kernelCpuSeconds": 54.4219,
+    "cpuConsumptionPercent": 16.907,
+    "fsActivity": {
+      "reads": 0,
+      "writes": 0
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "SHELL": "/bin/bash",
+    "TERM": "xterm-256color",
+    "USER": "rolle",
+    "NAME": "Optimus",
+    "LS_COLORS": "rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:",
+    "HOSTTYPE": "x86_64",
+    "PATH": "/home/rolle/bin:/home/rolle/.local/bin:/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath_target_96559156:/mnt/c/Program Files (x86)/Razer Chroma SDK/bin:/mnt/c/Program Files/Razer Chroma SDK/bin:/mnt/c/Windows/System32:/mnt/c/Windows:/mnt/c/Windows/System32/wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:/mnt/c/Windows/System32/OpenSSH:/mnt/c/Program Files/PuTTY:/mnt/c/Program Files/nodejs:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files (x86)/Calibre2:/mnt/c/Ruby25-x64/bin:/mnt/d/android-sdk/tools:/mnt/d/android-sdk/tools/bin:/mnt/d/android-sdk/platform-tools:/mnt/c/Users/Optimus/AppData/Roaming/npm:/mnt/c/Users/Optimus/AppData/Local/Programs/Python/Python37-32:/mnt/c/Users/Optimus/AppData/Local/hyper/app-3.0.2/resources/bin:/snap/bin",
+    "PWD": "/mnt/c/Users/Optimus/Projects/dude",
+    "LANG": "en_US.UTF-8",
+    "SHLVL": "1",
+    "HOME": "/home/rolle",
+    "LOGNAME": "rolle",
+    "XDG_DATA_DIRS": "/usr/local/share:/usr/share:/var/lib/snapd/desktop",
+    "LESSOPEN": "| /usr/bin/lesspipe %s",
+    "LESSCLOSE": "/usr/bin/lesspipe %s %s",
+    "OLDPWD": "/mnt/c/Users/Optimus",
+    "_": "/usr/local/bin/gulp",
+    "INIT_CWD": "/mnt/c/Users/Optimus/Projects/dude"
+  },
+  "userLimits": {
+    "core_file_size_blocks": {
+      "soft": 0,
+      "hard": "unlimited"
+    },
+    "data_seg_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "file_size_blocks": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_locked_memory_bytes": {
+      "soft": 65536,
+      "hard": 65536
+    },
+    "max_memory_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "open_files": {
+      "soft": 65536,
+      "hard": 65536
+    },
+    "stack_size_bytes": {
+      "soft": 8388608,
+      "hard": 8388608
+    },
+    "cpu_time_seconds": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_user_processes": {
+      "soft": 7823,
+      "hard": 7823
+    },
+    "virtual_memory_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    }
+  },
+  "sharedObjects": [
+    "/lib/x86_64-linux-gnu/libdl.so.2",
+    "/lib/x86_64-linux-gnu/librt.so.1",
+    "/usr/lib/x86_64-linux-gnu/libstdc++.so.6",
+    "/lib/x86_64-linux-gnu/libm.so.6",
+    "/lib/x86_64-linux-gnu/libgcc_s.so.1",
+    "/lib/x86_64-linux-gnu/libpthread.so.0",
+    "/lib/x86_64-linux-gnu/libc.so.6",
+    "/lib64/ld-linux-x86-64.so.2",
+    "/mnt/c/Users/Optimus/Projects/dude/node_modules/node-sass/vendor/linux-x64-67/binding.node",
+    "/lib/x86_64-linux-gnu/libnss_files.so.2"
+  ]
+}

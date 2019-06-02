@@ -302,6 +302,12 @@ document.body.classList.add('js');
     var trigger = document.getElementsByClassName('js-trigger')[0];
     moveTo.registerTrigger(trigger);
 
+    // Open chat link
+    $('.open-chat').on('click', function(event) {
+      event.preventDefault();
+      $crisp.do('chat:open');
+    });
+
     // Chat greeting
     if ( typeof( Storage ) !== 'undefined' ) {
 
