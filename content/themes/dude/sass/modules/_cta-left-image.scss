@@ -1,8 +1,41 @@
-.block.block-cta-left-image,
+body .block.block-cta-left-image,
 .block.block-hero-reference,
 .block.block-hero-person {
   position: relative;
   z-index: 3;
+
+  form div {
+    ul li {
+      padding: 0 !important;
+      margin: 0;
+    }
+
+    input,
+    textarea,
+    input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']) {
+      border: 1px solid darken($color-superlightgrey, 5%);
+      padding: 2rem;
+      width: 100%;
+      max-width: 100%;
+      margin: 0;
+
+      &:focus {
+        outline: 0;
+        border-color: $color-dude-deep-black;
+      }
+
+      @media (max-width: 1300px) {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      &::placeholder {
+        opacity: 1;
+        color: $color-dude-grey-text;
+      }
+    }
+  }
 
   .container {
     overflow: visible;
