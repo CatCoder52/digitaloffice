@@ -109,6 +109,8 @@ document.body.classList.add('js');
     var $t = $(this);
     var hash = location.hash;
 
+    console.log(hash);
+
     if($t.attr("data-href") == hash) {
       if($t.next('.accordion-content').is(':hidden')) {
         $('.accordion-content').stop(true, false).slideUp(225);
