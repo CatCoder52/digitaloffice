@@ -21,7 +21,7 @@ document.body.classList.add('js');
 
     // Gallery
     var galleryelement = document.getElementById('gallery');
-    if (typeof(galleryelement) != 'undefined' && element != null) {
+    if (typeof(galleryelement) != 'undefined' && galleryelement != null) {
       document.getElementById('gallery').onclick = function (event) {
         event = event || window.event;
         var target = event.target || event.srcElement,
