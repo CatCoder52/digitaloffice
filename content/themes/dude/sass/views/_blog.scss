@@ -2,7 +2,8 @@
 body.blog,
 body.single-reference,
 body.single-person,
-body.archive.category {
+body.archive.category,
+body.archive.tag {
   .site-header nav > ul > li > a,
   .site-header nav > ul > li > button {
     color: $color-body;
