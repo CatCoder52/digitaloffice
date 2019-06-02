@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "469acaa12be9b712bf2cb6fecff25e39",
+    "content-hash": "644fc4fdac82ed469822afccad7cc5e8",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -1662,7 +1662,7 @@
         },
         {
             "name": "relevanssi/relevanssi-premium",
-            "version": "2.2.5",
+            "version": "2.3.0",
             "dist": {
                 "type": "zip",
                 "url": "https://www.relevanssi.com/update/fetch_latest_version.php?api_key=11879452",
@@ -4288,26 +4288,6 @@
             "time": "2019-04-01T15:03:00+00:00"
         },
         {
-            "name": "wpackagist-plugin/autodescription",
-            "version": "3.2.4",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/autodescription/",
-                "reference": "tags/3.2.4"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/autodescription.3.2.4.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/autodescription/"
-        },
-        {
             "name": "wpackagist-plugin/email-address-encoder",
             "version": "1.0.19",
             "source": {
@@ -4426,6 +4406,46 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/simple-history/"
+        },
+        {
+            "name": "wpackagist-plugin/so-clean-up-wp-seo",
+            "version": "3.10.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/so-clean-up-wp-seo/",
+                "reference": "tags/3.10.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/so-clean-up-wp-seo.3.10.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/so-clean-up-wp-seo/"
+        },
+        {
+            "name": "wpackagist-plugin/wordpress-seo",
+            "version": "11.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
+                "reference": "tags/11.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.11.3.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordpress-seo/"
         },
         {
             "name": "wpackagist-plugin/worker",

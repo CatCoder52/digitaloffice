@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-25 14:37:31
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-06-01 23:55:25
+ * @Last Modified time: 2019-06-02 22:05:40
  *
  * @package dude2019
  */
@@ -46,7 +46,7 @@ if ( empty( $images ) ) {
         <div class="col" style="background-image: url('<?php echo esc_url( $image['url'] ) ?>');">
           <a class="global-link" href="<?php echo esc_url( $image['url'] ) ?>"><span class="screen-reader-text">Avaa galleria kuvaan "<?php echo esc_html( $image['alt'] ) ?>"</span></a>
         </div>
-      <?php else: ?>
+      <?php else : ?>
           <a class="global-link hidden" href="<?php echo esc_url( $image['url'] ) ?>"><span class="screen-reader-text">Avaa galleria kuvaan "<?php echo esc_html( $image['alt'] ) ?>"</span></a>
         <?php endif; ?>
       <?php $x++; endforeach; ?>
