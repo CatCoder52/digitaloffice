@@ -170,14 +170,24 @@
         position: static;
       }
 
-      h3 {
+      .arrow-link-wrapper {
         @extend %h4;
         font-weight: 600;
         margin-bottom: 3rem;
         width: 50vw;
+        background: transparent;
+        border: 0;
+        color: $color-dude-deep-black;
+        text-align: left;
+        padding: 0;
+
+        &:hover,
+        &:focus {
+          cursor: pointer;
+        }
       }
 
-      h3 a {
+      .arrow-link-wrapper .arrow-link {
         display: flex;
         align-items: center;
         white-space: nowrap;

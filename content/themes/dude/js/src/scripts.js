@@ -9,6 +9,16 @@ document.body.classList.add('js');
 // jQuery start
 ( function( $ ) {
 
+    // Scroll down -button
+    $('.scroll-to-form').click(function(e) {
+      e.preventDefault();
+      var $target = $('.block-wide-text');
+
+      $('html, body').animate({
+        scrollTop: $target.offset().top
+      }, 'slow');
+    });
+
     // Gallery
     if ( $( '#gallery' ).length) {
       document.getElementById('gallery').onclick = function (event) {
