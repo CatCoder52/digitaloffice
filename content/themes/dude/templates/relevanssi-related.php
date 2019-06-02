@@ -12,10 +12,10 @@ if ( empty( $related_posts ) ) {
   return;
 } ?>
 
-<section class="block block-blog">
+<section class="block block-blog block-blog-relevant">
   <div class="container">
 
-    <header class="block-head block-head-archive">
+    <header class="block-head block-head-relevant">
       <p class="block-title-pre" aria-describedby="block-title-related">Aiheeseen liittyvää</p>
       <h1 class="block-title block-title-archive" id="block-title-related">Lue nämä seuraavaksi</h1>
     </header>

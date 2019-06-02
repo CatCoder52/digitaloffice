@@ -57,15 +57,15 @@ get_header(); ?>
               <p class="person-description">Duden perustaja ja teknologiajohtaja, jolle tärkeintä on että kehitys kehittyy ja töissä on hyvä olla.</p>
 
               <?php if ( ! empty( $job_title ) ) : ?>
-                <p class="job-title"><?php
+                <!--<p class="job-title"><?php
                 // Temporarily commenting out because of the bug 
-                // echo esc_html( $job_title ) ?></p>
+                echo esc_html( $job_title ) ?></p>-->
               <?php endif;
 
               if ( ! empty( $desc ) ) : ?>
-                <p class="person-description"><?php
+                <!--<p class="person-description"><?php
                 // Temporarily commenting out because of the bug  
-                // echo esc_html( $desc ) ?></p>
+                echo esc_html( $desc ) ?></p>-->
               <?php endif;
 
             endif; ?>

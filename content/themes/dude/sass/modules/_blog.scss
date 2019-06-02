@@ -1,6 +1,11 @@
 .block.block-blog {
   padding-top: 0;
 
+  .block-head.block-head-relevant {
+    // Padding here is navigation height plus regular padding which is exactly 100px in total
+    padding-top: 10rem;
+  }
+
   .block-head.block-head-archive {
     // Padding here is navigation height plus regular padding which is exactly 100px in total
     padding-top: calc(10rem + 113px);
