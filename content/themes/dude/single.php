@@ -48,12 +48,20 @@ get_header(); ?>
               <a href="<?php echo get_the_permalink( $user_id ) ?>"><?php echo get_avatar( $user_id, '512' ); ?></a>
               <h3><?php echo get_the_author_meta( 'display_name' ); ?></h3>
 
+              <!-- Temp -->
+              <p class="job-title">Teknologiajohtaja, perustaja</p>
+              <p class="person-description">Duden perustaja ja teknologiajohtaja, jolle tärkeintä on että kehitys kehittyy ja töissä on hyvä olla.</p>
+
               <?php if ( ! empty( $job_title ) ) : ?>
-                <p><?php echo esc_html( $job_title ) ?></p>
+                <p class="job-title"><?php
+                // Temporarily commenting out because of the bug 
+                // echo esc_html( $job_title ) ?></p>
               <?php endif;
 
               if ( ! empty( $desc ) ) : ?>
-                <p><?php echo esc_html( $desc ) ?></p>
+                <p class="person-description"><?php
+                // Temporarily commenting out because of the bug  
+                // echo esc_html( $desc ) ?></p>
               <?php endif;
 
             endif; ?>
