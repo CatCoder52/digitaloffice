@@ -27,6 +27,10 @@
 
       .col.col-image {
         height: 50rem;
+
+        @media (max-width: $container-mobile) {
+          height: 35rem;
+        }
       }
     }
   }
@@ -35,6 +39,14 @@
     background: $color-dude-whitegreyish;
     padding: $padding-general-content-box;
     position: relative;
+
+    @media (max-width: $container-ipad) {
+      padding: $padding-general-content-box-ipad;
+    }
+
+    @media (max-width: $container-mobile) {
+      padding: $padding-general-content-box-mobile;
+    }
   }
 
   .block-head {

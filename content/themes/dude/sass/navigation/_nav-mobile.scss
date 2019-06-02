@@ -220,7 +220,45 @@ body.single-person.js-nav-active .site-content {
       margin-bottom: 2rem;
     }
 
-    a {
+    .contact-actions {
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+      list-style: none;
+      padding: 0;
+    }
+
+    .contact-actions li {
+      list-style: none;
+      padding: .2rem 0;
+      margin: 0;
+    }
+
+    button.open-chat {
+      background: transparent;
+      border: 0;
+      display: block;
+      font-weight: 300;
+      padding: 0;
+      cursor: pointer;
+
+      svg,
+      path {
+        fill: transparent;
+        stroke: $color-dude-white;
+      }
+
+      &:after {
+        width: 0;
+        bottom: 0;
+      }
+
+      &:hover:after {
+        width: 100%;
+      }
+    }
+
+    a,
+    button {
       color: #fff;
       display: inline-block;
 

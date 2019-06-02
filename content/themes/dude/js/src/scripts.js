@@ -9,6 +9,16 @@ document.body.classList.add('js');
 // jQuery start
 ( function( $ ) {
 
+    // Scroll down -button
+    $('.scroll-to-form').click(function(e) {
+      e.preventDefault();
+      var $target = $('.block-wide-text');
+
+      $('html, body').animate({
+        scrollTop: $target.offset().top
+      }, 'slow');
+    });
+
     // Gallery
     if ( $( '#gallery' ).length) {
       document.getElementById('gallery').onclick = function (event) {
@@ -291,6 +301,12 @@ document.body.classList.add('js');
     // Register a back to top trigger
     var trigger = document.getElementsByClassName('js-trigger')[0];
     moveTo.registerTrigger(trigger);
+
+    // Open chat link
+    $('.open-chat').on('click', function(event) {
+      event.preventDefault();
+      $crisp.do('chat:open');
+    });
 
     // Chat greeting
     if ( typeof( Storage ) !== 'undefined' ) {

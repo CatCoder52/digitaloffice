@@ -31,7 +31,7 @@
         </p>
 
         <div class="form-box">
-          <h3 class="arrow-link-wrapper"><a href="#" class="arrow-link">Miten voimme auttaa?<span class="arrow"></span></a></h3>
+          <button class="arrow-link-wrapper scroll-to-form"><span class="arrow-link">Miten voimme auttaa?<span class="arrow"></span></span></button>
           <p>Kerro lyhyesti projektin tavoitteista niin jutellaan lisää</p>
         </div>
 

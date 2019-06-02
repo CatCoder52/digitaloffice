@@ -124,7 +124,7 @@ a.global-link {
     max-width: 60%;
   }
 
-  @media (max-width: $container-mobile) {
+  @media (max-width: 600px) {
     max-width: 100%;
   }
 }

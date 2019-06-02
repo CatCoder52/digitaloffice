@@ -31,6 +31,10 @@ get_header(); ?>
             <?php the_content(); ?>
           </div><!-- .entry-content -->
 
+          <footer class="entry-footer">
+            <?php dude_entry_footer(); ?>
+          </footer><!-- .entry-footer -->
+
           <div class="entry-author">
             <?php // get author and person corresponding author
             $user_id = get_the_author_meta( 'ID' );
@@ -46,14 +50,22 @@ get_header(); ?>
               $desc = get_post_meta( $person_id[0]->post_id, 'short_desc_blog', true ); ?>
 
               <a href="<?php echo get_the_permalink( $user_id ) ?>"><?php echo get_avatar( $user_id, '512' ); ?></a>
-              <h3><?php echo get_the_author_meta( 'display_name' ); ?></h3>
+              <h3><?php echo get_the_author_meta( 'first_name' ); ?> <?php echo get_the_author_meta( 'last_name' ); ?></h3>
+
+              <!-- Temp -->
+              <p class="job-title">Teknologiajohtaja, perustaja</p>
+              <p class="person-description">Duden perustaja ja teknologiajohtaja, jolle tärkeintä on että kehitys kehittyy ja töissä on hyvä olla.</p>
 
               <?php if ( ! empty( $job_title ) ) : ?>
-                <p><?php echo esc_html( $job_title ) ?></p>
+                <p class="job-title"><?php
+                // Temporarily commenting out because of the bug 
+                // echo esc_html( $job_title ) ?></p>
               <?php endif;
 
               if ( ! empty( $desc ) ) : ?>
-                <p><?php echo esc_html( $desc ) ?></p>
+                <p class="person-description"><?php
+                // Temporarily commenting out because of the bug  
+                // echo esc_html( $desc ) ?></p>
               <?php endif;
 
             endif; ?>

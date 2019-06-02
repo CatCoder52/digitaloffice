@@ -58,15 +58,66 @@ get_header(); ?>
     <section class="block block-blog">
       <div class="container">
 
-        <header class="block-head">
+
+        <header class="block-head<?php if ( is_category() || is_tag() || is_author() || is_date() ) : ?> block-head-archive<?php endif; ?>">
+        
+        <?php if ( is_tag() ) : ?>
+
+          <p class="block-title-pre" aria-describedby="block-title-block-blog">Avainsana</p>
+          <h1 class="block-title block-title-archive" id="block-title-block-blog"><?php echo single_tag_title(); ?></h1>
+        
+        <?php elseif ( is_category() ) : ?>
+
+          <p class="block-title-pre" aria-describedby="block-title-block-blog">Kategoria</p>
+          <h1 class="block-title block-title-archive" id="block-title-block-blog"><?php echo single_cat_title(); ?></h1>
+
+        <?php elseif ( is_day() ) : ?>
+
+          <?php
+          $current_month = get_the_time( 'm' );
+          $current_year = get_the_time( 'Y' );
+          $current_day = get_the_time( 'j' );
+          ?>
+
+          <p class="block-title-pre" aria-describedby="block-title-block-blog">Päivä</p>
+          <h1 class="block-title block-title-archive" id="block-title-block-blog"><?php echo ucfirst(get_the_time('l')) ?>, <?php the_time('j.') ?> <?php the_time('F') ?>ta <?php the_time('Y') ?></h1>
+
+        <?php elseif ( is_month() ) : ?>
+
+          <?php
+          $current_month = get_the_time('m');
+          $current_year = get_the_time('Y');
+          ?>
+
+          <p class="block-title-pre" aria-describedby="block-title-block-blog">Kuukausi</p>
+          <h1 class="block-title block-title-archive" id="block-title-block-blog"><?php echo ucfirst(get_the_time('F')) ?>, <?php the_time('Y') ?></h1>
+
+        <?php elseif ( is_year() ) : ?>
+
+          <p class="block-title-pre" aria-describedby="block-title-block-blog">Vuosi</p>
+          <h1 class="block-title block-title-archive" id="block-title-block-blog"><?php the_time('Y'); ?></h1>
+
+        <?php elseif ( is_search() ) : ?>
+
+          <p class="block-title-pre" aria-describedby="block-title-block-blog">Hakutulokset</p>
+          <h1 class="block-title block-title-archive" id="block-title-block-blog"><?php $cat = get_the_category(); $cat = $cat[0]; echo $cat->category_count; ?> löytyi</h2>
+
+        <?php elseif ( is_author() ) : ?>
+
+          <p class="block-title-pre" aria-describedby="block-title-block-blog">Kirjoittaja</p>
+          <h1 class="block-title block-title-archive" id="block-title-block-blog"><?php echo $curauth->nickname; ?></h1>
+
+        <?php else : ?>
           <p class="block-title-pre" aria-describedby="block-title-block-blog">Tekijöiden ajatuksia</p>
-          <h2 class="block-title" id="block-title-block-blog">Blogin kaikki jorinat</h2>
+          <h1 class="block-title block-title-archive" id="block-title-block-blog">Blogin kaikki jorinat</h1>
+        <?php endif; ?>
         </header>
 
         <div class="cols">
           <?php while ( have_posts() ) : the_post(); ?>
             <div class="col">
               <div class="image has-lazyload">
+                <a class="global-link" href="<?php the_permalink() ?>"><span class="screen-reader-text"><?php the_title() ?></span></a>
                 <div class="background-image preview lazyload" style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'tiny-preload-thumbnail' ) ?>');" data-src="<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>"></div>
                 <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>');"<?php endif; ?>></div>
                 <noscript><div class="background-image full-image" style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>');"></div></noscript>

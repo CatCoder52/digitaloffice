@@ -15,20 +15,3 @@ if ( is_home() ) {
 }
 
 ?>
-
-<section class="block block-hero block-hero-normal block-hero-enable-transition">
-  <div class="container">
-
-    <div class="content">
-      <?php if ( is_category() && ! is_tag() && ! is_author() ) : ?>
-        <p class="blog-title-pre" aria-describedby="blog-title">Blogi</p>
-        <h1 id="blog-title"><?php echo $title ?></h1>
-      <?php else : ?>
-        <h1><?php echo $title ?></h1>
-      <?php endif; ?>
-
-      <p>Kirjoitusten kautta löydät tiesi Duden sielunmaisemaan ja arkeen. Näiden avulla ehkä ymmärrät meitä paremmin.</p>
-    </div>
-
-  </div>
-</section>
