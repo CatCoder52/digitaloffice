@@ -208,7 +208,7 @@
     max-height: 100%;
   }
 
-  a:not(.has-arrow) {
+  .content a:not(.has-arrow):not(.contact-detail) {
     background-image: linear-gradient(to top, $color-dude-deep-black, $color-dude-deep-black);
     background-size: 100% .1rem;
     background-position: left bottom;
@@ -218,9 +218,9 @@
     overflow: visible;
   }
 
-  a:not(.has-arrow):hover,
-  a:not(.has-arrow):focus,
-  a:not(.has-arrow):active {
+  .content a:not(.has-arrow):not(.contact-detail):hover,
+  .content a:not(.has-arrow):not(.contact-detail):focus,
+  .content a:not(.has-arrow):not(.contact-detail):active {
     background-size: 100% 2.8rem;
     color: $color-dude-white;
   }

@@ -46,9 +46,9 @@ if ( ! empty( $social ) ) {
           <?php the_content(); ?>
 
           <p class="contact">
-            <a href="mailto:<?php echo esc_attr( $email ) ?>"><?php echo esc_html( $email ) ?></a>
+            <a class="contact-detail" href="mailto:<?php echo esc_attr( $email ) ?>"><?php echo esc_html( $email ) ?></a>
             <?php if ( ! empty( $tel ) ) : ?>
-              <br/><a href="tel:<?php echo esc_attr( str_replace( ' ', '', $tel ) ) ?>"><?php echo esc_html( $tel ) ?></a>
+              <br/><a class="contact-detail" href="tel:<?php echo esc_attr( str_replace( ' ', '', $tel ) ) ?>"><?php echo esc_html( $tel ) ?></a>
             <?php endif; ?>
           </p>
 
@@ -56,7 +56,7 @@ if ( ! empty( $social ) ) {
             <ul class="social">
               <?php foreach ( $social as $item ) :
                 $icon = sanitize_title( $item['name'] ); ?>
-                <li class="<?php echo $icon; ?>"><a href="<?php echo esc_url( $item['value'] ) ?>"><?php include get_theme_file_path( "svg/social/{$icon}.svg" ) ?><span class="screen-reader-text"><?php echo esc_html( $item['name'] ) ?></span></a></li>
+                <li class="<?php echo $icon; ?>"><a class="contact-detail" href="<?php echo esc_url( $item['value'] ) ?>"><?php include get_theme_file_path( "svg/social/{$icon}.svg" ) ?><span class="screen-reader-text"><?php echo esc_html( $item['name'] ) ?></span></a></li>
               <?php endforeach; ?>
             </ul>
           <?php endif; ?>
