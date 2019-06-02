@@ -1,0 +1,160 @@
+.block.block-community {
+  background: #fff;
+
+  .container {
+    max-width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    small {
+      opacity: .8;
+      line-height: 1.5;
+      font-size: 15px;
+      max-width: 70%;
+      margin: 0 auto;
+      display: block;
+
+      @media (max-width: 535px) {
+        max-width: 100%;
+      }
+    }
+
+    a {
+      background-image: linear-gradient(to top, $color-dude-deep-black, $color-dude-deep-black);
+      background-size: 100% .1rem;
+      background-position: left bottom;
+      background-repeat: no-repeat;
+      transition: .3s all;
+      text-decoration: none;
+      overflow: visible;
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+      background-size: 100% 2.8rem;
+      color: $color-dude-white;
+    }
+  }
+
+  // Official WordPress badge styles
+  .badge {
+    margin: 4px;
+    width: 32px;
+    height: 32px;
+    border: 2px solid #f7f7f7;
+    border-radius: 50%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 8px;
+    left: 0;
+    padding: 2px;
+  }
+
+  .badge-themes {
+    background: transparent;
+    box-shadow: 0 0 0 4px rgb(78, 50, 136);
+    fill: rgb(78, 50, 136);
+  }
+
+  .badge-translation-contributor {
+    background: transparent;
+    box-shadow: 0 0 0 4px rgb(195, 34, 131);
+    fill: rgb(195, 34, 131);
+  }
+
+  .badge-translation-editor {
+    background: rgba(195, 34, 131, .25);
+    box-shadow: 0 0 0 4px rgb(195, 34, 131);
+    fill: rgb(195, 34, 131);
+  }
+
+  .badge-speaker {
+    background: transparent;
+    box-shadow: 0 0 0 4px rgb(247, 173, 67);
+    fill: rgb(247, 173, 67);
+  }
+
+  .badge-plugins {
+    background: transparent;
+    box-shadow: 0 0 0 4px rgb(240, 103, 35);
+    fill: rgb(240, 103, 35);
+  }
+
+  .badge-community-contributor {
+    background: transparent;
+    box-shadow: 0 0 0 4px rgb(17, 121, 157);
+    fill: rgb(17, 121, 157);
+  }
+
+  .badge-community {
+    background: rgba(17, 121, 157, .25);
+    box-shadow: 0 0 0 4px rgb(17, 121, 157);
+    fill: rgb(17, 121, 157);
+  }
+
+  .badge-code {
+    background: transparent;
+    box-shadow: 0 0 0 4px rgb(205, 0, 0);
+    fill: rgb(205, 0, 0);
+  }
+
+  .badge-meta-contributor {
+    background: transparent;
+    box-shadow: 0 0 0 4px rgb(174, 173, 173);
+    fill: rgb(174, 173, 173);
+  }
+
+  .badge-organizer {
+    background: transparent;
+    box-shadow: 0 0 0 4px rgb(247, 173, 67);
+    fill: rgb(247, 173, 67);
+  }
+
+  .item-list {
+    list-style: none;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    text-align: left;
+
+    @media (min-width: 1365px) {
+      max-width: 90%;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 765px) {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 535px) {
+      max-width: 220px;
+      margin: 0 auto;
+    }
+  }
+
+  .item-list li {
+    @include column(1/3, $cycle: 3);
+    border-bottom: none;
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 17px;
+    padding: 16px 0 16px 55px;
+    position: relative;
+    color: #444;
+
+    @media (max-width: 765px) {
+      @include column(1/2, $cycle: 2);
+    }
+
+    @media (max-width: 535px) {
+      @include stack();
+    }
+  }
+}      

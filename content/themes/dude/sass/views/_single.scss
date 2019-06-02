@@ -208,6 +208,7 @@
       font-weight: 300;
     }
 
+    // Blog links
     a {
       background-image: linear-gradient(to top, $color-dude-deep-black, $color-dude-deep-black);
       background-size: 100% .1rem;
@@ -216,6 +217,13 @@
       transition: .3s all;
       text-decoration: none;
       overflow: visible;
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+      background-size: 100% 2.8rem;
+      color: $color-dude-white;
     }
 
     blockquote {
@@ -244,13 +252,6 @@
       padding-bottom: 4rem;
       padding-left: 4rem;
       font-weight: 300;
-    }
-
-    a:hover,
-    a:focus,
-    a:active {
-      background-size: 100% 2.8rem;
-      color: $color-dude-white;
     }
   }
 }

@@ -169,6 +169,14 @@ a.global-link {
   opacity: .5;
 }
 
+.cta-link.cta-link-white {
+  color: $color-dude-white;
+
+  &:after {
+    background: $color-dude-white;
+  }
+}
+
 .arrow-link-wrapper {
   margin: 0;
 }
