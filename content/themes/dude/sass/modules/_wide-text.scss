@@ -4,6 +4,9 @@ body.page-id-4487 .block.block-wide-text {
 
 body .block.block-wide-text {
   form {
+    input[type=submit] {
+      border-color: $color-dude-deep-black;
+    }
 
     // Hide validation header
     > .validation_error {
