@@ -61,6 +61,11 @@
     }
   }
 
+  .entry-content ol li,
+  .entry-content ul li {
+    margin-left: 3rem;
+  }
+
   .entry-content > * {
     padding-left: $padding-general-content-box;
     padding-right: $padding-general-content-box;
