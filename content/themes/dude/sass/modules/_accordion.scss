@@ -147,6 +147,23 @@
   z-index: 0;
   position: relative;
 
+  a {
+    background-image: linear-gradient(to top, $color-dude-deep-black, $color-dude-deep-black);
+    background-size: 100% .1rem;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    transition: .3s all;
+    text-decoration: none;
+    overflow: visible;
+  }
+
+  a:hover,
+  a:focus,
+  a:active {
+    background-size: 100% 2.8rem;
+    color: $color-dude-white;
+  }
+
   @media (max-width: $container-mobile) {
     padding-bottom: $padding-accordion-content-mobile;
     padding-left: $padding-accordion-content-mobile;
@@ -154,9 +171,10 @@
   }
 
   p {
-    opacity: .6;
+    opacity: .7;
     width: 80%;
     max-width: 85rem;
+    margin-top: 0;
 
     @media (max-width: 1300px) {
       max-width: 90%;
