@@ -15,6 +15,18 @@
       display: block;
     }
 
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      @media (max-width: 1000px) {
+        width: 100%;
+      }
+    }
+
+    @supports (-ms-ime-align: auto) {
+      @media (max-width: 1000px) {
+        width: 100%;
+      }
+    }
+
     .col {
       min-width: 50%;
       display: flex;

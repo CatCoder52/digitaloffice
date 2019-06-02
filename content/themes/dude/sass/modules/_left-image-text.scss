@@ -23,10 +23,18 @@
 
     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
       width: 50vw;
+
+      @media (max-width: 870px) {
+        width: 100vw;
+      }
     }
 
     @supports (-ms-ime-align: auto) {
       width: 50vw;
+
+      @media (max-width: 870px) {
+        width: 100vw;
+      }
     }
 
     @media (max-width: $container-ipad) {

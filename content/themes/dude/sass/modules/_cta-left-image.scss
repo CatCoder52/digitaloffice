@@ -52,20 +52,36 @@ body .block.block-cta-left-image,
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     .cols .col-image {
       width: 70%;
+
+      @media (max-width: 860px) {
+        width: 100%;
+      }
     }
 
     .cols .col-content {
       width: 30%;
+
+      @media (max-width: 860px) {
+        width: 100%;
+      }
     }
   }
 
   @supports (-ms-ime-align: auto) {
     .cols .col-image {
       width: 70%;
+
+      @media (max-width: 860px) {
+        width: 100%;
+      }
     }
 
     .cols .col-content {
       width: 30%;
+
+      @media (max-width: 860px) {
+        width: 100%;
+      }
     }
   }
 

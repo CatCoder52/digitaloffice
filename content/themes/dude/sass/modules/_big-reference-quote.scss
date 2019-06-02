@@ -1,18 +1,20 @@
 .block.block-big-reference-quote {
   background: #f4f4f4;
   padding: 0;
+  position: relative;
+  z-index: 2;
 
   .container {
     overflow: visible;
   }
 
   .cols {
-    @include grid(2, $gutter_x: 10rem, $gutter_y: 0);
+    @include grid(2, $gutter_x: 2rem, $gutter_y: 0);
     grid-template-columns: 1fr 2fr;
 
     @media (max-width: 1400px) {
-      grid-template-columns: 35% 65%;
-      grid-column-gap: 5rem;
+      grid-template-columns: 30% 60%;
+      grid-column-gap: 2rem;
 
       .button:hover .long-arrow {
         width: 7rem;
@@ -57,6 +59,24 @@
     overflow: visible;
     position: relative;
     z-index: 2;
+
+    @media (max-width: $container-ipad) {
+      padding-left: $padding-default-cols-ipad;
+      padding-right: $padding-default-cols-ipad;
+    }
+
+    @media (max-width: $container-mobile) {
+      padding-left: $padding-default-cols-mobile;
+      padding-right: $padding-default-cols-mobile;
+    }
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      margin-bottom: 0;
+    }
+
+    @supports (-ms-ime-align: auto) {
+      margin-bottom: 0;
+    }
 
     blockquote {
       margin: 0;
