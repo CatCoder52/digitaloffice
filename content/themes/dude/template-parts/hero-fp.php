@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-30 15:37:50
+ * @Last Modified time: 2019-06-03 15:52:14
  *
  * @package dude2019
  */
@@ -24,12 +24,12 @@ if ( has_post_thumbnail() ) {
 
       <div class="side-content-box selection">
         <ul>
-          <li><a href="#">Haluan uudet verkkosivut</a></li>
-          <li><a href="#">Tarvitsen visuaalista suunnittelua</a></li>
-          <li><a href="#">Kunhan vaan kahtelen...</a></li>
+          <li><a href="<?php echo get_page_link( 9 ); ?>">Haluan uudet verkkosivut</a></li>
+          <li><a href="<?php echo get_page_link( 4485 ); ?>">Tarvitsen visuaalista suunnittelua</a></li>
+          <li><a href="<?php echo get_page_link( 4493 ); ?>">Kunhan vaan kahtelen...</a></li>
         </ul>
 
-        <p class="cta-link"><a href="#">Ota yhteyttä</a></p>
+        <p class="cta-link"><a href="<?php echo get_page_link( 4487 ); ?>">Ota yhteyttä</a></p>
       </div>
     </div>
 

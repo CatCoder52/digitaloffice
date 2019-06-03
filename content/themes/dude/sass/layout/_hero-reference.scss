@@ -10,6 +10,16 @@ body .block-hero-person {
     @media (max-width: $container-ipad) {
       display: flex;
       flex-wrap: wrap;
+
+      .col.has-grey-bg {
+        order: 1;
+      }
+
+      .col:not(.has-grey-bg) {
+        width: 100%;
+        height: 100%;
+        order: 2;
+      }
     }
   }
 
@@ -38,11 +48,6 @@ body .block-hero-person {
     }
   }
 
-  .content svg {
-    height: 50px;
-    width: auto;
-  }
-
   .content h1 {
     @extend %h2;
   }
@@ -50,4 +55,10 @@ body .block-hero-person {
 
 body .block.block-hero-reference {
   padding-bottom: 0;
+
+  @media (max-width: $container-mobile) {
+    .image {
+      height: 40rem;
+    }
+  }
 }

@@ -2,6 +2,10 @@
   background: $color-dude-whitegreyish;
 }
 
+.block .block-head.block-head-no-padding-top {
+  padding-top: 0;
+}
+
 .block.block-references {
   &.block-references-related {
     padding-top: 0;
