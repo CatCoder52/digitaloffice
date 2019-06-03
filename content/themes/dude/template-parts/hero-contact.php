@@ -2,8 +2,8 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
- * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-30 15:22:48
+ * @Last Modified by:   Timi Wahalahti
+ * @Last Modified time: 2019-06-03 20:31:05
  *
  * @package dude2019
  */
@@ -27,6 +27,7 @@
 
         <p class="contact-details">
           <a class="email" href="mailto:moro@dude.fi">moro@dude.fi</a><br />
+          <button class="chat open-chat" aria-label="Avaa chat"><?php include get_theme_file_path( '/svg/chat.svg' ); ?>Avaa chat</button><br/>
           <a class="phone" href="tel:0408351033">040 835 1033</a>
         </p>
 
