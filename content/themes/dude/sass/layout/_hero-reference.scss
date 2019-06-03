@@ -47,3 +47,7 @@ body .block-hero-person {
     @extend %h2;
   }
 }
+
+body .block.block-hero-reference {
+  padding-bottom: 0;
+}

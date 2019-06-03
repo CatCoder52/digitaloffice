@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-06-01 19:03:09
+ * @Last Modified time: 2019-06-03 15:28:20
  *
  * @package dude2019
  */
@@ -60,8 +60,6 @@ if ( ! empty( $social ) ) {
               <?php endforeach; ?>
             </ul>
           <?php endif; ?>
-
-          <p class="arrow-link-wrapper"><a class="has-arrow arrow-link" href="mailto:<?php echo esc_attr( $email ) ?>">Lähetä sähköpostia<span class="arrow"></span></a></p>
         </div>
       </div>
     </div>

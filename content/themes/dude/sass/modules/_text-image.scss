@@ -1,4 +1,8 @@
 .block.block-text-image {
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0;
+
   .cols {
     @include grid(2, $gutter_x: 10rem, $gutter_y: 0);
 
@@ -9,6 +13,27 @@
 
     @media (max-width: $container-ipad) {
       display: block;
+    }
+  }
+
+  .col.col-content {
+    padding-left: $padding-default-cols;
+    padding-right: $padding-default-cols;
+    padding-top: $padding-default-rows;
+    padding-bottom: $padding-default-rows;
+
+    @media (max-width: $container-ipad) {
+      padding-left: $padding-default-cols-ipad;
+      padding-right: $padding-default-cols-ipad;
+      padding-top: $padding-default-rows-ipad;
+      padding-bottom: $padding-default-rows-ipad;
+    }
+
+    @media (max-width: $container-mobile) {
+      padding-left: $padding-default-cols-mobile;
+      padding-right: $padding-default-cols-mobile;
+      padding-top: $padding-default-rows-mobile;
+      padding-bottom: $padding-default-rows-mobile;
     }
   }
 

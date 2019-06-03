@@ -58,10 +58,12 @@
   // Contact thanks
   &.block-hero-contact-thanks {
     margin-bottom: 8rem;
+    min-height: 100rem;
 
     .container {
       width: 100%;
       max-width: 80rem;
+      margin-bottom: -6rem;
     }
 
     .content {

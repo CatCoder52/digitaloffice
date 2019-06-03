@@ -160,7 +160,7 @@ if ( $show_chat_greeting ) {
           <div class="content">
             <h2>Tekemisemme</h2>
             <ul class="menu-items nav-menu" aria-expanded="false">
-              <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4482"><a href="<?php echo get_page_link( 4493 ); ?>">Työmme</a></li>
+              <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4482"><a href="<?php echo get_page_link( 4493 ); ?>">Töitämme</a></li>
               <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4480"><a href="<?php echo get_page_link( 4489 ); ?>">Yhteisö & koodi</a></li>
             </ul>
           </div>
