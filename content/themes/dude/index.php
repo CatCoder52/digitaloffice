@@ -19,7 +19,7 @@ get_header(); ?>
 <div id="content" class="content-area">
 	<main role="main" id="main" class="site-main">
 
-    <?php if ( ! is_paged() && ! is_category() && ! is_tag() && ! is_author() ) :
+    <?php if ( ! is_paged() && ! is_category() && ! is_tag() && ! is_author() && ! is_date() ) :
       while ( have_posts() ) : the_post(); ?>
         <section class="block block-blog-big">
           <div class="container">
@@ -60,57 +60,48 @@ get_header(); ?>
 
 
         <header class="block-head<?php if ( is_category() || is_tag() || is_author() || is_date() ) : ?> block-head-archive<?php endif; ?>">
-        
-        <?php if ( is_tag() ) : ?>
 
-          <p class="block-title-pre" aria-describedby="block-title-block-blog">Avainsana</p>
-          <h1 class="block-title block-title-archive" id="block-title-block-blog"><?php echo single_tag_title(); ?></h1>
-        
-        <?php elseif ( is_category() ) : ?>
+          <?php if ( is_tag() ) : ?>
 
-          <p class="block-title-pre" aria-describedby="block-title-block-blog">Kategoria</p>
-          <h1 class="block-title block-title-archive" id="block-title-block-blog"><?php echo single_cat_title(); ?></h1>
+            <p class="block-title-pre" aria-describedby="block-title-block-blog">Avainsana</p>
+            <h1 class="block-title block-title-archive" id="block-title-block-blog"><?php echo single_tag_title(); ?></h1>
 
-        <?php elseif ( is_day() ) : ?>
+          <?php elseif ( is_category() ) : ?>
 
-          <?php
-          $current_month = get_the_time( 'm' );
-          $current_year = get_the_time( 'Y' );
-          $current_day = get_the_time( 'j' );
-          ?>
+            <p class="block-title-pre" aria-describedby="block-title-block-blog">Kategoria</p>
+            <h1 class="block-title block-title-archive" id="block-title-block-blog"><?php echo single_cat_title(); ?></h1>
 
-          <p class="block-title-pre" aria-describedby="block-title-block-blog">Päivä</p>
-          <h1 class="block-title block-title-archive" id="block-title-block-blog"><?php echo ucfirst(get_the_time('l')) ?>, <?php the_time('j.') ?> <?php the_time('F') ?>ta <?php the_time('Y') ?></h1>
+          <?php elseif ( is_day() ) : ?>
 
-        <?php elseif ( is_month() ) : ?>
+            <p class="block-title-pre" aria-describedby="block-title-block-blog">Päivä</p>
+            <h1 class="block-title block-title-archive" id="block-title-block-blog"><?php echo ucfirst( date_i18n( 'l', get_the_time( 'U' ) ) ) ?>, <?php the_time('j.') ?> <?php the_time('F') ?>ta <?php the_time('Y') ?></h1>
 
-          <?php
-          $current_month = get_the_time('m');
-          $current_year = get_the_time('Y');
-          ?>
+          <?php elseif ( is_month() ) : ?>
 
-          <p class="block-title-pre" aria-describedby="block-title-block-blog">Kuukausi</p>
-          <h1 class="block-title block-title-archive" id="block-title-block-blog"><?php echo ucfirst(get_the_time('F')) ?>, <?php the_time('Y') ?></h1>
+            <p class="block-title-pre" aria-describedby="block-title-block-blog">Kuukausi</p>
+            <h1 class="block-title block-title-archive" id="block-title-block-blog"><?php echo ucfirst( date_i18n( 'F', get_the_time( 'U' ) ) ) ?>, <?php the_time('Y') ?></h1>
 
-        <?php elseif ( is_year() ) : ?>
+          <?php elseif ( is_year() ) : ?>
 
-          <p class="block-title-pre" aria-describedby="block-title-block-blog">Vuosi</p>
-          <h1 class="block-title block-title-archive" id="block-title-block-blog"><?php the_time('Y'); ?></h1>
+            <p class="block-title-pre" aria-describedby="block-title-block-blog">Vuosi</p>
+            <h1 class="block-title block-title-archive" id="block-title-block-blog"><?php the_time('Y'); ?></h1>
 
-        <?php elseif ( is_search() ) : ?>
+          <?php elseif ( is_search() ) : ?>
 
-          <p class="block-title-pre" aria-describedby="block-title-block-blog">Hakutulokset</p>
-          <h1 class="block-title block-title-archive" id="block-title-block-blog"><?php $cat = get_the_category(); $cat = $cat[0]; echo $cat->category_count; ?> löytyi</h2>
+            <p class="block-title-pre" aria-describedby="block-title-block-blog">Hakutulokset</p>
+            <h1 class="block-title block-title-archive" id="block-title-block-blog"><?php $cat = get_the_category(); $cat = $cat[0]; echo $cat->category_count; ?> löytyi</h2>
 
-        <?php elseif ( is_author() ) : ?>
+          <?php elseif ( is_author() ) : ?>
 
-          <p class="block-title-pre" aria-describedby="block-title-block-blog">Kirjoittaja</p>
-          <h1 class="block-title block-title-archive" id="block-title-block-blog"><?php echo $curauth->nickname; ?></h1>
+            <p class="block-title-pre" aria-describedby="block-title-block-blog">Kirjoittaja</p>
+            <h1 class="block-title block-title-archive" id="block-title-block-blog"><?php echo get_the_author(); ?></h1>
 
-        <?php else : ?>
-          <p class="block-title-pre" aria-describedby="block-title-block-blog">Tekijöiden ajatuksia</p>
-          <h1 class="block-title block-title-archive" id="block-title-block-blog">Blogin kaikki jorinat</h1>
-        <?php endif; ?>
+          <?php else : ?>
+
+            <p class="block-title-pre" aria-describedby="block-title-block-blog">Tekijöiden ajatuksia</p>
+            <h1 class="block-title block-title-archive" id="block-title-block-blog">Blogin kaikki jorinat</h1>
+
+          <?php endif; ?>
         </header>
 
         <div class="cols">
