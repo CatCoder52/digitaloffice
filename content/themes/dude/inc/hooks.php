@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-25 17:40:42
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-06-03 17:48:30
+ * @Last Modified time: 2019-06-03 20:02:45
  *
  * @package dude2019
  */
@@ -181,3 +181,5 @@ add_filter( 'wp_calculate_image_srcset', 'dude_disable_srcset' );
 function dude_disable_srcset( $sources ) {
   return false;
 }
+
+add_filter( 'dude_img_hashfeed_insta_count', function() { return 8; } );
