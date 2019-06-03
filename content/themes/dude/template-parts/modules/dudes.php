@@ -2,8 +2,8 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 19:18:00
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-06-03 10:37:30
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2019-06-03 16:08:41
  *
  * @package dude2019
  */
@@ -36,7 +36,10 @@ if ( ! $query->have_posts() ) {
   <div class="container">
 
     <?php if ( is_singular( 'person' ) ) : ?>
-      <h2>Tsekkaa muut dudexet</h2>
+      <header class="block-head block-head-no-padding-top">
+        <p class="block-title-pre" aria-describedby="block-title-related-dudes">Crew</p>
+        <h2 class="block-title" id="block-title-related-dudes">Tsekkaa muut dudet</h2>
+      </header>
     <?php endif; ?>
 
     <div class="cols">
