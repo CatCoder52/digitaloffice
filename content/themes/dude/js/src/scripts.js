@@ -272,7 +272,7 @@ document.body.classList.add('js');
     // );
 
     // Fade out other menu items when selected more-item
-    $( '.dude-nav-more a' ).hover(
+    $( '.dude-nav-more button' ).hover(
       function() {
         $( this ).parent().parent().addClass('fade-out');
       }, function() {
