@@ -968,6 +968,35 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5cf4e33a1b11f": {
+                    "key": "layout_5cf4e33a1b11f",
+                    "name": "instagram",
+                    "label": "Instagram",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5cf4e33f1b120",
+                            "label": "Häshtääki",
+                            "name": "hashtag",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Lisää moduuli",
@@ -992,5 +1021,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1559087913
+    "modified": 1559552852
 }
