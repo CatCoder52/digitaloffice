@@ -381,7 +381,6 @@ window.CRISP_READY_TRIGGER = function() {
     // Hide chat circle by default unless there is unread messages or session is ongoing
     if ( $crisp.get('chat:unread:count') > 0 || $crisp.is('session:ongoing')) {
       $crisp.push(['do', 'chat:show']);
-      $crisp.push(['do', 'chat:open']);
     } else {
       $crisp.push(['do', 'chat:hide']);
     }
