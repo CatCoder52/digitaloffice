@@ -87,7 +87,15 @@ if ( $show_chat_greeting ) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="profile" href="http://gmpg.org/xfn/11">
 
-  <?php wp_head(); ?>
+  <?php wp_head();
+
+  if ( is_singular( 'reference' ) ) :
+    $custom_css = get_post_meta( get_the_id(), 'custom_css', true );
+
+    if ( ! empty( $custom_css ) ) : ?>
+      <style type="text/css"><?php echo $custom_css ?></style>
+    <?php endif;
+  endif; ?>
 </head>
 
 <body <?php body_class( 'no-js' ); ?>>
