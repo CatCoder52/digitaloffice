@@ -7,7 +7,7 @@
 
 // Buttons
 .content-area {
-  button:not(.accordion):not(.action):not(.arrow-link-wrapper),
+  button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button),
   .button,
   input[type="reset"],
   input[type="submit"],

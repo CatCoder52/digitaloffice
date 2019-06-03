@@ -107,11 +107,12 @@ document.body.classList.add('js');
   // Linkable accordion sections
   $('.accordion').each(function() {
     var $t = $(this);
-    var hash = location.hash;
 
-    console.log(hash);
+    // Remove all open-accordion classes by default when going to section via hash
+    $('.accordion').removeClass('open-accordion');
 
-    if($t.attr("data-href") == hash) {
+    if($t.attr("data-href") == window.location.hash) {
+
       if($t.next('.accordion-content').is(':hidden')) {
         $('.accordion-content').stop(true, false).slideUp(225);
         $t.next('.accordion-content').stop(true, false).slideDown(250, function() {

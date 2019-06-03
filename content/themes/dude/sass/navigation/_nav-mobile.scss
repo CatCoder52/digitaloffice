@@ -244,24 +244,27 @@ body.single-person.js-nav-active .site-content {
     button.open-chat {
       background: transparent;
       border: 0;
-      display: block;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
       font-weight: 300;
       padding: 0;
       cursor: pointer;
+      transition: all $transition-duration;
+
+      &:hover {
+        opacity: .5;
+      }
 
       svg,
       path {
+        top: 0;
         fill: transparent;
         stroke: $color-dude-white;
       }
 
       &:after {
-        width: 0;
-        bottom: 0;
-      }
-
-      &:hover:after {
-        width: 100%;
+        display: none;
       }
     }
 
@@ -280,14 +283,6 @@ body.single-person.js-nav-active .site-content {
         transition: all $transition-duration;
         bottom: .2rem;
         opacity: .5;
-      }
-
-      &.phone:after {
-        width: 0;
-      }
-
-      &.phone:hover:after {
-        width: 100%;
       }
 
       svg {

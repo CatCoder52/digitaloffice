@@ -16,10 +16,11 @@
   }
 
   .cols {
-    @include grid(3, $gutter_x: 10rem, $gutter_y: 10rem);
+    @include grid(2, $gutter_x: $padding-general-content-box, $gutter_y: $padding-general-content-box);
+    margin-top: $padding-default-rows;
 
-    @media (max-width: 1100px) {
-      @include grid(2, $gutter_x: 10rem, $gutter_y: 10rem);
+    @media (min-width: 1600px) {
+      @include grid(3, $gutter_x: $padding-general-content-box, $gutter_y: $padding-general-content-box);
     }
 
     @media (max-width: 900px) {
