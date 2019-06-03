@@ -17,27 +17,27 @@
 
         <div class="row">
           <h2>2013</h2>
-          <button class="action" data-label="Vanha toimisto irtisanomisajalla. Kuvan Macbook ja iPad eivät ole edes omia." data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2013.jpg' ) ?>">Roni ja Juha perustavat yrityksen keväällä 2013 vähän niinkun vahingossa. Pitkiä päiviä sekä opettelua yrittäjyyden ihmeelliseen maailmaan.</button>
+          <button tabindex="0" class="action" data-label="Vanha toimisto irtisanomisajalla. Kuvan Macbook ja iPad eivät ole edes omia." data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2013.jpg' ) ?>">Roni ja Juha perustavat yrityksen keväällä 2013 vähän niinkun vahingossa. Pitkiä päiviä sekä opettelua yrittäjyyden ihmeelliseen maailmaan.</button>
         </div>
 
         <div class="row">
           <h2>2015</h2>
-          <button class="action" data-label="Kristian virittelee nyrkkiä hanuriin. Kuva vänäriltä." data-image="<?php echo get_theme_file_uri( 'images/timeline/placeholder.png' ) ?>">Hohkavaara ja Dude yhdistyvät. Tätä juhlitaan parilla muumilimpparilla. Rock ’n roll haisee nokkaan.</button>
+          <button tabindex="0" class="action" data-label="Kristian virittelee nyrkkiä hanuriin. Kuva vänäriltä." data-image="<?php echo get_theme_file_uri( 'images/timeline/placeholder.png' ) ?>">Hohkavaara ja Dude yhdistyvät. Tätä juhlitaan parilla muumilimpparilla. Rock ’n roll haisee nokkaan.</button>
         </div>
 
         <div class="row">
           <h2>2016</h2>
-          <button class="action" data-label="Kristian virittelee nyrkkiä hanuriin. Kuva vänäriltä." data-image="<?php echo get_theme_file_uri( 'images/timeline/risella.png' ) ?>">Timi tulee mukaan völjyyn. Isompia ja vaativampia projekteja saadaan kotiutettua sekä kappas kummaa, myös tehtyä.</button>
+          <button tabindex="0" class="action" data-label="Kristian virittelee nyrkkiä hanuriin. Kuva vänäriltä." data-image="<?php echo get_theme_file_uri( 'images/timeline/risella.png' ) ?>">Timi tulee mukaan völjyyn. Isompia ja vaativampia projekteja saadaan kotiutettua sekä kappas kummaa, myös tehtyä.</button>
         </div>
 
         <div class="row">
           <h2>2018</h2>
-          <button class="action" data-label="Kristian virittelee nyrkkiä hanuriin. Kuva vänäriltä." data-image="<?php echo get_theme_file_uri( 'images/timeline/risella.png' ) ?>">Liikevaihto ylitti 200 000. Soitettiin Get Lucky! Muutettiin Kauppakadulle.</button>
+          <button tabindex="0" class="action" data-label="Kristian virittelee nyrkkiä hanuriin. Kuva vänäriltä." data-image="<?php echo get_theme_file_uri( 'images/timeline/risella.png' ) ?>">Liikevaihto ylitti 200 000. Soitettiin Get Lucky! Muutettiin Kauppakadulle.</button>
         </div>
 
         <div class="row active">
           <h2>2019</h2>
-          <button class="action" data-label="Kristian virittelee nyrkkiä hanuriin. Kuva vänäriltä." data-image="<?php echo get_theme_file_uri( 'images/timeline/risella.png' ) ?>">Rekryttiin <a href="#">Henkka</a> ja pari muutakin rekryä tulilla. To be continued...</button>
+          <button tabindex="0" class="action" data-label="Kristian virittelee nyrkkiä hanuriin. Kuva vänäriltä." data-image="<?php echo get_theme_file_uri( 'images/timeline/risella.png' ) ?>">Rekryttiin <a href="#">Henkka</a> ja pari muutakin rekryä tulilla. To be continued...</button>
         </div>
 
       </div>

@@ -4,7 +4,7 @@
   padding-right: 0;
 
   .cols {
-    @include grid(2, $gutter_x: 10rem, $gutter_y: 0);
+    @include grid(2, $gutter_x: 10rem, $gutter_y: 0rem);
 
     @media (max-width: 1260px) {
       grid-template-columns: 60vw 40vw;

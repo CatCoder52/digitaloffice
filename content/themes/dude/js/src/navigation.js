@@ -205,8 +205,18 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
     return;
   }
 
+  container_desktop = document.getElementById( 'nav-desktop' );
+  if ( ! container_desktop ) {
+    return;
+  }
+
   button = document.getElementById( 'nav-toggle' );
   if ( 'undefined' === typeof button ) {
+    return;
+  }
+
+  button_desktop = document.getElementById( 'nav-toggle-desktop' );
+  if ( 'undefined' === typeof button_desktop ) {
     return;
   }
 
@@ -243,8 +253,6 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
       firstFocusableElement = focusableElements[0];
       lastFocusableElement  = focusableElements[focusableElements.length - 1];
 
-      console.log(focusableElements);
-
       // Redirect last Tab to first focusable element.
       lastFocusableElement.addEventListener( 'keydown', function ( e ) {
         if ( ( e.keyCode === 9 && ! e.shiftKey ) ) {
@@ -275,6 +283,16 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
   document.addEventListener( 'keyup', function( event ) {
 
     if ( event.keyCode == 27 ) {
+
+      var toggletext = $(this).find('.toggle-text').text();
+      if ( toggletext == 'Lisää' ) {
+        $(this).find('.toggle-text').text('Sulje');
+      } else {
+        $(this).find('.toggle-text').text('Lisää');
+      }
+
+      $('body').removeClass('js-nav-active');
+
       if ( -1 !== container.className.indexOf( 'is-active' ) ) {
         closeMenu(); // Close menu.
       }
@@ -289,11 +307,80 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
     }
   };
 
+  button_desktop.onclick = function() {
+    if ( document.body.classList.contains('js-nav-active') ) {
+       closeMenu_desktop(); // Close menu.
+    } else {
+      html.className      += ' disable-scroll';
+      //body.className      += ' js-nav-active';
+      //container_desktop.className += ' is-active';
+      //button_desktop.className    += ' is-active';
+      button_desktop.setAttribute( 'aria-expanded', 'true' );
+      menu.setAttribute( 'aria-expanded', 'true' );
+
+      // Set focusable elements inside main navigation.
+      focusableElements_desktop     = container.querySelectorAll( ['a[href]', 'area[href]', 'input:not([disabled])', 'select:not([disabled])', 'textarea:not([disabled])', 'button_desktop:not([disabled])', 'iframe', 'object', 'embed', '[contenteditable]', '[tabindex]:not([tabindex^="-"])', 'button'] );
+      firstFocusableElement_desktop = focusableElements_desktop[0];
+      lastFocusableElement_desktop  = focusableElements_desktop[focusableElements_desktop.length - 1];
+
+      // Redirect first Tab to first focusable element.
+      button_desktop.addEventListener( 'keydown', function ( e ) {
+        if ( ( e.keyCode === 9 && ! e.shiftKey ) ) {
+          if ( document.body.classList.contains('js-nav-active') ) {
+            e.preventDefault();
+            firstFocusableElement_desktop.focus(); // Set focus on first element - that's actually close menu button_desktop.
+          }
+        }
+      });
+
+      // Redirect last Tab to first focusable element.
+      lastFocusableElement_desktop.addEventListener( 'keydown', function ( e ) {
+        if ( ( e.keyCode === 9 && ! e.shiftKey ) ) {
+          if ( document.body.classList.contains('js-nav-active') ) {
+            e.preventDefault();
+            button_desktop.focus(); // Set focus on first element - that's actually close menu button_desktop.
+          }
+        }
+      });
+
+      // Redirect first Shift+Tab to toggle button_desktop element.
+      firstFocusableElement_desktop.addEventListener( 'keydown', function ( e ) {
+        if ( ( e.keyCode === 9 && e.shiftKey ) ) {
+          if ( document.body.classList.contains('js-nav-active') ) {
+            e.preventDefault();
+            button_desktop.focus(); // Set focus on last element.
+          }
+        }
+      });
+
+      // Redirect Shift+Tab from the toggle button_desktop to last focusable element.
+      button_desktop.addEventListener( 'keydown', function ( e ) {
+        if ( ( e.keyCode === 9 && e.shiftKey ) ) {
+          if ( document.body.classList.contains('js-nav-active') ) {
+            e.preventDefault();
+            lastFocusableElement_desktop.focus(); // Set focus on last element.
+          }
+        }
+      });
+    }
+  };
+
   // Close menu function.
   function closeMenu() {
     html.className      = html.className.replace( ' disable-scroll', '' );
     body.className      = body.className.replace( ' js-nav-active', '' );
     container.className = container.className.replace( ' is-active', '' );
+    button.className    = button.className.replace( ' is-active', '' );
+    button.setAttribute( 'aria-expanded', 'false' );
+    menu.setAttribute( 'aria-expanded', 'false' );
+    button.focus();
+  }
+
+    // Close menu function.
+  function closeMenu_desktop() {
+    html.className      = html.className.replace( ' disable-scroll', '' );
+    //body.className      = body.className.replace( ' js-nav-active', '' );
+    //container.className = container.className.replace( ' is-active', '' );
     button.className    = button.className.replace( ' is-active', '' );
     button.setAttribute( 'aria-expanded', 'false' );
     menu.setAttribute( 'aria-expanded', 'false' );

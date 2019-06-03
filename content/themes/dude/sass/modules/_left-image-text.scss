@@ -69,7 +69,7 @@
   }
 
   .cols {
-    @include grid(2, $gutter_x: 0, $gutter_y: 0);
+    @include grid(2, $gutter_x: 0rem, $gutter_y: 0rem);
 
     @media (max-width: 860px) {
       display: flex;

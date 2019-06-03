@@ -4,7 +4,7 @@ body .block-hero-person {
   padding-top: calc(15rem + 113px);
 
   .cols {
-    @include grid(2, $gutter_x: 0, $gutter_y: 0);
+    @include grid(2, $gutter_x: 0rem, $gutter_y: 0rem);
     grid-template-columns: 6fr 4fr;
 
     @media (max-width: $container-ipad) {
@@ -59,6 +59,25 @@ body .block.block-hero-reference {
   @media (max-width: $container-mobile) {
     .image {
       height: 40rem;
+    }
+  }
+
+  .content {
+    a:not(.arrow-link) {
+      background-image: linear-gradient(to top, $color-dude-deep-black, $color-dude-deep-black);
+      background-size: 100% 1px;
+      background-position: left bottom;
+      background-repeat: no-repeat;
+      transition: .3s all;
+      text-decoration: none;
+      overflow: visible;
+    }
+
+    a:not(.arrow-link):hover,
+    a:not(.arrow-link):focus,
+    a:not(.arrow-link):active {
+      background-size: 100% 2.8rem;
+      color: $color-dude-white;
     }
   }
 }

@@ -168,14 +168,11 @@
 
       &:hover {
         opacity: .5;
+        cursor: pointer;
       }
 
       &:after {
         display: none;
-      }
-
-      &:hover {
-        cursor: pointer;
       }
 
       svg {
@@ -218,6 +215,10 @@
       bottom: 8rem;
       z-index: 6;
 
+      button:after {
+        display: none;
+      }
+
       @media (max-width: 700px) {
         position: static;
       }
@@ -232,11 +233,11 @@
         color: $color-dude-deep-black;
         text-align: left;
         padding: 0;
+      }
 
-        &:hover,
-        &:focus {
-          cursor: pointer;
-        }
+      .arrow-link-wrapper:hover,
+      .arrow-link-wrapper:focus {
+        cursor: pointer;
       }
 
       .arrow-link-wrapper .arrow-link {
@@ -320,7 +321,7 @@
     }
 
     .container {
-      @include grid(2, $gutter_x: 0, $gutter_y: 0);
+      @include grid(2, $gutter_x: 0rem, $gutter_y: 0rem);
       width: 100%;
       margin: 0;
       text-align: left;

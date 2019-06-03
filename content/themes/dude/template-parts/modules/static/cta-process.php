@@ -17,8 +17,8 @@
       <div class="col">
 
         <header class="block-head">
-          <p class="block-title-pre" aria-describedby="block-title-our-services">Hommahan toimii, mitäs tää käytännössä menee?</p>
-          <h2 class="block-title" id="block-title-our-services">Älä osta sikaa säkissä sit amet, consectetur adipiscing elit.</h2>
+          <p class="block-title-pre" aria-describedby="block-title-cta-process">Hommahan toimii, mites tää käytännössä menee?</p>
+          <h2 class="block-title" id="block-title-cta-process">Älä osta sikaa säkissä sit amet, consectetur adipiscing elit.</h2>
           <p class="cta-link"><a href="#">Lue lisää "prosessista"</a></p>
         </header>
 

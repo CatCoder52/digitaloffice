@@ -18,9 +18,9 @@
 
         <div class="service-switcher">
           <ul id="service-switcher">
-            <li><button class="init has-focus clicked service-switcher-button" data-tab="verkkosivut" id="init">Verkkosivut</button></li>
-            <li><button class="service-switcher-button" data-tab="verkkopalvelut">Verkkopalvelut</button></li>
-            <li><button class="service-switcher-button" data-tab="integraatiot">Integraatiot</button></li>
+            <li><button tabindex="0" class="init has-focus clicked service-switcher-button" data-tab="verkkosivut" id="init">Verkkosivut</button></li>
+            <li><button tabindex="0" class="service-switcher-button" data-tab="verkkopalvelut">Verkkopalvelut</button></li>
+            <li><button tabindex="0" class="service-switcher-button" data-tab="integraatiot">Integraatiot</button></li>
           </ul>
 
           <div class="gutter">

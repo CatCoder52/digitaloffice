@@ -48,7 +48,7 @@
   }
 
   .cols {
-    @include grid(3, $gutter_x: 10rem, $gutter_y: 0);
+    @include grid(3, $gutter_x: 10rem, $gutter_y: 0rem);
 
     @media (max-width: 1100px) {
       display: flex;

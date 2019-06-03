@@ -15,7 +15,7 @@
   }
 
   .cols {
-    @include grid(2, $gutter_x: 0, $gutter_y: 0);
+    @include grid(2, $gutter_x: 0rem, $gutter_y: 0rem);
 
     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
       display: flex;
