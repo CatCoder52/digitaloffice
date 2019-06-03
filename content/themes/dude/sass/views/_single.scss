@@ -61,6 +61,8 @@
       @media (max-width: $container-mobile) {
         padding-top: $padding-default-rows-mobile;
         padding-bottom: $padding-default-rows-mobile;
+        padding-left: 0;
+        padding-right: 0;
 
         p,
         h1,
