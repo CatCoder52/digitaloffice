@@ -18,6 +18,10 @@ body.js-nav-active {
   overflow: hidden;
 }
 
+.toggle-text {
+  transition: all $transition-duration;
+}
+
 body {
   .hamburger-inner,
   .hamburger-inner::after,
