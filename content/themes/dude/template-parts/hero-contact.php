@@ -28,7 +28,7 @@
         <p class="contact-details">
           <a class="email" href="mailto:moro@dude.fi">moro@dude.fi</a><br />
           <a class="phone" href="tel:0408351033">040 835 1033</a><br />
-          <button class="chat open-chat open-chat-contact" aria-label="Avaa chat"><?php include get_theme_file_path( '/svg/chat.svg' ); ?>Avaa chat</button>
+          <button class="chat open-chat open-chat-contact" aria-label="Avaa chat" tabindex="0"><?php include get_theme_file_path( '/svg/chat.svg' ); ?>Avaa chat</button>
         </p>
 
         <div class="form-box">
