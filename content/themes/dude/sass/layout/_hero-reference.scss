@@ -38,11 +38,6 @@ body .block-hero-person {
     }
   }
 
-  .content svg {
-    height: 50px;
-    width: auto;
-  }
-
   .content h1 {
     @extend %h2;
   }
