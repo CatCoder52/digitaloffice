@@ -55,4 +55,10 @@ body .block-hero-person {
 
 body .block.block-hero-reference {
   padding-bottom: 0;
+
+  @media (max-width: $container-mobile) {
+    .image {
+      height: 40rem;
+    }
+  }
 }
