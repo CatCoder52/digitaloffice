@@ -222,9 +222,25 @@
 .block-open-source {
   padding-top: 0;
 
+  a:not(.github-link) {
+    background-image: linear-gradient(to top, $color-dude-deep-black, $color-dude-deep-black);
+    background-size: 100% .1rem;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    transition: .3s all;
+    text-decoration: none;
+    overflow: visible;
+  }
+
+  a:not(.github-link):hover,
+  a:not(.github-link):focus,
+  a:not(.github-link):active {
+    background-size: 100% 2.8rem;
+    color: $color-dude-white;
+  }
+
   @media (min-width: 900px) {
     margin-top: -10rem;
-    max-width: 50%;
   }
 
   .container {
@@ -233,15 +249,44 @@
 
   .content {
     margin-bottom: 8rem;
+
+    @media (min-width: 900px) {
+      max-width: 50%;
+    }
   }
 
   // Pinned GitHub items
+  .repos {
+    @include grid(3, $gutter_x: 3rem);
+
+    @media (min-width: 900px) {
+      width: 100%;
+      max-width: 100rem;
+    }
+
+    @media (max-width: 1000px) {
+      @include grid(2, $gutter_x: 3rem, $gutter_y: 3rem);
+    }
+
+    @media (max-width: 600px) {
+      display: block;
+    }
+  }
+
   .repo {
     border: 1px solid #d1d5da;
     border-radius: 3px;
     width: 100%;
     max-width: 42rem;
     padding: 2rem;
+
+    @media (max-width: 600px) {
+      margin-bottom: 3rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
 
     h3,
     p {
@@ -307,6 +352,10 @@
 
     .css {
       background-color: #563d7c;
+    }
+
+    .php {
+      background-color: #4f5d95;
     }
   }
 }
