@@ -2,8 +2,8 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:50:23
- * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-06-03 15:56:24
+ * @Last Modified by:   Timi Wahalahti
+ * @Last Modified time: 2019-06-03 20:05:19
  *
  * @package dude2019
  */
@@ -17,7 +17,7 @@ if ( ! $small_references ) {
     'post_type'               => 'reference',
     'post_status'             => 'publish',
     'orderby'                 => 'rand',
-    'posts_per_page'          => 2,
+    'posts_per_page'          => 3,
     'meta_key'                => '_thumbnail_id',
     'post__not_in'            => array( $main_reference_id ),
     'no_found_rows'           => true,
@@ -38,7 +38,7 @@ if ( ! $small_references ) {
         'title'             => get_the_title(),
         'image_preload_url' => get_the_post_thumbnail_url( get_the_id(), 'tiny-preload-thumbnail' ),
         'image_url'         => get_the_post_thumbnail_url( get_the_id(), 'large' ),
-        'excerpt'           => get_the_excerpt(),
+        'excerpt'           => get_post_meta( get_the_id(), 'short_desc', true ),
         'permalink'         => get_the_permalink(),
       );
     }
