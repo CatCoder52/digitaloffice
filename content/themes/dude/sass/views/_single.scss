@@ -144,8 +144,8 @@
     }
 
     @media (max-width: $container-mobile) {
-      padding-left: $padding-general-content-box-mobile;
-      padding-right: $padding-general-content-box-mobile;
+      padding-left: $padding-default-cols-mobile;
+      padding-right: $padding-default-cols-mobile;
     }
   }
 
@@ -164,8 +164,8 @@
     }
 
     @media (max-width: $container-mobile) {
-      padding-left: $padding-general-content-box-mobile;
-      padding-right: $padding-general-content-box-mobile;
+      padding-left: $padding-default-cols-mobile;
+      padding-right: $padding-default-cols-mobile;
       padding-bottom: $padding-general-content-box-mobile;
     }
 
@@ -204,7 +204,10 @@
     }
 
     @media (max-width: $container-mobile) {
-      padding: $padding-general-content-box-mobile;
+      padding-top: $padding-general-content-box-mobile;
+      padding-bottom: $padding-general-content-box-mobile;
+      padding-left: $padding-default-cols-mobile;
+      padding-right: $padding-default-cols-mobile;
     }
   }
 
@@ -263,8 +266,8 @@
     @media (max-width: $container-mobile) {
       padding-top: $padding-general-content-box-mobile;
       padding-bottom: $padding-general-content-box-mobile;
-      padding-left: 0;
-      padding-right: 0;
+      padding-left: $padding-default-cols-mobile;
+      padding-right: $padding-default-cols-mobile;
     }
 
     p {
