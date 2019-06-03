@@ -26,3 +26,12 @@
     }
   }
 }
+
+body .block.block-open-position .col.col-sidebar ul,
+body .block.block-open-position .col.col-sidebar ol {
+  line-height: 1.77;
+
+  li {
+    line-height: 1.77;
+  }
+}
