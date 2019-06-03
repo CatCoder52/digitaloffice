@@ -157,7 +157,35 @@
       top: 3px;
     }
 
-    a:after {
+    .open-chat {
+      background: transparent;
+      border: 0;
+      padding: 0;
+      color: $color-dude-white;
+      font-weight: 300;
+      cursor: pointer;
+      transition: all $transition-duration;
+
+      &:hover {
+        opacity: .5;
+      }
+
+      &:after {
+        display: none;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      svg {
+        fill: transparent;
+        stroke: $color-dude-white;
+      }
+    }
+
+    a:after,
+    button:after {
       width: 100%;
       height: 1px;
       background: #fff;
@@ -174,7 +202,8 @@
       width: auto;
     }
 
-    a:hover:after {
+    a:hover:after,
+    button:hover:after {
       width: 0;
     }
 
