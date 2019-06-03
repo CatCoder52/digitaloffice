@@ -18,6 +18,8 @@ get_template_part( 'template-parts/hero' ); ?>
       <section class="block block-references">
         <div class="container">
 
+          <h2 class="screen-reader-text">Referenssit</h2>
+
           <div class="cols cols-references">
             <?php while ( have_posts() ) : the_post(); ?>
               <div class="col">
