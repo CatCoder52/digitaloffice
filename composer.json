@@ -113,7 +113,8 @@
     "relevanssi/relevanssi-premium": "^2.2.5",
     "rocketgenius/gravity-forms": "2.3.6",
     "humanmade/page-for-post-type": "dev-master",
-    "digitoimistodude/image-hashtag-feed": "dev-master"
+    "digitoimistodude/image-hashtag-feed": "dev-master",
+    "wpackagist-plugin/simple-page-ordering": "*"
   },
   "require-dev": {
     "rarst/wps": "*",
