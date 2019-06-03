@@ -7,14 +7,14 @@
  * @package dude
  */
 
-get_header();
-
-get_template_part( 'template-parts/hero' ); ?>
+get_header(); ?>
 
 <div id="content" class="content-area">
 	<main role="main" id="main" class="site-main">
 
-    <?php if ( have_posts() ) : ?>
+    <?php
+    get_template_part( 'template-parts/hero' );
+    if ( have_posts() ) : ?>
       <section class="block block-references">
         <div class="container">
 
