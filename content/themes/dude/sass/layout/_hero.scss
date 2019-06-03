@@ -168,14 +168,11 @@
 
       &:hover {
         opacity: .5;
+        cursor: pointer;
       }
 
       &:after {
         display: none;
-      }
-
-      &:hover {
-        cursor: pointer;
       }
 
       svg {
@@ -236,11 +233,11 @@
         color: $color-dude-deep-black;
         text-align: left;
         padding: 0;
+      }
 
-        &:hover,
-        &:focus {
-          cursor: pointer;
-        }
+      .arrow-link-wrapper:hover,
+      .arrow-link-wrapper:focus {
+        cursor: pointer;
       }
 
       .arrow-link-wrapper .arrow-link {
