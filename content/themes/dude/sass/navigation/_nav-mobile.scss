@@ -498,7 +498,7 @@ body.single-person.js-nav-active .site-content {
   // Hide from desktops
   display: none;
 
-  span {
+  span:not(.toggle-text) {
     color: $nav-toggle-color;
     font-size: 1.2em;
   }
