@@ -233,7 +233,10 @@
     }
 
     @media (max-width: $container-mobile) {
-      padding: $padding-general-content-box-mobile;
+      padding-top: $padding-general-content-box-mobile;
+      padding-bottom: $padding-general-content-box-mobile;
+      padding-left: 0;
+      padding-right: 0;
     }
 
     p {
