@@ -21,7 +21,7 @@ if ( ! $small_references ) {
     'post_type'               => 'reference',
     'post_status'             => 'publish',
     'orderby'                 => 'rand',
-    'posts_per_page'          => 2,
+    'posts_per_page'          => 3,
     'meta_key'                => '_thumbnail_id',
     'post__not_in'            => array( get_the_id() ),
     'no_found_rows'           => true,
