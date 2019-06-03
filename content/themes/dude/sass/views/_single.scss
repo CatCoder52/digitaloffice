@@ -40,18 +40,21 @@
       padding-left: 0;
       padding-right: 0;
 
+      @media (max-width: 1100px) {
+        padding-left: $padding-default-cols-ipad;
+        padding-right: $padding-default-cols-ipad;
+      }
+
       @media (max-width: $container-ipad) {
         padding-top: $padding-default-rows-ipad;
         padding-bottom: $padding-default-rows-ipad;
-        padding-left: 0;
-        padding-right: 0;
       }
 
       @media (max-width: $container-mobile) {
         padding-top: $padding-default-rows-mobile;
         padding-bottom: $padding-default-rows-mobile;
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: $padding-default-cols-mobile;
+        padding-right: $padding-default-cols-mobile;
       }
     }
   }
