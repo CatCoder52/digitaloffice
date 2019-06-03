@@ -42,6 +42,10 @@ if ( has_post_thumbnail() ) {
         <?php if ( 4449 === get_the_id() ) : ?>
           <p class="cta-link animate animate-3"><a href="<?php echo get_post_type_archive_link( 'reference' ) ?>">Mitä helvettiä? Missä työnäytteet?</a></p>
         <?php endif; ?>
+
+        <?php if ( 4489 === get_the_id() ) : ?>
+          <p><a class="cta-link cta-link-white animate animate-3" href="https://handbook.dude.fi">Lue Duden handbookia</a></p>
+        <?php endif; ?>
       </div>
     </div>
 

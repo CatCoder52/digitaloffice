@@ -3,18 +3,19 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 17:43:02
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-25 19:10:49
+ * @Last Modified time: 2019-06-02 23:35:44
  *
  * @package dude2019
  */
+
 ?>
 
 <section class="block block-process">
   <div class="container">
 
     <header class="block-head">
-      <p class="block-title-pre" aria-describedby="block-title-process">Hommahan haisee sille että se ei ois ihan kusetusta. Mitäs tää käytännössä menee?</p>
-      <h2 class="block-title" id="block-title-process">Hyvin suunniteltu on viel kokonaan tekemättä:</h2>
+      <p class="block-title-pre" aria-describedby="block-title-process">Hommahan haisee sille että se ei olisi ihan kusetusta. Mites tämä käytännössä menee?</p>
+      <h2 class="block-title" id="block-title-process">Hyvin suunniteltu on vielä kokonaan tekemättä:</h2>
     </header>
 
     <div class="cols">
@@ -32,7 +33,7 @@
 
           <p>Saat tarjouksen, jossa on avattu erilaiset verkkopalveluun tulevat toiminnallisuudet ja työvaiheet. Tarjouksessa esitetään myös alustava aikataulu projektille.</p>
 
-          <p>Jos hyväksytte tarjouksen, meillä lähtee Get Lucky soimaan. Sen jälkeen sovitaan aloitustapaaminen, jossa muodostetaan yhdessä toteutuksen raamit ja kantavat ajatukset, jotka ohjaavat tapaamisen jälkeen aloitettavaa työstöä.</p>
+          <p>Jos hyväksytte tarjouksen, meillä lähtee <a href="https://handbook.dude.fi/tyoskenteleminen-dudella/toimistotila#get-lucky">Get Lucky</a> soimaan. Sen jälkeen sovitaan aloitustapaaminen, jossa muodostetaan yhdessä toteutuksen raamit ja kantavat ajatukset, jotka ohjaavat tapaamisen jälkeen aloitettavaa työstöä.</p>
         </div>
       </div>
 

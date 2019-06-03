@@ -5,6 +5,13 @@ $column-gap: 4rem;
     margin-left: -$column-gap;
     margin-right: -$column-gap;
 
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      @media (max-width: 1500px) {
+        display: block;
+        width: 100%;
+      }
+    }
+
     h3 {
       // A bit smaller than %h3
       @include responsive-font(22px, 28px);
@@ -34,6 +41,13 @@ $column-gap: 4rem;
       padding-right: $column-gap;
       padding-top: $column-gap + 2.7rem;
       padding-bottom: $column-gap;
+
+      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        @media (max-width: 1500px) {
+          display: block;
+          width: 100%;
+        }
+      }
 
       > * {
         padding-left: $column-gap;

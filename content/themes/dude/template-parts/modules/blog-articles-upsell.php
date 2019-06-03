@@ -18,7 +18,7 @@ if ( empty( $title_placeholder ) || empty( $articles ) ) {
 <section class="block block-blog-articles-upsell">
   <div class="container">
 
-    <h2 class="block-title"><?php printf( 'Blogauksii <span>%s</span>', $title_placeholder ) ?></h2>
+    <h2 class="block-title"><?php printf( 'Bloggauksia <span>%s</span>', $title_placeholder ) ?></h2>
 
     <div class="cols">
       <?php foreach ( $articles as $article ) :

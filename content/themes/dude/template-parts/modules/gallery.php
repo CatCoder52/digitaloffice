@@ -2,8 +2,8 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-25 14:37:31
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-06-01 19:40:22
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2019-06-02 22:05:40
  *
  * @package dude2019
  */
@@ -40,16 +40,14 @@ if ( empty( $images ) ) {
 <section class="block block-gallery">
   <div class="container">
 
-    <div class="cols">
+    <div class="cols" id="gallery">
       <?php $x = 0; foreach ( $images as $image ) :
         if ( $x < 7 ) : ?>
-          <div id="<?php echo $image['id'] ?>" class="col" style="background-image: url('<?php echo esc_url( $image['url'] ) ?>');">
-            <a class="global-link gallery-item" href="<?php echo esc_url( $image['url'] ) ?>"><span class="screen-reader-text">Avaa galleria kuvaan "<?php echo esc_html( $image['alt'] ) ?>"</span></a>
-          </div>
-        <?php else: ?>
-          <figure id="<?php echo $image['id'] ?>" class="image hidden">
-            <a href="<?php echo esc_url( $image['url'] ) ?>" class="gallery-item"><?php echo $image['alt'] ?></a>
-          </figure>
+        <div class="col" style="background-image: url('<?php echo esc_url( $image['url'] ) ?>');">
+          <a class="global-link" href="<?php echo esc_url( $image['url'] ) ?>"><span class="screen-reader-text">Avaa galleria kuvaan "<?php echo esc_html( $image['alt'] ) ?>"</span></a>
+        </div>
+      <?php else : ?>
+          <a class="global-link hidden" href="<?php echo esc_url( $image['url'] ) ?>"><span class="screen-reader-text">Avaa galleria kuvaan "<?php echo esc_html( $image['alt'] ) ?>"</span></a>
         <?php endif; ?>
       <?php $x++; endforeach; ?>
     </div>

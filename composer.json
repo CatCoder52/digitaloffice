@@ -67,7 +67,7 @@
       "type": "package",
       "package": {
         "name": "relevanssi/relevanssi-premium",
-        "version": "2.2.5",
+        "version": "2.3.0",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
@@ -106,7 +106,8 @@
     "wpackagist-plugin/email-address-encoder": "*",
     "wpackagist-plugin/worker": "*",
     "wpackagist-plugin/redis-cache": "*",
-    "wpackagist-plugin/autodescription": "*",
+    "wpackagist-plugin/wordpress-seo": "*",
+    "wpackagist-plugin/so-clean-up-wp-seo": "*",
     "aucor/dynamic-mo-loader": "*",
     "advanced-custom-fields/advanced-custom-fields-pro": "^5.8.0",
     "relevanssi/relevanssi-premium": "^2.2.5",

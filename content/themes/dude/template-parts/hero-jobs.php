@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-31 10:14:43
+ * @Last Modified time: 2019-06-03 01:41:33
  *
  * @package dude2019
  */
@@ -44,8 +44,8 @@ if ( is_post_type_archive( 'reference' ) ) {
         </div>
 
         <ul class="jobs animate animate-3">
-          <li><a href="#">WordPress-kehittäjää back-end-painotuksella <span class="label">Haku päällä nyt!</span></a></li>
-          <li><a href="#">Visuaalista suunnittelijaa project lead-viballa <span class="label">Haku päällä nyt!</span></a></li>
+          <li><a href="<?php echo get_page_link(4588); ?>">WordPress-kehittäjää back-end-painotuksella <span class="label">Haku päällä nyt!</span></a></li>
+          <li><a href="<?php echo get_page_link(4793); ?>">Visuaalista suunnittelijaa project lead-viballa <span class="label">Haku päällä nyt!</span></a></li>
         </ul>
       </div>
     </div>

@@ -33,6 +33,11 @@
   }
 }
 
+// 404 stuff
+.error404 .block.block-footer.site-footer {
+  padding-top: 8rem;
+}
+
 // Default shade on top of blocks
 .shade {
   background: #333;
@@ -124,7 +129,7 @@ a.global-link {
     max-width: 60%;
   }
 
-  @media (max-width: $container-mobile) {
+  @media (max-width: 600px) {
     max-width: 100%;
   }
 }
@@ -167,6 +172,14 @@ a.global-link {
   bottom: -1rem;
   transition: all $transition-duration;
   opacity: .5;
+}
+
+.cta-link.cta-link-white {
+  color: $color-dude-white;
+
+  &:after {
+    background: $color-dude-white;
+  }
 }
 
 .arrow-link-wrapper {

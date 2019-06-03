@@ -33,7 +33,7 @@ if ( empty( $bg_image ) || empty( $title ) || empty( $content ) ) {
           <h2 class="block-title"><?php echo esc_html( $title ) ?></h2>
           <?php echo wpautop( $content );
           echo do_shortcode( '[gravityform id=1 title=false description=false ajax=true tabindex=49]' ); ?>
-          <p class="end-note is-centered">Fuck the phone, I wanna send <a href="https://www.dude.fi/yhteystiedot">email</a></p>
+          <p class="end-note is-centered"><a href="https://www.dude.fi/yhteystiedot">Fuck the phone, I wanna send email</a></p>
         </div>
       </div>
     </div>

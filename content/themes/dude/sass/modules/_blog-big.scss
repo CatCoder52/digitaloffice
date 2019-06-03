@@ -17,6 +17,16 @@
   .cols {
     @include grid(2, $gutter_x: 0, $gutter_y: 0);
 
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
+    @supports (-ms-ime-align: auto) {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+
     @media (max-width: 900px) {
       display: flex;
       flex-wrap: wrap;
@@ -27,6 +37,32 @@
 
       .col.col-image {
         height: 50rem;
+
+        @media (max-width: $container-mobile) {
+          height: 35rem;
+        }
+      }
+    }
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      .col.col-image,
+      .col.col-content {
+        width: 50vw;
+
+        @media (max-width: 870px) {
+          width: 100vw;
+        }
+      }
+    }
+
+    @supports (-ms-ime-align: auto) {
+      .col.col-image,
+      .col.col-content {
+        width: 50vw;
+
+        @media (max-width: 870px) {
+          width: 100vw;
+        }
       }
     }
   }
@@ -35,6 +71,14 @@
     background: $color-dude-whitegreyish;
     padding: $padding-general-content-box;
     position: relative;
+
+    @media (max-width: $container-ipad) {
+      padding: $padding-general-content-box-ipad;
+    }
+
+    @media (max-width: $container-mobile) {
+      padding: $padding-general-content-box-mobile;
+    }
   }
 
   .block-head {

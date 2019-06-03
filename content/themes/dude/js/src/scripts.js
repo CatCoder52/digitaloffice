@@ -9,87 +9,45 @@ document.body.classList.add('js');
 // jQuery start
 ( function( $ ) {
 
-    // Gallery
-    $('a.gallery-item[href$=jpg], a.gallery-item[href$=gif], a.gallery-item[href$=png], .gallery-item a[href$=jpg], .gallery-item a[href$=png], .gallery-item a[href$=gif]').magnificPopup({
-      type: 'image',
-      removalDelay: 600, // Delay removal by X to allow out-animation
-      gallery: {
-        enabled : true,
-        tCounter: '<span class="mfp-counter">%curr% / %total%</span>'
-      },
-      callbacks: {
+    // Scroll down -button
+    $('.scroll-to-form').click(function(e) {
+      e.preventDefault();
+      var $target = $('.block-wide-text');
 
-        beforeClose: function() {
-          var self = this;
-          self.wrap.addClass('mfp-animate');
-        },
-
-        close: function() {
-          var self = this;
-          self.wrap.removeClass('mfp-animate');
-        },
-
-        open: function() {
-
-          // Add as bg image
-          this.wrap.css('background-image', 'url(' + this.currItem.src + ')');
-
-          // Overwrite default prev + next function. Add timeout for CSS3 crossfade animation
-          $.magnificPopup.instance.next = function() {
-            var self = this;
-            self.wrap.removeClass('mfp-image-loaded');
-            setTimeout(function() { $.magnificPopup.proto.next.call(self); }, 120);
-
-            // Add as bg image
-            this.wrap.css('background-image', 'url(' + this.currItem.src + ')');
-
-          }
-          $.magnificPopup.instance.prev = function() {
-            var self = this;
-            self.wrap.removeClass('mfp-image-loaded');
-            setTimeout(function() { $.magnificPopup.proto.prev.call(self); }, 120);
-
-            // Add as bg image
-            this.wrap.css('background-image', 'url(' + this.currItem.src + ')');
-          }
-
-          // Add custom CSS class for different styling
-          if( this.st.el && this.st.el.data('mfp-dudestyles') ) {
-            this.wrap.addClass( this.currItem.el.data('mfp-dudestyles') );
-          }
-
-        },
-
-        imageLoadComplete: function() {
-          var self = this;
-          setTimeout(function() { self.wrap.addClass('mfp-image-loaded'); }, 16);
-        },
-
-        change: function() {
-          var img = this.content.find('img');
-          img.css('max-height', parseFloat(img.css('max-height')) -200);
-          if (this.isOpen) {
-            this.wrap.addClass('mfp-open');
-          }
-        },
-
-        resize: function() {
-          var img = this.content.find('img');
-          img.css('max-height', parseFloat(img.css('max-height')) -200);
-        }
-
-      },
-      image : {
-        markup : '<div class="please-rotate-nag"><div class="phone"></div><div class="message">' + dude_screenReaderText.rotatedevice + '</div></div><div class="mfp-figure">' +
-        '<div class="mfp-close"></div>' +
-        '<div class="mfp-img"></div>' +
-        '<div class="mfp-bottom-bar">' +
-        '<div class="mfp-title"></div>' +
-        '<div class="mfp-counter"></div>' +
-        '</div>' +
-        '</div>'
-      }
+      $('html, body').animate({
+        scrollTop: $target.offset().top
+      }, 'slow');
     });
+
+    // Gallery
+    var galleryelement = document.getElementById('gallery');
+    if (typeof(galleryelement) != 'undefined' && galleryelement != null) {
+      document.getElementById('gallery').onclick = function (event) {
+        event = event || window.event;
+        var target = event.target || event.srcElement,
+        link = target.src ? target.parentNode : target,
+        options = {
+          index: link,
+          event: event,
+          fullScreen: false,
+          stretchImages: 'cover',
+          onopen: function (index, slide) {
+            current = this.getIndex();
+            total = this.getNumber();
+            document.getElementById('pos').textContent = current + 1;
+            document.getElementById('count').textContent = total;
+          },
+          onslide: function (index, slide) {
+            current = this.getIndex();
+            total = this.getNumber();
+            document.getElementById('pos').textContent = current + 1;
+            document.getElementById('count').textContent = total;
+          }
+        },
+        links = this.getElementsByTagName('a');
+        blueimp.Gallery(links, options);
+      };
+    }
 
     // Check if gallery is portrait and show/hide notification accordingly
     if(window.innerHeight < window.innerWidth) {
@@ -150,6 +108,8 @@ document.body.classList.add('js');
   $('.accordion').each(function() {
     var $t = $(this);
     var hash = location.hash;
+
+    console.log(hash);
 
     if($t.attr("data-href") == hash) {
       if($t.next('.accordion-content').is(':hidden')) {
@@ -344,6 +304,12 @@ document.body.classList.add('js');
     // Register a back to top trigger
     var trigger = document.getElementsByClassName('js-trigger')[0];
     moveTo.registerTrigger(trigger);
+
+    // Open chat link
+    $('.open-chat').on('click', function(event) {
+      event.preventDefault();
+      $crisp.do('chat:open');
+    });
 
     // Chat greeting
     if ( typeof( Storage ) !== 'undefined' ) {

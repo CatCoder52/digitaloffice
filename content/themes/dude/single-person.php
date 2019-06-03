@@ -6,6 +6,7 @@
  *
  * @package dude
  */
+
 the_post();
 
 get_header(); ?>

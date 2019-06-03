@@ -26,8 +26,7 @@
 // Global features
 @import '../features/top';
 @import '../features/animations';
-@import 'magnific-popup/dist/magnific-popup';
-@import '../features/magnific-popup';
+@import '../features/gallery-fullscreen';
 
 // Modules
 @import '../modules/our-services';
@@ -51,6 +50,8 @@
 @import '../modules/blog-big';
 @import '../modules/blog';
 @import '../modules/reference-quote';
+@import '../modules/wide-text';
+@import '../modules/open-position';
 
 // Navigation
 @import '../navigation/nav-core';
@@ -61,3 +62,4 @@
 @import '../views/page';
 @import '../views/single';
 @import '../views/blog';
+@import '../views/community-code';

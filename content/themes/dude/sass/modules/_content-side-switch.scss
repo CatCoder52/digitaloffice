@@ -6,6 +6,10 @@
   .cols,
   .col {
     overflow: visible;
+
+    * {
+      overflow: visible;
+    }
   }
 
   @media (max-width: 1500px) {
@@ -45,6 +49,22 @@
       }
     }
 
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      @media (max-width: 860px) {
+        .col {
+          width: 100%;
+        }
+      }
+    }
+
+    @supports (-ms-ime-align: auto) {
+      @media (max-width: 860px) {
+        .col {
+          width: 100%;
+        }
+      }
+    }
+
     @media (max-width: 700px) {
       display: flex;
       flex-wrap: wrap;
@@ -58,6 +78,22 @@
     align-items: flex-start;
     position: relative;
     padding-right: 5rem;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      @media (max-width: 860px) {
+        width: 100%;
+        justify-content: flex-start;
+        margin-bottom: 5rem;
+      }
+    }
+
+    @supports (-ms-ime-align: auto) {
+      @media (max-width: 860px) {
+        width: 100%;
+        justify-content: flex-start;
+        margin-bottom: 5rem;
+      }
+    }
 
     @media (min-width: 850px) {
       padding-right: 10rem;
@@ -129,6 +165,8 @@
       &.has-focus,
       &:hover {
         opacity: 1;
+        color: $color-body;
+        background: none;
       }
     }
 

@@ -84,9 +84,10 @@ get_header(); ?>
 
           <div class="quote-author-info">
             <?php if ( ! empty( $quote_person_image ) ) : ?>
-              <img src="<?php echo wp_get_attachment_image_url( $quote_person_image, 'medium' ) ?>" />
+              <div class="avatar" style="background-image: url('<?php echo wp_get_attachment_image_url( $quote_person_image, 'medium' ) ?>')"></div>
             <?php endif; ?>
-            <p><?php echo esc_html( $quote_person ) ?><br /><?php echo esc_html( $quote_person_title ) ?></p>
+            <p><span class="quote-person"><?php echo esc_html( $quote_person ) ?></span>
+            <span class="quote-person-title"><?php echo esc_html( $quote_person_title ) ?></span></p>
           </div>
 
         </div>

@@ -1,0 +1,28 @@
+.block.block-open-position {
+  .container {
+    @include grid(2, $gutter_x: 10rem, $gutter_y: 0);
+    grid-template-columns: 3fr 7fr;
+
+    @media (max-width: $container-ipad) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    a {
+      background-image: linear-gradient(to top, $color-dude-deep-black, $color-dude-deep-black);
+      background-size: 100% .1rem;
+      background-position: left bottom;
+      background-repeat: no-repeat;
+      transition: .3s all;
+      text-decoration: none;
+      overflow: visible;
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+      background-size: 100% 2.8rem;
+      color: $color-dude-white;
+    }
+  }
+}

@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 15:26:12
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-06-01 13:43:55
+ * @Last Modified time: 2019-06-03 01:34:41
  *
  * @package dude2019
  */
@@ -32,7 +32,7 @@ if ( ! $query->have_posts() || empty( $mustread ) ) {
     <div class="cols">
 
       <div class="col col-latest">
-        <h2 class="block-title">Latest & greatest</h2>
+        <h2 class="block-title">Uusin bloggauksemme</h2>
 
         <?php while ( $query->have_posts() ) : $query->the_post(); ?>
 
@@ -53,7 +53,7 @@ if ( ! $query->have_posts() || empty( $mustread ) ) {
       </div>
 
       <div class="col col-mustread">
-        <h2 class="block-title">Must read</h2>
+        <h2 class="block-title">Valitsemiamme juttuja sinulle</h2>
 
         <?php foreach ( $mustread as $post ) : ?>
           <div class="post">
