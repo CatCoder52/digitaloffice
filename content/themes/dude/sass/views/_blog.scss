@@ -434,3 +434,12 @@ ul.tags {
 .post-navigation .nav-next a:after {
   content: ' →';
 }
+
+.next-prev a {
+  @extend .button;
+  margin-top: $padding-default-rows;
+
+  &:first-child {
+    margin-right: 2rem;
+  }
+}
