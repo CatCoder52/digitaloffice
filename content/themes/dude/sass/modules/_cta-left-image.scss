@@ -86,7 +86,7 @@ body .block.block-cta-left-image,
   }
 
   .cols {
-    @include grid(2, $gutter_x: 0, $gutter_y: 0);
+    @include grid(2, $gutter_x: 0rem, $gutter_y: 0rem);
     grid-template-columns: 7fr 3fr;
 
     @media (max-width: $container-ipad) {
@@ -117,6 +117,14 @@ body .block.block-cta-left-image,
     margin-left: -20rem;
     position: relative;
     z-index: 1;
+
+    @supports (-ms-ime-align: auto) {
+      margin-left: 0;
+    }
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      margin-left: 0;
+    }
 
     @media (max-width: $container-ipad) {
       padding: 4rem;

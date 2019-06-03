@@ -35,7 +35,7 @@
     overflow: visible;
 
     @media (min-width: 1100px) {
-      @include grid(3, $gutter_x: 10rem, $gutter_y: 0);
+      @include grid(3, $gutter_x: 10rem, $gutter_y: 0rem);
 
       .col-text,
       .col-featured-image {

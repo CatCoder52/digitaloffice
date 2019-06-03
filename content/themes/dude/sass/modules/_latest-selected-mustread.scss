@@ -16,7 +16,7 @@
   }
 
   .cols {
-    @include grid(2, $gutter_x: $padding-general-content-box, $gutter_y: 0);
+    @include grid(2, $gutter_x: $padding-general-content-box, $gutter_y: 0rem);
 
     @media (max-width: 1160px) {
       display: flex;
@@ -53,7 +53,7 @@
 
   .col-mustread {
     .post {
-      @include grid(2, $gutter_x: 4rem, $gutter_y: 0);
+      @include grid(2, $gutter_x: 4rem, $gutter_y: 0rem);
       grid-template-columns: 3fr 7fr;
 
       @media (max-width: 1400px) {
@@ -121,7 +121,7 @@
     }
 
     .inputs {
-      @include grid(2, $gutter_x: 4rem, $gutter_y: 0);
+      @include grid(2, $gutter_x: 4rem, $gutter_y: 0rem);
       grid-template-columns: 7fr 3fr;
 
       @media (max-width: 1200px) {

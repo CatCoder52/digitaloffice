@@ -34,7 +34,7 @@
   }
 
   .cols {
-    @include grid(2, $gutter_x: 10rem, $gutter_y: 0);
+    @include grid(2, $gutter_x: 10rem, $gutter_y: 0rem);
     grid-template-columns: 1fr 2fr;
 
     @media (max-width: 1400px) {
