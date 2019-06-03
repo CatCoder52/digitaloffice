@@ -416,6 +416,23 @@ gulp.task('js', function() {
         .pipe(gulp.dest(jsDest));
 });
 
+gulp.task('js-store', function() {
+
+      gulp.src(
+        [
+          themeDir + '/js/src/store.js'
+        ])
+        .pipe(concat('store.js'))
+        .pipe(uglify({
+          compress: true,
+          mangle: true}).on('error', function(err) {
+            util.log(util.colors.red('[Error]'), err.toString());
+            this.emit('end');
+          }))
+        .pipe(header(banner, {pkg: pkg, currentDate: currentDate}))
+        .pipe(gulp.dest(jsDest));
+});
+
 /*
 
 WATCH
@@ -424,7 +441,7 @@ WATCH
 */
 
 // Run the JS task followed by a reload
-gulp.task('js-watch', ['js'], browsersync.reload);
+gulp.task('js-watch', ['js', 'js-store'], browsersync.reload);
 gulp.task('watch', ['browsersync'], function() {
 
   // Lint SCSS on save, auto correct based on stylefmtfile on change
