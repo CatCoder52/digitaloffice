@@ -19,6 +19,25 @@
             "placeholder": ""
         },
         {
+            "key": "field_5cf52a156cdc0",
+            "label": "Lyhyt esittely",
+            "name": "short_desc",
+            "type": "text",
+            "instructions": "Tätä tekstiä käytetään referenssilistauksessa.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5cefba950d7f6",
             "label": "Otsikko esittelyssä",
             "name": "singular_alt_title",
@@ -155,6 +174,25 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_5cf52ce0ba717",
+            "label": "Kustomoitu CSS",
+            "name": "custom_css",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         }
     ],
     "location": [
@@ -174,5 +212,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1559034171
+    "modified": 1559571728
 }

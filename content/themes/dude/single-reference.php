@@ -13,6 +13,7 @@ $quote = get_post_meta( get_the_id(), 'quote', true );
 $quote_person = get_post_meta( get_the_id(), 'quote_person', true );
 $quote_person_title = get_post_meta( get_the_id(), 'quote_person_title', true );
 $quote_person_image = get_post_meta( get_the_id(), 'quote_person_image', true );
+$custom_css = get_post_meta( get_the_id(), 'custom_css', true );
 
 $small_references = wp_cache_get( get_the_id() . '_references', 'theme' );
 
@@ -42,7 +43,7 @@ if ( ! $small_references ) {
         'title'             => get_the_title(),
         'image_url'         => get_the_post_thumbnail_url( get_the_id(), 'large' ),
         'image_preload_url' => get_the_post_thumbnail_url( get_the_id(), 'tiny-preload-thumbnail' ),
-        'excerpt'           => get_the_excerpt(),
+        'excerpt'           => get_post_meta( get_the_id(), 'short_desc', true ),
         'permalink'         => get_the_permalink(),
       );
     }
@@ -53,7 +54,11 @@ if ( ! $small_references ) {
   wp_cache_set( get_the_id() . '_references', $small_references, 'theme', DAY_IN_SECONDS );
 }
 
-get_header(); ?>
+get_header();
+
+if ( ! empty( $custom_css ) ) : ?>
+  <style type="text/css"><?php echo $custom_css ?></style>
+<?php endif; ?>
 
 <div id="content" class="content-area">
 	<main role="main" id="main" class="site-main">
