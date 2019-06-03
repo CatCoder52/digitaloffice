@@ -196,8 +196,8 @@ if ( $show_chat_greeting ) {
 
             <ul class="contact-actions">
               <li><a class="email" href="mailto:moro@dude.fi">moro@dude.fi</a></li>
-              <li><button class="chat open-chat" aria-label="Avaa chat"><?php include get_theme_file_path( '/svg/chat.svg' ); ?>Avaa chat</button></li>
               <li><a class="phone" href="tel:0408351033" aria-label="Soita numeroon 040 835 1033">040 835 1033</a></li>
+              <li><button class="chat open-chat" aria-label="Avaa chat"><?php include get_theme_file_path( '/svg/chat.svg' ); ?>Avaa chat</button></li>
             </ul>
           </div>
         </div>
