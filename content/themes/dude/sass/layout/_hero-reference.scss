@@ -10,6 +10,16 @@ body .block-hero-person {
     @media (max-width: $container-ipad) {
       display: flex;
       flex-wrap: wrap;
+
+      .col.has-grey-bg {
+        order: 1;
+      }
+
+      .col:not(.has-grey-bg) {
+        width: 100%;
+        height: 100%;
+        order: 2;
+      }
     }
   }
 
