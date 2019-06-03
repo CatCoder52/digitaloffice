@@ -54,7 +54,9 @@ $focus-text-color: #000;
 }
 
 // Suppress focus ring on for mouse users for visual reasons
-[data-whatinput="mouse"] *:focus {
+[data-whatinput="mouse"] *:focus,
+[data-whatinput="touch"] *:focus,
+[data-whatinput="touch"] *:hover {
   outline: none;
 }
 
