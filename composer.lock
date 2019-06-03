@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c5613f6e3385433fb2b0dd51ed64a54f",
-    "content-hash": "644fc4fdac82ed469822afccad7cc5e8",
+    "hash": "d370be824f6146a4e2591608effbf2e7",
+    "content-hash": "3738d73b5c4633f7453923eea4490857",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -501,6 +501,41 @@
                 "wordpress"
             ],
             "time": "2019-05-08 14:23:03"
+        },
+        {
+            "name": "digitoimistodude/image-hashtag-feed",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/digitoimistodude/image-hashtag-feed.git",
+                "reference": "e4597832631d7ebff84f91a759cd7ea4a0d8bde9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/digitoimistodude/image-hashtag-feed/zipball/e4597832631d7ebff84f91a759cd7ea4a0d8bde9",
+                "reference": "e4597832631d7ebff84f91a759cd7ea4a0d8bde9",
+                "shasum": ""
+            },
+            "type": "wordpress-plugin",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "gplv2"
+            ],
+            "authors": [
+                {
+                    "name": "Timi Wahalahti",
+                    "email": "timi@dude.fi",
+                    "homepage": "https://www.dude.fi"
+                }
+            ],
+            "description": "WordPress plugin to get Instagram hashtag feeds working again by bypassing the API.",
+            "homepage": "https://github.com/digitoimistodude/image-hashtag-feed",
+            "keywords": [
+                "instagram",
+                "plugin",
+                "wordpress"
+            ],
+            "time": "2018-11-23 11:26:26"
         },
         {
             "name": "gettext/gettext",
@@ -4857,6 +4892,7 @@
     "stability-flags": {
         "koodimonni/composer-dropin-installer": 20,
         "humanmade/page-for-post-type": 20,
+        "digitoimistodude/image-hashtag-feed": 20,
         "digitoimistodude/gulp-sitemap-generator": 20
     },
     "prefer-stable": false,
