@@ -130,7 +130,8 @@ body.single-person.js-nav-active .site-content {
   // Just blur other heros
   .block-hero-service.add-blur .container,
   .block-hero-normal.add-blur .container,
-  .block-hero-jobs.add-blur .container {
+  .block-hero-jobs.add-blur .container,
+  .block-hero.add-blur .container {
     filter: blur(1rem);
   }
 }

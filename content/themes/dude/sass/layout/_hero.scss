@@ -72,8 +72,8 @@
   }
 
   // Jobs hero
-  &.block-hero-jobs .side-content-box {
-    @media (max-width: 700px) {
+  .side-content-box {
+    @media (max-width: 800px) {
       padding-left: $padding-default-cols-mobile;
       padding-right: $padding-default-cols-mobile;
     }
