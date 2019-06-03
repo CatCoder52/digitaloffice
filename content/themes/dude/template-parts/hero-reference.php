@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-06-01 18:39:41
+ * @Last Modified time: 2019-06-03 16:56:32
  *
  * @package dude2019
  */
@@ -31,7 +31,7 @@ if ( ! empty( $title_alt ) ) {
       </div>
 
       <div class="col has-grey-bg">
-        <p class="breadcrumb"><a href="<?php echo get_post_type_archive_link( 'reference' ) ?>">Työt</a> <?php include get_theme_file_path( '/svg/arrow-breadcrumb.svg' ); ?> <?php the_title() ?></p>
+        <p class="breadcrumb"><a href="<?php echo get_post_type_archive_link( 'reference' ) ?>">Töitämme</a> <?php include get_theme_file_path( '/svg/arrow-breadcrumb.svg' ); ?> <?php the_title() ?></p>
 
         <div class="content">
           <?php if ( ! empty( $logofile ) && file_exists( get_theme_file_path( "svg/logos/{$logofile}.svg" ) ) ) {

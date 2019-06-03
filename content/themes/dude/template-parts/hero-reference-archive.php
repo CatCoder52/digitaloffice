@@ -2,13 +2,13 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
- * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-06-01 17:26:43
+ * @Last Modified by:   Timi Wahalahti
+ * @Last Modified time: 2019-06-03 16:56:42
  *
  * @package dude2019
  */
 
-$title = 'Työt';
+$title = 'Töitämme';
 $content = 'Olemme tehneet paljon kaikenlaista ja suurimmasta osasta hommia olemme ylpeitä. Muutamiin niistä voit tutustua täällä tarkemmin.';
 ?>
 
