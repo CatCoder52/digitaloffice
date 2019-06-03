@@ -157,6 +157,7 @@
       transition: all $transition-duration;
       opacity: .5;
       border: 0;
+      cursor: pointer;
 
       @media (max-width: $container-mobile) {
         margin-bottom: 2.5rem;

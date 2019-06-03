@@ -59,7 +59,7 @@ if ( empty( $accordion ) ) {
       <div class="col col-right">
 
         <?php foreach ( $accordion as $item ) : ?>
-          <button class="accordion<?php if ( $first_open && $i === $accordion_count ) { echo ' open-accordion'; } ?>" data-href="<?php echo esc_attr( sanitize_title( $item['title'] ) ) ?>">
+          <button class="accordion<?php if ( $first_open && $i === $accordion_count ) { echo ' open-accordion'; } ?>" data-href="#<?php echo esc_attr( sanitize_title( $item['title'] ) ) ?>">
             <span><?php echo esc_html( $item['title'] ) ?></span>
           </button>
 
