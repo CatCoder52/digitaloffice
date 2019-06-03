@@ -31,7 +31,7 @@ get_template_part( 'template-parts/hero' ); ?>
                 </div>
 
                 <div class="content">
-                  <h3 class="block-title>"><?php the_title() ?></h3>
+                  <h3 class="block-title>"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
                   <p><?php the_excerpt() ?></p>
 
                   <p class="arrow-link-wrapper"><a href="<?php the_permalink() ?>" class="arrow-link">Tsekkaa case<span class="arrow"></span></a></p>

@@ -123,7 +123,7 @@ get_header(); ?>
                 </div>
 
                 <div class="col-content">
-                  <h3 class="block-title>"><?php echo esc_html( $reference['title'] ) ?></h3>
+                  <h3 class="block-title>"><a href="<?php echo esc_html( $reference['permalink'] ) ?>"><?php echo esc_html( $reference['title'] ) ?></a></h3>
                   <p><?php echo esc_html( $reference['excerpt'] ) ?></p>
 
                   <p class="arrow-link-wrapper"><a href="<?php echo esc_html( $reference['permalink'] ) ?>" class="arrow-link">Tsekkaa case<span class="arrow"></span></a></p>
