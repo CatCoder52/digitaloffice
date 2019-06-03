@@ -3,10 +3,15 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 19:18:00
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-05-18 19:28:37
+ * @Last Modified time: 2019-06-03 10:36:19
  *
  * @package dude2019
  */
+
+$current_dude = null;
+if ( is_singular( 'person' ) ) {
+  $current_dude = get_the_id();
+}
 
 $query = new WP_Query( array(
   'post_type'               => 'person',
@@ -30,11 +35,19 @@ if ( ! $query->have_posts() ) {
 
   <div class="container">
 
+    <?php if ( is_singular( 'person' ) ) : ?>
+      <h2>Tsekkaa muut dudexet</h2>
+    <?php endif; ?>
+
     <div class="cols">
       <?php while ( $query->have_posts() ) : $query->the_post();
+        if ( get_the_id() === $current_dude ) {
+          continue;
+        }
+
         $image = get_post_meta( get_the_id(), 'image_square', true );
         $title = get_post_meta( get_the_id(), 'title', true );
-  
+
         if ( empty( $image ) ) {
           continue;
         } ?>
