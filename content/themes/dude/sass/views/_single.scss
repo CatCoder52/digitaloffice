@@ -41,20 +41,35 @@
       padding-right: 0;
 
       @media (max-width: 1100px) {
-        padding-left: $padding-default-cols-ipad;
-        padding-right: $padding-default-cols-ipad;
+        p {
+          padding-left: $padding-default-cols-ipad;
+          padding-right: $padding-default-cols-ipad;
+        }
       }
 
       @media (max-width: $container-ipad) {
-        padding-top: $padding-default-rows-ipad;
-        padding-bottom: $padding-default-rows-ipad;
+        p,
+        h1,
+        h2,
+        h3,
+        h4 {
+          padding-top: $padding-default-rows-ipad;
+          padding-bottom: $padding-default-rows-ipad;
+        }
       }
 
       @media (max-width: $container-mobile) {
         padding-top: $padding-default-rows-mobile;
         padding-bottom: $padding-default-rows-mobile;
-        padding-left: $padding-default-cols-mobile;
-        padding-right: $padding-default-cols-mobile;
+
+        p,
+        h1,
+        h2,
+        h3,
+        h4 {
+          padding-left: $padding-default-cols-mobile;
+          padding-right: $padding-default-cols-mobile;
+        }
       }
     }
   }
@@ -199,12 +214,18 @@
   &.block-single-reference .entry-content .wp-block-image {
     margin-top: 8rem;
     margin-bottom: 8rem;
+
+    @media (max-width: $container-mobile) {
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+    }
   }
 
   &.block-single-reference .entry-content .wp-block-gallery {
     @extend .columns;
-    width: 100%;
-    max-width: 100%;
+    @extend .alignwide;
+    margin-left: auto;
+    margin-right: auto;
 
     > * {
       @extend .column;
