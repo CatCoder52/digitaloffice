@@ -52,7 +52,7 @@ get_header(); ?>
               $desc = get_post_meta( $person_id[0]->post_id, 'short_desc_blog', true ); ?>
 
               <a href="<?php echo get_author_posts_url( $user_id ) ?>"><?php echo get_avatar( $user_id, '512' ); ?></a>
-              <h3><?php echo get_the_author_meta( 'first_name' ); ?> <?php echo get_the_author_meta( 'last_name' ); ?></h3>
+              <h3><?php echo get_the_author_meta( 'display_name' ); ?></h3>
 
               <?php if ( ! empty( $job_title ) ) : ?>
                 <p class="job-title"><?php
