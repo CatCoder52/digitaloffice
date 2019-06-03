@@ -9,6 +9,12 @@
  */
 
 /**
+ * Gravity forms tabindex reset
+ * Ensures tabindex attribute values are not greater than 0 for better accessibility
+ */
+add_filter( 'gform_tabindex', '__return_false' ); 
+
+/**
  * Show archives
  */
 add_filter( 'air_helper_disable_views_tag', '__return_false' );
