@@ -80,7 +80,7 @@ get_header(); ?>
       <div class="container">
 
         <div class="cols">
-          <div class="col">
+          <div class="col col-image">
             <div class="image has-lazyload">
               <div class="background-image preview lazyload" style="background-image: url('<?php echo wp_get_attachment_image_url( $newsletter_cta_bg_image_id, 'tiny-preload-thumbnail' ) ?>');" data-src="<?php echo wp_get_attachment_image_url( $newsletter_cta_bg_image_id, 'large' ) ?>"></div>
               <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo wp_get_attachment_image_url( $newsletter_cta_bg_image_id, 'large' ) ?>');"<?php endif; ?>></div>
@@ -88,7 +88,7 @@ get_header(); ?>
             </div>
           </div>
 
-          <div class="col">
+          <div class="col col-content">
             <div class="content">
               <h2 class="block-title">Pullopostia?</h2>
               <p>Koottuja kuulumisia sisältävä bittivirtojen pulloposti saapuu rantaasi noin kolmen kuukauden välein.</p>

@@ -1,19 +1,29 @@
 .chat-greeting {
   position: fixed;
   z-index: 9;
-  right: 4rem;
-  bottom: 4rem;
+  right: 3rem;
+  bottom: 3rem;
   background: $color-dude-white;
-  padding: 4rem;
+  padding: 3rem;
   cursor: pointer;
   transition: all $transition-duration;
   display: flex;
   box-shadow: 10px 10px 30px -5px rgba($color-dude-black, .15);
   max-width: 50rem;
   width: 100%;
+  align-items: center;
+
+  @media (max-width: 600px) {
+    left: 0;
+    bottom: 0;
+    padding: 2rem;
+    margin: 2rem;
+    max-width: 100%;
+    width: calc(100% - 4rem);
+  }
 
   p {
-    @include responsive-font(16px, 19px);
+    @include responsive-font(14px, 18px);
     margin: 0;
     font-weight: 300;
 
@@ -30,7 +40,7 @@
     min-width: 8rem;
     height: 8rem;
     min-height: 8rem;
-    margin-right: 3rem;
+    margin-right: 2rem;
   }
 
   &:hover {
