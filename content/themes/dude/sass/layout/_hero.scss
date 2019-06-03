@@ -218,6 +218,10 @@
       bottom: 8rem;
       z-index: 6;
 
+      button:after {
+        display: none;
+      }
+
       @media (max-width: 700px) {
         position: static;
       }
