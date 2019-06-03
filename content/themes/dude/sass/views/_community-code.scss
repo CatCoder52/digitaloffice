@@ -2,6 +2,10 @@
   background: #fff;
   z-index: 2;
 
+  @media (max-width: 900px) {
+    padding-bottom: 0;
+  }
+
   @media (min-width: 900px) {
     padding-right: 0;
   }
@@ -19,12 +23,14 @@
     .image {
       width: 100%;
       height: 60rem;
-      position: absolute;
-      right: 0;
-      bottom: 0;
+      margin-top: 8rem;
 
       @media (min-width: 900px) {
         margin-bottom: -15rem;
+        margin-top: 0;
+        position: absolute;
+        right: 0;
+        bottom: 0;
       }
     }
 
@@ -38,14 +44,13 @@
     @media (max-width: 900px) {
       display: flex;
       flex-wrap: wrap;
+      height: auto;
 
       .col {
         width: 100%;
       }
 
       .col.col-image {
-        height: 50rem;
-
         @media (max-width: $container-mobile) {
           height: 35rem;
         }
@@ -78,7 +83,7 @@
       }
     }
 
-    a {
+    a:not(.github-link) {
       background-image: linear-gradient(to top, $color-dude-deep-black, $color-dude-deep-black);
       background-size: 100% .1rem;
       background-position: left bottom;
@@ -88,9 +93,9 @@
       overflow: visible;
     }
 
-    a:hover,
-    a:focus,
-    a:active {
+    a:not(.github-link):hover,
+    a:not(.github-link):focus,
+    a:not(.github-link):active {
       background-size: 100% 2.8rem;
       color: $color-dude-white;
     }
@@ -213,3 +218,145 @@
     }
   }
 }
+
+.block-open-source {
+  padding-top: 0;
+
+  a:not(.github-link) {
+    background-image: linear-gradient(to top, $color-dude-deep-black, $color-dude-deep-black);
+    background-size: 100% .1rem;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    transition: .3s all;
+    text-decoration: none;
+    overflow: visible;
+  }
+
+  a:not(.github-link):hover,
+  a:not(.github-link):focus,
+  a:not(.github-link):active {
+    background-size: 100% 2.8rem;
+    color: $color-dude-white;
+  }
+
+  @media (min-width: 900px) {
+    margin-top: -10rem;
+  }
+
+  .container {
+    padding-top: 0;
+  }
+
+  .content {
+    margin-bottom: 8rem;
+
+    @media (min-width: 900px) {
+      max-width: 50%;
+    }
+  }
+
+  // Pinned GitHub items
+  .repos {
+    @include grid(3, $gutter_x: 3rem);
+
+    @media (min-width: 900px) {
+      width: 100%;
+      max-width: 100rem;
+    }
+
+    @media (max-width: 1000px) {
+      @include grid(2, $gutter_x: 3rem, $gutter_y: 3rem);
+    }
+
+    @media (max-width: 600px) {
+      display: block;
+    }
+  }
+
+  .repo {
+    border: 1px solid #d1d5da;
+    border-radius: 3px;
+    width: 100%;
+    max-width: 42rem;
+    padding: 2rem;
+
+    @media (max-width: 600px) {
+      margin-bottom: 3rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    h3,
+    p {
+      @extend %default;
+      margin: 0;
+    }
+
+    h3 {
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+
+    h3 svg {
+      margin-right: 1rem;
+    }
+
+    ul,
+    li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    ul {
+      display: flex;
+      justify-content: flex-start;
+      margin-top: 1.5rem;
+    }
+
+    ul li {
+      font-size: 16px;
+      margin-right: 2.5rem;
+
+      &:nth-child(3) svg {
+        margin-right: .6rem;
+      }
+    }
+
+    li svg {
+      margin-right: .5rem;
+    }
+
+    ul li,
+    p,
+    h3 {
+      @include responsive-font(16px, 18px);
+    }
+
+    ul li,
+    h3 a {
+      display: flex;
+      align-items: center;
+    }
+
+    .circle {
+      border-radius: 50%;
+      display: inline-block;
+      height: 12px;
+      width: 12px;
+      position: relative;
+      margin-right: .8rem;
+    }
+
+    .css {
+      background-color: #563d7c;
+    }
+
+    .php {
+      background-color: #4f5d95;
+    }
+  }
+}
+

@@ -2,8 +2,8 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:05:23
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-06-01 18:13:33
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2019-06-03 19:20:44
  *
  * @package dude2019
  */
@@ -17,7 +17,7 @@ if ( is_front_page() ) {
     'blackbruin',
     'byemmi',
     'crmservice',
-    'elonen',
+    'elonen-flat',
   );
 
   include get_theme_file_path( 'template-parts/hero-service.php' );
@@ -28,7 +28,7 @@ if ( is_front_page() ) {
     'blackbruin',
     'byemmi',
     'crmservice',
-    'elonen',
+    'elonen-flat',
   );
 
   include get_theme_file_path( 'template-parts/hero-service.php' );

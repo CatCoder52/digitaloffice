@@ -272,7 +272,7 @@ document.body.classList.add('js');
     // );
 
     // Fade out other menu items when selected more-item
-    $( '.dude-nav-more a' ).hover(
+    $( '.dude-nav-more button' ).hover(
       function() {
         $( this ).parent().parent().addClass('fade-out');
       }, function() {
@@ -305,19 +305,13 @@ document.body.classList.add('js');
     var trigger = document.getElementsByClassName('js-trigger')[0];
     moveTo.registerTrigger(trigger);
 
-    // Open chat link
-    $('.open-chat').on('click', function(event) {
-      event.preventDefault();
-      $crisp.do('chat:open');
-    });
-
     // Chat greeting
     if ( typeof( Storage ) !== 'undefined' ) {
 
       var greetings = [
-        'Moottoritie on kuuma mutta webisivut pitäs saada?',
-        'Etsitkö tekijää seuraavaan projektiisi? Heitä viestiä jos voidaan auttaa :)',
-        'Etsitkö hyvää tekijää projektiisi? Pistä viestiä niin kerron vähän lisää meidän palveluista.',
+        'Moottoritie on kuuma, mutta webisivut pitäs saada? 🚀',
+        'Etsitkö tekijää seuraavaan projektiisi? Chattaa meille! 🙂',
+        'Etsitkö hyvää tekijää projektiisi? Pistä viestiä niin kerron vähän lisää meidän palveluista. 👋',
       ];
 
       var greeters = [
@@ -354,7 +348,7 @@ document.body.classList.add('js');
               var greeter = greeters[ Math.floor( Math.random() * greeters.length ) ];
 
               // show greeting
-              $('body').append('<div class="chat-greeting open-chat"><div class="col col-image" style="background-image:url(' + greeter.image + ')"></div><div class="col col-message"><p class="head">Viesti henkilöltä ' + greeter.name + '</p><p>' + greeting + '</p></div>')
+              $('body').append('<div class="chat-greeting open-chat"><div class="avatar" style="background-image:url(\'' + greeter.image + '\')"></div><div class="message"><p class="head">Viesti henkilöltä ' + greeter.name + '</p><p>' + greeting + '</p></div>')
 
               $crisp.push(['on', 'chat:opened', function() {
                 $crisp.push(['do', 'message:show', ['text', greeting]]);
@@ -387,7 +381,6 @@ window.CRISP_READY_TRIGGER = function() {
     // Hide chat circle by default unless there is unread messages or session is ongoing
     if ( $crisp.get('chat:unread:count') > 0 || $crisp.is('session:ongoing')) {
       $crisp.push(['do', 'chat:show']);
-      $crisp.push(['do', 'chat:open']);
     } else {
       $crisp.push(['do', 'chat:hide']);
     }

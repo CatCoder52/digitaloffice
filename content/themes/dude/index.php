@@ -120,7 +120,7 @@ get_header(); ?>
           <?php endwhile; ?>
         </div>
 
-        <p class="button-wrapper"><?php echo previous_posts_link(); ?><?php echo next_posts_link(); ?></p>
+        <p class="next-prev"><?php echo previous_posts_link( 'Edellinen' ); ?><?php echo next_posts_link( 'Seuraava' ); ?></p>
 
       </div>
     </section>

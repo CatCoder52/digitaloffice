@@ -1,0 +1,45 @@
+.chat-greeting {
+  position: fixed;
+  z-index: 9;
+  right: 4rem;
+  bottom: 4rem;
+  background: $color-dude-white;
+  padding: 4rem;
+  cursor: pointer;
+  transition: all $transition-duration;
+  display: flex;
+  box-shadow: 10px 10px 30px -5px rgba($color-dude-black, .15);
+  max-width: 50rem;
+  width: 100%;
+
+  p {
+    @include responsive-font(16px, 19px);
+    margin: 0;
+    font-weight: 300;
+
+    &.head {
+      font-weight: 600;
+      margin-bottom: .4rem;
+    }
+  }
+
+  .avatar {
+    @include background-cover();
+    border-radius: 50%;
+    width: 8rem;
+    min-width: 8rem;
+    height: 8rem;
+    min-height: 8rem;
+    margin-right: 3rem;
+  }
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+}
+
+.crisp-client .emoji {
+  width: auto !important;
+  height: auto !important;
+}

@@ -209,6 +209,7 @@ if ( $show_chat_greeting ) {
           <ul class="menu-items nav-menu">
             <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-18"><a href="<?php echo get_page_link( 9 ); ?>">Verkkosivut</a></li>
             <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-19"><a href="<?php echo get_page_link( 4485 ); ?>">Visuaalinen suunnittelu</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4482"><a href="<?php echo get_page_link( 4493 ); ?>">Töitämme</a></li>
             <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-22"><a href="<?php echo get_page_link( 4487 ); ?>">Ota yhteyttä</a></li>
             <li class="dude-nav-more nav-toggle menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4477"><button><span class="toggle-text">Lisää</span> <span class="plus-cross">+</span></button></li>
           </ul>

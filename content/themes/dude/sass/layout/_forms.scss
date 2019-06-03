@@ -35,7 +35,7 @@
     &:hover,
     &:focus {
       color: #fff;
-      background: darken($color-links, 15%);
+      background: lighten($color-links, 20%);
     }
 
     &.button-ghost {

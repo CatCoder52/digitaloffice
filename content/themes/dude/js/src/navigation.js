@@ -55,6 +55,14 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
         // Add blur effect after one second from nav triggered open
         $('.block-hero-enable-transition').toggleClass('add-blur');
 
+        // Change text to closed and vice versa
+        var toggletext = $(this).find('.toggle-text').text();
+        if ( toggletext == 'Lisää' ) {
+          $(this).find('.toggle-text').text('Sulje');
+        } else {
+          $(this).find('.toggle-text').text('Lisää');
+        }
+
         // The 60 FPS Smooth as Butter Solution
         // Source: https://medium.com/outsystems-experts/how-to-achieve-60-fps-animations-with-css3-db7b98610108
         $('.nav-primary').addClass('is-animatable');

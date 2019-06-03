@@ -72,6 +72,13 @@
   }
 
   // Jobs hero
+  .side-content-box {
+    @media (max-width: 800px) {
+      padding-left: $padding-default-cols-mobile;
+      padding-right: $padding-default-cols-mobile;
+    }
+  }
+
   &.block-hero-jobs .jobs {
     list-style: none;
     margin: 0;
