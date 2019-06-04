@@ -142,6 +142,18 @@
       font-weight: 300;
     }
 
+    @media (max-width: 600px) {
+      .side-content-box.contact-information {
+        height: 100vh; // Use vh as a fallback for browsers that do not support Custom Properties
+        height: calc(var(--vh, 1vh) * 100);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-top: 15rem;
+        padding-bottom: 0;
+      }
+    }
+
     svg {
       fill: $color-dude-white;
       width: 1.8rem;
@@ -208,6 +220,16 @@
       left: calc(50% - 8rem);
       bottom: 8rem;
       z-index: 6;
+
+      @media (max-width: 700px) {
+        left: 0;
+        margin-top: 6rem;
+        margin-left: -2rem;
+        margin-right: -2rem;
+        margin-bottom: 0;
+        position: static;
+        padding: 4rem;
+      }
 
       button:after {
         display: none;
