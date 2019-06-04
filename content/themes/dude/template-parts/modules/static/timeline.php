@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 18:54:41
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-06-01 13:44:24
+ * @Last Modified time: 2019-06-04 10:29:37
  *
  * @package dude2019
  */
@@ -17,12 +17,12 @@
 
         <div class="row">
           <h2>2013</h2>
-          <button tabindex="0" class="action" data-label="Vanha toimisto irtisanomisajalla. Kuvan Macbook ja iPad eivät ole edes omia." data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2013.jpg' ) ?>">Roni ja Juha perustavat yrityksen keväällä 2013 vähän niinkun vahingossa. Pitkiä päiviä sekä opettelua yrittäjyyden ihmeelliseen maailmaan.</button>
+          <button tabindex="0" class="action" data-label="Vanha toimisto irtisanomisajalla. Kuvan Macbook ja iPad eivät ole edes omia." data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2013.jpg' ) ?>">Roni ja Juha perustavat yrityksen keväällä 2013 puolivahingossa kun alihankintasoppari ja omat asiakkuudet vaikuttivat tilaisuudelta, jota ei voinut olla käyttämättä. Pitkiä päiviä sekä opettelua yrittäjyyden ihmeelliseen maailmaan. <a href="https://www.dude.fi/firma-parahti-pystyyn">Lue ensimmäinen bloggaus koskaan</a>.</button>
         </div>
 
         <div class="row">
           <h2>2015</h2>
-          <button tabindex="0" class="action" data-label="Kristian virittelee nyrkkiä hanuriin. Kuva vänäriltä." data-image="<?php echo get_theme_file_uri( 'images/timeline/placeholder.png' ) ?>">Hohkavaara ja Dude yhdistyvät. Tätä juhlitaan parilla muumilimpparilla. Rock ’n roll haisee nokkaan.</button>
+          <button tabindex="0" class="action" data-label="Kristian virittelee nyrkkiä hanuriin. Kuva vänäriltä." data-image="<?php echo get_theme_file_uri( 'images/timeline/placeholder.png' ) ?>">Pitkän linjan yksityisyrittäjä Kristian Hohkavaara ja Digitoimisto Dude Oy yhdistyvät. <a href="https://www.dude.fi/digitoimisto-dude-oy-ja-hohkavaara">Tapauksesta blogattiin, luonnollisesti</a>.</button>
         </div>
 
         <div class="row">

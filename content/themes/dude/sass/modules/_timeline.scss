@@ -1,4 +1,23 @@
 .block.block-timeline {
+  .col {
+    a {
+      background-image: linear-gradient(to top, $color-dude-deep-black, $color-dude-deep-black);
+      background-size: 100% 1px;
+      background-position: left bottom;
+      background-repeat: no-repeat;
+      transition: .3s all;
+      text-decoration: none;
+      overflow: visible;
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+      background-size: 100% 2.8rem;
+      color: $color-dude-white;
+    }
+  }
+
   @media (max-width: 1200px) {
     padding-left: $padding-default-cols-ipad;
     padding-right: $padding-default-cols-ipad;
@@ -53,8 +72,10 @@
 
     &:hover p,
     &:hover .action,
-    &.active .action {
+    &.active .action,
+    &.active * {
       opacity: 1;
+      color: $color-dude-black;
     }
 
     p,
