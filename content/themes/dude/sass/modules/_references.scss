@@ -9,11 +9,14 @@
 .block.block-references {
   &.block-references-related {
     padding-top: 0;
-    padding-bottom: 0;
   }
 
   .container {
     overflow: visible;
+  }
+
+  .cols.cols-references {
+    margin-top: $padding-default-rows;
   }
 
   .block-head {
