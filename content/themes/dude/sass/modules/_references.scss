@@ -26,7 +26,6 @@
 
   .cols {
     @include grid(2, $gutter_x: $padding-general-content-box, $gutter_y: 0rem);
-    margin-bottom: $padding-general-content-box * 2;
     position: relative;
     z-index: 2;
 
@@ -96,7 +95,6 @@
 
   .cols-references {
     @include grid(2, $gutter_x: $padding-general-content-box, $gutter_y: $padding-general-content-box);
-    margin-top: $padding-default-rows;
 
     @media (min-width: 1600px) {
       @include grid(3, $gutter_x: $padding-general-content-box, $gutter_y: $padding-general-content-box);
@@ -117,5 +115,13 @@
         }
       }
     }
+  }
+}
+
+.home .block.block-references .cols.cols-references {
+  margin-top: $padding-default-rows;
+
+  @media (max-width: $container-ipad) {
+    margin-bottom: 0;
   }
 }
