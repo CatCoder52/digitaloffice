@@ -2,13 +2,15 @@
   margin-left: 0;
   margin-right: 0;
   text-align: center;
-  height: 100vh;
   display: flex;
   padding: 0;
   align-items: center;
   z-index: 1;
   background: $color-dude-deep-black;
   color: $color-dude-white;
+  min-height: 50rem;
+  height: 100vh; // Use vh as a fallback for browsers that do not support Custom Properties
+  height: calc(var(--vh, 1vh) * 100);
 
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     @media (max-width: 870px) {
@@ -45,14 +47,6 @@
     background: linear-gradient(to bottom, #28392a 0%, transparent 50%);
     opacity: .5;
     z-index: 3;
-  }
-
-  @media (max-width: 600px) {
-    &:not(.block-hero-single) {
-      height: auto;
-      padding-top: 20rem;
-      padding-bottom: 20rem;
-    }
   }
 
   // Contact thanks
@@ -312,12 +306,6 @@
 
     .cta-link:after {
       background: $color-dude-white;
-    }
-
-    @media (max-width: 600px) {
-      overflow: hidden;
-      height: auto;
-      display: block;
     }
 
     .container {
