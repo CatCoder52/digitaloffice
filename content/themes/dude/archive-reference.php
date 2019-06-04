@@ -15,7 +15,7 @@ get_header(); ?>
     <?php
     get_template_part( 'template-parts/hero' );
     if ( have_posts() ) : ?>
-      <section class="block block-references">
+      <section class="block block-references block-references-archive">
         <div class="container">
 
           <h2 class="screen-reader-text">Referenssit</h2>
