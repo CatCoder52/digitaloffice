@@ -109,6 +109,9 @@ sessionStorage.setItem( 'chat_greeting_visits', parseInt( sessionStorage.getItem
   // Document ready start
   $(function() {
 
+  // Init lazyload
+  lazyload();
+
   // Timeline
   $('.col-timeline .row .action').on('click', function() {
     $('.col-timeline .row').removeClass('active');
