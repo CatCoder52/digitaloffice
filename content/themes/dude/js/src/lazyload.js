@@ -10,6 +10,7 @@
  *   https://appelsiini.net/projects/lazyload
  *
  * Version: 2.0.0-rc.2
+ * Modified by rolle
  *
  */
 
@@ -91,7 +92,8 @@
     LazyLoad.prototype = {
         init: function() {
 
-            /* Without observers load everything and bail out early. */
+            /* Without observers load everything and bail out early.
+               This affects some iOS and Windows Phones */
             if (!root.IntersectionObserver) {
                 this.loadImages();
                 return;
@@ -106,20 +108,22 @@
 
             this.observer = new IntersectionObserver(function(entries) {
                 Array.prototype.forEach.call(entries, function (entry) {
+
+                    /* If inside viewport */
                     if (entry.isIntersecting) {
+
+                        /* Define image */
+                        const img = entry.target;
+
+                        /* Add animation class to full-image div */
+                        img.nextElementSibling.classList.add('reveal');
+
                         self.observer.unobserve(entry.target);
-                        let src = entry.target.getAttribute(self.settings.src);
-                        let srcset = entry.target.getAttribute(self.settings.srcset);
-                        if ("img" === entry.target.tagName.toLowerCase()) {
-                            if (src) {
-                                entry.target.src = src;
-                            }
-                            if (srcset) {
-                                entry.target.srcset = srcset;
-                            }
-                        } else {
-                            entry.target.style.backgroundImage = "url(" + src + ")";
-                        }
+                        let src = img.getAttribute(self.settings.src);
+                        let srcset = img.getAttribute(self.settings.srcset);
+
+                        /* Add fully loaded original background image to next div element */
+                        img.nextElementSibling.style.backgroundImage = "url(" + src + ")";
                     }
                 });
             }, observerConfig);
