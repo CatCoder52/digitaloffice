@@ -327,6 +327,7 @@ document.body.classList.add('js');
       ]
 
       // show only when not already shown and chat is available
+      console.log( daysBetween( new Date( localStorage.getItem( 'chat_greeting_sent' ) ), new Date() ) );
       if ( localStorage.getItem( 'chat_greeting_sent' ) == null ) {
 
         // show message on every else page than blog or singular post, but allow on singular when explicity setted as so
@@ -338,8 +339,8 @@ document.body.classList.add('js');
             idleTimeoutInSeconds: 10
           });
 
-          // trigger chat after 30 seconds
-          TimeMe.callAfterTimeElapsedInSeconds( 15, function() {
+          // trigger chat after X seconds
+          TimeMe.callAfterTimeElapsedInSeconds( 10, function() {
 
             // do nothing if session is ongoing or user has opened the chat
             if ( $crisp.is('website:available') && ! $crisp.is('session:ongoing') && ! $crisp.is('chat:opened') ) {
@@ -373,6 +374,11 @@ document.body.classList.add('js');
     });
 
   });
+
+  var daysBetween = function( d1, d2 ) {
+    var diff = Math.abs( d1.getTime() - d2.getTime() );
+    return diff / (1000 * 60 * 60 * 24);
+  };
 
 } )( jQuery );
 
