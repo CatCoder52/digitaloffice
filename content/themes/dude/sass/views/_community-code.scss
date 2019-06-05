@@ -49,12 +49,6 @@
       .col {
         width: 100%;
       }
-
-      .col.col-image {
-        @media (max-width: $container-mobile) {
-          height: 35rem;
-        }
-      }
     }
   }
 
