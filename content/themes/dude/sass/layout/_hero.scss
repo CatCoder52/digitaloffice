@@ -12,6 +12,10 @@
   height: 100vh; // Use vh as a fallback for browsers that do not support Custom Properties
   height: calc(var(--vh, 1vh) * 100);
 
+  @media (max-height: 600px) {
+    height: 120vh;
+  }
+
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     @media (max-width: 870px) {
       height: auto;
@@ -342,6 +346,10 @@
       animation-fill-mode: forwards;
       animation-duration: 1s;
       animation-delay: 2.5s;
+
+      @media (max-height: 600px) {
+        margin-top: 0;
+      }
     }
 
     .cta-link:after {
