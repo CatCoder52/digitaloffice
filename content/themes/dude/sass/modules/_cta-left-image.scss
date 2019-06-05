@@ -8,6 +8,12 @@ body .block.block-cta-left-image,
     opacity: .5;
   }
 
+  @media (max-width: 500px) {
+    .end-note {
+      margin-top: 0;
+    }
+  }
+
   form div {
     input#mc-embedded-subscribe {
       margin-top: 3.2rem;
@@ -18,6 +24,13 @@ body .block.block-cta-left-image,
       margin: 0;
     }
 
+    input:not([type='radio']):not([type='checkbox']):not([type='image']):not([type='file']) {
+      @media (max-width: 500px) {
+        font-size: 15px;
+        padding: 1rem 2rem;
+      }
+    }
+
     input,
     textarea,
     input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']) {
@@ -26,6 +39,11 @@ body .block.block-cta-left-image,
       width: 100%;
       max-width: 100%;
       margin: 0;
+
+      @media (max-width: 500px) {
+        font-size: 15px;
+        padding: 1rem 2rem;
+      }
 
       &:focus {
         outline: 0;
@@ -93,6 +111,10 @@ body .block.block-cta-left-image,
       display: flex;
       flex-wrap: wrap;
     }
+
+    @media (max-width: 500px) {
+      display: block;
+    }
   }
 
   @media (max-width: $container-ipad) {
@@ -132,11 +154,21 @@ body .block.block-cta-left-image,
     }
 
     @media (max-width: $container-mobile) {
-      padding: $padding-general-content-box-mobile;
+      padding: 4rem 2rem;
     }
   }
 
   .gform_wrapper {
+    @media (max-width: 500px) {
+      margin-top: 0;
+      padding-top: 0;
+
+      .gform_footer {
+        margin-top: 1rem;
+        padding-top: 0;
+      }
+    }
+
     label {
       @extend .screen-reader-text;
     }
