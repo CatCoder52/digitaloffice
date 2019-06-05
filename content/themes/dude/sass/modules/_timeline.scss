@@ -1,5 +1,6 @@
 .block.block-timeline {
-  .col {
+  .col,
+  .active {
     a {
       background-image: linear-gradient(to top, $color-dude-deep-black, $color-dude-deep-black);
       background-size: 100% 1px;
@@ -44,6 +45,10 @@
     display: flex;
     padding: 4rem 7.5rem;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     @media (max-width: $container-ipad) {
       padding-top: $padding-default-rows-ipad;
       padding-bottom: $padding-default-rows-ipad;
@@ -61,7 +66,7 @@
     .row,
     h2,
     p,
-    .action {
+    button.action {
       transition: all $transition-duration;
     }
 
@@ -71,16 +76,16 @@
     }
 
     &:hover p,
-    &:hover .action,
-    &.active .action,
+    &:hover button.action,
+    &.active button.action,
     &.active * {
       opacity: 1;
       color: $color-dude-black;
     }
 
     p,
-    .action,
-    .action:focus {
+    button.action,
+    button.action:focus {
       @extend %default;
 
       @include responsive-font(17px, 19px);
@@ -125,6 +130,10 @@
       padding-right: 5rem;
       margin: 0;
       color: rgba($color-dude-black, .2);
+    }
+
+    .action:hover {
+      cursor: pointer;
     }
   }
 
