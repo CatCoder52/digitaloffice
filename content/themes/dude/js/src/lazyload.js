@@ -159,6 +159,3 @@
 
     return LazyLoad;
 });
-
-// Init lazyload (usually added to scripts.js but why not here when it's always loaded)
-lazyload();
