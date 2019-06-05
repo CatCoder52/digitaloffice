@@ -99,7 +99,7 @@
   .cols-references {
     @include grid(2, $gutter_x: $padding-general-content-box, $gutter_y: $padding-general-content-box);
 
-    @media (min-width: 1600px) {
+    @media (min-width: 1300px) {
       @include grid(3, $gutter_x: $padding-general-content-box, $gutter_y: $padding-general-content-box);
     }
 
