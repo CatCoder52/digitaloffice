@@ -224,19 +224,6 @@
     padding: $padding-accordion-content-mobile;
   }
 
-  .arr {
-    background-image: url('../svg/plus-bauerblue.svg');
-    background-repeat: no-repeat;
-    background-size: 100%;
-    width: 5rem;
-    height: 5rem;
-
-    @media (max-width: 800px) {
-      width: 3rem;
-      height: 3rem;
-    }
-  }
-
   span {
     @extend %h3;
     width: 80%;
@@ -248,21 +235,13 @@
   }
 
   &:hover {
-    .arr {
-      background-image: url('../svg/plus-white.svg');
-    }
-
-    h2 {
+    span {
       color: $color-dude-deep-black;
     }
   }
 
   &.open-accordion {
     cursor: default;
-
-    .arr {
-      display: none;
-    }
 
     span {
       color: $color-dude-deep-black;

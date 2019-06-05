@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 17:54:33
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-30 17:18:57
+ * @Last Modified time: 2019-06-05 16:46:31
  *
  * @package dude2019
  */
@@ -43,7 +43,7 @@ if ( empty( $accordion ) ) {
 
     <div class="cols">
       <div class="col col-left">
-        <?php if ( is_page( 4449 ) ) : 
+        <?php if ( is_page( 4449 ) ) :
           include get_theme_file_path( "svg/neckbeard-hairline.svg" );
         endif; ?>
 
@@ -59,7 +59,7 @@ if ( empty( $accordion ) ) {
       <div class="col col-right">
 
         <?php foreach ( $accordion as $item ) : ?>
-          <button tabindex="-1" class="accordion<?php if ( $first_open && $i === $accordion_count ) { echo ' open-accordion'; } ?>" data-href="#<?php echo esc_attr( sanitize_title( $item['title'] ) ) ?>">
+          <button class="accordion<?php if ( $first_open && $i === $accordion_count ) { echo ' open-accordion'; } ?>" data-href="#<?php echo esc_attr( sanitize_title( $item['title'] ) ) ?>">
             <span><?php echo esc_html( $item['title'] ) ?></span>
           </button>
 

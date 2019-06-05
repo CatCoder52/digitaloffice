@@ -18,7 +18,7 @@
   .cols {
     @include grid(2, $gutter_x: $padding-general-content-box, $gutter_y: 0rem);
 
-    @media (max-width: 1160px) {
+    @media (max-width: 1500px) {
       display: flex;
       flex-wrap: wrap;
     }
@@ -69,11 +69,50 @@
     .image {
       position: relative;
       overflow: hidden;
-      height: 15rem;
       width: 100%;
+      height: 17rem;
+
+      &:after {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+      }
+
+      @media (max-width: 1500px) {
+        height: 20rem;
+
+        &:after {
+          display: none;
+        }
+      }
+
+      @media (max-width: 860px) {
+        height: auto;
+
+        &:after {
+          content: '';
+          display: block;
+          padding-bottom: 100%;
+        }
+      }
+
+      @media (max-width: $container-ipad) {
+        height: 20rem;
+
+        &:after {
+          display: none;
+        }
+      }
 
       @media (max-width: 600px) {
         margin-bottom: 4rem;
+        height: auto;
+
+        &:after {
+          content: '';
+          display: block;
+          padding-bottom: 100%;
+        }
       }
     }
 

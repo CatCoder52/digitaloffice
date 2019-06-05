@@ -161,7 +161,6 @@ body.single-person.js-nav-active .site-content {
 .nav-primary {
   height: 100vh;
   width: 50vw;
-  clip: auto;
   position: fixed;
   z-index: 2;
   right: 0;
@@ -201,11 +200,18 @@ body.single-person.js-nav-active .site-content {
     padding-bottom: $padding-default-rows-ipad;
   }
 
+  @media (max-width: 600px) {
+    padding-top: 4rem;
+    padding-bottom: $padding-default-cols-mobile;
+    display: block;
+    height: 100%;
+    min-height: 100vh;
+    overflow: auto;
+  }
+
   @media (max-width: $container-mobile) {
     padding-left: $padding-default-cols-mobile;
     padding-right: $padding-default-cols-mobile;
-    padding-top: $padding-default-rows-mobile;
-    padding-bottom: $padding-default-rows-mobile;
   }
 
   .content {
@@ -317,10 +323,9 @@ body.single-person.js-nav-active .site-content {
     @include grid(2, $gutter_x: 8rem, $gutter_y: 10rem);
 
     @media (max-width: 600px) {
-      display: flex;
-      flex-wrap: wrap;
-      padding-top: 2rem;
-      padding-bottom: 2rem;
+      display: block;
+      padding-top: 0;
+      padding-bottom: 0;
 
       .content {
         width: 100%;
@@ -470,6 +475,20 @@ body.single-person.js-nav-active .site-content {
   }
 }
 
+@media (max-width: 600px) {
+  .js-nav-open .nav-toggle {
+    position: fixed;
+    right: 2rem;
+    top: 6rem;
+    z-index: 8;
+  }
+
+  .js-nav-open .nav-container {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+  }
+}
 
 // Hamburger menu icon
 .nav-toggle {
