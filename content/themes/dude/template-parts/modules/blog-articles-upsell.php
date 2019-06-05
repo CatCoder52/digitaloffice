@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 18:08:24
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-25 20:52:23
+ * @Last Modified time: 2019-06-04 10:06:26
  *
  * @package dude2019
  */
@@ -27,7 +27,7 @@ if ( empty( $title_placeholder ) || empty( $articles ) ) {
         } ?>
 
         <div class="col">
-          <h3><?php echo get_the_title( $article ) ?></h3>
+          <h3><a href="<?php echo get_the_permalink( $article ) ?>"><?php echo get_the_title( $article ) ?></a></h3>
 
           <div class="excerpt">
             <?php echo wpautop( get_the_excerpt( $article ) ) ?>

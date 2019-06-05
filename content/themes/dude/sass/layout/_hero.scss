@@ -2,13 +2,19 @@
   margin-left: 0;
   margin-right: 0;
   text-align: center;
-  height: 100vh;
   display: flex;
   padding: 0;
   align-items: center;
   z-index: 1;
   background: $color-dude-deep-black;
   color: $color-dude-white;
+  min-height: 50rem;
+  height: 100vh; // Use vh as a fallback for browsers that do not support Custom Properties
+  height: calc(var(--vh, 1vh) * 100);
+
+  @media (max-height: 600px) {
+    height: 120vh;
+  }
 
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     @media (max-width: 870px) {
@@ -45,14 +51,6 @@
     background: linear-gradient(to bottom, #28392a 0%, transparent 50%);
     opacity: .5;
     z-index: 3;
-  }
-
-  @media (max-width: 600px) {
-    &:not(.block-hero-single) {
-      height: auto;
-      padding-top: 20rem;
-      padding-bottom: 20rem;
-    }
   }
 
   // Contact thanks
@@ -148,6 +146,25 @@
       font-weight: 300;
     }
 
+    @media (max-width: 600px) {
+      .side-content-box.contact-information {
+        height: 100vh; // Use vh as a fallback for browsers that do not support Custom Properties
+        height: calc(var(--vh, 1vh) * 100);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-top: 15rem;
+        padding-bottom: 0;
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .textual-content {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+    }
+
     svg {
       fill: $color-dude-white;
       width: 1.8rem;
@@ -215,6 +232,19 @@
       bottom: 8rem;
       z-index: 6;
 
+      @media (max-width: 700px) {
+        width: 100%;
+        max-width: 100%;
+        left: 0;
+        margin-top: 6rem;
+        margin-bottom: 0;
+      }
+
+      @media (max-width: 500px) {
+        position: static;
+        padding: 4rem 2rem;
+      }
+
       button:after {
         display: none;
       }
@@ -233,6 +263,10 @@
         color: $color-dude-deep-black;
         text-align: left;
         padding: 0;
+
+        @media (max-width: 700px) {
+          width: 100vw;
+        }
       }
 
       .arrow-link-wrapper:hover,
@@ -301,6 +335,10 @@
     padding-left: 0;
     padding-right: 0;
 
+    @media (max-width: 600px) {
+      height: auto;
+    }
+
     .cta-link {
       opacity: 0;
       animation-name: fade-in-down;
@@ -308,16 +346,14 @@
       animation-fill-mode: forwards;
       animation-duration: 1s;
       animation-delay: 2.5s;
+
+      @media (max-height: 600px) {
+        margin-top: 0;
+      }
     }
 
     .cta-link:after {
       background: $color-dude-white;
-    }
-
-    @media (max-width: 600px) {
-      overflow: hidden;
-      height: auto;
-      display: block;
     }
 
     .container {
@@ -453,6 +489,11 @@
       transition: all $transition-duration;
       z-index: 4;
 
+      @media (max-width: 600px) {
+        height: 100vh; // Use vh as a fallback for browsers that do not support Custom Properties
+        height: calc(var(--vh, 1vh) * 100);
+      }
+
       @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
         @media (max-width: 870px) {
           margin-top: 0;
@@ -496,6 +537,14 @@
       ul {
         margin-bottom: 6rem;
         width: 100%;
+
+        @media (max-height: 600px) {
+          margin-bottom: 3rem;
+        }
+
+        @media (max-width: 380px) {
+          margin-bottom: 1rem;
+        }
       }
 
       li {
@@ -505,6 +554,10 @@
         animation-timing-function: ease-in-out;
         animation-fill-mode: forwards;
         opacity: 0;
+
+        @media (max-height: 600px) {
+          margin-bottom: 1.5rem;
+        }
       }
 
       li:last-of-type {

@@ -15,18 +15,18 @@ body.archive.tag {
     fill: $color-body;
   }
 
-  .site-header .hamburger-inner,
-  .site-header .hamburger-inner::after,
-  .site-header .hamburger-inner::before,
-  .site-header .hamburger-inner:focus,
-  .site-header .hamburger-inner:focus::after,
-  .site-header .hamburger-inner:focus::before,
-  .site-header .nav-toggle:focus .hamburger-inner,
-  .site-header .nav-toggle:focus .hamburger-inner::after,
-  .site-header .nav-toggle:focus .hamburger-inner::before,
-  .site-header .nav-toggle:focus .hamburger-inner:focus,
-  .site-header .nav-toggle:focus .hamburger-inner:focus::after,
-  .site-header .nav-toggle:focus .hamburger-inner:focus::before {
+  &:not(.js-nav-active) .site-header .hamburger-inner,
+  &:not(.js-nav-active) .site-header .hamburger-inner::after,
+  &:not(.js-nav-active) .site-header .hamburger-inner::before,
+  &:not(.js-nav-active) .site-header .hamburger-inner:focus,
+  &:not(.js-nav-active) .site-header .hamburger-inner:focus::after,
+  &:not(.js-nav-active) .site-header .hamburger-inner:focus::before,
+  &:not(.js-nav-active) .site-header .nav-toggle:focus .hamburger-inner,
+  &:not(.js-nav-active) .site-header .nav-toggle:focus .hamburger-inner::after,
+  &:not(.js-nav-active) .site-header .nav-toggle:focus .hamburger-inner::before,
+  &:not(.js-nav-active) .site-header .nav-toggle:focus .hamburger-inner:focus,
+  &:not(.js-nav-active) .site-header .nav-toggle:focus .hamburger-inner:focus::after,
+  &:not(.js-nav-active) .site-header .nav-toggle:focus .hamburger-inner:focus::before {
     background-color: $color-body;
   }
 

@@ -1,4 +1,28 @@
 .block.block-timeline {
+  @media (max-width: 600px) {
+    padding-bottom: 0;
+  }
+
+  .col,
+  .active {
+    a {
+      background-image: linear-gradient(to top, $color-dude-deep-black, $color-dude-deep-black);
+      background-size: 100% 1px;
+      background-position: left bottom;
+      background-repeat: no-repeat;
+      transition: .3s all;
+      text-decoration: none;
+      overflow: visible;
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+      background-size: 100% 2.8rem;
+      color: $color-dude-white;
+    }
+  }
+
   @media (max-width: 1200px) {
     padding-left: $padding-default-cols-ipad;
     padding-right: $padding-default-cols-ipad;
@@ -25,6 +49,10 @@
     display: flex;
     padding: 4rem 7.5rem;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     @media (max-width: $container-ipad) {
       padding-top: $padding-default-rows-ipad;
       padding-bottom: $padding-default-rows-ipad;
@@ -39,10 +67,22 @@
       padding-right: $padding-default-cols-mobile;
     }
 
+    @media (max-width: 380px) {
+      width: 100%;
+      flex-wrap: wrap;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-bottom: 4rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
     .row,
     h2,
     p,
-    .action {
+    button.action {
       transition: all $transition-duration;
     }
 
@@ -52,14 +92,16 @@
     }
 
     &:hover p,
-    &:hover .action,
-    &.active .action {
+    &:hover button.action,
+    &.active button.action,
+    &.active * {
       opacity: 1;
+      color: $color-dude-black;
     }
 
     p,
-    .action,
-    .action:focus {
+    button.action,
+    button.action:focus {
       @extend %default;
 
       @include responsive-font(17px, 19px);
@@ -71,6 +113,10 @@
       border-radius: 0;
       background: transparent;
       text-align: left;
+
+      @media (max-width: 380px) {
+        padding-left: 0;
+      }
 
       &:first-of-type {
         margin-top: 0;
@@ -93,6 +139,10 @@
       position: absolute;
       margin-left: 4.5rem;
       top: 0;
+
+      @media (max-width: 380px) {
+        display: none;
+      }
     }
 
     &:last-child {
@@ -104,6 +154,14 @@
       padding-right: 5rem;
       margin: 0;
       color: rgba($color-dude-black, .2);
+
+      @media (max-width: 380px) {
+        margin-bottom: 3rem;
+      }
+    }
+
+    .action:hover {
+      cursor: pointer;
     }
   }
 
@@ -117,6 +175,11 @@
     margin-left: -5rem;
     display: block;
     z-index: 0;
+
+    @media (max-width: 600px) {
+      margin-left: 0;
+      height: 45rem;
+    }
 
     .background-image {
       background-position: bottom;

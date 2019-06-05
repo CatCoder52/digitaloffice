@@ -30,6 +30,12 @@
 
 .block.block-footer.site-footer {
   padding-top: 0;
+  overflow: visible;
+  z-index: 3;
+
+  @media (max-width: 640px) {
+    margin-top: 4rem;
+  }
 
   .block-head {
     padding-top: 10rem;
@@ -52,6 +58,7 @@
     align-items: center;
     width: 100%;
     background: $color-dude-whitegreyish;
+    overflow: visible;
 
     @media (max-width: 640px) {
       flex-wrap: wrap;
