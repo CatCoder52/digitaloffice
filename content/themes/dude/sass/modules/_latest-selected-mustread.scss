@@ -69,11 +69,49 @@
     .image {
       position: relative;
       overflow: hidden;
-      height: 15rem;
       width: 100%;
+
+      &:after {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+      }
+
+      @media (max-width: 1500px) {
+        height: 20rem;
+
+        &:after {
+          display: none;
+        }
+      }
+
+      @media (max-width: 860px) {
+        height: auto;
+
+        &:after {
+          content: '';
+          display: block;
+          padding-bottom: 100%;
+        }
+      }
+
+      @media (max-width: $container-ipad) {
+        height: 20rem;
+
+        &:after {
+          display: none;
+        }
+      }
 
       @media (max-width: 600px) {
         margin-bottom: 4rem;
+        height: auto;
+
+        &:after {
+          content: '';
+          display: block;
+          padding-bottom: 100%;
+        }
       }
     }
 
