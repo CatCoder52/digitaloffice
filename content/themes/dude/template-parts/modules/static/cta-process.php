@@ -2,8 +2,8 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 16:10:53
- * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-20 20:02:02
+ * @Last Modified by:   Timi Wahalahti
+ * @Last Modified time: 2019-06-05 15:10:33
  *
  * @package dude2019
  */
@@ -18,8 +18,8 @@
 
         <header class="block-head">
           <p class="block-title-pre" aria-describedby="block-title-cta-process">Hommahan toimii, mites tää käytännössä menee?</p>
-          <h2 class="block-title" id="block-title-cta-process">Älä osta sikaa säkissä sit amet, consectetur adipiscing elit.</h2>
-          <p class="cta-link"><a href="#">Lue lisää "prosessista"</a></p>
+          <h2 class="block-title" id="block-title-cta-process">Hyvin suunniteltu on vielä kokonaan tekemättä.</h2>
+          <p class="cta-link"><a href="/verkkosivut#prosessi">Älä osta sikaa säkissä, tutustu "prosessiin"</a></p>
         </header>
 
       </div>

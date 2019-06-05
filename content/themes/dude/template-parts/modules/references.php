@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:50:23
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-06-03 21:28:16
+ * @Last Modified time: 2019-06-05 14:51:12
  *
  * @package dude2019
  */
@@ -90,7 +90,7 @@ if ( empty( $main_reference ) && empty( $small_references ) ) {
         <div class="col has-grey-bg has-grey-bg-extend-left">
           <?php include get_theme_file_path( "svg/logos/{$main_reference['logofile']}.svg" ); ?>
           <h3 class="screen-reader-text"><?php echo esc_html( $main_reference['title'] ) ?></h3>
-          <p><?php echo esc_html( $main_reference['excerpt'] ) ?></p>
+          <p><?php echo $main_reference['excerpt'] ?></p>
 
           <p class="arrow-link-wrapper"><a href="<?php echo esc_html( $main_reference['permalink'] ) ?>" class="arrow-link">Tsekkaa case<span class="arrow"></span></a></p>
         </div>
