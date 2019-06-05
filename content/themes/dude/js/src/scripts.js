@@ -106,6 +106,9 @@ window.addEventListener('resize', () => {
   // Document ready start
   $(function() {
 
+  // Init lazyload
+  lazyload();
+
   // Timeline
   $('.col-timeline .row .action').on('click', function() {
     $('.col-timeline .row').removeClass('active');
