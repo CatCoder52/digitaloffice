@@ -393,7 +393,7 @@ sessionStorage.setItem( 'chat_greeting_visits', parseInt( sessionStorage.getItem
         var greeter = greeters[ Math.floor( Math.random() * greeters.length ) ];
 
         // show greeting
-        $('body').append('<div class="chat-greeting-wrapper"><button class="close"><span class="plus-cross">+</span></button><div class="chat-greeting open-chat"><div class="avatar" style="background-image:url(\'' + greeter.image + '\')"></div><div class="message"><p class="head">Viesti henkilöltä ' + greeter.name + '</p><p>' + greeting + '</p></div></div>')
+        $('body').append('<div class="chat-greeting"><button class="open-chat" aria-label="Avaa chat"></button><div class="avatar" style="background-image:url(\'' + greeter.image + '\')"></div><div class="message"><p class="head">Viesti henkilöltä ' + greeter.name + '</p><p>' + greeting + '</p></div><button class="close-chat close" aria-label="Sulje ilmoitus"><svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="currentColor"><path class="clr-i-outline clr-i-outline-path-1" d="M19.41 18l8.29-8.29a1 1 0 0 0-1.41-1.41L18 16.59l-8.29-8.3a1 1 0 0 0-1.42 1.42l8.3 8.29-8.3 8.29A1 1 0 1 0 9.7 27.7l8.3-8.29 8.29 8.29a1 1 0 0 0 1.41-1.41z"/></svg></button></div>')
 
         $crisp.push(['on', 'chat:opened', function() {
           $crisp.push(['do', 'message:show', ['text', greeting]]);
