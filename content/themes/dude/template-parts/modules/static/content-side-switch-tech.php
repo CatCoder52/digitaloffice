@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 17:24:23
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-06-05 14:38:52
+ * @Last Modified time: 2019-06-05 15:27:48
  *
  * @package dude2019
  */
@@ -32,14 +32,14 @@
 
       <div class="col col-content">
         <div class="content content-tab is-visible" id="verkkosivut">
-          <p>Toteutamme verkkosivut räätälöitynä asiakkaan yksilöllisiin tarpeisiin, käyttämättä valmisteemoja. Asiakkaamme saavat aina juuri heitä varten suunnitellun visuaalisen ilmeen ja teknisen toteutuksen.</p>
+          <p>Toteutamme verkkosivut räätälöitynä asiakkaan yksilöllisiin tarpeisiin.  Valmisteemat eivät tule kyseeseen, vaan asiakkaamme saavat aina juuri heitä varten suunnitellun visuaalisen ilmeen ja teknisen toteutuksen.</p>
 
           <p>Duden toteuttaman sivuston kanssa on helppo elää ja kasvaa vuosia eteenpäin. Sivuston kaikki sisältö kuvia myöten on asiakkaan itse helposti päivitettävissä.</p>
 
           <p><b>Takataskusta löytyy muun muassa</b></p>
 
           <ul>
-            <li>Kansainvälisten yritysten sivustoja liidien kerääminen mielessä</li>
+            <li>Kansainvälisten yritysten sivustoja, jossa liidit tippuvat suoraan markkinoinnin automaatioon</li>
             <li>Tuote-esittelysivustoja monipuolisilla hakutoiminnoilla</li>
             <li>Markkinointisivustoja</li>
             <li>Blogeja pienellä twistillä</li>
@@ -49,7 +49,7 @@
         <div class="content content-tab" id="verkkopalvelut">
           <p>Mielessä vähän suurempi savotta? Verkkolehti? Verkkokauppa? Kirjautumisen takana olevat sisällöt? Käyttäjien kanssa vuorovaikuttava kokonaisuus? Tai jotain ihan muuta? Onnistuu!</p>
 
-          <p>WordPress ei ole alusta pelkästään verkkosivuille. Tietämällä mitä tekee, saa sen taipumaan myös isompien projektien tarpeisiin kustannustehokkaasti ja pakettina joka kasvaa näppärästi verkkopalvelun mukana.</p>
+          <p>WordPress ei ole pelkästään alusta verkkosivuille. Kun tietää mitä tekee, saa sen taipumaan myös isompien projektien tarpeisiin kustannustehokkaasti ja pakettina joka kasvaa näppärästi verkkopalvelun mukana.</p>
 
           <p><b>Tälläisiä on tullut tehtyä</b></p>
 
@@ -62,7 +62,7 @@
         </div>
 
         <div class="content content-tab" id="integraatiot">
-          <p>Monella yrityksellä on nykyään useampi erillinen järjestelmä, joista ainakin yhden integroiminen on tarpeellista ja viisasta. Saman tiedon kahdessa paikassa ylläpitämisestä päästään eroon ja prosesseista saadaan käyttäjälle yhtenäisempiä kokemuksia.</p>
+          <p>Useilla yrityksillä on nykyään useampi erillinen järjestelmä, joista ainakin yhden integroiminen on tarpeellista ja viisasta. Saman tiedon kahdessa paikassa ylläpitämisestä päästään eroon ja prosesseista saadaan käyttäjälle yhtenäisempiä kokemuksia.</p>
 
           <p>Olemme toteuttaneet lukuisia erilaisia integraatioita ja hieman huonompikin rajapinta taipuu meidän käsissä.</p>
 

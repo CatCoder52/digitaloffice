@@ -341,12 +341,10 @@ window.addEventListener('resize', () => {
         },
       ]
 
-      // show only when not already shown and chat is available
-      console.log( daysBetween( new Date( localStorage.getItem( 'chat_greeting_sent' ) ), new Date() ) );
-      if ( localStorage.getItem( 'chat_greeting_sent' ) == null ) {
-
-        // show message on every else page than blog or singular post, but allow on singular when explicity setted as so
-        if ( ! $('body').hasClass('blog') && ( ! $('body').hasClass('single-post') || $('body').hasClass('send-chat-greeting') ) ) {
+      // show message on every else page than blog or singular post, but allow on singular when explicity setted as so
+      if ( ! $('body').hasClass('blog') && ( ! $('body').hasClass('single-post') || $('body').hasClass('send-chat-greeting') ) ) {
+        if ( localStorage.getItem( 'chat_greeting_sent' ) === null ) {
+          // send greeting if not send before
 
           // init timer
           TimeMe.initialize({
@@ -355,30 +353,42 @@ window.addEventListener('resize', () => {
           });
 
           // trigger chat after X seconds
-          TimeMe.callAfterTimeElapsedInSeconds( 10, function() {
+          TimeMe.callAfterTimeElapsedInSeconds( 10, maybeSendChatGreeting() );
+        } else if ( daysBetween( new Date( localStorage.getItem( 'chat_greeting_sent' ) ), new Date() ) > 1 ) {
+          // send chat if last time over day ago
 
-            // do nothing if session is ongoing or user has opened the chat
-            if ( $crisp.is('website:available') && ! $crisp.is('session:ongoing') && ! $crisp.is('chat:opened') ) {
-
-              // get random greeting and greeter
-              var greeting = greetings[ Math.floor( Math.random() * greetings.length ) ];
-              var greeter = greeters[ Math.floor( Math.random() * greeters.length ) ];
-
-              // show greeting
-              $('body').append('<div class="chat-greeting open-chat"><div class="avatar" style="background-image:url(\'' + greeter.image + '\')"></div><div class="message"><p class="head">Viesti henkilöltä ' + greeter.name + '</p><p>' + greeting + '</p></div>')
-
-              $crisp.push(['on', 'chat:opened', function() {
-                $crisp.push(['do', 'message:show', ['text', greeting]]);
-                $crisp.push(['off', 'chat:opened']);
-              }]);
-
-              // save that we have shown the greeting multiple times
-              localStorage.setItem( 'chat_greeting_sent', new Date().toLocaleString() );
-            }
+          // init timer
+          TimeMe.initialize({
+            currentPageName: document.title ,
+            idleTimeoutInSeconds: 10
           });
-        } // end chat allowed check
-      } // end chat already sent check
+
+          // trigger chat after X seconds
+          TimeMe.callAfterTimeElapsedInSeconds( 10, maybeSendChatGreeting() );
+        } // end if send chat check
+      } // end chat allowed check
     } // end storage check
+
+    function maybeSendChatGreeting() {
+      // do nothing if session is ongoing or user has opened the chat
+      if ( $crisp.is('website:available') && ! $crisp.is('session:ongoing') && ! $crisp.is('chat:opened') ) {
+
+        // get random greeting and greeter
+        var greeting = greetings[ Math.floor( Math.random() * greetings.length ) ];
+        var greeter = greeters[ Math.floor( Math.random() * greeters.length ) ];
+
+        // show greeting
+        $('body').append('<div class="chat-greeting open-chat"><div class="avatar" style="background-image:url(\'' + greeter.image + '\')"></div><div class="message"><p class="head">Viesti henkilöltä ' + greeter.name + '</p><p>' + greeting + '</p></div>')
+
+        $crisp.push(['on', 'chat:opened', function() {
+          $crisp.push(['do', 'message:show', ['text', greeting]]);
+          $crisp.push(['off', 'chat:opened']);
+        }]);
+
+        // save that we have shown the greeting multiple times
+        localStorage.setItem( 'chat_greeting_sent', new Date().toLocaleString() );
+      }
+    }
 
     // Open chat if element is clicked
     $('body').on( 'click', '.open-chat', function(event) {
