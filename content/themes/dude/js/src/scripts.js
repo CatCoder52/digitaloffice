@@ -405,15 +405,25 @@ sessionStorage.setItem( 'chat_greeting_visits', parseInt( sessionStorage.getItem
       }
     }
 
-    $('body').on( 'click', '.chat-greeting-wrapper button.close', function(event) {
-      $('.chat-greeting').remove();
+    $('body').on( 'click', '.chat-greeting button.close', function(event) {
+
+      $('.chat-greeting').addClass('removed-item')
+      .one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+        $('.chat-greeting').remove();
+      });
+
       localStorage.setItem( 'chat_greeting_sent', new Date().toLocaleString() );
     });
 
     // Open chat if element is clicked
     $('body').on( 'click', '.open-chat', function(event) {
       event.preventDefault();
-      $('.chat-greeting').remove();
+
+      $('.chat-greeting').addClass('removed-item')
+      .one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+        $('.chat-greeting').remove();
+      });
+
       $crisp.push(['do', 'chat:show']);
       $crisp.push(['do', 'chat:open']);
     });
