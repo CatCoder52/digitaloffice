@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-25 17:40:42
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-06-03 20:02:45
+ * @Last Modified time: 2019-06-05 13:52:56
  *
  * @package dude2019
  */
@@ -12,7 +12,7 @@
  * Gravity forms tabindex reset
  * Ensures tabindex attribute values are not greater than 0 for better accessibility
  */
-add_filter( 'gform_tabindex', '__return_false' ); 
+add_filter( 'gform_tabindex', '__return_false' );
 
 /**
  * Show archives
@@ -189,3 +189,8 @@ function dude_disable_srcset( $sources ) {
 }
 
 add_filter( 'dude_img_hashfeed_insta_count', function() { return 8; } );
+
+add_shortcode( 'checkmark', 'dude_shortcode_checkmark' );
+function dude_shortcode_checkmark() {
+  return file_get_contents( get_theme_file_path( 'svg/checkmark.svg' ) );
+}

@@ -2,8 +2,8 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 17:24:23
- * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-25 18:14:17
+ * @Last Modified by:   Timi Wahalahti
+ * @Last Modified time: 2019-06-05 12:17:13
  *
  * @package dude2019
  */
@@ -32,25 +32,35 @@
 
       <div class="col col-content">
         <div class="content content-tab is-visible" id="verkkosivut">
-          <p>Ilman hyviä verkkosivuja on vähän nolo olla. Sivuilla kävijät odottavat ensiluokkaista kokemusta ja parhaan kokemuksen tarjonnut yritys voittaa.</p>
+          <p>Toteutamme verkkosivut räätälöitynä asiakkaan yksilöllisiin tarpeisiin, käyttämättä valmisteemoja. Asiakkaamme saavat aina juuri heitä varten suunnitellun visuaalisen ilmeen ja teknisen toteutuksen. Duden toteuttaman sivuston kanssa on helppo elää ja kasvaa vuosia eteenpäin.</p>
 
-          <p>Olemme toteuttaneet monipuolisesti erilaisia verkkosivustoja kuten kansainvälisten yritysten sivustoja liidien kerääminen mielessä, tuote-esittelysivustoja monipuolisilla hakutoiminnoilla, markkinointisivustoja ja blogeja pienellä twistillä. Ilman hyviä verkkosivuja on vähän nolo olla. Sivuilla kävijät odottavat ensiluokkaista kokemusta ja parhaan kokemuksen tarjonnut yritys voittaa.</p>
+          <p><b>Takataskusta löytyy muun muassa:</b></p>
 
-          <p>Olemme toteuttaneet monipuolisesti erilaisia verkkosivustoja kuten kansainvälisten yritysten sivustoja liidien kerääminen mielessä, tuote-esittelysivustoja monipuolisilla hakutoiminnoilla, markkinointisivustoja ja blogeja pienellä twistillä.</p>
+          <ul>
+            <li>Kansainvälisten yritysten sivustoja liidien kerääminen mielessä</li>
+            <li>Tuote-esittelysivustoja monipuolisilla hakutoiminnoilla</li>
+            <li>Markkinointisivustoja</li>
+            <li>Blogeja pienellä twistillä</li>
+          </ul>
         </div>
 
         <div class="content content-tab" id="verkkopalvelut">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla iaculis erat in ligula fringilla porttitor. Vivamus efficitur, tellus a porta bibendum, nibh ex aliquet nibh, ac tincidunt sem mi eu sapien. Ut finibus elementum risus, ac consequat sem accumsan ut. Proin eu facilisis felis. Nam ut ligula at dui accumsan porttitor. Nunc et semper justo, id elementum erat. Duis mollis dolor neque. In viverra turpis vitae massa aliquet, volutpat gravida arcu tincidunt.</p>
+          <p>Mielessä vähän suurempi savotta? Verkkolehti? Verkkokauppa? Kirjautumisen takana olevat sisällöt? Käyttäjien kanssa vuorovaikuttava kokonaisuus? Tai jotain ihan muuta? Onnistuu!</p>
 
-          <p>Aliquam posuere lacus a fermentum dapibus. Duis quis hendrerit tortor. In et sagittis lacus. In a tempor eros, at laoreet nisl. Sed volutpat interdum magna, in commodo felis sagittis vel. Ut at tristique mauris, a interdum mi. Sed varius lorem at sem pulvinar, eget volutpat magna commodo. Donec cursus quis erat sed tempus. Donec nulla neque, pulvinar non tristique eget, pharetra vel lorem. In scelerisque urna sit amet semper iaculis. Nam pretium dolor eget hendrerit convallis.</p>
-
-          <p>Nunc eget sapien luctus, iaculis risus vitae, condimentum ipsum. Integer ac nulla id mauris pharetra tincidunt eu a tortor. Duis pharetra nisl eget consequat rhoncus. Nullam vehicula consectetur magna, nec dapibus ante egestas eget. Proin sed lectus quis erat dignissim condimentum. Aliquam ultricies, lacus laoreet varius mattis, quam ipsum malesuada risus, nec interdum mauris velit eu tellus. Vestibulum facilisis metus in tortor pretium, eget tempor lacus malesuada.</p>
+          <p></p>
         </div>
 
         <div class="content content-tab" id="integraatiot">
-          <p>Aliquam posuere lacus a fermentum dapibus. Duis quis hendrerit tortor. In et sagittis lacus. In a tempor eros, at laoreet nisl. Sed volutpat interdum magna, in commodo felis sagittis vel. Ut at tristique mauris, a interdum mi. Sed varius lorem at sem pulvinar, eget volutpat magna commodo. Donec cursus quis erat sed tempus. Donec nulla neque, pulvinar non tristique eget, pharetra vel lorem. In scelerisque urna sit amet semper iaculis. Nam pretium dolor eget hendrerit convallis.</p>
+          <p>Monella yrityksellä on nykyään useampi erillinen järjestelmä, joista ainakin yhden integroiminen on tarpeellista ja viisasta. Saman tiedon kahdessa paikassa ylläpitämisestä päästään eroon ja prosesseista saadaan käyttäjälle yhtenäisempiä kokemuksia. Olemme toteuttaneet lukuisia erilaisia integraatioita ja hieman huonompikin rajapinta taipuu meidän käsissä.</p>
 
-          <p>Donec nec lobortis dolor. Nullam eu odio eget justo vulputate convallis. Mauris ornare ipsum dui, in cursus dolor aliquet quis. Phasellus consequat hendrerit risus, sed pulvinar dui efficitur ut. Quisque vitae sem in enim feugiat tempor.</p>
+          <p><b>Esimerkkejä toteuttamistamme integraatioista</b></p>
+
+          <ul>
+            <li>Sisältöjen (esimerkiksi tuotetietojen) tuonti sekä päivitys ulkopuolisesta järjestelmästä</li>
+            <li>Tietojen lähettäminen ja päivitys ulkopuoliseen järjestelmään (esimerkiksi lomakkeista)</li>
+            <li>Verkkopalvelun oman rajapinnan toteuttaminen, jota muut voivat hyödyntää</li>
+            <li>Kirjautumiset ulkopuolisista järjestelmistä (SSO)</li>
+          </ul>
         </div>
       </div>
 
