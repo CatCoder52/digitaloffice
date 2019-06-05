@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-25 17:40:42
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-06-05 13:52:56
+ * @Last Modified time: 2019-06-05 16:10:39
  *
  * @package dude2019
  */
@@ -20,6 +20,15 @@ add_filter( 'gform_tabindex', '__return_false' );
 add_filter( 'air_helper_disable_views_tag', '__return_false' );
 add_filter( 'air_helper_disable_views_category', '__return_false' );
 add_filter( 'air_helper_disable_views_author', '__return_false' );
+
+// disable emojis
+remove_action( 'admin_print_styles', 'print_emoji_styles' );
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+remove_action( 'wp_print_styles', 'print_emoji_styles' );
+remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+remove_filter( 'the_content_feed', 'wp_staticize_emoji' );
+remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );
 
 /**
  * Disable the custom color picker in Gutenberg.

@@ -21,6 +21,9 @@ window.addEventListener('resize', () => {
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
 
+// Increase session page visits count
+sessionStorage.setItem( 'chat_greeting_visits', parseInt( sessionStorage.getItem( 'chat_greeting_visits' ) ) + 1 );
+
 // jQuery start
 ( function( $ ) {
 
@@ -343,7 +346,12 @@ window.addEventListener('resize', () => {
 
       // show message on every else page than blog or singular post, but allow on singular when explicity setted as so
       if ( ! $('body').hasClass('blog') && ( ! $('body').hasClass('single-post') || $('body').hasClass('send-chat-greeting') ) ) {
-        if ( localStorage.getItem( 'chat_greeting_sent' ) === null ) {
+        if ( sessionStorage.getItem( 'chat_greeting_visits' ) >= 5 && localStorage.getItem( 'chat_greeting_sent' ) === null ) {
+          // send chat if user has visited over 5 pages and greeting still not sent
+          setTimeout( function() {
+            maybeSendChatGreeting();
+          }, 3000 );
+        } else if ( localStorage.getItem( 'chat_greeting_sent' ) === null ) {
           // send greeting if not send before
 
           // init timer
@@ -353,7 +361,9 @@ window.addEventListener('resize', () => {
           });
 
           // trigger chat after X seconds
-          TimeMe.callAfterTimeElapsedInSeconds( 10, maybeSendChatGreeting() );
+          TimeMe.callAfterTimeElapsedInSeconds( 15, function() {
+            maybeSendChatGreeting();
+          } );
         } else if ( daysBetween( new Date( localStorage.getItem( 'chat_greeting_sent' ) ), new Date() ) > 1 ) {
           // send chat if last time over day ago
 
@@ -364,7 +374,9 @@ window.addEventListener('resize', () => {
           });
 
           // trigger chat after X seconds
-          TimeMe.callAfterTimeElapsedInSeconds( 10, maybeSendChatGreeting() );
+          TimeMe.callAfterTimeElapsedInSeconds( 15, function() {
+            maybeSendChatGreeting();
+          } );
         } // end if send chat check
       } // end chat allowed check
     } // end storage check
@@ -378,7 +390,7 @@ window.addEventListener('resize', () => {
         var greeter = greeters[ Math.floor( Math.random() * greeters.length ) ];
 
         // show greeting
-        $('body').append('<div class="chat-greeting open-chat"><div class="avatar" style="background-image:url(\'' + greeter.image + '\')"></div><div class="message"><p class="head">Viesti henkilöltä ' + greeter.name + '</p><p>' + greeting + '</p></div>')
+        $('body').append('<div class="chat-greeting-wrapper"><button class="close"><span class="plus-cross">+</span></button><div class="chat-greeting open-chat"><div class="avatar" style="background-image:url(\'' + greeter.image + '\')"></div><div class="message"><p class="head">Viesti henkilöltä ' + greeter.name + '</p><p>' + greeting + '</p></div></div>')
 
         $crisp.push(['on', 'chat:opened', function() {
           $crisp.push(['do', 'message:show', ['text', greeting]]);
@@ -389,6 +401,11 @@ window.addEventListener('resize', () => {
         localStorage.setItem( 'chat_greeting_sent', new Date().toLocaleString() );
       }
     }
+
+    $('body').on( 'click', '.chat-greeting-wrapper button.close', function(event) {
+      $('.chat-greeting').remove();
+      localStorage.setItem( 'chat_greeting_sent', new Date().toLocaleString() );
+    });
 
     // Open chat if element is clicked
     $('body').on( 'click', '.open-chat', function(event) {
