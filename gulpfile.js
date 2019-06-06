@@ -140,7 +140,7 @@ gulp.task('styles', function() {
     .pipe(sass({
       compass: false,
       bundleExec: true,
-      sourcemap: true,
+      sourcemap: false,
       style: 'compressed',
       debugInfo: true,
       lineNumbers: true,
@@ -183,7 +183,7 @@ gulp.task('styles', function() {
     .pipe(sass({
       compass: false,
       bundleExec: true,
-      sourcemap: true,
+      sourcemap: false,
       style: 'expanded',
       debugInfo: true,
       lineNumbers: true,
