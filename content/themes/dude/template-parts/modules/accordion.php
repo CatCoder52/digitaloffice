@@ -2,8 +2,8 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 17:54:33
- * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-06-05 16:46:31
+ * @Last Modified by:   Timi Wahalahti
+ * @Last Modified time: 2019-06-06 15:59:03
  *
  * @package dude2019
  */
@@ -63,7 +63,7 @@ if ( empty( $accordion ) ) {
             <span><?php echo esc_html( $item['title'] ) ?></span>
           </button>
 
-          <div class="accordion-content wrapper" <?php if ( $first_open && $i === $accordion_count ) { echo 'style="display: grid;"'; } ?>>
+          <div class="accordion-content wrapper<?php if ( $first_open && $i === $accordion_count ) { echo ' open-accordion'; } ?>" <?php if ( $first_open && $i === $accordion_count ) { echo 'style="display: grid;"'; } ?>>
             <?php echo wpautop( $item['content'] ) ?>
           </div>
           <?php $i--; endforeach; ?>
