@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:49:22
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-06-06 15:37:23
+ * @Last Modified time: 2019-06-06 16:01:14
  *
  * @package dude2019
  */
@@ -27,14 +27,14 @@ $image_preload = wp_get_attachment_image_url( $image, 'tiny-preload-thumbnail' )
 
     <div class="cols">
       <div class="col col-text">
-        <h3>Verkkosivut ja -palvelut</h3>
+        <h3><a href="/verkkosivut">Verkkosivut ja -palvelut</a></h3>
         <p class="col-description">Ei valmisratkaisuja, vaan laadukkaasti räätälöiden. Tämähän se meidän ykkösjuttu on.</p>
 
         <p class="cta-link"><a href="/verkkosivut">Tutustu</a></p>
       </div>
 
       <div class="col col-text">
-        <h3>Visuaalinen suunnittelu</h3>
+        <h3><a href="/visuaalinen-suunnittelu">Visuaalinen suunnittelu</a></h3>
         <p class="col-description">Verkkopalveluiden ulkoasujen lisäksi meillä tehdään myös maailmanluokan yritysilmeitä.</p>
 
         <p class="cta-link"><a href="/visuaalinen-suunnittelu">Tutustu</a></p>
