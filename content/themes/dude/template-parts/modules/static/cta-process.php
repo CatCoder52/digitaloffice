@@ -28,22 +28,22 @@
 
         <div class="process">
           <div class="circle">
-            <svg height="250" width="250"><circle cx="125" cy="125" r="125" stroke="#050505" stroke-width="1" fill="#fff" /></svg>
+            <svg height="250" width="250"><circle cx="125" cy="125" r="120" stroke="#050505" stroke-width="1" fill="#fff" /></svg>
             <span class="long-arrow"></span>
           </div>
 
           <div class="circle">
-            <svg height="250" width="250"><circle cx="125" cy="125" r="125" stroke="#050505" stroke-width="1" fill="#fff" /></svg>
+            <svg height="250" width="250"><circle cx="125" cy="125" r="120" stroke="#050505" stroke-width="1" fill="#fff" /></svg>
             <span class="long-arrow"></span>
           </div>
 
           <div class="circle">
-            <svg height="250" width="250"><circle cx="125" cy="125" r="125" stroke="#050505" stroke-width="1" fill="#fff" /></svg>
+            <svg height="250" width="250"><circle cx="125" cy="125" r="120" stroke="#050505" stroke-width="1" fill="#fff" /></svg>
             <span class="long-arrow"></span>
           </div>
 
           <div class="circle">
-            <svg height="250" width="250"><circle cx="125" cy="125" r="125" stroke="#050505" stroke-width="1" fill="#fff" /></svg>
+            <svg height="250" width="250"><circle cx="125" cy="125" r="120" stroke="#050505" stroke-width="1" fill="#fff" /></svg>
             <span class="long-arrow"></span>
           </div>
         </div>

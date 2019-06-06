@@ -23,7 +23,7 @@
       <div class="col">
 
         <div class="circle">
-          <svg height="250" width="250"><circle cx="125" cy="125" r="125" stroke="#fff" stroke-width="1" fill="#262626" /></svg>
+          <svg height="250" width="250"><circle cx="125" cy="125" r="120" stroke="#fff" stroke-width="1" fill="#262626" /></svg>
           <span class="long-arrow"></span>
           <h3>Määritellään</h3>
         </div>
@@ -40,7 +40,7 @@
       <div class="col">
 
         <div class="circle">
-          <svg height="250" width="250"><circle cx="125" cy="125" r="125" stroke="#fff" stroke-width="1" fill="#262626" /></svg>
+          <svg height="250" width="250"><circle cx="125" cy="125" r="120" stroke="#fff" stroke-width="1" fill="#262626" /></svg>
           <span class="long-arrow"></span>
           <h3>Suunnitellaan</h3>
         </div>
@@ -57,7 +57,7 @@
       <div class="col">
 
         <div class="circle">
-          <svg height="250" width="250"><circle cx="125" cy="125" r="125" stroke="#fff" stroke-width="1" fill="#262626" /></svg>
+          <svg height="250" width="250"><circle cx="125" cy="125" r="120" stroke="#fff" stroke-width="1" fill="#262626" /></svg>
           <span class="long-arrow"></span>
           <h3>Toteutetaan</h3>
         </div>
