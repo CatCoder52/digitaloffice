@@ -4,14 +4,27 @@ body .block.block-cta-left-image,
   position: relative;
   z-index: 3;
 
-  .end-note a:hover {
-    opacity: .5;
-  }
-
   @media (max-width: 500px) {
     .end-note {
       margin-top: 0;
     }
+  }
+
+  .end-note     a {
+    background-image: linear-gradient(to top, $color-dude-deep-black, $color-dude-deep-black);
+    background-size: 100% 1px;
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    transition: .3s all;
+    text-decoration: none;
+    overflow: visible;
+  }
+
+  .end-note a:hover,
+  .end-note a:focus,
+  .end-note a:active {
+    background-size: 100% 2.8rem;
+    color: $color-dude-white;
   }
 
   form div {
