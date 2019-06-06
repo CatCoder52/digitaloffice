@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 17:24:23
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-06-05 15:27:48
+ * @Last Modified time: 2019-06-06 15:53:13
  *
  * @package dude2019
  */
@@ -57,7 +57,7 @@
             <li>Verkkolehtiä jotka tukevat artikkelien tyyliä</li>
             <li>Käyttäjän sijaintiin perustuvia karttapalveluita</li>
             <li>Vuokraus- ja myyntiartikkeleita listaavia palveluita</li>
-            <li>Inranet-toteutuksia järjestöjen sisäiseen viestintään ja julkisten tietojen päivittämiseen</li>
+            <li>Intranet-toteutuksia järjestöjen sisäiseen viestintään ja julkisten tietojen päivittämiseen</li>
           </ul>
         </div>
 
