@@ -15,10 +15,6 @@
     @media (max-width: 1400px) {
       grid-template-columns: 30% 60%;
       grid-column-gap: 2rem;
-
-      .button:hover .long-arrow {
-        width: 7rem;
-      }
     }
 
     @media (max-width: 900px) {
@@ -59,6 +55,55 @@
     overflow: visible;
     position: relative;
     z-index: 2;
+
+    .arrow-link-wrapper {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+    }
+
+    .arrow-link-wrapper a {
+      @extend %default;
+
+      // Needs fixed width, otherwise arrow will spread the box
+      width: 540px;
+      background: $color-links;
+      color: $color-dude-white;
+      border: 0;
+      display: block;
+      padding: 2.5rem 3rem;
+      margin-bottom: 1rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: 150ms linear background;
+      font-family: $font-base;
+      text-align: left;
+      align-items: center;
+      white-space: nowrap;
+      overflow: visible;
+
+      .arrow {
+        position: relative;
+        top: -4px;
+        background: $color-dude-white;
+
+        &:before,
+        &:after {
+          background: $color-dude-white;
+        }
+      }
+
+      &:hover .arrow {
+        background: $color-links;
+        width: 12rem;
+
+        &:before,
+        &:after {
+          background: $color-links;
+        }
+      }
+    }
 
     @media (max-width: $container-ipad) {
       padding-left: $padding-default-cols-ipad;

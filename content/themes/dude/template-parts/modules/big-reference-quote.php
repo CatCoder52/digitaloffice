@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 17:07:55
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-25 16:09:04
+ * @Last Modified time: 2019-06-06 18:47:21
  *
  * @package dude2019
  */
@@ -60,7 +60,7 @@ if ( empty( $button_text ) ) {
           <?php echo wpautop( $quote ); ?>
         </blockquote>
 
-        <p><a href="<?php echo get_the_permalink( $reference ) ?>" class="button"><span class="arrow-wrapper"><?php echo esc_html( $button_text ) ?><span class="long-arrow"></span></span></a></p>
+        <p class="arrow-link-wrapper"><a href="<?php echo get_the_permalink( $reference ) ?>" class="arrow-link"><?php echo esc_html( $button_text ) ?><span class="arrow"></span></a></p>
       </div>
 
     </div>
