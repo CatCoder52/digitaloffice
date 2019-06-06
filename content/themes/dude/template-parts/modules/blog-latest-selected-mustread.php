@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 15:26:12
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-06-03 21:28:34
+ * @Last Modified time: 2019-06-06 16:05:55
  *
  * @package dude2019
  */
@@ -76,6 +76,7 @@ if ( ! $query->have_posts() || empty( $mustread ) ) {
     <div class="newsletter has-grey-bg has-grey-bg-extend-right">
       <form action="https://dude.us8.list-manage.com/subscribe/post?u=bda4635b58bba8d9716eb90a6&amp;id=efe9db80e6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
         <h2 class="block-title">Tilaa bittivirtojen pulloposti</h2>
+        <p>Koottuja kuulumisia sisältävä bittivirtojen pulloposti saapuu rantaasi noin kolmen kuukauden välein.</p>
         <label for="mce-EMAIL" class="screen-reader-text">Sähköpostiosoite:</label>
 
         <div class="inputs">
