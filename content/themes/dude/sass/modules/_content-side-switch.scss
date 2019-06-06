@@ -138,12 +138,12 @@
     .gutter {
       width: 1px;
       background: $color-dude-deep-black;
-      height: 90%;
+      height: calc(100% - 1.5rem);
       content: '';
       position: absolute;
       left: 0;
       top: 0;
-      margin-top: 1.4rem;
+      margin-top: .5rem;
       opacity: .5;
     }
 
