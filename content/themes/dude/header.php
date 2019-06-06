@@ -86,6 +86,7 @@ if ( $show_chat_greeting ) {
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="profile" href="http://gmpg.org/xfn/11">
+  <noscript><link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/noscript.css"></noscript>
 
   <?php wp_head();
 
@@ -213,6 +214,19 @@ if ( $show_chat_greeting ) {
             <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-22"><a href="<?php echo get_page_link( 4487 ); ?>">Ota yhteyttä</a></li>
             <li class="dude-nav-more nav-toggle menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4477"><button id="nav-toggle-desktop"><span class="toggle-text">Lisää</span> <span class="plus-cross">+</span></button></li>
           </ul>
+
+           <noscript>
+             <ul class="menu-items menu-items-no-js nav-menu">
+              <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-18"><a href="<?php echo get_page_link( 9 ); ?>">Verkkosivut</a></li>
+              <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-19"><a href="<?php echo get_page_link( 4485 ); ?>">Visuaalinen suunnittelu</a></li>
+              <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4482"><a href="<?php echo get_page_link( 4493 ); ?>">Töitämme</a></li>
+              <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-22"><a href="<?php echo get_page_link( 4487 ); ?>">Ota yhteyttä</a></li>
+              <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item"><a href="<?php echo get_page_link( 4449 ); ?>">Yritys</a></li>
+               <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_page_link( 4491 ); ?>">Työpaikat</a></li>
+               <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item"><a href="<?php echo get_page_link( 11 ); ?>">Blogi</a></li>
+               <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_page_link( 4489 ); ?>">Yhteisö & koodi</a></li>
+              </ul>
+            </noscript>
 
         </nav><!-- #nav -->
       </div>

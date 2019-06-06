@@ -1,0 +1,23 @@
+.opacity-on-load,
+.opacity-on-load-instant,
+.animate-1,
+.animate-2,
+.animate-3,
+.animate,
+.block.block-hero.block-hero-frontpage .content li,
+.block.block-hero.block-hero-side-columns .content li,
+.block.block-hero.block-hero-frontpage .content,
+.block.block-hero.block-hero-side-columns .content {
+  transition: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.dude-nav-more,
+.menu-items {
+  display: none !important;
+}
+
+.menu-items.menu-items-no-js {
+  display: flex !important;
+}

@@ -26,20 +26,39 @@ $nav-open-from-top: false;
 
 @import 'hamburgers/_sass/hamburgers/hamburgers';
 
+@media (max-width: 960px) {
+  .no-js .nav-primary-desktop {
+    display: block;
+
+    .menu-items.menu-items-no-js {
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: #000;
+      padding: 1rem 2rem;
+      margin: 0;
+      flex-wrap: wrap;
+
+      li {
+        position: relative;
+        width: auto;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+        padding-right: 1rem;
+      }
+
+      li a {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+
 // Choose hamburger animation here
 // Choices: https://jonsuh.com/hamburgers/
 .hamburger {
   @extend .hamburger--spin;
-}
-
-// Mobile nav styles
-
-// Users that don't have Javascript enabled
-.no-js .site-header {
-  position: static;
-
-  // Use the same color than navigation
-  background: $nav-background-color;
 }
 
 // Disable scroll on html body when menu is opened.
