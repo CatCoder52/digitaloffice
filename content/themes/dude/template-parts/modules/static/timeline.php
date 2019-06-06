@@ -43,12 +43,12 @@
       </div>
 
       <div class="column col col-image">
-        <p class="label" id="dynamiclabel"><span>Aamupalaverit vietetään joka maanantai. Kauppakatu 14 tiloissa on tilaa useammallekin ihmiselle.</span></p>
+        <p class="label" id="dynamiclabel"><span>Alussa meitä oli vain kaksi ja vermeetkin oli lainavehkeitä. Ensimmäinen toimisto vanhan työnantajan tiloissa.</span></p>
 
         <div class="image has-lazyload">
-          <div class="background-image preview lazyload" style="background-image: url('<?php echo get_theme_file_uri( 'images/timeline/dude-2019-tiny.jpg' ) ?>' ) ?>');" data-src="<?php echo get_theme_file_uri( 'images/timeline/dude-2019.jpg' ) ?>"></div>
-          <div id="dynamicimage" class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo get_theme_file_uri( 'images/timeline/dude-2019.jpg' ) ?>');"<?php endif; ?>></div>
-          <noscript><div class="background-image full-image" style="background-image: url('<?php echo get_theme_file_uri( 'images/timeline/dude-2019.jpg' ) ?>');"></div></noscript>
+          <div class="background-image preview lazyload" style="background-image: url('<?php echo get_theme_file_uri( 'images/timeline/dude-2013-tiny.jpg' ) ?>' ) ?>');" data-src="<?php echo get_theme_file_uri( 'images/timeline/dude-2013.jpg' ) ?>"></div>
+          <div id="dynamicimage" class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo get_theme_file_uri( 'images/timeline/dude-2013.jpg' ) ?>');"<?php endif; ?>></div>
+          <noscript><div class="background-image full-image" style="background-image: url('<?php echo get_theme_file_uri( 'images/timeline/dude-2013.jpg' ) ?>');"></div></noscript>
         </div>
       </div>
     </div>
