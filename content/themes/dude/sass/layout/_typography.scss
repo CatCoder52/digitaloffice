@@ -114,11 +114,13 @@ h1,
 h2,
 %h2 {
   @include responsive-font(25px, 45px);
+  margin-bottom: 2rem;
 }
 
 h3,
 %h3 {
   @include responsive-font(25px, 35px);
+  margin-bottom: 2rem;
 }
 
 h4,
