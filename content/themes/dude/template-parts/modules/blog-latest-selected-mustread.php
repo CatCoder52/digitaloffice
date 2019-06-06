@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 15:26:12
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-06-06 16:05:55
+ * @Last Modified time: 2019-06-06 16:11:56
  *
  * @package dude2019
  */
@@ -24,7 +24,9 @@ $mustread = get_sub_field( 'mustread' );
 
 if ( ! $query->have_posts() || empty( $mustread ) ) {
   return;
-} ?>
+}
+
+global $blog_latest_excerpt_override; ?>
 
 <section class="block block-latest-selected-mustread">
   <div class="container">
@@ -34,7 +36,8 @@ if ( ! $query->have_posts() || empty( $mustread ) ) {
       <div class="col col-latest">
         <h2 class="block-title">Uusin bloggauksemme</h2>
 
-        <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+        <?php while ( $query->have_posts() ) : $query->the_post();
+          $blog_latest_excerpt_override = get_the_id(); ?>
 
           <div class="post">
             <div class="image has-lazyload">
