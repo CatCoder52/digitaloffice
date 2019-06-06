@@ -1,4 +1,8 @@
 .block.block-contact-list {
+  @media (max-width: 1100px) {
+    padding-bottom: 2rem;
+  }
+
   .cols {
     @include grid(5, $gutter_x: 0, $gutter_y: 0);
 
