@@ -114,6 +114,7 @@ body .block.block-hero-reference {
 
     &:hover .arrow {
       background: $color-links;
+      width: 12rem;
 
       &:before,
       &:after {
