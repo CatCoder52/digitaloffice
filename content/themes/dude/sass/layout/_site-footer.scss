@@ -33,6 +33,14 @@
   overflow: visible;
   z-index: 3;
 
+  @media (max-width: 1000px) {
+    padding-bottom: $padding-default-cols-ipad;
+  }
+
+  @media (max-width: $container-mobile) {
+    padding-bottom: $padding-default-cols-mobile;
+  }
+
   @media (max-width: 640px) {
     margin-top: 4rem;
   }
