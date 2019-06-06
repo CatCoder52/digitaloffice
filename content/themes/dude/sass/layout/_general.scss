@@ -127,7 +127,7 @@ a.global-link {
 
 // Dude specific general typography related styles
 .block-title {
-  max-width: 35vw;
+  max-width: 45vw;
   margin: 0;
   line-height: 1.33;
 
@@ -143,6 +143,16 @@ a.global-link {
 .block-head {
   padding-top: 15rem;
   padding-bottom: 10rem;
+
+  @media (max-width: 1600px) {
+    padding-top: 10rem;
+    padding-bottom: 8rem;
+  }
+
+  @media (max-width: 1100px) {
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+  }
 }
 
 .block-title-pre {
