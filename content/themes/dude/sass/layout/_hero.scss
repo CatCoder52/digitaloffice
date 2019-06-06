@@ -328,6 +328,7 @@
   &.block-hero-side-columns {
     background: $color-dude-deep-black;
     color: $color-dude-white;
+    z-index: 4;
 
     // Let's reset the padding from the hero container, no need in full width hero
     padding-top: 0;
