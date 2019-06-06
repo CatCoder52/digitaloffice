@@ -76,6 +76,18 @@
     position: relative;
     padding-left: 2rem;
 
+    &.col-quote {
+      padding-top: 0;
+    }
+
+    &.col-quote blockquote p:first-child:before {
+      content: '”';
+      display: inline-block;
+      position: relative;
+      color: $color-body;
+      margin-right: .5rem;
+    }
+
     @media (max-width: 900px) {
       padding-right: $padding-general-content-box-mobile;
     }

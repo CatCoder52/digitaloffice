@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:50:23
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-06-06 11:23:49
+ * @Last Modified time: 2019-06-06 18:12:52
  *
  * @package dude2019
  */
@@ -95,7 +95,7 @@ if ( empty( $main_reference ) && empty( $small_references ) ) {
           <p class="arrow-link-wrapper"><a href="<?php echo esc_html( $main_reference['permalink'] ) ?>" class="arrow-link">Tsekkaa case<span class="arrow"></span></a></p>
         </div>
 
-        <div class="co col-quote">
+        <div class="col col-quote">
           <blockquote><p><?php echo esc_html( $main_reference['quote']['content'] ) ?></p></blockquote>
           <footer><strong><?php echo esc_html( $main_reference['quote']['person'] ) ?></strong> <?php echo esc_html( $main_reference['quote']['person_title'] ) ?></footer>
         </div>
