@@ -104,6 +104,11 @@
       }
     }
 
+    @media (min-width: 1500px) {
+      width: 37vw;
+      max-width: 100%;
+    }
+
     @media (max-width: 600px) {
       margin-left: -2rem;
       width: calc(100% + 4rem);

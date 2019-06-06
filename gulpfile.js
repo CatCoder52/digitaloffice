@@ -136,6 +136,7 @@ gulp.task('styles', function() {
     // Save compressed version
     gulp.src(sassFile)
 
+    .pipe(sourcemaps.init())
     .pipe(sass({
       compass: false,
       bundleExec: true,
@@ -172,6 +173,7 @@ gulp.task('styles', function() {
     .pipe(rename({
       suffix: '.min'
     }))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(cssDest))
     .pipe(browsersync.stream());
 
@@ -405,6 +407,7 @@ gulp.task('js', function() {
           themeDir + '/node_modules/blueimp-gallery/js/jquery.blueimp-gallery.js',
           themeDir + '/js/src/scripts.js'
         ])
+        .pipe(sourcemaps.init())
         .pipe(concat('all.js'))
         .pipe(uglify({
           compress: true,
@@ -413,6 +416,7 @@ gulp.task('js', function() {
             this.emit('end');
           }))
         .pipe(header(banner, {pkg: pkg, currentDate: currentDate}))
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(jsDest));
 });
 
