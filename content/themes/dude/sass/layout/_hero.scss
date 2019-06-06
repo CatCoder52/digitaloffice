@@ -151,6 +151,10 @@
   &.block-hero-contact {
     position: relative;
 
+    @media (max-width: 600px) {
+      height: auto;
+    }
+
     h1,
     .contact-details {
       width: 100%;
@@ -159,8 +163,7 @@
 
     @media (max-width: 600px) {
       .side-content-box.contact-information {
-        height: 100vh; // Use vh as a fallback for browsers that do not support Custom Properties
-        height: calc(var(--vh, 1vh) * 100);
+        height: auto;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
