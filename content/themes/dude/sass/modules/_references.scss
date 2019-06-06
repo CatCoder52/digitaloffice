@@ -107,6 +107,16 @@
 
     &.reference-image-main {
       height: 70rem;
+
+      @media (max-width: 860px) {
+        height: auto;
+
+        &:after {
+          content: '';
+          display: block;
+          padding-bottom: 100%;
+        }
+      }
     }
   }
 
