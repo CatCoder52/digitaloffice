@@ -10,9 +10,9 @@
   color: $color-dude-white;
   height: 100vh; // Use vh as a fallback for browsers that do not support Custom Properties
   height: calc(var(--vh, 1vh) * 100);
-  min-height: 80rem;
+  min-height: 65rem;
 
-  @media (max-height: 480px) {
+  @media (max-height: 460px) {
     min-height: 120rem;
     height: auto;
   }
