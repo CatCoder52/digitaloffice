@@ -153,6 +153,11 @@ a.global-link {
     padding-top: 8rem;
     padding-bottom: 5rem;
   }
+
+  @media (max-width: 500px) {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+  }
 }
 
 .block-title-pre {
