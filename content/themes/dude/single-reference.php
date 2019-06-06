@@ -108,7 +108,7 @@ get_header(); ?>
         <div class="container">
 
          <header class="block-head block-head-related">
-          <p class="block-title-pre" aria-describedby="block-title-related-references">Muita referenssejä</p>
+          <p class="block-title-pre" aria-describedby="block-title-related-references">Muita töitämme</p>
           <h2 class="block-title" id="block-title-related-references">Tsekkaa myös nämä</h2>
         </header>
 

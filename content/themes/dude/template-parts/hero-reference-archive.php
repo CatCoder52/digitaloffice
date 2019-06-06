@@ -2,14 +2,14 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-06-03 20:33:54
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2019-06-06 12:37:51
  *
  * @package dude2019
  */
 
 $title = 'Töitämme';
-$content = 'Olemme tehneet paljon kaikenlaista ja suurimmasta osasta hommia olemme ylpeitä. Muutamiin ylpeydenaiheisiin voit tutustua täällä tarkemmin.';
+$content = 'Olemme toteuttaneet monipuolisesti verkkosivuja ja -palveluita erilaisille toimijoille. Joihinkin toteutuksiimme voit tutustua täällä tarkemmin.';
 ?>
 
 <section class="block block-hero block-hero-reference-archive block-hero-enable-transition">

@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 19:18:00
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-06-03 16:08:41
+ * @Last Modified time: 2019-06-06 13:14:38
  *
  * @package dude2019
  */
@@ -64,7 +64,7 @@ if ( ! $query->have_posts() ) {
 
             <p class="arrow-link-wrapper"><span href="<?php the_permalink() ?>" class="arrow-link"><span class="screen-reader-text">Lue lisää tyypistä</span><span class="arrow"></span></span></p>
           </div>
-          <a href="<?php the_permalink() ?>" class="global-link">><span class="screen-reader-text">Lue lisää tyypistä</span></a>
+          <a href="<?php the_permalink() ?>" class="global-link"><span class="screen-reader-text">Lue lisää tyypistä</span></a>
         </div>
 
       <?php endwhile; wp_reset_postdata(); ?>

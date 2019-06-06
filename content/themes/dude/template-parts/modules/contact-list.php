@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-25 17:01:29
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-30 16:31:57
+ * @Last Modified time: 2019-06-06 12:46:31
  *
  * @package dude2019
  */
@@ -26,7 +26,7 @@ foreach ( $persons as $key => $person_id ) {
 
 <section class="block block-contact-list">
   <div class="container">
-    <h2 class="block-title">A - Ö</h2>
+    <h2 class="block-title">Dudes of summer</h2>
 
     <div class="cols columns is-mobile is-tablet is-multiline">
       <?php $x = 0; foreach ( $persons as $person ) : ?>
