@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 17:43:02
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-06-06 12:17:46
+ * @Last Modified time: 2019-06-06 12:20:44
  *
  * @package dude2019
  */
@@ -14,8 +14,8 @@
   <div class="container">
 
     <header class="block-head">
-      <p class="block-title-pre" aria-describedby="block-title-process">Hommahan haisee sille että se ei olisi ihan kusetusta. Mites tämä käytännössä menee?</p>
-      <h2 class="block-title" id="block-title-process">Hyvin suunniteltu on vielä kokonaan tekemättä:</h2>
+      <p class="block-title-pre" aria-describedby="block-title-process">Hommahan haisee sille että se ei olisi ihan kusetusta.</p>
+      <h2 class="block-title" id="block-title-process">Mites tämä käytännössä menee?</h2>
     </header>
 
     <div class="cols">
@@ -29,7 +29,7 @@
         </div>
 
         <div class="content">
-          <p>Otat yhteyttä, jonka jälkeen meidän Kristian palaa pian asiaan ja käy homman läpi teidän kanssa. Tarvittaessa palaveerataan etä- tai lähiyhteydellä.</p>
+          <p>Otat yhteyttä, jonka jälkeen meidän <a href="https://www.dude.fi/dudet/kristian">Kristian</a> palaa pian asiaan ja käy homman läpi teidän kanssa. Tarvittaessa palaveerataan etä- tai lähiyhteydellä.</p>
 
           <p>Saat tarjouksen, jossa on avattu erilaiset verkkopalveluun tulevat toiminnallisuudet ja työvaiheet. Tarjouksessa esitetään myös alustava aikataulu projektille.</p>
 
@@ -67,7 +67,7 @@
 
           <p>Kun sivusto on demovaiheessa, se laitetaan näyttöversioon, jossa pääsette testaamaan ja kommentoimaan tulevaa verkkopalveluanne. Verkkopalvelu testataan ja viimeistellään saadun palautteen perusteella, samalla kun sisällönsyöttö on käynnissä.</p>
 
-          <p>Projekti julkaistaan ja sen jälkeen juhlitaan hetki, kunnes taas mennään mahdollisen jatkokehityksen merkeissä.</p>
+          <p>Verkkopalvelusi julkaistaan ja sen jälkeen juhlitaan hetki, kunnes taas mennään mahdollisen jatkokehityksen merkeissä.</p>
         </div>
       </div>
 
