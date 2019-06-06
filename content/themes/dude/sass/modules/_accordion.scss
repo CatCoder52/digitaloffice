@@ -133,7 +133,7 @@
 
     @media (max-width: $container-mobile) {
       margin-top: 3rem;
-      margin-left: 3rem;
+      margin-left: 0;
     }
   }
 }
@@ -166,8 +166,8 @@
 
   @media (max-width: $container-mobile) {
     padding-bottom: $padding-accordion-content-mobile;
-    padding-left: $padding-accordion-content-mobile;
-    padding-right: $padding-accordion-content-mobile;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   p {
@@ -221,7 +221,10 @@
   }
 
   @media (max-width: $container-mobile) {
-    padding: $padding-accordion-content-mobile;
+    padding-top: $padding-accordion-content-mobile;
+    padding-bottom: $padding-accordion-content-mobile;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   span {
