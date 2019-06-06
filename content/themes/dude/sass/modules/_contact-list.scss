@@ -1,16 +1,6 @@
-$column-gap: 4rem;
-
 .block.block-contact-list {
-  .columns {
-    margin-left: -$column-gap;
-    margin-right: -$column-gap;
-
-    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-      @media (max-width: 1500px) {
-        display: block;
-        width: 100%;
-      }
-    }
+  .cols {
+    @include grid(5, $gutter_x: 4rem, $gutter_y: 4rem);
 
     h3 {
       // A bit smaller than %h3
@@ -36,11 +26,12 @@ $column-gap: 4rem;
       margin-bottom: calc(1.5rem - #{$column-gap});
     }
 
-    .column {
-      padding-left: $column-gap;
-      padding-right: $column-gap;
-      padding-top: $column-gap + 2.7rem;
-      padding-bottom: $column-gap;
+    .col {
+      padding: 4rem;
+
+      @media (max-width: $container-mobile) {
+        padding: 4rem 2rem;
+      }
 
       @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
         @media (max-width: 1500px) {
@@ -55,9 +46,8 @@ $column-gap: 4rem;
       }
     }
 
-    .column.col-go-to {
+    .col.col-go-to {
       background: $color-superlightgrey;
-      padding-top: $column-gap;
     }
   }
 

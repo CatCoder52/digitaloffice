@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-25 17:01:29
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-06-06 12:46:31
+ * @Last Modified time: 2019-06-06 19:34:57
  *
  * @package dude2019
  */
@@ -28,9 +28,9 @@ foreach ( $persons as $key => $person_id ) {
   <div class="container">
     <h2 class="block-title">Dudes of summer</h2>
 
-    <div class="cols columns is-mobile is-tablet is-multiline">
+    <div class="cols">
       <?php $x = 0; foreach ( $persons as $person ) : ?>
-        <div class="col<?php if ( 0 === $x ) { echo ' col-go-to'; } ?> column">
+        <div class="col<?php if ( 0 === $x ) { echo ' col-go-to'; } ?>">
           <?php if ( 0 === $x ) : ?>
             <p class="name-pre" aria-describedby="your-go-to">Your go-to dude</p>
             <h3 id="your-go-to"><?php echo esc_html( $person['name'] ) ?></h3>
