@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 17:43:02
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-06-05 15:10:19
+ * @Last Modified time: 2019-06-06 10:55:46
  *
  * @package dude2019
  */
@@ -48,7 +48,9 @@
         <div class="content">
           <p>Visuaalinen työstö käynnistyy ja verkkopalvelu alkaa saamaan konkreettisia muotoja. Suunnittelija on tiiviissä yhteydessä teidän kanssa, muokaten mielenmaisemaa iteratiivisesti kohti yhteistä tavoitetta.</p>
 
-          <p>Kun verkkopalvelun ulkoasu on hyväksytty, on aika pistää ramppa kalkattamaan! Visuaalinen työstö käynnistyy ja verkkopalvelu alkaa saamaan konkreettisia muotoja. Suunnittelija on tiiviissä yhteydessä teidän kanssa, muokaten mielenmaisemaa iteratiivisesti kohti yhteistä tavoitetta.</p>
+          <p>Suunnittelija demoaa etusivun lisäksi myös kaikki oleelliset sivupohjat, jotta tiedät melko tarkkaan miltä sivusto tulee lopulta näyttämään. Suunnitteluvaiheen aikana viestintä voi olla melko runsastakin, jotta yhteinen sävel löytyy.</p>
+
+          <p>Kun verkkopalvelun ulkoasu on hyväksytty, on aika pistää ramppa kalkattamaan!</p>
         </div>
       </div>
 
