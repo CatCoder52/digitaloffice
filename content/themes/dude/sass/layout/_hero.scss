@@ -8,12 +8,13 @@
   z-index: 1;
   background: $color-dude-deep-black;
   color: $color-dude-white;
-  min-height: 50rem;
   height: 100vh; // Use vh as a fallback for browsers that do not support Custom Properties
   height: calc(var(--vh, 1vh) * 100);
+  min-height: 80rem;
 
-  @media (max-height: 600px) {
-    height: 120vh;
+  @media (max-height: 480px) {
+    min-height: 120rem;
+    height: auto;
   }
 
   @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -336,10 +337,6 @@
     padding-left: 0;
     padding-right: 0;
 
-    @media (max-width: 600px) {
-      height: auto;
-    }
-
     .cta-link {
       opacity: 0;
       animation-name: fade-in-down;
@@ -360,6 +357,7 @@
     .container {
       @include grid(2, $gutter_x: 0rem, $gutter_y: 0rem);
       width: 100%;
+      height: 100%;
       margin: 0;
       text-align: left;
 
@@ -495,6 +493,10 @@
         height: calc(var(--vh, 1vh) * 100);
       }
 
+      @media (max-height: 480px) {
+        height: auto;
+      }
+
       @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
         @media (max-width: 870px) {
           margin-top: 0;
@@ -542,23 +544,16 @@
         @media (max-height: 600px) {
           margin-bottom: 3rem;
         }
-
-        @media (max-width: 380px) {
-          margin-bottom: 1rem;
-        }
       }
 
       li {
+        margin-top: 0;
         margin-bottom: 0;
         line-height: 1.22;
         animation-name: fade-in-down;
         animation-timing-function: ease-in-out;
         animation-fill-mode: forwards;
         opacity: 0;
-
-        @media (max-height: 600px) {
-          margin-bottom: 1.5rem;
-        }
       }
 
       li:last-of-type {
@@ -572,6 +567,12 @@
         display: inline-block;
         transition: all $transition-duration;
         padding-bottom: $margin-reasonable-space;
+        margin-bottom: 0;
+        margin-top: 0;
+
+        @media (max-width: $container-ipad) {
+          padding-bottom: 2rem;
+        }
       }
 
       // Fade all out except hovered one
