@@ -114,10 +114,10 @@ sessionStorage.setItem( 'chat_greeting_visits', parseInt( sessionStorage.getItem
   $('.accordion').each(function() {
     var $t = $(this);
 
-    // Remove all open-accordion classes by default when going to section via hash
-    $('.accordion').removeClass('open-accordion');
-
     if($t.attr("data-href") == window.location.hash) {
+
+      // Remove all open-accordion classes by default when going to section via hash
+      $('.accordion').removeClass('open-accordion');
 
       if($t.next('.accordion-content').is(':hidden')) {
         $('.accordion-content').stop(true, false).slideUp(225);
