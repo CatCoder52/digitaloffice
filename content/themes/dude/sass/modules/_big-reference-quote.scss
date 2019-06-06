@@ -159,6 +159,14 @@
       color: $color-dude-grey-text;
       max-width: 70%;
 
+      p:first-child:before {
+        content: '”';
+        display: inline-block;
+        position: relative;
+        color: $color-dude-grey-text;
+        margin-right: .5rem;
+      }
+
       @media (max-width: 1400px) {
         max-width: 90%;
       }
