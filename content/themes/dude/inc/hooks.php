@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-25 17:40:42
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-06-05 16:10:39
+ * @Last Modified time: 2019-06-06 15:34:57
  *
  * @package dude2019
  */
@@ -201,5 +201,5 @@ add_filter( 'dude_img_hashfeed_insta_count', function() { return 8; } );
 
 add_shortcode( 'checkmark', 'dude_shortcode_checkmark' );
 function dude_shortcode_checkmark() {
-  return file_get_contents( get_theme_file_path( 'svg/checkmark.svg' ) );
+  return trim( file_get_contents( get_theme_file_path( 'svg/checkmark.svg' ) ) );
 }
