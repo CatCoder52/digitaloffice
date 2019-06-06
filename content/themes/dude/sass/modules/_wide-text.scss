@@ -7,39 +7,6 @@ body .block.block-wide-text form {
     border-color: $color-dude-deep-black;
   }
 
-  // Hide validation header
-  > .validation_error {
-    display: none;
-  }
-
-  // Validation and errors
-  .validation_error {
-    font-size: 1.2em;
-    font-weight: bold;
-    padding-bottom: 15px;
-  }
-
-  li.gfield {
-    &.gfield_error {
-      background: transparent;
-      margin-bottom: 15px;
-      padding-top: 15px;
-      border: 0;
-      font-weight: 300;
-      color: #ef5f5b;
-
-      * {
-        color: #ef5f5b;
-        font-weight: 400;
-      }
-    }
-
-    .validation_message {
-      font-weight: 400;
-      margin-top: 10px;
-    }
-  }
-
   input,
   textarea,
   input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']) {
