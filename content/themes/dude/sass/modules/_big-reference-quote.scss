@@ -24,20 +24,35 @@
   }
 
   .col.col-person-image {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom left;
-
-    @media (max-width: 900px) {
-      height: 70rem;
+    .person {
+      background-size: contain;
+      background-repeat: no-repeat;
       background-position: bottom left;
       width: 100%;
-      order: 2;
-      display: none;
-    }
+      height: 100%;
 
-    @media (max-width: $container-mobile) {
-      height: 60rem;
+      @media (min-width: 1270px) {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        width: 100%;
+        height: calc(100% + 5rem);
+        margin-top: 0;
+        position: absolute;
+        bottom: 0;
+      }
+
+      @media (max-width: 900px) {
+        height: 70rem;
+        background-position: bottom left;
+        width: 100%;
+        order: 2;
+        display: none;
+      }
+
+      @media (max-width: $container-mobile) {
+        height: 60rem;
+      }
     }
   }
 

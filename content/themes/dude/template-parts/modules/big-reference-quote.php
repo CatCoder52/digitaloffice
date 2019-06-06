@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 17:07:55
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-06-06 18:47:21
+ * @Last Modified time: 2019-06-06 18:57:53
  *
  * @package dude2019
  */
@@ -42,7 +42,7 @@ if ( empty( $button_text ) ) {
     <div class="cols">
 
       <?php if ( ! empty( $person_image ) ) : ?>
-        <div class="col col-person-image" style="background-image: url('<?php echo wp_get_attachment_url( $person_image ) ?>'"></div>
+        <div class="col col-person-image"><div class="person" style="background-image: url('<?php echo wp_get_attachment_url( $person_image ) ?>'"></div></div>
       <?php endif; ?>
 
       <div class="col col-content">
