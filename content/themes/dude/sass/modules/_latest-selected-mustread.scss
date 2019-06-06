@@ -144,17 +144,27 @@
   .newsletter {
     background: $color-dude-whitegreyish;
     padding: 5rem;
-    float: right;
     width: 50%;
     z-index: 1;
+    float: right;
 
     @media (max-width: 1000px) {
       width: 100%;
     }
 
     @media (max-width: $container-mobile) {
-      padding-left: 3rem;
+      width: calc(100% + 2rem);
+      padding-left: 2rem;
       padding-right: 0;
+    }
+
+    @media (max-width: 500px) {
+      float: left;
+      margin-left: -2rem;
+    }
+
+    p {
+      color: $color-body;
     }
 
     .block-title {
@@ -168,6 +178,12 @@
       padding-left: 0;
       padding-bottom: 0;
       border-bottom: 1px solid $color-placeholder;
+
+      @media (max-width: 500px) {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-bottom: 2rem;
+      }
     }
 
     input {
