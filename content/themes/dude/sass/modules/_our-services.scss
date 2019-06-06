@@ -29,6 +29,15 @@
     margin-top: 0;
   }
 
+  a {
+    color: $color-dude-white;
+    transition: all $transition-duration;
+  }
+
+  a:hover {
+    opacity: .5;
+  }
+
   .cols {
     display: flex;
     flex-wrap: wrap;
