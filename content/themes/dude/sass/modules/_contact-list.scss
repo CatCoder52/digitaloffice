@@ -1,12 +1,23 @@
 .block.block-contact-list {
   .cols {
-    @include grid(5, $gutter_x: 4rem, $gutter_y: 4rem);
+    @include grid(5, $gutter_x: 0, $gutter_y: 0);
+
+    @media (max-width: 1200px) {
+      @include grid(3, $gutter_x: 0, $gutter_y: 0);
+    }
+
+    @media (max-width: 800px) {
+      @include grid(2, $gutter_x: 0, $gutter_y: 0);
+    }
+
+    @media (max-width: 600px) {
+      display: block;
+    }
 
     h3 {
       // A bit smaller than %h3
       @include responsive-font(22px, 28px);
       margin-bottom: 1rem;
-      white-space: nowrap;
     }
 
     p {
@@ -27,7 +38,10 @@
     }
 
     .col {
-      padding: 4rem;
+      padding-left: 4rem;
+      padding-top: 7rem;
+      padding-right: 4rem;
+      padding-bottom: 4rem;
 
       @media (max-width: $container-mobile) {
         padding: 4rem 2rem;
@@ -39,15 +53,11 @@
           width: 100%;
         }
       }
-
-      > * {
-        padding-left: $column-gap;
-        padding-right: $column-gap;
-      }
     }
 
     .col.col-go-to {
       background: $color-superlightgrey;
+      padding: 4rem;
     }
   }
 
