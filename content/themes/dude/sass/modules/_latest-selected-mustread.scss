@@ -7,6 +7,10 @@
 
   .block-title {
     margin-bottom: $padding-general-content-box;
+
+    @media (max-width: $container-mobile) {
+      margin-bottom: 5rem;
+    }
   }
 
   .block-title,

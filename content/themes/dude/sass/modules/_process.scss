@@ -3,7 +3,9 @@
   overflow: visible;
 
   // Because of left image text module, let's add the top margin
-  margin-top: -10rem;
+  @media (min-width: $container-mobile) {
+    margin-top: -10rem;
+  }
 
   a {
     background-image: linear-gradient(to top, $color-dude-white, $color-dude-white);
@@ -40,6 +42,10 @@
 
   .block-head {
     text-align: center;
+
+    @media (max-width: $container-mobile) {
+      padding-top: 2rem;
+    }
   }
 
   .block-title {
