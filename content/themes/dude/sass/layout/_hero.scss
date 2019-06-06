@@ -94,6 +94,10 @@
       padding-bottom: 1rem;
       padding-top: 1rem;
 
+      @media (max-width: 570px) {
+        width: 100%;
+      }
+
       &:hover:after {
         width: 0;
       }
@@ -134,6 +138,12 @@
       font-weight: 300;
       margin-left: 2rem;
       transition: all $transition-duration;
+
+      @media (max-width: 570px) {
+        display: block;
+        margin-left: 0;
+        margin-top: .8rem;
+      }
     }
   }
 
