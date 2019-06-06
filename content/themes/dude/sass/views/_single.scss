@@ -340,6 +340,17 @@
   .image {
     height: 90%;
     max-height: 100%;
+
+    @media (max-width: 860px) {
+      height: auto;
+      min-height: 0;
+
+      &:after {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+      }
+    }
   }
 
   .content a:not(.has-arrow):not(.contact-detail) {
