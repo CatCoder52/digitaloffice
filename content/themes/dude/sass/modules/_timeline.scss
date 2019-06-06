@@ -95,6 +95,10 @@
         overflow: visible;
       }
 
+      @media (max-width: $container-mobile) {
+        pointer-events: none;
+      }
+
       a:hover,
       a:focus,
       a:active {
@@ -179,6 +183,12 @@
 
     .action:hover {
       cursor: pointer;
+    }
+  }
+
+  @media (max-width: $container-mobile) {
+    .col-image {
+      display: none;
     }
   }
 
