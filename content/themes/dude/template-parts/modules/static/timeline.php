@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 18:54:41
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-06-05 10:34:36
+ * @Last Modified time: 2019-06-06 13:14:24
  *
  * @package dude2019
  */
@@ -15,9 +15,9 @@
     <div class="columns">
       <div class="column col col-timeline is-three-fifths is-multiline">
 
-        <div class="row">
-          <h2 class="action" data-label="Vanha toimisto irtisanomisajalla. Kuvan Macbook ja iPad eivät ole edes omia." data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2013.jpg' ) ?>">2013</h2>
-          <button tabindex="0" class="action" data-label="Vanha toimisto irtisanomisajalla. Kuvan Macbook ja iPad eivät ole edes omia." data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2013.jpg' ) ?>">Roni ja Juha perustavat yrityksen keväällä 2013 puolivahingossa kun alihankintasoppari ja omat asiakkuudet vaikuttivat tilaisuudelta, jota ei voinut olla käyttämättä. Pitkiä päiviä sekä opettelua yrittäjyyden ihmeelliseen maailmaan. <a href="https://www.dude.fi/firma-parahti-pystyyn">Lue ensimmäinen bloggaus koskaan</a>.</button>
+        <div class="row active">
+          <h2 class="action" data-label="Alussa meitä oli vain kaksi ja vermeetkin oli lainavehkeitä. Ensimmäinen toimisto vanhan työnantajan tiloissa." data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2013.jpg' ) ?>">2013</h2>
+          <button tabindex="0" class="action" data-label="Alussa meitä oli vain kaksi ja vermeetkin oli lainavehkeitä. Ensimmäinen toimisto vanhan työnantajan tiloissa." data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2013.jpg' ) ?>">Roni ja Juha perustavat yrityksen keväällä 2013 puolivahingossa kun alihankintasoppari ja omat asiakkuudet vaikuttivat tilaisuudelta, jota ei voinut olla käyttämättä. Pitkiä päiviä sekä opettelua yrittäjyyden ihmeelliseen maailmaan. <a href="https://www.dude.fi/firma-parahti-pystyyn">Lue ensimmäinen bloggaus koskaan</a>.</button>
         </div>
 
         <div class="row">
@@ -35,9 +35,9 @@
           <button tabindex="0" class="action" data-label="Eräänä kesäisenä päivänä päätettiin hypätä Lillijunaan. Ja sepä olikin yllättävän kivaa!" data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2018.jpg' ) ?>">Liikevaihto ylitti 200 000. Soitettiin Get Lucky! Muutettiin isompiin tiloihin Kauppakadulle. Lue myös toimistoesittely ja muuttokuulumiset <a href="https://www.dude.fi/dude-nosti-tasoa-kerroksella-esittelyssa-uusi-kauppakadun-toimisto">tästä näin</a>.</button>
         </div>
 
-        <div class="row active">
+        <div class="row">
           <h2 class="action" data-label="Aamupalaverit vietetään joka maanantai. Kauppakatu 14 tiloissa on tilaa useammallekin ihmiselle." data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2019.jpg' ) ?>">2019</h2>
-          <button tabindex="0" class="action" data-label="Aamupalaverit vietetään joka maanantai. Kauppakatu 14 tiloissa on tilaa useammallekin ihmiselle." data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2019.jpg' ) ?>"><a href="https://www.dude.fi/dudella-uusi-osakas-ja-valoisat-tulevaisuudennakymat">Timistä tuli osakas</a>. Rekryttiin Henkka ja pari muutakin <a href="https://www.dude.fi/tyopaikat">rekryä tulilla</a>. To be continued...</button>
+          <button tabindex="0" class="action" data-label="Aamupalaverit vietetään joka maanantai. Kauppakatu 14 tiloissa on tilaa useammallekin ihmiselle." data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2019.jpg' ) ?>"><a href="https://www.dude.fi/dudella-uusi-osakas-ja-valoisat-tulevaisuudennakymat">Timistä tuli osakas</a>. Palkattiin Henkka ja pari muutakin <a href="https://www.dude.fi/tyopaikat">rekryä tulilla</a>. To be continued...</button>
         </div>
 
       </div>

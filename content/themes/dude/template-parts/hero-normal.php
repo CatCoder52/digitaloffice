@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-06-01 17:25:58
+ * @Last Modified time: 2019-06-06 12:53:20
  *
  * @package dude2019
  */
@@ -40,7 +40,7 @@ if ( has_post_thumbnail() ) {
         </div>
 
         <?php if ( 4449 === get_the_id() ) : ?>
-          <p class="cta-link animate animate-3"><a href="<?php echo get_post_type_archive_link( 'reference' ) ?>">Mitä helvettiä? Missä työnäytteet?</a></p>
+          <p class="cta-link animate animate-3"><a href="<?php echo get_post_type_archive_link( 'reference' ) ?>">Mitä helevettiä? Missä työnäytteet?</a></p>
         <?php endif; ?>
 
         <?php if ( 4489 === get_the_id() ) : ?>
