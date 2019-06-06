@@ -14,6 +14,16 @@
 
   @media (max-width: 870px) {
     padding-right: 0;
+
+    .block-head {
+      padding-right: $padding-default-cols-ipad;
+    }
+  }
+
+  @media (max-width: $container-mobile) {
+    .block-head {
+      padding-right: $padding-default-cols-mobile;
+    }
   }
 
   .cta-link {
@@ -83,6 +93,7 @@
         margin-bottom: 7rem;
 
         &:nth-child(1) {
+          margin-top: 4rem;
           margin-right: 0;
         }
 
