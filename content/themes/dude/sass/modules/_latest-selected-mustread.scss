@@ -27,6 +27,11 @@
   .content {
     padding: 5rem 2rem;
 
+    @media (max-width: 1000px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
     h3 {
       margin-top: 0;
     }
