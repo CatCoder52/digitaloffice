@@ -49,6 +49,16 @@
     @media (max-width: 1000px) {
       height: 35rem;
     }
+
+    @media (max-width: 600px) {
+      height: auto;
+
+      &:after {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+      }
+    }
   }
 
   .col-mustread {
