@@ -12,6 +12,14 @@ body .block-hero-person {
   // Padding here is navigation height plus regular padding which is exactly 100px in total
   padding-top: calc(15rem + 113px);
 
+  @media (max-width: 870px) {
+    padding-top: 13rem;
+  }
+
+  @media (max-width: 500px) {
+    padding-top: 11rem;
+  }
+
   .cols {
     @include grid(2, $gutter_x: 0rem, $gutter_y: 0rem);
     grid-template-columns: 6fr 4fr;
@@ -44,6 +52,11 @@ body .block-hero-person {
     display: flex;
     align-items: center;
     font-weight: 300;
+
+    @media (max-width: 870px) {
+      margin-top: 0;
+      padding-left: 0;
+    }
 
     a {
       font-weight: 400;
