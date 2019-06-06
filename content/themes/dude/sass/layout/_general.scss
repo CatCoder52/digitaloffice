@@ -6,6 +6,12 @@
 // always repeating elements right below.
 // -----------------------------------------------------------
 
+// Correct Viewport Height on Mobile
+// Source: https://css-tricks.com/the-trick-to-viewport-units-on-mobile/
+:root {
+  --vh: 1vh;
+}
+
 // Default structural element
 .block {
   @include background-cover();
