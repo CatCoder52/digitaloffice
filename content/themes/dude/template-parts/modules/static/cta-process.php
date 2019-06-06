@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 16:10:53
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-06-05 15:10:33
+ * @Last Modified time: 2019-06-06 11:59:03
  *
  * @package dude2019
  */
@@ -17,9 +17,9 @@
       <div class="col">
 
         <header class="block-head">
-          <p class="block-title-pre" aria-describedby="block-title-cta-process">Hommahan toimii, mites tää käytännössä menee?</p>
+          <p class="block-title-pre" aria-describedby="block-title-cta-process">Hommahan toimii, mites tämä käytännössä menee?</p>
           <h2 class="block-title" id="block-title-cta-process">Hyvin suunniteltu on vielä kokonaan tekemättä.</h2>
-          <p class="cta-link"><a href="/verkkosivut#prosessi">Älä osta sikaa säkissä, tutustu "prosessiin"</a></p>
+          <p class="cta-link"><a href="/verkkosivut#prosessi">Älä osta sikaa säkissä, tutustu prosessiin</a></p>
         </header>
 
       </div>
