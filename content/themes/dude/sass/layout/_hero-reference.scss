@@ -114,6 +114,16 @@ body .block.block-hero-reference {
     white-space: nowrap;
     overflow: visible;
 
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      bottom: -1rem;
+      right: 0;
+    }
+
+    @supports (-ms-ime-align: auto) {
+      bottom: -1rem;
+      right: 0;
+    }
+
     .arrow {
       background: $color-dude-white;
       position: relative;
