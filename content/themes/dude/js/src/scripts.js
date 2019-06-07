@@ -95,9 +95,7 @@ sessionStorage.setItem( 'chat_greeting_visits', parseInt( sessionStorage.getItem
   $(function() {
 
   // Init lazyload
-  window.addEventListener("load", function(event) {
-    lazyload();
-  });
+  lazyload();
 
   // Timeline
   $('.col-timeline .row .action').on('click', function() {
