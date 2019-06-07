@@ -96,10 +96,15 @@ if ( $show_chat_greeting ) {
     if ( ! empty( $custom_css ) ) : ?>
       <style type="text/css"><?php echo $custom_css ?></style>
     <?php endif;
-  endif; ?>
+  endif;
+
+  $chat_greeting_override = get_post_meta( get_the_id(), 'chat_greeting_override', true );
+  if ( ! empty( $chat_greeting_override ) ) : ?>
+    <script type="text/javascript">var chat_greeting_override = '<?php echo esc_html( $chat_greeting_override ) ?>';</script>
+  <?php endif; ?>
 </head>
 
-<body <?php body_class( 'no-js' ); ?>>
+<body <?php body_class( $body_class ); ?>>
 
   <?php if ( is_page( 4485 ) ) : ?>
     <div id="blueimp-gallery" class="blueimp-gallery" aria-hidden="true">
