@@ -19,6 +19,10 @@
     margin-top: $padding-default-rows;
   }
 
+  .col-featured-image {
+    position: relative;
+  }
+
   .block-head {
     @media (min-width: $container-mobile) {
       padding-bottom: 7rem;
