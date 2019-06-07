@@ -4,6 +4,7 @@
   padding-bottom: 0;
   position: relative;
   z-index: 2;
+  overflow: visible;
 
   .container {
     overflow: visible;
@@ -16,6 +17,7 @@
 
   .cols {
     @include grid(2, $gutter_x: 0rem, $gutter_y: 0rem);
+    overflow: visible;
 
     @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
       display: flex;
@@ -119,6 +121,17 @@
     align-items: center;
     white-space: nowrap;
     overflow: visible;
+    z-index: 3;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      bottom: -1rem;
+      right: 0;
+    }
+
+    @supports (-ms-ime-align: auto) {
+      bottom: -1rem;
+      right: 0;
+    }
 
     .arrow {
       position: relative;

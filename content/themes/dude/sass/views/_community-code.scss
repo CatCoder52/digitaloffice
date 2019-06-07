@@ -32,6 +32,17 @@
         right: 0;
         bottom: 0;
       }
+
+      @media (max-width: 900px) {
+        height: auto;
+        min-height: 0;
+
+        &:after {
+          content: '';
+          display: block;
+          padding-bottom: 100%;
+        }
+      }
     }
 
     .col.col-image {
