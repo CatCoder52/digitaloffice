@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:33:00
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-05-25 19:21:10
+ * @Last Modified time: 2019-06-07 11:18:54
  *
  * @package dude2019
  */
@@ -28,13 +28,13 @@ function dude_register_cpt_merch() {
 
   $args = array(
     'labels'             => $labels,
-    'public'             => true,
-    'publicly_queryable' => true,
+    'public'             => false,
+    'publicly_queryable' => false,
     'show_ui'            => true,
     'show_in_menu'       => true,
-    'query_var'          => true,
+    'query_var'          => false,
     'capability_type'    => 'post',
-    'has_archive'        => true,
+    'has_archive'        => false,
     'hierarchical'       => false,
     'menu_position'      => null,
     'menu_icon'          => 'dashicons-palmtree',
