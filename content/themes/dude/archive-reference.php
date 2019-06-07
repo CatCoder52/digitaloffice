@@ -14,6 +14,7 @@ get_header(); ?>
 
     <?php
     get_template_part( 'template-parts/hero' );
+
     if ( have_posts() ) : ?>
       <section class="block block-references block-references-archive">
         <div class="container">
@@ -45,6 +46,15 @@ get_header(); ?>
         </div>
       </section>
     <?php endif; ?>
+
+    <section class="block block-cta-text block-cta-text-single-reference">
+      <div class="container">
+
+        <h2 class="block-title">Kova meno. Olen vakuuttunut, haluan ottaa yhteyttä.</h2>
+        <p><a class="cta-link" href="/yhteystiedot">Ota yhteyttä</a></p>
+
+      </div>
+    </section>
 
 	</main><!-- #main -->
 </div><!-- #primary -->
