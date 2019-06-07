@@ -1,6 +1,15 @@
 .block.block-blog {
   padding-top: 0;
 
+  .block-head {
+    padding-bottom: 0;
+
+    @media (max-width: 600px) {
+      padding-top: 10rem;
+      padding-bottom: 0;
+    }
+  }
+
   .block-head.block-head-relevant {
     // Padding here is navigation height plus regular padding which is exactly 100px in total
     padding-top: 10rem;
