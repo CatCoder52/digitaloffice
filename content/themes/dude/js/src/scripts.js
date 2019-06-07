@@ -257,27 +257,6 @@ sessionStorage.setItem( 'chat_greeting_visits', parseInt( sessionStorage.getItem
       }
     }
 
-    // Morph logo when hovered
-    // var svgMorpheus = new SVGMorpheus('.loader');
-    // var icons = ['step1', 'step2'];
-    // var current = 0;
-
-    // function changeIcon() {
-    //   svgMorpheus.to(icons[current++ % 2], {rotation: 'none', duration: 1000});
-    // }
-
-    // $( '.site-title a' ).hover(
-    //   function() {
-    //     $(this).find('svg').removeAttr('viewBox');;
-    //     $(this).find('svg')[0].setAttribute('viewBox', '0 0 386 627');
-    //     changeIcon();
-    //   }, function() {
-    //     $(this).find('svg').removeAttr('viewBox');
-    //     $(this).find('svg')[0].setAttribute('viewBox', '0 0 10000 2602');
-    //     changeIcon();
-    //   }
-    // );
-
     // Fade out other menu items when selected more-item
     $( '.dude-nav-more button' ).hover(
       function() {
