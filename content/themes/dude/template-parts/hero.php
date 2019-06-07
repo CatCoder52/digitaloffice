@@ -2,8 +2,8 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:05:23
- * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-06-03 19:20:44
+ * @Last Modified by:   Timi Wahalahti
+ * @Last Modified time: 2019-06-07 13:19:42
  *
  * @package dude2019
  */
@@ -12,23 +12,25 @@ if ( is_front_page() ) {
   include get_theme_file_path( 'template-parts/hero-fp.php' );
 } else if ( 9 === get_the_id() ) { // tech page
   $logos = array(
-    'bauermedia',
-    'barexplosive',
-    'blackbruin',
-    'byemmi',
-    'crmservice',
+    'sievo-alt',
+    'bauermedia-alt',
+    'realsnacks-alt',
     'elonen-flat',
+    'blackbruin-alt',
+    'sohwi-alt',
+    'bitwise-alt',
   );
 
   include get_theme_file_path( 'template-parts/hero-service.php' );
 } else if ( 4485 === get_the_id() ) { // visual page
   $logos = array(
-    'bauermedia',
-    'barexplosive',
-    'blackbruin',
-    'byemmi',
-    'crmservice',
-    'elonen-flat',
+    'abbq-flat',
+    'aicci-alt',
+    'nilkko-alt',
+    'barexplosive-alt',
+    'byemmi-alt',
+    'verena-alt',
+    'varjola-alt'
   );
 
   include get_theme_file_path( 'template-parts/hero-service.php' );
