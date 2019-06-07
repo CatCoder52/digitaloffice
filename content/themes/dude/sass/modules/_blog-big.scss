@@ -79,7 +79,10 @@
     }
 
     @media (max-width: $container-mobile) {
-      padding: $padding-general-content-box-mobile;
+      padding-left: $padding-general-content-box-mobile;
+      padding-right: $padding-general-content-box-mobile;
+      padding-top: $padding-general-content-box-mobile;
+      padding-bottom: 8rem;
     }
   }
 

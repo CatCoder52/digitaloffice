@@ -70,3 +70,32 @@
     padding-right: 0;
   }
 }
+
+body.page-id-4485,
+body.page-id-9 {
+  .block.block-text-image {
+    padding-bottom: 0;
+  }
+
+  .block.block-text-image .col.col-content {
+    padding-bottom: 15rem;
+
+    @media (max-width: $container-ipad) {
+      padding-bottom: $padding-default-rows-ipad;
+    }
+
+    @media (max-width: $container-mobile) {
+      padding-bottom: $padding-default-rows-mobile;
+    }
+  }
+
+  .block.block-gallery {
+    padding-top: 0;
+  }
+}
+
+body.page-id-9 {
+  .col-image > div {
+    background-position: left;
+  }
+}

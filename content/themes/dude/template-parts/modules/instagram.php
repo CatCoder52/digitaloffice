@@ -3,7 +3,7 @@
  * @Author: 						Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:   						2019-06-03 12:04:02
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-06-03 18:17:52
+ * @Last Modified time: 2019-06-07 13:22:11
  *
  * @package dude2019
  */
@@ -26,7 +26,7 @@ if ( is_wp_error( $images ) || empty( $images ) ) {
     <?php foreach ( $images as $image ) : ?>
       <div class="ig has-lazyload">
         <div class="background-image preview lazyload" style="background-image: url('<?php echo $image->display_url; ?>');" data-src="<?php echo $image->thumbnail_src; ?>"></div>
-        <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo $image->display_url; ?>');"<?php endif; ?>></div>
+        <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo $image->display_url; ?>');"<?php endif; ?>></div>
         <noscript><div class="background-image full-image" style="background-image: url('<?php echo $image->display_url; ?>');"></div></noscript>
 
         <div class="overlay">
