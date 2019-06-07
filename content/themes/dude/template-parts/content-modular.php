@@ -3,14 +3,15 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:05:23
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-05-18 14:46:31
+ * @Last Modified time: 2019-06-07 13:46:00
  *
  * @package dude2019
  */
 
 // define what modules se should NOT cache.
 $exclude_template_part_from_cache = array(
-  'contact-form'  => true,
+  'cta-left-image' => true,
+  'wide-text'
 );
 
 // normally we want to use current page id
