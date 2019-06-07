@@ -1,7 +1,7 @@
 /*!
  * Lazy Load - JavaScript plugin for lazy loading images
  *
- * Copyright (c) 2007-2017 Mika Tuupola
+ * Copyright (c) 2007-2019 Mika Tuupola
  *
  * Licensed under the MIT license:
  *   http://www.opensource.org/licenses/mit-license.php
@@ -9,7 +9,7 @@
  * Project home:
  *   https://appelsiini.net/projects/lazyload
  *
- * Version: 2.0.0-beta.2 + rc-improvements
+ * Version: 2.0.0-rc.2
  * Modified by rolle
  *
  */
@@ -18,7 +18,7 @@
     if (typeof exports === "object") {
         module.exports = factory(root);
     } else if (typeof define === "function" && define.amd) {
-        define([], factory(root));
+        define([], factory);
     } else {
         root.LazyLoad = factory(root);
     }
@@ -26,10 +26,17 @@
 
     "use strict";
 
+    if (typeof define === "function" && define.amd){
+        root = window;
+    }
+
     const defaults = {
         src: "data-src",
         srcset: "data-srcset",
-        selector: ".lazyload"
+        selector: ".lazyload",
+        root: null,
+        rootMargin: "0px",
+        threshold: 0
     };
 
     /**
@@ -46,17 +53,17 @@
         let i = 0;
         let length = arguments.length;
 
-        // Check if a deep merge
+        /* Check if a deep merge */
         if (Object.prototype.toString.call(arguments[0]) === "[object Boolean]") {
             deep = arguments[0];
             i++;
         }
 
-        // Merge the object into the extended object
+        /* Merge the object into the extended object */
         let merge = function (obj) {
             for (let prop in obj) {
                 if (Object.prototype.hasOwnProperty.call(obj, prop)) {
-                    // If deep merge and property is an object, merge properties
+                    /* If deep merge and property is an object, merge properties */
                     if (deep && Object.prototype.toString.call(obj[prop]) === "[object Object]") {
                         extended[prop] = extend(true, extended[prop], obj[prop]);
                     } else {
@@ -66,7 +73,7 @@
             }
         };
 
-        // Loop through each object and conduct a merge
+        /* Loop through each object and conduct a merge */
         for (; i < length; i++) {
             let obj = arguments[i];
             merge(obj);
@@ -85,8 +92,8 @@
     LazyLoad.prototype = {
         init: function() {
 
-            // Without observers load everything and bail out early.
-            // This affects some iOS and Windows Phones
+            /* Without observers load everything and bail out early.
+               This affects some iOS and Windows Phones */
             if (!root.IntersectionObserver) {
                 this.loadImages();
                 return;
@@ -94,28 +101,28 @@
 
             let self = this;
             let observerConfig = {
-                root: null,
-                rootMargin: "0px",
-                threshold: [0]
+                root: this.settings.root,
+                rootMargin: this.settings.rootMargin,
+                threshold: [this.settings.threshold]
             };
 
             this.observer = new IntersectionObserver(function(entries) {
-                entries.forEach(function (entry) {
+                Array.prototype.forEach.call(entries, function (entry) {
 
-                    // If inside viewport
-                    if (entry.intersectionRatio > 0) {
+                    /* If inside viewport */
+                    if (entry.isIntersecting) {
 
-                        // Define image
+                        /* Define image */
                         const img = entry.target;
 
-                        // Add animation class to full-image div
+                        /* Add animation class to full-image div */
                         img.nextElementSibling.classList.add('reveal');
 
                         self.observer.unobserve(entry.target);
                         let src = img.getAttribute(self.settings.src);
                         let srcset = img.getAttribute(self.settings.srcset);
 
-                        // Add fully loaded original background image to next div element
+                        /* Add fully loaded original background image to next div element */
                         img.nextElementSibling.style.backgroundImage = "url(" + src + ")";
                     }
                 });
@@ -136,13 +143,19 @@
             if (!this.settings) { return; }
 
             let self = this;
-
             Array.prototype.forEach.call(this.images, function (image) {
                 let src = image.getAttribute(self.settings.src);
                 let srcset = image.getAttribute(self.settings.srcset);
-
-                // Add fully loaded original background image to next div element
-                image.nextElementSibling.style.backgroundImage = "url(" + src + ")";
+                if ("img" === image.tagName.toLowerCase()) {
+                    if (src) {
+                        image.src = src;
+                    }
+                    if (srcset) {
+                        image.srcset = srcset;
+                    }
+                } else {
+                    image.style.backgroundImage = "url('" + src + "')";
+                }
             });
         },
 
@@ -156,6 +169,16 @@
     root.lazyload = function(images, options) {
         return new LazyLoad(images, options);
     };
+
+    if (root.jQuery) {
+        const $ = root.jQuery;
+        $.fn.lazyload = function (options) {
+            options = options || {};
+            options.attribute = options.attribute || "data-src";
+            new LazyLoad($.makeArray(this), options);
+            return this;
+        };
+    }
 
     return LazyLoad;
 });
