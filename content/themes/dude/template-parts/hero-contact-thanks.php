@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-06-03 15:38:30
+ * @Last Modified time: 2019-06-07 09:34:15
  *
  * @package dude2019
  */
@@ -19,7 +19,7 @@
       <div class="content animate animate-2">
         <p>Myyntiosastomme käsittelee viestiäsi parhaillaan...</p>
 
-        <div style="padding:61.25% 0 0 0;position:relative;"><iframe id="video" src="https://player.vimeo.com/video/9778852?autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=1#t=24s" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+        <div style="padding:61.25% 0 0 0;position:relative;"><iframe id="video" src="https://player.vimeo.com/video/9778852?autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=1#t=24s" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" title="Mr Oizo - Flat beat" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
       </div>
 

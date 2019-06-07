@@ -116,7 +116,7 @@ if ( $show_chat_greeting ) {
   <?php endif; ?>
 
   <div id="page" class="site">
-   <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'dude' ); ?></a>
+   <a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'dude' ); ?></a>
 
    <div class="nav-container">
     <header class="site-header opacity-on-load" role="banner">

@@ -111,8 +111,8 @@ get_header(); ?>
       <div class="container">
 
         <header class="block-head">
-          <p class="block-title-pre" aria-describedby="block-title-wordpress">Avoin lähdekoodi</p>
-          <h2 class="block-title" id="block-title-wordpress">Open source intohimona</h2>
+          <p class="block-title-pre" aria-describedby="block-title-opensource">Avoin lähdekoodi</p>
+          <h2 class="block-title" id="block-title-opensource">Open source intohimona</h2>
         </header>
 
         <div class="content">
