@@ -1,4 +1,10 @@
 .block.block-cta-process {
+  @media (max-width: $container-mobile) {
+    .block-head .block-title-pre {
+      font-size: 18px;
+    }
+  }
+
   .container {
     overflow: visible;
   }

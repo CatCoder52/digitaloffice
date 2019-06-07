@@ -9,6 +9,14 @@ document.body.classList.add('js');
 // Increase session page visits count
 sessionStorage.setItem( 'chat_greeting_visits', parseInt( sessionStorage.getItem( 'chat_greeting_visits' ) ) + 1 );
 
+// Init lazyload
+let images = document.querySelectorAll('.lazyload');
+lazyload(images, {
+     root: null,
+     rootMargin: "0px",
+     threshold: 0
+});
+
 // jQuery start
 ( function( $ ) {
 
@@ -93,9 +101,6 @@ sessionStorage.setItem( 'chat_greeting_visits', parseInt( sessionStorage.getItem
 
   // Document ready start
   $(function() {
-
-  // Init lazyload
-  lazyload();
 
   // Timeline
   $('.col-timeline .row .action').on('click', function() {
