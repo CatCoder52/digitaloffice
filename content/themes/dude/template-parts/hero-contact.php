@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-06-07 00:36:40
+ * @Last Modified time: 2019-06-07 13:22:10
  *
  * @package dude2019
  */
@@ -48,7 +48,7 @@
       <div class="shade"></div>
 
       <div class="background-image preview lazyload" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/dude-map-tiny.jpg');" data-src="<?php echo get_template_directory_uri(); ?>/images/dude-map.jpg"></div>
-      <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/dude-map.jpg');"<?php endif; ?>></div>
+      <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/dude-map.jpg');"<?php endif; ?>></div>
       <noscript><div class="background-image full-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/dude-map.jpg');"></div></noscript>
 
     </div>

@@ -146,6 +146,7 @@
             Array.prototype.forEach.call(this.images, function (image) {
                 let src = image.getAttribute(self.settings.src);
                 let srcset = image.getAttribute(self.settings.srcset);
+
                 if ("img" === image.tagName.toLowerCase()) {
                     if (src) {
                         image.src = src;
