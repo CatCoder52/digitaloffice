@@ -2,8 +2,8 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 17:07:55
- * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-06-06 18:57:53
+ * @Last Modified by:   Timi Wahalahti
+ * @Last Modified time: 2019-06-07 12:12:45
  *
  * @package dude2019
  */
@@ -30,10 +30,12 @@ if ( empty( $quote ) ) {
   return;
 }
 
-$quote = '"' . $quote . '"';
-
 if ( empty( $button_text ) ) {
   $button_text = 'Tutustu referenssiin';
+}
+
+if ( empty( $title ) ) {
+  $title = get_the_title( $reference );
 } ?>
 
 <section class="block block-big-reference-quote<?php if ( ! empty( $person_image ) ) { echo ' has-person-image'; } ?>">
@@ -54,7 +56,7 @@ if ( empty( $button_text ) ) {
           <p class="block-title-pre block-title-pre-quote-person" aria-describedby="<?php echo sanitize_title( $quote_person ); ?>"><?php echo "{$quote_person}, {$quote_person_title}" ?></p>
         <?php endif; ?>
 
-        <h2 class="block-title" id="<?php echo sanitize_title( $quote_person ); ?>"><?php echo get_the_title( $reference ) ?></h2>
+        <h2 class="block-title" id="<?php echo sanitize_title( $quote_person ); ?>"><?php echo esc_html( $title ) ?></h2>
 
         <blockquote>
           <?php echo wpautop( $quote ); ?>
