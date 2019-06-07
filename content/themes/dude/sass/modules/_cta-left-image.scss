@@ -10,6 +10,13 @@ body .block.block-cta-left-image,
     }
   }
 
+  h1:not(.block-title) {
+    @media (max-width: 870px) {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+  }
+
   .end-note     a {
     background-image: linear-gradient(to top, $color-dude-deep-black, $color-dude-deep-black);
     background-size: 100% 1px;
@@ -182,7 +189,7 @@ body .block.block-cta-left-image,
     }
 
     @media (max-width: $container-ipad) {
-      padding: 4rem;
+      padding: 6rem 4rem;
       margin-left: 0;
     }
 
