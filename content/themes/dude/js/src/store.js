@@ -1,8 +1,8 @@
 /*
 * @Author: Timi Wahalahti
 * @Date:   2019-06-03 22:07:25
-* @Last Modified by:   Timi Wahalahti
-* @Last Modified time: 2019-06-03 23:36:31
+* @Last Modified by:   Roni Laukkarinen
+* @Last Modified time: 2019-06-07 09:11:10
 */
 
 ( function( $ ) {
@@ -71,8 +71,8 @@
       } );
     }
 
-    console.log( element.closest('.col-product').data('product') );
-    console.log( cart );
+    // console.log( element.closest('.col-product').data('product') );
+    // console.log( cart );
   }
 
 } )( jQuery );
