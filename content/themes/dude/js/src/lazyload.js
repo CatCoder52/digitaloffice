@@ -9,7 +9,7 @@
  * Project home:
  *   https://appelsiini.net/projects/lazyload
  *
- * Version: 2.0.0-beta.2
+ * Version: 2.0.0-beta.2 + rc-improvements
  * Modified by rolle
  *
  */
@@ -121,7 +121,7 @@
                 });
             }, observerConfig);
 
-            this.images.forEach(function (image) {
+            Array.prototype.forEach.call(this.images, function (image) {
                 self.observer.observe(image);
             });
         },
@@ -137,7 +137,7 @@
 
             let self = this;
 
-            this.images.forEach(function (image) {
+            Array.prototype.forEach.call(this.images, function (image) {
                 let src = image.getAttribute(self.settings.src);
                 let srcset = image.getAttribute(self.settings.srcset);
 
