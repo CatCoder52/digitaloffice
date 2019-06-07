@@ -36,7 +36,7 @@ get_header(); ?>
                   <h3 class="block-title>"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
                   <p><?php echo get_post_meta( get_the_id(), 'short_desc', true ) ?></p>
 
-                  <p class="arrow-link-wrapper"><a href="<?php the_permalink() ?>" class="arrow-link">Tsekkaa case<span class="arrow"></span></a></p>
+                  <p class="arrow-link-wrapper"><a href="<?php the_permalink() ?>" class="arrow-link">Tsekkaa työnäyte<span class="arrow"></span></a></p>
                 </div>
               </div>
             <?php endwhile; ?>
