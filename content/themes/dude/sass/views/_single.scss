@@ -320,6 +320,106 @@
       padding-left: 4rem;
       font-weight: 300;
     }
+
+    .gform_wrapper .gform_footer input.button,
+    .gform_wrapper .gform_page_footer input.button,
+    .gform_wrapper .gform_footer input[type=submit],
+    .gform_wrapper .gform_page_footer input[type=submit] {
+      @extend %default;
+    }
+
+    .gform_wrapper .gform_footer {
+      margin-top: 2rem;
+      padding-top: 0;
+    }
+
+    @media (min-width: 1100px) {
+      .gform_wrapper {
+        padding-right: $padding-default-cols;
+      }
+    }
+
+    ul.gform_fields input,
+    ul.gform_fields textarea,
+    ul.gform_fields input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']) {
+      max-width: 100%;
+      width: 100%;
+      border: 1px solid $color-superlightgrey;
+      padding: 2rem;
+
+      &#input_3_1 {
+        margin-bottom: 3rem;
+      }
+
+      &:focus {
+        outline: 0;
+        border-color: $color-dude-deep-black;
+      }
+
+      @media (max-width: 1300px) {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+      &::placeholder {
+        opacity: 1;
+        color: $color-dude-grey-text;
+      }
+    }
+
+    ul.gform_fields {
+      @media (max-width: 1300px) {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      #field_2_7 {
+        width: 100% !important;
+      }
+
+      #field_2_1 {
+        margin-bottom: 3rem;
+      }
+
+      > li {
+        margin-top: 0;
+        padding-top: 0;
+        padding-left: 0;
+        margin-bottom: 0;
+      }
+
+      > li label,
+      div:not(.gfield_time_hour):not(.gfield_time_minute):not(.gfield_time_ampm):not(.ginput_container_date):not(.ginput_quantity):not(.datepicker) {
+        margin-top: 0;
+      }
+    }
+
+    ul.gform_fields,
+    ul.gform_fields li,
+    ul.gform_fields span {
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+
+    ul.gform_fields li label,
+    ul.gform_fields li h2 {
+      @extend %h4;
+      font-weight: 300;
+      margin-top: 4rem;
+      margin-bottom: 1rem;
+
+      @media (max-width: 1300px) {
+        margin-top: 4rem !important;
+        margin-bottom: 1rem;
+      }
+
+      &:first-of-type {
+        margin-top: 0;
+      }
+    }
   }
 }
 
