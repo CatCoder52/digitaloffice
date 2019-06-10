@@ -22,15 +22,18 @@ This project is built on [digitoimistodude/dudestack](https://github.com/digitoi
 
 On top of features included in [digitoimistodude/air-light](https://github.com/digitoimistodude/air-light), this project contains:
 
-- (Please fill)
+- Custom off-canvas megamenu
+- Lazy load for images
+- Custom templates
+- Much more
 
 ## Environments:
 
 Green checkmarks show if the environment is already set up and running, red cross indicates if it's not yet there or disabled.
 
 ✅ Development: [dude2019.test](http://dude2019.test)  
-❌ Staging: [asiakas.dude.fi/dude2019](https://dude.vaiheessa.fi)  
-❌ Production: [dude2019.fi](https://www.dude.fi/)  
+✅ Staging: [dude.vaiheessa.fi](https://dude.vaiheessa.fi)  
+✅ Production: [dude.fi](https://www.dude.fi/)  
 
 ## Setting it up initially
 
