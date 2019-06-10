@@ -314,6 +314,7 @@
 
     figure figcaption,
     cite {
+      @include responsive-font(15px, 17px);
       max-width: 1100px;
       padding-top: 4rem;
       padding-bottom: 4rem;
