@@ -2,20 +2,20 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:49:22
- * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-06-07 13:22:12
+ * @Last Modified by:   Timi Wahalahti
+ * @Last Modified time: 2019-06-10 17:14:27
  *
  * @package dude2019
  */
 
-$image = get_sub_field( 'image' );
+$image_id = get_sub_field( 'image' );
 
 if ( empty( $image ) ) {
   return;
 }
 
-$image = wp_get_attachment_image_url( $image, 'large' );
-$image_preload = wp_get_attachment_image_url( $image, 'tiny-preload-thumbnail' ); ?>
+$image = wp_get_attachment_image_url( $image_id, 'large' );
+$image_preload = wp_get_attachment_image_url( $image_id, 'tiny-preload-thumbnail' ); ?>
 
 <section class="block block-our-services">
   <div class="container">
