@@ -20,7 +20,10 @@ get_header(); ?>
 	<main role="main" id="main" class="site-main">
 
     <?php if ( ! is_paged() && ! is_category() && ! is_tag() && ! is_author() && ! is_date() ) :
-      while ( have_posts() ) : the_post(); ?>
+      global $blog_latest_excerpt_override;
+
+      while ( have_posts() ) : the_post();
+        $blog_latest_excerpt_override = get_the_id(); ?>
         <section class="block block-blog-big">
           <div class="container">
 
