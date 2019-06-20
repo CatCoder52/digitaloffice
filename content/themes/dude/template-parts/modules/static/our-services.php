@@ -3,14 +3,14 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:49:22
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-06-10 17:14:27
+ * @Last Modified time: 2019-06-20 13:18:11
  *
  * @package dude2019
  */
 
 $image_id = get_sub_field( 'image' );
 
-if ( empty( $image ) ) {
+if ( empty( $image_id ) ) {
   return;
 }
 
