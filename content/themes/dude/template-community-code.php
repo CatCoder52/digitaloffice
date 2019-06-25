@@ -27,7 +27,7 @@ get_header(); ?>
             </header>
 
             <div class="content">
-              <p>WordPress on avoimen lähdekoodin julkaisujärjestelmä, jota kehitetään yhteisön vapaaehtoistyön voimin. Dude on ollut WordPressin yhteisön toiminnassa mukana alusta asti ei ainoastaan koodipuolella, mutta myös esimerkiksi järjestämässä <a href="https://www.meetup.com/topics/wordpress">WordPress Meetuppeja</a> ja <a href="https://central.wordcamp.org/">WordCampeja</a> Suomessa.</p>
+              <p>WordPress on avoimen lähdekoodin julkaisujärjestelmä, jota kehitetään yhteisön vapaaehtoistyön voimin. Dude on ollut WordPressin yhteisön toiminnassa mukana alusta asti ei ainoastaan koodipuolella, mutta myös esimerkiksi järjestämässä <a href="http://wpjkl.fi">WordPress Meetuppeja</a> ja <a href="https://www.dude.fi/avainsana/tapahtumat">WordCampeja</a> Suomessa.</p>
 
               <p><small>Dude on ansainnut seuraavat WordPress-maailman viralliset <a href="https://make.wordpress.org/meta/handbook/documentation/profile-badges/">ansiomerkit</a> WordPress-kontribuutioistaan (käyttäjät <a href="https://profiles.wordpress.org/digitoimistodude">digitoimistodude</a>, <a href="https://profiles.wordpress.org/rolle">rolle</a>, <a href="https://profiles.wordpress.org/sippis">sippis</a>):</small></p>
 
