@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:50:23
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-06-25 13:49:17
+ * @Last Modified time: 2019-06-25 14:21:39
  *
  * @package dude2019
  */
@@ -82,7 +82,7 @@ if ( empty( $main_reference ) && empty( $small_references ) ) {
 
     <?php if ( ! empty( $main_reference ) ) : ?>
       <div class="reference-image reference-image-main has-lazyload">
-        <div class="background-image preview lazyload" style="background-image: url('<?php echo $main_reference['image_preload_url']; ?>');" data-src="<?php echo $main_reference['image_url']; ?>" data-src-mobile="<?php echo $main_reference['image_url_mobile']; ?>"></div>
+        <div class="background-image preview lazyload" style="background-image: url('<?php echo $main_reference['image_preload_url']; ?>');" data-src="<?php echo $main_reference['image_url']; ?>" data-src-mobile="<?php echo $main_reference['image_url']; ?>"></div>
         <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo $main_reference['image_url']; ?>');"<?php endif; ?>></div>
         <noscript><div class="background-image full-image" style="background-image: url('<?php echo $main_reference['image_url']; ?>');"></div></noscript>
       </div>
