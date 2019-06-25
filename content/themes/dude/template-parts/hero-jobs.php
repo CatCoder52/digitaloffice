@@ -30,7 +30,7 @@ if ( is_post_type_archive( 'reference' ) ) {
   $content = 'Olemme tehneet paljon kaikenlaista ja suurimmasta osasta hommia olemme ylpeitä. Muutamiin niistä voit tutustua täällä tarkemmin.';
 } ?>
 
-<section class="block block-hero-jobs block-hero<?php if ( $bg_image ) { ?> block-hero-side-columns<?php } ?> block-hero-enable-transition">
+<section class="block block-hero-jobs block-hero block-hero-enable-transition">
   <div class="container opacity-on-load-instant">
 
     <div class="content">
@@ -50,15 +50,6 @@ if ( is_post_type_archive( 'reference' ) ) {
         </ul>
       </div>
     </div>
-
-    <?php if ( $bg_image ) { ?>
-    <div class="featured-image featured-image-side">
-      <div class="shade"></div>
-        <div class="background-image preview lazyload" style="background-image: url('<?php echo $bg_image_tiny; ?>');" data-src="<?php echo esc_url( $bg_image ); ?>" data-src-mobile="<?php echo esc_url( $bg_image_mobile[0] ); ?>"></div>
-        <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo esc_url( $bg_image ); ?>');"<?php endif; ?>></div>
-        <noscript><div class="background-image full-image" style="background-image: url('<?php echo esc_url( $bg_image ); ?>');"></div></noscript>
-    </div>
-    <?php } ?>
 
   </div>
 </section>
