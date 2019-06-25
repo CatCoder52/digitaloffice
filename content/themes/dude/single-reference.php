@@ -41,6 +41,7 @@ if ( ! $small_references ) {
         'id'                => get_the_id(),
         'title'             => get_the_title(),
         'image_url'         => get_the_post_thumbnail_url( get_the_id(), 'large' ),
+        'image_url_mobile'  => get_the_post_thumbnail_url( get_the_id(), 'medium' ),
         'image_preload_url' => get_the_post_thumbnail_url( get_the_id(), 'tiny-preload-thumbnail' ),
         'excerpt'           => get_post_meta( get_the_id(), 'short_desc', true ),
         'permalink'         => get_the_permalink(),
@@ -117,7 +118,7 @@ get_header(); ?>
               <div class="col">
                 <div class="reference-image">
                   <a href="<?php echo esc_html( $reference['permalink'] ) ?>" class="global-link"><span class="screen-reader-text"><?php the_title() ?></span></a>
-                  <div class="background-image preview lazyload" style="background-image: url('<?php echo $reference['image_preload_url']; ?>');" data-src="<?php echo $reference['image_url']; ?>"></div>
+                  <div class="background-image preview lazyload" style="background-image: url('<?php echo $reference['image_preload_url']; ?>');" data-src="<?php echo $reference['image_url']; ?>" data-src-mobile="<?php echo $reference['image_url_mobile']; ?>"></div>
                   <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo $reference['image_url']; ?>');"<?php endif; ?>></div>
                   <noscript><div class="background-image full-image" style="background-image: url('<?php echo $reference['image_url']; ?>');"></div></noscript>
                 </div>

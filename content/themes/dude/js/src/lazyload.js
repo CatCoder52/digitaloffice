@@ -32,6 +32,7 @@
 
     const defaults = {
         src: "data-src",
+        srcmobile: "data-src-mobile",
         srcset: "data-srcset",
         selector: ".lazyload",
         root: null,
@@ -121,9 +122,14 @@
                         self.observer.unobserve(entry.target);
                         let src = img.getAttribute(self.settings.src);
                         let srcset = img.getAttribute(self.settings.srcset);
+                        let srcmobile = img.getAttribute(self.settings.srcmobile);
 
                         /* Add fully loaded original background image to next div element */
-                        img.nextElementSibling.style.backgroundImage = "url(" + src + ")";
+                        if ( document.documentElement.clientWidth < 600 ) {
+                          img.nextElementSibling.style.backgroundImage = "url(" + srcmobile + ")";
+                        } else {
+                          img.nextElementSibling.style.backgroundImage = "url(" + src + ")";
+                        }
                     }
                 });
             }, observerConfig);
@@ -146,6 +152,7 @@
             Array.prototype.forEach.call(this.images, function (image) {
                 let src = image.getAttribute(self.settings.src);
                 let srcset = image.getAttribute(self.settings.srcset);
+                let srcmobile = image.getAttribute(self.settings.srcmobile);
 
                 if ("img" === image.tagName.toLowerCase()) {
                     if (src) {
@@ -154,8 +161,15 @@
                     if (srcset) {
                         image.srcset = srcset;
                     }
+                    if (srcmobile) {
+                        image.srcmobile = srcmobile;
+                    }
                 } else {
+                  if ( document.documentElement.clientWidth < 600 ) {
+                    image.style.backgroundImage = "url('" + srcmobile + "')";
+                  } else {
                     image.style.backgroundImage = "url('" + src + "')";
+                  }
                 }
             });
         },

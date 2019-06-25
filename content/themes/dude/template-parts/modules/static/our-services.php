@@ -2,8 +2,8 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:49:22
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-06-20 13:18:11
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2019-06-25 13:21:08
  *
  * @package dude2019
  */
@@ -15,6 +15,7 @@ if ( empty( $image_id ) ) {
 }
 
 $image = wp_get_attachment_image_url( $image_id, 'large' );
+$image_mobile = wp_get_attachment_image_url( $image_id, 'medium' );
 $image_preload = wp_get_attachment_image_url( $image_id, 'tiny-preload-thumbnail' ); ?>
 
 <section class="block block-our-services">
@@ -45,7 +46,7 @@ $image_preload = wp_get_attachment_image_url( $image_id, 'tiny-preload-thumbnail
     </div>
 
     <div class="image has-lazyload">
-      <div class="background-image preview lazyload" style="background-image: url('<?php echo $image_preload ?>');" data-src="<?php echo $image ?>"></div>
+      <div class="background-image preview lazyload" style="background-image: url('<?php echo $image_preload ?>');" data-src="<?php echo $image ?>" data-src-mobile="<?php echo $image_mobile ?>"></div>
       <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo $image ?>');"<?php endif; ?>></div>
       <noscript><div class="background-image full-image" style="background-image: url('<?php echo $image ?>');"></div></noscript>
     </div>
