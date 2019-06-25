@@ -27,6 +27,13 @@
   margin-top: -15rem;
   background: transparent;
 
+  &:not(.block-single-reference) {
+    .blocks-gallery-item figcaption {
+      background: none;
+      color: $color-dude-white;
+    }
+  }
+
   &.block-single-reference {
     margin-top: 0;
     padding-left: 0;
