@@ -40,11 +40,11 @@
 
   .hero-description {
     margin-bottom: 5rem;
-    max-width: 80rem;
     width: 100%;
 
     p {
       font-weight: 300;
+      max-width: 80rem;
     }
   }
 
@@ -61,12 +61,15 @@
 
     .container {
       width: 100%;
-      max-width: 80rem;
       margin-bottom: -6rem;
     }
 
     .content {
       margin-bottom: 0;
+
+      p {
+        max-width: 80rem;
+      }
     }
 
     h1 {
