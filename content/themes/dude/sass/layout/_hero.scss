@@ -12,8 +12,8 @@
   height: calc(var(--vh, 1vh) * 100);
   min-height: 65rem;
 
-  @media (max-height: 460px) {
-    min-height: 120rem;
+  @media (max-width: 480px) {
+    min-height: 85rem;
     height: auto;
   }
 
@@ -359,6 +359,7 @@
     padding-right: 0;
 
     @media (max-width: 600px) {
+      min-height: 80rem;
       height: auto;
     }
 
@@ -522,10 +523,6 @@
       @media (max-width: 600px) {
         height: 100vh; // Use vh as a fallback for browsers that do not support Custom Properties
         height: calc(var(--vh, 1vh) * 100);
-      }
-
-      @media (max-height: 480px) {
-        height: auto;
       }
 
       @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
