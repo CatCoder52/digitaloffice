@@ -18,7 +18,7 @@ if ( ! empty( $title_alt ) ) {
 
 // Featured image
 $bg_image_tiny_default = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'tiny-preload-thumbnail' );
-$bg_image_mobile = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'medium' );
+$bg_image_mobile = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
 $bg_image_tiny = $bg_image_tiny_default[0];
 $bg_image = null;
 if ( has_post_thumbnail() ) {
