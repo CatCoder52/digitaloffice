@@ -30,7 +30,7 @@ if ( has_post_thumbnail() ) {
           <li><a href="<?php echo get_page_link( 4493 ); ?>">Kunhan vaan kahtelen...</a></li>
         </ul>
 
-        <p class="cta-link"><a href="<?php echo get_page_link( 4487 ); ?>">Ota yhteyttä</a></p>
+        <p class="cta-link cta-link-front"><a href="<?php echo get_page_link( 4487 ); ?>">Ota yhteyttä</a></p>
       </div>
     </div>
 

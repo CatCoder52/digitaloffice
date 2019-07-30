@@ -369,7 +369,11 @@
       animation-timing-function: ease-in-out;
       animation-fill-mode: forwards;
       animation-duration: 1s;
-      animation-delay: 2.5s;
+      animation-delay: 2s;
+
+      &.cta-link-front {
+        animation-delay: 2.5s;
+      }
 
       @media (max-height: 600px) {
         margin-top: 0;
