@@ -1,0 +1,345 @@
+body.template-surveys {
+  @include background-auto();
+  background-position: top;
+  background-image: url('../images/survey-bg.png');
+  background-attachment: fixed;
+
+  &.not-started {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    position: static;
+
+    .site {
+      overflow: visible;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .site {
+    overflow: visible;
+    position: static;
+  }
+
+  &:after,
+  .chat-greeting {
+    display: none;
+  }
+
+  .gform_wrapper {
+    visibility: hidden;
+    max-width: 80rem;
+    padding-top: 15rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+
+    table.gsurvey-likert th.gsurvey-likert-choice-label {
+      font-size: 14px !important;
+      font-weight: 300 !important;
+    }
+
+    .description_above .gfield_description {
+      margin-top: 1rem;
+    }
+
+    table.gsurvey-likert {
+      width: 100%;
+      table-layout: fixed;
+      border: 1px solid #4d4f50;
+      border-collapse: collapse;
+      border-style: hidden;
+      box-shadow: 0 0 0 1px #b5b5b6;
+      border-radius: 4px;
+      overflow: hidden;
+
+      .gsurvey-likert-choice {
+        padding: 2rem;
+      }
+    }
+
+    ul li.field_description_below div.ginput_container_radio,
+    ul li.field_description_below div.ginput_container_checkbox,
+    ul li.field_description_above div.ginput_container_radio,
+    ul li.field_description_above div.ginput_container_checkbox {
+      margin: 2rem 0;
+
+      > ul {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      > ul li {
+        width: calc(50% - 1rem);
+        margin-right: 1rem;
+        border: 1px solid #808182;
+        background: #e9e9e9;
+        border-radius: 4px;
+        padding: 12px !important;
+      }
+
+      > ul li:hover {
+        background: #bcbdbe;
+      }
+    }
+
+    // Checkboxes
+    input[type="checkbox"] {
+      display: none !important;
+    }
+
+    input[type="checkbox"] + label {
+      @extend %h5;
+      line-height: 1 !important;
+      margin: 0 !important;
+      font-weight: 300 !important;
+      display: block;
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 20px;
+      color: $color-dude-black;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    input[type="checkbox"] + label:last-child {
+      margin-bottom: 0;
+    }
+
+    input[type="checkbox"] + label:before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      border: 1px solid $color-dude-black;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: .6;
+      transition: all .12s, border-color .08s;
+    }
+
+    input[type="checkbox"]:checked + label:before {
+      width: 10px;
+      top: -5px;
+      left: 5px;
+      border-radius: 0;
+      opacity: 1;
+      border-top-color: transparent;
+      border-left-color: transparent;
+      transform: rotate(45deg);
+    }
+
+    // Radio buttons
+    input[type="radio"] {
+      display: none !important;
+    }
+
+    input[type="radio"] + label {
+      @extend %h5;
+      line-height: 1 !important;
+      margin: 0 !important;
+      font-weight: 300 !important;
+      display: block;
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 20px;
+      color: $color-dude-black;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    input[type="radio"] + label:last-child {
+      margin-bottom: 0;
+    }
+
+    input[type="radio"] + label:before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      border: 1px solid $color-dude-black;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: .6;
+      transition: all .12s, border-color .08s;
+    }
+
+    input[type="radio"]:checked + label:before {
+      width: 10px;
+      top: -5px;
+      left: 5px;
+      border-radius: 0;
+      opacity: 1;
+      border-top-color: transparent;
+      border-left-color: transparent;
+      transform: rotate(45deg);
+    }
+
+    .gfield_label {
+      @extend %h4;
+      font-weight: 300;
+    }
+
+    ul.gform_fields li.gfield {
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-bottom: 8rem;
+
+      &:last-child {
+        margin-bottom: 3rem;
+      }
+    }
+
+    textarea,
+    input,
+    input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']) {
+      @extend %h4;
+      width: 100%;
+      border-bottom: 1px solid #dededf;
+      padding-top: 2rem !important;
+      padding-bottom: 2rem !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+
+  .gform_wrapper li.gfield_error input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+  .gform_wrapper li.gfield_error textarea {
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-top: 0 !important;
+  }
+
+  .splash {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  .survey-header {
+    max-width: 100rem;
+    padding-top: 8rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin: 0 auto;
+    text-align: center;
+
+    img {
+      max-width: 189px;
+      width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+
+      @media (max-height: 880px) {
+        max-width: 140px;
+      }
+
+      @media (max-height: 760px) {
+        max-width: 100px;
+      }
+
+      @media (max-height: 670px) {
+        max-width: 70px;
+      }
+    }
+
+    h1 {
+      @extend %h4;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+
+    p {
+      color: rgba(51, 51, 51, .8);
+      opacity: .7;
+      font-weight: 500;
+    }
+  }
+
+  .survey-start-wrapper {
+    width: 100%;
+    display: block;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    height: 90px;
+    background-color: rgba(#000, .05);
+    box-shadow: rgba(#000, .1) 0px -1px;
+
+    @media (max-width: $container-ipad) {
+      background: #f2f2f2;
+      position: static;
+      margin-top: 3rem;
+    }
+
+    button.survey-start-button {
+      @include responsive-font(19px, 22px);
+      margin-top: 13px;
+      margin-bottom: 0;
+      position: relative;
+      font-family: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      box-shadow: rgba(0, 0, 0, .1) 0px 3px 12px 0px;
+      min-height: 48px;
+      background-color: rgb(35, 37, 39);
+      color: rgb(227, 228, 230);
+      transition: background-color .2s ease 0s, color .2s ease 0s, border-color .2s ease 0s, opacity .2s ease 0s;
+      outline: none;
+      border-width: 1px;
+      border-style: solid;
+      border-image: initial;
+      padding: 2px 18px;
+      border-color: transparent;
+      border-radius: 4px;
+    }
+  }
+
+  .gform_wrapper .gform_footer input.button,
+  .gform_wrapper .gform_page_footer input.button,
+  .gform_wrapper .gform_footer input[type=submit],
+  .gform_wrapper .gform_page_footer input[type=submit] {
+    @include responsive-font(19px, 22px);
+    position: relative !important;
+    font-family: inherit !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+    box-shadow: rgba(0, 0, 0, .1) 0px 3px 12px 0px !important;
+    min-height: 48px !important;
+    background-color: rgb(35, 37, 39) !important;
+    color: rgb(227, 228, 230) !important;
+    transition: background-color .2s ease 0s, color .2s ease 0s, border-color .2s ease 0s, opacity .2s ease 0s !important;
+    outline: none !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-image: initial !important;
+    padding: 2px 18px !important;
+    border-color: transparent !important;
+    border-radius: 4px !important;
+  }
+
+  input[type="hidden"]+br {
+    display: none !important;
+  }
+
+  .gform_wrapper .gform_footer {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}

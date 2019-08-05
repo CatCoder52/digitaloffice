@@ -46,6 +46,3 @@ DEPENDENCIES
   capistrano-composer
   sass (>= 3.5.5)
   sass-globbing (~> 1.1.1)
-
-BUNDLED WITH
-   1.15.3

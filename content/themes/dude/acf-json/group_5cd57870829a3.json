@@ -1010,6 +1010,11 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "page"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "template-surveys.php"
             }
         ]
     ],
@@ -1021,5 +1026,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1559552852
+    "modified": 1565011820
 }
