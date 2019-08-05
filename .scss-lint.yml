@@ -47,7 +47,7 @@ linters:
     enabled: false
 
   DuplicateProperty:
-    enabled: true
+    enabled: false
 
   ElsePlacement:
     enabled: false
@@ -254,7 +254,7 @@ linters:
     excluded_identifiers: []
 
   ZeroUnit:
-    enabled: true
+    enabled: false
 
   Compass::*:
     enabled: false
