@@ -78,8 +78,6 @@ the_post();
 <body class="template-surveys">
 
   <div id="page" class="site">
-   <a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'dude' ); ?></a>
-
    <div class="site-content">
 
       <main role="main" id="main" class="site-main">
@@ -136,16 +134,26 @@ the_post();
   ( function( $ ) {
     $(function() {
       $('body').addClass('not-started');
+      $('.gform_wrapper').addClass('not-started');
 
       if ( $('.gform_validation_error').length ) {
         $('.splash').fadeOut();
         $('body').removeClass('not-started');
+        $('.gform_wrapper').removeClass('not-started');
+        $('.gform_wrapper').css('visibility', 'visible').hide().fadeIn('slow');
+      }
+
+      if ( $('.gform_confirmation_message').length ) {
+        $('.splash').hide();
+        $('body').removeClass('not-started');
+        $('.gform_wrapper').removeClass('not-started');
         $('.gform_wrapper').css('visibility', 'visible').hide().fadeIn('slow');
       }
 
       $('.survey-start-button').click(function() {
         $('.splash').fadeOut();
         $('body').removeClass('not-started');
+        $('.gform_wrapper').removeClass('not-started');
         $('.gform_wrapper').css('visibility', 'visible').hide().fadeIn('slow');
       });
     });
