@@ -21,7 +21,7 @@ if ( empty( $bg_image ) || empty( $content ) ) {
     <div class="cols">
       <div class="col">
         <div class="image has-lazyload">
-          <div class="background-image preview lazyload" style="background-image: url('<?php echo wp_get_attachment_image_url( $bg_image, 'tiny-preload-thumbnail' ) ?>');" data-src="<?php echo wp_get_attachment_image_url( $bg_image, 'full' ) ?>" data-src-mobile="<?php echo wp_get_attachment_image_url( $bg_image, 'medium' ) ?>"></div>
+          <div class="background-image preview lazyload" style="background-image: url('<?php echo wp_get_attachment_image_url( $bg_image, 'tiny-preload-thumbnail' ) ?>');" data-src="<?php echo wp_get_attachment_image_url( $bg_image, 'full' ) ?>" data-src-mobile="<?php echo wp_get_attachment_image_url( $bg_image, 'large' ) ?>"></div>
           <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo wp_get_attachment_image_url( $bg_image, 'full' ) ?>');"<?php endif; ?>></div>
           <noscript><div class="background-image full-image" style="background-image: url('<?php echo wp_get_attachment_image_url( $bg_image, 'full' ) ?>');"></div></noscript>
         </div>

@@ -15,7 +15,7 @@ if ( empty( $image_id ) ) {
 }
 
 $image = wp_get_attachment_image_url( $image_id, 'large' );
-$image_mobile = wp_get_attachment_image_url( $image_id, 'medium' );
+$image_mobile = wp_get_attachment_image_url( $image_id, 'large' );
 $image_preload = wp_get_attachment_image_url( $image_id, 'tiny-preload-thumbnail' ); ?>
 
 <section class="block block-our-services">

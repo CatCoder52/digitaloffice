@@ -24,7 +24,7 @@ if ( empty( $content ) || empty( $image ) ) {
       </div>
 
       <div class="col col-image has-lazyload">
-        <div class="background-image preview lazyload" style="background-image: url('<?php echo wp_get_attachment_image_url( $image, 'tiny-preload-thumbnail' ) ?>');" data-src="<?php echo wp_get_attachment_image_url( $image, 'full' ) ?>" data-src-mobile="<?php echo wp_get_attachment_image_url( $image, 'medium' ) ?>"></div>
+        <div class="background-image preview lazyload" style="background-image: url('<?php echo wp_get_attachment_image_url( $image, 'tiny-preload-thumbnail' ) ?>');" data-src="<?php echo wp_get_attachment_image_url( $image, 'full' ) ?>" data-src-mobile="<?php echo wp_get_attachment_image_url( $image, 'large' ) ?>"></div>
         <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo wp_get_attachment_image_url( $image, 'full' ) ?>');"<?php endif; ?>></div>
         <noscript><div class="background-image full-image" style="background-image: url('<?php echo wp_get_attachment_image_url( $image, 'full' ) ?>');"></div></noscript>
       </div>

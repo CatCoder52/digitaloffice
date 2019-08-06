@@ -41,7 +41,7 @@ if ( ! $small_references ) {
         'id'                => get_the_id(),
         'title'             => get_the_title(),
         'image_url'         => get_the_post_thumbnail_url( get_the_id(), 'large' ),
-        'image_url_mobile'  => get_the_post_thumbnail_url( get_the_id(), 'medium' ),
+        'image_url_mobile'  => get_the_post_thumbnail_url( get_the_id(), 'large' ),
         'image_preload_url' => get_the_post_thumbnail_url( get_the_id(), 'tiny-preload-thumbnail' ),
         'excerpt'           => get_post_meta( get_the_id(), 'short_desc', true ),
         'permalink'         => get_the_permalink(),

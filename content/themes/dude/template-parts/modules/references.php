@@ -38,7 +38,7 @@ if ( ! $small_references ) {
         'title'             => get_the_title(),
         'image_preload_url' => get_the_post_thumbnail_url( get_the_id(), 'tiny-preload-thumbnail' ),
         'image_url'         => get_the_post_thumbnail_url( get_the_id(), 'large' ),
-        'image_url_mobile'  => get_the_post_thumbnail_url( get_the_id(), 'medium' ),
+        'image_url_mobile'  => get_the_post_thumbnail_url( get_the_id(), 'large' ),
         'excerpt'           => get_post_meta( get_the_id(), 'short_desc', true ),
         'permalink'         => get_the_permalink(),
       );
@@ -56,7 +56,7 @@ if ( ! empty( $main_reference_id ) ) {
     'title'             => get_the_title( $main_reference_id ),
     'image_preload_url' => get_the_post_thumbnail_url( $main_reference_id, 'tiny-preload-thumbnail' ),
     'image_url'         => get_the_post_thumbnail_url( $main_reference_id, 'full' ),
-    'image_url_mobile'  => get_the_post_thumbnail_url( $main_reference_id, 'medium' ),
+    'image_url_mobile'  => get_the_post_thumbnail_url( $main_reference_id, 'large' ),
     'excerpt'           => get_the_excerpt( $main_reference_id ),
     'permalink'         => get_the_permalink( $main_reference_id ),
     'logofile'          => get_post_meta( $main_reference_id, 'logo_svg', true ),
