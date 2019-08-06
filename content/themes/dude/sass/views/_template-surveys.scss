@@ -14,6 +14,12 @@ body.template-surveys {
       overflow: auto;
     }
 
+    @media (max-height: 670px) {
+      position: static;
+      overflow: auto;
+      max-height: 800px;
+    }
+
     .site {
       overflow: visible;
       position: fixed;
@@ -22,6 +28,11 @@ body.template-surveys {
 
       @media (max-width: $container-ipad) {
         position: static;
+      }
+
+      @media (max-height: 670px) {
+        position: static;
+        overflow: auto;
       }
     }
   }
@@ -276,6 +287,10 @@ body.template-surveys {
     @media (max-width: $container-ipad) {
       position: static;
     }
+
+    @media (max-height: 670px) {
+      position: static;
+    }
   }
 
   .survey-header {
@@ -287,6 +302,10 @@ body.template-surveys {
     text-align: center;
 
     @media (max-width: $container-ipad) {
+      padding-top: 4rem;
+    }
+
+    @media (max-height: 760px) {
       padding-top: 4rem;
     }
 
@@ -325,24 +344,20 @@ body.template-surveys {
 
   .survey-start-wrapper {
     width: 100%;
-    display: block;
+    display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
-    position: absolute;
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
     z-index: 10;
-    height: 90px;
+    height: 70px;
     background-color: rgba(#000, .05);
     box-shadow: rgba(#000, .1) 0px -1px;
 
-    @media (max-width: $container-ipad) {
-      display: flex;
-    }
-
-    @media (max-width: $container-ipad) {
+    @media (max-width: $container-mobile) {
       background: #f2f2f2;
       position: static;
       margin-top: 3rem;
@@ -350,8 +365,6 @@ body.template-surveys {
 
     button.survey-start-button {
       @include responsive-font(19px, 22px);
-      margin-top: 13px;
-      margin-bottom: 0;
       position: relative;
       font-family: inherit;
       font-weight: 700;
@@ -369,10 +382,7 @@ body.template-surveys {
       padding: 2px 18px;
       border-color: transparent;
       border-radius: 4px;
-
-      @media (max-width: $container-ipad) {
-        margin: 0;
-      }
+      margin: 0;
     }
   }
 
