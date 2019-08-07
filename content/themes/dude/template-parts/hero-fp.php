@@ -23,6 +23,8 @@ if ( has_post_thumbnail() ) {
 
     <div class="content content-select-service">
 
+      <h1 class="screen-reader-text">Mitä saisi olla?</h1>
+
       <div class="side-content-box selection">
         <ul>
           <li><a href="<?php echo get_page_link( 9 ); ?>">Haluan uudet verkkosivut</a></li>
