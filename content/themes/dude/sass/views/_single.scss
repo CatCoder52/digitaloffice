@@ -52,7 +52,8 @@
       padding-right: 0;
 
       @media (max-width: 1100px) {
-        p {
+        p,
+        h3 {
           padding-left: $padding-default-cols-ipad;
           padding-right: $padding-default-cols-ipad;
         }
