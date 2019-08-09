@@ -15,6 +15,29 @@
 add_filter( 'gform_tabindex', '__return_false' );
 
 /**
+ * Fix some old images being mixed case
+ */
+add_filter( 'wp_get_attachment_url', 'dude_wp_get_attachment_url' );
+function dude_wp_get_attachment_url( $url ) {
+  return mb_strtolower( $url );
+}
+
+add_filter( 'the_content', 'dude_the_content_fix_image_url' );
+function dude_the_content_fix_image_url( $content ) {
+  return preg_replace_callback(
+    '#\<img(.+?)src="https:\/\/(.+?)\/tiedostot(.+?)\/\>#s',
+    function( $matches ) {
+      return '<img' .  $matches[1]
+        . 'src="https://'
+        . $matches[2] . '/tiedostot'
+        . mb_strtolower( $matches[3] )
+        . '/>';
+    },
+    $content
+  );
+}
+
+/**
  * Show archives
  */
 add_filter( 'air_helper_disable_views_tag', '__return_false' );
