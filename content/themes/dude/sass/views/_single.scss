@@ -27,6 +27,11 @@
   margin-top: -15rem;
   background: transparent;
 
+  .block-head .block-title {
+    width: 100%;
+    max-width: 100%;
+  }
+
   &:not(.block-single-reference) {
     .blocks-gallery-item figcaption {
       background: none;
