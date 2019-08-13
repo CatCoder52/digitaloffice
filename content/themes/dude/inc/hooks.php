@@ -212,7 +212,7 @@ function dude_get_the_excerpt( $excerpt, $post = null ) {
 
   if ( isset( $blog_latest_excerpt_override ) ) {
     if ( $blog_latest_excerpt_override === $post->ID ) {
-      return dude_get_custom_excerpt_length( $excerpt, 4 );
+      return $excerpt;
     }
   }
 
