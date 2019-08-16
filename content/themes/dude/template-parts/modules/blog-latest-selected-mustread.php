@@ -72,6 +72,17 @@ global $blog_latest_excerpt_override; ?>
         <?php foreach ( $mustread as $post ) : ?>
           <div class="post">
             <div class="image">
+
+              <?php
+              $video_bg = get_post_meta( get_the_id(), 'article_video', true );
+              if ( $video_bg ) : ?>
+                <div class="shade"></div>
+                <div class="vimeo-wrapper vimeo-wrapper-upsell-small">
+                  <iframe src="https://player.vimeo.com/video/<?php echo str_replace( array( 'http:', 'https:', 'vimeo.com', '/' ), '', $video_bg ) ?>?background=1&autoplay=1&loop=1&byline=0&title=0"
+                    frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </div>
+              <?php endif; ?>
+
               <div class="background-image preview lazyload" style="background-image: url('<?php echo get_the_post_thumbnail_url( $post, 'tiny-preload-thumbnail' ) ?>');" data-src="<?php echo get_the_post_thumbnail_url( $post, 'large' ) ?>" data-src-mobile="<?php echo get_the_post_thumbnail_url( $post, 'medium' ) ?>"></div>
               <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo get_the_post_thumbnail_url( $post, 'medium' ) ?>');"<?php endif; ?>></div>
               <noscript><div class="background-image full-image" style="background-image: url('<?php echo get_the_post_thumbnail_url( $post, 'medium' ) ?>');"></div></noscript>

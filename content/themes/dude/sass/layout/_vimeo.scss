@@ -21,6 +21,20 @@
     }
   }
 
+  &.vimeo-wrapper-upsell-small {
+    width: 100%;
+    height: 100%;
+
+    iframe {
+      height: 100%;
+      min-height: 350px;
+
+      @media (max-width: 1500px) {
+        min-height: 600px;
+      }
+    }
+  }
+
   &.vimeo-wrapper-upsell-front-page {
     width: 100%;
     height: 100%;
@@ -31,7 +45,7 @@
 
     @media (max-width: 1500px) {
       iframe {
-        height: 185vh;
+        height: 200vh;
       }
     }
 
