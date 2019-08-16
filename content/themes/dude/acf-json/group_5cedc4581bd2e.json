@@ -20,6 +20,22 @@
             "ui": 1,
             "ui_on_text": "",
             "ui_off_text": ""
+        },
+        {
+            "key": "field_5d5664efdcd7e",
+            "label": "Artikkelivideo",
+            "name": "article_video",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
         }
     ],
     "location": [
@@ -39,5 +55,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1559086245
+    "modified": 1565943035
 }
