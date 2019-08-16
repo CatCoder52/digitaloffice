@@ -20,6 +20,33 @@
       height: 200%;
     }
   }
+
+  &.vimeo-wrapper-upsell-front-page {
+    width: 100%;
+    height: 100%;
+
+    iframe {
+      height: 230%;
+    }
+
+    @media (max-width: 1500px) {
+      iframe {
+        height: 185vh;
+      }
+    }
+
+    @media (max-width: 1000px) {
+      iframe {
+        height: 120vh;
+      }
+    }
+
+    @media (max-width: 600px) {
+      iframe {
+        height: 100vh;
+      }
+    }
+  }
 }
 
 .vimeo-wrapper iframe {

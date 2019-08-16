@@ -19,7 +19,6 @@ $args = array(
 );
 
 $query = new WP_Query( $args );
-
 $mustread = get_sub_field( 'mustread' );
 
 if ( ! $query->have_posts() || empty( $mustread ) ) {
@@ -37,10 +36,21 @@ global $blog_latest_excerpt_override; ?>
         <h2 class="block-title">Uusin bloggauksemme</h2>
 
         <?php while ( $query->have_posts() ) : $query->the_post();
-          $blog_latest_excerpt_override = get_the_id(); ?>
+          $blog_latest_excerpt_override = get_the_id();
+          $video_bg = get_post_meta( get_the_id(), 'article_video', true );
+        ?>
 
           <div class="post">
             <div class="image has-lazyload">
+
+              <?php if ( $video_bg ) : ?>
+                <div class="shade"></div>
+                <div class="vimeo-wrapper vimeo-wrapper-upsell-front-page">
+                  <iframe src="https://player.vimeo.com/video/<?php echo str_replace( array( 'http:', 'https:', 'vimeo.com', '/' ), '', $video_bg ) ?>?background=1&autoplay=1&loop=1&byline=0&title=0"
+                    frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </div>
+              <?php endif; ?>
+
               <a href="<?php the_permalink() ?>" class="global-link"><span class="screen-reader-text"><?php the_title() ?></span></a>
               <div class="background-image preview lazyload" style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'tiny-preload-thumbnail' ) ?>');" data-src="<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>" data-src-mobile="<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>"></div>
               <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>');"<?php endif; ?>></div>
