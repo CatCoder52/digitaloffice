@@ -107,6 +107,12 @@
     margin-bottom: 6rem;
   }
 
+  @media (max-width: 500px) {
+    iframe[width="1140"] {
+      max-height: 300px !important;
+    }
+  }
+
   .entry-content > *,
   .entry-content figcaption,
   .block-head,
