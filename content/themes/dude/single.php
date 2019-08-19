@@ -25,7 +25,7 @@ get_header(); ?>
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
           <header class="block-head">
-            <p class="block-title-pre" aria-describedby="block-title-<?php echo sanitize_title( get_the_title() ) ?>"><?php echo ucfirst( date_i18n( 'l' ) ) ?>na, <?php echo get_the_date( 'j.n.Y' ) ?></p>
+            <p class="block-title-pre" aria-describedby="block-title-<?php echo sanitize_title( get_the_title() ) ?>"><?php echo ucfirst( date_i18n( 'l', get_the_date( 'U' ) ) ) ?>na, <?php echo get_the_date( 'j.n.Y' ) ?></p>
             <h1 class="block-title" id="block-title-<?php echo sanitize_title( get_the_title() ) ?>"><?php the_title() ?></h1>
           </header>
 
