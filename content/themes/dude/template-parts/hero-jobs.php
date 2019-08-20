@@ -46,7 +46,7 @@ if ( is_post_type_archive( 'reference' ) ) {
 
         <ul class="jobs animate animate-3">
           <li><a href="<?php echo get_page_link(4588); ?>">WordPress-kehittäjää back-end-painotuksella <span class="label">Haku päällä nyt!</span></a></li>
-          <li><a href="<?php echo get_page_link(4793); ?>">Visuaalista suunnittelijaa project lead-viballa <span class="label">Haku päällä nyt!</span></a></li>
+          <?php /*<li><a href="<?php echo get_page_link(4793); ?>">Visuaalista suunnittelijaa project lead-viballa <span class="label">Haku päällä nyt!</span></a></li>*/ ?>
         </ul>
       </div>
     </div>
