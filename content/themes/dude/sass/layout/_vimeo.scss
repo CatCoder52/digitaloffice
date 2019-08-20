@@ -19,6 +19,24 @@
     iframe {
       height: 200%;
     }
+
+    @media (min-width: 1920px) {
+      iframe {
+        height: 270%;
+      }
+    }
+
+    @media (min-width: 2250px) {
+      iframe {
+        height: 300%;
+      }
+    }
+
+    @media (min-width: 2450px) {
+      iframe {
+        display: none;
+      }
+    }
   }
 
   &.vimeo-wrapper-upsell-small {
@@ -31,6 +49,14 @@
 
       @media (max-width: 1500px) {
         min-height: 600px;
+      }
+
+      @media (min-width: 1920px) {
+        min-height: 400px;
+      }
+
+      @media (min-width: 2450px) {
+        display: none;
       }
     }
   }
@@ -58,6 +84,24 @@
     @media (max-width: 600px) {
       iframe {
         height: 100vh;
+      }
+    }
+
+    @media (min-width: 1920px) {
+      iframe {
+        height: 270%;
+      }
+    }
+
+    @media (min-width: 2250px) {
+      iframe {
+        height: 300%;
+      }
+    }
+
+    @media (min-width: 2450px) {
+      iframe {
+        display: none;
       }
     }
   }
