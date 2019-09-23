@@ -37,6 +37,9 @@ function dude_the_content_fix_image_url( $content ) {
   );
 }
 
+// Fix relevanssi related posts thumbnail breakage
+add_action( 'pre_relevanssi_related', function() { remove_filter( 'update_post_metadata_cache', '__return_true' ); }, 11 );
+
 /**
  * Show archives
  */
