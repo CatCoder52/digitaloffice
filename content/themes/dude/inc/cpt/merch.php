@@ -27,13 +27,13 @@ function dude_register_cpt_merch() {
 
   $args = array(
     'labels'             => $labels,
-    'public'             => true,
-    'publicly_queryable' => true,
+    'public'             => false, // Make true in production
+    'publicly_queryable' => false, // Make true in production
     'show_ui'            => true,
     'show_in_menu'       => true,
     'query_var'          => false,
     'capability_type'    => 'post',
-    'has_archive'        => true,
+    'has_archive'        => false, // Make true in production
     'hierarchical'       => false,
     'menu_position'      => null,
     'menu_icon'          => 'dashicons-products',
