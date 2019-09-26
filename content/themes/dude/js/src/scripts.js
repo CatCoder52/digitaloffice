@@ -333,11 +333,29 @@ lazyload(images, {
     } // end storage check
 
     function maybeSendChatGreeting() {
-      var greetings = [
-        'Moottoritie on kuuma, mutta webisivut pitäs saada? 🚀',
-        'Etsitkö tekijää seuraavaan projektiisi? Chattaa meille! 🙂',
-        'Etsitkö hyvää tekijää projektiisi? Pistä viestiä niin kerron vähän lisää meidän palveluista. 👋',
-      ];
+      // alter greetings based on page
+      if ( jQuery('body').hasClass('page-id-4485') ) {
+        // visuaalinen suunnittelu page
+        var greetings = [
+          'Uutta ilmettä putiikille? Kysy lisää chatissa.',
+          'Moi! Mille työn jälki vaikuttaa? 🙂',
+          'Moro! Voisimmeko auttaa jotenkin? 👋',
+        ];
+      } else if ( jQuery('body').hasClass('page-id-9') ) {
+        // verkkosivut- ja palvelut page
+        var greetings = [
+          'Moottoritie on kuuma, mutta webisivut pitäs saada? 🚀',
+          'Verkkosivut uudistuksen tarpeessa? Pistä viestiä niin kerron vähän lisää meidän palveluista. 🙂',
+          'Moro! Voisimmeko auttaa jotenkin? 👋',
+        ];
+      } else {
+        // defaults / fallbacks
+        var greetings = [
+          'Moi! Verkkosivut uudistuksen tarpeessa? Uutta ilmettä putiikille? Kysy lisää chatissa.',
+          'Moro! Voisimmeko auttaa jotenkin? 🙂',
+          'Terrrrve! Pistä viestiä niin kerron vähän lisää meidän palveluista. 👋',
+        ];
+      }
 
       var greeters = [
         {
