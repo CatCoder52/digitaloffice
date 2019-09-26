@@ -7,7 +7,6 @@
  *
  * @package dude2019
  */
-
 function dude_register_cpt_merch() {
   $labels = array(
     'name'               => _x( 'Merchit', 'post type general name', 'dude' ),
@@ -23,7 +22,7 @@ function dude_register_cpt_merch() {
     'search_items'       => __( 'Etsi merchiä', 'dude' ),
     'parent_item_colon'  => __( 'Tyypin isäntä:', 'dude' ),
     'not_found'          => __( 'Merchejä ei löytynyt.', 'dude' ),
-    'not_found_in_trash' => __( 'Merchejä ei löytynyt roskista.', 'dude' )
+    'not_found_in_trash' => __( 'Merchejä ei löytynyt roskista.', 'dude' ),
   );
 
   $args = array(
