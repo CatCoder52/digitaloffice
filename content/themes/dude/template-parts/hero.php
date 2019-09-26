@@ -30,7 +30,7 @@ if ( is_front_page() ) {
     'barexplosive-alt',
     'byemmi-alt',
     'verena-alt',
-    'varjola-alt'
+    'varjola-alt',
   );
 
   include get_theme_file_path( 'template-parts/hero-service.php' );

@@ -28,13 +28,13 @@ function dude_register_cpt_merch() {
 
   $args = array(
     'labels'             => $labels,
-    'public'             => false,
-    'publicly_queryable' => false,
+    'public'             => true,
+    'publicly_queryable' => true,
     'show_ui'            => true,
     'show_in_menu'       => true,
     'query_var'          => false,
     'capability_type'    => 'post',
-    'has_archive'        => false,
+    'has_archive'        => true,
     'hierarchical'       => false,
     'menu_position'      => null,
     'menu_icon'          => 'dashicons-palmtree',
@@ -42,7 +42,7 @@ function dude_register_cpt_merch() {
       'title',
       'thumbnail',
       'page-attributes',
-      'revisions'
+      'revisions',
     )
   );
 

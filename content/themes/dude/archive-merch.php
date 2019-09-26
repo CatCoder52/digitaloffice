@@ -17,10 +17,12 @@ get_header(); ?>
 <div id="content" class="content-area">
 	<main role="main" id="main" class="site-main">
 
+    <?php include get_theme_file_path( 'template-parts/hero-merch.php' ); ?>
+
     <section class="block block-merch">
       <div class="container">
 
-        <?php while( have_posts() ) : the_post(); ?>
+        <?php while ( have_posts() ) : the_post(); ?>
           <div class="col col-product" data-product="<?php echo get_the_id() ?>">
 
             <div class="col col-image" style="background-image:url('<?php echo the_post_thumbnail_url( 'large' ); ?>')"></div>
