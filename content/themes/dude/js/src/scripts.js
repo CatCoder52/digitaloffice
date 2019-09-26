@@ -302,7 +302,7 @@ lazyload(images, {
         // send chat if user has visited over 3 pages and greeting still not sent
         setTimeout( function() {
           maybeSendChatGreeting();
-        }, 3000 );
+        }, 1500 );
       } else if ( localStorage.getItem( 'chat_greeting_sent' ) === null ) {
         // send greeting if not send before
 
