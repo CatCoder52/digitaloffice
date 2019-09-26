@@ -313,7 +313,7 @@ lazyload(images, {
         });
 
         // trigger chat after X seconds
-        TimeMe.callAfterTimeElapsedInSeconds( 15, function() {
+        TimeMe.callAfterTimeElapsedInSeconds( 5, function() {
           maybeSendChatGreeting();
         } );
       } else if ( daysBetween( new Date( localStorage.getItem( 'chat_greeting_sent' ) ), new Date() ) > 1 ) {
@@ -326,7 +326,7 @@ lazyload(images, {
         });
 
         // trigger chat after X seconds
-        TimeMe.callAfterTimeElapsedInSeconds( 15, function() {
+        TimeMe.callAfterTimeElapsedInSeconds( 5, function() {
           maybeSendChatGreeting();
         } );
       } // end if send chat check
