@@ -27,6 +27,11 @@
   .customer-logos svg {
     display: block;
     max-width: 100px;
+    margin-bottom: 2rem;
+
+    @media (max-width: $container-ipad) {
+      margin-bottom: .5rem;
+    }
 
     @media (max-width: 600px) {
       max-width: 60px;
