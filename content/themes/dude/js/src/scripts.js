@@ -7,7 +7,7 @@ document.body.classList.remove('no-js');
 document.body.classList.add('js');
 
 // Increase session page visits count
-sessionStorage.setItem( 'chat_greeting_visits', sessionStorage.getItem( 'chat_greeting_visits' ) + 1 );
+sessionStorage.setItem( 'chat_greeting_visits', Number( sessionStorage.getItem( 'chat_greeting_visits' ) ) + 1 );
 
 // Init lazyload
 let images = document.querySelectorAll('.lazyload');
