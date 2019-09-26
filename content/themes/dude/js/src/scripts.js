@@ -298,41 +298,38 @@ lazyload(images, {
 
     // Chat greeting
     if ( typeof( Storage ) !== 'undefined' ) {
-      // show message on every else page than blog or singular post, but allow on singular when explicity setted as so
-      if ( ! $('body').hasClass('blog') && ( ! $('body').hasClass('single-post') || $('body').hasClass('send-chat-greeting') ) ) {
-        if ( sessionStorage.getItem( 'chat_greeting_visits' ) >= 5 && localStorage.getItem( 'chat_greeting_sent' ) === null ) {
-          // send chat if user has visited over 5 pages and greeting still not sent
-          setTimeout( function() {
-            maybeSendChatGreeting();
-          }, 3000 );
-        } else if ( localStorage.getItem( 'chat_greeting_sent' ) === null ) {
-          // send greeting if not send before
+      if ( sessionStorage.getItem( 'chat_greeting_visits' ) >= 5 && localStorage.getItem( 'chat_greeting_sent' ) === null ) {
+        // send chat if user has visited over 5 pages and greeting still not sent
+        setTimeout( function() {
+          maybeSendChatGreeting();
+        }, 3000 );
+      } else if ( localStorage.getItem( 'chat_greeting_sent' ) === null ) {
+        // send greeting if not send before
 
-          // init timer
-          TimeMe.initialize({
-            currentPageName: document.title ,
-            idleTimeoutInSeconds: 10
-          });
+        // init timer
+        TimeMe.initialize({
+          currentPageName: document.title ,
+          idleTimeoutInSeconds: 10
+        });
 
-          // trigger chat after X seconds
-          TimeMe.callAfterTimeElapsedInSeconds( 15, function() {
-            maybeSendChatGreeting();
-          } );
-        } else if ( daysBetween( new Date( localStorage.getItem( 'chat_greeting_sent' ) ), new Date() ) > 1 ) {
-          // send chat if last time over day ago
+        // trigger chat after X seconds
+        TimeMe.callAfterTimeElapsedInSeconds( 15, function() {
+          maybeSendChatGreeting();
+        } );
+      } else if ( daysBetween( new Date( localStorage.getItem( 'chat_greeting_sent' ) ), new Date() ) > 1 ) {
+        // send chat if last time over day ago
 
-          // init timer
-          TimeMe.initialize({
-            currentPageName: document.title ,
-            idleTimeoutInSeconds: 10
-          });
+        // init timer
+        TimeMe.initialize({
+          currentPageName: document.title ,
+          idleTimeoutInSeconds: 10
+        });
 
-          // trigger chat after X seconds
-          TimeMe.callAfterTimeElapsedInSeconds( 15, function() {
-            maybeSendChatGreeting();
-          } );
-        } // end if send chat check
-      } // end chat allowed check
+        // trigger chat after X seconds
+        TimeMe.callAfterTimeElapsedInSeconds( 15, function() {
+          maybeSendChatGreeting();
+        } );
+      } // end if send chat check
     } // end storage check
 
     function maybeSendChatGreeting() {
