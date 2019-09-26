@@ -298,12 +298,12 @@ lazyload(images, {
 
     // Chat greeting
     if ( typeof( Storage ) !== 'undefined' ) {
-      if ( sessionStorage.getItem( 'chat_greeting_visits' ) >= 3 && localStorage.getItem( 'chat_greeting_sent' ) === null ) {
+      if ( sessionStorage.getItem( 'chat_greeting_visits' ) >= 3 && sessionStorage.getItem( 'chat_greeting_sent' ) === null ) {
         // send chat if user has visited over 3 pages and greeting still not sent
         setTimeout( function() {
           maybeSendChatGreeting();
         }, 1500 );
-      } else if ( localStorage.getItem( 'chat_greeting_sent' ) === null ) {
+      } else if ( sessionStorage.getItem( 'chat_greeting_sent' ) === null ) {
         // send greeting if not send before
 
         // init timer
@@ -316,7 +316,7 @@ lazyload(images, {
         TimeMe.callAfterTimeElapsedInSeconds( 5, function() {
           maybeSendChatGreeting();
         } );
-      } else if ( daysBetween( new Date( localStorage.getItem( 'chat_greeting_sent' ) ), new Date() ) > 1 ) {
+      } else if ( daysBetween( new Date( sessionStorage.getItem( 'chat_greeting_sent' ) ), new Date() ) > 1 ) {
         // send chat if last time over day ago
 
         // init timer
@@ -371,7 +371,7 @@ lazyload(images, {
         }]);
 
         // save that we have shown the greeting multiple times
-        localStorage.setItem( 'chat_greeting_sent', new Date().toLocaleString() );
+        sessionStorage.setItem( 'chat_greeting_sent', new Date().toLocaleString() );
       }
     }
 
@@ -382,7 +382,7 @@ lazyload(images, {
         $('.chat-greeting').remove();
       });
 
-      localStorage.setItem( 'chat_greeting_sent', new Date().toLocaleString() );
+      sessionStorage.setItem( 'chat_greeting_sent', new Date().toLocaleString() );
     });
 
     // Open chat if element is clicked
