@@ -298,8 +298,8 @@ lazyload(images, {
 
     // Chat greeting
     if ( typeof( Storage ) !== 'undefined' ) {
-      if ( sessionStorage.getItem( 'chat_greeting_visits' ) >= 5 && localStorage.getItem( 'chat_greeting_sent' ) === null ) {
-        // send chat if user has visited over 5 pages and greeting still not sent
+      if ( sessionStorage.getItem( 'chat_greeting_visits' ) >= 3 && localStorage.getItem( 'chat_greeting_sent' ) === null ) {
+        // send chat if user has visited over 3 pages and greeting still not sent
         setTimeout( function() {
           maybeSendChatGreeting();
         }, 3000 );
