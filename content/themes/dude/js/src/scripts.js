@@ -316,7 +316,7 @@ lazyload(images, {
         TimeMe.callAfterTimeElapsedInSeconds( 5, function() {
           maybeSendChatGreeting();
         } );
-      } else if ( daysBetween( new Date( sessionStorage.getItem( 'chat_greeting_sent' ) ), new Date() ) > 1 ) {
+      } else if ( moreThanGreetingThresholdAgo( new Date( sessionStorage.getItem( 'chat_greeting_sent' ) ) ) ) {
         // send chat if last time over day ago
 
         // init timer
@@ -403,6 +403,13 @@ lazyload(images, {
   var daysBetween = function( d1, d2 ) {
     var diff = Math.abs( d1.getTime() - d2.getTime() );
     return diff / (1000 * 60 * 60 * 24);
+  };
+
+  var moreThanGreetingThresholdAgo = function( date ) {
+    var toCheckAgainst = 900000; // 15 minutes in milliseconds
+    var anAgo = Date.now() - toCheckAgainst;
+
+    return date < anAgo;
   };
 
 } )( jQuery );
