@@ -37,13 +37,13 @@ function dude_register_cpt_merch() {
     'has_archive'        => true,
     'hierarchical'       => false,
     'menu_position'      => null,
-    'menu_icon'          => 'dashicons-palmtree',
+    'menu_icon'          => 'dashicons-products',
     'supports'           => array(
       'title',
       'thumbnail',
       'page-attributes',
       'revisions',
-    )
+    ),
   );
 
   register_post_type( 'merch', $args );
