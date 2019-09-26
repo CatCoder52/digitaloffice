@@ -1,0 +1,18 @@
+.block.block-merch {
+  margin-top: 6rem;
+
+  .cols {
+    @include grid(3, $gutter_x: 4rem, $gutter_y: 4rem);
+  }
+
+  .product-image {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+
+  .image {
+    width: 100%;
+    height: 70rem;
+  }
+}

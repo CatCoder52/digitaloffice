@@ -22,11 +22,17 @@ get_header(); ?>
     <section class="block block-merch">
       <div class="container">
 
+        <div class="cols">
         <?php while ( have_posts() ) : the_post(); ?>
           <div class="col col-product" data-product="<?php echo get_the_id() ?>">
 
-            <div class="col col-image" style="background-image:url('<?php echo the_post_thumbnail_url( 'large' ); ?>')"></div>
-            <style>.col-image { width: 750px; height: 500px; background-size: cover;  }</style>
+            <div class="product-image">
+              <div class="image has-lazyload">
+                <div class="background-image preview lazyload" style="background-image: url('<?php echo the_post_thumbnail_url( 'tiny-preload-thumbnail' ); ?>');" data-src="<?php echo the_post_thumbnail_url( 'large' ); ?>" data-src-mobile="<?php echo the_post_thumbnail_url( 'large' ); ?>"></div>
+                <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo the_post_thumbnail_url( 'large' ); ?>');"<?php endif; ?>></div>
+                <noscript><div class="background-image full-image" style="background-image: url('<?php echo the_post_thumbnail_url( 'large' ); ?>');"></div></noscript>
+              </div>
+            </div>
 
             <div class="col col-content">
 
@@ -40,13 +46,13 @@ get_header(); ?>
                 <div class="models">
                   <?php if ( count( $models ) > 1 ) :
                     $y = 0; foreach ( $models as $model ) : ?>
-                      <button<?php if ( $y === 0 ) { echo ' class="active"'; } ?> data-model="<?php echo esc_attr( sanitize_title( $model['name'] ) ) ?>"><?php echo esc_html( $model['name'] ) ?></button>
+                      <button<?php if ( 0 === $y ) { echo ' class="active"'; } ?> data-model="<?php echo esc_attr( sanitize_title( $model['name'] ) ) ?>"><?php echo esc_html( $model['name'] ) ?></button>
                     <?php $y++; endforeach;
                   endif; ?>
                 </div>
 
                 <?php $x = 0; foreach ( $models as $model ) : ?>
-                  <div class="sizes<?php if ( $x === 0 ) { echo ' visible'; } ?>" data-model="<?php echo esc_attr( sanitize_title( $model['name'] ) ) ?>">
+                  <div class="sizes<?php if ( 0 === $x ) { echo ' visible'; } ?>" data-model="<?php echo esc_attr( sanitize_title( $model['name'] ) ) ?>">
                     <?php foreach ( $models[0]['stock'] as $stock ) : ?>
                       <button data-size="<?php echo mb_strtolower( $stock['size'] ) ?>" data-instock="<?php echo (int) $stock['stock_amount'] ?>"<?php if ( empty( (int) $stock['stock_amount'] ) ) { echo ' style="disabled" disabled="disabled"'; } ?>><?php echo esc_html( $stock['size'] ) ?></button>
                     <?php endforeach; ?>
@@ -60,6 +66,7 @@ get_header(); ?>
 
           </div>
         <?php endwhile; ?>
+      </div>
 
       </div>
     </section>
