@@ -9,13 +9,10 @@
  */
 
 // Featured image
-$bg_image_tiny_default = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'tiny-preload-thumbnail' );
-$bg_image_mobile = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
-$bg_image_tiny = $bg_image_tiny_default[0];
-$bg_image = null;
-if ( has_post_thumbnail() ) {
-  $bg_image = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
-}
+$bg_image_tiny_default = get_template_directory_uri() . '/images/merch-tiny.jpg';
+$bg_image_mobile = $bg_image_tiny_default;
+$bg_image_tiny = $bg_image_tiny_default;
+$bg_image = get_template_directory_uri() . '/images/merch.jpg';
 
 $title = 'Merch';
 $content = 'Dudella on täällä kaikenlaista sinua varten. Pick your poison!';
