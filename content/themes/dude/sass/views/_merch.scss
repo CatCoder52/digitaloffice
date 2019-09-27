@@ -1,8 +1,21 @@
-.block.block-merch {
+.content-area .block.block-merch {
   margin-top: 6rem;
 
   .cols {
     @include grid(3, $gutter_x: 4rem, $gutter_y: 4rem);
+  }
+
+  .product-header {
+    display: flex;
+    justify-content: space-between;
+
+    h2 {
+      @extend %h4;
+    }
+
+    p {
+      font-weight: 600;
+    }
   }
 
   .product-image {
@@ -14,5 +27,82 @@
   .image {
     width: 100%;
     height: 70rem;
+    margin-bottom: 2rem;
+  }
+
+  .models {
+    display: flex;
+    margin-bottom: 1rem;
+
+    button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button) {
+      width: 50%;
+      height: 5.5rem;
+      background: $color-dude-white;
+      border: 1px solid $color-dude-deep-black;
+      color: $color-dude-deep-black;
+      padding-top: 0;
+      padding-bottom: 0;
+      align-items: center;
+      justify-content: center;
+
+      &.active {
+        background: $color-dude-deep-black;
+        border-color: $color-dude-deep-black;
+        color: $color-dude-white;
+      }
+
+      &:first-child {
+        width: calc(50% - 1rem);
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  .sizes {
+    display: none;
+
+    &.visible {
+      display: block;
+    }
+  }
+
+  .sizes button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button) {
+    border-radius: 50%;
+    width: 5.5rem;
+    height: 5.5rem;
+    margin-right: .5rem;
+    display: inline-flex;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+    background: $color-dude-white;
+    border: 1px solid $color-dude-deep-black;
+    color: $color-dude-deep-black;
+
+    &:hover {
+      background-color: $color-superlightgrey;
+    }
+
+    &.active {
+      background: $color-dude-deep-black;
+      border-color: $color-dude-deep-black;
+      color: $color-dude-white;
+    }
+  }
+
+  button.add-to-cart:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button) {
+    background: $color-dude-white;
+    border: 1px solid $color-dude-deep-black;
+    color: $color-dude-deep-black;
+    height: 5.5rem;
+    display: inline-flex;
+    padding: 0 3rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .choices {
+    display: flex;
+    justify-content: space-between;
   }
 }

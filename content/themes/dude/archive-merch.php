@@ -34,24 +34,29 @@ get_header(); ?>
               </div>
             </div>
 
-            <div class="col col-content">
+            <div class="content">
 
-              <h2><?php the_title() ?></h2>
-              <p class="price"><?php echo get_post_meta( get_the_id(), 'price', true ) ?>&euro;</p>
+              <header class="product-header">
+                <h2><?php the_title() ?></h2>
+                <p class="price"><?php echo get_post_meta( get_the_id(), 'price', true ) ?> &euro;</p>
+              </header>
 
               <?php echo wpautop( get_post_meta( get_the_id(), 'description', true ) ) ?>
 
-              <?php $models = get_field( 'models' );
-              if ( ! empty( $models ) ) : ?>
-                <div class="models">
-                  <?php if ( count( $models ) > 1 ) :
-                    $y = 0; foreach ( $models as $model ) : ?>
+                <?php $models = get_field( 'models' );
+                if ( ! empty( $models ) ) :
+                  if ( count( $models ) > 1 ) : ?>
+                    <div class="models">
+                      <?php $y = 0; foreach ( $models as $model ) : ?>
                       <button<?php if ( 0 === $y ) { echo ' class="active"'; } ?> data-model="<?php echo esc_attr( sanitize_title( $model['name'] ) ) ?>"><?php echo esc_html( $model['name'] ) ?></button>
-                    <?php $y++; endforeach;
-                  endif; ?>
-                </div>
+                      <?php $y++; endforeach; ?>
+                    </div>
+                  <?php endif; ?>
+                <?php endif; ?>
 
-                <?php $x = 0; foreach ( $models as $model ) : ?>
+              <div class="choices">
+                <?php if ( ! empty( $models ) ) : $x = 0; ?>
+                  <?php foreach ( $models as $model ) : ?>
                   <div class="sizes<?php if ( 0 === $x ) { echo ' visible'; } ?>" data-model="<?php echo esc_attr( sanitize_title( $model['name'] ) ) ?>">
                     <?php foreach ( $models[0]['stock'] as $stock ) : ?>
                       <button data-size="<?php echo mb_strtolower( $stock['size'] ) ?>" data-instock="<?php echo (int) $stock['stock_amount'] ?>"<?php if ( empty( (int) $stock['stock_amount'] ) ) { echo ' style="disabled" disabled="disabled"'; } ?>><?php echo esc_html( $stock['size'] ) ?></button>
@@ -62,13 +67,14 @@ get_header(); ?>
 
               <div class="add-to-cart"><button class="add-to-cart disabled" disabled="disabled">Koriin +</button></div>
 
-            </div>
+            </div><!-- .choices -->
+          </div><!-- .content -->
+        </div><!-- .col -->
 
-          </div>
         <?php endwhile; ?>
-      </div>
+        </div><!-- .cols -->
 
-      </div>
+      </div><!-- .container -->
     </section>
 
     <?php echo do_shortcode( '[simpay id="4535"]' ); ?>
