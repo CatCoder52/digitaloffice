@@ -20,7 +20,8 @@
 
     // Change model image
     var productimage = $(this).data('image');
-    $(this).closest(".full-image").css("background-image", "url('" + productimage + "')");
+    var changethis = $(this).parent().parent().prev().children().find('.full-image');
+    $(changethis).css("background-image", "url('" + productimage + "')");
 
     // Set this model sizes visible
     $(this).closest('.col-product').find('.sizes').removeClass('visible');
@@ -76,7 +77,7 @@
     }
 
     // console.log( element.closest('.col-product').data('product') );
-    // console.log( cart );
+    console.log( cart );
   }
 
 } )( jQuery );

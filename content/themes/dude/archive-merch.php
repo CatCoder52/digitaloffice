@@ -48,7 +48,7 @@ get_header(); ?>
                   if ( count( $models ) > 1 ) : ?>
                     <div class="models">
                       <?php $y = 0; foreach ( $models as $model ) : ?>
-                      <button<?php if ( 0 === $y ) { echo ' class="active"'; } ?> data-model="<?php echo esc_attr( sanitize_title( $model['name'] ) ) ?>"><?php echo esc_html( $model['name'] ) ?></button>
+                      <button<?php if ( 0 === $y ) { echo ' class="active"'; } ?> data-image="<?php echo wp_get_attachment_url( $model['image'] ); ?>" data-model="<?php echo esc_attr( sanitize_title( $model['name'] ) ) ?>"><?php echo esc_html( $model['name'] ) ?></button>
                       <?php $y++; endforeach; ?>
                     </div>
                   <?php endif; ?>
@@ -60,7 +60,7 @@ get_header(); ?>
                   <div class="sizes<?php if ( 0 === $x ) { echo ' visible'; } ?>" data-model="<?php echo esc_attr( sanitize_title( $model['name'] ) ) ?>">
 
                     <?php foreach ( $models[0]['stock'] as $stock ) : ?>
-                      <button data-size="<?php echo mb_strtolower( $stock['size'] ) ?>" data-image="<?php wp_get_attachment_image_src( $model['image'], 'large' ); ?>" data-instock="<?php echo (int) $stock['stock_amount'] ?>"<?php if ( empty( (int) $stock['stock_amount'] ) ) { echo ' style="disabled" disabled="disabled"'; } ?>><?php echo esc_html( $stock['size'] ) ?></button>
+                      <button data-size="<?php echo mb_strtolower( $stock['size'] ) ?>" data-instock="<?php echo (int) $stock['stock_amount'] ?>"<?php if ( empty( (int) $stock['stock_amount'] ) ) { echo ' style="disabled" disabled="disabled"'; } ?>><?php echo esc_html( $stock['size'] ) ?></button>
                     <?php endforeach; ?>
                   </div>
                 <?php $x++; endforeach; ?>
