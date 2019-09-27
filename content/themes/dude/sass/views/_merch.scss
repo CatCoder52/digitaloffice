@@ -117,6 +117,9 @@
 }
 
 .cart {
+  // Temporarily:
+  display: none;
+
   position: fixed;
   z-index: 9;
   left: 3rem;
