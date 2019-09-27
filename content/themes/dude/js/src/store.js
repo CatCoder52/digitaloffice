@@ -77,7 +77,15 @@
     }
 
     // console.log( element.closest('.col-product').data('product') );
-    console.log( cart );
+    // console.log( cart[0].model );
+    // console.log( cart[0].product );
+    // console.log( cart[0].qty );
+    // console.log( cart[0].size );
+
+    // Output cart
+    for (var i = 0; i < cart.length; i++) {
+      console.log( cart[i].model );
+    }
   }
 
 } )( jQuery );

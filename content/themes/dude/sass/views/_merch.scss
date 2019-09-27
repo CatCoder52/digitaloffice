@@ -105,4 +105,123 @@
     display: flex;
     justify-content: space-between;
   }
+
+  .disabled,
+  [disabled] {
+    opacity: .25;
+  }
+}
+
+.simpay-modal-control-open {
+  display: none;
+}
+
+.cart {
+  position: fixed;
+  z-index: 9;
+  left: 3rem;
+  bottom: 3rem;
+  background: $color-dude-black;
+  padding: 3rem;
+  cursor: pointer;
+  transition: all $transition-duration;
+  display: flex;
+  box-shadow: 10px 10px 30px -5px rgba($color-dude-black, .15);
+  max-width: 60rem;
+  width: 100%;
+  align-items: center;
+
+  p {
+    display: block;
+  }
+
+  svg {
+    stroke: $color-dude-white;
+    margin-right: 1.5rem;
+    width: 24px;
+    height: 24px;
+  }
+
+  span {
+    font-weight: 700;
+  }
+
+  * {
+    color: $color-dude-white;
+  }
+
+  .message {
+    position: relative;
+    z-index: 0;
+  }
+
+  .close-chat {
+    fill: $color-dude-white;
+    background: none;
+    border: 0;
+    position: absolute;
+    padding: 2rem;
+    top: 0;
+    right: 0;
+    z-index: 3;
+
+    &:hover {
+      cursor: pointer;
+
+      svg {
+        fill: rgba($color-dude-white, .5);
+        transform: scale(1.3);
+      }
+    }
+
+    svg {
+      transition: all $transition-duration;
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    left: 0;
+    bottom: 0;
+    padding: 2rem;
+    margin: 2rem;
+    max-width: 100%;
+    width: calc(100% - 4rem);
+  }
+
+  p {
+    @include responsive-font(14px, 18px);
+    margin: 0;
+    font-weight: 300;
+
+    &.head {
+      font-weight: 600;
+      margin-bottom: .4rem;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+}
+
+// Credit to Sara Soueidan
+// @link https://github.com/SaraSoueidan/creative-list-effects/blob/master/css/styles-4.css
+
+.removed-item {
+  animation: removed-item-animation .4s cubic-bezier(.55, -.04, .91, .94) forwards;
+}
+
+@keyframes removed-item-animation {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(.5);
+    opacity: 0;
+  }
 }

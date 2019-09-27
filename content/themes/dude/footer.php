@@ -17,7 +17,6 @@
 
   <div class="container">
 
-
     <div class="logo-square">
       <?php include get_theme_file_path( '/svg/logo.svg' ); ?>
     </div>
@@ -54,6 +53,16 @@
         a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
+
+<?php if ( 'merch' === get_post_type() ) : ?>
+  <div class="cart" data-product-id="null">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+    <p>Korissa <span class="qty">1</span> kpl <span class="product">tuotetta</span>, malli: <span class="model"></span>, koko: <span class="size">m</span></p>
+
+    <button class="empty-cart">Tyhjennä ostoskori</button>
+    <button class="buy">Maksa pois kuleksimasta</button>
+  </div>
+<?php endif; ?>
 
 </body>
 </html>
