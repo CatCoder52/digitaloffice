@@ -60,7 +60,7 @@ get_header(); ?>
                   <div class="sizes<?php if ( 0 === $x ) { echo ' visible'; } ?>" data-model="<?php echo esc_attr( sanitize_title( $model['name'] ) ) ?>">
 
                     <?php foreach ( $models[0]['stock'] as $stock ) : ?>
-                      <button data-size="<?php echo mb_strtolower( $stock['size'] ) ?>" data-image="<?php  wp_get_attachment_image_src( $model['image'], 'large' ); ?>" data-instock="<?php echo (int) $stock['stock_amount'] ?>"<?php if ( empty( (int) $stock['stock_amount'] ) ) { echo ' style="disabled" disabled="disabled"'; } ?>><?php echo esc_html( $stock['size'] ) ?></button>
+                      <button data-size="<?php echo mb_strtolower( $stock['size'] ) ?>" data-image="<?php wp_get_attachment_image_src( $model['image'], 'large' ); ?>" data-instock="<?php echo (int) $stock['stock_amount'] ?>"<?php if ( empty( (int) $stock['stock_amount'] ) ) { echo ' style="disabled" disabled="disabled"'; } ?>><?php echo esc_html( $stock['size'] ) ?></button>
                     <?php endforeach; ?>
                   </div>
                 <?php $x++; endforeach; ?>
