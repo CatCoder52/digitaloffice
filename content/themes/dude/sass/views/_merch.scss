@@ -117,24 +117,50 @@
 }
 
 .cart {
-  // Temporarily:
-  display: none;
   position: fixed;
   z-index: 9;
   left: 3rem;
   bottom: 3rem;
   background: $color-dude-black;
   padding: 3rem;
-  cursor: pointer;
   transition: all $transition-duration;
   display: flex;
   box-shadow: 10px 10px 30px -5px rgba($color-dude-black, .15);
-  max-width: 60rem;
+  max-width: 90rem;
   width: 100%;
   align-items: center;
 
+  .cart-body {
+    width: calc(100% - 24px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  button {
+    background: transparent;
+    color: $color-dude-white;
+    border: 1px solid $color-dude-white;
+    padding: 1rem 2rem;
+    transition: all $transition-duration;
+
+    &:hover {
+      background: $color-dude-white;
+      color: $color-dude-black;
+      border-color: 1px solid $color-dude-white;
+    }
+  }
+
   p {
+    @include responsive-font(14px, 18px);
     display: block;
+    margin: 0;
+    font-weight: 300;
+
+    &.head {
+      font-weight: 600;
+      margin-bottom: .4rem;
+    }
   }
 
   svg {
@@ -167,15 +193,6 @@
     right: 0;
     z-index: 3;
 
-    &:hover {
-      cursor: pointer;
-
-      svg {
-        fill: rgba($color-dude-white, .5);
-        transform: scale(1.3);
-      }
-    }
-
     svg {
       transition: all $transition-duration;
       width: 1.6rem;
@@ -190,17 +207,6 @@
     margin: 2rem;
     max-width: 100%;
     width: calc(100% - 4rem);
-  }
-
-  p {
-    @include responsive-font(14px, 18px);
-    margin: 0;
-    font-weight: 300;
-
-    &.head {
-      font-weight: 600;
-      margin-bottom: .4rem;
-    }
   }
 
   &:hover {
