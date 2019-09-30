@@ -97,38 +97,37 @@
       } );
     }
 
-    // console.log( element.closest('.col-product').data('product') );
-    // console.log( cart[0].model );
-    // console.log( cart[0].product );
-    // console.log( cart[0].qty );
-    // console.log( cart[0].size );
-
+    // Get total quantities
     var totals = 0;
     for (var i = 0; i < cart.length; i++) {
       totals += cart[i].qty;
     }
 
+    // Get total prices
     var pricetotals = 0;
     for (var i = 0; i < cart.length; i++) {
       pricetotals += cart[i].price * cart[i].qty;
     }
 
+    // Get total products
     var products = '';
     for (var i = 0; i < cart.length; i++) {
       products = '<span class="products">1 x <b>' + cart[i].productname + '</b>, malli: ' + cart[i].modelname + ' <span class="size">' + cart[i].size + '</span></span><span class="comma">, </span>';
     }
 
+    // Add item labels to cart
     document.getElementById('totals').innerHTML = totals;
     document.getElementById('price').innerHTML = pricetotals;
     document.getElementById('products').innerHTML += products;
+
+    // Hide empty cart text, show cart
     $('span.cart-text').css('display', 'inline');
     $('.empty-cart').hide();
     $('.full-cart').show();
 
-    var plaintext = $('.full-cart').text();
-
     // Add to cart modal input fields
-    document.getElementById("simpay-4535-text-8").value = plaintext;
+    var plaintext = $('.full-cart').text();
+    document.getElementById('simpay-4535-text-8').value = plaintext;
   }
 
 } )( jQuery );

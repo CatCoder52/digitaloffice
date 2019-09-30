@@ -147,7 +147,8 @@
 }
 
 // Hide Simple pay form inputs that are not needed on the front-end
-.simpay-form-control.simpay-same-address-toggle-container {
+.simpay-form-control.simpay-same-address-toggle-container,
+.simpay-form-control.simpay-text-container {
   display: none !important;
 }
 
