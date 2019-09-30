@@ -353,7 +353,7 @@ lazyload(images, {
         var greetings = [
           'Moi! Verkkosivut uudistuksen tarpeessa? Uutta ilmettä putiikille? Kysy lisää chatissa.',
           'Moro! Voisimmeko auttaa jotenkin? 🙂',
-          'Terrrrve! Pistä viestiä niin kerron vähän lisää meidän palveluista. 👋',
+          'Terve! Pistä viestiä niin kerron vähän lisää meidän palveluista. 👋',
         ];
       }
 
