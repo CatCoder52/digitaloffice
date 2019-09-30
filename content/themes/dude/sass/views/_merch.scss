@@ -142,8 +142,17 @@
   }
 }
 
+// Simple pay stuff
+// Test badge position fix
+.simpay-test-mode-badge-container {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+}
+
 .simpay-modal-control-open {
-  // display: none;
+  display: none;
 }
 
 // Hide Simple pay form inputs that are not needed on the front-end

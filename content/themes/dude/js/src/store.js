@@ -131,3 +131,22 @@
   }
 
 } )( jQuery );
+
+// Launch Overlay from Other Buttons or Links
+    // Source: https://docs.wpsimplepay.com/articles/launch-overlay-externally/
+( function( $ ) {
+  'use strict';
+
+  // Custom Overlay forms
+  $( '#buy' ).click( function( e ) {
+    e.preventDefault();
+    simpayAppPro.toggleOverlayForm( 4535 );
+  } );
+
+  // Stripe Checkout forms
+  $( '#buy' ).click( function( e ) {
+    e.preventDefault();
+    $( '#simpay-form-4535' ).find( '.simpay-payment-btn' ).click();
+  } );
+
+}( jQuery ) );

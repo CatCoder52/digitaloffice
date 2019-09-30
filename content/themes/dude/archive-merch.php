@@ -80,8 +80,6 @@ get_header(); ?>
       </div><!-- .container -->
     </section>
 
-    <?php echo do_shortcode( '[simpay id="4535"]' ); ?>
-
 	</main><!-- #main -->
 </div><!-- #primary -->
 
