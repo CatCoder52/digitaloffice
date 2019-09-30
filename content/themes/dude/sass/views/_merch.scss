@@ -34,6 +34,7 @@
 
     h2 {
       @extend %h4;
+      margin-bottom: .5rem;
     }
 
     p {
@@ -55,7 +56,7 @@
 
   .models {
     display: flex;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 
     button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button) {
       width: 50%;
