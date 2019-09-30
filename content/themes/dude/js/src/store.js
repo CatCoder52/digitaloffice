@@ -12,7 +12,7 @@
   // # LISTENERS
   // Model select
   $('.col-product .models button').on( 'click', function() {
-    var model = $(this).data('model');
+    var modelslug = $(this).data('model-slug');
 
     // Set this model as active
     $(this).closest('.models').find('button').removeClass('active');
@@ -25,7 +25,7 @@
 
     // Set this model sizes visible
     $(this).closest('.col-product').find('.sizes').removeClass('visible');
-    $(this).closest('.col-product').find('.sizes[data-model="' + model + '"]').addClass('visible');
+    $(this).closest('.col-product').find('.sizes[data-model-slug="' + modelslug + '"]').addClass('visible');
   } );
 
   // Size select
@@ -55,12 +55,12 @@
   function addToCart( element ) {
     var product = element.closest('.col-product').data('product');
     var productname = element.closest('.col-product').data('product-name');
-    var model = element.closest('.col-product').find('.models button.active').data('model');
+    var modelname = element.closest('.col-product').find('.models button.active').data('model-slug');
     var size = element.closest('.col-product').find('.sizes.visible button.active').data('size');
     var size_instock = element.closest('.col-product').find('.sizes.visible button.active').data('instock');
 
     // Check if similar item is already in cart
-    var cart_index = _.findIndex( cart, { 'product': product, 'model': model, 'size': size } );
+    var cart_index = _.findIndex( cart, { 'product': product, 'modelname': modelname, 'modelslug': modelslug, 'size': size } );
     if ( cart_index !== -1 ) {
       // Is in cart, check tha we have enough in stock
       if ( cart[ cart_index ].qty < size_instock ) {
@@ -72,8 +72,10 @@
       cart.push( {
         'product': product,
         'productname': productname,
-        'model': model,
+        'modelname': modelname,
+        'modelslug': modelslug,
         'size': size,
+        'stock': size_instock,
         'qty': 1
       } );
     }
@@ -90,7 +92,7 @@
     }
 
     for (var i = 0; i < cart.length; i++) {
-      products = '<span class="products">(<b>' + cart[i].productname + '</b>, malli: ' + cart[i].model + ', koko ' + cart[i].size + ')</span>';
+      products = '<span class="products">(<b>' + cart[i].productname + '</b>, malli: ' + cart[i].modelname + ', koko ' + cart[i].size + ')</span>';
     }
 
     document.getElementById('totals').innerHTML = totals;
