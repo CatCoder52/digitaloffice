@@ -26,6 +26,16 @@
     // Set this model sizes visible
     $(this).closest('.col-product').find('.sizes').removeClass('visible');
     $(this).closest('.col-product').find('.sizes[data-model-slug="' + modelslug + '"]').addClass('visible');
+
+    // If model is changed again and sizes are disabled, disable add to cart button
+    if ( $(this).closest('.col-product').find('.sizes.visible[data-model-slug="' + modelslug + '"] button').length > 0) {
+      $(this).closest('.col-product').find('.add-to-cart').removeClass('active');
+      $(this).closest('.col-product').find('.add-to-cart').prop('disabled', true);
+    } else {
+      $(this).closest('.col-product').find('.add-to-cart').addClass('active');
+      $(this).closest('.col-product').find('.add-to-cart').prop('disabled', false);
+    }
+
   } );
 
   // Size select
