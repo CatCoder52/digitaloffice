@@ -54,6 +54,7 @@
   // # FUNCTIONS
   function addToCart( element ) {
     var product = element.closest('.col-product').data('product');
+    var productname = element.closest('.col-product').data('product-name');
     var model = element.closest('.col-product').find('.models button.active').data('model');
     var size = element.closest('.col-product').find('.sizes.visible button.active').data('size');
     var size_instock = element.closest('.col-product').find('.sizes.visible button.active').data('instock');
@@ -70,6 +71,7 @@
       // Add product to cart
       cart.push( {
         'product': product,
+        'productname': productname,
         'model': model,
         'size': size,
         'qty': 1
@@ -82,10 +84,23 @@
     // console.log( cart[0].qty );
     // console.log( cart[0].size );
 
-    // Output cart
+    var carthtml = '';
     for (var i = 0; i < cart.length; i++) {
-      console.log( cart[i].model );
+      totals = 'yhteensä <span class="qty">' + cart[0].qty + '</span> kpl ';
     }
+
+    for (var i = 0; i < cart.length; i++) {
+      products = '<span class="products">(<b>' + cart[i].productname + '</b>, malli: ' + cart[i].model + ', koko ' + cart[i].size + ')</span>';
+    }
+
+    document.getElementById('totals').innerHTML = totals;
+    document.getElementById('products').innerHTML = products;
+    $('span.cart-text').css('display', 'inline');
+
+    // Output cart
+    // for (var i = 0; i < cart.length; i++) {
+    //   console.log( cart[i].product );
+    // }
   }
 
 } )( jQuery );

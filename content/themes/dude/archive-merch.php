@@ -24,9 +24,11 @@ get_header(); ?>
 
         <div class="cols">
         <?php while ( have_posts() ) : the_post(); ?>
-          <div class="col col-product" data-product="<?php echo get_the_id() ?>">
+          <div class="col col-product" data-product="<?php echo get_the_id() ?>" data-product-name="<?php echo get_the_title() ?>">
 
             <div class="product-image">
+              <h2 class="sold-out">Loppuunmyyty</h2>
+
               <div class="image has-lazyload">
                 <div class="background-image preview lazyload" style="background-image: url('<?php echo the_post_thumbnail_url( 'tiny-preload-thumbnail' ); ?>');" data-src="<?php echo the_post_thumbnail_url( 'large' ); ?>" data-src-mobile="<?php echo the_post_thumbnail_url( 'large' ); ?>"></div>
                 <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo the_post_thumbnail_url( 'large' ); ?>');"<?php endif; ?>></div>
@@ -45,10 +47,10 @@ get_header(); ?>
 
                 <?php $models = get_field( 'models' );
                 if ( ! empty( $models ) ) :
-                  if ( count( $models ) > 1 ) : ?>
-                    <div class="models">
+                  if ( count( $models ) > 0 ) : ?>
+                    <div class="models models-<?php echo count( $models ); ?>">
                       <?php $y = 0; foreach ( $models as $model ) : ?>
-                      <button<?php if ( 0 === $y ) { echo ' class="active"'; } ?> data-image="<?php echo wp_get_attachment_url( $model['image'] ); ?>" data-model="<?php echo esc_attr( sanitize_title( $model['name'] ) ) ?>"><?php echo esc_html( $model['name'] ) ?></button>
+                      <button<?php if ( 0 === $y ) { echo ' class="active"'; } ?> data-image="<?php echo wp_get_attachment_url( $model['image'] ); ?>" data-model="<?php echo $model['name']; ?>"><?php echo esc_html( $model['name'] ) ?></button>
                       <?php $y++; endforeach; ?>
                     </div>
                   <?php endif; ?>
