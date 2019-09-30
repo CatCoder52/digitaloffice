@@ -55,12 +55,17 @@
   function addToCart( element ) {
     var product = element.closest('.col-product').data('product');
     var productname = element.closest('.col-product').data('product-name');
-    var modelname = element.closest('.col-product').find('.models button.active').data('model-slug');
+    var modelname = element.closest('.col-product').find('.models button.active').data('model-name');
+    var modelslug = element.closest('.col-product').find('.models button.active').data('model-slug');
     var size = element.closest('.col-product').find('.sizes.visible button.active').data('size');
     var size_instock = element.closest('.col-product').find('.sizes.visible button.active').data('instock');
 
     // Check if similar item is already in cart
-    var cart_index = _.findIndex( cart, { 'product': product, 'modelname': modelname, 'modelslug': modelslug, 'size': size } );
+    var cart_index = _.findIndex( cart, {
+      'product': product,
+      'modelslug': modelslug,
+      'size': size
+    } );
     if ( cart_index !== -1 ) {
       // Is in cart, check tha we have enough in stock
       if ( cart[ cart_index ].qty < size_instock ) {
@@ -87,17 +92,19 @@
     // console.log( cart[0].size );
 
     var carthtml = '';
+    var totals = 0;
     for (var i = 0; i < cart.length; i++) {
-      totals = 'yhteensä <span class="qty">' + cart[0].qty + '</span> kpl ';
+      totals += cart[i].qty;
     }
 
     for (var i = 0; i < cart.length; i++) {
-      products = '<span class="products">(<b>' + cart[i].productname + '</b>, malli: ' + cart[i].modelname + ', koko ' + cart[i].size + ')</span>';
+      products = '<span class="products">1 x <b>' + cart[i].productname + '</b>, malli: ' + cart[i].modelname + ' <span class="size">' + cart[i].size + '</span></span><span class="comma">, </span>';
     }
 
     document.getElementById('totals').innerHTML = totals;
-    document.getElementById('products').innerHTML = products;
+    document.getElementById('products').innerHTML += products;
     $('span.cart-text').css('display', 'inline');
+    $('span.empty-cart').hide();
 
     // Output cart
     // for (var i = 0; i < cart.length; i++) {
