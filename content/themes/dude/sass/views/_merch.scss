@@ -146,6 +146,11 @@
   // display: none;
 }
 
+// Hide Simple pay form inputs that are not needed on the front-end
+.simpay-form-control.simpay-same-address-toggle-container {
+  display: none !important;
+}
+
 .cart {
   position: fixed;
   z-index: 9;
@@ -216,6 +221,10 @@
     margin-right: 1.5rem;
     width: 24px;
     height: 24px;
+  }
+
+  .full-cart {
+    display: none;
   }
 
   i {

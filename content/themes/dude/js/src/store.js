@@ -122,7 +122,13 @@
     document.getElementById('price').innerHTML = pricetotals;
     document.getElementById('products').innerHTML += products;
     $('span.cart-text').css('display', 'inline');
-    $('span.empty-cart').hide();
+    $('.empty-cart').hide();
+    $('.full-cart').show();
+
+    var plaintext = $('.full-cart').text();
+
+    // Add to cart modal input fields
+    document.getElementById("simpay-4535-text-8").value = plaintext;
   }
 
 } )( jQuery );
