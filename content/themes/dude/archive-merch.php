@@ -24,7 +24,7 @@ get_header(); ?>
 
         <div class="cols">
         <?php while ( have_posts() ) : the_post(); ?>
-          <div class="col col-product" data-product="<?php echo get_the_id() ?>" data-product-name="<?php echo get_the_title() ?>">
+          <div class="col col-product" data-price="<?php echo get_post_meta( get_the_id(), 'price', true ); ?>" data-product="<?php echo get_the_id() ?>" data-product-name="<?php echo get_the_title() ?>">
 
             <div class="product-image">
               <h2 class="sold-out">Loppuunmyyty</h2>
@@ -50,7 +50,7 @@ get_header(); ?>
                   if ( count( $models ) > 0 ) : ?>
                     <div class="models models-<?php echo count( $models ); ?>">
                       <?php $y = 0; foreach ( $models as $model ) : ?>
-                      <button<?php if ( 0 === $y ) { echo ' class="active"'; } ?> data-image="<?php echo wp_get_attachment_url( $model['image'] ); ?>" data-model-slug="<?php echo esc_attr( sanitize_title( $model['name'] ) ) ?>" data-model-name="<?php echo $model['name']; ?>"><?php echo esc_html( $model['name'] ) ?></button>
+                      <button<?php if ( 0 === $y ) { echo ' class="active"'; } ?> data-price="<?php echo get_post_meta( get_the_id(), 'price', true ); ?>" data-image="<?php echo wp_get_attachment_url( $model['image'] ); ?>" data-model-slug="<?php echo esc_attr( sanitize_title( $model['name'] ) ) ?>" data-model-name="<?php echo $model['name']; ?>"><?php echo esc_html( $model['name'] ) ?></button>
                       <?php $y++; endforeach; ?>
                     </div>
                   <?php endif; ?>
@@ -59,7 +59,7 @@ get_header(); ?>
               <div class="choices">
                 <?php if ( ! empty( $models ) ) : $x = 0; ?>
                   <?php foreach ( $models as $model ) : ?>
-                  <div class="sizes<?php if ( 0 === $x ) { echo ' visible'; } ?>" data-model-slug="<?php echo esc_attr( sanitize_title( $model['name'] ) ) ?>" data-model-name="<?php echo $model['name']; ?>">
+                  <div class="sizes<?php if ( 0 === $x ) { echo ' visible'; } ?>" data-price="<?php echo get_post_meta( get_the_id(), 'price', true ); ?>" data-model-slug="<?php echo esc_attr( sanitize_title( $model['name'] ) ) ?>" data-model-name="<?php echo $model['name']; ?>">
 
                     <?php foreach ( $models[0]['stock'] as $stock ) : ?>
                       <button data-size="<?php echo mb_strtolower( $stock['size'] ) ?>" data-instock="<?php echo (int) $stock['stock_amount'] ?>"<?php if ( empty( (int) $stock['stock_amount'] ) ) { echo ' style="disabled" disabled="disabled"'; } ?>><?php echo esc_html( $stock['size'] ) ?></button>

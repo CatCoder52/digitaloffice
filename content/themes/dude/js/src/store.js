@@ -54,7 +54,8 @@
   // # FUNCTIONS
   function addToCart( element ) {
     var product = element.closest('.col-product').data('product');
-    var productname = element.closest('.col-product').data('product-name');
+    var price = element.closest('.col-product').data('price');
+    var productname = escape( element.closest('.col-product').data('product-name') );
     var modelname = element.closest('.col-product').find('.models button.active').data('model-name');
     var modelslug = element.closest('.col-product').find('.models button.active').data('model-slug');
     var size = element.closest('.col-product').find('.sizes.visible button.active').data('size');
@@ -81,6 +82,7 @@
         'modelslug': modelslug,
         'size': size,
         'stock': size_instock,
+        'price': price,
         'qty': 1
       } );
     }
@@ -91,25 +93,26 @@
     // console.log( cart[0].qty );
     // console.log( cart[0].size );
 
-    var carthtml = '';
     var totals = 0;
     for (var i = 0; i < cart.length; i++) {
       totals += cart[i].qty;
     }
 
+    var pricetotals = 0;
+    for (var i = 0; i < cart.length; i++) {
+      pricetotals += cart[i].price * cart[i].qty;
+    }
+
+    var products = '';
     for (var i = 0; i < cart.length; i++) {
       products = '<span class="products">1 x <b>' + cart[i].productname + '</b>, malli: ' + cart[i].modelname + ' <span class="size">' + cart[i].size + '</span></span><span class="comma">, </span>';
     }
 
     document.getElementById('totals').innerHTML = totals;
+    document.getElementById('price').innerHTML = pricetotals;
     document.getElementById('products').innerHTML += products;
     $('span.cart-text').css('display', 'inline');
     $('span.empty-cart').hide();
-
-    // Output cart
-    // for (var i = 0; i < cart.length; i++) {
-    //   console.log( cart[i].product );
-    // }
   }
 
 } )( jQuery );
