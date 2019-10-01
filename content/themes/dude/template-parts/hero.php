@@ -44,6 +44,8 @@ if ( is_front_page() ) {
   include get_theme_file_path( 'template-parts/hero-single.php' );
 } else if ( 4737 === get_the_id() ) {
   include get_theme_file_path( 'template-parts/hero-contact-thanks.php' );
+} else if ( 5673 === get_the_id() ) {
+  include get_theme_file_path( 'template-parts/hero-merch-thanks.php' );
 } else if ( is_post_type_archive( 'reference' ) ) {
   include get_theme_file_path( 'template-parts/hero-reference-archive.php' );
 } else {
