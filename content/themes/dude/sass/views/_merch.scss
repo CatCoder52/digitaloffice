@@ -155,10 +155,31 @@
   display: none;
 }
 
+body .simpay-modal .simpay-field-wrap input,
+body .simpay-modal .simpay-field-wrap select,
+body .simpay-modal .simpay-card-wrap {
+  border-radius: 0 !important;
+  margin-top: 2px !important;
+}
+
+.simpay-address-city-container {
+  margin-right: 15px !important;
+}
+
 // Hide Simple pay form inputs that are not needed on the front-end
 .simpay-form-control.simpay-same-address-toggle-container,
-.simpay-form-control.simpay-text-container {
+.simpay-form-control.simpay-text-container,
+.simpay-custom-amount-wrap.simpay-field-wrap,
+.simpay-address-state-container,
+.simpay-address-country-container,
+.simpay-address-billing-container-label {
   display: none !important;
+}
+
+.simpay-form-control.simpay-address-container.simpay-billing-address-container,
+.simpay-address-zip-wrap,
+.simpay-address-city-wrap {
+  margin-bottom: 0 !important;
 }
 
 .cart {

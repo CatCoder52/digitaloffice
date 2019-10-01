@@ -128,6 +128,7 @@
     // Add to cart modal input fields
     var plaintext = $('.full-cart').text();
     document.getElementById('simpay-4535-text-8').value = plaintext;
+    document.getElementById('simpay-custom-amount-4535').value = pricetotals;
   }
 
 } )( jQuery );
