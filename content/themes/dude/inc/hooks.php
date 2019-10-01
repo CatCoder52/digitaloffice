@@ -41,6 +41,11 @@ function dude_the_content_fix_image_url( $content ) {
 add_action( 'pre_relevanssi_related', function() { remove_filter( 'update_post_metadata_cache', '__return_true' ); }, 11 );
 
 /**
+ * We use Mailgun
+ */
+add_filter( 'air_helper_sendgrid', '__return_false' );
+
+/**
  * Show archives
  */
 add_filter( 'air_helper_disable_views_tag', '__return_false' );
