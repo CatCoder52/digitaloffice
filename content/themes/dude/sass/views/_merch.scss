@@ -185,7 +185,7 @@ body .simpay-modal .simpay-card-wrap {
 
 .cart {
   position: fixed;
-  z-index: 99;
+  z-index: 8;
   left: 0;
   bottom: 0;
   background: $color-dude-black;
@@ -217,8 +217,46 @@ body .simpay-modal .simpay-card-wrap {
     align-items: center;
     justify-content: space-between;
 
+    @media (max-width: 760px) {
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
     > p {
       width: 75%;
+
+      @media (max-width: 1600px) {
+        width: 65%;
+      }
+
+      @media (max-width: 1400px) {
+        width: 50%;
+      }
+
+      @media (max-width: 800px) {
+        width: 60%;
+      }
+
+      @media (max-width: 760px) {
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+    }
+  }
+
+  .buttons {
+    width: 25%;
+    text-align: right;
+    min-width: 41rem;
+    white-space: nowrap;
+
+    @media (max-width: 760px) {
+      width: 100%;
+      min-width: 0;
+    }
+
+    @media (max-width: 600px) {
+      white-space: normal;
     }
   }
 
@@ -229,8 +267,22 @@ body .simpay-modal .simpay-card-wrap {
     padding: 1rem 2rem;
     transition: all $transition-duration;
 
+    @media (max-width: 960px) {
+      font-size: 15px;
+      padding: 8px 15px;
+    }
+
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+
     &.empty-cart {
       margin-right: .5rem;
+
+      @media (max-width: 600px) {
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
     }
 
     &:hover {
@@ -258,6 +310,10 @@ body .simpay-modal .simpay-card-wrap {
     margin-right: 1.5rem;
     width: 24px;
     height: 24px;
+
+    @media (max-width: 960px) {
+      margin-right: 2.5rem;
+    }
   }
 
   .full-cart {
@@ -298,35 +354,8 @@ body .simpay-modal .simpay-card-wrap {
     color: $color-dude-white;
   }
 
-  .message {
-    position: relative;
-    z-index: 0;
-  }
-
-  .close-chat {
-    fill: $color-dude-white;
-    background: none;
-    border: 0;
-    position: absolute;
-    padding: 2rem;
-    top: 0;
-    right: 0;
-    z-index: 3;
-
-    svg {
-      transition: all $transition-duration;
-      width: 1.6rem;
-      height: 1.6rem;
-    }
-  }
-
   @media (max-width: 600px) {
-    left: 0;
-    bottom: 0;
     padding: 2rem;
-    margin: 2rem;
-    max-width: 100%;
-    width: calc(100% - 4rem);
   }
 
   &:hover {
