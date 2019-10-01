@@ -138,7 +138,7 @@
 } )( jQuery );
 
 // Launch Overlay from Other Buttons or Links
-    // Source: https://docs.wpsimplepay.com/articles/launch-overlay-externally/
+// Source: https://docs.wpsimplepay.com/articles/launch-overlay-externally/
 ( function( $ ) {
   'use strict';
 

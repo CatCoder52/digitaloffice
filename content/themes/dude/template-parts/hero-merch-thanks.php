@@ -20,6 +20,8 @@
       <div class="content animate animate-2">
         <p>Maksu meni läpi! Meillä rupee apinat pakkaamaan sinulle Dude-pakettia. Saat sähköpostiin lisää infoa pian.</p>
 
+        <p><?php echo do_shortcode( '[simpay_payment_receipt]' ); ?></p>
+
         <div style="margin-top: 4rem;position: relative;padding-bottom: 56.25%; /* 16:9 */padding-top: 25px;height: 0;"><iframe data-no-lazy="1" style="position: absolute; top: 0;left: 0; width: 100%; height: 100%;" src="https://www.youtube.com/embed/wTP2RUD_cL0?start=74&autoplay=1&modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&fs=0&color=white&controls=0&disablekb=1" width="560" height="315" frameborder="0" allow='autoplay'></iframe></div>
 
       </div>
