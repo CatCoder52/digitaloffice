@@ -173,7 +173,8 @@ body .simpay-modal .simpay-card-wrap {
 .simpay-address-state-container,
 .simpay-address-country-container,
 .simpay-address-billing-container-label {
-  display: none !important;
+  position: absolute;
+  left: -999999px;
 }
 
 .simpay-form-control.simpay-address-container.simpay-billing-address-container,
@@ -184,7 +185,7 @@ body .simpay-modal .simpay-card-wrap {
 
 .cart {
   position: fixed;
-  z-index: 9;
+  z-index: 99;
   left: 0;
   bottom: 0;
   background: $color-dude-black;
@@ -195,6 +196,11 @@ body .simpay-modal .simpay-card-wrap {
   max-width: 100%;
   width: 100%;
   align-items: center;
+  opacity: 0;
+
+  &.show {
+    opacity: 1;
+  }
 
   .comma {
     font-weight: 300;

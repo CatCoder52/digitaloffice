@@ -59,6 +59,7 @@
   // Add to cart
   $('body').on( 'click', '.col-product button.add-to-cart', function() {
     addToCart( $(this) );
+    $('.cart').addClass('show');
   } );
 
   // # FUNCTIONS
@@ -129,6 +130,9 @@
     var plaintext = $('.full-cart').text();
     document.getElementById('simpay-4535-text-8').value = plaintext;
     document.getElementById('simpay-custom-amount-4535').value = pricetotals;
+    document.getElementById("simpay-custom-amount-4535").focus();
+    document.getElementById("simpay-4535-customer-name-4").focus();
+    $( '#simpay-form-4535' ).find( '#simpay-custom-amount-4535' ).click();
   }
 
 } )( jQuery );
@@ -148,6 +152,7 @@
   $( '#buy' ).click( function( e ) {
     e.preventDefault();
     $( '#simpay-form-4535' ).find( '.simpay-payment-btn' ).click();
+    $( '#simpay-form-4535' ).find( '#simpay-custom-amount-4535' ).click();
   } );
 
 }( jQuery ) );
