@@ -4,8 +4,25 @@
   .cols {
     @include grid(3, $gutter_x: 4rem, $gutter_y: 4rem);
 
+    @media (max-width: 1050px) {
+      @include grid(2, $gutter_x: 4rem, $gutter_y: 4rem);
+    }
+
+    @media (max-width: 760px) {
+      display: block;
+    }
+
     .col-product {
       overflow: hidden;
+
+      @media (max-width: 760px) {
+        display: block;
+        margin-bottom: 5rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
     }
   }
 
@@ -58,6 +75,10 @@
     display: flex;
     margin-bottom: 1.5rem;
 
+    @media (max-width: 1580px) {
+      flex-wrap: wrap;
+    }
+
     button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button) {
       width: 50%;
       height: 5.5rem;
@@ -69,6 +90,14 @@
       align-items: center;
       justify-content: center;
 
+      @media (max-width: 1580px) {
+        width: 100%;
+        margin-right: 0;
+        height: auto;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+
       &.active {
         background: $color-dude-deep-black;
         border-color: $color-dude-deep-black;
@@ -78,6 +107,11 @@
       &:first-child {
         width: calc(50% - 1rem);
         margin-right: 1rem;
+
+        @media (max-width: 1580px) {
+          width: 100%;
+          margin-right: 0;
+        }
       }
     }
 
@@ -85,6 +119,11 @@
     &.models-1 button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):first-child {
       width: 100%;
       margin-right: 0;
+
+      @media (max-width: 1580px) {
+        width: 100%;
+        margin-right: 0;
+      }
     }
   }
 
@@ -109,6 +148,11 @@
     border: 1px solid $color-dude-deep-black;
     color: $color-dude-deep-black;
 
+    @media (max-width: 1580px) {
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+
     &:hover {
       background-color: $color-superlightgrey;
     }
@@ -129,6 +173,16 @@
     padding: 0 3rem;
     align-items: center;
     justify-content: center;
+    white-space: nowrap;
+
+    @media (max-width: 1580px) {
+      height: auto;
+      padding-top: .8rem;
+      padding-bottom: .8rem;
+      font-size: 17px;
+      padding-left: 1.58rem;
+      padding-right: 1.8rem;
+    }
   }
 
   .choices {
