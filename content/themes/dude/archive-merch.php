@@ -27,7 +27,7 @@ get_header(); ?>
           <div class="col col-product" data-price="<?php echo get_post_meta( get_the_id(), 'price', true ); ?>" data-product="<?php echo get_the_id() ?>" data-product-name="<?php echo get_the_title() ?>">
 
             <div class="product-image">
-              <h2 class="sold-out">Loppuunmyyty</h2>
+              <!-- <h2 class="sold-out">Loppuunmyyty</h2> -->
 
               <div class="image has-lazyload">
                 <div class="background-image preview lazyload" style="background-image: url('<?php echo the_post_thumbnail_url( 'tiny-preload-thumbnail' ); ?>');" data-src="<?php echo the_post_thumbnail_url( 'large' ); ?>" data-src-mobile="<?php echo the_post_thumbnail_url( 'large' ); ?>"></div>
