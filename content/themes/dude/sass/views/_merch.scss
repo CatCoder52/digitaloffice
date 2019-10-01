@@ -205,6 +205,12 @@
   z-index: 9999;
 }
 
+.simpay-modal,
+.simpay-modal__body,
+.simpay-modal__content {
+  overflow: hidden !important;
+}
+
 .simpay-modal-control-open {
   display: none;
 }
