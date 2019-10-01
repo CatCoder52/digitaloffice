@@ -122,7 +122,7 @@
 
     // Hide empty cart text, show cart
     $('span.cart-text').css('display', 'inline');
-    $('.empty-cart').hide();
+    $('.empty-cart-text').hide();
     $('.full-cart').show();
 
     // Add to cart modal input fields

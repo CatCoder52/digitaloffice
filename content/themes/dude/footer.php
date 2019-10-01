@@ -22,7 +22,7 @@
     <div class="cart-body">
       <p class="full-cart"><span class="cart-text">Korissa </span><span class="cart-text">yhteensä</span> <span class="qty cart-text" id="totals">0</span> <span class="cart-text">kpl</span><span class="cart-text">, </span><span class="qty cart-text" id="price">0</span><span class="cart-text"> &euro; </span> <span class="cart-text">(</span><i class="products" id="products"></i><span class="cart-text">)</span></p>
 
-      <p class="empty-cart">Ostoskori on tyhjä</p>
+      <p class="empty-cart-text">Ostoskori on tyhjä.</p>
 
       <div class="buttons">
         <button class="empty-cart" onClick="emptyCart()">Tyhjennä ostoskori</button>
