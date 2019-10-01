@@ -14,6 +14,10 @@ if ( is_singular( 'post' ) ) {
   $show_chat_greeting = get_post_meta( get_the_id(), 'show_chat_greeting', true );
 }
 
+if ( 'merch' === get_post_type() ) {
+  $show_chat_greeting = false;
+}
+
 $body_class = 'no-js';
 
 if ( $show_chat_greeting ) {

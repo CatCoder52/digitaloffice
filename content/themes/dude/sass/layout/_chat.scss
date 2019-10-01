@@ -122,3 +122,8 @@
     opacity: 0;
   }
 }
+
+// Definitely do not pop up chat on merch page
+.post-type-archive-merch .chat-greeting {
+  display: none !important;
+}
