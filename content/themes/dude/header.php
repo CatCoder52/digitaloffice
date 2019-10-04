@@ -1,6 +1,6 @@
 <?php
 // Cache start. The end is in the footer
-$cachefile = '/var/www/dude.fi/deploy/releases/20170125090439/content/themes/dude/cache/cached-' . sanitize_title( get_permalink() ) . '.html';
+$cachefile = '/var/www/dude.fi/deploy/releases/20170125090439/content/themes/dude/cache/cached-' . sanitize_title( 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'] ) . '.html';
 
 // Cache settings
 $hours = 72;
