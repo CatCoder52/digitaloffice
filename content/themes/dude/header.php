@@ -1,4 +1,19 @@
 <?php
+// Cache start. The end is in the footer
+$cachefile = '/var/www/dude.fi/deploy/releases/20170125090439/content/themes/dude/cache/cached-' . sanitize_title( get_permalink() ) . '.html';
+
+// Cache settings
+$hours = 72;
+$cachetime = 3600 * $hours;
+if ( file_exists( $cachefile ) && time() - $cachetime < filemtime( $cachefile ) ) {
+  echo '<!-- Amazing hand crafted super cache by Dude, generated ' . date( 'H:i', filemtime( $cachefile ) ) . ' -->';
+
+  // Without HTML minification:
+  include( $cachefile );
+  exit;
+}
+ob_start();
+
 /**
  * The header for our theme
  *
@@ -109,13 +124,6 @@ if ( $show_chat_greeting ) {
 </head>
 
 <body <?php body_class( $body_class ); ?>>
-
-  <?php
-  // Cache end is in the footer
-  if ( 'merch' !== get_post_type() || ! is_page( 4487 ) ) :
-    include get_theme_file_path( 'inc/cache-start.php' );
-  endif;
-  ?>
 
   <?php if ( is_page( 4485 ) ) : ?>
     <div id="blueimp-gallery" class="blueimp-gallery" aria-hidden="true">
