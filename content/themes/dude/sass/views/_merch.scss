@@ -224,6 +224,11 @@ body .simpay-modal .simpay-card-wrap {
 
 .simpay-address-city-container {
   margin-right: 15px !important;
+  margin-bottom: 15px;
+}
+
+.simpay-form-control.simpay-checkout-btn-container {
+  margin-top: 15px;
 }
 
 // Hide Simple pay form inputs that are not needed on the front-end

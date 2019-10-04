@@ -1,13 +1,15 @@
 // Opacity on load, same than Apple.com
-.opacity-on-load,
-.opacity-on-load-instant {
-  transition: opacity $transition-duration ease-in-out;
-  opacity: 0;
-  visibility: hidden;
+@media (min-width: $container-mobile) {
+  .opacity-on-load,
+  .opacity-on-load-instant {
+    transition: opacity $transition-duration ease-in-out;
+    opacity: 0;
+    visibility: hidden;
 
-  &.fade-in {
-    opacity: 1;
-    visibility: visible;
+    &.fade-in {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 }
 

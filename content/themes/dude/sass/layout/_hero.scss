@@ -322,28 +322,39 @@
 
   // Animation stuff
   .animate {
-    animation-name: fade-in-down;
-    animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
-    opacity: 0;
+    @media (min-width: $container-mobile) {
+      animation-name: fade-in-down;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+      opacity: 0;
+    }
   }
 
   li:nth-child(1),
   .animate-1 {
-    animation-duration: 1s;
-    animation-delay: 1s;
+    @media (min-width: $container-mobile) {
+      animation-duration: 1s;
+      animation-delay: 1s;
+      opacity: 0;
+    }
   }
 
   li:nth-child(2),
   .animate-2 {
-    animation-duration: 1s;
-    animation-delay: 1.5s;
+    @media (min-width: $container-mobile) {
+      animation-duration: 1s;
+      animation-delay: 1.5s;
+      opacity: 0;
+    }
   }
 
   li:nth-child(3),
   .animate-3 {
-    animation-duration: 1s;
-    animation-delay: 2s;
+    @media (min-width: $container-mobile) {
+      animation-duration: 1s;
+      animation-delay: 2s;
+      opacity: 0;
+    }
   }
 
   // Hero for front page and side columns
@@ -365,15 +376,17 @@
     }
 
     .cta-link {
-      opacity: 0;
-      animation-name: fade-in-down;
-      animation-timing-function: ease-in-out;
-      animation-fill-mode: forwards;
-      animation-duration: 1s;
-      animation-delay: 2s;
+      @media (min-width: $container-mobile) {
+        opacity: 0;
+        animation-name: fade-in-down;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        animation-duration: 1s;
+        animation-delay: 2s;
 
-      &.cta-link-front {
-        animation-delay: 2.5s;
+        &.cta-link-front {
+          animation-delay: 2.5s;
+        }
       }
 
       @media (max-height: 600px) {
@@ -521,9 +534,12 @@
     .content {
       display: flex;
       align-items: center;
-      opacity: 0;
-      transition: all $transition-duration;
       z-index: 4;
+
+      @media (min-width: $container-mobile) {
+        opacity: 0;
+        transition: all $transition-duration;
+      }
 
       @media (max-width: 600px) {
         height: 100vh; // Use vh as a fallback for browsers that do not support Custom Properties
@@ -550,8 +566,10 @@
         }
       }
 
-      &.has-loaded {
-        opacity: 1;
+      @media (min-width: $container-mobile) {
+        &.has-loaded {
+          opacity: 1;
+        }
       }
 
       @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
@@ -583,10 +601,13 @@
         margin-top: 0;
         margin-bottom: 0;
         line-height: 1.22;
-        animation-name: fade-in-down;
-        animation-timing-function: ease-in-out;
-        animation-fill-mode: forwards;
-        opacity: 0;
+
+        @media (min-width: $container-mobile) {
+          animation-name: fade-in-down;
+          animation-timing-function: ease-in-out;
+          animation-fill-mode: forwards;
+          opacity: 0;
+        }
       }
 
       li:last-of-type {
