@@ -81,7 +81,7 @@
 
 <?php
 // Cache start is in the header
-if ( 'merch' !== get_post_type() || ! is_page( 4487 ) ) :
+if ( ! is_page( 4487 ) ) :
   include get_theme_file_path( 'inc/cache-end.php' );
 endif;
 ?>
