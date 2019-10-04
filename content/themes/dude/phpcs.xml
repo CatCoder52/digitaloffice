@@ -81,6 +81,10 @@
 
         <!-- Many times when developing a customer case we have placeholders for SVG includes, so unnecessary error reports happen with this rule -->
         <exclude name="Squiz.PHP.EmbeddedPhp.Empty" />
+
+        <!-- Other excludes -->
+        <exclude name="WordPress.VIP.FileSystemWritesDisallow" />
+        <exclude name="WordPress.WP.EnqueuedResources.NonEnqueuedScript" />
     </rule>
 
     <!-- Verify that the text_domain is set to the desired text-domain.

@@ -110,6 +110,13 @@ if ( $show_chat_greeting ) {
 
 <body <?php body_class( $body_class ); ?>>
 
+  <?php
+  // Cache end is in the footer
+  if ( 'merch' !== get_post_type() || ! is_page( 4487 ) ) :
+    include get_theme_file_path( 'inc/cache-start.php' );
+  endif;
+  ?>
+
   <?php if ( is_page( 4485 ) ) : ?>
     <div id="blueimp-gallery" class="blueimp-gallery" aria-hidden="true">
       <div class="slides"></div>

@@ -54,3 +54,4 @@ project.todo
 config/deploy/
 wp-cli.yml
 w3cErrors/
+content/themes/dude/cache
