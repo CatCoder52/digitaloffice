@@ -1,5 +1,4 @@
 // Opacity on load, same than Apple.com
-@media (min-width: $container-mobile) {
   .opacity-on-load,
   .opacity-on-load-instant {
     transition: opacity $transition-duration ease-in-out;
@@ -11,7 +10,6 @@
       visibility: visible;
     }
   }
-}
 
 @keyframes underline-idle {
   0% {

@@ -1,4 +1,4 @@
-<?
+<?php
 /**
  * The header for our theme
  *
@@ -24,8 +24,7 @@ if ( $show_chat_greeting ) {
   $body_class .= ' send-chat-greeting';
 }
 
-?>
-<!doctype html>
+?><!doctype html>
 <html <?php language_attributes(); ?>><script>
 /**
  *
