@@ -79,20 +79,5 @@
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
 
-<?php
-// Cache start is in the header
-// Define cache location
-$cachefile = '/var/www/dude.fi/deploy/releases/20170125090439/content/themes/dude/cache/cached-' . sanitize_title( get_permalink() ) . '.html';
-
-// Open cached file
-$fp = fopen( $cachefile, 'w' );
-
-// Without HTML minification:
-fwrite( $fp, ob_get_contents() );
-
-fclose( $fp );
-ob_end_flush();
-?>
-
 </body>
 </html>

@@ -1,19 +1,4 @@
-<?php
-// Cache start. The end is in the footer
-$cachefile = '/var/www/dude.fi/deploy/releases/20170125090439/content/themes/dude/cache/cached-' . sanitize_title( 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'] ) . '.html';
-
-// Cache settings
-$hours = 72;
-$cachetime = 3600 * $hours;
-if ( file_exists( $cachefile ) && time() - $cachetime < filemtime( $cachefile ) ) {
-  echo '<!-- Amazing hand crafted super cache by Dude, generated ' . date( 'H:i', filemtime( $cachefile ) ) . ' -->';
-
-  // Without HTML minification:
-  include( $cachefile );
-  exit;
-}
-ob_start();
-
+<?
 /**
  * The header for our theme
  *
