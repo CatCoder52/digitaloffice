@@ -146,7 +146,7 @@ get_header(); ?>
           <?php endwhile; ?>
         </div>
 
-        <p class="next-prev"><?php echo previous_posts_link( 'Edellinen' ); ?><?php echo next_posts_link( 'Seuraava' ); ?></p>
+        <p class="next-prev"><span class="prev"><?php echo previous_posts_link( 'Edellinen' ); ?></span><span class="next"><?php echo next_posts_link( 'Seuraava' ); ?></span></p>
 
       </div>
     </section>

@@ -438,6 +438,14 @@ ul.tags {
 .next-prev {
   display: flex;
   justify-content: space-between;
+
+  .prev {
+    float: left;
+  }
+
+  .next {
+    float: right;
+  }
 }
 
 .next-prev a {
