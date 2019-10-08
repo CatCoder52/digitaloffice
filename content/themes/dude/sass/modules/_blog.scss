@@ -1,5 +1,10 @@
 .block.block-blog {
   padding-top: 0;
+  overflow: visible;
+
+  .container {
+    overflow: visible;
+  }
 
   .block-head {
     padding-bottom: 0;
