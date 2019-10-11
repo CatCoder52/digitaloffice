@@ -2,12 +2,17 @@
 * @Author: Timi Wahalahti
 * @Date:   2019-06-03 22:07:25
 * @Last Modified by:   Roni Laukkarinen
-* @Last Modified time: 2019-10-11 13:33:10
+* @Last Modified time: 2019-10-11 14:41:44
 */
 
 ( function( $ ) {
 
   var cart = [];
+
+  // Automatically fill hidden state based on the city field
+  $('input[name="simpay_billing_address_city"]').keyup(function( event ) {
+    $('input[name="simpay_billing_address_state"]').val( $(this).val() );
+  });
 
   // Disable autocomplete
   $('.simpay-form-4535').attr('autocomplete', 'off');
