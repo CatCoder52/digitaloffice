@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-09-26 10:06:13
+ * @Last Modified time: 2019-10-11 10:40:31
  *
  * @package dude2019
  */
@@ -15,7 +15,9 @@ $bg_image_tiny = $bg_image_tiny_default;
 $bg_image = get_template_directory_uri() . '/images/merch.jpg';
 
 $title = 'Merch';
-$content = 'Dudella on täällä kaikenlaista sinua varten. Pick your poison!';
+$content = 'Haluatko olla oman elämäsi Dude tai Dudette? Koetko vahvaa tunnesidettä  kulttiheimoon nimeltä Dude? Vai kaipaatko muuten vaan helevetin hyvännäköistä vaatetta jota ei ihan joka Seppästä löydy? Sama se meille, kunhan pidät niitä rinta rottingilla ja hyvällä asenteella.
+
+Dude maksaa postarit Suomeen lähetellyistä kamoista. Toimitusajat riippuu ihan siitä miten me jaksetaan näitä pakkailla ja postitella. Jos kysyttävää niin heitä viestiä vaikka <a href="#" class="open-chat">chatin avulla tästä</a> tai sähköpostilla <a href="mailto:moro@dude.fi">moro@dude.fi</a>.';
 ?>
 
 <section class="block block-hero-merch block-hero block-hero-side-columns block-hero-enable-transition">
@@ -23,9 +25,9 @@ $content = 'Dudella on täällä kaikenlaista sinua varten. Pick your poison!';
 
     <div class="content">
       <div class="side-content-box">
-        <h1 class="animate animate-1"><?php echo $title; ?></h1>
+        <h1><?php echo $title; ?></h1>
 
-        <div class="hero-description animate animate-2">
+        <div class="hero-description">
           <?php if ( ! empty( $content ) ) {
             echo wpautop( $content );
           }
