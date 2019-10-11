@@ -264,9 +264,11 @@ body .simpay-modal .simpay-card-wrap {
   width: 100%;
   align-items: center;
   opacity: 0;
+  visibility: hidden;
 
   &.show {
     opacity: 1;
+    visibility: visible;
   }
 
   .comma {
