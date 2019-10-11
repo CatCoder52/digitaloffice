@@ -6,7 +6,7 @@
   .cols {
     @include grid(3, $gutter_x: 4rem, $gutter_y: 4rem);
 
-    @media (max-width: 1050px) {
+    @media (max-width: 1550px) {
       @include grid(2, $gutter_x: 4rem, $gutter_y: 4rem);
     }
 
