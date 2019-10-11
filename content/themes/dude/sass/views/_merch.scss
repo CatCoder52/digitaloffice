@@ -1,5 +1,7 @@
 .content-area .block.block-merch {
   margin-top: 6rem;
+  position: relative;
+  z-index: 4;
 
   .cols {
     @include grid(3, $gutter_x: 4rem, $gutter_y: 4rem);

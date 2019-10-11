@@ -2,16 +2,21 @@
 * @Author: Timi Wahalahti
 * @Date:   2019-06-03 22:07:25
 * @Last Modified by:   Roni Laukkarinen
-* @Last Modified time: 2019-06-07 09:11:10
+* @Last Modified time: 2019-10-11 13:33:10
 */
 
 ( function( $ ) {
 
   var cart = [];
 
+  // Disable autocomplete
+  $('.simpay-form-4535').attr('autocomplete', 'off');
+  $('.simpay-form-4535 input').attr('autocomplete', 'off');
+
   // # LISTENERS
   // Model select
-  $('.col-product .models button').on( 'click', function() {
+  $('.col-product .models button').on( 'click', function(e) {
+    e.preventDefault();
     var modelslug = $(this).data('model-slug');
 
     // Set this model as active
@@ -39,7 +44,8 @@
   } );
 
   // Size select
-  $('.col-product .sizes button').on( 'click', function() {
+  $('.col-product .sizes button').on( 'click', function(e) {
+    e.preventDefault();
     var instock = $(this).data('instock');
 
     // Set this size as active
@@ -57,7 +63,8 @@
   } );
 
   // Add to cart
-  $('body').on( 'click', '.col-product button.add-to-cart', function() {
+  $('body').on( 'click', '.col-product button.add-to-cart', function(e) {
+    e.preventDefault();
     addToCart( $(this) );
     $('.cart').addClass('show');
   } );
@@ -130,8 +137,8 @@
     var plaintext = $('.full-cart').text();
     document.getElementById('simpay-4535-text-8').value = plaintext;
     document.getElementById('simpay-custom-amount-4535').value = pricetotals;
-    document.getElementById("simpay-custom-amount-4535").focus();
-    document.getElementById("simpay-4535-customer-name-4").focus();
+    // document.getElementById("simpay-custom-amount-4535").focus({preventScroll: true});
+    // document.getElementById("simpay-4535-customer-name-4").focus({preventScroll: true});
     $( '#simpay-form-4535' ).find( '#simpay-custom-amount-4535' ).click();
   }
 
@@ -145,6 +152,8 @@
   // Custom Overlay forms
   $( '#buy' ).click( function( e ) {
     e.preventDefault();
+    document.getElementById("simpay-custom-amount-4535").focus({preventScroll: true});
+    document.getElementById("simpay-4535-customer-name-4").focus({preventScroll: true});
     simpayAppPro.toggleOverlayForm( 4535 );
   } );
 
