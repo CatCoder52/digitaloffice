@@ -3,12 +3,12 @@
  * @Author: 						Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:   						2019-06-03 12:04:02
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-10-11 10:53:45
+ * @Last Modified time: 2019-10-11 11:07:39
  *
  * @package dude2019
  */
 
-$hashtag = 'pienpanimoliitto';
+$hashtag = 'digitoimistodude';
 
 if ( empty( $hashtag ) ) {
   return;
