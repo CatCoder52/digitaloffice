@@ -80,6 +80,8 @@ get_header(); ?>
       </div><!-- .container -->
     </section>
 
+    <?php include get_theme_file_path( 'template-parts/instagram-merch.php' ); ?>
+
 	</main><!-- #main -->
 </div><!-- #primary -->
 

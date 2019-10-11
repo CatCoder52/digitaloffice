@@ -88,3 +88,124 @@
     margin-right: 2px;
   }
 }
+
+.block.block-instagram-merch {
+  padding-top: 0;
+  margin-top: 0;
+
+  .block-head {
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 6rem;
+
+    a {
+      background-image: linear-gradient(to top, $color-dude-deep-black, $color-dude-deep-black);
+      background-size: 100% 1px;
+      background-position: left bottom;
+      background-repeat: no-repeat;
+      transition: .3s all;
+      text-decoration: none;
+      overflow: visible;
+    }
+
+    a:hover,
+    a:focus,
+    a:active {
+      background-size: 100% 2.8rem;
+      color: $color-dude-white;
+    }
+  }
+
+  .container {
+    max-width: 100%;
+    overflow: visible;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+
+    .ig-cols {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: $container-mobile) {
+      padding-top: 2rem;
+    }
+  }
+
+  .ig {
+    @include background-cover();
+    flex: 25%;
+    position: relative;
+    transition: .22s all;
+
+    &:after {
+      content: '';
+      display: block;
+      padding-bottom: 100%;
+    }
+
+    @media (max-width: 1500px) {
+      flex: 33%;
+    }
+
+    @media (max-width: 1200px) {
+      flex: 50%;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      z-index: 5;
+
+      .overlay {
+        opacity: 1;
+      }
+    }
+  }
+
+  .overlay {
+    background: rgba($color-body, .7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .22s all;
+    opacity: 0;
+  }
+
+  span {
+    font-size: 24px;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .likes {
+    margin-right: 3rem;
+  }
+
+  img {
+    display: none;
+    width: 100%;
+    height: auto;
+  }
+
+  svg {
+    width: 18px;
+    height: 18px;
+    position: relative;
+    top: 0;
+    margin-right: 8px;
+  }
+
+  .comments svg {
+    margin-right: 2px;
+  }
+}
+

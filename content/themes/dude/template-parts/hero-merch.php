@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-10-11 10:40:31
+ * @Last Modified time: 2019-10-11 10:56:02
  *
  * @package dude2019
  */
@@ -15,9 +15,9 @@ $bg_image_tiny = $bg_image_tiny_default;
 $bg_image = get_template_directory_uri() . '/images/merch.jpg';
 
 $title = 'Merch';
-$content = 'Haluatko olla oman elämäsi Dude tai Dudette? Koetko vahvaa tunnesidettä  kulttiheimoon nimeltä Dude? Vai kaipaatko muuten vaan helevetin hyvännäköistä vaatetta jota ei ihan joka Seppästä löydy? Sama se meille, kunhan pidät niitä rinta rottingilla ja hyvällä asenteella.
+$content = '<p>Haluatko olla oman elämäsi Dude tai Dudette? Koetko vahvaa tunnesidettä  kulttiheimoon nimeltä Dude? Vai kaipaatko muuten vaan helevetin hyvännäköistä vaatetta jota ei ihan joka Sepästä löydy? Sama se meille, kunhan pidät niitä rinta rottingilla ja hyvällä asenteella.</p>
 
-Dude maksaa postarit Suomeen lähetellyistä kamoista. Toimitusajat riippuu ihan siitä miten me jaksetaan näitä pakkailla ja postitella. Jos kysyttävää niin heitä viestiä vaikka <a href="#" class="open-chat">chatin avulla tästä</a> tai sähköpostilla <a href="mailto:moro@dude.fi">moro@dude.fi</a>.';
+<p class="details">Dude maksaa postarit Suomeen lähetellyistä kamoista. Toimitusajat riippuu ihan siitä miten me jaksetaan näitä pakkailla ja postitella. Jos kysyttävää niin heitä viestiä vaikka <a href="#" class="open-chat">chatin avulla tästä</a> tai sähköpostilla <a href="mailto:moro@dude.fi">moro@dude.fi</a>.</p>';
 ?>
 
 <section class="block block-hero-merch block-hero block-hero-side-columns block-hero-enable-transition">
@@ -29,7 +29,7 @@ Dude maksaa postarit Suomeen lähetellyistä kamoista. Toimitusajat riippuu ihan
 
         <div class="hero-description">
           <?php if ( ! empty( $content ) ) {
-            echo wpautop( $content );
+            echo $content;
           }
           ?>
         </div>

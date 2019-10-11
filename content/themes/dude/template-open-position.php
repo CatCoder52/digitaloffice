@@ -37,7 +37,6 @@ get_header(); ?>
       </div>
     </section>
 
-
     <?php include get_theme_file_path( 'template-parts/content-modular.php' ); ?>
 
   </main><!-- #main -->

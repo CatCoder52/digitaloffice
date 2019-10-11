@@ -72,6 +72,17 @@
       background-size: 100% 2.8rem;
       color: $color-dude-deep-black;
     }
+
+    .details {
+      opacity: .7;
+      font-size: 18px;
+      line-height: 1.6;
+      transition: all 1s;
+    }
+
+    .details:hover {
+      opacity: 1;
+    }
   }
 
   // Contact thanks
