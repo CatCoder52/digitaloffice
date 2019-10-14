@@ -1,8 +1,8 @@
 /*
 * @Author: Timi Wahalahti
 * @Date:   2019-06-03 22:07:25
-* @Last Modified by:   Roni Laukkarinen
-* @Last Modified time: 2019-10-11 14:41:44
+* @Last Modified by:   Timi Wahalahti
+* @Last Modified time: 2019-10-14 14:28:18
 */
 
 ( function( $ ) {
@@ -90,6 +90,7 @@
       'modelslug': modelslug,
       'size': size
     } );
+
     if ( cart_index !== -1 ) {
       // Is in cart, check tha we have enough in stock
       if ( cart[ cart_index ].qty < size_instock ) {
@@ -125,13 +126,13 @@
     // Get total products
     var products = '';
     for (var i = 0; i < cart.length; i++) {
-      products = '<span class="products">1 x <b>' + cart[i].productname + '</b>, malli: ' + cart[i].modelname + ' <span class="size">' + cart[i].size + '</span></span><span class="comma">, </span>';
+      products += '<span class="products">' + cart[i].qty + ' x <b>' + cart[i].productname + '</b>, malli: ' + cart[i].modelname + ' <span class="size">' + cart[i].size + '</span></span><span class="comma">, </span>';
     }
 
     // Add item labels to cart
     document.getElementById('totals').innerHTML = totals;
     document.getElementById('price').innerHTML = pricetotals;
-    document.getElementById('products').innerHTML += products;
+    document.getElementById('products').innerHTML = products;
 
     // Hide empty cart text, show cart
     $('span.cart-text').css('display', 'inline');
