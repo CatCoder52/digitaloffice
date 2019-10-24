@@ -333,6 +333,11 @@ lazyload(images, {
     } // end storage check
 
     function maybeSendChatGreeting() {
+      // don't show greeting on contact page
+      if ( jQuery('body').hasClass('page-id-4487') ) {
+        return;
+      }
+
       // alter greetings based on page
       if ( jQuery('body').hasClass('page-id-4485') ) {
         // visuaalinen suunnittelu page
