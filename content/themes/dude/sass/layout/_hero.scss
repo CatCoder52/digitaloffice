@@ -404,7 +404,6 @@
     @media (max-width: 600px) {
       min-height: 80rem;
       height: auto;
-      padding-top: 10rem;
     }
 
     .cta-link {
@@ -457,10 +456,6 @@
 
       @media (max-width: 800px) {
         overflow: hidden;
-
-        .content {
-          height: auto;
-        }
       }
     }
 
