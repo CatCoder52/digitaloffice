@@ -188,6 +188,7 @@ if ( $show_chat_greeting ) {
               <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-4478"><a href="<?php echo get_page_link( 4449 ); ?>">Yritys</a></li>
               <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4481"><a href="<?php echo get_page_link( 4491 ); ?>">Työpaikat</a></li>
               <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-4479"><a href="<?php echo get_page_link( 11 ); ?>">Blogi</a></li>
+              <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-4450"><a href="<?php echo get_home_url(); ?>/merch">Merch</a></li>
             </ul>
           </div>
 
