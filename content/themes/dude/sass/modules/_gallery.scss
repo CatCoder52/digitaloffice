@@ -4,6 +4,8 @@
     grid-gap: 0;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 40rem 40rem 80rem 40rem 40rem;
+
+    /* autoprefixer: off */
     grid-auto-flow: dense;
     grid-auto-rows: 80rem;
     background-color: #fff;

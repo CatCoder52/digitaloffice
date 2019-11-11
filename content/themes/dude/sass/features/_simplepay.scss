@@ -1,3 +1,4 @@
+// scss-lint:disable
 // Colors
 $base-text-color: #333;
 $input-text-color: #32325d;
@@ -508,10 +509,6 @@ input[type="checkbox"].simpay-modal-control {
   }
 }
 
-.simpay-clearfix {
-  *zoom: 1;
-}
-
 .simpay-clearfix::before,
 .simpay-clearfix::after {
   content: ' ';
@@ -526,8 +523,8 @@ input[type="checkbox"].simpay-modal-control {
   font-style: normal;
 }
 
+// scss-lint:disable
 .simpay-form-control {
-  *zoom: 1;
   margin-bottom: 15px;
 }
 
