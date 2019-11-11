@@ -3,12 +3,12 @@
  * @Author: 						Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:   						2019-06-03 12:04:02
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-10-11 11:07:39
+ * @Last Modified time: 2019-11-11 15:56:38
  *
  * @package dude2019
  */
 
-$hashtag = 'digitoimistodude';
+$hashtag = 'dudekult';
 
 if ( empty( $hashtag ) ) {
   return;
