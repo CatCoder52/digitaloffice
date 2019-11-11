@@ -404,6 +404,7 @@
     @media (max-width: 600px) {
       min-height: 80rem;
       height: auto;
+      padding-top: 10rem;
     }
 
     .cta-link {
@@ -454,8 +455,12 @@
       // Let's reset the padding from the hero container, no need in full width hero
       padding: 0;
 
-      @media (max-width: 600px) {
+      @media (max-width: 800px) {
         overflow: hidden;
+
+        .content {
+          height: auto;
+        }
       }
     }
 
@@ -522,8 +527,8 @@
 
       @media (max-width: 600px) {
         height: auto;
-        padding-top: 20rem;
-        padding-bottom: 20rem;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
       }
 
       @media (max-width: $container-mobile) {
