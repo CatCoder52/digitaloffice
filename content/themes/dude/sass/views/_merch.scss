@@ -460,3 +460,9 @@ label[for="simpay-4535-text-8"],
     opacity: 0;
   }
 }
+
+@media (max-width: 600px) {
+  .post-type-archive-merch .featured-image-side {
+    display: none;
+  }
+}
