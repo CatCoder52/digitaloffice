@@ -465,4 +465,13 @@ label[for="simpay-4535-text-8"],
   .post-type-archive-merch .featured-image-side {
     display: none;
   }
+
+  .post-type-archive-merch .block.block-hero .content {
+    height: auto;
+    min-height: 90rem;
+
+    .hero-description {
+      margin-bottom: 0;
+    }
+  }
 }
