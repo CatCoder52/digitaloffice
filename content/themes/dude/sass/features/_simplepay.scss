@@ -447,6 +447,11 @@ input[type="checkbox"].simpay-modal-control {
     .simpay-address-country-container {
       float: left;
       width: 48%;
+
+      @media (max-width: 460px) {
+        width: 100%;
+        float: none;
+      }
     }
 
     // Right-side fields

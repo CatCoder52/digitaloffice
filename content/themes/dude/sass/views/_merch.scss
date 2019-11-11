@@ -235,13 +235,22 @@ body .simpay-modal .simpay-card-wrap {
 
 // Hide Simple pay form inputs that are not needed on the front-end
 .simpay-form-control.simpay-same-address-toggle-container,
-.simpay-form-control.simpay-text-container,
 .simpay-custom-amount-wrap.simpay-field-wrap,
 .simpay-address-state-container,
 .simpay-address-country-container,
-.simpay-address-billing-container-label {
+.simpay-address-billing-container-label,
+label[for="simpay-4535-text-8"],
+#simpay-4535-text-8 {
   position: absolute;
   left: -999999px;
+}
+
+.simpay-form-control.simpay-form-control--card.simpay-card-container {
+  margin-top: -29px;
+
+  @media (max-width: 480px) {
+    margin-top: -14px;
+  }
 }
 
 .simpay-form-control.simpay-address-container.simpay-billing-address-container,
