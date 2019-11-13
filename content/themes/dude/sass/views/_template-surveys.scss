@@ -99,21 +99,21 @@ body.template-surveys {
       box-shadow: 0 0 0 1px #b5b5b6;
       border-radius: 4px;
       overflow: hidden;
+    }
 
-      .gsurvey-likert-choice {
-        padding: 2rem;
+    table.gsurvey-likert .gsurvey-likert-choice {
+      padding: 2rem;
 
-        @media (max-width: 1100px) {
-          padding: .5rem 1rem;
-          background-position: 1rem center !important;
+      @media (max-width: 1100px) {
+        padding: .5rem 1rem;
+        background-position: 1rem center !important;
 
-          input {
-            margin-left: 1rem !important;
-          }
+        input {
+          margin-left: 1rem !important;
+        }
 
-          &:after {
-            margin-left: 3rem !important;
-          }
+        &:after {
+          margin-left: 3rem !important;
         }
       }
     }

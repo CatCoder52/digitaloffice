@@ -58,6 +58,7 @@ $line-height: 1.5;
 // Classic = Stripe Checkout
 
 .simpay-form-control {
+  margin-bottom: 15px;
 
   // Coupon field & apply button
   .simpay-coupon-field {
@@ -523,11 +524,6 @@ input[type="checkbox"].simpay-modal-control {
   font-style: normal;
 }
 
-// scss-lint:disable
-.simpay-form-control {
-  margin-bottom: 15px;
-}
-
 .simpay-form-control::before,
 .simpay-form-control::after {
   content: ' ';
@@ -544,7 +540,7 @@ input[type="checkbox"].simpay-modal-control {
 }
 
 .simpay-form-control ul {
-  margin: 0 0 .5em 0;
+  margin: 0 0 .5em;
 }
 
 .simpay-form-control ul li {
@@ -553,7 +549,7 @@ input[type="checkbox"].simpay-modal-control {
 
 .simpay-form-control ul li label {
   display: block;
-  margin: 0 0 .5em 0;
+  margin: 0 0 .5em;
 }
 
 .simpay-form-control ul li label input[type="radio"],
@@ -564,10 +560,6 @@ input[type="checkbox"].simpay-modal-control {
 .simpay-form-control label {
   cursor: pointer;
   display: block;
-}
-
-.simpay-form-control .simpay-field-wrap {
-  *zoom: 1;
 }
 
 .simpay-form-control .simpay-field-wrap::before,
