@@ -331,7 +331,9 @@
       margin-left: auto;
       margin-right: auto;
       border-left: 2px solid $color-dude-deep-black;
-      padding: $padding-general-content-box-ipad $padding-general-content-box;
+      margin-top: 4rem;
+      margin-bottom: 4rem;
+      padding: 4rem 8rem;
 
       @media (max-width: $container-ipad) {
         padding: $padding-general-content-box-ipad;
@@ -355,6 +357,12 @@
       padding-left: 2rem;
       padding-right: 2rem;
       font-weight: 300;
+    }
+
+    .wp-block-quote cite {
+      padding-left: 0;
+      padding-top: 2rem;
+      padding-bottom: 0;
     }
 
     .gform_wrapper .gform_footer input.button,
