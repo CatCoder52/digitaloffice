@@ -37,35 +37,37 @@ get_header(); ?>
             <?php dude_entry_footer(); ?>
           </footer><!-- .entry-footer -->
 
-          <div class="entry-author">
-            <?php // get author and person corresponding author
-            $user_id = get_the_author_meta( 'ID' );
-            $person_id = $wpdb->get_results(
-              $wpdb->prepare(
-                "SELECT post_id FROM {$wpdb->prefix}postmeta WHERE meta_key = %s AND meta_value = %s",
-                "email", get_the_author_meta( 'email' )
-              )
-            );
+          <?php if ( 5635 !== get_the_id() ) : ?>
+            <div class="entry-author">
+              <?php // get author and person corresponding author
+              $user_id = get_the_author_meta( 'ID' );
+              $person_id = $wpdb->get_results(
+                $wpdb->prepare(
+                  "SELECT post_id FROM {$wpdb->prefix}postmeta WHERE meta_key = %s AND meta_value = %s",
+                  "email", get_the_author_meta( 'email' )
+                )
+              );
 
-            if ( ! is_wp_error( $person_id ) && ! empty( $person_id ) ) :
-              $job_title = get_post_meta( $person_id[0]->post_id, 'title', true );
-              $desc = get_post_meta( $person_id[0]->post_id, 'short_desc_blog', true ); ?>
+              if ( ! is_wp_error( $person_id ) && ! empty( $person_id ) ) :
+                $job_title = get_post_meta( $person_id[0]->post_id, 'title', true );
+                $desc = get_post_meta( $person_id[0]->post_id, 'short_desc_blog', true ); ?>
 
-              <a href="<?php echo get_author_posts_url( $user_id ) ?>"><?php echo get_avatar( $user_id, '512' ); ?></a>
-              <h3><?php echo get_the_author_meta( 'display_name' ); ?></h3>
+                <a href="<?php echo get_author_posts_url( $user_id ) ?>"><?php echo get_avatar( $user_id, '512' ); ?></a>
+                <h3><?php echo get_the_author_meta( 'display_name' ); ?></h3>
 
-              <?php if ( ! empty( $job_title ) ) : ?>
-                <p class="job-title"><?php
-                echo esc_html( $job_title ) ?></p>
-              <?php endif;
+                <?php if ( ! empty( $job_title ) ) : ?>
+                  <p class="job-title"><?php
+                  echo esc_html( $job_title ) ?></p>
+                <?php endif;
 
-              if ( ! empty( $desc ) ) : ?>
-                <p class="person-description"><?php
-                echo esc_html( $desc ) ?></p>
-              <?php endif;
+                if ( ! empty( $desc ) ) : ?>
+                  <p class="person-description"><?php
+                  echo esc_html( $desc ) ?></p>
+                <?php endif;
 
-            endif; ?>
-          </div>
+              endif; ?>
+            </div>
+          <?php endif; ?>
 
         </article><!-- #post-## -->
 
