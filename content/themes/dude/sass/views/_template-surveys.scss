@@ -4,6 +4,13 @@ body.template-surveys {
   background-image: url('../images/survey-bg.png');
   background-attachment: fixed;
 
+  ul,
+  li {
+    padding: 0;
+    margin-left: 0;
+    list-style: none;
+  }
+
   &.not-started {
     overflow: hidden;
     height: 100%;

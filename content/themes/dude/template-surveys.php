@@ -8,6 +8,8 @@
 the_post();
 
 $form_id = get_field( 'form_id' );
+$form_title = get_field( 'form_title' );
+$form_description = get_field( 'form_description' );
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>><script>
@@ -87,12 +89,14 @@ $form_id = get_field( 'form_id' );
         <div class="splash">
           <header class="survey-header">
             <img src="<?php echo get_template_directory_uri(); ?>/images/survey-logo.png" alt="Nyt voi antaa palautetta" />
-            <h1>Miten projekti sujui? Menikö reisille vai tuliko timanttista jälkeä?</h1>
 
-            <p>Keskinkertaista yritetään, mutta niin vaan priimaa tulee! Vai tuleeko?</p>
-            <p>Olisi ihan mahtavaa, jos käyttäisit pari minuuttia aikaa ja kertoisit miten hoidimme hommamme. Vastauksesi ovat meille elintärkeitä ja auttavat kehittymään entistä paremmiksi.</p>
+            <?php if ( ! empty( $form_title ) ) : ?>
+              <h1><?php echo $form_title; ?></h1>
+            <?php endif; ?>
 
-            <p><strong>Kiitos jo etukäteen!</strong></p>
+            <?php if ( ! empty( $form_description ) ) :
+              echo wpautop( $form_description );
+            endif; ?>
           </header>
 
           <div class="survey-start-wrapper">

@@ -22,6 +22,44 @@
             "min": "",
             "max": "",
             "step": ""
+        },
+        {
+            "key": "field_5de5139383ce8",
+            "label": "Kyselyn etusivun otsikko",
+            "name": "form_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5de5139883ce9",
+            "label": "Kyselyn etusivun teksti",
+            "name": "form_description",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
         }
     ],
     "location": [
@@ -53,5 +91,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1575293629
+    "modified": 1575293860
 }
