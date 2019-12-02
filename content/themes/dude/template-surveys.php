@@ -6,6 +6,8 @@
  */
 
 the_post();
+
+$form_id = get_field( 'form_id' );
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>><script>
@@ -99,7 +101,7 @@ the_post();
         </div>
 
         <?php
-        $id_or_title = 4;
+        $id_or_title = $form_id;
         $display_title = false;
         $display_description = false;
         $display_inactive = false;
