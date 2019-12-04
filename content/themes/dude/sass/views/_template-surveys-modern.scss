@@ -30,7 +30,8 @@ body.template-surveys-modern {
 
   .container,
   .survey-header,
-  .gform_wrapper {
+  .gform_wrapper,
+  .gform_confirmation_wrapper {
     max-width: $max-width;
     margin-left: auto;
     margin-right: auto;
@@ -74,17 +75,17 @@ body.template-surveys-modern {
   }
 
   .gform_confirmation_wrapper {
-    width: 100%;
-    height: 100%;
-    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 2rem;
+    margin-top: 4rem;
 
     .gform_confirmation_message {
       @include responsive-font(18px, 30px);
+      line-height: 1.5;
+      color: $color-dude-white;
     }
   }
 
@@ -151,6 +152,10 @@ body.template-surveys-modern {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+      }
+
+      > #input_5_12 li {
+        min-width: 220px !important;
       }
 
       > ul li {
@@ -342,6 +347,10 @@ body.template-surveys-modern {
     display: flex;
     justify-content: space-between;
     position: relative;
+
+    .survey-header--logo-tagline {
+      text-align: right;
+    }
 
     &:after {
       content: '';

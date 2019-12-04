@@ -101,7 +101,7 @@ $hero_content = get_field( 'hero_content' );
 
           <div class="survey-header--logo">
             <?php include get_theme_file_path( '/svg/logo.svg' ); ?>
-            <p><a href="https://www.dude.fi">www.dude.fi</a></p>
+            <p class="survey-header--logo-tagline"><a href="https://www.dude.fi">www.dude.fi</a></p>
           </div>
         </header>
 
