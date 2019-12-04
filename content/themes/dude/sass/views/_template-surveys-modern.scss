@@ -153,7 +153,6 @@ body.template-surveys-modern {
         text-align: center;
         margin-bottom: 0;
         transition: all .6s;
-        overflow: hidden;
 
         @media (max-width: 710px) {
           width: 100% !important;
@@ -176,7 +175,7 @@ body.template-surveys-modern {
 
     input[type="checkbox"] + label,
     input[type="radio"] + label {
-      @extend %h5;
+      @include responsive-font(17px, 20px);
       line-height: 1 !important;
       margin: 0 !important;
       font-weight: 300;
@@ -197,7 +196,7 @@ body.template-surveys-modern {
     input[type="radio"]:checked + label {
       color: $color-checked;
       opacity: 1;
-      font-weight: 600;
+      font-weight: 700;
     }
 
     input[type="checkbox"] + label:before,
@@ -228,7 +227,7 @@ body.template-surveys-modern {
     }
 
     .gfield_label {
-      @include responsive-font(20px, 26px);
+      @include responsive-font(18px, 26px);
       font-weight: 700;
       text-align: center;
       width: 100%;
@@ -236,7 +235,13 @@ body.template-surveys-modern {
       margin-bottom: 4rem;
       margin-top: 0;
 
+      @media (max-width: 500px) {
+        font-size: 18px;
+        margin-bottom: 3rem;
+      }
+
       @media (max-width: 400px) {
+        font-size: 16px;
         margin-bottom: 2rem;
       }
     }
@@ -244,7 +249,7 @@ body.template-surveys-modern {
     ul.gform_fields li.gfield {
       margin-bottom: 5rem;
       border: 1px solid #898888;
-      padding: 5rem 5rem 0;
+      padding: 4rem 5rem 0;
 
       @media (max-width: 500px) {
         padding: 3rem 3rem 0;
@@ -490,6 +495,66 @@ body.template-surveys-modern {
 
       &:hover {
         background: darken(#68d98b, 15%) !important;
+      }
+    }
+  }
+
+
+  // Multiple answers
+  .gform_wrapper .ginput_container.ginput_container_checkbox,
+  .gform_wrapper ul li.field_description_above div.ginput_container_checkbox {
+    margin-left: -5rem !important;
+    margin-right: -5rem !important;
+    margin-bottom: 0 !important;
+
+    @media (max-width: 500px) {
+      margin-left: -3rem !important;
+      margin-right: -3rem !important;
+      width: calc(100% + 6rem) !important;
+    }
+
+    @media (max-width: 400px) {
+      margin-left: -2rem !important;
+      margin-right: -2rem !important;
+      width: calc(100% + 4rem) !important;
+    }
+
+    ul.gfield_checkbox {
+      width: calc(100% + 5px) !important;
+      margin-left: -3px !important;
+
+      @media (max-width: 710px) {
+        width: calc(100% + 3px) !important;
+        margin-left: -2px !important;
+      }
+
+      @media (max-width: 550px) {
+        width: calc(100% + 2px) !important;
+        margin-left: -2px !important;
+      }
+
+      > li {
+        width: 33.3% !important;
+        margin-right: -1px !important;
+        margin-bottom: -1px !important;
+        overflow: hidden !important;
+
+        @media (max-width: 710px) {
+          width: 50% !important;
+        }
+
+        @media (max-width: 550px) {
+          width: 100% !important;
+        }
+      }
+
+      li label {
+        padding-top: 18px !important;
+        padding-bottom: 18px !important;
+
+        @media (max-width: 900px) {
+          font-size: 16px !important;
+        }
       }
     }
   }
