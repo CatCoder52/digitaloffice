@@ -15,7 +15,7 @@ body.template-surveys-modern {
   background-attachment: fixed;
   color: $color-dude-white;
 
-  @media (max-width: 340px) {
+  @media (max-width: 1000px) {
     background-size: cover;
   }
 
