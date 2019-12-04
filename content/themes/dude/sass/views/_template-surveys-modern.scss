@@ -19,6 +19,10 @@ body.template-surveys-modern {
     font-weight: 500 !important;
   }
 
+  span.gfield_required {
+    display: none !important;
+  }
+
   p {
     @include responsive-font(17px, 20px);
     font-weight: 400;
@@ -264,10 +268,6 @@ body.template-surveys-modern {
 
       @media (max-width: 400px) {
         padding: 2rem 2rem 0;
-      }
-
-      &:last-child {
-        margin-bottom: 3rem;
       }
     }
 
