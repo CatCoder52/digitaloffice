@@ -7,10 +7,17 @@ $max-width: 100rem;
 $color-checked: #67d88c;
 
 body.template-surveys-modern {
-  @include background-cover();
-  background-color: #111;
   background-image: url('../images/survey-bg.jpg');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-color: #111;
+  background-attachment: fixed;
   color: $color-dude-white;
+
+  @media (max-width: 340px) {
+    background-size: cover;
+  }
 
   form li.gfield .validation_message {
     margin-top: -1rem !important;
