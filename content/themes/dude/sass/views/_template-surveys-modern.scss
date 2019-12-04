@@ -1,0 +1,496 @@
+// --------------------------------------------------------------
+// Quick and dirty modern survey template
+// --------------------------------------------------------------
+
+// Vars
+$max-width: 100rem;
+$color-checked: #67d88c;
+
+body.template-surveys-modern {
+  @include background-cover();
+  background-color: #111;
+  background-image: url('../images/survey-bg.jpg');
+  color: $color-dude-white;
+
+  p {
+    @include responsive-font(17px, 20px);
+    font-weight: 400;
+  }
+
+  .container,
+  .survey-header,
+  .gform_wrapper {
+    max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
+
+    > * {
+      margin-left: 3rem;
+      margin-right: 3rem;
+
+      @media (max-width: $container-mobile) {
+        margin-left: 2rem;
+        margin-right: 2rem;
+      }
+
+      @media (max-width: 420px) {
+        margin-left: 1.7rem;
+        margin-right: 1.7rem;
+      }
+    }
+  }
+
+  ul,
+  li {
+    padding: 0;
+    margin-left: 0;
+    list-style: none;
+  }
+
+  * {
+    font-family: $font-alt;
+    color: $color-dude-white;
+  }
+
+  .site {
+    overflow: visible;
+    position: static;
+  }
+
+  &:after,
+  .chat-greeting {
+    display: none;
+  }
+
+  .gform_confirmation_wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+
+    .gform_confirmation_message {
+      @include responsive-font(18px, 30px);
+    }
+  }
+
+  .gform_wrapper {
+    max-width: $max-width;
+    padding-top: 4rem;
+
+    @media (max-width: $container-ipad) {
+      padding-top: 3rem;
+    }
+
+    table.gsurvey-likert th.gsurvey-likert-choice-label {
+      font-size: 14px !important;
+      font-weight: 300 !important;
+    }
+
+    .description_above .gfield_description {
+      margin-top: 1rem;
+    }
+
+    table.gsurvey-likert {
+      width: 100%;
+      table-layout: fixed;
+      border: 1px solid #4d4f50;
+      border-collapse: collapse;
+      border-style: hidden;
+      box-shadow: 0 0 0 1px #b5b5b6;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    table.gsurvey-likert .gsurvey-likert-choice {
+      padding: 2rem;
+
+      @media (max-width: 1100px) {
+        padding: .5rem 1rem;
+        background-position: 1rem center !important;
+
+        input {
+          margin-left: 1rem !important;
+        }
+
+        &:after {
+          margin-left: 3rem !important;
+        }
+      }
+    }
+
+    ul li.field_description_below div.ginput_container_radio,
+    ul li.field_description_below div.ginput_container_checkbox,
+    ul li.field_description_above div.ginput_container_radio,
+    ul li.field_description_above div.ginput_container_checkbox {
+      margin: 2rem 0 7rem;
+
+      @media (max-width: 500px) {
+        margin: 2rem 0 4rem;
+      }
+
+      @media (max-width: 400px) {
+        margin: 2rem 0;
+      }
+
+      > ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      > ul li {
+        width: auto;
+        min-width: 123px;
+        margin-right: 1rem;
+        border: 1px solid #808182;
+        background: transparent;
+        border-radius: 0;
+        padding: 0 !important;
+        text-align: center;
+        margin-bottom: 0;
+        transition: all .6s;
+        overflow: hidden;
+
+        @media (max-width: 710px) {
+          width: 100% !important;
+          margin-right: 0 !important;
+          margin-bottom: -1px;
+        }
+      }
+
+      > ul li:hover,
+      > ul li:focus {
+        background: #222;
+        opacity: 1;
+      }
+    }
+
+    // Checkboxes
+    input[type="checkbox"] {
+      display: none !important;
+    }
+
+    input[type="checkbox"] + label,
+    input[type="radio"] + label {
+      @extend %h5;
+      line-height: 1 !important;
+      margin: 0 !important;
+      font-weight: 300;
+      display: block;
+      position: relative;
+      margin-bottom: 20px;
+      color: $color-dude-white;
+      cursor: pointer;
+      user-select: none;
+      padding: 12px !important;
+    }
+
+    input[type="checkbox"] + label:last-child {
+      margin-bottom: 0;
+    }
+
+    input[type="checkbox"]:checked + label,
+    input[type="radio"]:checked + label {
+      color: $color-checked;
+      opacity: 1;
+      font-weight: 600;
+    }
+
+    input[type="checkbox"] + label:before,
+    input[type="radio"] + label:before {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: 0;
+      width: calc(100% + 2px);
+      height: calc(100% + 2px);
+      background: rgba($color-checked, .2);
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: all 1s;
+      border: 1px solid $color-checked;
+      margin: -1px;
+    }
+
+    input[type="checkbox"]:checked + label:before,
+    input[type="radio"]:checked + label:before {
+      opacity: 1;
+    }
+
+    // Radio buttons
+    input[type="radio"] {
+      display: none !important;
+    }
+
+    .gfield_label {
+      @include responsive-font(20px, 26px);
+      font-weight: 700;
+      text-align: center;
+      width: 100%;
+      display: block;
+      margin-bottom: 4rem;
+      margin-top: 0;
+
+      @media (max-width: 400px) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    ul.gform_fields li.gfield {
+      margin-bottom: 5rem;
+      border: 1px solid #898888;
+      padding: 5rem 5rem 0;
+
+      @media (max-width: 500px) {
+        padding: 3rem 3rem 0;
+      }
+
+      @media (max-width: 400px) {
+        padding: 2rem 2rem 0;
+      }
+
+      &:last-child {
+        margin-bottom: 3rem;
+      }
+    }
+
+    textarea,
+    input,
+    input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']) {
+      @include responsive-font(17px, 20px);
+      width: calc(100% + 10rem);
+      border: 0;
+      border-top: 1px solid #4f4e4d;
+      padding-top: 5rem !important;
+      padding-bottom: 5rem !important;
+      padding-left: 5rem !important;
+      padding-right: 5rem !important;
+      margin-left: -5rem;
+      margin-right: -5rem;
+      margin-bottom: 0 !important;
+
+      @media (max-width: 500px) {
+        margin-left: -3rem;
+        margin-right: -3rem;
+        width: calc(100% + 6rem);
+      }
+
+      @media (max-width: 400px) {
+        margin-left: -2rem;
+        margin-right: -2rem;
+        width: calc(100% + 4rem);
+      }
+
+      &::placeholder {
+        text-align: center;
+        line-height: 150px;
+      }
+    }
+
+    textarea {
+      height: 240px;
+    }
+  }
+
+  .gform_wrapper li.gfield_error input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+  .gform_wrapper li.gfield_error textarea {
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-top: 0 !important;
+  }
+
+  .survey-header {
+    padding-top: 6rem;
+    margin: 0 auto;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    &:after {
+      content: '';
+      display: block;
+      height: 1px;
+      width: calc(100% - 6rem);
+      border-bottom: 1px solid #303030;
+      position: absolute;
+      bottom: 5rem;
+      left: 3rem;
+    }
+
+    svg {
+      fill: $color-dude-white;
+      width: 100px;
+      height: 26px;
+      margin-top: 8px;
+      margin-bottom: 1rem;
+
+      @media (max-width: 600px) {
+        width: 70px;
+        height: 16.14px;
+      }
+    }
+
+    @media (max-width: $container-ipad) {
+      padding-top: 4rem;
+    }
+
+    @media (max-height: 760px) {
+      padding-top: 4rem;
+    }
+
+    img {
+      max-width: 189px;
+      width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+
+      @media (max-height: 880px) {
+        max-width: 140px;
+      }
+
+      @media (max-height: 760px) {
+        max-width: 100px;
+      }
+
+      @media (max-height: 670px) {
+        max-width: 70px;
+      }
+    }
+
+    h1 {
+      @extend %h3;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      margin-top: 0;
+
+      @media (max-width: 600px) {
+        font-size: 20px;
+      }
+
+      @media (max-width: 400px) {
+        font-size: 17px;
+      }
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-bottom: 5rem;
+      margin-bottom: 5rem;
+      font-size: 17px;
+
+      @media (max-width: 600px) {
+        font-size: 15px;
+      }
+    }
+
+    .survey-header-description {
+      opacity: .7;
+    }
+
+    a {
+      opacity: .7;
+      transition: all .6s;
+    }
+
+    a:hover {
+      opacity: 1;
+    }
+  }
+
+  .survey-start-wrapper {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    height: 70px;
+    background-color: rgba(#000, .05);
+    box-shadow: rgba(#000, .1) 0px -1px;
+
+    @media (max-width: $container-mobile) {
+      background: #f2f2f2;
+      position: static;
+      margin-top: 3rem;
+    }
+
+    button.survey-start-button {
+      @include responsive-font(19px, 22px);
+      position: relative;
+      font-family: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      box-shadow: rgba(0, 0, 0, .1) 0px 3px 12px 0px;
+      min-height: 48px;
+      background-color: rgb(35, 37, 39);
+      color: rgb(227, 228, 230);
+      transition: background-color .2s ease 0s, color .2s ease 0s, border-color .2s ease 0s, opacity .2s ease 0s;
+      outline: none;
+      border-width: 1px;
+      border-style: solid;
+      border-image: initial;
+      padding: 2px 18px;
+      border-color: transparent;
+      border-radius: 4px;
+      margin: 0;
+    }
+  }
+
+  .gform_wrapper .gform_footer input.button,
+  .gform_wrapper .gform_page_footer input.button,
+  .gform_wrapper .gform_footer input[type=submit],
+  .gform_wrapper .gform_page_footer input[type=submit] {
+    @include responsive-font(20px, 26px);
+    position: relative !important;
+    font-family: inherit !important;
+    font-weight: 700 !important;
+    cursor: pointer !important;
+    margin: 0 !important;
+    white-space: nowrap !important;
+    min-height: 48px !important;
+    background-color: $color-checked !important;
+    color: $color-dude-white !important;
+    transition: background-color .2s ease 0s, color .2s ease 0s, border-color .2s ease 0s, opacity .2s ease 0s !important;
+    outline: none !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-image: initial !important;
+    padding: 2px 18px !important;
+    border-color: transparent !important;
+    border-radius: 0 !important;
+  }
+
+  input[type="hidden"]+br {
+    display: none !important;
+  }
+
+  .gform_wrapper .gform_footer {
+    padding: 0 !important;
+    margin: 0 !important;
+
+    > input[type="submit"] {
+      width: 100% !important;
+      margin-bottom: 12rem !important;
+      padding-top: 3rem !important;
+      padding-bottom: 3rem !important;
+      border: 0 !important;
+      background: #68d98b;
+
+      &:hover {
+        background: darken(#68d98b, 15%) !important;
+      }
+    }
+  }
+}

@@ -69,6 +69,13 @@
                 "operator": "==",
                 "value": "template-surveys.php"
             }
+        ],
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "template-surveys-modern.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -91,5 +98,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1575293860
+    "modified": 1575446162
 }

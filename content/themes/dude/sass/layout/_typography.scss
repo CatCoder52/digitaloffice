@@ -11,6 +11,15 @@
 @include fontFace('Neuzeit Grotesk', '../fonts/32E13D_2_0', 400);
 @include fontFace('Neuzeit Grotesk', '../fonts/32E13D_3_0', 700);
 @include fontFace('Neuzeit Grotesk', '../fonts/32E13D_1_0', 900);
+@include fontFace('TT Interphases', '../fonts/ttinterphases-thin', 100);
+@include fontFace('TT Interphases', '../fonts/ttinterphases-extralight', 200);
+@include fontFace('TT Interphases', '../fonts/ttinterphases-light', 300);
+@include fontFace('TT Interphases', '../fonts/ttinterphases-regular', 400);
+@include fontFace('TT Interphases', '../fonts/ttinterphases-medium', 500);
+@include fontFace('TT Interphases', '../fonts/ttinterphases-demibold', 600);
+@include fontFace('TT Interphases', '../fonts/ttinterphases-bold', 700);
+@include fontFace('TT Interphases', '../fonts/ttinterphases-extrabold', 800);
+@include fontFace('TT Interphases', '../fonts/ttinterphases-black', 900);
 
 // Set root size for rems
 :root {
