@@ -12,6 +12,13 @@ body.template-surveys-modern {
   background-image: url('../images/survey-bg.jpg');
   color: $color-dude-white;
 
+  form li.gfield .validation_message {
+    margin-top: -3rem !important;
+    margin-bottom: 5rem !important;
+    text-align: center !important;
+    font-weight: 500 !important;
+  }
+
   p {
     @include responsive-font(17px, 20px);
     font-weight: 400;
