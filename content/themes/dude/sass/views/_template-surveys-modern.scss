@@ -89,7 +89,7 @@ body.template-surveys-modern {
       max-width: 560px;
       margin: 0 auto;
 
-      @media(max-width: 600px) {
+      @media (max-width: 600px) {
         font-size: 30px;
       }
     }
@@ -115,11 +115,7 @@ body.template-surveys-modern {
 
   .gform_wrapper {
     max-width: $max-width;
-    padding-top: 4rem;
-
-    @media (max-width: $container-ipad) {
-      padding-top: 3rem;
-    }
+    padding-top: 3px;
 
     table.gsurvey-likert th.gsurvey-likert-choice-label {
       font-size: 14px !important;
@@ -383,8 +379,19 @@ body.template-surveys-modern {
       width: calc(100% - 6rem);
       border-bottom: 1px solid #303030;
       position: absolute;
-      bottom: 5rem;
+      bottom: 3.5rem;
       left: 3rem;
+
+      @media (max-width: 500px) {
+        left: 3rem;
+        width: calc(100% - 6rem);
+        bottom: 2rem;
+      }
+
+      @media (max-width: 400px) {
+        left: 2rem;
+        width: calc(100% - 4rem);
+      }
     }
 
     svg {
@@ -401,10 +408,6 @@ body.template-surveys-modern {
     }
 
     @media (max-width: $container-ipad) {
-      padding-top: 4rem;
-    }
-
-    @media (max-height: 760px) {
       padding-top: 4rem;
     }
 
@@ -445,12 +448,17 @@ body.template-surveys-modern {
     p {
       margin-top: 0;
       margin-bottom: 0;
-      padding-bottom: 5rem;
+      padding-bottom: 4rem;
       margin-bottom: 5rem;
       font-size: 17px;
 
       @media (max-width: 600px) {
         font-size: 15px;
+        padding-bottom: 2rem;
+      }
+
+      @media (max-width: 500px) {
+        padding-bottom: 5px;
       }
     }
 

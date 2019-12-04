@@ -105,11 +105,11 @@ $hero_content = get_field( 'hero_content' );
           </div>
         </header>
 
-        <div class="container">
-          <?php if ( ! empty( $form_description ) ) : ?>
+        <?php if ( ! empty( $form_description ) ) : ?>
+          <div class="container">
             <?php echo wpautop( $form_description ); // WPCS: XSS ok. ?>
-          <?php endif; ?>
-        </div>
+          </div>
+        <?php endif; ?>
 
         <?php
         $id_or_title = $form_id;
