@@ -115,7 +115,11 @@ body.template-surveys-modern {
 
   .gform_wrapper {
     max-width: $max-width;
-    padding-top: 3px;
+    padding-top: 43px;
+
+    @media (max-width: 870px) {
+      padding-top: 3px;
+    }
 
     table.gsurvey-likert th.gsurvey-likert-choice-label {
       font-size: 14px !important;
@@ -283,12 +287,13 @@ body.template-surveys-modern {
     }
 
     ul.gform_fields li.gfield {
-      margin-bottom: 5rem;
+      margin-bottom: 10rem;
       border: 1px solid #898888;
       padding: 4rem 5rem 0;
 
       @media (max-width: 500px) {
         padding: 3rem 3rem 0;
+        margin-bottom: 5rem;
       }
 
       @media (max-width: 400px) {
