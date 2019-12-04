@@ -82,6 +82,30 @@ body.template-surveys-modern {
     padding: 2rem;
     margin-top: 4rem;
 
+    .thanks {
+      font-weight: 700;
+      font-size: 70px;
+      line-height: 1.1;
+      max-width: 560px;
+      margin: 0 auto;
+
+      @media(max-width: 600px) {
+        font-size: 30px;
+      }
+    }
+
+    p {
+      color: #fff !important;
+      max-width: 500px;
+      margin: 5rem auto;
+      font-size: 17px;
+      line-height: 1.5;
+    }
+
+    br {
+      display: none !important;
+    }
+
     .gform_confirmation_message {
       @include responsive-font(18px, 30px);
       line-height: 1.5;
