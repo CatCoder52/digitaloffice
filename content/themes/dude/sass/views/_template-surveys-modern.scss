@@ -13,7 +13,7 @@ body.template-surveys-modern {
   color: $color-dude-white;
 
   form li.gfield .validation_message {
-    margin-top: -3rem !important;
+    margin-top: -1rem !important;
     margin-bottom: 5rem !important;
     text-align: center !important;
     font-weight: 500 !important;
@@ -328,6 +328,11 @@ body.template-surveys-modern {
     border-left: 0 !important;
     border-right: 0 !important;
     border-top: 0 !important;
+    border-bottom: 0 !important;
+  }
+
+  .gform_wrapper li.gfield_error textarea {
+    border-top: 1px solid #4f4e4d !important;
   }
 
   .survey-header {
