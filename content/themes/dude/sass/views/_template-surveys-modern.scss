@@ -137,7 +137,7 @@ body.template-surveys-modern {
     ul li.field_description_below div.ginput_container_checkbox,
     ul li.field_description_above div.ginput_container_radio,
     ul li.field_description_above div.ginput_container_checkbox {
-      margin: 2rem 0 5rem;
+      margin: 2rem 0 4rem;
 
       @media (max-width: 500px) {
         margin: 2rem 0 4rem;
@@ -162,7 +162,7 @@ body.template-surveys-modern {
         border-radius: 0;
         padding: 0 !important;
         text-align: center;
-        margin-bottom: 0;
+        margin-bottom: 1rem;
         transition: all .6s;
 
         @media (max-width: 710px) {
