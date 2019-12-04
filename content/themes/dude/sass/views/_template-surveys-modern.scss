@@ -302,6 +302,19 @@ body.template-surveys-modern {
         text-align: center;
         line-height: 150px;
         white-space: pre-line;
+
+        @media (max-width: 1000px) {
+          line-height: 1.5;
+          padding-top: 5rem;
+        }
+
+        @media (max-width: 600px) {
+          padding-top: 4rem;
+        }
+
+        @media (max-width: 500px) {
+          padding-top: 2rem;
+        }
       }
     }
 
