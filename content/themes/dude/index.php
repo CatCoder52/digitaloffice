@@ -152,7 +152,7 @@ get_header(); ?>
     </section>
 
     <?php if ( ! is_paged() ) : ?>
-      <section class="block block-cta-left-image">
+      <section id="pulloposti" class="block block-cta-left-image">
         <div class="container">
 
           <div class="cols">
