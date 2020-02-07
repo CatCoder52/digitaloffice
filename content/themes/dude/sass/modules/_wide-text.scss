@@ -66,7 +66,7 @@ body .block.block-wide-text-contact .container {
 
 body .block.block-wide-text form {
   input[type=submit] {
-    border-color: $color-dude-deep-black;
+    border-color: $color-deep-black;
   }
 
   textarea {
@@ -89,7 +89,7 @@ body .block.block-wide-text form {
 
     &:focus {
       outline: 0;
-      border-color: $color-dude-deep-black;
+      border-color: $color-deep-black;
     }
 
     @media (max-width: 1300px) {
@@ -100,7 +100,7 @@ body .block.block-wide-text form {
 
     &::placeholder {
       opacity: 1;
-      color: $color-dude-grey-text;
+      color: $color-grey-text;
     }
   }
 

@@ -6,13 +6,13 @@
 // --------------------------------------------------------------
 
 // Brand colors
-$color-dude-black: #222;
-$color-dude-deep-black: #050505;
+$color-black: #222;
+$color-deep-black: #050505;
 $color-dark-blueish: #16202a;
-$color-dude-grey-text: #5a5a5a;
+$color-grey-text: #5a5a5a;
 $color-white: #fff;
 $color-whitegreyish: #f0f0f0;
-$color-dude-darkgrey: #272727;
+$color-darkgrey: #272727;
 $color-superlightgrey: #e7e7e7;
 $color-lightgrey: #808080;
 
@@ -23,8 +23,8 @@ $color-dark-midnight-blue: #03061b;
 $color-mint: #7effe1;
 
 // Default colors
-$color-links: $color-dude-deep-black;
-$color-hover: rgba($color-dude-black, .8);
+$color-links: $color-deep-black;
+$color-hover: rgba($color-black, .8);
 $color-body: $color-midnight-blue;
 $color-headings: $color-midnight-blue;
 $color-darkgrey: #4f5964;

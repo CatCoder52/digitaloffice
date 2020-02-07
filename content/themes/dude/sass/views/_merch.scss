@@ -85,8 +85,8 @@
       width: 50%;
       height: 5.5rem;
       background: $color-white;
-      border: 1px solid $color-dude-deep-black;
-      color: $color-dude-deep-black;
+      border: 1px solid $color-deep-black;
+      color: $color-deep-black;
       padding-top: 0;
       padding-bottom: 0;
       align-items: center;
@@ -101,8 +101,8 @@
       }
 
       &.active {
-        background: $color-dude-deep-black;
-        border-color: $color-dude-deep-black;
+        background: $color-deep-black;
+        border-color: $color-deep-black;
         color: $color-white;
       }
 
@@ -147,8 +147,8 @@
     align-items: center;
     justify-content: center;
     background: $color-white;
-    border: 1px solid $color-dude-deep-black;
-    color: $color-dude-deep-black;
+    border: 1px solid $color-deep-black;
+    color: $color-deep-black;
 
     @media (max-width: 1580px) {
       width: 4.5rem;
@@ -160,16 +160,16 @@
     }
 
     &.active {
-      background: $color-dude-deep-black;
-      border-color: $color-dude-deep-black;
+      background: $color-deep-black;
+      border-color: $color-deep-black;
       color: $color-white;
     }
   }
 
   button.add-to-cart:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button) {
     background: $color-white;
-    border: 1px solid $color-dude-deep-black;
-    color: $color-dude-deep-black;
+    border: 1px solid $color-deep-black;
+    color: $color-deep-black;
     height: 5.5rem;
     display: inline-flex;
     padding: 0 3rem;
@@ -264,11 +264,11 @@ label[for="simpay-4535-text-8"],
   z-index: 8;
   left: 0;
   bottom: 0;
-  background: $color-dude-black;
+  background: $color-black;
   padding: 3rem;
   transition: all $transition-duration;
   display: flex;
-  box-shadow: 10px 10px 30px -5px rgba($color-dude-black, .15);
+  box-shadow: 10px 10px 30px -5px rgba($color-black, .15);
   max-width: 100%;
   width: 100%;
   align-items: center;
@@ -365,7 +365,7 @@ label[for="simpay-4535-text-8"],
 
     &:hover {
       background: $color-white;
-      color: $color-dude-black;
+      color: $color-black;
       border-color: 1px solid $color-white;
       cursor: pointer;
     }

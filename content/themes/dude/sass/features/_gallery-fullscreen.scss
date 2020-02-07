@@ -70,7 +70,7 @@
   position: fixed;
   z-index: 999999;
   overflow: hidden;
-  background: rgba($color-dude-deep-black, .9);
+  background: rgba($color-deep-black, .9);
   opacity: 0;
   display: none;
   direction: ltr;
@@ -83,7 +83,7 @@
   margin: 1em auto;
   /* Set the carousel width/height ratio to 16/9: */
   padding-bottom: 56.25%;
-  box-shadow: 0 0 10px $color-dude-deep-black;
+  box-shadow: 0 0 10px $color-deep-black;
   touch-action: pan-y;
 }
 
@@ -140,9 +140,9 @@
   line-height: 30px;
   color: #fff;
   text-decoration: none;
-  text-shadow: 0 0 2px $color-dude-deep-black;
+  text-shadow: 0 0 2px $color-deep-black;
   text-align: center;
-  background: rgba($color-dude-deep-black, .5);
+  background: rgba($color-deep-black, .5);
   box-sizing: content-box;
   border: 3px solid #fff;
   border-radius: 23px;
@@ -165,7 +165,7 @@
   font-size: 20px;
   line-height: 30px;
   color: #fff;
-  text-shadow: 0 0 2px $color-dude-deep-black;
+  text-shadow: 0 0 2px $color-deep-black;
   opacity: .8;
   display: none;
 }

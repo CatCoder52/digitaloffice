@@ -311,7 +311,7 @@
 
     // Blog links
     a {
-      background-image: linear-gradient(to top, $color-dude-deep-black, $color-dude-deep-black);
+      background-image: linear-gradient(to top, $color-deep-black, $color-deep-black);
       background-size: 100% 1px;
       background-position: left bottom;
       background-repeat: no-repeat;
@@ -330,7 +330,7 @@
     blockquote {
       margin-left: auto;
       margin-right: auto;
-      border-left: 2px solid $color-dude-deep-black;
+      border-left: 2px solid $color-deep-black;
       margin-top: 4rem;
       margin-bottom: 4rem;
       padding: 4rem 8rem;
@@ -397,7 +397,7 @@
 
       &:focus {
         outline: 0;
-        border-color: $color-dude-deep-black;
+        border-color: $color-deep-black;
       }
 
       @media (max-width: 1300px) {
@@ -408,7 +408,7 @@
 
       &::placeholder {
         opacity: 1;
-        color: $color-dude-grey-text;
+        color: $color-grey-text;
       }
     }
 
@@ -498,7 +498,7 @@
   }
 
   .content a:not(.has-arrow):not(.contact-detail) {
-    background-image: linear-gradient(to top, $color-dude-deep-black, $color-dude-deep-black);
+    background-image: linear-gradient(to top, $color-deep-black, $color-deep-black);
     background-size: 100% 1px;
     background-position: left bottom;
     background-repeat: no-repeat;
@@ -521,7 +521,7 @@
     a:hover,
     a:focus,
     a:active {
-      color: $color-dude-deep-black;
+      color: $color-deep-black;
       opacity: 1;
     }
   }
@@ -548,7 +548,7 @@
   }
 
   .social svg {
-    fill: $color-dude-deep-black;
+    fill: $color-deep-black;
     width: 2rem;
     height: 2rem;
   }

@@ -18,7 +18,7 @@ body .block.block-cta-left-image,
   }
 
   .end-note     a {
-    background-image: linear-gradient(to top, $color-dude-deep-black, $color-dude-deep-black);
+    background-image: linear-gradient(to top, $color-deep-black, $color-deep-black);
     background-size: 100% 1px;
     background-position: left bottom;
     background-repeat: no-repeat;
@@ -67,7 +67,7 @@ body .block.block-cta-left-image,
 
       &:focus {
         outline: 0;
-        border-color: $color-dude-deep-black;
+        border-color: $color-deep-black;
       }
 
       @media (max-width: 1300px) {
@@ -78,7 +78,7 @@ body .block.block-cta-left-image,
 
       &::placeholder {
         opacity: 1;
-        color: $color-dude-grey-text;
+        color: $color-grey-text;
       }
     }
   }
@@ -219,14 +219,14 @@ body .block.block-cta-left-image,
     }
 
     input[type="submit"] {
-      border-color: $color-dude-deep-black;
+      border-color: $color-deep-black;
     }
 
     button {
       display: flex;
       align-items: center;
       justify-content: flex-start;
-      border-color: $color-dude-deep-black;
+      border-color: $color-deep-black;
 
       @media (min-width: $container-ipad) {
         white-space: nowrap;

@@ -282,7 +282,7 @@ ul.tags {
       height: 1px;
       position: absolute;
       transition: all .2s linear;
-      background: $color-dude-deep-black;
+      background: $color-deep-black;
     }
 
     a:before,
@@ -292,7 +292,7 @@ ul.tags {
       height: 0;
       position: absolute;
       transition: all .1s linear;
-      background: $color-dude-deep-black;
+      background: $color-deep-black;
     }
 
     &:hover:before,
@@ -310,11 +310,11 @@ ul.tags {
       display: inline-block;
       position: relative;
       padding: 3px 5px;
-      border: 1px solid rgba($color-dude-deep-black, .1);
+      border: 1px solid rgba($color-deep-black, .1);
     }
 
     a:hover {
-      color: $color-dude-deep-black;
+      color: $color-deep-black;
     }
 
     &:after {

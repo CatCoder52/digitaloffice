@@ -148,7 +148,7 @@
   position: relative;
 
   a {
-    background-image: linear-gradient(to top, $color-dude-deep-black, $color-dude-deep-black);
+    background-image: linear-gradient(to top, $color-deep-black, $color-deep-black);
     background-size: 100% 1px;
     background-position: left bottom;
     background-repeat: no-repeat;
@@ -239,7 +239,7 @@
 
   &:hover {
     span {
-      color: $color-dude-deep-black;
+      color: $color-deep-black;
     }
   }
 
@@ -247,7 +247,7 @@
     cursor: default;
 
     span {
-      color: $color-dude-deep-black;
+      color: $color-deep-black;
     }
 
     &:hover {
@@ -255,7 +255,7 @@
       cursor: default;
 
       span {
-        color: $color-dude-deep-black;
+        color: $color-deep-black;
       }
     }
   }
