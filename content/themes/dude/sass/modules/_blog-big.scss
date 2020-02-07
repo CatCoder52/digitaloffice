@@ -70,7 +70,7 @@
   }
 
   .col-content {
-    background: $color-dude-whitegreyish;
+    background: $color-whitegreyish;
     padding: $padding-general-content-box;
     position: relative;
 
@@ -109,7 +109,7 @@
     // Needs fixed width, otherwise arrow will spread the box
     width: 243.98px;
     background: $color-links;
-    color: $color-dude-white;
+    color: $color-white;
     border: 0;
     display: block;
     padding: 2.5rem 3rem;
@@ -155,13 +155,13 @@
     span,
     *:before,
     *:after {
-      color: $color-dude-white;
+      color: $color-white;
     }
 
     *:before,
     *:after,
     .arrow {
-      background: $color-dude-white;
+      background: $color-white;
       transition: all $transition-duration;
     }
   }

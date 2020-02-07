@@ -8,14 +8,14 @@
   }
 
   a {
-    background-image: linear-gradient(to top, $color-dude-white, $color-dude-white);
+    background-image: linear-gradient(to top, $color-white, $color-white);
     background-size: 100% 1px;
     background-position: left bottom;
     background-repeat: no-repeat;
     transition: .3s all;
     text-decoration: none;
     overflow: visible;
-    color: $color-dude-white;
+    color: $color-white;
   }
 
   a:hover,
@@ -37,7 +37,7 @@
   h2,
   p,
   h3 {
-    color: $color-dude-white;
+    color: $color-white;
   }
 
   .block-head {
@@ -136,6 +136,6 @@
   .long-arrow,
   .long-arrow:after,
   .long-arrow:before {
-    background: $color-dude-white;
+    background: $color-white;
   }
 }

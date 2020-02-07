@@ -7,7 +7,7 @@
   align-items: center;
   z-index: 1;
   background: $color-dude-deep-black;
-  color: $color-dude-white;
+  color: $color-white;
   height: 100vh; // Use vh as a fallback for browsers that do not support Custom Properties
   height: calc(var(--vh, 1vh) * 100);
   min-height: 65rem;
@@ -30,7 +30,7 @@
   }
 
   h1 {
-    color: $color-dude-white;
+    color: $color-white;
     margin-top: 0;
   }
 
@@ -57,7 +57,7 @@
   // Merch hero
   &.block-hero-merch {
     a {
-      background-image: linear-gradient(to top, $color-dude-white, $color-dude-white);
+      background-image: linear-gradient(to top, $color-white, $color-white);
       background-size: 100% 1px;
       background-position: left bottom;
       background-repeat: no-repeat;
@@ -124,7 +124,7 @@
 
     li,
     a {
-      color: $color-dude-white;
+      color: $color-white;
       font-weight: 300;
     }
 
@@ -219,7 +219,7 @@
     }
 
     svg {
-      fill: $color-dude-white;
+      fill: $color-white;
       width: 1.8rem;
       height: 1.8rem;
       margin-right: .8rem;
@@ -231,7 +231,7 @@
       background: transparent;
       border: 0;
       padding: 0;
-      color: $color-dude-white;
+      color: $color-white;
       font-weight: 300;
       cursor: pointer;
       transition: all $transition-duration;
@@ -247,7 +247,7 @@
 
       svg {
         fill: transparent;
-        stroke: $color-dude-white;
+        stroke: $color-white;
       }
     }
 
@@ -275,7 +275,7 @@
     }
 
     .form-box {
-      background: $color-dude-white;
+      background: $color-white;
       color: $color-body;
       padding: 6rem;
       max-width: 45rem;
@@ -391,8 +391,8 @@
   // Hero for front page and side columns
   &.block-hero-frontpage,
   &.block-hero-side-columns {
-    background: $color-dude-deep-black;
-    color: $color-dude-white;
+    background: $color-white;
+    color: $color-white;
     z-index: 4;
 
     // Let's reset the padding from the hero container, no need in full width hero
@@ -426,7 +426,7 @@
     }
 
     .cta-link:after {
-      background: $color-dude-white;
+      background: $color-white;
     }
 
     .container {
@@ -559,7 +559,7 @@
     h1,
     h2,
     a {
-      color: $color-dude-white;
+      color: $color-white;
     }
 
     .content {
@@ -677,7 +677,7 @@
       li a:after {
         width: 0;
         height: .2rem;
-        background: $color-dude-white;
+        background: $color-white;
         position: relative;
         content: '';
         display: block;

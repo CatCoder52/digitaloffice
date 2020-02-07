@@ -196,10 +196,10 @@ a.global-link {
 }
 
 .cta-link.cta-link-white {
-  color: $color-dude-white;
+  color: $color-white;
 
   &:after {
-    background: $color-dude-white;
+    background: $color-white;
   }
 }
 
@@ -271,7 +271,7 @@ a.global-link {
 .block.block-cta-left-image form button .arrow,
 .block.block-cta-left-image form button .arrow:before,
 .block.block-cta-left-image form button .arrow:after {
-  background: $color-dude-white;
+  background: $color-white;
 }
 
 // Descriptions and notes
@@ -286,11 +286,11 @@ a.global-link {
 
 // General backgrounds of cols and boxes
 .has-grey-bg {
-  background: $color-dude-whitegreyish;
+  background: $color-whitegreyish;
   position: relative;
 
   &.has-grey-bg-extend-left:before {
-    background: $color-dude-whitegreyish;
+    background: $color-whitegreyish;
     position: absolute;
     height: 100%;
     width: 50vw;
@@ -302,7 +302,7 @@ a.global-link {
   }
 
   &.has-grey-bg-extend-right:after {
-    background: $color-dude-whitegreyish;
+    background: $color-whitegreyish;
     position: absolute;
     height: 100%;
     width: 50vw;

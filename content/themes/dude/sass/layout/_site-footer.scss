@@ -17,7 +17,7 @@
   }
 
   svg {
-    fill: $color-dude-white;
+    fill: $color-white;
     width: 100px;
     height: 26px;
 
@@ -65,7 +65,7 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background: $color-dude-whitegreyish;
+    background: $color-whitegreyish;
     overflow: visible;
 
     @media (max-width: 640px) {

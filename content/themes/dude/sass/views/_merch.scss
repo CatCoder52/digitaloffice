@@ -84,7 +84,7 @@
     button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button) {
       width: 50%;
       height: 5.5rem;
-      background: $color-dude-white;
+      background: $color-white;
       border: 1px solid $color-dude-deep-black;
       color: $color-dude-deep-black;
       padding-top: 0;
@@ -103,7 +103,7 @@
       &.active {
         background: $color-dude-deep-black;
         border-color: $color-dude-deep-black;
-        color: $color-dude-white;
+        color: $color-white;
       }
 
       &:first-child {
@@ -146,7 +146,7 @@
     padding: 0;
     align-items: center;
     justify-content: center;
-    background: $color-dude-white;
+    background: $color-white;
     border: 1px solid $color-dude-deep-black;
     color: $color-dude-deep-black;
 
@@ -162,12 +162,12 @@
     &.active {
       background: $color-dude-deep-black;
       border-color: $color-dude-deep-black;
-      color: $color-dude-white;
+      color: $color-white;
     }
   }
 
   button.add-to-cart:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button) {
-    background: $color-dude-white;
+    background: $color-white;
     border: 1px solid $color-dude-deep-black;
     color: $color-dude-deep-black;
     height: 5.5rem;
@@ -340,8 +340,8 @@ label[for="simpay-4535-text-8"],
 
   button {
     background: transparent;
-    color: $color-dude-white;
-    border: 1px solid $color-dude-white;
+    color: $color-white;
+    border: 1px solid $color-white;
     padding: 1rem 2rem;
     transition: all $transition-duration;
 
@@ -364,9 +364,9 @@ label[for="simpay-4535-text-8"],
     }
 
     &:hover {
-      background: $color-dude-white;
+      background: $color-white;
       color: $color-dude-black;
-      border-color: 1px solid $color-dude-white;
+      border-color: 1px solid $color-white;
       cursor: pointer;
     }
   }
@@ -384,7 +384,7 @@ label[for="simpay-4535-text-8"],
   }
 
   svg {
-    stroke: $color-dude-white;
+    stroke: $color-white;
     margin-right: 1.5rem;
     width: 24px;
     height: 24px;
@@ -429,7 +429,7 @@ label[for="simpay-4535-text-8"],
   }
 
   * {
-    color: $color-dude-white;
+    color: $color-white;
   }
 
   @media (max-width: 600px) {

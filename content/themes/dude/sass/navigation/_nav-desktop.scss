@@ -35,7 +35,7 @@ body {
   .nav-toggle:focus .hamburger-inner:focus,
   .nav-toggle:focus .hamburger-inner:focus::after,
   .nav-toggle:focus .hamburger-inner:focus::before {
-    background-color: $color-dude-white;
+    background-color: $color-white;
   }
 }
 
@@ -178,7 +178,7 @@ body {
 .home .nav-primary-desktop .menu-items .menu-item a,
 .home .nav-primary-desktop .menu-items .menu-item a:hover,
 .home .nav-primary-desktop .menu-items .menu-item a:focus {
-  color: $color-dude-white;
+  color: $color-white;
 }
 
 .menu-items {
@@ -376,7 +376,7 @@ body {
         &:after {
           width: 0;
           height: 1px;
-          background: $color-dude-white;
+          background: $color-white;
           position: relative;
           content: '';
           display: block;

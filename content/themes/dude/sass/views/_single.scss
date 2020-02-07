@@ -5,11 +5,11 @@
 .single .block.block-hero.block-hero-single {
   height: 70vh;
   min-height: 55rem;
-  background: $color-dude-white;
+  background: $color-white;
 
   .container,
   .featured-image {
-    background: $color-dude-white;
+    background: $color-white;
     overflow: hidden;
     margin: 0;
     padding: 0;
@@ -35,7 +35,7 @@
   &:not(.block-single-reference) {
     .blocks-gallery-item figcaption {
       background: none;
-      color: $color-dude-white;
+      color: $color-white;
     }
 
     .wp-block-gallery {
@@ -122,7 +122,7 @@
     max-width: $article-max-width;
     margin-left: auto;
     margin-right: auto;
-    background-color: $color-dude-white;
+    background-color: $color-white;
 
     &.alignwide {
       max-width: 1300px;
@@ -230,7 +230,7 @@
   }
 
   .block-head {
-    background: $color-dude-whitegreyish;
+    background: $color-whitegreyish;
     padding: $padding-general-content-box;
 
     @media (max-width: 1000px) {
@@ -272,8 +272,8 @@
 
     > .blocks-gallery-item {
       padding: 0;
-      border: 1px solid rgba($color-dude-whitegreyish, 1);
-      box-shadow: 10px 10px 30px -5px rgba($color-dude-whitegreyish, 1);
+      border: 1px solid rgba($color-whitegreyish, 1);
+      box-shadow: 10px 10px 30px -5px rgba($color-whitegreyish, 1);
     }
   }
 
@@ -324,7 +324,7 @@
     a:focus,
     a:active {
       background-size: 100% 2.8rem;
-      color: $color-dude-white;
+      color: $color-white;
     }
 
     blockquote {
@@ -511,7 +511,7 @@
   .content a:not(.has-arrow):not(.contact-detail):focus,
   .content a:not(.has-arrow):not(.contact-detail):active {
     background-size: 100% 2.8rem;
-    color: $color-dude-white;
+    color: $color-white;
   }
 
   .contact a {

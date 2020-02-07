@@ -61,18 +61,13 @@
   font-weight: 700;
 
   a {
-    color: #111;
+    color: $color-cobalt-blue;
   }
 }
 
 // If dark hero, fix colors according to the situation
 nav ul li a,
 nav ul li button {
-  color: $color-dude-white;
+  color: $color-white;
 }
 
-.site-title svg,
-.site-title g,
-.site-title path {
-  fill: $color-dude-white;
-}

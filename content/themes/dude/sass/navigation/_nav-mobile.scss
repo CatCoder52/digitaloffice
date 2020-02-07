@@ -4,8 +4,8 @@
 // The main layout for the website navigation, for the mobile
 // version only.
 // -----------------------------------------------------------
-$nav-toggle-color: $color-dude-white;
-$nav-toggle-active-color: $color-dude-white;
+$nav-toggle-color: $color-white;
+$nav-toggle-active-color: $color-white;
 $nav-background-color: $color-dude-deep-black;
 $hamburger-padding-x: 1.5rem;
 $hamburger-padding-y: 5rem;
@@ -289,7 +289,7 @@ body.single-person.js-nav-active .site-content {
       path {
         top: 0;
         fill: transparent;
-        stroke: $color-dude-white;
+        stroke: $color-white;
       }
 
       &:after {
@@ -305,7 +305,7 @@ body.single-person.js-nav-active .site-content {
       &:after {
         width: 100%;
         height: 1px;
-        background: $color-dude-white;
+        background: $color-white;
         position: relative;
         content: '';
         display: block;
@@ -388,7 +388,7 @@ body.single-person.js-nav-active .site-content {
       &:after {
         width: 0;
         height: 1px;
-        background: $color-dude-white;
+        background: $color-white;
         position: relative;
         content: '';
         display: block;

@@ -14,12 +14,12 @@
     .accordion-content,
     .accordion.open-accordion:hover,
     .accordion.open-accordion:focus {
-      color: $color-dude-white;
+      color: $color-white;
       background-color: $color-dude-darkgrey;
-      border-color: rgba($color-dude-whitegreyish, .3);
+      border-color: rgba($color-whitegreyish, .3);
 
       span {
-        color: $color-dude-white;
+        color: $color-white;
       }
     }
   }
@@ -161,7 +161,7 @@
   a:focus,
   a:active {
     background-size: 100% 2.8rem;
-    color: $color-dude-white;
+    color: $color-white;
   }
 
   @media (max-width: $container-mobile) {
@@ -266,7 +266,7 @@
   cursor: default;
 
   &:hover {
-    background-color: $color-dude-white;
+    background-color: $color-white;
     pointer-events: none;
     cursor: default;
 
