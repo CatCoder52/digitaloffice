@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-02-07 15:00:13
+ * @Last Modified time: 2020-02-07 15:33:03
  *
  * @package dude2019
  */
@@ -22,8 +22,8 @@ if ( has_post_thumbnail() ) {
   <div class="container opacity-on-load-instant">
 
     <div class="content">
-      <h1>Verkkosivustoja ja visuaalista suunnittelua ihmisiltä ihmisille.</h1>
-      <p>Rakkaudesta työhön. Parhaimmillamme olemme jalostaessamme asiakkaillemme tavoitteita tukevia kokonaisuuksia.</p>
+      <h1>Visuaalisesti päräyttäviä, räätälöityjä verkkosivustoja.</h1>
+      <p>Autamme sinua ja yritystänne pysymään edelläkävijänä toteuttamalla aikaa kestävät, laadukkaat verkkosivut. Tulosta ei tehdä valmisteemoilla.</p>
     </div>
 
     <div class="featured-image featured-image-side">

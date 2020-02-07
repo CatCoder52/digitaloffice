@@ -3,10 +3,16 @@
   align-items: center;
   z-index: 1;
   color: $color-white;
+  padding-top: 19rem;
+  padding-bottom: 19rem;
 
   h1 {
     color: $color-white;
     margin-top: 0;
+  }
+
+  p {
+    color: $color-body;
   }
 
   .container {
@@ -436,6 +442,7 @@
 
     h1 {
       font-family: $font-headings-alt;
+      line-height: 1.25;
     }
 
     h1,
@@ -445,7 +452,8 @@
     }
 
     .content {
-      z-index: 4;
+      padding: 8rem;
+      max-width: 670px;
 
       @media (min-width: $container-mobile) {
         &.has-loaded {

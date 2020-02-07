@@ -110,7 +110,7 @@ h6 {
 // Define your type scale here: https://type-scale.com/
 h1,
 %h1 {
-  @include responsive-font(32px, 60px);
+  @include responsive-font(32px, 55px);
 }
 
 h2,
