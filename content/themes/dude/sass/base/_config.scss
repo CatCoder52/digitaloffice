@@ -33,6 +33,7 @@ $color-placeholder: #ababab;
 // Fonts
 $font-base: 'Circular', 'Helvetica Neue', Helvetica, sans-serif;
 $font-headings: 'Circular', 'Helvetica Neue', Helvetica, sans-serif;
+$font-headings-alt: 'Riforma', 'Helvetica Neue', Helvetica, sans-serif;
 $font-alt: 'TT Interphases', 'Helvetica Neue', Helvetica, sans-serif;
 $font-monospace: 'Menlo', 'Courier', monospace;
 
@@ -48,7 +49,7 @@ $grid-type: fluid; // 'fluid' or 'snappy'
 $layout-max-width: 100%;
 
 // Container widths
-$grid-base-size: 100%; // Layout container max width on desktop. This is default .container size
+$grid-base-size: 1300px; // Layout container max width on desktop. This is default .container size
 $article-max-width: 1000px; // Max width for articles (see also $content_width in functions.php!)
 
 // Breakpoints

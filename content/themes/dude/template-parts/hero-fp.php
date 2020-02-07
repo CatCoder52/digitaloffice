@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-06-25 13:35:57
+ * @Last Modified time: 2020-02-07 15:00:13
  *
  * @package dude2019
  */
@@ -21,19 +21,9 @@ if ( has_post_thumbnail() ) {
 <section class="block block-hero-side-columns block-hero block-hero-frontpage block-hero-enable-transition">
   <div class="container opacity-on-load-instant">
 
-    <div class="content content-select-service">
-
-      <h1 class="screen-reader-text">Mitä saisi olla?</h1>
-
-      <div class="side-content-box selection">
-        <ul>
-          <li><a href="<?php echo get_page_link( 9 ); ?>">Haluan uudet verkkosivut</a></li>
-          <li><a href="<?php echo get_page_link( 4485 ); ?>">Tarvitsen visuaalista suunnittelua</a></li>
-          <li><a href="<?php echo get_page_link( 4493 ); ?>">Kunhan vaan kahtelen...</a></li>
-        </ul>
-
-        <p class="cta-link cta-link-front"><a href="<?php echo get_page_link( 4487 ); ?>">Ota yhteyttä</a></p>
-      </div>
+    <div class="content">
+      <h1>Verkkosivustoja ja visuaalista suunnittelua ihmisiltä ihmisille.</h1>
+      <p>Rakkaudesta työhön. Parhaimmillamme olemme jalostaessamme asiakkaillemme tavoitteita tukevia kokonaisuuksia.</p>
     </div>
 
     <div class="featured-image featured-image-side">

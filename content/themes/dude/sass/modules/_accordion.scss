@@ -5,7 +5,7 @@
   }
 
   &.block-accordion-company {
-    background-color: $color-dude-darkgrey;
+    background-color: $color-cobalt-blue;
 
     button.accordion,
     *,
@@ -15,7 +15,7 @@
     .accordion.open-accordion:hover,
     .accordion.open-accordion:focus {
       color: $color-white;
-      background-color: $color-dude-darkgrey;
+      background-color: $color-cobalt-blue;
       border-color: rgba($color-whitegreyish, .3);
 
       span {
