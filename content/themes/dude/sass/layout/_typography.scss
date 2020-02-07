@@ -7,19 +7,12 @@
 // -----------------------------------------------------------
 
 // Set up self-hosted fonts here
-@include fontFace('Neuzeit Grotesk', '../fonts/32E13D_0_0', 300);
-@include fontFace('Neuzeit Grotesk', '../fonts/32E13D_2_0', 400);
-@include fontFace('Neuzeit Grotesk', '../fonts/32E13D_3_0', 700);
-@include fontFace('Neuzeit Grotesk', '../fonts/32E13D_1_0', 900);
-@include fontFace('TT Interphases', '../fonts/ttinterphases-thin', 100);
-@include fontFace('TT Interphases', '../fonts/ttinterphases-extralight', 200);
-@include fontFace('TT Interphases', '../fonts/ttinterphases-light', 300);
-@include fontFace('TT Interphases', '../fonts/ttinterphases-regular', 400);
-@include fontFace('TT Interphases', '../fonts/ttinterphases-medium', 500);
-@include fontFace('TT Interphases', '../fonts/ttinterphases-demibold', 600);
-@include fontFace('TT Interphases', '../fonts/ttinterphases-bold', 700);
-@include fontFace('TT Interphases', '../fonts/ttinterphases-extrabold', 800);
-@include fontFace('TT Interphases', '../fonts/ttinterphases-black', 900);
+@include fontFace('Circular', '../fonts/CircularStd-Regular', 400);
+@include fontFace('Circular', '../fonts/CircularStd-BookItalic', 400, italic);
+@include fontFace('Circular', '../fonts/CircularStd-Medium', 500);
+@include fontFace('Circular', '../fonts/CircularStd-MediumItalic', 500, italic);
+@include fontFace('Circular', '../fonts/CircularStd-Bold', 700);
+@include fontFace('Circular', '../fonts/CircularStd-Black', 900);
 
 // Set root size for rems
 :root {
