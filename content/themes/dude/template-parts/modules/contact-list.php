@@ -2,10 +2,10 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-25 17:01:29
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-06-07 11:29:31
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2020-02-12 17:43:36
  *
- * @package dude2019
+ * @package dude
  */
 
 $persons = get_sub_field( 'persons' );

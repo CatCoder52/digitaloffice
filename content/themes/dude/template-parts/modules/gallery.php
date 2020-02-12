@@ -3,9 +3,9 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-25 14:37:31
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-06-02 22:05:40
+ * @Last Modified time: 2020-02-12 17:43:36
  *
- * @package dude2019
+ * @package dude
  */
 
 // try to get images from ccahe

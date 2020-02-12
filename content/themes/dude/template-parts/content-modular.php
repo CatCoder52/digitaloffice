@@ -2,13 +2,13 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:05:23
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-06-07 13:47:23
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2020-02-12 17:43:38
  *
- * @package dude2019
+ * @package dude
  */
 
-// define what modules se should NOT cache.
+// define what modules we should NOT cache.
 $exclude_template_part_from_cache = array(
   'cta-left-image'  => true,
   'wide-text'       => true,

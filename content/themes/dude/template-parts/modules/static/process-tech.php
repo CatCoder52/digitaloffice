@@ -3,9 +3,9 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 17:43:02
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-06-06 12:20:44
+ * @Last Modified time: 2020-02-12 17:43:37
  *
- * @package dude2019
+ * @package dude
  */
 
 ?>

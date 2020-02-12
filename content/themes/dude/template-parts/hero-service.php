@@ -2,10 +2,10 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-06-01 18:13:13
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2020-02-12 17:43:37
  *
- * @package dude2019
+ * @package dude
  */
 
 $hero_content = get_post_meta( get_the_id(), 'hero_content', true ); ?>

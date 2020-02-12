@@ -3,9 +3,9 @@
  * @Author: 						Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:   						2019-06-03 12:04:02
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-06-25 13:46:41
+ * @Last Modified time: 2020-02-12 17:43:36
  *
- * @package dude2019
+ * @package dude
  */
 
 $hashtag = get_sub_field( 'hashtag' );

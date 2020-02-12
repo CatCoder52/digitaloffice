@@ -67,6 +67,33 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_5e441b31fc754": {
+                    "key": "layout_5e441b31fc754",
+                    "name": "testimonials",
+                    "label": "Asiakaslainaukset-slider",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5e441b31fc756",
+                            "label": "",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Tämä alue on kovakoodattu ja sitä ei voi muokata hallintapaneelista.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5cd58187c53d2": {
                     "key": "layout_5cd58187c53d2",
                     "name": "references",
@@ -899,7 +926,9 @@
                             "max_width": "",
                             "max_height": "",
                             "max_size": "",
-                            "mime_types": ""
+                            "mime_types": "",
+                            "return_format": "array",
+                            "preview_size": "medium"
                         }
                     ],
                     "min": "",
@@ -1010,11 +1039,6 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "page"
-            },
-            {
-                "param": "page_template",
-                "operator": "!=",
-                "value": "template-surveys.php"
             }
         ]
     ],
@@ -1026,5 +1050,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1565011820
+    "modified": 1581521731
 }

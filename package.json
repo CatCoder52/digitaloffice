@@ -1,7 +1,7 @@
 {
-  "name": "dude2019",
+  "name": "dude",
   "version": "1.0.0",
-  "description": "dude2019 powered by dudestack + devpackages",
+  "description": "dude powered by dudestack + devpackages",
   "author": "Digitoimisto Dude Oy (moro@dude.fi)",
   "devDependencies": {
     "access-sniff": "^3.2.0",

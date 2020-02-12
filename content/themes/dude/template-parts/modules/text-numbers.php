@@ -3,9 +3,9 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 18:43:31
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-05-30 17:28:32
+ * @Last Modified time: 2020-02-12 17:43:37
  *
- * @package dude2019
+ * @package dude
  */
 
 $title = get_sub_field( 'title' );
