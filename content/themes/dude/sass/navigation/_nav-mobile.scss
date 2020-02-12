@@ -4,14 +4,14 @@
 // The main layout for the website navigation, for the mobile
 // version only.
 // -----------------------------------------------------------
-$nav-toggle-color: $color-white;
-$nav-toggle-active-color: $color-white;
+$nav-toggle-color: $color-cobalt-blue;
+$nav-toggle-active-color: $color-cobalt-blue;
 $nav-background-color: $color-deep-black;
 $hamburger-padding-x: 1.5rem;
 $hamburger-padding-y: 5rem;
-$hamburger-layer-width: 4rem;
-$hamburger-layer-height: .1rem;
-$hamburger-layer-spacing: .8rem;
+$hamburger-layer-width: 3rem;
+$hamburger-layer-height: .2rem;
+$hamburger-layer-spacing: .4rem;
 $hamburger-layer-color: $nav-toggle-color;
 $hamburger-layer-border-radius: 0;
 $hamburger-hover-opacity: .8;
@@ -248,7 +248,7 @@ body.single-person.js-nav-active .site-content {
 
     h2 {
       @include responsive-font(16px, 20px);
-      color: #fff;
+      color: $color-white;
       opacity: .5;
     }
 
@@ -299,7 +299,7 @@ body.single-person.js-nav-active .site-content {
 
     a,
     button {
-      color: #fff;
+      color: $color-white;
       display: inline-block;
 
       &:after {
@@ -324,7 +324,7 @@ body.single-person.js-nav-active .site-content {
 
       svg,
       path {
-        fill: #fff;
+        fill: $color-white;
       }
 
       &:hover:after {
@@ -339,7 +339,7 @@ body.single-person.js-nav-active .site-content {
 
   > * {
     width: 100%;
-    color: #fff;
+    color: $color-white;
   }
 
   .nav-items {
@@ -376,7 +376,7 @@ body.single-person.js-nav-active .site-content {
       padding-bottom: 0;
       padding-left: 0;
       padding-right: 0;
-      color: #fff;
+      color: $color-white;
       font-weight: 300;
       line-height: 1.55;
       text-decoration: none;
@@ -437,7 +437,7 @@ body.single-person.js-nav-active .site-content {
       font: bold 18px/37px monospace;
       text-align: center;
       background: #202020;
-      color: #fff;
+      color: $color-white;
       padding: 0;
       z-index: 9999;
       border: 0;
@@ -453,7 +453,7 @@ body.single-person.js-nav-active .site-content {
 
     .dropdown-toggle:hover {
       background-color: #3e4853;
-      color: #fff;
+      color: $color-white;
     }
 
     .dropdown-toggle.toggled-on:before {
@@ -520,21 +520,22 @@ body.single-person.js-nav-active .site-content {
   -webkit-tap-highlight-color: rgba(#000, 0);
   border: 0;
   overflow: visible;
-  color: #fff;
+  color: $nav-toggle-color;
   font-weight: 700;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-touch-callout: none;
   user-select: none;
   text-decoration: none;
-  padding: 2rem;
+  padding: 1rem;
   margin: 0 -2rem 0 0;
   background: transparent;
   cursor: pointer;
   position: relative;
 
-  // Hide from desktops
-  display: none;
+  &:not(.is-active) .hamburger-inner::after {
+    width: 17px;
+  }
 
   span:not(.toggle-text) {
     color: $nav-toggle-color;
