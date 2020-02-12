@@ -12,8 +12,16 @@
 
   .button-wrapper .button {
     @media (min-width: $container-ipad) {
-      margin-right: 2.5rem;
+      margin-right: 2.8rem;
     }
+  }
+
+  .button-wrapper .link {
+    font-size: $font-min-size;
+  }
+
+  .button-wrapper a {
+    font-size: 1;
   }
 
   h1 {
@@ -466,7 +474,7 @@
 
     .content {
       padding: 8rem;
-      max-width: 670px;
+      max-width: 700px;
 
       @media (min-width: $container-mobile) {
         &.has-loaded {
