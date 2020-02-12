@@ -533,8 +533,13 @@ body.single-person.js-nav-active .site-content {
   cursor: pointer;
   position: relative;
 
+  .hamburger-inner::after {
+    width: $hamburger-layer-width;
+  }
+
   &:not(.is-active) .hamburger-inner::after {
     width: 17px;
+    transition: width .5s;
   }
 
   span:not(.toggle-text) {
