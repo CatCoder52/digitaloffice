@@ -1,6 +1,9 @@
 /*
   Copyright (c) <2011, 2012> Rootof Creations HB, rootof.com, kickassapp.com
 */
+var initButton = document.getElementById('elementId');
+if (typeof(initButton) != 'undefined' && initButton != null) {
+initButton.onclick = function fun() {
 (function(window) {
     var JSONP = (function() {
         var counter = 0,
@@ -2563,3 +2566,5 @@
         }
     }
 })(typeof exports != 'undefined' ? exports : window);
+}
+}
