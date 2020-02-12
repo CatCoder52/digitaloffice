@@ -2501,7 +2501,7 @@
         },
         drawBullet: function() {
             this.drawer.setFillColor(GameGlobals.bulletColor);
-            this.drawer.drawCircle(2.5);
+            this.drawer.drawCircle(1.5);
         },
         drawExplosion: function(particles) {
             for (var i = 0, particle; particle = particles[i]; i++) {
