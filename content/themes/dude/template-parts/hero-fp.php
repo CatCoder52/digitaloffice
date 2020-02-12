@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-02-12 14:16:19
+ * @Last Modified time: 2020-02-12 15:52:45
  *
  * @package dude2019
  */
@@ -24,7 +24,7 @@ if ( has_post_thumbnail() ) {
     <div class="content">
       <h1>Visuaalisesti päräyttäviä, räätälöityjä verkkosivustoja.</h1>
       <p>Autamme sinua ja yritystänne pysymään edelläkävijänä toteuttamalla aikaa kestävät, laadukkaat verkkosivut. Tulosta ei tehdä valmisteemoilla.</p>
-      <p class="button-wrapper"><a href="#" class="button">Aloitetaanko projekti?</a> <a href="#">Selaa tehtyjä töitämme</a></p>
+      <p class="button-wrapper"><a href="#" class="button">Aloitetaanko projekti?<?php include get_theme_file_path( '/svg/arrow-right.svg' ); ?></a> <a href="#">Selaa tehtyjä töitämme</a></p>
     </div>
 
     <div class="featured-image featured-image-side">

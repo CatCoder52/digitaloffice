@@ -29,6 +29,10 @@
     transition: 150ms linear background;
     font-family: $font-base;
 
+    .arrow-right {
+      margin-left: 2.5rem;
+    }
+
     @media (max-width: $container-mobile) {
       // Wrap long buttons on mobile
       display: block;
@@ -37,8 +41,8 @@
 
     &:hover,
     &:focus {
-      color: #fff;
-      background: lighten($color-links, 20%);
+      color: $color-white;
+      background: $color-midnight-blue;
     }
 
     &.button-ghost {
@@ -49,7 +53,7 @@
 
     &.button-ghost:hover {
       background-color: $color-links;
-      color: #fff;
+      color: $color-white;
     }
   }
 }
