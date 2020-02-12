@@ -4,8 +4,8 @@
 // The main layout for the website navigation, for a desktop
 // devices only.
 // -----------------------------------------------------------
-$color-nav-dropdown-links: #fff;
-$color-nav-links: #fff;
+$color-nav-dropdown-links: $color-cobalt-blue;
+$color-nav-links: $color-cobalt-blue;
 $dropdown-width: 19rem;
 $icon-arrow-right: '../svg/chevron-right-dark.svg';
 $icon-arrow-down: '../svg/chevron-down-dark.svg';
@@ -49,13 +49,13 @@ body {
     // Main level links
     .nav-primary > ul > li > a,
     .nav-primary-desktop > ul > li > a {
-      color: #fff;
+      color: $color-nav-links;
       position: relative;
     }
 
     .nav-primary > ul > li > a:hover,
     .nav-primary-desktop > ul > li > a:hover {
-      color: #fff;
+      color: $color-nav-links;
     }
   }
 }
@@ -178,7 +178,7 @@ body {
 .home .nav-primary-desktop .menu-items .menu-item a,
 .home .nav-primary-desktop .menu-items .menu-item a:hover,
 .home .nav-primary-desktop .menu-items .menu-item a:focus {
-  color: $color-white;
+  color: $color-nav-links;
 }
 
 .menu-items {

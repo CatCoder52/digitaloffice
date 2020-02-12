@@ -6,33 +6,18 @@ body.archive.category,
 body.archive.tag {
   .site-header nav > ul > li > a,
   .site-header nav > ul > li > button {
-    color: $color-body;
+    color: $color-nav-links;
   }
 
   .site-header .site-title svg,
   .site-header .site-title g,
   .site-header .site-title path {
-    fill: $color-body;
-  }
-
-  &:not(.js-nav-active) .site-header .hamburger-inner,
-  &:not(.js-nav-active) .site-header .hamburger-inner::after,
-  &:not(.js-nav-active) .site-header .hamburger-inner::before,
-  &:not(.js-nav-active) .site-header .hamburger-inner:focus,
-  &:not(.js-nav-active) .site-header .hamburger-inner:focus::after,
-  &:not(.js-nav-active) .site-header .hamburger-inner:focus::before,
-  &:not(.js-nav-active) .site-header .nav-toggle:focus .hamburger-inner,
-  &:not(.js-nav-active) .site-header .nav-toggle:focus .hamburger-inner::after,
-  &:not(.js-nav-active) .site-header .nav-toggle:focus .hamburger-inner::before,
-  &:not(.js-nav-active) .site-header .nav-toggle:focus .hamburger-inner:focus,
-  &:not(.js-nav-active) .site-header .nav-toggle:focus .hamburger-inner:focus::after,
-  &:not(.js-nav-active) .site-header .nav-toggle:focus .hamburger-inner:focus::before {
-    background-color: $color-body;
+    fill: $color-nav-links;
   }
 
   &:not(.js-nav-active) {
     .site-header nav .toggle-text {
-      color: $color-body;
+      color: $color-nav-links;
     }
   }
 
@@ -41,12 +26,12 @@ body.archive.tag {
       .nav-primary-desktop .menu-items > .menu-item > a,
       .nav-primary-desktop .menu-items > .menu-item button,
       .nav-primary-desktop .menu-items > .menu-item.dude-nav-more button .plus-cross {
-        color: $color-body;
+        color: $color-nav-links;
       }
 
       .nav-primary-desktop .menu-items > .menu-item > a:after,
       .nav-primary-desktop .menu-items > .menu-item button:after {
-        background: $color-body;
+        background: $color-nav-links;
       }
     }
   }
