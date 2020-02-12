@@ -185,6 +185,10 @@ body {
   transition: all $transition-duration;
 }
 
+.nav-primary-desktop .menu-items .menu-item.dude-nav-more {
+  margin-left: 2rem;
+}
+
 // Fade out other items when hovering the last one
 .menu-items.fade-out .menu-item a,
 .menu-items.fade-out .menu-item a:after,
