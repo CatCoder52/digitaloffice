@@ -6,20 +6,23 @@
 // ------------------------------------------------------------
 
 // Buttons
-.content-area {
+.content-area,
+.content-area .block.block-hero.block-hero-frontpage {
   button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button),
   .button,
   input[type="reset"],
   input[type="submit"],
   input[type="button"] {
     @extend %default;
-    background: $color-links;
-    color: #fff;
+    background: $color-cobalt-blue;
+    color: $color-white;
+    font-size: 18px;
+    font-weight: 500;
     border: 0;
     width: auto;
     display: inline-block;
-    padding: 2.5rem 3rem;
-    margin-bottom: 1rem;
+    padding: 1.2rem 2.8rem;
+    margin-bottom: 0;
     text-decoration: none;
     position: relative;
     cursor: pointer;

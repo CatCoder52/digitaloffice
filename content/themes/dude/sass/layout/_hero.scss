@@ -6,6 +6,16 @@
   padding-top: 19rem;
   padding-bottom: 19rem;
 
+  .button-wrapper {
+    margin-bottom: 0;
+  }
+
+  .button-wrapper .button {
+    @media (min-width: $container-ipad) {
+      margin-right: 2.5rem;
+    }
+  }
+
   h1 {
     color: $color-white;
     margin-top: 0;
