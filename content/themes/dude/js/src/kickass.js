@@ -382,7 +382,7 @@
             return "https://kickassapp.com/" + Array.prototype.slice.call(arguments).join("");
         },
         hasCanvas: (typeof document.createElement('canvas').getContext !== 'undefined'),
-        bulletColor: 'black'
+        bulletColor: '#131a50'
     };
     window.GameGlobals = GameGlobals;
     if (!Array.prototype.indexOf) {
@@ -921,7 +921,7 @@
                 height: 300
             };
         },
-        generate: function(parent) {
+        function(parent) {
             this.container = document.createElement('div');
             this.container.className = 'KICKASSELEMENT';
             this.container.id = 'kickass-profile-menu';
@@ -930,35 +930,6 @@
             this.url = GameGlobals.path('intermediate_postmessage.html?url=' +
                 encodeURIComponent(getGlobalNamespace().KICKASSURL || document.location.href) + "&origin=" + encodeURIComponent(document.location.href) + "&preship=" + (shipId) + "&is_campaign=" + (this.game.isCampaign() ? "true" : "") + "&is_mysite=" + (this.game.isMySite() ? "true" : ""));
             this.isSocketReady = false;
-            this.socketIframe = document.createElement("iframe");
-            this.socketIframe.frameborder = '0';
-            this.socketIframe.className = 'KICKASSELEMENT';
-            this.socketIframe.width = '100%';
-            this.socketIframe.height = this.size.height + 'px';
-            this.container.appendChild(this.socketIframe);
-            this.menuOrigin = "https://kickassapp.com/".replace(/\/$/, "");
-            this.socketIframe.src = this.url;
-            this.onMessage = bind(this, function(event) {
-                if (event.origin !== this.menuOrigin && event.origin !== this.menuOrigin.replace("http://", "https://")) {
-                    console.log("ignoring event from", event.origin);
-                    return;
-                }
-                var message = event.data;
-                if (message === "ready") {
-                    this.onGameReady();
-                    return;
-                }
-                var t = message.split(':!');
-                if (t.length !== 2) {
-                    return;
-                }
-                var type = t.shift().replace(/^./g, function(match) {
-                    return match.charAt(0).toUpperCase();
-                });
-                if (typeof this['messageType' + type] === "function") {
-                    this['messageType' + type](t.join(":!"));
-                }
-            });
             window.addEventListener("message", this.onMessage, false);
             this.game.registerElement(this.container);
         },
@@ -1038,7 +1009,7 @@
             this.game = game;
             this.numPoints = 0;
             if (!getGlobalNamespace().KICKASS_INLINE_CSS) {
-                this.includeCSS(GameGlobals.path('css/menustyles.css'));
+                // this.includeCSS(GameGlobals.path('css/menustyles.css'));
             }
         },
         generateDefaults: function() {
@@ -1059,11 +1030,11 @@
                 removeClass(this.container, "KICKASShidden");
             }
             getAppContainerElement().appendChild(this.container);
-            var adHTML = this.game.shouldShowAd() ? '<iframe style="background: transparent" src="' + GameGlobals.path('hello.html') + '" class="KICKASSELEMENT" id="kickass-hello-sunshine"></iframe>' : "";
+            var adHTML = this.game.shouldShowAd() ? '' : "";
             this.container.innerHTML = '<div id="kickass-howto-image" class="KICKASSELEMENT kickass-howto-invisible"></div>' + '<div id="kickass-pointstab" class="KICKASSELEMENT">' +
                 adHTML + '<div id="kickass-bomb-menu" class="KICKASSELEMENT KICKASShidden">' + '<ul id="kickass-bomb-list" class="KICKASSELEMENT">' + '</ul>' + '</div>' + '<div id="kickass-weapons-menu" class="KICKASSELEMENT KICKASShidden" style="display:none">' + '<ul id="kickass-weapons-list" class="KICKASSELEMENT">' + '</ul>' + '</div>' + '<div id="kickass-pointstab-wrapper" class="KICKASSELEMENT">' + '<div id="kickass-points" class="KICKASSELEMENT">' +
-                this.numPoints + '</div>' + '<div id="kickass-esctoquit" class="KICKASSELEMENT">Press esc to quit</div>' +
-                this.getShareHTML() + '</div>' + '<ul id="kickass-pointstab-menu" class="KICKASSELEMENT" ' + (this.game.shouldShowMenu() ? '' : 'style="display:none"') + '>' + '<li class="KICKASSELEMENT"><a class="KICKASSELEMENT" id="kickass-link-highscores" href="#">Submit score</a></li>' + '<li class="KICKASSELEMENT"><a class="KICKASSELEMENT" id="kickass-link-menu" href="#">Menu</a></li>' + '<li class="last-li KICKASSELEMENT"><a class="KICKASSELEMENT" id="kickass-link-ships" href="#">Switch ship</a></li>' + '</ul>' + '</div>';
+                this.numPoints + '</div>' + '<div id="kickass-esctoquit" class="KICKASSELEMENT">Paina esciä poistuaksesi</div>' +
+                this.getShareHTML() + '</div>' + '<ul id="kickass-pointstab-menu" class="KICKASSELEMENT" ' + (this.game.shouldShowMenu() ? '' : 'style="display:none"') + '>' + '</ul>' + '</div>';
             this.pointsTab = document.getElementById('kickass-pointstab');
             this.pointsTabWrapper = document.getElementById('kickass-pointstab-wrapper');
             this.points = document.getElementById('kickass-points');
@@ -1072,36 +1043,20 @@
             this.weaponsMenu = document.getElementById('kickass-weapons-menu');
             this.weaponsList = document.getElementById('kickass-weapons-list');
             this.bombLink = document.getElementById('kickass-bomb-menu');
-            this.submitScoreLink = document.getElementById('kickass-link-highscores');
-            this.menuLink = document.getElementById('kickass-link-menu');
-            this.switchShipLink = document.getElementById('kickass-link-ships');
             var all = this.container.getElementsByTagName('*');
             for (var i = 0; i < all.length; i++) {
                 this.game.registerElement(all[i]);
             }
             this.game.registerElement(this.container);
             if (this.game.shouldShowMenu()) {
-                this.menu = new Menu(this.game);
-                this.menu.parent = this;
-                this.menu.generate(this.container);
+                // this.menu = new Menu(this.game);
+                // this.menu.parent = this;
+                // this.menu.generate(this.container);
             } else {
                 setTimeout(function() {
                     this.onGameReady();
                 }.bind(this), 100);
             }
-            addEvent(this.submitScoreLink, 'click', bind(this, function(e) {
-                stopEvent(e);
-                this.navigateTo('highscores');
-            }));
-            addEvent(this.menuLink, 'click', bind(this, function(e) {
-                stopEvent(e);
-                this.toggleMenu();
-                this.navigateTo('main', true);
-            }));
-            addEvent(this.switchShipLink, 'click', bind(this, function(e) {
-                stopEvent(e);
-                this.navigateTo('ships');
-            }));
             addEvent(this.bombLink, 'click', bind(this, function(e) {
                 stopEvent(e);
                 this.game.fireBomb();
@@ -1114,7 +1069,7 @@
             if (typeof getGlobalNamespace().KICKASS_SHARE_URL !== "undefined") {
                 if (getGlobalNamespace().KICKASS_SHARE_URL) {
                     var url = encodeURIComponent(getGlobalNamespace().KICKASS_SHARE_URL);
-                    return '<iframe class="KICKASSELEMENT kickass-like" src="//www.facebook.com/plugins/share_button.php?href=' + url + '&amp;send=false&amp;layout=button&amp;width=47&amp;show_faces=false&amp;action=like&amp;colorscheme=dark&amp;font=arial&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:21px;" allowTransparency="true"></iframe>';
+                    return '';
                 } else {
                     return '';
                 }
@@ -1127,7 +1082,7 @@
                         return "";
                     }
                 }
-                return '<iframe class="KICKASSELEMENT kickass-like" src="//www.facebook.com/plugins/like.php?href=' + encodeURIComponent(url) + '&amp;send=false&amp;layout=button_count&amp;width=47&amp;show_faces=false&amp;action=like&amp;colorscheme=dark&amp;font=arial&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:21px;" allowTransparency="true"></iframe>';
+                return '';
             }
         },
         onGameReady: function() {
@@ -1302,10 +1257,10 @@
                 className: 'KICKASSELEMENT',
                 styles: {
                     position: 'absolute',
-                    font: "20px Arial",
+                    font: "18px Circular",
                     fontWeight: "bold",
                     opacity: "1",
-                    color: "black",
+                    color: "#4d4aff",
                     textShadow: "#fff 1px 1px 3px",
                     top: y,
                     zIndex: "10000000"
@@ -1335,13 +1290,13 @@
                     left: '50%',
                     marginLeft: -width / 2,
                     width: width,
-                    background: '#222',
+                    background: '#4d4aff',
                     opacity: 0.8,
                     padding: '10px',
                     color: '#fff',
                     textAlign: 'center',
                     borderRadius: 15,
-                    font: '20px Arial',
+                    font: '18px Circular',
                     fontWeight: 'bold',
                     zIndex: "10000000"
                 }
@@ -1797,7 +1752,7 @@
             if (this.nextBomb < 0) {
                 this.game.menuManager.showBombMenu();
                 this.nextBomb = -1;
-                this.game.ui.showMessage("BOMB IS READY<br />(lower right corner or F)");
+                this.game.ui.showMessage("Pommi on valmis!<br />(paina F)");
             }
         },
         blow: function() {
@@ -2256,7 +2211,7 @@
                     dir: (new Vector(random(0, 20) - 10, random(0, 20) - 10)).normalize(),
                     vel: this.particleVel.cp(),
                     pos: new Vector(0, 0),
-                    color: ['yellow', 'red'][random(0, 1)]
+                    color: ['#ccc', '#aaa'][random(0, 1)]
                 });
             }
         },
@@ -2519,28 +2474,28 @@
             this.drawer.setAngle(angle);
         },
         drawPlayer: function(verts) {
-            this.drawer.setFillColor('white');
-            this.drawer.setStrokeColor('black');
-            this.drawer.setLineWidth(1.5);
+            this.drawer.setFillColor('transparent');
+            this.drawer.setStrokeColor('#5f5cfa');
+            this.drawer.setLineWidth(1);
             this.drawer.tracePoly(verts);
             this.drawer.fillPath();
             this.drawer.tracePoly(verts);
             this.drawer.strokePath();
         },
         drawBrokenPlayer: function(verts, lineOffsets) {
-            this.drawer.setStrokeColor('black');
-            this.drawer.setLineWidth(1.5);
+            this.drawer.setStrokeColor('#4d4aff');
+            this.drawer.setLineWidth(1);
             for (var i = 1, vert, lastVert = verts[0]; vert = verts[i]; i++, lastVert = vert) {
                 var o = lineOffsets[i - 1];
                 this.drawer.drawLine(lastVert.x + o.pos.x, lastVert.x + o.pos.y, vert.x + o.pos.x, vert.y + o.pos.y);
             }
         },
         drawFlames: function(flames, angle) {
-            this.drawer.setLineWidth(1.5);
-            this.drawer.setFillColor('red');
+            this.drawer.setLineWidth(1);
+            this.drawer.setFillColor('#fff');
             this.drawer.tracePoly(flames.r);
             this.drawer.fillPath();
-            this.drawer.setFillColor('yellow');
+            this.drawer.setFillColor('#dfdfdf');
             this.drawer.tracePoly(flames.y);
             this.drawer.fillPath();
         },
