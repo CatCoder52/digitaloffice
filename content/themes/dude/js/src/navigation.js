@@ -314,7 +314,7 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
       html.className      += ' disable-scroll';
       //body.className      += ' js-nav-active';
       //container_desktop.className += ' is-active';
-      //button_desktop.className    += ' is-active';
+      button_desktop.className    += ' is-active';
       button_desktop.setAttribute( 'aria-expanded', 'true' );
       menu.setAttribute( 'aria-expanded', 'true' );
 
@@ -381,10 +381,10 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
     html.className      = html.className.replace( ' disable-scroll', '' );
     //body.className      = body.className.replace( ' js-nav-active', '' );
     //container.className = container.className.replace( ' is-active', '' );
-    button.className    = button.className.replace( ' is-active', '' );
-    button.setAttribute( 'aria-expanded', 'false' );
-    menu.setAttribute( 'aria-expanded', 'false' );
-    button.focus();
+    button_desktop.className    = button_desktop.className.replace( ' is-active', '' );
+    button_desktop.setAttribute( 'aria-expanded', 'false' );
+    menu_desktop.setAttribute( 'aria-expanded', 'false' );
+    button_desktop.focus();
   }
 
   // Get all the link elements within the menu.

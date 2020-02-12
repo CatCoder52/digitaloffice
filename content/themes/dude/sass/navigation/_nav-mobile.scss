@@ -514,6 +514,7 @@ body.single-person.js-nav-active .site-content {
 }
 
 // Hamburger menu icon
+.nav-toggle-desktop,
 .nav-toggle {
   list-style: none;
   z-index: 100000;
@@ -533,13 +534,19 @@ body.single-person.js-nav-active .site-content {
   cursor: pointer;
   position: relative;
 
-  .hamburger-inner::after {
-    width: $hamburger-layer-width;
+  &.nav-toggle-mobile {
+    @media (min-width: $responsivenav) {
+      display: none;
+    }
   }
 
-  &:not(.is-active) .hamburger-inner::after {
+  .hamburger-inner::after {
     width: 17px;
     transition: width .5s;
+  }
+
+  &.is-active .hamburger-inner::after {
+    width: $hamburger-layer-width;
   }
 
   span:not(.toggle-text) {

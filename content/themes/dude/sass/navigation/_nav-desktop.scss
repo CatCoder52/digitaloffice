@@ -195,47 +195,6 @@ body {
 
 .menu-items.fade-out .menu-item.dude-nav-more button {
   opacity: 1;
-  padding-top: 0;
-}
-
-// Plus to cross animation
-.nav-primary-desktop .menu-items .menu-item.dude-nav-more button {
-  position: relative;
-  padding-right: 2rem;
-  display: flex;
-  padding-top: 0;
-  padding-bottom: 0;
-  background: transparent;
-  border: 0;
-  align-items: center;
-  transform: translateY(1px);
-
-  &:hover {
-    cursor: pointer;
-  }
-
-  .plus-cross {
-    font-size: 2.6rem;
-    transform: rotate(0deg);
-    transition: all $transition-duration;
-    position: absolute;
-    top: -.4rem;
-    left: 0;
-    margin-left: 4.7rem;
-  }
-
-  &:hover .plus-cross {
-    transform: rotate(180deg);
-  }
-}
-
-// Toggled state, "cross"
-.nav-primary-desktop .menu-items .menu-item.dude-nav-more[aria-expanded="true"] .plus-cross {
-  transform: rotate(45deg);
-}
-
-.nav-primary-desktop .menu-items .menu-item.dude-nav-more[aria-expanded="true"] button:hover .plus-cross {
-  transform: rotate(90deg);
 }
 
 // When desktop nav open, hide links excepts More-link
@@ -366,8 +325,7 @@ body {
 
       // Main level
       a,
-      button {
-        // "+" icon works best with 18px, sharpest
+      button:not(.nav-toggle-desktop) {
         font-size: 16px;
         color: $color-nav-links;
         padding: 2rem 0;
@@ -483,7 +441,7 @@ body {
         }
 
         a,
-        button {
+        button:not(.nav-toggle-desktop) {
           padding: .8rem 1.5rem;
           color: $color-nav-dropdown-links;
           display: block;
