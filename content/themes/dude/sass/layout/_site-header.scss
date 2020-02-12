@@ -30,16 +30,14 @@
 }
 
 .site-header {
+  @extend .container;
   position: relative;
   z-index: 15;
-  max-width: 1640px;
-  margin-left: auto;
-  margin-right: auto;
 
   // Easier flex way to align logo and navigation
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding-left: $padding-default-cols;
   padding-right: $padding-default-cols;
   padding-top: 9rem;
@@ -54,6 +52,11 @@
     padding-left: $padding-default-cols-mobile;
     padding-right: $padding-default-cols-mobile;
   }
+}
+
+.site-branding {
+  position: absolute;
+  margin-left: -170px;
 }
 
 .site-title {

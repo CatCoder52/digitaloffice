@@ -357,6 +357,7 @@ body {
       margin-left: 0;
       margin-right: 3rem;
       margin-bottom: 0;
+      line-height: 1;
 
       &:last-child,
       &:last-of-type {
@@ -367,7 +368,7 @@ body {
       a,
       button {
         // "+" icon works best with 18px, sharpest
-        font-size: 18px;
+        font-size: 16px;
         color: $color-nav-links;
         padding: 2rem 0;
         font-weight: 400;
