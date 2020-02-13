@@ -3,10 +3,43 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:49:22
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-02-13 09:33:34
+ * @Last Modified time: 2020-02-13 11:45:07
  *
  * @package dude
  */
+
+$args = array(
+  'post_type'               => 'reference',
+  'post_status'             => 'publish',
+  'orderby'                 => 'rand',
+  'posts_per_page'          => 50,
+  'meta_key'                => '_thumbnail_id',
+  'no_found_rows'           => true,
+  'cache_results'           => true,
+  'update_post_term_cache'  => false,
+  'update_post_meta_cache'  => false,
+  'fields'                  => 'ids',
+);
+
+$query = new WP_Query( $args );
+
+if ( $query->have_posts() ) {
+  while ( $query->have_posts() ) {
+    $query->the_post();
+
+    $references[] = array(
+      'id'                => get_the_id(),
+      'title'             => get_the_title(),
+      'image_preload_url' => get_the_post_thumbnail_url( get_the_id(), 'tiny-preload-thumbnail' ),
+      'image_url'         => get_the_post_thumbnail_url( get_the_id(), 'large' ),
+      'image_url_mobile'  => get_the_post_thumbnail_url( get_the_id(), 'large' ),
+      'excerpt'           => get_post_meta( get_the_id(), 'short_desc', true ),
+      'permalink'         => get_the_permalink(),
+      'quote'             => get_post_meta( get_the_id(), 'quote', true ),
+      'quote_person'      => get_post_meta( get_the_id(), 'quote_person', true ),
+    );
+  }
+}
 ?>
 
 <section class="block block-our-services">
@@ -16,24 +49,12 @@
       <h2 class="block-title" id="block-title-our-services">Asiakkaidemme kokemuksia</h2>
     </header>
 
-    <div class="cols">
-      <div class="col col-text">
-        <h3><a href="/verkkosivut">Verkkosivut ja -palvelut</a></h3>
-        <p class="col-description">Ei valmisratkaisuja, vaan laadukkaasti räätälöiden. Tämähän se meidän ykkösjuttu on.</p>
+    <?php foreach ( $references as $reference ) : ?>
 
-        <p class="cta-link"><a href="/verkkosivut">Tutustu</a></p>
-      </div>
+      <h3><a href="<?php echo esc_html( $reference['permalink'] ) ?>"><?php echo esc_html( $reference['quote_person'] ) ?></a></h3>
+      <p><?php echo esc_html( $reference['quote'] ) ?></p>
 
-      <div class="col col-text">
-        <h3><a href="/visuaalinen-suunnittelu">Visuaalinen suunnittelu</a></h3>
-        <p class="col-description">Verkkopalveluiden ulkoasujen lisäksi meillä tehdään myös maailmanluokan yritysilmeitä.</p>
-
-        <p class="cta-link"><a href="/visuaalinen-suunnittelu">Tutustu</a></p>
-      </div>
-
-      <div class="col col-featured-image">
-      </div>
-    </div>
+    <?php endforeach; ?>
 
   </div>
 </section>
