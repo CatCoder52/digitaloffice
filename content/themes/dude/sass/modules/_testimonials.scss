@@ -43,6 +43,10 @@
     .block-title {
       margin-bottom: 12rem;
     }
+
+    .block-title:before {
+      background: $color-white;
+    }
   }
 
   .slick-slide {

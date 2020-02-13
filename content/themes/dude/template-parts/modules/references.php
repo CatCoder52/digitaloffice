@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:50:23
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-02-12 17:43:37
+ * @Last Modified time: 2020-02-13 16:14:52
  *
  * @package dude
  */
@@ -76,7 +76,6 @@ if ( empty( $main_reference ) && empty( $small_references ) ) {
   <div class="container">
 
     <header class="block-head">
-      <p class="block-title-pre" aria-describedby="latest-works">Valitut palat</p>
       <h2 class="block-title" id="latest-works">Toteuttamiamme verkkopalveluita</h2>
     </header>
 
