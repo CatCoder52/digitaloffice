@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:49:22
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-02-12 17:46:08
+ * @Last Modified time: 2020-02-13 09:33:34
  *
  * @package dude
  */
@@ -13,8 +13,7 @@
   <div class="container">
 
     <header class="block-head">
-      <p class="block-title-pre" aria-describedby="block-title-our-services">Mitä me teemme?</p>
-      <h2 class="block-title" id="block-title-our-services">Mieluiten vain muutamaa asiaa todella hyvin, kuin vähän kaikkea sinne päin.</h2>
+      <h2 class="block-title" id="block-title-our-services">Asiakkaidemme kokemuksia</h2>
     </header>
 
     <div class="cols">

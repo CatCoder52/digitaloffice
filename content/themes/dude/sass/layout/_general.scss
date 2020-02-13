@@ -128,9 +128,21 @@ a.global-link {
 
 // Dude specific general typography related styles
 .block-title {
-  max-width: 45vw;
-  margin: 0;
-  line-height: 1.33;
+  font-size: 22px;
+  margin-bottom: 0;
+  margin-top: 18px;
+  position: relative;
+
+  &:before {
+    width: 100vw;
+    left: -100vw;
+    height: 1px;
+    background: $color-white;
+    position: absolute;
+    content: '';
+    margin-left: -30px;
+    top: 12px;
+  }
 
   @media (max-width: 1200px) {
     max-width: 60%;
@@ -142,21 +154,17 @@ a.global-link {
 }
 
 .block-head {
-  padding-top: 15rem;
   padding-bottom: 10rem;
 
   @media (max-width: 1600px) {
-    padding-top: 10rem;
     padding-bottom: 8rem;
   }
 
   @media (max-width: 1100px) {
-    padding-top: 8rem;
     padding-bottom: 5rem;
   }
 
   @media (max-width: 500px) {
-    padding-top: 6rem;
     padding-bottom: 6rem;
   }
 }

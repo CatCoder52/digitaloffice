@@ -405,6 +405,7 @@ gulp.task('js', function() {
           themeDir + '/node_modules/blueimp-gallery/js/blueimp-gallery-vimeo.js',
           themeDir + '/node_modules/blueimp-gallery/js/blueimp-gallery-youtube.js',
           themeDir + '/node_modules/blueimp-gallery/js/jquery.blueimp-gallery.js',
+          themeDir + '/node_modules/slick-carousel/slick/slick.js',
           themeDir + '/js/src/scripts.js'
         ])
         .pipe(sourcemaps.init())

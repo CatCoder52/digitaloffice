@@ -42,14 +42,14 @@ $font-min-size: 18px;
 $font-max-size: 20px;
 $font-base-line-height: 1.55;
 $font-base-line-height-elements: 1.55;
-$headings-weight: 300;
+$headings-weight: 700;
 
 // Breakpoints
 $grid-type: fluid; // 'fluid' or 'snappy'
 $layout-max-width: 100%;
 
 // Container widths
-$grid-base-size: 1300px; // Layout container max width on desktop. This is default .container size
+$grid-base-size: 1340px; // Layout container max width on desktop. This is default .container size
 $article-max-width: 1000px; // Max width for articles (see also $content_width in functions.php!)
 
 // Breakpoints
