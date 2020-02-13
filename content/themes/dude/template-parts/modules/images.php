@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:49:22
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-02-13 15:13:39
+ * @Last Modified time: 2020-02-13 15:29:46
  *
  * @package dude
  */
@@ -23,6 +23,18 @@ if ( empty( $image_big ) ) {
     <?php if ( ! empty( $image_big ) ) : ?>
       <div class="image image-big">
         <?php image_lazyload_div( $image_big['id'] ); ?>
+      </div>
+    <?php endif; ?>
+
+    <?php if ( ! empty( $image_small_left ) ) : ?>
+      <div class="image image-small-left">
+        <?php image_lazyload_div( $image_small_left['id'] ); ?>
+      </div>
+    <?php endif; ?>
+
+    <?php if ( ! empty( $image_small_right ) ) : ?>
+      <div class="image image-small-right">
+        <?php image_lazyload_div( $image_small_right['id'] ); ?>
       </div>
     <?php endif; ?>
   </div>

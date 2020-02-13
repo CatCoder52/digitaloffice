@@ -545,7 +545,8 @@ body.single-person.js-nav-active .site-content {
     transition: width .5s;
   }
 
-  &.is-active .hamburger-inner::after {
+  &.is-active .hamburger-inner::after,
+  &:hover  .hamburger-inner::after {
     width: $hamburger-layer-width;
   }
 

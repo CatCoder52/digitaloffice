@@ -5,12 +5,38 @@
   position: relative;
   background: transparent;
 
-  .image-big {
+  .container {
+    overflow: visible;
+    position: relative;
+  }
+
+  .image {
+    overflow: hidden;
+    position: relative;
     width: 100%;
+  }
+
+  .image-big {
     max-width: 1345px;
     max-height: 754px;
     height: 80vh;
-    overflow: hidden;
-    position: relative;
+  }
+
+  .image-small-left {
+    max-width: 444px;
+    height: 274px;
+    left: -70px;
+    position: absolute;
+    bottom: -140px;
+    margin-bottom: 0;
+  }
+
+  .image-small-right {
+    position: absolute;
+    right: 0;
+    max-width: 374px;
+    height: 519px;
+    bottom: -80px;
+    right: -80px;
   }
 }
