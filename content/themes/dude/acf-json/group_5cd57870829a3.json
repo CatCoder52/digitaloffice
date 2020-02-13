@@ -1026,6 +1026,88 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_5e4540fe1bb0f": {
+                    "key": "layout_5e4540fe1bb0f",
+                    "name": "images",
+                    "label": "Kolmen kuvan kuvakollaasi",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5e45410a1bb10",
+                            "label": "Iso kuva",
+                            "name": "image_big",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5e4541151bb11",
+                            "label": "Pieni kuva 1 (vasen)",
+                            "name": "image_small_left",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5e4541251bb12",
+                            "label": "Pieni kuva 2 (oikea)",
+                            "name": "image_small_right",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "button_label": "Lisää moduuli",
@@ -1050,5 +1132,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1581521731
+    "modified": 1581596977
 }

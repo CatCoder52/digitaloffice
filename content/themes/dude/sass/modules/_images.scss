@@ -1,0 +1,16 @@
+.block.block-images {
+  padding-top: 0;
+  margin-top: -6rem;
+  z-index: 3;
+  position: relative;
+  background: transparent;
+
+  .image-big {
+    width: 100%;
+    max-width: 1345px;
+    max-height: 754px;
+    height: 80vh;
+    overflow: hidden;
+    position: relative;
+  }
+}
