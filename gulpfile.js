@@ -397,6 +397,7 @@ gulp.task('js', function() {
           themeDir + '/js/src/svg-morpheus.js',
           themeDir + '/js/src/lazyload.js',
           themeDir + '/js/src/kickass.js',
+          themeDir + '/js/src/slick.custom.js',
           themeDir + '/node_modules/blueimp-gallery/js/blueimp-helper.js',
           themeDir + '/node_modules/blueimp-gallery/js/blueimp-gallery.js',
           themeDir + '/node_modules/blueimp-gallery/js/blueimp-gallery-fullscreen.js',
@@ -405,7 +406,6 @@ gulp.task('js', function() {
           themeDir + '/node_modules/blueimp-gallery/js/blueimp-gallery-vimeo.js',
           themeDir + '/node_modules/blueimp-gallery/js/blueimp-gallery-youtube.js',
           themeDir + '/node_modules/blueimp-gallery/js/jquery.blueimp-gallery.js',
-          themeDir + '/node_modules/slick-carousel/slick/slick.js',
           themeDir + '/js/src/scripts.js'
         ])
         .pipe(sourcemaps.init())

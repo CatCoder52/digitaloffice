@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:49:22
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-02-13 11:45:07
+ * @Last Modified time: 2020-02-13 14:04:11
  *
  * @package dude
  */
@@ -28,33 +28,61 @@ if ( $query->have_posts() ) {
     $query->the_post();
 
     $references[] = array(
-      'id'                => get_the_id(),
-      'title'             => get_the_title(),
-      'image_preload_url' => get_the_post_thumbnail_url( get_the_id(), 'tiny-preload-thumbnail' ),
-      'image_url'         => get_the_post_thumbnail_url( get_the_id(), 'large' ),
-      'image_url_mobile'  => get_the_post_thumbnail_url( get_the_id(), 'large' ),
-      'excerpt'           => get_post_meta( get_the_id(), 'short_desc', true ),
-      'permalink'         => get_the_permalink(),
-      'quote'             => get_post_meta( get_the_id(), 'quote', true ),
-      'quote_person'      => get_post_meta( get_the_id(), 'quote_person', true ),
+      'id'                            => get_the_id(),
+      'permalink'                     => get_the_permalink(),
+      'quote'                         => get_post_meta( get_the_id(), 'quote', true ),
+      'quote_company'                 => get_the_title(),
+      'quote_person'                  => get_post_meta( get_the_id(), 'quote_person', true ),
+      'quote_person_image'            => get_post_meta( get_the_id(), 'quote_person_image', true ),
+      'created_date_y'                => get_the_date('Y'),
+      'created_date_m'                => get_the_date('m'),
+      'created_date_writtenmonth'     => get_the_date('F'),
     );
   }
 }
 ?>
 
-<section class="block block-our-services">
+<section class="block block-testimonials">
   <div class="container">
 
     <header class="block-head">
       <h2 class="block-title" id="block-title-our-services">Asiakkaidemme kokemuksia</h2>
+
+      <div class="floating-actions">
+        <div class="custom-arrows"></div>
+        <div class="slide-numbering"><span class="current"></span>/<span class="total"></span></div>
+      </div>
     </header>
 
-    <?php foreach ( $references as $reference ) : ?>
+    <?php if ( ! empty( $references) ) : ?>
+      <div class="testimonials slider">
+        <?php foreach ( $references as $reference ) :
 
-      <h3><a href="<?php echo esc_html( $reference['permalink'] ) ?>"><?php echo esc_html( $reference['quote_person'] ) ?></a></h3>
-      <p><?php echo esc_html( $reference['quote'] ) ?></p>
+          // There has to be quote, so let's check that first
+          if ( ! empty( $reference['quote'] ) ) : ?>
 
-    <?php endforeach; ?>
+          <div class="hreview testimonial">
+            <?php if ( ! empty( $reference['quote_person_image'] ) ) : ?>
+              <div class="testimonial-avatar" style="background-image: url('<?php echo wp_get_attachment_image_url( $reference['quote_person_image'], 'medium' ) ?>')"></div>
+            <?php endif; ?>
+
+            <div class="testimonial-content">
+              <div class="description">
+                <?php echo wpautop( $reference['quote'] ); // WPCS: XSS OK ?>
+              </div>
+
+              <abbr class="rating screen-reader-text" title="5">*****</abbr>
+              <p class="reviewer vcard"><span class="screen-reader-text">Review by</span>
+                <a class="url fn" href="<?php echo esc_html( $reference['permalink'] ); ?>"><?php if ( ! empty( $reference['quote_person'] ) ) : ?><?php echo esc_html( $reference['quote_person'] ) ?>, <?php endif; ?><?php echo esc_html( $reference['quote_company'] ); ?></a>
+                <abbr class="dtreviewed screen-reader-text" title="<?php echo esc_html( $reference['created_date_y'] ); ?>-<?php echo esc_html( $reference['created_date_m'] ); ?>"><?php echo esc_html( $reference['created_date_writtenmonth'] ) ?> <?php echo esc_html( $reference['created_date_y'] ); ?></abbr>
+              </p>
+            </div>
+          </div>
+
+          <?php endif; ?>
+        <?php endforeach; ?>
+      </div>
+    <?php endif; ?>
 
   </div>
 </section>

@@ -6,9 +6,16 @@
 // ------------------------------------------------------------
 
 // Buttons
+.button-reset {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
 .content-area,
 .content-area .block.block-hero.block-hero-frontpage {
-  button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button),
+  button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset),
   .button,
   input[type="reset"],
   input[type="submit"],

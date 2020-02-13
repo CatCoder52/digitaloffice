@@ -20,6 +20,46 @@ lazyload(images, {
 // jQuery start
 ( function( $ ) {
 
+  // Slide numbering
+  var $gallery = $('.testimonials');
+  var slideCount = null;
+
+    $gallery.on('init', function(event, slick){
+      slideCount = slick.slideCount;
+      setSlideCount();
+      setCurrentSlideNumber(slick.currentSlide);
+    });
+
+    $gallery.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+      setCurrentSlideNumber(nextSlide);
+    });
+
+    function setSlideCount() {
+      var $el = $('.slide-numbering').find('.total');
+      $el.text(slideCount);
+   }
+
+    function setCurrentSlideNumber(currentSlide) {
+      var $el = $('.slide-numbering').find('.current');
+      $el.text(currentSlide + 1);
+    }
+
+    // Testimonial slider
+    $('.testimonials').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      dots: false,
+      infinite: true,
+      fade: false,
+      adaptiveHeight: true,
+      variableWidth: true,
+      centerMode: true,
+      appendArrows: $('.custom-arrows'),
+      prevArrow: '<button class="button-prev button-reset"><span class="screen-reader-text">Previous</span><svg xmlns="http://www.w3.org/2000/svg" width="46" height="17" viewBox="0 0 46 17"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M45.148 8.228H.852m0 0L8.08 1M.852 8.228l7.228 7.228"/></svg></button>',
+      nextArrow: '<button class="button-next button-reset"><span class="screen-reader-text">Next</span><svg xmlns="http://www.w3.org/2000/svg" width="46" height="17" viewBox="0 0 46 17"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M.852 8.228h44.296m0 0L37.92 1m7.228 7.228l-7.228 7.228"/></svg></button>'
+    });
+
     // Scroll down -button
     $('.scroll-to-form').click(function(e) {
       e.preventDefault();
