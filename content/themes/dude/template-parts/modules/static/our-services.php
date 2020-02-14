@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:49:22
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-02-13 16:12:08
+ * @Last Modified time: 2020-02-14 14:36:32
  *
  * @package dude
  */
@@ -23,12 +23,50 @@ $image_development_mobile = wp_get_attachment_image_url( $image_id_development, 
 $image_development_preload = wp_get_attachment_image_url( $image_id_development, 'tiny-preload-thumbnail' );
 ?>
 
-<section class="block block-our-services">
+<section class="block block-our-services" style="display: none">
   <div class="container">
 
     <header class="block-head">
       <h2 class="block-title" id="block-title-our-services">Näitä voimme tarjota teille</h2>
     </header>
 
-  </div>
+    <div class="cols cols-two">
+
+      <div class="col col-content">
+        <h3 class="col-title">UI/UX-Suunnittelu</h3>
+
+        <p>Kokeneen suunnittelutiimimme avulla saat ensimmäisen merkittävän askeleen kohti helppokäyttöistä verkkosivustoa tai kaunista ilmeuudistusta.</p>
+
+        <ul>
+          <li>Käyttöliiittymäsuunnittelu</li>
+          <li>Käyttökokemussuunnittelu</li>
+          <li>Ilmesuunnittelu</li>
+          <li>Markkinointimateriaalit</li>
+        </ul>
+
+        <p class="button-wrapper"><a href="#" class="button">Lue lisää suunnittelusta</a></p>
+      </div>
+
+      <div class="col col-image"></div>
+    </div>
+
+    <div class="cols cols-two">
+      <div class="col col-content">
+        <h3 class="col-title">Kehitys & ylläpito</h3>
+
+        <p>Kokeneen suunnittelutiimimme avulla saat ensimmäisen merkittävän askeleen kohti helppokäyttöistä verkkosivustoa tai kaunista ilmeuudistusta.</p>
+
+        <ul>
+          <li>WordPress-verkkosivut</li>
+          <li>WooCommerce-verkkokaupat</li>
+          <li>Integraatiot ja WordPress-lisäosat</li>
+          <li>WordPress-ylläpitopalvelut</li>
+        </ul>
+
+        <p class="button-wrapper"><a href="#" class="button">Lue lisää kehityksestä</a></p>
+      </div>
+
+      <div class="col col-image"></div>
+    </div>
+
 </section>
