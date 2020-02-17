@@ -1,3 +1,4 @@
+body .content-area .block.block-hero.block-hero-frontpage,
 .block.block-hero {
   display: flex;
   align-items: center;
@@ -15,24 +16,32 @@
   }
 
   .button-wrapper .button {
+    color: $color-white;
+
     @media (min-width: $container-ipad) {
       margin-right: 2.8rem;
     }
   }
 
   .button-wrapper .link {
-    font-size: $font-min-size;
-
     @media (max-width: 1160px) {
       display: block;
       width: 100%;
       margin-top: 2rem;
       padding: 0 2.8rem;
     }
+
+    @media (max-width: 400px) {
+      margin-right: 0;
+      text-align: center;
+    }
   }
 
   .button-wrapper a {
-    font-size: 1;
+    @media (max-width: 400px) {
+      font-size: 14px;
+      white-space: nowrap;
+    }
   }
 
   h1 {

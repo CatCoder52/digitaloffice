@@ -61,7 +61,7 @@
       margin-left: 2.5rem;
     }
 
-    @media (max-width: $container-mobile) {
+    @media (max-width: 400px) {
       // Wrap long buttons on mobile
       display: block;
       text-align: center;
