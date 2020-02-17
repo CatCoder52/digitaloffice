@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:50:23
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-02-13 16:14:52
+ * @Last Modified time: 2020-02-17 15:20:51
  *
  * @package dude
  */
@@ -80,27 +80,21 @@ if ( empty( $main_reference ) && empty( $small_references ) ) {
     </header>
 
     <?php if ( ! empty( $main_reference ) ) : ?>
-      <div class="reference-image reference-image-main has-lazyload">
-        <div class="background-image preview lazyload" style="background-image: url('<?php echo $main_reference['image_preload_url']; ?>');" data-src="<?php echo $main_reference['image_url']; ?>" data-src-mobile="<?php echo $main_reference['image_url']; ?>"></div>
-        <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo $main_reference['image_url']; ?>');"<?php endif; ?>></div>
-        <noscript><div class="background-image full-image" style="background-image: url('<?php echo $main_reference['image_url']; ?>');"></div></noscript>
-      </div>
-
-      <div class="cols">
-
-        <div class="col has-grey-bg has-grey-bg-extend-left">
+      <div class="cols cols-two">
+        <div class="col col-image">
+          <div class="reference-image reference-image-main has-lazyload">
+            <div class="background-image preview lazyload" style="background-image: url('<?php echo $main_reference['image_preload_url']; ?>');" data-src="<?php echo $main_reference['image_url']; ?>" data-src-mobile="<?php echo $main_reference['image_url']; ?>"></div>
+            <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo $main_reference['image_url']; ?>');"<?php endif; ?>></div>
+            <noscript><div class="background-image full-image" style="background-image: url('<?php echo $main_reference['image_url']; ?>');"></div></noscript>
+          </div>
+        </div>
+        <div class="col col-content">
           <?php include get_theme_file_path( "svg/logos/{$main_reference['logofile']}.svg" ); ?>
           <h3 class="screen-reader-text"><?php echo esc_html( $main_reference['title'] ) ?></h3>
           <p><?php echo $main_reference['excerpt'] ?></p>
 
           <p class="arrow-link-wrapper"><a href="<?php echo esc_html( $main_reference['permalink'] ) ?>" class="arrow-link">Tsekkaa työnäyte<span class="arrow"></span></a></p>
         </div>
-
-        <div class="col col-quote">
-          <blockquote><p><?php echo esc_html( $main_reference['quote']['content'] ) ?></p></blockquote>
-          <footer><strong><?php echo esc_html( $main_reference['quote']['person'] ) ?></strong> <?php echo esc_html( $main_reference['quote']['person_title'] ) ?></footer>
-        </div>
-
       </div>
     <?php endif;
 
