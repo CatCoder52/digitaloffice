@@ -7,3 +7,42 @@
     overflow: visible;
   }
 }
+
+.cols.cols-two {
+  @include grid(2, $gutter_x: 0rem, $gutter_y: 0rem);
+  margin-bottom: 10rem;
+
+  &.col-two-opposite .col-content {
+    order: 2;
+    padding-left: 10rem;
+    padding-right: 0;
+  }
+
+  &.col-two-opposite .col-image {
+    order: 1;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .list-features {
+    margin-bottom: 4rem;
+  }
+
+  .col-title {
+    margin-top: 0;
+    margin-bottom: 5rem;
+  }
+
+  .col-content {
+    padding: 13rem 0;
+    padding-right: 10rem;
+    padding-left: 0;
+  }
+
+  .col-image {
+    display: flex;
+    background: $color-default-background;
+  }
+}

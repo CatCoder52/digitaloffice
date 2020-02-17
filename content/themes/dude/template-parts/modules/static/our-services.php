@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:49:22
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-02-14 14:36:32
+ * @Last Modified time: 2020-02-17 14:19:07
  *
  * @package dude
  */
@@ -23,7 +23,7 @@ $image_development_mobile = wp_get_attachment_image_url( $image_id_development, 
 $image_development_preload = wp_get_attachment_image_url( $image_id_development, 'tiny-preload-thumbnail' );
 ?>
 
-<section class="block block-our-services" style="display: none">
+<section class="block block-our-services">
   <div class="container">
 
     <header class="block-head">
@@ -37,7 +37,7 @@ $image_development_preload = wp_get_attachment_image_url( $image_id_development,
 
         <p>Kokeneen suunnittelutiimimme avulla saat ensimmäisen merkittävän askeleen kohti helppokäyttöistä verkkosivustoa tai kaunista ilmeuudistusta.</p>
 
-        <ul>
+        <ul class="list-features">
           <li>Käyttöliiittymäsuunnittelu</li>
           <li>Käyttökokemussuunnittelu</li>
           <li>Ilmesuunnittelu</li>
@@ -50,13 +50,13 @@ $image_development_preload = wp_get_attachment_image_url( $image_id_development,
       <div class="col col-image"></div>
     </div>
 
-    <div class="cols cols-two">
+    <div class="cols cols-two col-two-opposite">
       <div class="col col-content">
         <h3 class="col-title">Kehitys & ylläpito</h3>
 
         <p>Kokeneen suunnittelutiimimme avulla saat ensimmäisen merkittävän askeleen kohti helppokäyttöistä verkkosivustoa tai kaunista ilmeuudistusta.</p>
 
-        <ul>
+        <ul class="list-features">
           <li>WordPress-verkkosivut</li>
           <li>WooCommerce-verkkokaupat</li>
           <li>Integraatiot ja WordPress-lisäosat</li>
