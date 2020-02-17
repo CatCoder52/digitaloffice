@@ -2,9 +2,15 @@
   background: transparent;
   color: $color-body;
   overflow: visible;
+  padding-top: 0;
+  padding-bottom: 0;
 
   .container {
     overflow: visible;
+  }
+
+  .block-head {
+    padding-bottom: 0;
   }
 }
 

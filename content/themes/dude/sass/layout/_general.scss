@@ -155,19 +155,7 @@ a.global-link {
 }
 
 .block-head {
-  padding-bottom: 10rem;
-
-  @media (max-width: 1600px) {
-    padding-bottom: 8rem;
-  }
-
-  @media (max-width: 1100px) {
-    padding-bottom: 5rem;
-  }
-
-  @media (max-width: 500px) {
-    padding-bottom: 6rem;
-  }
+  padding: 0;
 }
 
 .block-title-pre {
