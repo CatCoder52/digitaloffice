@@ -55,8 +55,15 @@
 }
 
 .site-branding {
-  position: absolute;
-  margin-left: -170px;
+  margin-right: 6rem;
+}
+
+@media (min-width: 1600px) {
+  .site-branding {
+    position: absolute;
+    margin-left: -170px;
+    margin-right: 0;
+  }
 }
 
 .site-title {
