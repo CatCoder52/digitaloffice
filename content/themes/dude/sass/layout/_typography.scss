@@ -19,6 +19,44 @@
   font-size: 62.5%;
 }
 
+%textlink {
+  position: relative;
+  overflow: visible;
+  font-weight: 700;
+  z-index: 1;
+  text-decoration: none;
+  transition: all $transition-duration;
+  display: inline-flex;
+  color: $color-body;
+
+  &:after {
+    content: '';
+    background: $color-mint;
+    height: 6px;
+    width: 100%;
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    z-index: -1;
+    transition: all $transition-duration;
+  }
+
+  &:hover {
+    color: $color-white;
+  }
+
+  &:hover:after {
+    background: $color-body;
+    height: 25px;
+    width: calc(100% + 8px);
+    left: -4px;
+  }
+}
+
+.block p a:not(.button) {
+  @extend %textlink;
+}
+
 // Start typography settings
 body {
   font-size: 1.7rem;
