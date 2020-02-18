@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:50:23
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-02-18 12:33:57
+ * @Last Modified time: 2020-02-18 14:03:28
  *
  * @package dude
  */
@@ -17,7 +17,7 @@ if ( ! $small_references ) {
     'post_type'               => 'reference',
     'post_status'             => 'publish',
     'orderby'                 => 'rand',
-    'posts_per_page'          => 3,
+    'posts_per_page'          => 6,
     'meta_key'                => '_thumbnail_id',
     'post__not_in'            => array( $main_reference_id ),
     'no_found_rows'           => true,
