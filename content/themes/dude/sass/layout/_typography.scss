@@ -53,7 +53,7 @@
   }
 }
 
-.block p a:not(.button) {
+.block p a:not(.button):not(.url) {
   @extend %textlink;
 }
 
