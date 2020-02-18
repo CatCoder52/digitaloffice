@@ -36,6 +36,11 @@
     transition: 150ms linear background;
     font-family: $font-base;
 
+    &.button-mint {
+      background: $color-mint;
+      color: $color-midnight-blue;
+    }
+
     &:after {
       width: 100%;
       height: 100%;
