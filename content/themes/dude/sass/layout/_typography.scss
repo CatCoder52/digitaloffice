@@ -53,7 +53,7 @@
   }
 }
 
-.block p a:not(.button):not(.url) {
+.block p a:not(.button):not(.url):not(.no-text-link) {
   @extend %textlink;
 }
 
