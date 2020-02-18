@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:50:23
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-02-17 15:20:51
+ * @Last Modified time: 2020-02-18 12:20:06
  *
  * @package dude
  */
@@ -93,7 +93,7 @@ if ( empty( $main_reference ) && empty( $small_references ) ) {
           <h3 class="screen-reader-text"><?php echo esc_html( $main_reference['title'] ) ?></h3>
           <p><?php echo $main_reference['excerpt'] ?></p>
 
-          <p class="arrow-link-wrapper"><a href="<?php echo esc_html( $main_reference['permalink'] ) ?>" class="arrow-link">Tsekkaa työnäyte<span class="arrow"></span></a></p>
+          <p class="button-wrapper"><a href="<?php echo esc_html( $main_reference['permalink'] ) ?>" class="button">Lue mitä teimme</a></p>
         </div>
       </div>
     <?php endif;
