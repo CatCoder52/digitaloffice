@@ -167,78 +167,6 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_5cdff17ccddac": {
-                    "key": "layout_5cdff17ccddac",
-                    "name": "cta-left-image",
-                    "label": "CTA kuvalla",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_5cdff187cddad",
-                            "label": "Otsikko",
-                            "name": "title",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_5cdff194cddae",
-                            "label": "Tekstisisältö",
-                            "name": "content",
-                            "type": "wysiwyg",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "basic",
-                            "media_upload": 0,
-                            "delay": 0
-                        },
-                        {
-                            "key": "field_5cdff1a8cddaf",
-                            "label": "Taustakuva",
-                            "name": "bg_image",
-                            "type": "image",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "id",
-                            "preview_size": "thumbnail",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": ""
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
                 "layout_5cdff955285b6": {
                     "key": "layout_5cdff955285b6",
                     "name": "blog-latest-selected-mustread",
@@ -1156,5 +1084,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1581602817
+    "modified": 1582027834
 }
