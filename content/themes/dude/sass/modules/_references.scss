@@ -82,7 +82,9 @@
       height: auto;
       content: '';
       display: block;
-      padding-bottom: 100%;
+
+      // 4:3 aspect ratio
+      padding-bottom: 75%;
     }
   }
 
