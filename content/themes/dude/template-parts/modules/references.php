@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:50:23
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-02-18 12:21:22
+ * @Last Modified time: 2020-02-18 12:33:57
  *
  * @package dude
  */
@@ -112,10 +112,8 @@ if ( empty( $main_reference ) && empty( $small_references ) ) {
             </div>
 
             <div class="col-content">
-              <h3 class="block-title>"><a href="<?php echo esc_html( $reference['permalink'] ) ?>"><?php echo esc_html( $reference['title'] ) ?></a></h3>
+              <h3 class="col-title"><a href="<?php echo esc_html( $reference['permalink'] ) ?>"><?php echo esc_html( $reference['title'] ) ?></a></h3>
               <p><?php echo esc_html( $reference['excerpt'] ) ?></p>
-
-              <p class="arrow-link-wrapper"><a href="<?php echo esc_html( $reference['permalink'] ) ?>" class="arrow-link">Tsekkaa työnäyte<span class="arrow"></span></a></p>
             </div>
           </div>
         <?php endforeach; ?>
