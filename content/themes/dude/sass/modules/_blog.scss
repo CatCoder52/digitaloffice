@@ -77,3 +77,8 @@
     font-weight: 300;
   }
 }
+
+// Fixes weird figcaption background issue with blog image captions
+.wp-block-image figcaption {
+  background: none !important;
+}
