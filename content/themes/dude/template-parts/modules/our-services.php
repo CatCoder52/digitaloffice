@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:48:37
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-03-07 13:14:29
+ * @Last Modified time: 2020-03-07 15:38:35
  *
  * @package dude
  */
@@ -26,47 +26,88 @@ $image_development_preload = wp_get_attachment_image_url( $image_id_development,
 <section class="block block-our-services">
   <div class="container">
 
-    <header class="block-head">
-      <h2 class="block-title" id="block-title-our-services">Näitä voimme tarjota teille</h2>
+    <header class="block-head screen-reader-text">
+      <h2 class="block-title" id="block-title-our-services">Palvelumme</h2>
     </header>
 
-    <div class="cols cols-two">
+    <div class="cols cols-services">
 
       <div class="col col-content">
-        <h3 class="col-title">UI/UX-Suunnittelu</h3>
+        <h2 class="col-title">Suunnittelu</h2>
 
-        <p>Kokeneen suunnittelutiimimme avulla saat ensimmäisen merkittävän askeleen kohti helppokäyttöistä verkkosivustoa tai kaunista ilmeuudistusta.</p>
+        <p>Nunc semper, velit vitae feugiat venenatis, dolor libero imperdiet nisi, at viverra neque justo ultrices libero. Curabitur aliquet sapien non placerat hendrerit. Vivamus ornare auctor sapien, vel tempus arcu aliquam eget.</p>
 
-        <ul class="list-features">
-          <li>Käyttöliiittymäsuunnittelu</li>
-          <li>Käyttökokemussuunnittelu</li>
-          <li>Ilmesuunnittelu</li>
-          <li>Markkinointimateriaalit</li>
-        </ul>
-
-        <p class="button-wrapper"><a href="#" class="button">Lue lisää suunnittelusta</a></p>
+        <p class="link-wrapper"><a href="#" class="cta-link">Lisää suunnittelupalveluista</a></p>
       </div>
 
-      <div class="col col-image"></div>
+      <div class="col col-services">
+
+        <div class="col-inner">
+          <h3>Käyttöliittymät</h3>
+          <p>Kaunis verkkosivusto ilman logiikkaa on kuin playboy-malli ilman tissejä. Meiltähän hoituu tämäkin niin pieniin kuin suurempiinkin sivustoihin.</p>
+        </div>
+
+        <div class="col-inner">
+          <h3>Visuaalinen suunnittelu</h3>
+          <p>Suorastaan naurettavan tyylikkäät verkkosivustot tai markkinointimateriaalit pitävät yrityksesi imagon kirkkaana ja uskottavana.</p>
+        </div>
+
+        <div class="col-inner">
+          <h3>Kickoff-workshop</h3>
+          <p>Aloitus-työpaja, jossa määritellään tavoitteet ja suuntaviivat sekä ideoidaan uudistusta. Loistava tapa tiivistää yhteistyötä heti projektin alkumetreillä.</p>
+        </div>
+
+        <div class="col-inner">
+          <h3>Käyttäjäkokemus</h3>
+          <p>Huono käyttäjäkokemus voi johtaa potentiaalisen asiakkaan karkaamisen kilpailijalle. Teemme verkkosivustostasi käyttäjälle miellyttävän käyttää.</p>
+        </div>
+
+        <div class="col-inner">
+          <h3>Brändi-identiteetit</h3>
+          <p>Aika kävellyt yrityksesi ilmeen yli? Toivotamme sen tervetulleeksi tälle vuosikymmenelle ja otamme homman haltuun.</p>
+        </div>
+
+      </div>
     </div>
 
-    <div class="cols cols-two col-two-opposite">
+    <div class="cols cols-services">
+
       <div class="col col-content">
-        <h3 class="col-title">Kehitys & ylläpito</h3>
+        <h2 class="col-title">Kehitys</h2>
 
-        <p>Kokeneen suunnittelutiimimme avulla saat ensimmäisen merkittävän askeleen kohti helppokäyttöistä verkkosivustoa tai kaunista ilmeuudistusta.</p>
+        <p>Tekniseltä osaamiseltamme olemme aivan suomen parhaimmistoa. Anisi, at viverra neque justo ultrices libero. Curabitur aliquet sapien non placerat hendrerit. Vivamus ornare auctor sapien, vel tempus arcu aliquam eget.</p>
 
-        <ul class="list-features">
-          <li>WordPress-verkkosivut</li>
-          <li>WooCommerce-verkkokaupat</li>
-          <li>Integraatiot ja WordPress-lisäosat</li>
-          <li>WordPress-ylläpitopalvelut</li>
-        </ul>
-
-        <p class="button-wrapper"><a href="#" class="button">Lue lisää kehityksestä</a></p>
+        <p class="link-wrapper"><a href="#" class="cta-link">Lisää kehitysvammoista</a></p>
       </div>
 
-      <div class="col col-image"></div>
+      <div class="col col-services">
+
+        <div class="col-inner">
+          <h3>WordPress-verkkosivut</h3>
+          <p>Laadukkaalla verkkosivustolla luotsaat yrityksesi kasvuun. WordPress-osaamisemme on laajaa ja tiedämme, mikä toimii tai mikä ei. </p>
+        </div>
+
+        <div class="col-inner">
+          <h3>Integraatiot</h3>
+          <p>Proin imperdiet magna nec dolor ultricies facilisis. Nulla facilisi. Donec convallis nisi ac vehicula ullamcorper.</p>
+        </div>
+
+        <div class="col-inner">
+          <h3>Hakukoneoptimointi</h3>
+          <p>Tehosta näkyvyyttäsi hakukoneissa. Hoidamme tarvittavat toimenpiteet puolestasi.</p>
+        </div>
+
+        <div class="col-inner">
+          <h3>WooCommerce-verkkokaupat</h3>
+          <p>Proin imperdiet magna nec dolor ultricies facilisis. Nulla facilisi. Donec convallis nisi ac vehicula ullamcorper.</p>
+        </div>
+
+        <div class="col-inner">
+          <h3>Ylläpitopalvelut</h3>
+          <p>Tarjoamme verkkosivustoasiakkaillemme myös laadukasta ylläpitopalvelua. Lorem ipsum demer les acculate ethel.</p>
+        </div>
+
+      </div>
     </div>
 
 </section>
