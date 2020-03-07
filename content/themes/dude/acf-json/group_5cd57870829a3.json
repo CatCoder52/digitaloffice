@@ -91,6 +91,33 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_5e6380dfa916a": {
+                    "key": "layout_5e6380dfa916a",
+                    "name": "title-left-text-right",
+                    "label": "Iso otsikko vasemmalla ja teksti oikealla",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5e638269e49c5",
+                            "label": "",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Tämä alue on kovakoodattu ja sitä ei voi muokata hallintapaneelista.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5e441b31fc754": {
                     "key": "layout_5e441b31fc754",
                     "name": "testimonials",
@@ -1084,5 +1111,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1582027834
+    "modified": 1583579760
 }
