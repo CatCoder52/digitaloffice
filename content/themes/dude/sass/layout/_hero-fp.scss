@@ -1,12 +1,19 @@
 .block.block-hero.block-hero-fp {
-  height: 100rem;
+  height: auto;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  .container {
+    padding-top: 28rem;
+    padding-bottom: 213px;
+  }
 
   .content {
     text-align: center;
 
     .content-non-statement {
       margin-top: 0;
-      margin-bottom: 2rem;
+      margin-bottom: 42px;
       color: $color-white;
       font-weight: 400;
       font-style: normal;
@@ -48,14 +55,14 @@
     }
 
     h1 {
-      color: $color-cobalt-blue;
+      color: $color-midnight-blue;
       font-weight: 500;
       margin-top: 0;
-      margin-bottom: 15rem;
+      margin-bottom: 146px;
     }
 
     .content-sub-statement {
-      color: $color-cobalt-blue;
+      color: $color-midnight-blue;
       font-size: 16px;
     }
   }

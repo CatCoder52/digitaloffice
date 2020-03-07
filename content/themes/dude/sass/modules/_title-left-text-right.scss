@@ -1,0 +1,26 @@
+.block.block-title-left-text-right {
+  background: $color-light-grey;
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+
+  h2 {
+    @include responsive-font(32px, 54px);
+    line-height: 1.24;
+    font-weight: 400;
+    margin: 0;
+    padding-left: 70px;
+  }
+
+  .cols {
+    display: flex;
+  }
+
+  .col.col-title {
+    width: 600px;
+    margin-right: 140px;
+  }
+
+  .col.col-text {
+    width: calc(100% - (600px + 140px));
+  }
+}
