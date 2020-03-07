@@ -6,6 +6,7 @@ body .content-area .block.block-hero.block-hero-frontpage,
   color: $color-white;
   padding-top: 19rem;
   padding-bottom: 19rem;
+  background-color: $color-light-grey;
 
   @media (max-width: 1160px) {
     flex-wrap: wrap;
