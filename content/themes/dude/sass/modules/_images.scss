@@ -1,10 +1,7 @@
 .block.block-images {
-  padding-top: 0;
-  padding-bottom: 24rem;
-  margin-top: -6rem;
-  z-index: 3;
+  background: $color-light-grey;
   position: relative;
-  background: transparent;
+  z-index: 3;
 
   .container {
     overflow: visible;
