@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-02-18 12:49:33
+ * @Last Modified time: 2020-03-07 11:17:22
  *
  * @package dude
  */
@@ -18,23 +18,13 @@ if ( has_post_thumbnail() ) {
 }
 ?>
 
-<section class="block block-hero-side-columns block-hero block-hero-frontpage block-hero-enable-transition">
+<section class="block block-hero block-hero-frontpage block-hero-enable-transition">
   <div class="container opacity-on-load-instant">
 
     <div class="content">
       <h1>Visuaalisesti päräyttäviä, räätälöityjä verkkosivustoja.</h1>
       <p>Autamme sinua ja yritystänne pysymään edelläkävijänä toteuttamalla aikaa kestävät, laadukkaat verkkosivut. Tulosta ei tehdä valmisteemoilla.</p>
       <p class="button-wrapper"><a href="#" class="button"><span>Aloitetaanko projekti?</span><?php include get_theme_file_path( '/svg/arrow-right.svg' ); ?></a> <a href="#" class="link link-browse no-text-link">Selaa tehtyjä töitämme</a></p>
-    </div>
-
-    <div class="featured-image featured-image-side">
-      <div class="shade"></div>
-
-      <?php if ( $bg_image ) { ?>
-        <div class="background-image preview lazyload" style="background-image: url('<?php echo $bg_image_tiny; ?>');" data-src="<?php echo esc_url( $bg_image ); ?>" data-src-mobile="<?php echo esc_url( $bg_image_mobile[0] ); ?>"></div>
-        <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo esc_url( $bg_image ); ?>');"<?php endif; ?>></div>
-        <noscript><div class="background-image full-image" style="background-image: url('<?php echo esc_url( $bg_image ); ?>');"></div></noscript>
-      <?php } ?>
     </div>
 
   </div>
