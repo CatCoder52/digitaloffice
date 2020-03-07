@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 19:33:53
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-02-12 17:43:36
+ * @Last Modified time: 2020-03-07 15:50:06
  *
  * @package dude
  */
@@ -18,8 +18,8 @@ if ( empty( $title ) || empty( $link ) ) {
 <section class="block block-cta-text">
   <div class="container">
 
-    <h2 class="block-title"><?php echo esc_html( $title ) ?></h2>
-    <p><a class="cta-link" href="<?php echo esc_url( $link['url'] ) ?>"><?php echo esc_html( $link['title'] ) ?></a></p>
+    <h2><?php echo $title; // WPCS: XSS OK ?></h2>
+    <p class="link-wrapper"><a class="cta-link" href="<?php echo esc_url( $link['url'] ) ?>"><?php echo esc_html( $link['title'] ) ?></a></p>
 
   </div>
 </section>

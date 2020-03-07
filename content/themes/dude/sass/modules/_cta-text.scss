@@ -1,18 +1,33 @@
 .block.block-cta-text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 60rem;
-  margin-bottom: 8rem;
+  text-align: left;
 
   .container {
     overflow: visible;
   }
 
   h2 {
+    @include responsive-font(32px, 52px);
+    font-weight: 400;
     margin-top: 0;
     width: 100%;
-    max-width: 100%;
+    line-height: 1.48;
+    max-width: 1009px;
+    margin-bottom: 10rem;
+
+    @media (min-width: $grid-base-size) {
+      padding-left: 70px;
+    }
+  }
+
+  h2 span {
+    color: $color-cobalt-blue;
+  }
+
+  .link-wrapper {
+    margin: 0;
+
+    @media (min-width: $grid-base-size) {
+      padding-left: 70px;
+    }
   }
 }
