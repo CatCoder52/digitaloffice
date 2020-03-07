@@ -1,0 +1,62 @@
+.block.block-hero.block-hero-fp {
+  height: 100rem;
+
+  .content {
+    text-align: center;
+
+    .content-non-statement {
+      margin-top: 0;
+      margin-bottom: 2rem;
+      color: $color-white;
+      font-weight: 400;
+      font-style: normal;
+
+      .strike {
+        font-style: normal;
+        text-decoration: none;
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        margin: 0 auto;
+      }
+
+      .strike:after {
+        position: absolute;
+        display: inline-flex;
+        left: 0;
+        margin-top: 8px;
+        z-index: 2;
+        content: ' ';
+        background: $color-white;
+        height: 4px;
+        width: 100%;
+      }
+    }
+
+    p,
+    h1 {
+      text-transform: lowercase;
+
+      .capital-p-dangit {
+        text-transform: none;
+      }
+    }
+
+    .content-non-statement,
+    h1 {
+      font-size: 90px;
+    }
+
+    h1 {
+      color: $color-cobalt-blue;
+      font-weight: 500;
+      margin-top: 0;
+      margin-bottom: 15rem;
+    }
+
+    .content-sub-statement {
+      color: $color-cobalt-blue;
+      font-size: 16px;
+    }
+  }
+}

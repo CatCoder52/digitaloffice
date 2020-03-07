@@ -221,14 +221,6 @@ if ( $show_chat_greeting ) {
             <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-19"><a href="<?php echo get_page_link( 4485 ); ?>">Visuaalinen suunnittelu</a></li>
             <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4482"><a href="<?php echo get_page_link( 4493 ); ?>">Töitämme</a></li>
             <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-22"><a href="<?php echo get_page_link( 4487 ); ?>">Ota yhteyttä</a></li>
-            <li class="dude-nav-more nav-toggle menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4477">
-              <button id="nav-toggle-desktop" class="nav-toggle-desktop hamburger">
-                <span class="hamburger-box">
-                  <span class="hamburger-inner"></span>
-                </span>
-                <span id="nav-toggle-label" class="screen-reader-text" aria-label="<?php esc_attr_e( 'Menu', 'dude' ); ?>" class="toggle-text"><?php esc_attr_e( 'Lisää', 'dude' ); ?></span>
-              </button>
-            </li>
           </ul>
 
            <noscript>
@@ -244,8 +236,16 @@ if ( $show_chat_greeting ) {
               </ul>
             </noscript>
 
-        </nav><!-- #nav -->
-      </div>
+          </nav><!-- #nav -->
+        </div>
+
+        <button id="nav-toggle-desktop" class="nav-toggle-desktop hamburger">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+          <span id="nav-toggle-label" class="screen-reader-text" aria-label="<?php esc_attr_e( 'Menu', 'dude' ); ?>" class="toggle-text"><?php esc_attr_e( 'Lisää', 'dude' ); ?></span>
+        </button>
+
     </header>
   </div><!-- .nav-container -->
 

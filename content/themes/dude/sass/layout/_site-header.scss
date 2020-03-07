@@ -37,11 +37,11 @@
   // Easier flex way to align logo and navigation
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  padding-left: $padding-default-cols;
-  padding-right: $padding-default-cols;
-  padding-top: 9rem;
-  padding-bottom: 9rem;
+  justify-content: space-between;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 62px;
+  padding-bottom: 62px;
 
   @media (max-width: $container-ipad) {
     padding-left: $padding-default-cols-ipad;
@@ -51,18 +51,6 @@
   @media (max-width: $container-mobile) {
     padding-left: $padding-default-cols-mobile;
     padding-right: $padding-default-cols-mobile;
-  }
-}
-
-.site-branding {
-  margin-right: 6rem;
-}
-
-@media (min-width: 1600px) {
-  .site-branding {
-    position: absolute;
-    margin-left: -170px;
-    margin-right: 0;
   }
 }
 

@@ -317,23 +317,18 @@ body {
     .menu-items .menu-item {
       position: relative;
       margin-top: 0;
-      margin-left: 0;
-      margin-right: 3rem;
+      margin-left: 4rem;
+      margin-right: 4rem;
       margin-bottom: 0;
       line-height: 1;
-
-      &:last-child,
-      &:last-of-type {
-        margin-right: 0;
-      }
 
       // Main level
       a,
       button:not(.nav-toggle-desktop) {
-        font-size: 16px;
+        font-size: 18px;
         color: $color-nav-links;
         padding: 2rem 0;
-        font-weight: 500;
+        font-weight: 400;
         transition: all $transition-duration;
 
         &:after {

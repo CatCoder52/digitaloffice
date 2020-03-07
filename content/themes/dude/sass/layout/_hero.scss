@@ -1,4 +1,3 @@
-body .content-area .block.block-hero.block-hero-frontpage,
 .block.block-hero {
   display: flex;
   align-items: center;
@@ -21,27 +20,6 @@ body .content-area .block.block-hero.block-hero-frontpage,
 
     @media (min-width: $container-ipad) {
       margin-right: 2.8rem;
-    }
-  }
-
-  .button-wrapper .link {
-    @media (max-width: 1160px) {
-      display: block;
-      width: 100%;
-      margin-top: 2rem;
-      padding: 0 2.8rem;
-    }
-
-    @media (max-width: 400px) {
-      margin-right: 0;
-      text-align: center;
-    }
-  }
-
-  .button-wrapper a {
-    @media (max-width: 400px) {
-      font-size: 14px;
-      white-space: nowrap;
     }
   }
 
