@@ -3,7 +3,7 @@
  * @Author:             Roni Laukkarinen, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:48:37
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-03-07 14:33:10
+ * @Last Modified time: 2020-03-07 14:50:01
  *
  * @package dude
  */
@@ -22,7 +22,7 @@
 
         <p>Haluamme olla omalta osaltamme kehittämässä asiakkaamme brändiä ja imagoa, oli sitten kyseessä verkkosivustouudistus tai brändi-ilmeen päivitys. Kaikessa tekemisessämme korostuu tiivis yhteistyö, laadukas suunnittelu sekä millintarkka tekninen toteutus.</p>
 
-        <p class="link-wrapper"><a href="#">Aloitetaan projekti</a></p>
+        <p class="link-wrapper"><a href="#" class="cta-link">Aloitetaan projekti</a></p>
       </div>
     </div>
 

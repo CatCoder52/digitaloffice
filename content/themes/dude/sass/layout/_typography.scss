@@ -52,8 +52,58 @@
   }
 }
 
-.block p a:not(.button):not(.url):not(.no-text-link) {
+// Text styles
+.text-smaller,
+%text-smaller {
+  @include responsive-font(16px, 18px);
+}
+
+// Special links
+.cta-link,
+%cta-link {
+  display: inline-block;
+  font-weight: 600;
+  padding-bottom: 1rem;
+
+  &:hover {
+    color: $color-midnight-blue;
+  }
+
+  &:hover:after {
+    width: 50%;
+    background: $color-midnight-blue;
+  }
+}
+
+.cta-link:after {
+  width: 100%;
+  height: 2px;
+  background: $color-cobalt-blue;
+  position: relative;
+  content: '';
+  display: block;
+  transform: translateY(1rem);
+  transition: all $transition-duration;
+}
+
+.cta-link.cta-link-white {
+  color: $color-white;
+
+  &:after {
+    background: $color-white;
+  }
+}
+
+.block p a:not(.button):not(.url):not(.no-text-link):not(.cta-link) {
   @extend %textlink;
+}
+
+.block .link-wrapper {
+  margin-top: 4.8rem;
+}
+
+.block .link-wrapper a {
+  @extend %cta-link;
 }
 
 // Start typography settings

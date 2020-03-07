@@ -165,42 +165,6 @@ a.global-link {
   margin-top: 0;
 }
 
-// Text styles
-.text-smaller,
-%text-smaller {
-  @include responsive-font(16px, 18px);
-}
-
-// Special links
-.cta-link {
-  display: inline-block;
-
-  &:hover:after {
-    width: 100%;
-    opacity: 1;
-  }
-}
-
-.cta-link:after {
-  width: 50%;
-  height: 1px;
-  background: $color-body;
-  position: relative;
-  content: '';
-  display: block;
-  bottom: -1rem;
-  transition: all $transition-duration;
-  opacity: .5;
-}
-
-.cta-link.cta-link-white {
-  color: $color-white;
-
-  &:after {
-    background: $color-white;
-  }
-}
-
 // Descriptions and notes
 .col-description {
   opacity: .5;
