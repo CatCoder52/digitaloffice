@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 15:26:12
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-03-11 15:24:22
+ * @Last Modified time: 2020-03-11 15:38:59
  *
  * @package dude
  */
@@ -30,9 +30,9 @@ global $blog_latest_excerpt_override; ?>
 <section class="block block-latest-selected-mustread block-mint">
   <div class="container">
 
-    <div class="cols">
+    <div class="rows">
 
-      <div class="col col-latest">
+      <div class="row row-latest">
         <h2 class="block-title">Tarinoita Dudelta <a class="read-more" href="<?php echo get_option( 'page_for_posts' ); ?>">Katso kaikki</a></h2>
 
         <?php while ( $query->have_posts() ) : $query->the_post();
@@ -66,8 +66,7 @@ global $blog_latest_excerpt_override; ?>
         <?php endwhile; wp_reset_query(); wp_reset_postdata(); ?>
       </div>
 
-      <div class="col col-mustread">
-        <h2 class="block-title">Valitsemiamme juttuja sinulle</h2>
+      <div class="row row-mustread">
 
         <?php foreach ( $mustread as $post ) : ?>
           <div class="post">
