@@ -3,17 +3,20 @@
   color: $color-body;
   overflow: visible;
   padding-top: 25rem;
-  padding-bottom: 25rem;
+  padding-bottom: 11.4rem;
 
   .step {
     color: $color-cobalt-blue;
-    margin-bottom: 48px;
+    margin-bottom: 58px;
     display: block;
   }
 
   .cols.cols-services {
     display: flex;
-    padding-bottom: 22rem;
+
+    &.cols-services-design {
+      padding-bottom: 65px;
+    }
 
     &:last-of-type {
       padding-bottom: 0;
@@ -21,13 +24,14 @@
 
     .col.col-content {
       width: 400px;
-      margin-right: 190px;
+      margin-right: 150px;
     }
 
     .col.col-services {
-      width: calc(100% - (400px + 190px));
+      width: calc(100% - (400px + 150px));
       display: flex;
       flex-wrap: wrap;
+      padding-top: 100px;
     }
 
     h3 {

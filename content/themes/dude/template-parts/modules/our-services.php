@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:48:37
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-03-11 14:06:57
+ * @Last Modified time: 2020-03-11 14:40:53
  *
  * @package dude
  */
@@ -30,7 +30,7 @@ $image_development_preload = wp_get_attachment_image_url( $image_id_development,
       <h2 class="block-title" id="block-title-our-services">Palvelumme</h2>
     </header>
 
-    <div class="cols cols-services">
+    <div class="cols cols-services cols-services-design">
 
       <div class="col col-content">
         <span class="step"><?php include get_theme_file_path( '/svg/01.svg' ); ?></span>
@@ -71,9 +71,10 @@ $image_development_preload = wp_get_attachment_image_url( $image_id_development,
       </div>
     </div>
 
-    <div class="cols cols-services">
+    <div class="cols cols-services cols-services-development">
 
       <div class="col col-content">
+        <span class="step"><?php include get_theme_file_path( '/svg/02.svg' ); ?></span>
         <h2 class="col-title">Kehitys</h2>
 
         <p>Tekniseltä osaamiseltamme olemme aivan suomen parhaimmistoa. Anisi, at viverra neque justo ultrices libero. Curabitur aliquet sapien non placerat hendrerit. Vivamus ornare auctor sapien, vel tempus arcu aliquam eget.</p>
