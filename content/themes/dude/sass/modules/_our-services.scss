@@ -5,6 +5,12 @@
   padding-top: 25rem;
   padding-bottom: 25rem;
 
+  .step {
+    color: $color-cobalt-blue;
+    margin-bottom: 48px;
+    display: block;
+  }
+
   .cols.cols-services {
     display: flex;
     padding-bottom: 22rem;

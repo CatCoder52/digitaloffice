@@ -8,7 +8,7 @@
     line-height: 1.24;
     font-weight: 400;
     margin: 0;
-    padding-left: 70px;
+    padding-right: 70px;
   }
 
   .cols {
@@ -17,10 +17,10 @@
 
   .col.col-title {
     width: 600px;
-    margin-right: 140px;
+    margin-right: 70px;
   }
 
   .col.col-text {
-    width: calc(100% - (600px + 140px));
+    width: calc(100% - (600px + 70px));
   }
 }

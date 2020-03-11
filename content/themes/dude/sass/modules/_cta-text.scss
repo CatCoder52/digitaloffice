@@ -15,10 +15,6 @@
     line-height: 1.48;
     max-width: 1009px;
     margin-bottom: 10rem;
-
-    @media (min-width: $grid-base-size) {
-      padding-left: 70px;
-    }
   }
 
   h2 span {
@@ -27,9 +23,5 @@
 
   .link-wrapper {
     margin: 0;
-
-    @media (min-width: $grid-base-size) {
-      padding-left: 70px;
-    }
   }
 }
