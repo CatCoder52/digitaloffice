@@ -3,6 +3,24 @@
   position: relative;
   z-index: 3;
 
+  &.has-style-2 {
+    background: transparent;
+
+    .container {
+      padding-top: 0;
+    }
+
+    .image.image-small-right {
+      top: -190px;
+      right: 10px;
+    }
+
+    .image.image-small-left {
+      max-width: 490px;
+      height: 320px;
+    }
+  }
+
   .container {
     overflow: visible;
     position: relative;
