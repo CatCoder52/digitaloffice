@@ -134,24 +134,24 @@ a.global-link {
   margin-top: 0;
   position: relative;
 
-  &:before {
-    width: 100vw;
-    left: -100vw;
-    height: 1px;
-    background: $color-body;
-    position: absolute;
-    content: '';
-    margin-left: -30px;
-    top: 12px;
-  }
+  // &:before {
+  //   width: 100vw;
+  //   left: -100vw;
+  //   height: 1px;
+  //   background: $color-body;
+  //   position: absolute;
+  //   content: '';
+  //   margin-left: -30px;
+  //   top: 12px;
+  // }
 
-  @media (max-width: 1200px) {
-    max-width: 60%;
-  }
+  // @media (max-width: 1200px) {
+  //   max-width: 60%;
+  // }
 
-  @media (max-width: 900px) {
-    max-width: 100%;
-  }
+  // @media (max-width: 900px) {
+  //   max-width: 100%;
+  // }
 }
 
 // Mint styles
