@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 15:26:12
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-02-12 17:43:36
+ * @Last Modified time: 2020-03-11 15:24:22
  *
  * @package dude
  */
@@ -27,13 +27,13 @@ if ( ! $query->have_posts() || empty( $mustread ) ) {
 
 global $blog_latest_excerpt_override; ?>
 
-<section class="block block-latest-selected-mustread">
+<section class="block block-latest-selected-mustread block-mint">
   <div class="container">
 
     <div class="cols">
 
       <div class="col col-latest">
-        <h2 class="block-title">Uusin bloggauksemme</h2>
+        <h2 class="block-title">Tarinoita Dudelta <a class="read-more" href="<?php echo get_option( 'page_for_posts' ); ?>">Katso kaikki</a></h2>
 
         <?php while ( $query->have_posts() ) : $query->the_post();
           $blog_latest_excerpt_override = get_the_id();

@@ -154,6 +154,13 @@ a.global-link {
   }
 }
 
+// Mint styles
+body .block.block-mint {
+  h2.block-title {
+    color: $color-mint;
+  }
+}
+
 .block-head {
   padding: 0;
 }
