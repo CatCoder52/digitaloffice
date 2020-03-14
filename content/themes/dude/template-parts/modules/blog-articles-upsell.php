@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 18:08:24
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-02-12 17:43:36
+ * @Last Modified time: 2020-03-14 17:14:18
  *
  * @package dude
  */
@@ -14,6 +14,13 @@ $articles = get_sub_field( 'articles' );
 if ( empty( $title_placeholder ) || empty( $articles ) ) {
   return;
 } ?>
+
+<section class="block block-cta">
+  <div class="container">
+    <h2>Kyllä, naurettavan hyvännäköistä</h2>
+    <p>Jos tuntemukset on kutakuinkin tuota luokkaa, niin jätäthän meille soittopyynnön. Meidän Krisu soittaa pikimmiten perään.</p>
+  </div>
+</section>
 
 <section class="block block-blog-articles-upsell">
   <div class="container">
