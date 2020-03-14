@@ -1,74 +1,117 @@
-.block.block-cta-text.block-cta-text-single-reference {
-  background: $color-whitegreyish;
-}
-
-.block .block-head.block-head-no-padding-top {
-  padding-top: 0;
-}
-
 .block.block-references {
-  .col-image {
+  padding-left: 0;
+  padding-right: 0;
+
+  .floating-actions {
+    width: 115px;
     position: relative;
+    text-align: center;
+    font-size: $font-min-size;
+
+    button {
+      color: $color-midnight-blue;
+      transition: all $transition-duration;
+    }
+
+    .slick-disabled {
+      opacity: .2;
+    }
+
+    button:hover {
+      cursor: pointer;
+      opacity: .2;
+    }
+
+    .button-prev {
+      position: absolute;
+      left: 0;
+    }
+
+    .button-next {
+      position: absolute;
+      right: 0;
+    }
   }
 
-  .col-image:after {
-    z-index: 3;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    bottom: -20px;
-    right: -20px;
-    border: 1px solid $color-mint;
-    position: absolute;
-    content: '';
-    transition: all $transition-duration;
-  }
+  .container .block-head {
+    @extend %container;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
-  &.block-references-related {
-    padding-top: 0;
+    .block-title {
+      margin-bottom: 12rem;
+    }
+
+    .block-title:before {
+      background: $color-white;
+    }
   }
 
   .container {
-    overflow: visible;
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
   }
 
-  .cols.cols-references {
-    margin-top: $padding-default-rows;
+  .slick-list {
+    padding: 0 !important;
+  }
 
-    .col-title {
-      @include responsive-font(20px, 24px);
-      font-weight: 500;
-      padding-top: 10px;
+  .slick-slide {
+    width: 1184px;
+  }
+
+  @media (min-width: $grid-base-size) {
+    .slick-track {
+      left: -80px !important;
+    }
+  }
+
+  .reference-wrapper {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 'main-reference small-reference' 'main-reference small-reference-2';
+    grid-row-gap: 40px;
+    grid-column-gap: 85px;
+
+    .reference-title {
+      font-size: 24px;
+      margin-top: 0;
+      font-weight: 400;
     }
 
-    .col-title a {
+    .reference-title a {
       color: $color-body;
     }
 
-    .col-content p {
-      @include responsive-font($font-min-size, 16px);
-    }
-  }
+    .reference:nth-child(1) {
+      grid-area: main-reference;
 
-  .col-featured-image {
-    position: relative;
-  }
-
-  .block-head {
-    padding-bottom: 0;
-  }
-
-  .cols {
-    @include grid(2, $gutter_x: $padding-general-content-box, $gutter_y: 0rem);
-    position: relative;
-    z-index: 2;
-
-    @media (max-width: 900px) {
-      @include grid(2, $gutter_x: $padding-general-content-box-mobile, $gutter_y: 0rem);
+      .reference-image {
+        height: 642px;
+        width: 642px;
+      }
     }
 
-    @media (max-width: 640px) {
-      display: block;
+    .reference:nth-child(2) {
+      grid-area: small-reference;
+
+      .reference-image {
+        height: 248px;
+        width: 372px;
+      }
+    }
+
+    .reference:nth-child(3) {
+      grid-area: small-reference-2;
+
+      .reference-image {
+        height: 248px;
+        width: 372px;
+      }
     }
   }
 
@@ -88,44 +131,16 @@
     }
   }
 
-  .cols-references .content {
-    padding: 2rem;
+  .reference-content {
+    margin-top: 3rem;
+    overflow: hidden;
   }
 
-  .cols-references {
-    @include grid(2, $gutter_x: $padding-general-content-box, $gutter_y: $padding-general-content-box);
-
-    @media (min-width: 1300px) {
-      @include grid(3, $gutter_x: $padding-general-content-box, $gutter_y: $padding-general-content-box);
-    }
-
-    @media (max-width: $container-ipad) {
-      display: block;
-    }
-
-    .col {
-      padding: 0;
-
-      @media (max-width: $container-ipad) {
-        margin-bottom: 5rem;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-    }
+  .reference-content p {
+    // Temp:
+    font-size: 16px;
+    height: 22px;
+    overflow: hidden;
+    padding-right: 85px;
   }
-}
-
-.home .block.block-references .cols.cols-references {
-  margin-top: $padding-default-rows;
-
-  @media (max-width: $container-ipad) {
-    margin-bottom: 0;
-  }
-}
-
-.block.block-references-archive .cols.cols-references {
-  margin-top: 0;
-  margin-bottom: 0;
 }

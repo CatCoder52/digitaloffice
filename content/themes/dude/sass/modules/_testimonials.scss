@@ -7,6 +7,10 @@
   padding-right: 0;
   padding-bottom: 22rem;
 
+  .slick-disabled {
+    opacity: .2;
+  }
+
   .floating-actions {
     width: 177px;
     position: relative;
