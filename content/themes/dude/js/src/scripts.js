@@ -50,7 +50,7 @@ lazyload(images, {
       slidesToScroll: 1,
       arrows: true,
       dots: false,
-      infinite: true,
+      infinite: false,
       fade: false,
       adaptiveHeight: true,
       variableWidth: true,
