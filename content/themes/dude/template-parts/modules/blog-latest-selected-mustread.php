@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 15:26:12
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-03-11 15:38:59
+ * @Last Modified time: 2020-03-14 17:29:43
  *
  * @package dude
  */
@@ -95,20 +95,5 @@ global $blog_latest_excerpt_override; ?>
         <?php endforeach; ?>
       </div>
     </div>
-
-    <div class="newsletter has-grey-bg has-grey-bg-extend-right">
-      <form action="https://dude.us8.list-manage.com/subscribe/post?u=bda4635b58bba8d9716eb90a6&amp;id=efe9db80e6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
-        <h2 class="block-title">Tilaa bittivirtojen pulloposti</h2>
-        <p>Koottuja kuulumisia sisältävä bittivirtojen pulloposti saapuu rantaasi noin kolmen kuukauden välein.</p>
-        <label for="mce-EMAIL" class="screen-reader-text">Sähköpostiosoite:</label>
-
-        <div class="inputs">
-          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Sähköpostiosoite">
-          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_bda4635b58bba8d9716eb90a6_efe9db80e6" tabindex="-1" value=""></div>
-          <input type="submit" value="Lähetä" name="subscribe" id="mc-embedded-subscribe" class="button">
-        </div>
-      </form>
-    </div>
-
   </div>
 </section>
