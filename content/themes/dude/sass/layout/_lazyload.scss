@@ -15,7 +15,7 @@
 
   &.preview {
     filter: blur(1vw);
-    transform: scale(1.05);
+    // transform: scale(1.05);
   }
 
   &.full-image {
@@ -26,12 +26,12 @@
 
 @keyframes progressive-reveal {
   0% {
-    transform: scale(1.05);
-    opacity: 0;
+    // transform: scale(1.05);
+    opacity: .6;
   }
 
   100% {
-    transform: scale(1);
+    // transform: scale(1);
     opacity: 1;
   }
 }
