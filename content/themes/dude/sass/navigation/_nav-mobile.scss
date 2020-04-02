@@ -125,12 +125,12 @@ body.single-person.js-nav-active .site-content {
 // Blurs
 .block-hero-service .container,
 .block-hero-normal .container {
-  transition: all .75s;
+  transition: opacity .75s;
   will-change: filter;
 }
 
 .block-hero .full-image {
-  transition: all .75s;
+  transition: opacity .75s;
   will-change: opacity;
 }
 

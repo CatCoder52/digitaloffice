@@ -20,7 +20,7 @@
 
   &.full-image {
     z-index: 1;
-    transition: all $transition-duration;
+    transition: opacity $transition-duration;
   }
 }
 
