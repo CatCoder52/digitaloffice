@@ -15,8 +15,47 @@ body.template-surveys-modern {
   background-attachment: fixed;
   color: $color-dude-white;
 
+  .gsurvey-likert * {
+    border-radius: 0 !important;
+  }
+
+  table.gsurvey-likert th.gsurvey-likert-choice-label {
+    background-color: transparent;
+  }
+
+  .gform_wrapper table.gsurvey-likert {
+    margin-bottom: 36px;
+  }
+
+  .gform_wrapper table.gsurvey-likert,
+  table.gsurvey-likert th.gsurvey-likert-choice-label,
+  table.gsurvey-likert tr td,
+  table.gsurvey-likert .gsurvey-likert-choice,
+  table.gsurvey-likert .gsurvey-likert-row-label {
+    border: 0;
+    box-shadow: none;
+  }
+
   @media (max-width: 1000px) {
     background-size: cover;
+  }
+
+  .gform_wrapper .gfield_checkbox li label,
+  .gform_wrapper .gfield_radio li label {
+    max-width: 100% !important;
+    width: 100%;
+  }
+
+  .gform_wrapper ul.gfield_checkbox,
+  .gform_wrapper ul.gfield_radio {
+    margin: 0;
+  }
+
+  .gform_wrapper .description_above .gfield_description {
+    padding: 0 0 30px;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
   }
 
   form li.gfield .validation_message {
@@ -140,12 +179,27 @@ body.template-surveys-modern {
     table.gsurvey-likert {
       width: 100%;
       table-layout: fixed;
-      border: 1px solid #4d4f50;
+      border: 0;
       border-collapse: collapse;
       border-style: hidden;
-      box-shadow: 0 0 0 1px #b5b5b6;
+      box-shadow: none;
       border-radius: 4px;
       overflow: hidden;
+    }
+
+    table.gsurvey-likert td.gsurvey-likert-choice {
+      transition: all 1s;
+    }
+
+    table.gsurvey-likert td.gsurvey-likert-choice:not(.gsurvey-likert-selected):hover,
+    table.gsurvey-likert td.gsurvey-likert-choice:not(.gsurvey-likert-selected):focus {
+      background-color: transparent !important;
+    }
+
+    table.gsurvey-likert td.gsurvey-likert-choice.gsurvey-likert-selected {
+      background-color: #263d2e;
+      color: $color-checked;
+      font-weight: 700;
     }
 
     table.gsurvey-likert .gsurvey-likert-choice {
@@ -297,6 +351,7 @@ body.template-surveys-modern {
       margin-bottom: 10rem;
       border: 1px solid #898888;
       padding: 4rem 5rem 0;
+      overflow: hidden;
 
       @media (max-width: 500px) {
         padding: 3rem 3rem 0;
@@ -614,10 +669,11 @@ body.template-surveys-modern {
       }
 
       > li {
-        width: 33.3% !important;
-        margin-right: -1px !important;
+        min-width: 33.3% !important;
+        margin-right: 0 !important;
         margin-bottom: -1px !important;
         overflow: hidden !important;
+        flex: 1;
 
         @media (max-width: 710px) {
           width: 50% !important;
