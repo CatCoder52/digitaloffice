@@ -17,22 +17,32 @@
     }
   ],
   "keywords": [
-    "bedrock", "roots", "wordpress", "stack", "composer", "vagrant", "wp"
+    "bedrock",
+    "roots",
+    "wordpress",
+    "stack",
+    "composer",
+    "vagrant",
+    "wp"
   ],
   "support": {
     "issues": "https://github.com/digitoimistodude/dudestack/issues"
   },
-   "config": {
+  "config": {
     "preferred-install": "dist",
     "generate-salts": true,
     "secure-http": true
   },
   "autoload": {
-    "psr-4": {"Roots\\Bedrock\\": "scripts/Roots/Bedrock"}
+    "psr-4": {
+      "Roots\\Bedrock\\": "scripts/Roots/Bedrock"
+    }
   },
   "scripts": {
-    "post-root-package-install": ["Roots\\Bedrock\\Installer::addSalts"]
-   },
+    "post-root-package-install": [
+      "Roots\\Bedrock\\Installer::addSalts"
+    ]
+  },
   "repositories": [
     {
       "type": "composer",
@@ -51,7 +61,7 @@
       "type": "package",
       "package": {
         "name": "advanced-custom-fields/advanced-custom-fields-pro",
-        "version": "5.8.0",
+        "version": "5.8.9",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
@@ -67,11 +77,11 @@
       "type": "package",
       "package": {
         "name": "relevanssi/relevanssi-premium",
-        "version": "2.3.0",
+        "version": "2.9.0",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
-          "url": "https://www.relevanssi.com/update/fetch_latest_version.php?api_key=11879452"
+          "url": "https://www.relevanssi.com/update/get_version.php?api_key=11879452&version=2.9.0"
         }
       }
     },
@@ -80,10 +90,10 @@
       "package": {
         "name": "rocketgenius/gravity-forms",
         "type": "wordpress-plugin",
-        "version": "2.3.6",
+        "version": "2.4.18.10",
         "dist": {
           "type": "zip",
-          "url": "https://dudedev:Y4ktW427dBzH^n(dqn>LKTRq7@plugins.dude.fi/gravityforms_2.3.6.zip"
+          "url": "https://dudedev:Y4ktW427dBzH^n(dqn>LKTRq7@plugins.dude.fi/gravityforms_2.4.18.10.zip"
         }
       }
     }
@@ -96,9 +106,9 @@
     "composer/installers": "~1.2.0",
     "wp-cli/wp-cli-bundle": "*",
     "vlucas/phpdotenv": "^2.0.1",
-    "johnpbloch/wordpress": "5.0.3",
+    "johnpbloch/wordpress": "5.3",
     "digitoimistodude/air-helper": "*",
-    "wpackagist-plugin/google-analytics-dashboard-for-wp": "*",
+    "wpackagist-plugin/ga-in": "*",
     "wpackagist-plugin/imagify": "*",
     "wpackagist-plugin/simple-history": "*",
     "wpackagist-plugin/sendgrid-email-delivery-simplified": "*",
@@ -109,31 +119,41 @@
     "wpackagist-plugin/wordpress-seo": "*",
     "wpackagist-plugin/so-clean-up-wp-seo": "*",
     "aucor/dynamic-mo-loader": "*",
-    "advanced-custom-fields/advanced-custom-fields-pro": "^5.8.0",
-    "relevanssi/relevanssi-premium": "^2.2.5",
-    "rocketgenius/gravity-forms": "2.3.6",
+    "advanced-custom-fields/advanced-custom-fields-pro": "*",
+    "relevanssi/relevanssi-premium": "*",
+    "rocketgenius/gravity-forms": "*",
     "humanmade/page-for-post-type": "dev-master",
-    "digitoimistodude/image-hashtag-feed": "dev-master",
     "wpackagist-plugin/simple-page-ordering": "*"
   },
   "require-dev": {
     "rarst/wps": "*",
     "rarst/laps": "*",
     "wpackagist-plugin/query-monitor": "*",
-    "digitoimistodude/gulp-sitemap-generator":"dev-master"
+    "digitoimistodude/gulp-sitemap-generator": "dev-master"
   },
   "extra": {
     "dropin-paths": {
-      "content/languages/": ["vendor:koodimonni-language"],
-      "content/languages/plugins/": ["vendor:koodimonni-plugin-language"],
-      "content/languages/themes/": ["vendor:koodimonni-theme-language"]
+      "content/languages/": [
+        "vendor:koodimonni-language"
+      ],
+      "content/languages/plugins/": [
+        "vendor:koodimonni-plugin-language"
+      ],
+      "content/languages/themes/": [
+        "vendor:koodimonni-theme-language"
+      ]
     },
     "installer-paths": {
-      "content/mu-plugins/{$name}/": ["type:wordpress-muplugin",
+      "content/mu-plugins/{$name}/": [
+        "type:wordpress-muplugin",
         "digitoimistodude/gulp-sitemap-generator"
       ],
-      "content/plugins/{$name}/": ["type:wordpress-plugin"],
-      "content/themes/{$name}/": ["type:wordpress-theme"]
+      "content/plugins/{$name}/": [
+        "type:wordpress-plugin"
+      ],
+      "content/themes/{$name}/": [
+        "type:wordpress-theme"
+      ]
     },
     "wordpress-install-dir": "wp"
   }
