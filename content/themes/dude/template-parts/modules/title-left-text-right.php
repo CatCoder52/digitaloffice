@@ -3,7 +3,7 @@
  * @Author:             Roni Laukkarinen, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:48:37
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-03-07 14:50:01
+ * @Last Modified time: 2020-07-13 15:00:31
  *
  * @package dude
  */
@@ -14,7 +14,7 @@
 
     <div class="cols">
       <div class="col col-title">
-        <h2>Me teemme kaikenlaista paskaa, että tuota siinä sopii miettiä.</h2>
+        <h2>Me teemme kaikenlaista lorem ipsum, että tuota siinä sopii miettiä.</h2>
       </div>
 
       <div class="col col-text">

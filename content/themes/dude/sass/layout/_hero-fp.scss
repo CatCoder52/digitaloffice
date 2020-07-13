@@ -52,9 +52,9 @@
     }
 
     h1 {
-      @include responsive-font(90px, 132px);
+      @include responsive-font(80px, 142px);
       color: $color-midnight-blue;
-      font-weight: 500;
+      font-weight: 400;
       line-height: 1;
 
       @media (max-width: 700px) {
@@ -67,7 +67,7 @@
     }
 
     .content-sub-statement {
-      @include responsive-font(16px, 22px);
+      @include responsive-font(16px, 20px);
       color: $color-midnight-blue;
       font-size: $font-size-general-small;
     }
