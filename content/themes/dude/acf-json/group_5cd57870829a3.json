@@ -148,7 +148,7 @@
                 "layout_5cd58187c53d2": {
                     "key": "layout_5cd58187c53d2",
                     "name": "references",
-                    "label": "Referenssit (2019)",
+                    "label": "Referenssit (2020)",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -189,6 +189,38 @@
                             "message": "Kaksi pienempää referenssiä arvotaan kerran päivässä.",
                             "new_lines": "wpautop",
                             "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5f0c5d4f6706c": {
+                    "key": "layout_5f0c5d4f6706c",
+                    "name": "references_one",
+                    "label": "Referenssinosto 1 kpl (2020)",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f0c5d4f6706d",
+                            "label": "Valitse referenssi",
+                            "name": "selected_reference",
+                            "type": "post_object",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "reference"
+                            ],
+                            "taxonomy": "",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "return_format": "id",
+                            "ui": 1
                         }
                     ],
                     "min": "",
@@ -835,7 +867,7 @@
                 "layout_5ce0338a9b424": {
                     "key": "layout_5ce0338a9b424",
                     "name": "cta-text",
-                    "label": "CTA: teksti ja linkki (2019)",
+                    "label": "CTA: teksti ja linkki (2020)",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -1133,5 +1165,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1594636955
+    "modified": 1594647680
 }

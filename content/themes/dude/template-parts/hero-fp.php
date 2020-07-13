@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-13 15:01:32
+ * @Last Modified time: 2020-07-13 16:46:24
  *
  * @package dude
  */
@@ -22,7 +22,7 @@ if ( has_post_thumbnail() ) {
   <div class="container opacity-on-load-instant">
 
     <div class="content">
-      <h1>Ole uskottava.</h1>
+      <h1>Ole <span class="has-glitch" data-text="uskottava.">uskottava.</span></h1>
       <p class="content-sub-statement">Suunnittelemme visuaalisesti näyttäviä ja teknisesti laadukkaita <span class="capital-p-dangit">WordPress</span>-verkkosivuja.</p>
     </div>
 
