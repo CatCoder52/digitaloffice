@@ -31,7 +31,6 @@
       width: calc(100% - (400px + 150px));
       display: flex;
       flex-wrap: wrap;
-      padding-top: 100px;
     }
 
     h3 {
@@ -41,7 +40,7 @@
     }
 
     p {
-      font-size: 16px;
+      font-size: $font-size-general-small;
 
       @media (max-width: $container-mobile) {
         font-size: $font-min-size;
@@ -49,10 +48,10 @@
     }
 
     .col-inner {
-      width: calc(50% - 80px);
-      margin-right: 80px;
-      margin-bottom: 40px;
-      margin-top: 40px;
+      width: calc(50% - #{$margin-between-grid-columns});
+      margin-right: $margin-between-grid-columns;
+      margin-bottom: $margin-between-grid-columns;
+      margin-top: 0;
 
       @media (min-width: $grid-base-size) {
         max-width: 350px;

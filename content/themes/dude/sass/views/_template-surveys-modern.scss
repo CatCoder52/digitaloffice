@@ -288,7 +288,7 @@ body.template-surveys-modern {
       }
 
       @media (max-width: 400px) {
-        font-size: 16px;
+        font-size: $font-size-general-small;
         margin-bottom: 2rem;
       }
     }

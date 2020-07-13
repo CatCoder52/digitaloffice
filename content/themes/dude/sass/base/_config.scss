@@ -39,6 +39,7 @@ $font-alt: 'TT Interphases', 'Helvetica Neue', Helvetica, sans-serif;
 $font-monospace: 'Menlo', 'Courier', monospace;
 
 // Font settings
+$font-size-general-small: 16px;
 $font-min-size: 18px;
 $font-max-size: 18px;
 $font-base-line-height: 1.55;
@@ -77,6 +78,7 @@ $padding-general-content-box-mobile: 4rem;
 $margin-general-offset: -8rem;
 $padding-accordion-content: 2.5rem;
 $padding-accordion-content-mobile: 2rem;
+$margin-between-grid-columns: 6rem;
 
 // Transition duration and animations
 $transition-duration: .6s;
