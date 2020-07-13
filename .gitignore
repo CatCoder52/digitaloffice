@@ -1,4 +1,5 @@
 # Dotfiles and directories
+content/cache
 .DS_Store
 .env
 .env*

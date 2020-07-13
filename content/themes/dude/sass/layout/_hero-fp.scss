@@ -1,11 +1,15 @@
+// Block specific variables
+$padding-hero-top: 28rem;
+$padding-hero-bottom: 21.3rem;
+
 .block.block-hero.block-hero-fp {
   height: auto;
   padding-top: 0;
   padding-bottom: 0;
 
   .container {
-    padding-top: 28rem;
-    padding-bottom: 213px;
+    padding-top: $padding-hero-top;
+    padding-bottom: $padding-hero-bottom;
   }
 
   .content {

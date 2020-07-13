@@ -1,7 +1,3 @@
-.block.block-cta-left-image {
-  display: none;
-}
-
 body .block.block-cta-left-image,
 .block.block-hero-reference,
 .block.block-hero-person {
@@ -21,7 +17,7 @@ body .block.block-cta-left-image,
     }
   }
 
-  .end-note     a {
+  .end-note a {
     background-image: linear-gradient(to top, $color-deep-black, $color-deep-black);
     background-size: 100% 1px;
     background-position: left bottom;
