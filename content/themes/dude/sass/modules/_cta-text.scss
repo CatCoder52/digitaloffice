@@ -15,6 +15,10 @@
     line-height: 1.48;
     max-width: 1009px;
     margin-bottom: 10rem;
+
+    @media (min-width: $container-ipad-landscape) {
+      font-size: 52px;
+    }
   }
 
   h2 span {

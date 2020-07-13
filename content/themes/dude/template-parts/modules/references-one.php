@@ -3,7 +3,7 @@
  * @Author:             Roni Laukkarinen, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:50:23
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-13 16:45:03
+ * @Last Modified time: 2020-07-13 17:34:28
  *
  * @package dude
  */
@@ -34,7 +34,7 @@ if ( empty( $selected_reference ) ) {
 }
 ?>
 
-<section class="block block-references">
+<section class="block block-references-one">
   <div class="container">
 
     <header class="block-head">
@@ -43,9 +43,9 @@ if ( empty( $selected_reference ) ) {
 
     <?php if ( ! empty( $selected_reference ) ) : ?>
       <div class="reference-image reference-image-main has-lazyload">
-        <div class="background-image preview lazyload" style="background-image: url('<?php echo $selected_reference['image_preload_url']; ?>');" data-src="<?php echo $selected_reference['image_url']; ?>" data-src-mobile="<?php echo $selected_reference['image_url']; ?>"></div>
-        <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo $selected_reference['image_url']; ?>');"<?php endif; ?>></div>
-        <noscript><div class="background-image full-image" style="background-image: url('<?php echo $selected_reference['image_url']; ?>');"></div></noscript>
+        <div class="background-image preview lazyload" style="background-image: url('<?php echo esc_url( $selected_reference['image_preload_url'] ); ?>');" data-src="<?php echo esc_url( $selected_reference['image_url'] ); ?>" data-src-mobile="<?php echo esc_url( $selected_reference['image_url'] ); ?>"></div>
+        <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : // phpcs:ignore ?> style="background-image: url('<?php echo $selected_reference['image_url']; ?>');"<?php endif; ?>></div>
+        <noscript><div class="background-image full-image" style="background-image: url('<?php echo esc_url( $selected_reference['image_url'] ); ?>');"></div></noscript>
       </div>
 
       <div class="cols">
@@ -53,7 +53,7 @@ if ( empty( $selected_reference ) ) {
         <div class="col has-grey-bg has-grey-bg-extend-left">
           <?php include get_theme_file_path( "svg/logos/{$selected_reference['logofile']}.svg" ); ?>
           <h3 class="screen-reader-text"><?php echo esc_html( $selected_reference['title'] ) ?></h3>
-          <p><?php echo $selected_reference['excerpt'] ?></p>
+          <p><?php echo $selected_reference['excerpt']; // phpcs:ignore ?></p>
 
           <p class="arrow-link-wrapper"><a href="<?php echo esc_html( $selected_reference['permalink'] ) ?>" class="arrow-link">Tsekkaa työnäyte<span class="arrow"></span></a></p>
         </div>
