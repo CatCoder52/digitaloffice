@@ -24,8 +24,8 @@
                     "sub_fields": [
                         {
                             "key": "field_5cefd6fe25444",
-                            "label": "Kuva suunnittelulle",
-                            "name": "image_design",
+                            "label": "Kuva",
+                            "name": "image",
                             "type": "image",
                             "instructions": "",
                             "required": 0,
@@ -36,31 +36,7 @@
                                 "id": ""
                             },
                             "return_format": "id",
-                            "preview_size": "medium",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": ""
-                        },
-                        {
-                            "key": "field_5e4557e96f464",
-                            "label": "Kuva kehitykselle",
-                            "name": "image_development",
-                            "type": "image",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "id",
-                            "preview_size": "medium",
+                            "preview_size": "thumbnail",
                             "library": "all",
                             "min_width": "",
                             "min_height": "",
@@ -72,60 +48,6 @@
                         },
                         {
                             "key": "field_5cd58127c53d1",
-                            "label": "",
-                            "name": "",
-                            "type": "message",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "message": "Tämä alue on kovakoodattu ja sitä ei voi muokata hallintapaneelista.",
-                            "new_lines": "wpautop",
-                            "esc_html": 0
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
-                "layout_5e6380dfa916a": {
-                    "key": "layout_5e6380dfa916a",
-                    "name": "title-left-text-right",
-                    "label": "Iso otsikko vasemmalla ja teksti oikealla",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_5e638269e49c5",
-                            "label": "",
-                            "name": "",
-                            "type": "message",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "message": "Tämä alue on kovakoodattu ja sitä ei voi muokata hallintapaneelista.",
-                            "new_lines": "wpautop",
-                            "esc_html": 0
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
-                "layout_5e441b31fc754": {
-                    "key": "layout_5e441b31fc754",
-                    "name": "testimonials",
-                    "label": "Asiakaslainaukset-slider",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_5e441b31fc756",
                             "label": "",
                             "name": "",
                             "type": "message",
@@ -194,6 +116,78 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_5cdff17ccddac": {
+                    "key": "layout_5cdff17ccddac",
+                    "name": "cta-left-image",
+                    "label": "CTA kuvalla",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5cdff187cddad",
+                            "label": "Otsikko",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5cdff194cddae",
+                            "label": "Tekstisisältö",
+                            "name": "content",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_5cdff1a8cddaf",
+                            "label": "Taustakuva",
+                            "name": "bg_image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "preview_size": "thumbnail",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5cdff955285b6": {
                     "key": "layout_5cdff955285b6",
                     "name": "blog-latest-selected-mustread",
@@ -232,7 +226,7 @@
                 "layout_5ce0041f3583b": {
                     "key": "layout_5ce0041f3583b",
                     "name": "cta-process",
-                    "label": "CTA: Prosessi",
+                    "label": "CTA: Prosessi (Vanha, 2019)",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -1005,110 +999,6 @@
                     ],
                     "min": "",
                     "max": ""
-                },
-                "layout_5e4540fe1bb0f": {
-                    "key": "layout_5e4540fe1bb0f",
-                    "name": "images",
-                    "label": "Kolmen kuvan kuvakollaasi",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_5e45410a1bb10",
-                            "label": "Iso kuva",
-                            "name": "image_big",
-                            "type": "image",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array",
-                            "preview_size": "medium",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": ""
-                        },
-                        {
-                            "key": "field_5e4541151bb11",
-                            "label": "Pieni kuva 1 (vasen)",
-                            "name": "image_small_left",
-                            "type": "image",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array",
-                            "preview_size": "medium",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": ""
-                        },
-                        {
-                            "key": "field_5e4541251bb12",
-                            "label": "Pieni kuva 2 (oikea)",
-                            "name": "image_small_right",
-                            "type": "image",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "array",
-                            "preview_size": "medium",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": ""
-                        },
-                        {
-                            "key": "field_5e68e1badf6ba",
-                            "label": "Tyyli",
-                            "name": "style",
-                            "type": "button_group",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "choices": {
-                                "1": "1",
-                                "2": "2"
-                            },
-                            "allow_null": 0,
-                            "default_value": "",
-                            "layout": "horizontal",
-                            "return_format": "value"
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
                 }
             },
             "button_label": "Lisää moduuli",
@@ -1133,5 +1023,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1583931862
+    "modified": 1594635858
 }
