@@ -50,9 +50,10 @@ $headings-weight: 700;
 $grid-type: fluid; // 'fluid' or 'snappy'
 $layout-max-width: 100%;
 
-// Container widths
+// Element sizes, widths and heights
 $grid-base-size: 1345px; // Layout container max width on desktop. This is default .container size
 $article-max-width: 1000px; // Max width for articles (see also $content_width in functions.php!)
+$nav-height: 160px;
 
 // Breakpoints
 $container-mobile: 480px;

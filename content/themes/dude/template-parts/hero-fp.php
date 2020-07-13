@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-13 13:03:32
+ * @Last Modified time: 2020-07-13 14:43:29
  *
  * @package dude
  */
@@ -22,8 +22,7 @@ if ( has_post_thumbnail() ) {
   <div class="container opacity-on-load-instant">
 
     <div class="content">
-      <p class="content-non-statement"><s class="strike">Jargonia & tyhjiä lupauksia.</s></p>
-      <h1>Laatua ja palvelua</h1>
+      <h1>Ole uskottava</h1>
       <p class="content-sub-statement">Suunnittelemme ja toteutamme naurettavan hyviä <span class="capital-p-dangit">WordPress</span>-verkkosivuja.</p>
     </div>
 

@@ -1,19 +1,19 @@
 // Block specific variables
-$padding-hero-top: 28rem;
-$padding-hero-bottom: 21.3rem;
 
 .block.block-hero.block-hero-fp {
-  height: auto;
+  height: 60vh;
+  min-height: 90rem;
   padding-top: 0;
   padding-bottom: 0;
 
   .container {
-    padding-top: $padding-hero-top;
-    padding-bottom: $padding-hero-bottom;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .content {
     text-align: center;
+    transform: translateY(calc(#{$nav-height} / 2));
 
     .content-non-statement {
       margin-top: 0;
@@ -46,26 +46,28 @@ $padding-hero-bottom: 21.3rem;
 
     p,
     h1 {
-      text-transform: lowercase;
-
       .capital-p-dangit {
         text-transform: none;
       }
     }
 
-    .content-non-statement,
     h1 {
-      font-size: 90px;
-    }
-
-    h1 {
+      @include responsive-font(90px, 132px);
       color: $color-midnight-blue;
       font-weight: 500;
-      margin-top: 0;
-      margin-bottom: 146px;
+      line-height: 1;
+
+      @media (max-width: 700px) {
+        font-size: 62px;
+      }
+
+      @media (max-width: $container-mobile) {
+        font-size: 42px;
+      }
     }
 
     .content-sub-statement {
+      @include responsive-font(16px, 22px);
       color: $color-midnight-blue;
       font-size: $font-size-general-small;
     }
