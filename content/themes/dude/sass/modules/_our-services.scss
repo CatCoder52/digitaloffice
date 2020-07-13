@@ -15,11 +15,11 @@
     display: flex;
 
     &.cols-services-design {
-      padding-bottom: 65px;
+      margin-bottom: $margin-between-grid-columns * 3;
     }
 
-    &:last-of-type {
-      padding-bottom: 0;
+    &.cols-services-development {
+      margin-bottom: $margin-between-grid-columns;
     }
 
     .col.col-content {
@@ -28,9 +28,9 @@
     }
 
     .col.col-services {
+      @include grid(2, $gutter_x: $margin-between-grid-columns, $gutter_y: $margin-between-grid-columns);
       width: calc(100% - (400px + 150px));
-      display: flex;
-      flex-wrap: wrap;
+      overflow: hidden;
     }
 
     h3 {
@@ -48,11 +48,6 @@
     }
 
     .col-inner {
-      width: calc(50% - #{$margin-between-grid-columns});
-      margin-right: $margin-between-grid-columns;
-      margin-bottom: $margin-between-grid-columns;
-      margin-top: 0;
-
       @media (min-width: $grid-base-size) {
         max-width: 350px;
       }

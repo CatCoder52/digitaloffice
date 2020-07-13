@@ -53,7 +53,7 @@
 
     h1 {
       @include responsive-font(80px, 142px);
-      color: $color-midnight-blue;
+      color: $color-midnight;
       font-weight: 400;
       line-height: 1;
 
@@ -68,7 +68,7 @@
 
     .content-sub-statement {
       @include responsive-font(16px, 20px);
-      color: $color-midnight-blue;
+      color: $color-midnight;
       font-size: $font-size-general-small;
     }
   }
