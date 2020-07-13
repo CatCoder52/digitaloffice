@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:48:37
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-03-11 14:40:53
+ * @Last Modified time: 2020-07-13 14:30:53
  *
  * @package dude
  */
@@ -11,9 +11,9 @@
 $image_id_design = get_sub_field( 'image_design' );
 $image_id_development = get_sub_field( 'image_development' );
 
-if ( empty( $image_id_design ) ) {
-  return;
-}
+// if ( empty( $image_id_design ) ) {
+// return;
+// }
 
 $image_design_full = wp_get_attachment_image_url( $image_id_design, 'large' );
 $image_design_mobile = wp_get_attachment_image_url( $image_id_design, 'large' );
@@ -33,7 +33,6 @@ $image_development_preload = wp_get_attachment_image_url( $image_id_development,
     <div class="cols cols-services cols-services-design">
 
       <div class="col col-content">
-        <span class="step"><?php include get_theme_file_path( '/svg/01.svg' ); ?></span>
         <h2 class="col-title">Suunnittelu</h2>
 
         <p>Nunc semper, velit vitae feugiat venenatis, dolor libero imperdiet nisi, at viverra neque justo ultrices libero. Curabitur aliquet sapien non placerat hendrerit. Vivamus ornare auctor sapien, vel tempus arcu aliquam eget.</p>
@@ -74,7 +73,6 @@ $image_development_preload = wp_get_attachment_image_url( $image_id_development,
     <div class="cols cols-services cols-services-development">
 
       <div class="col col-content">
-        <span class="step"><?php include get_theme_file_path( '/svg/02.svg' ); ?></span>
         <h2 class="col-title">Kehitys</h2>
 
         <p>Tekniseltä osaamiseltamme olemme aivan suomen parhaimmistoa. Anisi, at viverra neque justo ultrices libero. Curabitur aliquet sapien non placerat hendrerit. Vivamus ornare auctor sapien, vel tempus arcu aliquam eget.</p>

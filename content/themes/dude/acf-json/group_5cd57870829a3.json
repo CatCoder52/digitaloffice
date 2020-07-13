@@ -19,13 +19,13 @@
                 "layout_5cd5810ec53d0": {
                     "key": "layout_5cd5810ec53d0",
                     "name": "our-services",
-                    "label": "Mitä me teemme?",
+                    "label": "Palvelukuvaukset (2020)",
                     "display": "block",
                     "sub_fields": [
                         {
                             "key": "field_5cefd6fe25444",
-                            "label": "Kuva",
-                            "name": "image",
+                            "label": "Kuva suunnittelulle",
+                            "name": "image_design",
                             "type": "image",
                             "instructions": "",
                             "required": 0,
@@ -36,7 +36,31 @@
                                 "id": ""
                             },
                             "return_format": "id",
-                            "preview_size": "thumbnail",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5e4557e96f464",
+                            "label": "Kuva kehitykselle",
+                            "name": "image_development",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "preview_size": "medium",
                             "library": "all",
                             "min_width": "",
                             "min_height": "",
@@ -67,10 +91,64 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_5e6380dfa916a": {
+                    "key": "layout_5e6380dfa916a",
+                    "name": "title-left-text-right",
+                    "label": "Iso otsikko vasemmalla ja teksti oikealla (2020)",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5e638269e49c5",
+                            "label": "",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Tämä alue on kovakoodattu ja sitä ei voi muokata hallintapaneelista.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5e441b31fc754": {
+                    "key": "layout_5e441b31fc754",
+                    "name": "testimonials",
+                    "label": "Asiakaslainaukset-slider (2020)",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5e441b31fc756",
+                            "label": "",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Tämä alue on kovakoodattu ja sitä ei voi muokata hallintapaneelista.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5cd58187c53d2": {
                     "key": "layout_5cd58187c53d2",
                     "name": "references",
-                    "label": "Referenssit",
+                    "label": "Referenssit (2019)",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -116,82 +194,10 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_5cdff17ccddac": {
-                    "key": "layout_5cdff17ccddac",
-                    "name": "cta-left-image",
-                    "label": "CTA kuvalla",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_5cdff187cddad",
-                            "label": "Otsikko",
-                            "name": "title",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_5cdff194cddae",
-                            "label": "Tekstisisältö",
-                            "name": "content",
-                            "type": "wysiwyg",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "basic",
-                            "media_upload": 0,
-                            "delay": 0
-                        },
-                        {
-                            "key": "field_5cdff1a8cddaf",
-                            "label": "Taustakuva",
-                            "name": "bg_image",
-                            "type": "image",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "return_format": "id",
-                            "preview_size": "thumbnail",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": ""
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
                 "layout_5cdff955285b6": {
                     "key": "layout_5cdff955285b6",
                     "name": "blog-latest-selected-mustread",
-                    "label": "Blogi: uusin ja nostot",
+                    "label": "Blogi: uusin ja nostot (2019)",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -226,7 +232,7 @@
                 "layout_5ce0041f3583b": {
                     "key": "layout_5ce0041f3583b",
                     "name": "cta-process",
-                    "label": "CTA: Prosessi (Vanha, 2019)",
+                    "label": "CTA: Prosessi (2019)",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -253,7 +259,7 @@
                 "layout_5ce00cad1208e": {
                     "key": "layout_5ce00cad1208e",
                     "name": "text-image",
-                    "label": "Teksti ja kuva",
+                    "label": "Teksti ja kuva (2020)",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -306,7 +312,7 @@
                 "layout_5ce00cda12090": {
                     "key": "layout_5ce00cda12090",
                     "name": "content-side-switch",
-                    "label": "Sisältö sivussa olevalla vaihtajalla",
+                    "label": "Sisältö sivussa olevalla vaihtajalla (2019)",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -333,7 +339,7 @@
                 "layout_5ce010638901a": {
                     "key": "layout_5ce010638901a",
                     "name": "big-reference-quote",
-                    "label": "Referenssilainauksen nosto",
+                    "label": "Referenssilainauksen nosto (2019)",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -427,7 +433,7 @@
                 "layout_5ce017d92921a": {
                     "key": "layout_5ce017d92921a",
                     "name": "left-image-text",
-                    "label": "Kuva ja tekstinosto",
+                    "label": "Kuva ja tekstinosto (2019)",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -480,7 +486,7 @@
                 "layout_5ce0199149765": {
                     "key": "layout_5ce0199149765",
                     "name": "process",
-                    "label": "Prosessi",
+                    "label": "Prosessi (2019)",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -507,7 +513,7 @@
                 "layout_5ce01c424d7a1": {
                     "key": "layout_5ce01c424d7a1",
                     "name": "accordion",
-                    "label": "Haitari",
+                    "label": "Haitari (2019)",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -614,7 +620,7 @@
                 "layout_5ce01efcf984e": {
                     "key": "layout_5ce01efcf984e",
                     "name": "blog-articles-upsell",
-                    "label": "Nostot blogista",
+                    "label": "Nostot blogista (2019)",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -668,7 +674,7 @@
                 "layout_5ce027a8c6d7e": {
                     "key": "layout_5ce027a8c6d7e",
                     "name": "text-numbers",
-                    "label": "Teksti ja luvut",
+                    "label": "Teksti ja luvut (2019)",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -775,7 +781,7 @@
                 "layout_5ce02a8b07903": {
                     "key": "layout_5ce02a8b07903",
                     "name": "timeline",
-                    "label": "Aikajana",
+                    "label": "Aikajana (2019)",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -802,7 +808,7 @@
                 "layout_5ce02fdd6fad8": {
                     "key": "layout_5ce02fdd6fad8",
                     "name": "dudes",
-                    "label": "Duuuuuds",
+                    "label": "Duuuuuds (2019)",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -829,7 +835,7 @@
                 "layout_5ce0338a9b424": {
                     "key": "layout_5ce0338a9b424",
                     "name": "cta-text",
-                    "label": "CTA: teksti ja linkki",
+                    "label": "CTA: teksti ja linkki (2019)",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -873,7 +879,7 @@
                 "layout_5ce924d0b1466": {
                     "key": "layout_5ce924d0b1466",
                     "name": "gallery",
-                    "label": "Galleria",
+                    "label": "Galleria (2019)",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -910,7 +916,7 @@
                 "layout_5ce94a3b202aa": {
                     "key": "layout_5ce94a3b202aa",
                     "name": "contact-list",
-                    "label": "Yhteystietolista",
+                    "label": "Yhteystietolista (2019)",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -945,7 +951,7 @@
                 "layout_5cf27add8d163": {
                     "key": "layout_5cf27add8d163",
                     "name": "wide-text",
-                    "label": "Leveä tekstisisältö",
+                    "label": "Leveä tekstisisältö (2019)",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -974,7 +980,7 @@
                 "layout_5cf4e33a1b11f": {
                     "key": "layout_5cf4e33a1b11f",
                     "name": "instagram",
-                    "label": "Instagram",
+                    "label": "Instagram (2019)",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -995,6 +1001,110 @@
                             "prepend": "",
                             "append": "",
                             "maxlength": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5e4540fe1bb0f": {
+                    "key": "layout_5e4540fe1bb0f",
+                    "name": "images",
+                    "label": "Kolmen kuvan kuvakollaasi (2020)",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5e45410a1bb10",
+                            "label": "Iso kuva",
+                            "name": "image_big",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5e4541151bb11",
+                            "label": "Pieni kuva 1 (vasen)",
+                            "name": "image_small_left",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5e4541251bb12",
+                            "label": "Pieni kuva 2 (oikea)",
+                            "name": "image_small_right",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5e68e1badf6ba",
+                            "label": "Tyyli",
+                            "name": "style",
+                            "type": "button_group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "choices": {
+                                "1": "1",
+                                "2": "2"
+                            },
+                            "allow_null": 0,
+                            "default_value": "",
+                            "layout": "horizontal",
+                            "return_format": "value"
                         }
                     ],
                     "min": "",
@@ -1023,5 +1133,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1594635858
+    "modified": 1594636955
 }
