@@ -2,8 +2,8 @@
 /**
  * @Author:             Roni Laukkarinen, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:50:23
- * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-14 12:53:10
+ * @Last Modified by:   Timi Wahalahti
+ * @Last Modified time: 2020-07-14 13:43:53
  *
  * @package dude
  */
@@ -22,17 +22,16 @@ if ( ! empty( $selected_reference_id ) ) {
     'permalink'         => get_the_permalink( $selected_reference_id ),
     'logofile'          => get_post_meta( $selected_reference_id, 'logo_svg', true ),
     'quote'             => array(
-    'content'       => get_post_meta( $selected_reference_id, 'quote', true ),
-    'person'        => get_post_meta( $selected_reference_id, 'quote_person', true ),
-    'person_title'  => get_post_meta( $selected_reference_id, 'quote_person_title', true ),
-  ),
+      'content'           => get_post_meta( $selected_reference_id, 'quote', true ),
+      'person'            => get_post_meta( $selected_reference_id, 'quote_person', true ),
+      'person_title'      => get_post_meta( $selected_reference_id, 'quote_person_title', true ),
+    ),
   );
 }
 
 if ( empty( $selected_reference ) ) {
   return;
-}
-?>
+} ?>
 
 <section class="block block-references-one">
   <div class="container">
