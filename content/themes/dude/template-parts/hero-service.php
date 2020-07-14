@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-14 14:36:53
+ * @Last Modified time: 2020-07-14 14:58:33
  *
  * @package dude
  */
@@ -17,7 +17,12 @@ if ( has_post_thumbnail() ) {
   $bg_image = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
 }
 
-$hero_content = get_post_meta( get_the_id(), 'hero_content', true ); ?>
+// Fields
+$title = get_the_title();
+$title_alt = get_post_meta( get_the_id(), 'title_alt', true );
+$content = get_post_meta( get_the_id(), 'hero_content', true );
+$button = get_post_meta( get_the_id(), 'hero_button', true );
+?>
 
 <section class="block block-hero block-hero-service block-hero-enable-transition">
 
@@ -36,9 +41,13 @@ $hero_content = get_post_meta( get_the_id(), 'hero_content', true ); ?>
 
     <div class="service-hero-wrap">
       <div class="content animate animate-2">
-        <?php if ( ! empty( $hero_content ) ) {
-          echo wpautop( $hero_content );
+        <?php if ( ! empty( $content ) ) {
+          echo wpautop( $content ); // phpcs:ignore
         } ?>
+
+        <?php if ( ! empty( $button ) ) : ?>
+          <p class="button-wrapper"><a href="<?php echo esc_url( $button['url'] ); ?>" target="<?php echo esc_html( $button['target'] ); ?>"><?php echo esc_html( $button['title'] ); ?></a></p>
+        <?php endif; ?>
       </div>
     </div>
 
