@@ -181,33 +181,3 @@ body .block.block-mint {
 .is-centered {
   text-align: center;
 }
-
-// General backgrounds of cols and boxes
-.has-grey-bg {
-  background: $color-whitegreyish;
-  position: relative;
-
-  &.has-grey-bg-extend-left:before {
-    background: $color-whitegreyish;
-    position: absolute;
-    height: 100%;
-    width: 50vw;
-    content: '';
-    display: block;
-    z-index: 0;
-    top: 0;
-    left: -50vw;
-  }
-
-  &.has-grey-bg-extend-right:after {
-    background: $color-whitegreyish;
-    position: absolute;
-    height: 100%;
-    width: 50vw;
-    content: '';
-    display: block;
-    z-index: 0;
-    top: 0;
-    right: -50vw;
-  }
-}
