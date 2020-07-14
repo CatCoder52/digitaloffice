@@ -27,7 +27,7 @@ if ( has_post_thumbnail() ) {
 ?>
 
 <section class="block block-hero block-hero-enable-transition">
-  <div class="container opacity-on-load-instant">
+  <div class="container">
 
     <div class="content">
       <div class="side-content-box">

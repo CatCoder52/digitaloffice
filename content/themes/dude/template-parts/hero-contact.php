@@ -11,7 +11,7 @@
 ?>
 
 <section class="block block-hero block-hero-contact block-hero-enable-transition">
-  <div class="container opacity-on-load-instant">
+  <div class="container">
 
     <div class="content content-contact">
 

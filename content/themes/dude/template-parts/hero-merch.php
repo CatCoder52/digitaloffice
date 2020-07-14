@@ -21,7 +21,7 @@ $content = '<p>Haluatko olla oman elämäsi Dude tai Dudette? Koetko vahvaa tunn
 ?>
 
 <section class="block block-hero-merch block-hero block-hero-side-columns block-hero-enable-transition">
-  <div class="container opacity-on-load-instant">
+  <div class="container">
 
     <div class="content">
       <div class="side-content-box">

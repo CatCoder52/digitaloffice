@@ -12,6 +12,23 @@ sessionStorage.setItem(
   Number(sessionStorage.getItem("chat_greeting_visits")) + 1
 );
 
+// Initiate Swup transitions
+const swup = new Swup({
+  linkSelector:
+    'a[href^="' +
+    window.location.origin +
+    '"]:not([data-no-swup]), a[href^="/"]:not([data-no-swup]), a[href^="#"]:not([data-no-swup])',
+  animationSelector: '[class*="swup-transition-"]',
+  plugins: [
+    new SwupScriptsPlugin({
+      head: false,
+      body: false,
+      optin: true,
+    }),
+    new SwupBodyClassPlugin(),
+  ],
+});
+
 // Init lazyload
 let images = document.querySelectorAll(".lazyload");
 lazyload(images, {
@@ -339,11 +356,6 @@ lazyload(images, {
         $(this).parent().parent().removeClass("fade-out");
       }
     );
-
-    // Apple.com fade in all content that have opacity-on-load class
-    setTimeout(function () {
-      $(".opacity-on-load").addClass("fade-in");
-    }, 500);
 
     // Add transition class after all animations are completed
     setTimeout(function () {

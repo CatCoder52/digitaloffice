@@ -588,6 +588,10 @@ gulp.task("js", function () {
       themeDir + "/js/src/lazyload.js",
       themeDir + "/js/src/slick.custom.js",
       themeDir + "/js/src/glitch-button.js",
+      themeDir + "/node_modules/swup/dist/swup.js",
+      themeDir +
+        "/node_modules/@swup/body-class-plugin/dist/SwupBodyClassPlugin.js",
+      themeDir + "/node_modules/@swup/scripts-plugin/dist/SwupScriptsPlugin.js",
       themeDir + "/node_modules/blueimp-gallery/js/blueimp-helper.js",
       themeDir + "/node_modules/blueimp-gallery/js/blueimp-gallery.js",
       themeDir +

@@ -19,7 +19,7 @@ if ( has_post_thumbnail() ) {
 ?>
 
 <section class="block block-hero block-hero-fp block-hero-enable-transition">
-  <div class="container opacity-on-load-instant">
+  <div class="container">
 
     <div class="content">
       <h1>Ole <span class="the-word glitch" data-text="uskottava.">uskottava.</span></h1>

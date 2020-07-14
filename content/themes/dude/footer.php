@@ -122,5 +122,6 @@
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
 
+</div><!-- .site -->
 </body>
 </html>

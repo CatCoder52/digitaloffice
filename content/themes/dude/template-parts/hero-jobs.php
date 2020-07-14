@@ -31,7 +31,7 @@ if ( is_post_type_archive( 'reference' ) ) {
 } ?>
 
 <section class="block block-hero-jobs block-hero block-hero-enable-transition">
-  <div class="container opacity-on-load-instant">
+  <div class="container">
 
     <div class="content">
       <div class="side-content-box contact-information">
