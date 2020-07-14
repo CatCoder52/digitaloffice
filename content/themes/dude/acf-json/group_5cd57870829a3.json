@@ -156,10 +156,10 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5e638269e49c5",
-                            "label": "",
-                            "name": "",
-                            "type": "message",
+                            "key": "field_5f0da4f18e701",
+                            "label": "Otsikko",
+                            "name": "title",
+                            "type": "text",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -168,9 +168,45 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "message": "Tämä alue on kovakoodattu ja sitä ei voi muokata hallintapaneelista.",
-                            "new_lines": "wpautop",
-                            "esc_html": 0
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5f0da4f68e702",
+                            "label": "Teksti",
+                            "name": "text",
+                            "type": "wysiwyg",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "delay": 0
+                        },
+                        {
+                            "key": "field_5f0da55b4cca9",
+                            "label": "Cta-linkki \/ Nappi",
+                            "name": "cta-link",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
                         }
                     ],
                     "min": "",
@@ -344,7 +380,7 @@
                 "layout_5ce00cad1208e": {
                     "key": "layout_5ce00cad1208e",
                     "name": "text-image",
-                    "label": "Teksti ja kuva (2020)",
+                    "label": "Teksti ja kuva (2019)",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -1218,5 +1254,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1594728091
+    "modified": 1594729833
 }

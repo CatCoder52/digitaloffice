@@ -3,10 +3,15 @@
  * @Author:             Roni Laukkarinen, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:48:37
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-13 15:00:31
+ * @Last Modified time: 2020-07-14 15:34:04
  *
  * @package dude
  */
+
+// Fields
+$title = get_sub_field( 'title' );
+$content = get_sub_field( 'text' );
+$button = get_sub_field( 'cta-link' );
 ?>
 
 <section class="block block-title-left-text-right">
@@ -14,15 +19,19 @@
 
     <div class="cols">
       <div class="col col-title">
-        <h2>Me teemme kaikenlaista lorem ipsum, että tuota siinä sopii miettiä.</h2>
+        <?php if ( ! empty( $title ) ) : ?>
+          <h2>Me teemme kaikenlaista lorem ipsum, että tuota siinä sopii miettiä.</h2>
+        <?php endif; ?>
       </div>
 
       <div class="col col-text">
-        <p>Dudella on laadukkaan työnjäljen lisäksi myös rikasta ideointikykyä. Olemme parhaimmillamme, kun saamme jalostaa asiakkaamme ideoita palvelemaan loppukäyttäjää parhaimmalla mahdollisella tavalla.</p>
+        <?php if ( ! empty( $content ) ) {
+          echo wpautop( $content ); // phpcs:ignore
+        } ?>
 
-        <p>Haluamme olla omalta osaltamme kehittämässä asiakkaamme brändiä ja imagoa, oli sitten kyseessä verkkosivustouudistus tai brändi-ilmeen päivitys. Kaikessa tekemisessämme korostuu tiivis yhteistyö, laadukas suunnittelu sekä millintarkka tekninen toteutus.</p>
-
-        <p class="link-wrapper"><a href="#" class="cta-link">Aloitetaan projekti</a></p>
+        <?php if ( ! empty( $button ) ) : ?>
+          <p class="link-wrapper"><a class="cta-link" href="<?php echo esc_url( $button['url'] ); ?>"<?php if ( ! empty( $button['target'] ) ) : ?> target="<?php echo esc_html( $button['target'] ); ?>"<?php endif; ?>><?php echo esc_html( $button['title'] ); ?></a></p>
+        <?php endif; ?>
       </div>
     </div>
 
