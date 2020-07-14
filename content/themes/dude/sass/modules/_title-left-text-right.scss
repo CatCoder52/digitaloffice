@@ -1,7 +1,7 @@
 .block.block-title-left-text-right {
   background: $color-white;
-  padding-top: 12rem;
-  padding-bottom: 12rem;
+  padding-top: $padding-blocks-large;
+  padding-bottom: $padding-blocks-large;
 
   h2 {
     @include responsive-font(32px, 54px);
@@ -18,9 +18,25 @@
   .col.col-title {
     width: 600px;
     margin-right: 70px;
+    margin-bottom: 0;
   }
 
   .col.col-text {
     width: calc(100% - (600px + 70px));
+  }
+}
+
+// Pages with alternate module colors
+body.page.page-id-9 {
+  .block.block-title-left-text-right {
+    background: $color-midnight;
+
+    h2 {
+      color: $color-mint;
+    }
+
+    p {
+      color: $color-white;
+    }
   }
 }

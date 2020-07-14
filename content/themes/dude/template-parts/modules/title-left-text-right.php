@@ -3,7 +3,7 @@
  * @Author:             Roni Laukkarinen, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:48:37
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-14 15:34:04
+ * @Last Modified time: 2020-07-14 15:45:17
  *
  * @package dude
  */
@@ -20,7 +20,7 @@ $button = get_sub_field( 'cta-link' );
     <div class="cols">
       <div class="col col-title">
         <?php if ( ! empty( $title ) ) : ?>
-          <h2>Me teemme kaikenlaista lorem ipsum, että tuota siinä sopii miettiä.</h2>
+          <h2><?php echo esc_html( $title ); ?></h2>
         <?php endif; ?>
       </div>
 

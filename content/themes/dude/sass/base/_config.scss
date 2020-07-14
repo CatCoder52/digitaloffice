@@ -66,6 +66,7 @@ $container-desktop: 1662px;
 $margin-default-cols: 7.5rem;
 $margin-default-rows: 7.5rem;
 $margin-reasonable-space: 3.5rem;
+$margin-between-grid-columns: 6rem;
 
 // Paddings
 $padding-default-cols: 8rem;
@@ -80,7 +81,8 @@ $padding-general-content-box-mobile: 4rem;
 $margin-general-offset: -8rem;
 $padding-accordion-content: 2.5rem;
 $padding-accordion-content-mobile: 2rem;
-$margin-between-grid-columns: 6rem;
+$padding-blocks-large: 18rem;
+$padding-blocks-medium: 12rem;
 
 // Transition duration and animations
 $transition-duration: .6s;

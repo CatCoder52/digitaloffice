@@ -83,14 +83,14 @@
     content: '';
     margin-right: 16px;
   }
-}
 
-.col-title {
-  @include responsive-font(32px, 60px);
-  color: $color-cobalt-blue;
-  font-weight: 500;
-  margin-top: 0;
-  margin-bottom: 5rem;
+  .col-title {
+    @include responsive-font(32px, 60px);
+    color: $color-cobalt-blue;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 5rem;
+  }
 }
 
 .cols.cols-two {
