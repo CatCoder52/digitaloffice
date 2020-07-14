@@ -42,10 +42,6 @@
 
   <div class="container">
 
-    <div class="logo-square">
-      <?php include get_theme_file_path( '/svg/logo.svg' ); ?>
-    </div>
-
     <div class="contact-details">
       <div class="block-head">
         <p class="block-title-pre" aria-describedby="block-title-contact-details">Yhteydenotot</p>

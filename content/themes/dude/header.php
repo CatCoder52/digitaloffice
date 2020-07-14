@@ -217,13 +217,6 @@ if ( $show_chat_greeting ) {
         </nav><!-- #nav -->
       </div>
 
-      <button id="nav-toggle-desktop" class="nav-toggle-desktop hamburger">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
-        </span>
-        <span id="nav-toggle-label" class="screen-reader-text" aria-label="<?php esc_attr_e( 'Menu', 'dude' ); ?>" class="toggle-text"><?php esc_attr_e( 'Lisää', 'dude' ); ?></span>
-      </button>
-
     </header>
   </div><!-- .nav-container -->
 
