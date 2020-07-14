@@ -55,7 +55,7 @@
     h1 {
       @include responsive-font(80px, 142px);
       color: $color-midnight;
-      font-weight: 400;
+      font-weight: 500;
       line-height: 1;
 
       @media (max-width: 700px) {
