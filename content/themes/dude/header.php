@@ -156,11 +156,11 @@ if ( $show_chat_greeting ) {
 
       <div class="main-navigation-wrapper opacity-on-load" id="main-navigation-wrapper">
 
-        <button id="nav-toggle" class="nav-toggle nav-toggle-mobile hamburger" type="button" aria-label="<?php esc_attr_e( 'Menu', 'dude' ); ?>">
+        <button id="nav-toggle" class="nav-toggle nav-toggle-desktop hamburger">
           <span class="hamburger-box">
             <span class="hamburger-inner"></span>
           </span>
-          <span id="nav-toggle-label" class="screen-reader-text" aria-label="<?php esc_attr_e( 'Menu', 'dude' ); ?>"><?php esc_attr_e( 'Menu', 'dude' ); ?></span>
+          <span id="nav-toggle-label" class="screen-reader-text" aria-label="<?php esc_attr_e( 'Menu', 'dude' ); ?>" class="toggle-text"><?php esc_attr_e( 'Lisää', 'dude' ); ?></span>
         </button>
 
         <nav id="nav" class="nav-primary" role="navigation" aria-expanded="false">

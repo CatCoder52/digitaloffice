@@ -22,7 +22,7 @@ if ( has_post_thumbnail() ) {
   <div class="container opacity-on-load-instant">
 
     <div class="content">
-      <h1>Ole <span class="glitch" data-text="uskottava.">uskottava.</span></h1>
+      <h1>Ole <span class="the-word" data-text="uskottava.">uskottava.</span></h1>
       <p class="content-sub-statement">Suunnittelemme visuaalisesti näyttäviä ja teknisesti laadukkaita <span class="capital-p-dangit">WordPress</span>-verkkosivuja.</p>
     </div>
 
