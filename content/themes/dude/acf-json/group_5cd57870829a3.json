@@ -77,14 +77,14 @@
                 "layout_5cd5810ec53d0": {
                     "key": "layout_5cd5810ec53d0",
                     "name": "our-services",
-                    "label": "Palvelukuvaukset (2020)",
+                    "label": "Palvelukuvaus (2020)",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5cefd6fe25444",
-                            "label": "Kuva suunnittelulle",
-                            "name": "image_design",
-                            "type": "image",
+                            "key": "field_5f0daec43cd45",
+                            "label": "Otsikko (deskarissa vasemmalla)",
+                            "name": "title",
+                            "type": "text",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -93,22 +93,17 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "id",
-                            "preview_size": "medium",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": ""
+                            "default_value": "",
+                            "placeholder": "Suunnittelu",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
                         },
                         {
-                            "key": "field_5e4557e96f464",
-                            "label": "Kuva kehitykselle",
-                            "name": "image_development",
-                            "type": "image",
+                            "key": "field_5f0daede3cd46",
+                            "label": "Seliteteksti otsikon alla",
+                            "name": "description",
+                            "type": "wysiwyg",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -117,22 +112,17 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "return_format": "id",
-                            "preview_size": "medium",
-                            "library": "all",
-                            "min_width": "",
-                            "min_height": "",
-                            "min_size": "",
-                            "max_width": "",
-                            "max_height": "",
-                            "max_size": "",
-                            "mime_types": ""
+                            "default_value": "",
+                            "tabs": "all",
+                            "toolbar": "basic",
+                            "media_upload": 0,
+                            "delay": 0
                         },
                         {
-                            "key": "field_5cd58127c53d1",
-                            "label": "",
-                            "name": "",
-                            "type": "message",
+                            "key": "field_5f0daeef3cd47",
+                            "label": "Linkki",
+                            "name": "cta-link",
+                            "type": "link",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -141,9 +131,66 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "message": "Tämä alue on kovakoodattu ja sitä ei voi muokata hallintapaneelista.",
-                            "new_lines": "wpautop",
-                            "esc_html": 0
+                            "return_format": "array"
+                        },
+                        {
+                            "key": "field_5f0daef83cd48",
+                            "label": "Palvelut",
+                            "name": "services",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "collapsed": "",
+                            "min": 0,
+                            "max": 0,
+                            "layout": "block",
+                            "button_label": "",
+                            "sub_fields": [
+                                {
+                                    "key": "field_5f0daf063cd49",
+                                    "label": "Palvelun nimi -otsikko",
+                                    "name": "service_name",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "maxlength": ""
+                                },
+                                {
+                                    "key": "field_5f0daf0a3cd4a",
+                                    "label": "Kuvaus",
+                                    "name": "service_description",
+                                    "type": "wysiwyg",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "tabs": "all",
+                                    "toolbar": "basic",
+                                    "media_upload": 0,
+                                    "delay": 0
+                                }
+                            ]
                         }
                     ],
                     "min": "",
@@ -1254,5 +1301,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1594729833
+    "modified": 1594732731
 }

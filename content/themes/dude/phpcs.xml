@@ -98,6 +98,8 @@
         <exclude name="WordPress.Arrays.MultipleStatementAlignment.DoubleArrowNotAligned" />
         <exclude name="WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_encode" />
         <exclude name="WordPress.DB.SlowDBQuery.slow_db_query_tax_query" />
+        <exclude name="WordPress.WP.EnqueuedResources.NonEnqueuedStylesheet" />
+        <exclude name="WordPress.Security.EscapeOutput.OutputNotEscaped" />
     </rule>
 
     <!-- Verify that the text_domain is set to the desired text-domain.

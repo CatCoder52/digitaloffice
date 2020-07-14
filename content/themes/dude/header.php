@@ -89,7 +89,7 @@ if ( $show_chat_greeting ) {
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="profile" href="http://gmpg.org/xfn/11">
-  <noscript><link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/noscript.css"></noscript>
+  <noscript><link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/noscript.css"></noscript>
 
   <?php wp_head();
 
@@ -158,7 +158,7 @@ if ( $show_chat_greeting ) {
 
         $description = get_bloginfo( 'description', 'display' );
         if ( $description || is_customize_preview() ) : ?>
-          <p class="site-description screen-reader-text"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+          <p class="site-description screen-reader-text"><?php echo $description; // phpcs:ignore ?></p>
         <?php endif; ?>
       </div><!-- .site-branding -->
 
@@ -180,10 +180,10 @@ if ( $show_chat_greeting ) {
           <div class="cols">
             <div class="col col-secondary-nav">
               <ul class="menu-items nav-menu">
-                <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_post_type_archive_link( 'post' ); ?>">Blogi</a></li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_the_permalink( 4489 ); ?>">Koodi & yhteisö</a></li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_the_permalink( 4449 ); ?>">Yritys & kulttuuri</a></li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_the_permalink( 4491 ); ?>">Rekry</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo esc_url( get_post_type_archive_link( 'post' ) ); ?>">Blogi</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo esc_url( get_the_permalink( 4489 ) ); ?>">Koodi & yhteisö</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo esc_url( get_the_permalink( 4449 ) ); ?>">Yritys & kulttuuri</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo esc_url( get_the_permalink( 4491 ) ); ?>">Rekry</a></li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_post_type_archive_link( 'merch' ); ?>">Merch</a></li>
                 <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="https://handbook.dude.fi">Handbook</a></li>
               </ul>
@@ -219,10 +219,10 @@ if ( $show_chat_greeting ) {
 
         <nav id="nav-desktop" class="nav-primary-desktop" role="navigation">
           <ul class="menu-items nav-menu">
-            <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-18"><a href="<?php echo get_the_permalink( 9 ); ?>">Verkkosivut</a></li>
-            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-19"><a href="<?php echo get_the_permalink( 4485 ); ?>">Visuaalinen suunnittelu</a></li>
-            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4482"><a href="<?php echo get_the_permalink( 4493 ); ?>">Töitämme</a></li>
-            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-22"><a href="<?php echo get_the_permalink( 4487 ); ?>">Ota yhteyttä</a></li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-18"><a href="<?php echo get_the_permalink( 9 ); ?>" data-text="Verkkosivut">Verkkosivut</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-19"><a href="<?php echo get_the_permalink( 4485 ); ?>" data-text="Visuaalinen suunnittelu">Visuaalinen suunnittelu</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4482"><a href="<?php echo get_the_permalink( 4493 ); ?>" data-text="Töitämme">Töitämme</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-22"><a href="<?php echo get_the_permalink( 4487 ); ?>" data-text=">Ota yhteyttä">Ota yhteyttä</a></li>
           </ul>
         </nav><!-- #nav -->
       </div>

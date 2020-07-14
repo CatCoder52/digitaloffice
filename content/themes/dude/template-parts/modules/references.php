@@ -2,8 +2,8 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:50:23
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2020-07-14 14:28:49
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2020-07-14 16:34:13
  *
  * @package dude
  */
@@ -16,7 +16,7 @@ if ( ! $references ) {
     'post_status'             => 'publish',
     'orderby'                 => 'rand',
     'posts_per_page'          => 6,
-    'meta_key'                => 'reference_is_timang',
+    'meta_key'                => 'reference_is_timang', // phpcs:ignore
     'no_found_rows'           => true,
     'cache_results'           => true,
     'update_post_term_cache'  => false,
@@ -43,7 +43,8 @@ if ( ! $references ) {
         'permalink'         => get_the_permalink(),
       );
     }
-  } wp_reset_query();
+  }
+  wp_reset_postdata();
 
   wp_cache_set( get_the_id() . '_references', $references, 'theme', DAY_IN_SECONDS );
 } ?>
@@ -61,7 +62,7 @@ if ( ! $references ) {
 
             <div class="reference-image">
               <div class="background-image preview lazyload" style="background-image: url('<?php echo $reference['image_preload_url']; ?>');" data-src="<?php echo $reference['image_url']; ?>" data-src-mobile="<?php echo $reference['image_url_mobile']; ?>"></div>
-              <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo $reference['image_url']; ?>');"<?php endif; ?>></div>
+              <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : // phpcs:ignore ?> style="background-image: url('<?php echo $reference['image_url']; ?>');"<?php endif; ?>></div>
               <noscript><div class="background-image full-image" style="background-image: url('<?php echo $reference['image_url']; ?>');"></div></noscript>
             </div>
 
