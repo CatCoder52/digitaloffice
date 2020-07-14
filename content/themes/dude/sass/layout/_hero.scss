@@ -3,9 +3,22 @@
   align-items: center;
   z-index: 1;
   color: $color-white;
-  padding-top: 19rem;
-  padding-bottom: 19rem;
+  padding-top: 0;
+  padding-bottom: 0;
   background-color: $color-white;
+  height: 80vh;
+
+  .content {
+    max-width: 60rem;
+  }
+
+  @media (min-width: $container-ipad-landscape) {
+    min-height: 90rem;
+  }
+
+  .featured-image {
+    z-index: 0;
+  }
 
   @media (max-width: 1160px) {
     flex-wrap: wrap;
@@ -26,10 +39,18 @@
   h1 {
     color: $color-white;
     margin-top: 0;
+
+    @media (min-width: $container-ipad-landscape) {
+      font-size: 64px;
+    }
   }
 
   p {
-    color: $color-body;
+    color: $color-white;
+
+    @media (min-width: $container-ipad-landscape) {
+      font-size: $font-size-general-large;
+    }
   }
 
   .container {
@@ -47,8 +68,8 @@
   }
 
   .shade {
-    background: linear-gradient(to bottom, #28392a 0%, transparent 50%);
-    opacity: .5;
+    background-color: rgba(3, 6, 27, .25);
+    opacity: 1;
     z-index: 3;
   }
 

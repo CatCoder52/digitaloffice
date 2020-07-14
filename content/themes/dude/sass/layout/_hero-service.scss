@@ -1,17 +1,16 @@
 .block.block-hero.block-hero-service,
 .block.block-hero.block-hero-reference-archive {
-  background: $color-deep-black;
+  background-color: $color-midnight;
   color: $color-white;
+  overflow: hidden;
 
   h1 {
     color: $color-white;
   }
 
   .content {
-    max-width: 70rem;
-    margin-left: auto;
-    margin-right: auto;
     margin-bottom: 7rem;
+    color: $color-white;
 
     @media (max-width: $responsivenav) {
       padding-left: 2rem;

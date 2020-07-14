@@ -5,9 +5,15 @@
 // This is the core file where most of the theme magic happens.
 // --------------------------------------------------------------
 
+// Brand 2020
+$color-cobalt-blue: #4d4aff;
+$color-midnight-blue: #131a50;
+$color-midnight: #03061b;
+$color-mint: #7effe1;
+
 // Brand colors
 $color-black: #222;
-$color-deep-black: #050505;
+$color-deep-black: $color-midnight;
 $color-dark-blueish: #16202a;
 $color-grey-text: #5a5a5a;
 $color-white: #fff;
@@ -17,12 +23,6 @@ $color-superlightgrey: #e7e7e7;
 $color-lightgrey: #808080;
 $color-default-background: #f0f0f0;
 $color-white-two: #f8f8f8;
-
-// Brand 2020
-$color-cobalt-blue: #4d4aff;
-$color-midnight-blue: #131a50;
-$color-midnight: #03061b;
-$color-mint: #7effe1;
 
 // Default colors
 $color-links: $color-cobalt-blue;
@@ -40,11 +40,12 @@ $font-monospace: 'Menlo', 'Courier', monospace;
 
 // Font settings
 $font-size-general-small: 16px;
+$font-size-general-large: 22px;
 $font-min-size: 18px;
 $font-max-size: 18px;
 $font-base-line-height: 1.55;
 $font-base-line-height-elements: 1.55;
-$headings-weight: 700;
+$headings-weight: 500;
 
 // Breakpoints
 $grid-type: fluid; // 'fluid' or 'snappy'
