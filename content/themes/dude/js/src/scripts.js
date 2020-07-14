@@ -164,12 +164,6 @@ lazyload(images, {
 
   // Document ready start
   $(function () {
-    // Glitch hero fp text every x seconds
-    var $post = $(".the-word");
-    setInterval(function () {
-      $post.toggleClass("glitch");
-    }, 3000);
-
     // Timeline
     $(".col-timeline .row .action").on("click", function () {
       $(".col-timeline .row").removeClass("active");
