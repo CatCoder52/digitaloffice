@@ -22,7 +22,7 @@ $services = get_sub_field( 'services' );
       <h2 class="block-title" id="block-title-our-services">Palvelumme</h2>
     </header>
 
-    <div class="cols cols-services cols-services-design">
+    <div class="cols cols-services">
 
       <div class="col col-content">
         <?php if ( ! empty( $title ) ) : ?>

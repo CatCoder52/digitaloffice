@@ -2,8 +2,12 @@
   background: $color-white;
   color: $color-body;
   overflow: visible;
-  padding-top: 25rem;
-  padding-bottom: 11.4rem;
+  padding-top: $padding-blocks-huge;
+  padding-bottom: $padding-blocks-huge;
+
+  + .block.block-our-services {
+    padding-top: 0;
+  }
 
   .step {
     color: $color-cobalt-blue;
@@ -13,14 +17,6 @@
 
   .cols.cols-services {
     display: flex;
-
-    &.cols-services-design {
-      margin-bottom: $margin-between-grid-columns * 3;
-    }
-
-    &.cols-services-development {
-      margin-bottom: $margin-between-grid-columns;
-    }
 
     .col.col-content {
       width: 400px;
