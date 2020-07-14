@@ -164,87 +164,65 @@ if ( $show_chat_greeting ) {
         </button>
 
         <nav id="nav" class="nav-primary" role="navigation" aria-expanded="false">
-
-        <div class="nav-items">
-          <div class="content">
-            <h2>Palvelumme</h2>
-            <ul class="menu-items nav-menu" aria-expanded="false">
-              <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-18"><a href="<?php echo get_page_link( 9 ); ?>">Verkkosivut</a></li>
-              <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-19"><a href="<?php echo get_page_link( 4485 ); ?>">Visuaalinen suunnittelu</a></li>
-            </ul>
+          <div class="top-button-holder">
+            <a href="<?php get_the_permalink( 6357 ) ?>" class="button">Aloitetaan projektisi</a>
           </div>
+          <div class="cols">
+            <div class="col col-secondary-nav">
+              <ul class="menu-items nav-menu">
+                <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_post_type_archive_link( 'post' ); ?>">Blogi</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_the_permalink( 4489 ); ?>">Koodi & yhteisö</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_the_permalink( 4449 ); ?>">Yritys & kulttuuri</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_the_permalink( 4491 ); ?>">Rekry</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_post_type_archive_link( 'merch' ); ?>">Merch</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="https://handbook.dude.fi">Handbook</a></li>
+              </ul>
 
-          <div class="content">
-            <h2>Tekemisemme</h2>
-            <ul class="menu-items nav-menu" aria-expanded="false">
-              <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4482"><a href="<?php echo get_page_link( 4493 ); ?>">Töitämme</a></li>
-              <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4480"><a href="<?php echo get_page_link( 4489 ); ?>">Yhteisö & koodi</a></li>
-            </ul>
+              <div class="contact-cols">
+                <div class="col">
+                  <p class="title">Asiakkuudet</p>
+                  <p>Kristian Hohkavaara<br/>
+                    <a href="tel:0408351033">040 835 1033</a><br/>
+                    <a href="mailto:kristian@dude.fi">kristian@dude.fi</a>
+                  </p>
+                </div>
+                <div class="col">
+                  <p class="title">Yhteys</p>
+                  <p>
+                    <a href="mailto:moro@dude.fi">moro@dude.fi</a><br/>
+                    <button class="open-chat">Avaa chat!</button>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col col-primary-nav">
+              <ul class="menu-items nav-menu">
+                <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_home_url(); ?>">Etusivu</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_the_permalink( 9 ); ?>">Verkkosivut</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_the_permalink( 4485 ); ?>">Suunnittelu</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_post_type_archive_link( 'reference' ); ?>">Töitämme</a></li>
+                <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_the_permalink( 4487 ); ?>">Yhteys</a></li>
+              </ul>
+            </div>
           </div>
-
-          <div class="content">
-            <h2>Meistä lisää</h2>
-            <ul class="menu-items nav-menu" aria-expanded="false">
-              <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-4478"><a href="<?php echo get_page_link( 4449 ); ?>">Yritys</a></li>
-              <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4481"><a href="<?php echo get_page_link( 4491 ); ?>">Työpaikat</a></li>
-              <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-4479"><a href="<?php echo get_page_link( 11 ); ?>">Blogi</a></li>
-              <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-4450"><a href="<?php echo get_home_url(); ?>/merch">Merch</a></li>
-            </ul>
-          </div>
-
-          <div class="content">
-            <h2>Yhteydet</h2>
-
-            <ul class="menu-items nav-menu" aria-expanded="false">
-              <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-22"><a href="<?php echo get_page_link( 4487 ); ?>">Yhteystiedot</a></li>
-            </ul>
-
-            <p class="contact-details">Kauppakatu 14<br />
-              40100 Jyväskylä<br />
-              <a href="https://maamerkit.dude.fi" target="_blank"><?php include get_theme_file_path( '/svg/globe.svg' ); ?>Maamerkit kartalla</a>
-            </p>
-
-            <ul class="contact-actions">
-              <li><a class="email" href="mailto:moro@dude.fi">moro@dude.fi</a></li>
-              <li><a class="phone" href="tel:0408351033" aria-label="Soita numeroon 040 835 1033">040 835 1033</a></li>
-              <li><button class="chat open-chat" aria-label="Avaa chat"><?php include get_theme_file_path( '/svg/chat.svg' ); ?>Avaa chat</button></li>
-            </ul>
-          </div>
-        </div>
-
         </nav>
 
         <nav id="nav-desktop" class="nav-primary-desktop" role="navigation">
-
           <ul class="menu-items nav-menu">
-            <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-18"><a href="<?php echo get_page_link( 9 ); ?>">Verkkosivut</a></li>
-            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-19"><a href="<?php echo get_page_link( 4485 ); ?>">Visuaalinen suunnittelu</a></li>
-            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4482"><a href="<?php echo get_page_link( 4493 ); ?>">Töitämme</a></li>
-            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-22"><a href="<?php echo get_page_link( 4487 ); ?>">Ota yhteyttä</a></li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-18"><a href="<?php echo get_the_permalink( 9 ); ?>">Verkkosivut</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-19"><a href="<?php echo get_the_permalink( 4485 ); ?>">Visuaalinen suunnittelu</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4482"><a href="<?php echo get_the_permalink( 4493 ); ?>">Töitämme</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-22"><a href="<?php echo get_the_permalink( 4487 ); ?>">Ota yhteyttä</a></li>
           </ul>
+        </nav><!-- #nav -->
+      </div>
 
-           <noscript>
-             <ul class="menu-items menu-items-no-js nav-menu">
-              <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-18"><a href="<?php echo get_page_link( 9 ); ?>">Verkkosivut</a></li>
-              <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-19"><a href="<?php echo get_page_link( 4485 ); ?>">Visuaalinen suunnittelu</a></li>
-              <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4482"><a href="<?php echo get_page_link( 4493 ); ?>">Töitämme</a></li>
-              <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-22"><a href="<?php echo get_page_link( 4487 ); ?>">Ota yhteyttä</a></li>
-              <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item"><a href="<?php echo get_page_link( 4449 ); ?>">Yritys</a></li>
-               <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_page_link( 4491 ); ?>">Työpaikat</a></li>
-               <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item"><a href="<?php echo get_page_link( 11 ); ?>">Blogi</a></li>
-               <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_page_link( 4489 ); ?>">Yhteisö & koodi</a></li>
-              </ul>
-            </noscript>
-
-          </nav><!-- #nav -->
-        </div>
-
-        <button id="nav-toggle-desktop" class="nav-toggle-desktop hamburger">
-          <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-          </span>
-          <span id="nav-toggle-label" class="screen-reader-text" aria-label="<?php esc_attr_e( 'Menu', 'dude' ); ?>" class="toggle-text"><?php esc_attr_e( 'Lisää', 'dude' ); ?></span>
-        </button>
+      <button id="nav-toggle-desktop" class="nav-toggle-desktop hamburger">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+        <span id="nav-toggle-label" class="screen-reader-text" aria-label="<?php esc_attr_e( 'Menu', 'dude' ); ?>" class="toggle-text"><?php esc_attr_e( 'Lisää', 'dude' ); ?></span>
+      </button>
 
     </header>
   </div><!-- .nav-container -->
