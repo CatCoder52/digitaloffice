@@ -2,8 +2,8 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 17:42:04
- * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-03-07 13:14:56
+ * @Last Modified by:   Timi Wahalahti
+ * @Last Modified time: 2020-07-14 15:06:44
  *
  * @package dude
  */
@@ -14,17 +14,15 @@ if ( 9 === get_the_id() ) { ?>
   <div class="container">
 
     <header class="block-head">
-      <p class="block-title-pre" aria-describedby="block-title-process">Hommahan haisee sille että se ei olisi ihan kusetusta.</p>
-      <h2 class="block-title" id="block-title-process">Mites tämä käytännössä menee?</h2>
+      <h2 class="block-title screen-reader-text">Prosessi</h2>
     </header>
 
     <div class="cols">
 
       <div class="col">
 
-        <div class="circle">
-          <svg height="250" width="250"><circle cx="125" cy="125" r="120" stroke="#fff" stroke-width="1" fill="#262626" /></svg>
-          <span class="long-arrow"></span>
+        <div class="number">
+          <?php // svg ?>
           <h3>Määritellään</h3>
         </div>
 
@@ -39,9 +37,8 @@ if ( 9 === get_the_id() ) { ?>
 
       <div class="col">
 
-        <div class="circle">
-          <svg height="250" width="250"><circle cx="125" cy="125" r="120" stroke="#fff" stroke-width="1" fill="#262626" /></svg>
-          <span class="long-arrow"></span>
+        <div class="number">
+          <?php // svg ?>
           <h3>Suunnitellaan</h3>
         </div>
 
@@ -56,9 +53,8 @@ if ( 9 === get_the_id() ) { ?>
 
       <div class="col">
 
-        <div class="circle">
-          <svg height="250" width="250"><circle cx="125" cy="125" r="120" stroke="#fff" stroke-width="1" fill="#262626" /></svg>
-          <span class="long-arrow"></span>
+        <div class="number">
+          <?php // svg ?>
           <h3>Toteutetaan</h3>
         </div>
 

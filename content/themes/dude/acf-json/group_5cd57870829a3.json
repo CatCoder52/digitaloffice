@@ -16,6 +16,64 @@
                 "id": ""
             },
             "layouts": {
+                "layout_5f0d9e5a5b995": {
+                    "key": "layout_5f0d9e5a5b995",
+                    "name": "two-images",
+                    "label": "Kaksi kuvaa (2020)",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f0d9e675b996",
+                            "label": "Kuva vasemmalla",
+                            "name": "image_left",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5f0d9e7e5b997",
+                            "label": "Kuva oikealla",
+                            "name": "image_right",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5cd5810ec53d0": {
                     "key": "layout_5cd5810ec53d0",
                     "name": "our-services",
@@ -197,14 +255,14 @@
                 "layout_5f0c5d4f6706c": {
                     "key": "layout_5f0c5d4f6706c",
                     "name": "references_one",
-                    "label": "Referenssinosto 1 kpl (2020)",
+                    "label": "Iso referenssinosto (2020)",
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5f0c5d4f6706d",
-                            "label": "Valitse referenssi",
-                            "name": "selected_reference",
-                            "type": "post_object",
+                            "key": "field_5f0d8513a2ab0",
+                            "label": "",
+                            "name": "",
+                            "type": "message",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -213,14 +271,9 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "post_type": [
-                                "reference"
-                            ],
-                            "taxonomy": "",
-                            "allow_null": 0,
-                            "multiple": 0,
-                            "return_format": "id",
-                            "ui": 1
+                            "message": "Tähän arvotaan automaattisesti vuorokauden välein uusi päärefenssiksi merkitty referenssi.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
                         }
                     ],
                     "min": "",
@@ -1165,5 +1218,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1594647680
+    "modified": 1594728091
 }
