@@ -21,7 +21,7 @@
   input[type="submit"],
   input[type="button"] {
     @extend %default;
-    background: $color-cobalt-blue;
+    background: $color-midnight;
     color: $color-white;
     font-size: 18px;
     font-weight: 500;
@@ -38,7 +38,7 @@
 
     &.button-mint {
       background: $color-mint;
-      color: $color-midnight-blue;
+      color: $color-midnight;
     }
 
     &:after {
