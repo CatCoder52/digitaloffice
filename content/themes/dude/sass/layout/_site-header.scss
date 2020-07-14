@@ -81,3 +81,27 @@ nav ul li button {
     }
   }
 }
+
+// Pages with alternate invert header colors
+body.page.page-id-9 {
+  .site-branding .site-title a,
+  .nav-primary-desktop .menu-items .menu-item button:not(.nav-toggle),
+  .nav-primary-desktop .menu-items .menu-item a {
+    color: $color-white;
+  }
+
+  .nav-primary-desktop .menu-items .menu-item a:after {
+    background-color: $color-white;
+  }
+
+  .nav-toggle {
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after,
+    &:focus .hamburger-inner:focus::before,
+    &:focus .hamburger-inner:focus::after {
+      background-color: $color-white;
+      color: $color-white;
+    }
+  }
+}
