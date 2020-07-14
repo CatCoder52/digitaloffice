@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:50:23
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2020-07-14 13:59:16
+ * @Last Modified time: 2020-07-14 14:28:49
  *
  * @package dude
  */
@@ -23,6 +23,10 @@ if ( ! $references ) {
     'update_post_meta_cache'  => false,
     'fields'                  => 'ids',
   );
+
+  if ( isset( $big_reference_ids ) ) {
+    $args['post__not_in'] = $big_reference_ids;
+  }
 
   $query = new WP_Query( $args );
   if ( $query->have_posts() ) {
