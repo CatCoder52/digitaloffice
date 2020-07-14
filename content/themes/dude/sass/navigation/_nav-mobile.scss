@@ -4,8 +4,8 @@
 // The main layout for the website navigation, for the mobile
 // version only.
 // -----------------------------------------------------------
-$nav-toggle-color: $color-cobalt-blue;
-$nav-toggle-active-color: $color-cobalt-blue;
+$nav-toggle-color: $color-midnight;
+$nav-toggle-active-color: $color-white;
 $nav-background-color: $color-deep-black;
 $hamburger-padding-x: 1.5rem;
 $hamburger-padding-y: 5rem;
@@ -54,7 +54,6 @@ $nav-open-from-top: false;
   }
 }
 
-
 // Choose hamburger animation here
 // Choices: https://jonsuh.com/hamburgers/
 .hamburger {
@@ -64,99 +63,6 @@ $nav-open-from-top: false;
 // Disable scroll on html body when menu is opened.
 .disable-scroll {
   overflow: hidden;
-}
-
-body:after {
-  content: '';
-  width: 100%;
-  position: absolute;
-  top: 0;
-  z-index: -1;
-  height: 120vh;
-  background: $nav-background-color;
-}
-
-body.single .site-content,
-body.archive .site-content,
-body.blog .site-content,
-body.single-reference .site-content,
-body.single-person .site-content {
-  transition: all .75s 50ms cubic-bezier(.19, 1, .22, 1);
-  will-change: transform;
-}
-
-.js-nav-active .block-hero,
-body.single.js-nav-active .site-content,
-body.archive.js-nav-active .site-content,
-body.blog.js-nav-active .site-content,
-body.single-reference.js-nav-active .site-content,
-body.single-person.js-nav-active .site-content {
-  transform: translateX(-50vw);
-
-  .block-hero {
-    transform: translateX(0);
-
-    @media (max-width: 1400px) {
-      transform: translateX(0);
-    }
-
-    @media (max-width: 1020px) {
-      transform: translateX(0);
-    }
-
-    @media (max-width: 760px) {
-      transform: translateX(0);
-    }
-  }
-
-  @media (max-width: 1400px) {
-    transform: translateX(-60vw);
-  }
-
-  @media (max-width: 1020px) {
-    transform: translateX(-70vw);
-  }
-
-  @media (max-width: 760px) {
-    transform: translateX(-100vw);
-  }
-}
-
-// Blurs
-.block-hero-service .container,
-.block-hero-normal .container {
-  transition: all .75s;
-  will-change: filter;
-}
-
-.block-hero .full-image {
-  transition: all .75s;
-  will-change: opacity;
-}
-
-.js-nav-active {
-  // Add blur effect to hero by hiding the full image and showing the preload-blur image from the background
-  .block-hero.add-blur .full-image {
-    opacity: 0;
-  }
-
-  &.blog .block .container,
-  &.single .block .container,
-  &.archive .block .container {
-    filter: blur(1rem);
-  }
-
-  // Just blur other heros
-  .block-hero-service:not(.block-hero-side-columns).add-blur .container,
-  .block-hero-normal:not(.block-hero-side-columns).add-blur .container,
-  .block-hero-jobs:not(.block-hero-side-columns).add-blur .container,
-  .block-hero:not(.block-hero-side-columns).add-blur .container {
-    filter: blur(1rem);
-  }
-
-  .add-blur .form-box {
-    filter: blur(1rem);
-  }
 }
 
 // Opening animations
@@ -170,27 +76,26 @@ body.single-person.js-nav-active .site-content {
   }
 }
 
-// 60fps performance trick
-// Source: https://medium.com/outsystems-experts/how-to-achieve-60-fps-animations-with-css3-db7b98610108
-.nav-primary.is-animatable,
-.block.block-hero.block-hero-enable-transition.is-animatable {
-  transition: all .75s 50ms cubic-bezier(.19, 1, .22, 1);
+.js-nav-active .nav-primary {
+  top: 0;
+  opacity: 1;
 }
 
-.block.block-hero.block-hero-enable-transition {
-  will-change: transform;
+.main-navigation-wrapper {
+  width: 100%;
+    position: absolute;
+    text-align: center;
 }
 
 .nav-primary {
+  @include background-cover();
+  background-image: url('../images/nav-bg-desktop.jpg');
   height: 100vh;
-  width: 50vw;
+  width: 100vw;
   position: fixed;
   z-index: 2;
   right: 0;
-  top: 0;
-  transform: translateX(50vw);
-  will-change: transform;
-  background: $nav-background-color;
+  top: -100vw;
   margin: 0;
   display: flex;
   align-items: center;
@@ -200,21 +105,8 @@ body.single-person.js-nav-active .site-content {
   padding-top: $padding-default-rows;
   padding-bottom: $padding-default-rows;
   overflow: auto;
-
-  @media (max-width: 1400px) {
-    transform: translateX(60vw);
-    width: 60vw;
-  }
-
-  @media (max-width: 1020px) {
-    transform: translateX(70vw);
-    width: 70vw;
-  }
-
-  @media (max-width: 760px) {
-    width: 100vw;
-    transform: translateX(100vw);
-  }
+  opacity: 0;
+  transition: opacity .6s;
 
   @media (max-width: $container-ipad) {
     padding-left: $padding-default-cols-ipad;
@@ -529,10 +421,11 @@ body.single-person.js-nav-active .site-content {
   user-select: none;
   text-decoration: none;
   padding: 1rem;
-  margin: 0 -2rem 0 0;
+  margin: -1rem -2rem 0 0;
   background: transparent;
   cursor: pointer;
-  position: relative;
+  position: absolute;
+  right: 0;
 
   &.nav-toggle-mobile {
     @media (min-width: $responsivenav) {

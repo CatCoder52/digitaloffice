@@ -156,14 +156,14 @@ if ( $show_chat_greeting ) {
 
       <div class="main-navigation-wrapper opacity-on-load" id="main-navigation-wrapper">
 
-        <button id="nav-toggle" class="nav-toggle nav-toggle-mobile hamburger" type="button" aria-label="<?php esc_attr_e( 'Menu', 'dude' ); ?>">
+        <button id="nav-toggle" class="nav-toggle nav-toggle-desktop hamburger">
           <span class="hamburger-box">
             <span class="hamburger-inner"></span>
           </span>
-          <span id="nav-toggle-label" class="screen-reader-text" aria-label="<?php esc_attr_e( 'Menu', 'dude' ); ?>"><?php esc_attr_e( 'Menu', 'dude' ); ?></span>
+          <span id="nav-toggle-label" class="screen-reader-text" aria-label="<?php esc_attr_e( 'Menu', 'dude' ); ?>" class="toggle-text"><?php esc_attr_e( 'Lisää', 'dude' ); ?></span>
         </button>
 
-        <nav id="nav" class="nav-primary" role="navigation" aria-expanded="false">
+        <nav id="nav" class="nav-primary" aria-expanded="false">
 
         <div class="nav-items">
           <div class="content">
@@ -214,7 +214,7 @@ if ( $show_chat_greeting ) {
 
         </nav>
 
-        <nav id="nav-desktop" class="nav-primary-desktop" role="navigation">
+        <nav id="nav-desktop" class="nav-primary-desktop">
 
           <ul class="menu-items nav-menu">
             <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-18"><a href="<?php echo get_page_link( 9 ); ?>">Verkkosivut</a></li>
@@ -238,13 +238,6 @@ if ( $show_chat_greeting ) {
 
           </nav><!-- #nav -->
         </div>
-
-        <button id="nav-toggle-desktop" class="nav-toggle-desktop hamburger">
-          <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
-          </span>
-          <span id="nav-toggle-label" class="screen-reader-text" aria-label="<?php esc_attr_e( 'Menu', 'dude' ); ?>" class="toggle-text"><?php esc_attr_e( 'Lisää', 'dude' ); ?></span>
-        </button>
 
     </header>
   </div><!-- .nav-container -->
