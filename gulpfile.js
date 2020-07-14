@@ -587,6 +587,7 @@ gulp.task("js", function () {
       themeDir + "/js/src/svg-morpheus.js",
       themeDir + "/js/src/lazyload.js",
       themeDir + "/js/src/slick.custom.js",
+      themeDir + "/js/src/glitch-button.js",
       themeDir + "/node_modules/blueimp-gallery/js/blueimp-helper.js",
       themeDir + "/node_modules/blueimp-gallery/js/blueimp-gallery.js",
       themeDir +

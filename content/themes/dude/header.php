@@ -109,6 +109,16 @@ if ( $show_chat_greeting ) {
 
 <body <?php body_class( $body_class ); ?>>
 
+<!-- Glitch effects for buttons -->
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg-sprite">
+    <defs>
+        <filter id="filter">
+            <feTurbulence type="fractalNoise" baseFrequency="0.000001 0.000001" numOctaves="1" result="warp" seed="1"></feTurbulence>
+            <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp"></feDisplacementMap>
+        </filter>
+    </defs>
+</svg>
+
   <?php if ( is_page( 4485 ) ) : ?>
     <div id="blueimp-gallery" class="blueimp-gallery" aria-hidden="true">
       <div class="slides"></div>

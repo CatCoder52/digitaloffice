@@ -254,3 +254,84 @@ $glitch-steps: 20;
   }
 }
 
+// Glitch button
+$glitch-red: #ff536b;
+$glitch-blue: #3ffeff;
+
+.button-glitch {
+  // Glitch stuff
+  transform: translateZ(0);
+  overflow: visible;
+  transition: all .2s cubic-bezier(.25, .46, .45, .94);
+
+  &.button-glitch-active {
+    filter: url('#filter');
+
+    &::after,
+    &::before {
+      content: '';
+      width: 1px;
+      position: absolute;
+      top: -1px;
+      bottom: -1px;
+    }
+
+    &::after {
+      left: -2px;
+      background-color: $glitch-red;
+      animation: colorshift-red 2.6s infinite;
+      animation-timing-function: step-end;
+    }
+
+    &::before {
+      right: -2px;
+      background-color: $glitch-blue;
+      animation: colorshift-blue 2.6s infinite;
+      animation-timing-function: step-end;
+    }
+  }
+}
+
+@keyframes colorshift-red {
+  0%,
+  7% {
+    background-color: $glitch-red;
+  }
+
+  8%,
+  18% {
+    background-color: transparent;
+  }
+
+  19% {
+    background-color: $glitch-red;
+    width: 2px;
+  }
+
+  23%,
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes colorshift-blue {
+  0%,
+  7% {
+    background-color: $glitch-blue;
+  }
+
+  8%,
+  18% {
+    background-color: transparent;
+  }
+
+  19% {
+    background-color: $glitch-blue;
+    width: 2px;
+  }
+
+  23%,
+  100% {
+    background-color: transparent;
+  }
+}
