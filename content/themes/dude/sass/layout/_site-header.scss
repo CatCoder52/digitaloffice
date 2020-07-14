@@ -23,9 +23,20 @@
   }
 }
 
+.site-branding {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  z-index: 10;
+}
+
 .site-title {
   margin: 0;
   font-weight: 700;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  z-index: 10;
 
   a {
     color: $color-midnight-blue;
