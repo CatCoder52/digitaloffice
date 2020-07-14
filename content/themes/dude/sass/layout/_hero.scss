@@ -29,8 +29,6 @@
   }
 
   .button-wrapper .button {
-    color: $color-white;
-
     @media (min-width: $container-ipad) {
       margin-right: 2.8rem;
     }
@@ -46,7 +44,9 @@
   }
 
   p {
-    color: $color-white;
+    &:not(.button-wrapper) {
+      color: $color-white;
+    }
 
     @media (min-width: $container-ipad-landscape) {
       font-size: $font-size-general-large;
