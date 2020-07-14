@@ -3,12 +3,11 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 17:42:04
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2020-07-14 15:06:44
+ * @Last Modified time: 2020-07-14 15:09:58
  *
  * @package dude
  */
-
-if ( 9 === get_the_id() ) { ?>
+?>
 
 <section id="prosessi" class="block block-process">
   <div class="container">
@@ -71,5 +70,3 @@ if ( 9 === get_the_id() ) { ?>
 
   </div>
 </section>
-
-<?php }
