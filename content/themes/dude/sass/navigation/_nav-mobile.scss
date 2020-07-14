@@ -76,7 +76,8 @@ $nav-open-from-top: false;
   }
 }
 
-.js-nav-active .nav-primary {
+.js-nav-active .nav-primary,
+.js-nav-active .nav-primary.is-animatable {
   top: 0;
   opacity: 1;
 }
@@ -85,6 +86,12 @@ $nav-open-from-top: false;
   width: 100%;
   position: absolute;
   text-align: center;
+}
+
+// Nav fade out animation
+body:not(.js-nav-active) .nav-primary.is-animatable {
+  opacity: 0;
+  top: 0;
 }
 
 .nav-primary {
@@ -105,12 +112,7 @@ $nav-open-from-top: false;
   padding-top: $padding-default-rows;
   padding-bottom: $padding-default-rows;
   overflow: auto;
-
-  // Animation effect
-  &.is-animatable {
-    opacity: 0;
-    transition: opacity .6s;
-  }
+  transition: opacity .6s;
 
   @media (max-width: $container-ipad) {
     padding-left: $padding-default-cols-ipad;
