@@ -43,7 +43,7 @@
         {
             "key": "field_5f0d9b67991cc",
             "label": "Nappi",
-            "name": "button_button",
+            "name": "hero_button",
             "type": "link",
             "instructions": "",
             "required": 0,
@@ -73,5 +73,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1594727322
+    "modified": 1594727910
 }
