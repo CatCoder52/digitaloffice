@@ -190,7 +190,7 @@ if ( $show_chat_greeting ) {
                   <p class="title">Yhteys</p>
                   <p>
                     <a href="mailto:moro@dude.fi">moro@dude.fi</a><br/>
-                    <button class="open-chat">Avaa chat!</button>
+                    <button class="chat open-chat open-chat-contact" aria-label="Avaa chat" tabindex="0">Avaa chat!</button>
                   </p>
                 </div>
               </div>
