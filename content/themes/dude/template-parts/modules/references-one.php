@@ -3,7 +3,7 @@
  * @Author:             Roni Laukkarinen, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:50:23
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-15 12:42:59
+ * @Last Modified time: 2020-07-15 13:36:49
  *
  * @package dude
  */
@@ -46,7 +46,7 @@ $reference = array(
       <div class="col col-reference-image col-reference-image-main">
 
         <div class="reference-image-skew">
-          <?php image_lazyload_div( $reference['image_skew']['ID'] ); ?>
+          <?php image_lazyload_tag( $reference['image_skew']['ID'] ); ?>
         </div>
 
       </div>

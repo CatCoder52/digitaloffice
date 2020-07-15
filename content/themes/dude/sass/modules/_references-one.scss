@@ -13,10 +13,20 @@
 
   .reference-image-skew {
     overflow: hidden;
-    position: relative;
+    position: absolute;
+    right: -135px;
+    width: 50vw;
+    z-index: 2;
+    transform: skew(28deg, 0);
 
-    height: 530px;
-    width: 100%;
-
-
+    img {
+      width: 900px;
+      height: 530px;
+      min-width: 900px;
+      min-height: 530px;
+      backface-visibility: hidden;
+      box-shadow: -12px 31px 38px 0 rgba(0, 0, 0, .02);
+      background-color: #e9e9e9;
+    }
+  }
 }
