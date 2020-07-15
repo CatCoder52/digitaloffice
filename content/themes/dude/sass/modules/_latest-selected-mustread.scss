@@ -1,5 +1,55 @@
+// Block specific
+$offset-y: 8.6rem;
+$offset-x: -6.4rem;
+
 .block.block-latest-selected-mustread {
   background: $color-midnight;
+
+  .block-head.block-head-small {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .cta-link {
+    color: $color-mint;
+
+    &::after {
+      background: $color-mint;
+    }
+  }
+
+  .block-head.block-head-small .block-title {
+    @extend %general-heading-cta;
+    color: $color-mint;
+  }
+
+  .row.row-latest .post {
+    @include grid(2, $gutter_x: 0rem, $gutter_y: 0rem);
+    margin-top: $margin-between-grid-columns-large;
+    margin-bottom: $margin-between-grid-columns-large + $offset-y + $margin-between-text-elements;
+
+    .content {
+      background: $color-mint;
+      color: $color-midnight-blue;
+      padding-top: $padding-blog-content-box-y;
+      padding-bottom: $padding-blog-content-box-y;
+      padding-left: $padding-blog-content-box-x;
+      padding-right: $padding-blog-content-box-x;
+      transform: translate($offset-x, $offset-y);
+      position: relative;
+      z-index: 2;
+    }
+
+    h3 {
+      @extend %general-heading-cta;
+      margin-top: 0;
+    }
+
+    a {
+      color: $color-midnight;
+    }
+  }
 
   .image {
     position: relative;
@@ -7,204 +57,5 @@
 
   .container {
     overflow: visible;
-  }
-
-  .block-title {
-    margin-bottom: $padding-general-content-box;
-
-    @media (max-width: $container-mobile) {
-      margin-bottom: 5rem;
-    }
-  }
-
-  .block-title,
-  p,
-  a {
-    color: $color-white;
-  }
-
-  .content {
-    padding: 5rem 2rem;
-
-    @media (max-width: 1000px) {
-      padding-left: 0;
-      padding-right: 0;
-    }
-
-    h3 {
-      margin-top: 0;
-    }
-
-    p {
-      @extend %text-smaller;
-      opacity: .7;
-    }
-  }
-
-  .col-latest h3 {
-    @extend %h4;
-  }
-
-  .col-latest .image {
-    height: 50rem;
-    position: relative;
-    overflow: hidden;
-
-    @media (max-width: 1000px) {
-      height: 35rem;
-    }
-
-    @media (max-width: 600px) {
-      height: auto;
-
-      &:after {
-        content: '';
-        display: block;
-        padding-bottom: 100%;
-      }
-    }
-  }
-
-  .col-mustread {
-    .post {
-      @include grid(2, $gutter_x: 4rem, $gutter_y: 0rem);
-      grid-template-columns: 3fr 7fr;
-
-      @media (max-width: 1400px) {
-        grid-template-columns: 4fr 6fr;
-      }
-
-      @media (max-width: 600px) {
-        display: flex;
-        flex-wrap: wrap;
-      }
-    }
-
-    .image {
-      position: relative;
-      overflow: hidden;
-      width: 100%;
-      height: 17rem;
-
-      &:after {
-        content: '';
-        display: block;
-        padding-bottom: 100%;
-      }
-
-      @media (max-width: 1500px) {
-        height: 20rem;
-
-        &:after {
-          display: none;
-        }
-      }
-
-      @media (max-width: 860px) {
-        height: auto;
-
-        &:after {
-          content: '';
-          display: block;
-          padding-bottom: 100%;
-        }
-      }
-
-      @media (max-width: $container-ipad) {
-        height: 20rem;
-
-        &:after {
-          display: none;
-        }
-      }
-
-      @media (max-width: 600px) {
-        margin-bottom: 4rem;
-        height: auto;
-
-        &:after {
-          content: '';
-          display: block;
-          padding-bottom: 100%;
-        }
-      }
-    }
-
-    h3 {
-      @extend %h4;
-      margin-top: 0;
-    }
-
-    .content {
-      padding-top: 0;
-    }
-  }
-
-  .newsletter {
-    background: $color-whitegreyish;
-    padding: 5rem;
-    width: 50%;
-    z-index: 1;
-    float: right;
-
-    @media (max-width: 1000px) {
-      width: 100%;
-    }
-
-    @media (max-width: $container-mobile) {
-      width: calc(100% + 2rem);
-      padding-left: 2rem;
-      padding-right: 0;
-    }
-
-    @media (max-width: 500px) {
-      float: left;
-      margin-left: -2rem;
-    }
-
-    p {
-      color: $color-body;
-    }
-
-    .block-title {
-      @extend %h3;
-      margin-top: 0;
-      color: $color-headings;
-      margin-bottom: 0;
-    }
-
-    input[type="email"] {
-      padding-left: 0;
-      padding-bottom: 0;
-      border-bottom: 1px solid $color-placeholder;
-
-      @media (max-width: 500px) {
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        margin-bottom: 2rem;
-      }
-    }
-
-    input {
-      padding: 10px 50px;
-    }
-
-    .inputs {
-      @include grid(2, $gutter_x: 4rem, $gutter_y: 0rem);
-      grid-template-columns: 7fr 3fr;
-
-      @media (max-width: 1200px) {
-        display: flex;
-        flex-wrap: wrap;
-
-        > input {
-          width: 100%;
-        }
-
-        input[type="email"] {
-          margin-bottom: 1rem;
-        }
-      }
-    }
   }
 }

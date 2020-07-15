@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 15:26:12
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-03-14 17:29:43
+ * @Last Modified time: 2020-07-15 16:54:51
  *
  * @package dude
  */
@@ -27,14 +27,16 @@ if ( ! $query->have_posts() || empty( $mustread ) ) {
 
 global $blog_latest_excerpt_override; ?>
 
-<section class="block block-latest-selected-mustread block-mint">
+<section class="block block-latest-selected-mustread">
   <div class="container">
 
+    <header class="block-head block-head-small">
+      <h2 class="block-title">Tarinoita Dudelta</h2>
+      <p class="read-more"><a class="cta-link" href="<?php echo get_option( 'page_for_posts' ); ?>">Katso kaikki</a></p>
+    </header>
+
     <div class="rows">
-
       <div class="row row-latest">
-        <h2 class="block-title">Tarinoita Dudelta <a class="read-more" href="<?php echo get_option( 'page_for_posts' ); ?>">Katso kaikki</a></h2>
-
         <?php while ( $query->have_posts() ) : $query->the_post();
           $blog_latest_excerpt_override = get_the_id();
           $video_bg = get_post_meta( get_the_id(), 'article_video', true );
@@ -53,7 +55,7 @@ global $blog_latest_excerpt_override; ?>
 
               <a href="<?php the_permalink() ?>" class="global-link"><span class="screen-reader-text"><?php the_title() ?></span></a>
               <div class="background-image preview lazyload" style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'tiny-preload-thumbnail' ) ?>');" data-src="<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>" data-src-mobile="<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>"></div>
-              <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>');"<?php endif; ?>></div>
+              <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : // phpcs:ignore ?> style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>');"<?php endif; ?>></div>
               <noscript><div class="background-image full-image" style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>');"></div></noscript>
             </div>
 
@@ -63,7 +65,7 @@ global $blog_latest_excerpt_override; ?>
             </div>
           </div>
 
-        <?php endwhile; wp_reset_query(); wp_reset_postdata(); ?>
+        <?php endwhile; wp_reset_postdata(); wp_reset_postdata(); ?>
       </div>
 
       <div class="row row-mustread">
@@ -83,7 +85,7 @@ global $blog_latest_excerpt_override; ?>
               <?php endif; ?>
 
               <div class="background-image preview lazyload" style="background-image: url('<?php echo get_the_post_thumbnail_url( $post, 'tiny-preload-thumbnail' ) ?>');" data-src="<?php echo get_the_post_thumbnail_url( $post, 'large' ) ?>" data-src-mobile="<?php echo get_the_post_thumbnail_url( $post, 'medium' ) ?>"></div>
-              <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo get_the_post_thumbnail_url( $post, 'medium' ) ?>');"<?php endif; ?>></div>
+              <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : // phpcs:ignore ?> style="background-image: url('<?php echo get_the_post_thumbnail_url( $post, 'medium' ) ?>');"<?php endif; ?>></div>
               <noscript><div class="background-image full-image" style="background-image: url('<?php echo get_the_post_thumbnail_url( $post, 'medium' ) ?>');"></div></noscript>
             </div>
 

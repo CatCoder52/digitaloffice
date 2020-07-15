@@ -139,10 +139,14 @@ a.global-link {
   }
 }
 
-// Mint styles
-body .block.block-mint {
-  h2.block-title {
-    color: $color-mint;
+%general-heading-cta {
+  @include responsive-font($font-size-general-headings-mobile, $font-size-general-headings-medium-ctas);
+  margin-bottom: 2rem;
+  margin-top: 0;
+  line-height: 1.35;
+
+  @media (min-width: $container-ipad-landscape) {
+    font-size: $font-size-general-headings-medium-ctas;
   }
 }
 

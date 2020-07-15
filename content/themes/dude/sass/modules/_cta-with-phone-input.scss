@@ -31,14 +31,7 @@ $submit-width: 33px;
   }
 
   h2 {
-    @include responsive-font($font-size-general-headings-mobile, $font-size-general-headings-medium-ctas);
-    margin-bottom: 2rem;
-    margin-top: 0;
-    color: $color-midnight-blue;
-
-    @media (min-width: $container-ipad-landscape) {
-      font-size: $font-size-general-headings-medium-ctas;
-    }
+    @extend %general-heading-cta;
   }
 
   p {
