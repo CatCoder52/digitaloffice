@@ -40,13 +40,15 @@
 
 <footer role="contentinfo" id="colophon" class="block block-footer site-footer">
 
+  <div class="shade" aria-hidden="true">
+    <div class="background-image preview lazyload" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/footer-20.jpg');" data-src="<?php echo get_template_directory_uri(); ?>/images/footer.jpg" data-src-mobile="<?php echo get_template_directory_uri(); ?>/images/footer.jpg"></div>
+    <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) :  // phpcs:ignore ?> style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/footer.jpg');"<?php endif; ?>></div>
+    <noscript><div class="background-image full-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/footer.jpg');"></div></noscript>
+  </div>
+
   <div class="container">
 
-    <div class="cols cols-two">
-      <div class="col">
-        <p class="large-text">Dude on ollut WordPressin yhteisön toiminnassa mukana alusta asti ei ainoastaan koodipuolella, mutta myös esimerkiksi järjestämässä WordPress Meetuppeja ja WordCampeja Suomessa.</p>
-      </div>
-    </div>
+    <p class="large-text">Dude on ollut WordPressin yhteisön toiminnassa mukana alusta asti ei ainoastaan koodipuolella, mutta myös esimerkiksi järjestämässä WordPress Meetuppeja ja WordCampeja Suomessa.</p>
 
     <div class="cols cols-four">
 
@@ -54,7 +56,7 @@
         <h3>Digitoimisto Dude Oy</h3>
         <p>Kauppakatu 14<br/>
           40100 Jyväskylä<br/>
-          <a href="mailto:moro@dude.fi">moro@dude.fi</a><br/>
+          <a class="no-text-link" href="mailto:moro@dude.fi">moro@dude.fi</a><br/>
           <button class="chat open-chat open-chat-contact" aria-label="Avaa chat" tabindex="0">Avaa chat!</button>
         </p>
       </div>
@@ -62,29 +64,29 @@
       <div class="col">
         <h3>Asiakkuudet</h3>
         <p>Kristian Hohkavaara<br/>
-          <a href="tel:0408351033">040 835 1033</a><br/>
-          <a href="mailto:kristian@dude.fi">kristian@dude.fi</a></p>
+          <a class="no-text-link" href="tel:0408351033">040 835 1033</a><br/>
+          <a class="no-text-link" href="mailto:kristian@dude.fi">kristian@dude.fi</a></p>
       </div>
 
       <div class="col">
         <ul class="menu-items nav-menu">
-          <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_post_type_archive_link( 'post' ); ?>">Blogi</a></li>
-          <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_the_permalink( 4489 ); ?>">Koodi & yhteisö</a></li>
-          <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_the_permalink( 4449 ); ?>">Yritys & kulttuuri</a></li>
-          <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_the_permalink( 4491 ); ?>">Rekry</a></li>
-          <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_post_type_archive_link( 'merch' ); ?>">Merch</a></li>
-          <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="https://handbook.dude.fi">Handbook</a></li>
+          <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="no-text-link" href="<?php echo get_post_type_archive_link( 'post' ); ?>">Blogi</a></li>
+          <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="no-text-link" href="<?php echo get_the_permalink( 4489 ); ?>">Koodi & yhteisö</a></li>
+          <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="no-text-link" href="<?php echo get_the_permalink( 4449 ); ?>">Yritys & kulttuuri</a></li>
+          <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="no-text-link" href="<?php echo get_the_permalink( 4491 ); ?>">Rekry</a></li>
+          <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="no-text-link" href="<?php echo get_post_type_archive_link( 'merch' ); ?>">Merch</a></li>
+          <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="no-text-link" href="https://handbook.dude.fi">Handbook</a></li>
         </ul>
       </div>
 
       <div class="col">
         <ul class="menu-items nav-menu">
-          <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="http://www.facebook.com/digitoimistodude" target="_blank">Facebook</a></li>
-          <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="https://twitter.com/dudetoimisto" target="_blank">Twitter</a></li>
-          <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="http://www.linkedin.com/company/digitoimisto-dude-oy" target="_blank">LinkedIn</a></li>
-          <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="https://www.instagram.com/digitoimistodude/" target="_blank">Instagram</a></li>
-          <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="https://github.com/digitoimistodude" target="_blank">Github</a></li>
-          <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="https://www.itewiki.fi/digitoimisto-dude" target="_blank">IteWiki</a></li>
+          <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="no-text-link" href="http://www.facebook.com/digitoimistodude" target="_blank">Facebook</a></li>
+          <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="no-text-link" href="https://twitter.com/dudetoimisto" target="_blank">Twitter</a></li>
+          <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="no-text-link" href="http://www.linkedin.com/company/digitoimisto-dude-oy" target="_blank">LinkedIn</a></li>
+          <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="no-text-link" href="https://www.instagram.com/digitoimistodude/" target="_blank">Instagram</a></li>
+          <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="no-text-link" href="https://github.com/digitoimistodude" target="_blank">Github</a></li>
+          <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="no-text-link" href="https://www.itewiki.fi/digitoimisto-dude" target="_blank">IteWiki</a></li>
         </ul>
       </div>
 
@@ -92,10 +94,10 @@
 
     <div class="main-links">
       <ul class="menu-items nav-menu">
-        <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_the_permalink( 9 ); ?>">Verkkosivut</a></li>
-        <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_the_permalink( 4485 ); ?>">Suunnittelu</a></li>
-        <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_post_type_archive_link( 'reference' ); ?>">Töitämme</a></li>
-        <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_the_permalink( 6357 ); ?>">Aloitetaan projekti</a></li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="no-text-link" href="<?php echo get_the_permalink( 9 ); ?>">Verkkosivut</a></li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="no-text-link" href="<?php echo get_the_permalink( 4485 ); ?>">Suunnittelu</a></li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="no-text-link" href="<?php echo get_post_type_archive_link( 'reference' ); ?>">Töitämme</a></li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="no-text-link" href="<?php echo get_the_permalink( 6357 ); ?>">Aloitetaan projekti</a></li>
       </ul>
     </div>
 
@@ -107,8 +109,6 @@
 
 <script>CRISP_WEBSITE_ID = "-K90vfAnyk27kD-pZAep"</script>
 <script async src="https://client.crisp.im/l.js"></script>
-
-<script src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"></script>
 
 <!-- Hotjar Tracking Code for www.dude.fi -->
 <script>

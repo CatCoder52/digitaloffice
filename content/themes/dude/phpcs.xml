@@ -99,6 +99,7 @@
         <exclude name="WordPress.PHP.DiscouragedPHPFunctions.obfuscation_base64_encode" />
         <exclude name="WordPress.DB.SlowDBQuery.slow_db_query_tax_query" />
         <exclude name="WordPress.WP.EnqueuedResources.NonEnqueuedStylesheet" />
+        <exclude name="WordPress.WP.EnqueuedResources.NonEnqueuedScript" />
         <exclude name="WordPress.Security.EscapeOutput.OutputNotEscaped" />
     </rule>
 

@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 15:26:12
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-15 18:14:51
+ * @Last Modified time: 2020-07-15 18:34:29
  *
  * @package dude
  */
@@ -90,6 +90,7 @@ global $blog_latest_excerpt_override; ?>
               <div class="background-image preview lazyload" style="background-image: url('<?php echo get_the_post_thumbnail_url( $post, 'tiny-preload-thumbnail' ) ?>');" data-src="<?php echo get_the_post_thumbnail_url( $post, 'large' ) ?>" data-src-mobile="<?php echo get_the_post_thumbnail_url( $post, 'medium' ) ?>"></div>
               <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : // phpcs:ignore ?> style="background-image: url('<?php echo get_the_post_thumbnail_url( $post, 'medium' ) ?>');"<?php endif; ?>></div>
               <noscript><div class="background-image full-image" style="background-image: url('<?php echo get_the_post_thumbnail_url( $post, 'medium' ) ?>');"></div></noscript>
+
             </div>
 
             <div class="content">

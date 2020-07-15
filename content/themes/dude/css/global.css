@@ -601,6 +601,7 @@ a.global-link {
   }
 }
 
+.large-text,
 .block.block-latest-selected-mustread .row.row-mustread h3 {
   font-size: 20px;
   margin-bottom: 20px;
@@ -611,18 +612,21 @@ a.global-link {
 }
 
 @media screen and (min-width: 320px) {
+  .large-text,
   .block.block-latest-selected-mustread .row.row-mustread h3 {
     font-size: calc(20px + 4 * ((100vw - 320px) / 1600));
   }
 }
 
 @media screen and (min-width: 1920px) {
+  .large-text,
   .block.block-latest-selected-mustread .row.row-mustread h3 {
     font-size: 24px;
   }
 }
 
 @media (min-width: 1024px) {
+  .large-text,
   .block.block-latest-selected-mustread .row.row-mustread h3 {
     font-size: 24px;
   }
@@ -857,6 +861,8 @@ th,
 td,
 table,
 tr,
+.block.block-footer.site-footer h3,
+.block.block-footer.site-footer button.chat,
 .content-area button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset),
 .content-area .button,
 .content-area input[type="reset"],
@@ -930,6 +936,8 @@ body .block.block-wide-text-contact .site-header .gform_wrapper .gform_page_foot
   td,
   table,
   tr,
+  .block.block-footer.site-footer h3,
+  .block.block-footer.site-footer button.chat,
   .content-area button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset),
   .content-area .button,
   .content-area input[type="reset"],
@@ -1001,6 +1009,8 @@ body .block.block-wide-text-contact .site-header .gform_wrapper .gform_page_foot
   td,
   table,
   tr,
+  .block.block-footer.site-footer h3,
+  .block.block-footer.site-footer button.chat,
   .content-area button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset),
   .content-area .button,
   .content-area input[type="reset"],
@@ -1510,146 +1520,152 @@ body.page.page-id-9 .nav-toggle:focus .hamburger-inner:focus::after {
 }
 
 .block.block-footer.site-footer {
-  padding-top: 0;
-  overflow: visible;
+  background-color: #03061b;
+  color: #fff;
+  overflow: hidden;
   z-index: 3;
+  position: relative;
+  padding-top: 120px;
+  padding-top: 12rem;
+  padding-bottom: 120px;
+  padding-bottom: 12rem;
 }
 
-@media (max-width: 1000px) {
-  .block.block-footer.site-footer {
-    padding-bottom: 5rem;
-  }
+.block.block-footer.site-footer .cols {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* autoprefixer: off */
+  grid-auto-rows: minmax(0, auto);
+  grid-column-gap: 6rem;
+  grid-row-gap: 6rem;
 }
 
-@media (max-width: 480px) {
-  .block.block-footer.site-footer {
-    padding-bottom: 2rem;
-  }
-}
-
-@media (max-width: 640px) {
-  .block.block-footer.site-footer {
-    margin-top: 4rem;
-  }
-}
-
-.block.block-footer.site-footer .block-head {
-  padding-top: 100px;
-  padding-top: 10rem;
-  padding-bottom: 100px;
-  padding-bottom: 10rem;
-}
-
-@media (max-width: 1000px) {
-  .block.block-footer.site-footer .block-head {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
-}
-
-@media (max-width: 640px) {
-  .block.block-footer.site-footer .block-head {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-
-.block.block-footer.site-footer .container,
-.block.block-footer.site-footer .site-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  overflow: visible;
-}
-
-@media (max-width: 640px) {
-  .block.block-footer.site-footer .container,
-  .block.block-footer.site-footer .site-header {
+@supports not (display: grid) {
+  .block.block-footer.site-footer .cols {
+    display: flex;
     flex-wrap: wrap;
+    overflow: hidden;
+  }
+
+  .block.block-footer.site-footer .cols > div {
+    width: calc(25% - 3rem);
+    margin-right: 6rem;
+    margin-bottom: 6rem;
   }
 }
 
-.block.block-footer.site-footer .contact-details {
-  width: 50%;
-  padding: 80px;
-  padding: 8rem;
-  max-width: 800px;
-  max-width: 80rem;
-}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .block.block-footer.site-footer .cols {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
 
-@media (max-width: 640px) {
-  .block.block-footer.site-footer .contact-details {
-    padding: 4rem;
+  .block.block-footer.site-footer .cols > div {
+    width: calc(25% - 3rem);
+    margin-right: 3rem;
+    margin-bottom: 6rem;
   }
 }
 
-@media (max-width: 1700px) {
-  .block.block-footer.site-footer .contact-details {
-    width: 70%;
-  }
-}
-
-@media (max-width: 800px) {
-  .block.block-footer.site-footer .contact-details {
-    width: 80%;
-  }
-}
-
-@media (max-width: 640px) {
-  .block.block-footer.site-footer .contact-details {
+@media all and (-ms-high-contrast: none) and (max-width: 870px), (-ms-high-contrast: active) and (max-width: 870px) {
+  .block.block-footer.site-footer .cols > div {
     width: 100%;
   }
 }
 
-.block.block-footer.site-footer .contact-details .block-title {
-  display: inline-block;
-  padding-bottom: 0;
-  line-height: 1;
+@supports (-ms-ime-align: auto) {
+  .block.block-footer.site-footer .cols {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+
+  .block.block-footer.site-footer .cols > div {
+    width: calc(25% - 6rem);
+    margin-right: 6rem;
+    margin-bottom: 6rem;
+  }
+
+  @media (max-width: 870px) {
+    .block.block-footer.site-footer .cols > div {
+      width: 100%;
+    }
+  }
 }
 
-.block.block-footer.site-footer .contact-details .block-title a:after,
-.block.block-footer.site-footer .contact-details .foot-note a:after {
-  width: 100%;
-  height: 2px;
-  height: .2rem;
-  background: #4d4aff;
+.block.block-footer.site-footer .cols ul li {
+  line-height: 2.06;
+}
+
+.block.block-footer.site-footer h3 {
+  font-weight: 700;
+}
+
+.block.block-footer.site-footer button.chat {
+  color: #fff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+}
+
+.block.block-footer.site-footer button.chat:hover {
+  cursor: pointer;
+}
+
+.block.block-footer.site-footer h3,
+.block.block-footer.site-footer p {
+  color: #fff;
+}
+
+.block.block-footer.site-footer .large-text {
+  margin-bottom: 100px;
+  margin-bottom: 10rem;
+  margin-top: 0;
+  max-width: 600px;
+  max-width: 60rem;
+}
+
+.block.block-footer.site-footer .shade {
+  z-index: 0;
+  background: #03061b;
+  opacity: .2;
+}
+
+.block.block-footer.site-footer .container,
+.block.block-footer.site-footer .site-header {
   position: relative;
-  content: '';
-  display: block;
-  transition: all .6s;
+  z-index: 1;
 }
 
-.block.block-footer.site-footer .contact-details .block-title a:hover:after,
-.block.block-footer.site-footer .contact-details .foot-note a:hover:after {
-  width: 0;
+.block.block-footer.site-footer ul,
+.block.block-footer.site-footer li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
-.block.block-footer.site-footer .contact-details .foot-note a {
-  position: relative;
-  display: inline-block;
-  line-height: 1;
+.block.block-footer.site-footer a,
+.block.block-footer.site-footer button.chat {
+  color: #fff;
+  box-shadow: inset 0 0 0 rgba(255, 255, 255, .3), 0 1px 0 rgba(255, 255, 255, .3);
+  transition: box-shadow .22s;
+  overflow: hidden;
 }
 
-.block.block-footer.site-footer .contact-details .foot-note a:hover {
-  opacity: 1;
+.block.block-footer.site-footer a:hover,
+.block.block-footer.site-footer button.chat:hover {
+  box-shadow: inset 0 -1px 0 #7effe1, 0 1px 0 #7effe1;
 }
 
-.block.block-footer.site-footer .contact-details .foot-note a.hashtag {
-  font-weight: bold;
-  opacity: .7;
-}
-
-.block.block-footer.site-footer .contact-details .foot-note a.hashtag:after {
-  display: none;
-}
-
-.block.block-footer.site-footer .contact-details .foot-note a:after {
-  height: 1px;
-}
-
-.block.block-footer.site-footer .foot-note a:after {
-  opacity: .5;
+.block.block-footer.site-footer a,
+.block.block-footer.site-footer p,
+.block.block-footer.site-footer li {
+  line-height: 1.7;
 }
 
 .button-reset {
@@ -6101,173 +6117,173 @@ body .block.block-hero-reference .content a:not(.arrow-link):active {
 
 @-webkit-keyframes glitch-effect {
   0% {
-    clip: rect(43px, 9999px, 64px, 0);
+    clip: rect(96px, 9999px, 25px, 0);
   }
 
   5% {
-    clip: rect(89px, 9999px, 97px, 0);
+    clip: rect(43px, 9999px, 89px, 0);
   }
 
   10% {
-    clip: rect(72px, 9999px, 31px, 0);
+    clip: rect(94px, 9999px, 19px, 0);
   }
 
   15% {
-    clip: rect(21px, 9999px, 67px, 0);
+    clip: rect(26px, 9999px, 96px, 0);
   }
 
   20% {
-    clip: rect(20px, 9999px, 86px, 0);
+    clip: rect(5px, 9999px, 16px, 0);
   }
 
   25% {
-    clip: rect(8px, 9999px, 1px, 0);
+    clip: rect(45px, 9999px, 74px, 0);
   }
 
   30% {
-    clip: rect(77px, 9999px, 19px, 0);
+    clip: rect(28px, 9999px, 53px, 0);
   }
 
   35% {
-    clip: rect(36px, 9999px, 77px, 0);
+    clip: rect(12px, 9999px, 100px, 0);
   }
 
   40% {
-    clip: rect(80px, 9999px, 68px, 0);
+    clip: rect(21px, 9999px, 15px, 0);
   }
 
   45% {
-    clip: rect(9px, 9999px, 68px, 0);
+    clip: rect(1px, 9999px, 89px, 0);
   }
 
   50% {
-    clip: rect(55px, 9999px, 82px, 0);
+    clip: rect(32px, 9999px, 42px, 0);
   }
 
   55% {
-    clip: rect(66px, 9999px, 62px, 0);
+    clip: rect(90px, 9999px, 31px, 0);
   }
 
   60% {
-    clip: rect(93px, 9999px, 30px, 0);
+    clip: rect(27px, 9999px, 21px, 0);
   }
 
   65% {
-    clip: rect(6px, 9999px, 92px, 0);
+    clip: rect(59px, 9999px, 10px, 0);
   }
 
   70% {
-    clip: rect(9px, 9999px, 58px, 0);
+    clip: rect(2px, 9999px, 85px, 0);
   }
 
   75% {
-    clip: rect(80px, 9999px, 93px, 0);
+    clip: rect(70px, 9999px, 20px, 0);
   }
 
   80% {
-    clip: rect(76px, 9999px, 93px, 0);
+    clip: rect(43px, 9999px, 85px, 0);
   }
 
   85% {
-    clip: rect(27px, 9999px, 90px, 0);
+    clip: rect(40px, 9999px, 89px, 0);
   }
 
   90% {
-    clip: rect(13px, 9999px, 82px, 0);
+    clip: rect(35px, 9999px, 27px, 0);
   }
 
   95% {
-    clip: rect(45px, 9999px, 33px, 0);
+    clip: rect(94px, 9999px, 83px, 0);
   }
 
   100% {
-    clip: rect(48px, 9999px, 99px, 0);
+    clip: rect(48px, 9999px, 89px, 0);
   }
 }
 
 @keyframes glitch-effect {
   0% {
-    clip: rect(43px, 9999px, 64px, 0);
+    clip: rect(96px, 9999px, 25px, 0);
   }
 
   5% {
-    clip: rect(89px, 9999px, 97px, 0);
+    clip: rect(43px, 9999px, 89px, 0);
   }
 
   10% {
-    clip: rect(72px, 9999px, 31px, 0);
+    clip: rect(94px, 9999px, 19px, 0);
   }
 
   15% {
-    clip: rect(21px, 9999px, 67px, 0);
+    clip: rect(26px, 9999px, 96px, 0);
   }
 
   20% {
-    clip: rect(20px, 9999px, 86px, 0);
+    clip: rect(5px, 9999px, 16px, 0);
   }
 
   25% {
-    clip: rect(8px, 9999px, 1px, 0);
+    clip: rect(45px, 9999px, 74px, 0);
   }
 
   30% {
-    clip: rect(77px, 9999px, 19px, 0);
+    clip: rect(28px, 9999px, 53px, 0);
   }
 
   35% {
-    clip: rect(36px, 9999px, 77px, 0);
+    clip: rect(12px, 9999px, 100px, 0);
   }
 
   40% {
-    clip: rect(80px, 9999px, 68px, 0);
+    clip: rect(21px, 9999px, 15px, 0);
   }
 
   45% {
-    clip: rect(9px, 9999px, 68px, 0);
+    clip: rect(1px, 9999px, 89px, 0);
   }
 
   50% {
-    clip: rect(55px, 9999px, 82px, 0);
+    clip: rect(32px, 9999px, 42px, 0);
   }
 
   55% {
-    clip: rect(66px, 9999px, 62px, 0);
+    clip: rect(90px, 9999px, 31px, 0);
   }
 
   60% {
-    clip: rect(93px, 9999px, 30px, 0);
+    clip: rect(27px, 9999px, 21px, 0);
   }
 
   65% {
-    clip: rect(6px, 9999px, 92px, 0);
+    clip: rect(59px, 9999px, 10px, 0);
   }
 
   70% {
-    clip: rect(9px, 9999px, 58px, 0);
+    clip: rect(2px, 9999px, 85px, 0);
   }
 
   75% {
-    clip: rect(80px, 9999px, 93px, 0);
+    clip: rect(70px, 9999px, 20px, 0);
   }
 
   80% {
-    clip: rect(76px, 9999px, 93px, 0);
+    clip: rect(43px, 9999px, 85px, 0);
   }
 
   85% {
-    clip: rect(27px, 9999px, 90px, 0);
+    clip: rect(40px, 9999px, 89px, 0);
   }
 
   90% {
-    clip: rect(13px, 9999px, 82px, 0);
+    clip: rect(35px, 9999px, 27px, 0);
   }
 
   95% {
-    clip: rect(45px, 9999px, 33px, 0);
+    clip: rect(94px, 9999px, 83px, 0);
   }
 
   100% {
-    clip: rect(48px, 9999px, 99px, 0);
+    clip: rect(48px, 9999px, 89px, 0);
   }
 }
 
@@ -6324,481 +6340,481 @@ body .block.block-hero-reference .content a:not(.arrow-link):active {
 
 @-webkit-keyframes noise-1 {
   10% {
-    -webkit-clip-path: inset(77px 0 5px 0);
-    clip-path: inset(77px 0 5px 0);
+    -webkit-clip-path: inset(68px 0 28px 0);
+    clip-path: inset(68px 0 28px 0);
   }
 
   20% {
-    -webkit-clip-path: inset(88px 0 11px 0);
-    clip-path: inset(88px 0 11px 0);
+    -webkit-clip-path: inset(87px 0 8px 0);
+    clip-path: inset(87px 0 8px 0);
   }
 
   30% {
-    -webkit-clip-path: inset(67px 0 17px 0);
-    clip-path: inset(67px 0 17px 0);
+    -webkit-clip-path: inset(11px 0 24px 0);
+    clip-path: inset(11px 0 24px 0);
   }
 
   40% {
-    -webkit-clip-path: inset(86px 0 2px 0);
-    clip-path: inset(86px 0 2px 0);
+    -webkit-clip-path: inset(35px 0 10px 0);
+    clip-path: inset(35px 0 10px 0);
   }
 
   50% {
-    -webkit-clip-path: inset(5px 0 21px 0);
-    clip-path: inset(5px 0 21px 0);
+    -webkit-clip-path: inset(31px 0 60px 0);
+    clip-path: inset(31px 0 60px 0);
   }
 
   60% {
-    -webkit-clip-path: inset(39px 0 29px 0);
-    clip-path: inset(39px 0 29px 0);
+    -webkit-clip-path: inset(88px 0 8px 0);
+    clip-path: inset(88px 0 8px 0);
   }
 
   70% {
-    -webkit-clip-path: inset(100px 0 1px 0);
-    clip-path: inset(100px 0 1px 0);
+    -webkit-clip-path: inset(80px 0 7px 0);
+    clip-path: inset(80px 0 7px 0);
   }
 
   80% {
-    -webkit-clip-path: inset(88px 0 3px 0);
-    clip-path: inset(88px 0 3px 0);
+    -webkit-clip-path: inset(56px 0 19px 0);
+    clip-path: inset(56px 0 19px 0);
   }
 
   90% {
-    -webkit-clip-path: inset(66px 0 5px 0);
-    clip-path: inset(66px 0 5px 0);
+    -webkit-clip-path: inset(62px 0 5px 0);
+    clip-path: inset(62px 0 5px 0);
   }
 
   100% {
-    -webkit-clip-path: inset(97px 0 1px 0);
-    clip-path: inset(97px 0 1px 0);
+    -webkit-clip-path: inset(54px 0 2px 0);
+    clip-path: inset(54px 0 2px 0);
   }
 }
 
 @keyframes noise-1 {
   10% {
-    -webkit-clip-path: inset(77px 0 5px 0);
-    clip-path: inset(77px 0 5px 0);
+    -webkit-clip-path: inset(68px 0 28px 0);
+    clip-path: inset(68px 0 28px 0);
   }
 
   20% {
-    -webkit-clip-path: inset(88px 0 11px 0);
-    clip-path: inset(88px 0 11px 0);
+    -webkit-clip-path: inset(87px 0 8px 0);
+    clip-path: inset(87px 0 8px 0);
   }
 
   30% {
-    -webkit-clip-path: inset(67px 0 17px 0);
-    clip-path: inset(67px 0 17px 0);
+    -webkit-clip-path: inset(11px 0 24px 0);
+    clip-path: inset(11px 0 24px 0);
   }
 
   40% {
-    -webkit-clip-path: inset(86px 0 2px 0);
-    clip-path: inset(86px 0 2px 0);
+    -webkit-clip-path: inset(35px 0 10px 0);
+    clip-path: inset(35px 0 10px 0);
   }
 
   50% {
-    -webkit-clip-path: inset(5px 0 21px 0);
-    clip-path: inset(5px 0 21px 0);
+    -webkit-clip-path: inset(31px 0 60px 0);
+    clip-path: inset(31px 0 60px 0);
   }
 
   60% {
-    -webkit-clip-path: inset(39px 0 29px 0);
-    clip-path: inset(39px 0 29px 0);
+    -webkit-clip-path: inset(88px 0 8px 0);
+    clip-path: inset(88px 0 8px 0);
   }
 
   70% {
-    -webkit-clip-path: inset(100px 0 1px 0);
-    clip-path: inset(100px 0 1px 0);
+    -webkit-clip-path: inset(80px 0 7px 0);
+    clip-path: inset(80px 0 7px 0);
   }
 
   80% {
-    -webkit-clip-path: inset(88px 0 3px 0);
-    clip-path: inset(88px 0 3px 0);
+    -webkit-clip-path: inset(56px 0 19px 0);
+    clip-path: inset(56px 0 19px 0);
   }
 
   90% {
-    -webkit-clip-path: inset(66px 0 5px 0);
-    clip-path: inset(66px 0 5px 0);
+    -webkit-clip-path: inset(62px 0 5px 0);
+    clip-path: inset(62px 0 5px 0);
   }
 
   100% {
-    -webkit-clip-path: inset(97px 0 1px 0);
-    clip-path: inset(97px 0 1px 0);
+    -webkit-clip-path: inset(54px 0 2px 0);
+    clip-path: inset(54px 0 2px 0);
   }
 }
 
 @-webkit-keyframes noise-2 {
   0% {
     text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(36px 0 50px 0);
-    clip-path: inset(36px 0 50px 0);
+    -webkit-clip-path: inset(78px 0 9px 0);
+    clip-path: inset(78px 0 9px 0);
   }
 
   3.33333% {
     text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(37px 0 47px 0);
-    clip-path: inset(37px 0 47px 0);
+    -webkit-clip-path: inset(25px 0 76px 0);
+    clip-path: inset(25px 0 76px 0);
   }
 
   6.66667% {
     text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(22px 0 52px 0);
-    clip-path: inset(22px 0 52px 0);
+    -webkit-clip-path: inset(25px 0 23px 0);
+    clip-path: inset(25px 0 23px 0);
   }
 
   10% {
     text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(33px 0 6px 0);
-    clip-path: inset(33px 0 6px 0);
+    -webkit-clip-path: inset(28px 0 21px 0);
+    clip-path: inset(28px 0 21px 0);
   }
 
   13.33333% {
     text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(63px 0 17px 0);
-    clip-path: inset(63px 0 17px 0);
+    -webkit-clip-path: inset(71px 0 25px 0);
+    clip-path: inset(71px 0 25px 0);
   }
 
   16.66667% {
+    text-shadow: -5px 0 #7effe1;
+    -webkit-clip-path: inset(47px 0 15px 0);
+    clip-path: inset(47px 0 15px 0);
+  }
+
+  20% {
+    text-shadow: -5px 0 #7effe1;
+    -webkit-clip-path: inset(56px 0 32px 0);
+    clip-path: inset(56px 0 32px 0);
+  }
+
+  23.33333% {
+    text-shadow: -5px 0 #7effe1;
+    -webkit-clip-path: inset(80px 0 14px 0);
+    clip-path: inset(80px 0 14px 0);
+  }
+
+  26.66667% {
+    text-shadow: -5px 0 #7effe1;
+    -webkit-clip-path: inset(89px 0 11px 0);
+    clip-path: inset(89px 0 11px 0);
+  }
+
+  30% {
+    text-shadow: -5px 0 #7effe1;
+    -webkit-clip-path: inset(81px 0 18px 0);
+    clip-path: inset(81px 0 18px 0);
+  }
+
+  33.33333% {
+    text-shadow: -5px 0 #7effe1;
+    -webkit-clip-path: inset(37px 0 34px 0);
+    clip-path: inset(37px 0 34px 0);
+  }
+
+  36.66667% {
+    text-shadow: -5px 0 #7effe1;
+    -webkit-clip-path: inset(41px 0 59px 0);
+    clip-path: inset(41px 0 59px 0);
+  }
+
+  40% {
+    text-shadow: -5px 0 #7effe1;
+    -webkit-clip-path: inset(27px 0 54px 0);
+    clip-path: inset(27px 0 54px 0);
+  }
+
+  43.33333% {
+    text-shadow: -5px 0 #7effe1;
+    -webkit-clip-path: inset(41px 0 42px 0);
+    clip-path: inset(41px 0 42px 0);
+  }
+
+  46.66667% {
+    text-shadow: -5px 0 #7effe1;
+    -webkit-clip-path: inset(52px 0 9px 0);
+    clip-path: inset(52px 0 9px 0);
+  }
+
+  50% {
+    text-shadow: -5px 0 #7effe1;
+    -webkit-clip-path: inset(78px 0 20px 0);
+    clip-path: inset(78px 0 20px 0);
+  }
+
+  53.33333% {
+    text-shadow: -5px 0 #7effe1;
+    -webkit-clip-path: inset(97px 0 3px 0);
+    clip-path: inset(97px 0 3px 0);
+  }
+
+  56.66667% {
     text-shadow: -5px 0 #7effe1;
     -webkit-clip-path: inset(96px 0 3px 0);
     clip-path: inset(96px 0 3px 0);
   }
 
-  20% {
-    text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(13px 0 23px 0);
-    clip-path: inset(13px 0 23px 0);
-  }
-
-  23.33333% {
-    text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(67px 0 4px 0);
-    clip-path: inset(67px 0 4px 0);
-  }
-
-  26.66667% {
-    text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(8px 0 78px 0);
-    clip-path: inset(8px 0 78px 0);
-  }
-
-  30% {
-    text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(42px 0 16px 0);
-    clip-path: inset(42px 0 16px 0);
-  }
-
-  33.33333% {
-    text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(32px 0 35px 0);
-    clip-path: inset(32px 0 35px 0);
-  }
-
-  36.66667% {
-    text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(84px 0 14px 0);
-    clip-path: inset(84px 0 14px 0);
-  }
-
-  40% {
-    text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(95px 0 2px 0);
-    clip-path: inset(95px 0 2px 0);
-  }
-
-  43.33333% {
-    text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(81px 0 17px 0);
-    clip-path: inset(81px 0 17px 0);
-  }
-
-  46.66667% {
-    text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(68px 0 18px 0);
-    clip-path: inset(68px 0 18px 0);
-  }
-
-  50% {
-    text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(4px 0 28px 0);
-    clip-path: inset(4px 0 28px 0);
-  }
-
-  53.33333% {
-    text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(47px 0 9px 0);
-    clip-path: inset(47px 0 9px 0);
-  }
-
-  56.66667% {
-    text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(55px 0 27px 0);
-    clip-path: inset(55px 0 27px 0);
-  }
-
   60% {
     text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(14px 0 28px 0);
-    clip-path: inset(14px 0 28px 0);
+    -webkit-clip-path: inset(84px 0 9px 0);
+    clip-path: inset(84px 0 9px 0);
   }
 
   63.33333% {
     text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(10px 0 28px 0);
-    clip-path: inset(10px 0 28px 0);
+    -webkit-clip-path: inset(77px 0 20px 0);
+    clip-path: inset(77px 0 20px 0);
   }
 
   66.66667% {
     text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(48px 0 2px 0);
-    clip-path: inset(48px 0 2px 0);
+    -webkit-clip-path: inset(85px 0 1px 0);
+    clip-path: inset(85px 0 1px 0);
   }
 
   70% {
     text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(67px 0 8px 0);
-    clip-path: inset(67px 0 8px 0);
+    -webkit-clip-path: inset(96px 0 3px 0);
+    clip-path: inset(96px 0 3px 0);
   }
 
   73.33333% {
     text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(5px 0 88px 0);
-    clip-path: inset(5px 0 88px 0);
+    -webkit-clip-path: inset(85px 0 10px 0);
+    clip-path: inset(85px 0 10px 0);
   }
 
   76.66667% {
     text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(47px 0 40px 0);
-    clip-path: inset(47px 0 40px 0);
+    -webkit-clip-path: inset(36px 0 23px 0);
+    clip-path: inset(36px 0 23px 0);
   }
 
   80% {
     text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(50px 0 45px 0);
-    clip-path: inset(50px 0 45px 0);
+    -webkit-clip-path: inset(30px 0 24px 0);
+    clip-path: inset(30px 0 24px 0);
   }
 
   83.33333% {
     text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(11px 0 51px 0);
-    clip-path: inset(11px 0 51px 0);
+    -webkit-clip-path: inset(78px 0 23px 0);
+    clip-path: inset(78px 0 23px 0);
   }
 
   86.66667% {
     text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(87px 0 3px 0);
-    clip-path: inset(87px 0 3px 0);
+    -webkit-clip-path: inset(95px 0 3px 0);
+    clip-path: inset(95px 0 3px 0);
   }
 
   90% {
     text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(35px 0 29px 0);
-    clip-path: inset(35px 0 29px 0);
+    -webkit-clip-path: inset(5px 0 80px 0);
+    clip-path: inset(5px 0 80px 0);
   }
 
   93.33333% {
     text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(84px 0 13px 0);
-    clip-path: inset(84px 0 13px 0);
+    -webkit-clip-path: inset(3px 0 91px 0);
+    clip-path: inset(3px 0 91px 0);
   }
 
   96.66667% {
     text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(9px 0 45px 0);
-    clip-path: inset(9px 0 45px 0);
+    -webkit-clip-path: inset(80px 0 1px 0);
+    clip-path: inset(80px 0 1px 0);
   }
 
   100% {
     text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(83px 0 3px 0);
-    clip-path: inset(83px 0 3px 0);
+    -webkit-clip-path: inset(88px 0 3px 0);
+    clip-path: inset(88px 0 3px 0);
   }
 }
 
 @keyframes noise-2 {
   0% {
     text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(36px 0 50px 0);
-    clip-path: inset(36px 0 50px 0);
+    -webkit-clip-path: inset(78px 0 9px 0);
+    clip-path: inset(78px 0 9px 0);
   }
 
   3.33333% {
     text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(37px 0 47px 0);
-    clip-path: inset(37px 0 47px 0);
+    -webkit-clip-path: inset(25px 0 76px 0);
+    clip-path: inset(25px 0 76px 0);
   }
 
   6.66667% {
     text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(22px 0 52px 0);
-    clip-path: inset(22px 0 52px 0);
+    -webkit-clip-path: inset(25px 0 23px 0);
+    clip-path: inset(25px 0 23px 0);
   }
 
   10% {
     text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(33px 0 6px 0);
-    clip-path: inset(33px 0 6px 0);
+    -webkit-clip-path: inset(28px 0 21px 0);
+    clip-path: inset(28px 0 21px 0);
   }
 
   13.33333% {
     text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(63px 0 17px 0);
-    clip-path: inset(63px 0 17px 0);
+    -webkit-clip-path: inset(71px 0 25px 0);
+    clip-path: inset(71px 0 25px 0);
   }
 
   16.66667% {
+    text-shadow: -5px 0 #7effe1;
+    -webkit-clip-path: inset(47px 0 15px 0);
+    clip-path: inset(47px 0 15px 0);
+  }
+
+  20% {
+    text-shadow: -5px 0 #7effe1;
+    -webkit-clip-path: inset(56px 0 32px 0);
+    clip-path: inset(56px 0 32px 0);
+  }
+
+  23.33333% {
+    text-shadow: -5px 0 #7effe1;
+    -webkit-clip-path: inset(80px 0 14px 0);
+    clip-path: inset(80px 0 14px 0);
+  }
+
+  26.66667% {
+    text-shadow: -5px 0 #7effe1;
+    -webkit-clip-path: inset(89px 0 11px 0);
+    clip-path: inset(89px 0 11px 0);
+  }
+
+  30% {
+    text-shadow: -5px 0 #7effe1;
+    -webkit-clip-path: inset(81px 0 18px 0);
+    clip-path: inset(81px 0 18px 0);
+  }
+
+  33.33333% {
+    text-shadow: -5px 0 #7effe1;
+    -webkit-clip-path: inset(37px 0 34px 0);
+    clip-path: inset(37px 0 34px 0);
+  }
+
+  36.66667% {
+    text-shadow: -5px 0 #7effe1;
+    -webkit-clip-path: inset(41px 0 59px 0);
+    clip-path: inset(41px 0 59px 0);
+  }
+
+  40% {
+    text-shadow: -5px 0 #7effe1;
+    -webkit-clip-path: inset(27px 0 54px 0);
+    clip-path: inset(27px 0 54px 0);
+  }
+
+  43.33333% {
+    text-shadow: -5px 0 #7effe1;
+    -webkit-clip-path: inset(41px 0 42px 0);
+    clip-path: inset(41px 0 42px 0);
+  }
+
+  46.66667% {
+    text-shadow: -5px 0 #7effe1;
+    -webkit-clip-path: inset(52px 0 9px 0);
+    clip-path: inset(52px 0 9px 0);
+  }
+
+  50% {
+    text-shadow: -5px 0 #7effe1;
+    -webkit-clip-path: inset(78px 0 20px 0);
+    clip-path: inset(78px 0 20px 0);
+  }
+
+  53.33333% {
+    text-shadow: -5px 0 #7effe1;
+    -webkit-clip-path: inset(97px 0 3px 0);
+    clip-path: inset(97px 0 3px 0);
+  }
+
+  56.66667% {
     text-shadow: -5px 0 #7effe1;
     -webkit-clip-path: inset(96px 0 3px 0);
     clip-path: inset(96px 0 3px 0);
   }
 
-  20% {
-    text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(13px 0 23px 0);
-    clip-path: inset(13px 0 23px 0);
-  }
-
-  23.33333% {
-    text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(67px 0 4px 0);
-    clip-path: inset(67px 0 4px 0);
-  }
-
-  26.66667% {
-    text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(8px 0 78px 0);
-    clip-path: inset(8px 0 78px 0);
-  }
-
-  30% {
-    text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(42px 0 16px 0);
-    clip-path: inset(42px 0 16px 0);
-  }
-
-  33.33333% {
-    text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(32px 0 35px 0);
-    clip-path: inset(32px 0 35px 0);
-  }
-
-  36.66667% {
-    text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(84px 0 14px 0);
-    clip-path: inset(84px 0 14px 0);
-  }
-
-  40% {
-    text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(95px 0 2px 0);
-    clip-path: inset(95px 0 2px 0);
-  }
-
-  43.33333% {
-    text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(81px 0 17px 0);
-    clip-path: inset(81px 0 17px 0);
-  }
-
-  46.66667% {
-    text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(68px 0 18px 0);
-    clip-path: inset(68px 0 18px 0);
-  }
-
-  50% {
-    text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(4px 0 28px 0);
-    clip-path: inset(4px 0 28px 0);
-  }
-
-  53.33333% {
-    text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(47px 0 9px 0);
-    clip-path: inset(47px 0 9px 0);
-  }
-
-  56.66667% {
-    text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(55px 0 27px 0);
-    clip-path: inset(55px 0 27px 0);
-  }
-
   60% {
     text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(14px 0 28px 0);
-    clip-path: inset(14px 0 28px 0);
+    -webkit-clip-path: inset(84px 0 9px 0);
+    clip-path: inset(84px 0 9px 0);
   }
 
   63.33333% {
     text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(10px 0 28px 0);
-    clip-path: inset(10px 0 28px 0);
+    -webkit-clip-path: inset(77px 0 20px 0);
+    clip-path: inset(77px 0 20px 0);
   }
 
   66.66667% {
     text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(48px 0 2px 0);
-    clip-path: inset(48px 0 2px 0);
+    -webkit-clip-path: inset(85px 0 1px 0);
+    clip-path: inset(85px 0 1px 0);
   }
 
   70% {
     text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(67px 0 8px 0);
-    clip-path: inset(67px 0 8px 0);
+    -webkit-clip-path: inset(96px 0 3px 0);
+    clip-path: inset(96px 0 3px 0);
   }
 
   73.33333% {
     text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(5px 0 88px 0);
-    clip-path: inset(5px 0 88px 0);
+    -webkit-clip-path: inset(85px 0 10px 0);
+    clip-path: inset(85px 0 10px 0);
   }
 
   76.66667% {
     text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(47px 0 40px 0);
-    clip-path: inset(47px 0 40px 0);
+    -webkit-clip-path: inset(36px 0 23px 0);
+    clip-path: inset(36px 0 23px 0);
   }
 
   80% {
     text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(50px 0 45px 0);
-    clip-path: inset(50px 0 45px 0);
+    -webkit-clip-path: inset(30px 0 24px 0);
+    clip-path: inset(30px 0 24px 0);
   }
 
   83.33333% {
     text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(11px 0 51px 0);
-    clip-path: inset(11px 0 51px 0);
+    -webkit-clip-path: inset(78px 0 23px 0);
+    clip-path: inset(78px 0 23px 0);
   }
 
   86.66667% {
     text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(87px 0 3px 0);
-    clip-path: inset(87px 0 3px 0);
+    -webkit-clip-path: inset(95px 0 3px 0);
+    clip-path: inset(95px 0 3px 0);
   }
 
   90% {
     text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(35px 0 29px 0);
-    clip-path: inset(35px 0 29px 0);
+    -webkit-clip-path: inset(5px 0 80px 0);
+    clip-path: inset(5px 0 80px 0);
   }
 
   93.33333% {
     text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(84px 0 13px 0);
-    clip-path: inset(84px 0 13px 0);
+    -webkit-clip-path: inset(3px 0 91px 0);
+    clip-path: inset(3px 0 91px 0);
   }
 
   96.66667% {
     text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(9px 0 45px 0);
-    clip-path: inset(9px 0 45px 0);
+    -webkit-clip-path: inset(80px 0 1px 0);
+    clip-path: inset(80px 0 1px 0);
   }
 
   100% {
     text-shadow: -5px 0 #7effe1;
-    -webkit-clip-path: inset(83px 0 3px 0);
-    clip-path: inset(83px 0 3px 0);
+    -webkit-clip-path: inset(88px 0 3px 0);
+    clip-path: inset(88px 0 3px 0);
   }
 }
 

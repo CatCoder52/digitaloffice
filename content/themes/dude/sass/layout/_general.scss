@@ -162,6 +162,11 @@ a.global-link {
   }
 }
 
+.large-text,
+%large-text {
+  @extend %general-heading-small;
+}
+
 .block-head {
   padding: 0;
 }
