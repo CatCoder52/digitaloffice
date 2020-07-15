@@ -101,6 +101,10 @@
       </ul>
     </div>
 
+    <div class="disclaimer">
+      <p>Kaikki oikeudet pidätetään. <a class="no-text-link" href="#">Lue tietosuojaseloste</a>.</p>
+    </div>
+
   </footer><!-- #colophon -->
 
 </div><!-- #page -->

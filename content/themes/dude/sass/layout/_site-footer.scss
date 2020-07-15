@@ -5,7 +5,7 @@
   z-index: 3;
   position: relative;
   padding-top: $padding-blocks-medium;
-  padding-bottom: $padding-blocks-medium;
+  padding-bottom: 0;
 
   .cols {
     @include grid(4, $gutter_x: $margin-between-grid-columns, $gutter_y: $margin-between-grid-columns);
@@ -79,6 +79,46 @@
   p,
   li {
     line-height: 1.7;
+  }
+
+  .main-links {
+    margin-top: 10rem;
+  }
+
+  .main-links ul {
+    @include grid(4, $gutter_x: $margin-between-grid-columns, $gutter_y: $margin-between-grid-columns);
+    margin: 0;
+    padding-top: 3.2rem;
+    padding-bottom: 3.2rem;
+    border-top: 1px solid rgba($color-white, .2);
+    border-bottom: 1px solid rgba($color-white, .2);
+
+    li,
+    a {
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      @extend %general-heading-small;
+      box-shadow: none;
+
+      @media (min-width: $container-ipad-landscape) {
+        font-size: 34px;
+      }
+    }
+  }
+
+  .disclaimer {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    p {
+      margin: 0;
+      padding: 0;
+      font-size: 14px;
+      opacity: .5;
+    }
   }
 }
 
