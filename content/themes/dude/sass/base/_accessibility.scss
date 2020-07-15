@@ -63,3 +63,9 @@ $focus-text-color: #000;
     text-decoration: none;
   }
 }
+
+// Normalize the look of the outline across browsers
+// @link https://a11yproject.com/posts/never-remove-css-outlines/
+*:focus {
+  outline: thin dotted $color-cobalt-blue;
+}

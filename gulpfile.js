@@ -601,7 +601,6 @@ gulp.task("js", function () {
     .src([
       themeDir + "/js/src/skip-link-focus-fix.js",
       themeDir + "/node_modules/moveto/dist/moveTo.js",
-      themeDir + "/node_modules/what-input/dist/what-input.js",
       themeDir + "/node_modules/timeme.js/timeme.js",
       themeDir + "/js/src/navigation.js",
       themeDir + "/js/src/svg-morpheus.js",
