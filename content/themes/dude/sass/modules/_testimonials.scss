@@ -42,7 +42,14 @@
     @extend %container;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+
+    // Ensure space after arrows are 60px
+    height: 76px;
+    margin-bottom: $margin-between-grid-columns;
+    margin-top: $margin-between-grid-columns;
+
+    // We don't have title in this module so justifying content to left end
+    justify-content: flex-start;
 
     .block-title {
       margin-bottom: 12rem;

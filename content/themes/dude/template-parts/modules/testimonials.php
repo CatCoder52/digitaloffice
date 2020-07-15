@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:48:37
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-03-07 13:15:12
+ * @Last Modified time: 2020-07-15 15:06:04
  *
  * @package dude
  */
@@ -25,19 +25,19 @@ $query = new WP_Query( $args );
 
 if ( $query->have_posts() ) {
   while ( $query->have_posts() ) {
-    $query->the_post();
+		$query->the_post();
 
-    $references[] = array(
-      'id'                            => get_the_id(),
-      'permalink'                     => get_the_permalink(),
-      'quote'                         => get_post_meta( get_the_id(), 'quote', true ),
-      'quote_company'                 => get_the_title(),
-      'quote_person'                  => get_post_meta( get_the_id(), 'quote_person', true ),
-      'quote_person_image'            => get_post_meta( get_the_id(), 'quote_person_image', true ),
-      'created_date_y'                => get_the_date('Y'),
-      'created_date_m'                => get_the_date('m'),
-      'created_date_writtenmonth'     => get_the_date('F'),
-    );
+		$references[] = array(
+		'id'                            => get_the_id(),
+		'permalink'                     => get_the_permalink(),
+		'quote'                         => get_post_meta( get_the_id(), 'quote', true ),
+		'quote_company'                 => get_the_title(),
+		'quote_person'                  => get_post_meta( get_the_id(), 'quote_person', true ),
+		'quote_person_image'            => get_post_meta( get_the_id(), 'quote_person_image', true ),
+		'created_date_y'                => get_the_date( 'Y' ),
+		'created_date_m'                => get_the_date( 'm' ),
+		'created_date_writtenmonth'     => get_the_date( 'F' ),
+		);
   }
 }
 ?>
@@ -46,7 +46,7 @@ if ( $query->have_posts() ) {
   <div class="container">
 
     <header class="block-head">
-      <h2 class="block-title" id="block-title-our-services">Asiakkaidemme kokemuksia</h2>
+      <h2 class="block-title screen-reader-text" id="block-title-our-services">Asiakkaidemme kokemuksia</h2>
 
       <div class="floating-actions">
         <div class="custom-arrows"></div>
@@ -54,7 +54,7 @@ if ( $query->have_posts() ) {
       </div>
     </header>
 
-    <?php if ( ! empty( $references) ) : ?>
+    <?php if ( ! empty( $references ) ) : ?>
       <div class="testimonials slider">
         <?php foreach ( $references as $reference ) :
 
@@ -62,13 +62,13 @@ if ( $query->have_posts() ) {
           if ( ! empty( $reference['quote'] ) ) : ?>
 
           <div class="hreview testimonial">
-            <?php if ( ! empty( $reference['quote_person_image'] ) ) : ?>
+													<?php if ( ! empty( $reference['quote_person_image'] ) ) : ?>
               <div class="testimonial-avatar" style="background-image: url('<?php echo wp_get_attachment_image_url( $reference['quote_person_image'], 'medium' ) ?>')"></div>
             <?php endif; ?>
 
             <div class="testimonial-content">
               <div class="description">
-                <?php echo wpautop( $reference['quote'] ); // WPCS: XSS OK ?>
+													<?php echo wpautop( $reference['quote'] ); // WPCS: XSS OK ?>
               </div>
 
               <abbr class="rating screen-reader-text" title="5">*****</abbr>
@@ -79,7 +79,7 @@ if ( $query->have_posts() ) {
             </div>
           </div>
 
-          <?php endif; ?>
+													<?php endif; ?>
         <?php endforeach; ?>
       </div>
     <?php endif; ?>
