@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:50:23
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-14 16:34:13
+ * @Last Modified time: 2020-07-15 14:29:36
  *
  * @package dude
  */
@@ -52,8 +52,15 @@ if ( ! $references ) {
 <section class="block block-references">
   <div class="container">
 
-    <div class="reference-slider">
-      <div class="reference-wrapper">
+    <header class="block-head">
+      <h2 class="block-title screen-reader-text">Töitämme</h2>
+
+      <div class="floating-actions">
+        <div class="custom-arrows-references"></div>
+      </div>
+    </header>
+
+      <div class="reference-wrapper reference-slider">
 
         <?php foreach ( $references as $reference ) : ?>
 
@@ -61,21 +68,23 @@ if ( ! $references ) {
             <a href="<?php echo $reference['permalink'] ?>" class="global-link"><span class="screen-reader-text"><?php echo esc_html( $reference['title'] ) ?></span></a>
 
             <div class="reference-image">
-              <div class="background-image preview lazyload" style="background-image: url('<?php echo $reference['image_preload_url']; ?>');" data-src="<?php echo $reference['image_url']; ?>" data-src-mobile="<?php echo $reference['image_url_mobile']; ?>"></div>
-              <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : // phpcs:ignore ?> style="background-image: url('<?php echo $reference['image_url']; ?>');"<?php endif; ?>></div>
-              <noscript><div class="background-image full-image" style="background-image: url('<?php echo $reference['image_url']; ?>');"></div></noscript>
+              <div class="image">
+                <div class="background-image preview lazyload" style="background-image: url('<?php echo $reference['image_preload_url']; ?>');" data-src="<?php echo $reference['image_url']; ?>" data-src-mobile="<?php echo $reference['image_url_mobile']; ?>" aria-hidden="true"></div>
+                <div aria-hidden="true" class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : // phpcs:ignore ?> style="background-image: url('<?php echo $reference['image_url']; ?>');"<?php endif; ?>></div>
+                <noscript><div aria-hidden="true" class="background-image full-image" style="background-image: url('<?php echo $reference['image_url']; ?>');"></div></noscript>
+              </div>
+
+              <div class="reference-content">
+                <p aria-describedby="reference-<?php echo esc_attr( $reference['title'] ) ?>"><?php echo esc_html( $reference['title'] ) ?></p>
+                  <h3 id="reference-<?php echo esc_attr( $reference['title'] ) ?>" class="reference-title"><?php echo esc_html( $reference['excerpt'] ) ?></h3>
+              </div>
             </div>
 
-            <div class="reference-content">
-              <p aria-describedby="reference-<?php echo esc_attr( $reference['title'] ) ?>"><?php echo esc_html( $reference['title'] ) ?></p>
-              <h3 id="reference-<?php echo esc_attr( $reference['title'] ) ?>" class="reference-title"><?php echo esc_html( $reference['excerpt'] ) ?></h3>
-            </div>
           </div>
 
         <?php endforeach; ?>
 
       </div>
-    </div>
 
   </div>
 </section>
