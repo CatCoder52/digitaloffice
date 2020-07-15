@@ -1,7 +1,7 @@
 .block.block-cta-text {
   text-align: left;
-  padding-top: 25rem;
-  padding-bottom: 25rem;
+  padding-top: $padding-blocks-huge;
+  padding-bottom: $padding-blocks-huge;
 
   .container {
     overflow: visible;
@@ -28,4 +28,9 @@
   .link-wrapper {
     margin: 0;
   }
+}
+
+// Less padding if next is refrence upsell
+.block.block-cta-text + .block.block-references-one {
+  padding-top: 0;
 }

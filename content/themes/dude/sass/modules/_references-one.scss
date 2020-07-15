@@ -3,6 +3,11 @@
     margin-top: 0;
   }
 
+  .col.col-reference-image {
+    display: flex;
+    align-items: center;
+  }
+
   .content p:last-of-type {
     margin-bottom: 0;
   }
@@ -28,4 +33,8 @@
       width: auto;
     }
   }
+}
+
+.block.block-references-one + .block.block-references {
+  padding-top: 0;
 }

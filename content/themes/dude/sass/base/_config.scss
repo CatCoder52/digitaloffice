@@ -73,8 +73,6 @@ $margin-between-grid-columns-large: 9rem;
 $margin-between-text-elements: 4rem;
 
 // Paddings
-$padding-default-cols: 8rem;
-$padding-default-rows: 10rem;
 $padding-default-cols-ipad: 5rem;
 $padding-default-rows-ipad: 8rem;
 $padding-default-rows-mobile: 5rem;
@@ -88,6 +86,8 @@ $padding-accordion-content-mobile: 2rem;
 $padding-blocks-huge: 22rem;
 $padding-blocks-large: 18rem;
 $padding-blocks-medium: 12rem;
+$padding-default-cols: 8rem;
+$padding-default-rows: $padding-blocks-medium;
 
 // Transition duration and animations
 $transition-duration: .6s;

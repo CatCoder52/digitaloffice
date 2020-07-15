@@ -407,6 +407,33 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_5f0ef240080e3": {
+                    "key": "layout_5f0ef240080e3",
+                    "name": "cta-with-phone-input",
+                    "label": "CTA puhelinnumerokentällä (2020)",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f0ef240080e4",
+                            "label": "",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Tämä alue on kovakoodattu ja sitä ei voi muokata hallintapaneelista.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5ce00cad1208e": {
                     "key": "layout_5ce00cad1208e",
                     "name": "text-image",
@@ -1284,5 +1311,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1594810717
+    "modified": 1594815061
 }
