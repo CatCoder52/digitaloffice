@@ -45,8 +45,8 @@ $font-size-general-headings-mobile: 32px;
 $font-size-general-headings-desktop: 64px;
 $font-min-size: 18px;
 $font-max-size: 18px;
-$font-base-line-height: 1.55;
-$font-base-line-height-elements: 1.55;
+$font-base-line-height: 1.5;
+$font-headigns-line-height: 1.23;
 $headings-weight: 500;
 
 // Breakpoints
@@ -69,6 +69,7 @@ $margin-default-cols: 7.5rem;
 $margin-default-rows: 7.5rem;
 $margin-reasonable-space: 3.5rem;
 $margin-between-grid-columns: 6rem;
+$margin-between-text-elements: 4rem;
 
 // Paddings
 $padding-default-cols: 8rem;

@@ -130,7 +130,7 @@ a.global-link {
 // Dude specific general typography related styles
 .block-title {
   @include responsive-font($font-size-general-headings-mobile, $font-size-general-headings-desktop);
-  margin-bottom: $margin-between-grid-columns;
+  margin-bottom: $margin-between-text-elements;
   margin-top: 0;
   position: relative;
 
@@ -150,9 +150,9 @@ body .block.block-mint {
   padding: 0;
 }
 
-.upper-title {
+.block-pre-title {
   margin-top: 0;
-  margin-bottom: $margin-between-grid-columns;
+  margin-bottom: $margin-between-text-elements;
 }
 
 // Descriptions and notes

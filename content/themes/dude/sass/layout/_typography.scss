@@ -162,7 +162,7 @@ tr,
 %default {
   @include responsive-font($font-min-size, $font-max-size);
   letter-spacing: -.003em;
-  line-height: $font-base-line-height-elements;
+  line-height: $font-base-line-height;
   font-weight: 300;
 }
 
@@ -190,6 +190,11 @@ h6 {
   color: $color-headings;
   font-family: $font-headings;
   font-weight: $headings-weight;
+}
+
+h1,
+h2 {
+  line-height: $font-headigns-line-height;
 }
 
 // Based on type-scale with 14.255 base size where h1 is max 60px.

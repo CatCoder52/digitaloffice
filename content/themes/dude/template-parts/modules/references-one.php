@@ -3,7 +3,7 @@
  * @Author:             Roni Laukkarinen, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:50:23
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-15 12:00:57
+ * @Last Modified time: 2020-07-15 12:17:32
  *
  * @package dude
  */
@@ -33,9 +33,12 @@ $reference = array(
     <div class="cols cols-two">
 
       <div class="col col-content">
-        <p aria-describedby="<?php echo esc_html( sanitize_title( $reference['frontpage_upsell_title'] ) ); ?>"><?php echo esc_html( $reference['upper_title'] ); ?></p>
+        <p class="block-pre-title" aria-describedby="<?php echo esc_html( sanitize_title( $reference['frontpage_upsell_title'] ) ); ?>"><?php echo esc_html( $reference['upper_title'] ); ?></p>
         <h2 class="block-title" id="<?php echo esc_html( sanitize_title( $reference['frontpage_upsell_title'] ) ); ?>"><?php echo esc_html( $reference['frontpage_upsell_title'] ); ?></h2>
-        <?php echo wpautop( $reference['frontpage_upsell_desc'] ); // phpcs:ignore ?>
+
+        <div class="content">
+          <?php echo wpautop( $reference['frontpage_upsell_desc'] ); // phpcs:ignore ?>
+        </div>
 
         <p class="button-wrapper"><a href="<?php echo esc_html( $reference['permalink'] ) ?>" class="button button-glitch button-mint">Tutustu työhön<?php include get_theme_file_path( '/svg/arrow-right.svg' ); ?></a></p>
       </div>
