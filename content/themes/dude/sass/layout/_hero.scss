@@ -40,7 +40,7 @@
     margin-top: 0;
 
     @media (min-width: $container-ipad-landscape) {
-      font-size: 64px;
+      font-size: $font-size-general-headings-desktop;
     }
   }
 

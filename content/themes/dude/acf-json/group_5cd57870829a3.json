@@ -342,10 +342,10 @@
                     "display": "block",
                     "sub_fields": [
                         {
-                            "key": "field_5f0d8513a2ab0",
-                            "label": "",
-                            "name": "",
-                            "type": "message",
+                            "key": "field_5f0eb81422623",
+                            "label": "Valitse referenssi",
+                            "name": "selected_reference",
+                            "type": "post_object",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -354,9 +354,14 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "message": "Tähän arvotaan automaattisesti vuorokauden välein uusi päärefenssiksi merkitty referenssi.",
-                            "new_lines": "wpautop",
-                            "esc_html": 0
+                            "post_type": [
+                                "reference"
+                            ],
+                            "taxonomy": "",
+                            "allow_null": 0,
+                            "multiple": 0,
+                            "return_format": "object",
+                            "ui": 1
                         }
                     ],
                     "min": "",
@@ -1301,5 +1306,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1594732731
+    "modified": 1594800185
 }

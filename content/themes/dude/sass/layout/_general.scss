@@ -129,29 +129,14 @@ a.global-link {
 
 // Dude specific general typography related styles
 .block-title {
-  font-size: 22px;
-  margin-bottom: 10rem;
+  @include responsive-font($font-size-general-headings-mobile, $font-size-general-headings-desktop);
+  margin-bottom: $margin-between-grid-columns;
   margin-top: 0;
   position: relative;
 
-  // &:before {
-  //   width: 100vw;
-  //   left: -100vw;
-  //   height: 1px;
-  //   background: $color-body;
-  //   position: absolute;
-  //   content: '';
-  //   margin-left: -30px;
-  //   top: 12px;
-  // }
-
-  // @media (max-width: 1200px) {
-  //   max-width: 60%;
-  // }
-
-  // @media (max-width: 900px) {
-  //   max-width: 100%;
-  // }
+  @media (min-width: $container-ipad-landscape) {
+    font-size: $font-size-general-headings-desktop;
+  }
 }
 
 // Mint styles
@@ -165,11 +150,9 @@ body .block.block-mint {
   padding: 0;
 }
 
-.block-title-pre {
-  @extend %h4;
-  opacity: .5;
-  margin-bottom: 2rem;
+.upper-title {
   margin-top: 0;
+  margin-bottom: $margin-between-grid-columns;
 }
 
 // Descriptions and notes

@@ -1,6 +1,6 @@
 {
     "key": "group_5f0d90e31ea70",
-    "title": "Työ - esittely etusivulla",
+    "title": "Työ - esittely muilla sivuilla",
     "fields": [
         {
             "key": "field_5f0d90f891583",
@@ -63,6 +63,30 @@
             "maxlength": "",
             "rows": 4,
             "new_lines": ""
+        },
+        {
+            "key": "field_5f0ec371b896a",
+            "label": "Iso kuva (skew)",
+            "name": "image_skew",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": 1,
+            "mime_types": ""
         }
     ],
     "location": [
@@ -82,5 +106,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1594725380
+    "modified": 1594803091
 }
