@@ -1,6 +1,7 @@
 // Block specific
 $offset-y: 8.6rem;
-$offset-x: -6.4rem;
+$offset-x-minus: -6.4rem;
+$offset-x: 6.4rem;
 
 .block.block-latest-selected-mustread {
   background: $color-midnight;
@@ -36,9 +37,10 @@ $offset-x: -6.4rem;
       padding-bottom: $padding-blog-content-box-y;
       padding-left: $padding-blog-content-box-x;
       padding-right: $padding-blog-content-box-x;
-      transform: translate($offset-x, $offset-y);
+      transform: translate($offset-x-minus/2, $offset-y);
       position: relative;
       z-index: 2;
+      margin-right: $offset-x-minus / 2;
     }
 
     h3 {
@@ -53,6 +55,8 @@ $offset-x: -6.4rem;
 
   .image {
     position: relative;
+    transform: translateX($offset-x/2);
+    margin-left: $offset-x-minus / 2;
   }
 
   .container {

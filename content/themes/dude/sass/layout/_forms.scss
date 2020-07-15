@@ -47,6 +47,17 @@
       }
     }
 
+    &.button-white {
+      background: $color-white-two;
+      color: $color-midnight-blue;
+
+      &:hover,
+      &:focus {
+        background: $color-button-white-hover;
+        color: $color-midnight-blue;
+      }
+    }
+
     span,
     svg {
       position: relative;

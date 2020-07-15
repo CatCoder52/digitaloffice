@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 15:26:12
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-15 16:54:51
+ * @Last Modified time: 2020-07-15 18:14:51
  *
  * @package dude
  */
@@ -62,6 +62,9 @@ global $blog_latest_excerpt_override; ?>
             <div class="content">
               <h3><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
               <?php the_excerpt(); ?>
+
+              <p class="button-wrapper"><a class="button button-glitch button-white" href="<?php echo esc_url( get_the_permalink() ); ?>">Lue kirjoitus</a></p>
+
             </div>
           </div>
 
