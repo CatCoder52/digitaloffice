@@ -42,6 +42,7 @@ $font-monospace: 'Menlo', 'Courier', monospace;
 $font-size-general-small: 16px;
 $font-size-general-large: 22px;
 $font-size-general-headings-mobile: 32px;
+$font-size-general-headings-medium-ctas: 40px;
 $font-size-general-headings-desktop: 64px;
 $font-min-size: 18px;
 $font-max-size: 18px;
@@ -88,6 +89,8 @@ $padding-blocks-large: 18rem;
 $padding-blocks-medium: 12rem;
 $padding-default-cols: 8rem;
 $padding-default-rows: $padding-blocks-medium;
+$padding-cta-box-y: 7.5rem;
+$padding-cta-box-x: 10rem;
 
 // Transition duration and animations
 $transition-duration: .6s;

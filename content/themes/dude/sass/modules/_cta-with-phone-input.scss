@@ -1,2 +1,121 @@
+// Block specific variables
+$submit-width: 33px;
+
 .block.block-cta-with-phone-input {
+  padding-top: 0;
+  padding-bottom: 0;
+
+  .container {
+    background: $color-mint;
+    color: $color-midnight-blue;
+    padding-top: $padding-cta-box-y;
+    padding-bottom: $padding-cta-box-y;
+    padding-left: $padding-cta-box-x;
+    padding-right: $padding-cta-box-x;
+    display: flex;
+    align-items: center;
+
+    .col:first-of-type {
+      width: 745px;
+
+      * {
+        max-width: 645px;
+      }
+    }
+
+    .col:last-of-type {
+      width: calc(100% - 745px);
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  h2 {
+    @include responsive-font($font-size-general-headings-mobile, $font-size-general-headings-medium-ctas);
+    margin-bottom: 2rem;
+    margin-top: 0;
+    color: $color-midnight-blue;
+
+    @media (min-width: $container-ipad-landscape) {
+      font-size: $font-size-general-headings-medium-ctas;
+    }
+  }
+
+  p {
+    color: $color-midnight-blue;
+    margin: 0;
+  }
+
+  // Gravity forms
+  .gform_wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    form {
+      display: flex;
+    }
+  }
+
+  .gform_wrapper .gform_body {
+    width: calc(100% - #{$submit-width});
+  }
+
+  .gform_wrapper .gform_footer {
+    width: $submit-width;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gform_wrapper ul.gform_fields li.gfield {
+    margin: 0;
+    padding: 0;
+  }
+
+  .gform_wrapper legend.gfield_label,
+  .gform_wrapper .top_label .gfield_label {
+    @extend .screen-reader-text;
+  }
+
+  .gform_wrapper .top_label div.ginput_container,
+  .gform_wrapper .gform_footer {
+    margin: 0;
+    padding: 0;
+  }
+
+  .gform_wrapper input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']) {
+    padding: 17px 6px;
+    width: calc(100% - 22px);
+    border-bottom: 2px solid $color-midnight-blue;
+    border-right: 2px solid $color-midnight-blue;
+    border-top: 0;
+    border-left: 0;
+    margin-right: 22px;
+
+    &::placeholder {
+      color: $color-midnight-blue;
+      opacity: 1;
+    }
+  }
+
+  .gform_wrapper .gform_footer input.button,
+  .gform_wrapper .gform_page_footer input.button,
+  .gform_wrapper .gform_footer input[type=submit],
+  .gform_wrapper .gform_page_footer input[type=submit] {
+    background-image: url('../svg/paper-plane.svg');
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px;
+    width: $submit-width;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+// Exception for front page
+.block.block-testimonials + .block.block-cta-with-phone-input {
+  background: $color-midnight;
 }
