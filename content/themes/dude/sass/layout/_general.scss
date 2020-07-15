@@ -150,6 +150,18 @@ a.global-link {
   }
 }
 
+%general-heading-small {
+  @include responsive-font(20px, 24px);
+  margin-bottom: 2rem;
+  margin-top: 0;
+  line-height: 1.5;
+  font-weight: 400;
+
+  @media (min-width: $container-ipad-landscape) {
+    font-size: 24px;
+  }
+}
+
 .block-head {
   padding: 0;
 }

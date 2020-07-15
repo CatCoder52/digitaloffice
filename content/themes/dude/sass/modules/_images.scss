@@ -2,6 +2,8 @@
   background: $color-white;
   position: relative;
   z-index: 3;
+  padding-top: 0;
+  padding-bottom: 0;
 
   &.has-style-2 {
     background: transparent;
@@ -56,4 +58,8 @@
     bottom: -80px;
     right: -80px;
   }
+}
+
+.block.block-our-services + .block.block-images {
+  padding-top: $padding-blocks-large;
 }
