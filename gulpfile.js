@@ -28,6 +28,21 @@ var validatehtml = require("gulp-w3c-html-validation");
 var a11y = require("gulp-accessibility");
 var uncss = require("gulp-uncss");
 
+// Better CSS error reporting
+const printGulpPluginErrorBeautifully = require("@wulechuan/printer-for-errors-of-gulp-plugins");
+const exampleSourceFileBasePath = ".";
+const errorOfGlupPluginsPrintingConfigurations = {
+  // This simply helps the logger print shorter paths
+  // so that file paths looks better in narrow console windows.
+  basePathToShortenPrintedFilePaths: exampleSourceFileBasePath,
+
+  colorTheme: {
+    heading: {
+      lineColor: "magenta",
+    },
+  },
+};
+
 /*
 
 FILE PATHS
@@ -55,7 +70,11 @@ var handleError = function (task) {
       message: task + " failed, check the logs...",
     })(err);
 
-    util.log(util.colors.bgRed(task + " error:"), util.colors.red(err));
+    // util.log(util.colors.bgRed(task + ' error:'), util.colors.red(err));
+    printGulpPluginErrorBeautifully(
+      err,
+      errorOfGlupPluginsPrintingConfigurations
+    );
   };
 };
 
@@ -220,6 +239,7 @@ gulp.task("styles-expanded", function () {
       })
     )
 
+    .on("error", handleError("styles"))
     .pipe(postcss(plugins))
     .pipe(pixrem())
     .pipe(stylefmt({ configFile: themeDir + "/.stylelintrc" }))
