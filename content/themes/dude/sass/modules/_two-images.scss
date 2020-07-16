@@ -1,0 +1,47 @@
+.block.block-two-images {
+  .col {
+    overflow: hidden;
+    position: relative;
+    height: 459px;
+  }
+
+  .cols {
+    @include grid(2, $gutter_x: 7rem, $gutter_y: 0rem);
+  }
+
+  .container {
+    overflow: visible;
+    position: relative;
+  }
+
+  .col:nth-child(2) {
+    transform: translateY(100px);
+  }
+}
+
+body.page-id-9 .block.block-two-images {
+  padding-top: 0;
+
+  .cols {
+    display: block;
+    position: relative;
+
+    .col {
+      width: 100%;
+    }
+
+    .col:nth-child(1) {
+      height: 755px;
+    }
+
+    .col:nth-child(2) {
+      width: 372px;
+      height: 517px;
+      position: absolute;
+      z-index: 2;
+      right: 0;
+      bottom: 0;
+      transform: translate(70px, 140px);
+    }
+  }
+}

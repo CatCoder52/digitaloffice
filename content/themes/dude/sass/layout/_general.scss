@@ -41,7 +41,8 @@
 
 // Pages with alternate module colors
 body.page.page-id-9 {
-  .block.block-cta-with-phone-input {
+  .block.block-cta-with-phone-input,
+  .block.block-two-images {
     background: $color-midnight;
   }
 
