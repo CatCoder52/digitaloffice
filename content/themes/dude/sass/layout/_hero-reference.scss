@@ -1,12 +1,3 @@
-body .block.block-hero-reference {
-  .arrow-link-wrapper {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-  }
-}
-
 body .block.block-hero-reference,
 body .block-hero-person {
   // Padding here is navigation height plus regular padding which is exactly 100px in total
@@ -144,5 +135,17 @@ body .block.block-hero-reference {
         background: $color-links;
       }
     }
+  }
+}
+
+// Centered heros
+body .block.block-hero.block-hero-reference-archive {
+  .container {
+    text-align: center;
+  }
+
+  .content {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
