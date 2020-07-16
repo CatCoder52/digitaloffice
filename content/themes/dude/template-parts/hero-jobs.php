@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-16 15:00:47
+ * @Last Modified time: 2020-07-16 16:05:43
  *
  * @package dude
  */
@@ -30,7 +30,7 @@ if ( is_post_type_archive( 'reference' ) ) {
   $content = 'Olemme tehneet paljon kaikenlaista ja suurimmasta osasta hommia olemme ylpeitä. Muutamiin niistä voit tutustua täällä tarkemmin.';
 } ?>
 
-<section class="block block-hero-jobs block-hero block-hero-enable-transition">
+<section class="block block-hero-jobs block-hero">
   <div class="container">
 
     <div class="content">

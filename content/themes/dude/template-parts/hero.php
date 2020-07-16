@@ -3,37 +3,19 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:05:23
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-02-12 17:43:36
+ * @Last Modified time: 2020-07-16 16:01:21
  *
  * @package dude
  */
 
 if ( is_front_page() ) {
   include get_theme_file_path( 'template-parts/hero-fp.php' );
-} else if ( 9 === get_the_id() ) { // tech page
-  $logos = array(
-    'sievo-alt',
-    'bauermedia-alt',
-    'realsnacks-alt',
-    'elonen-flat',
-    'blackbruin-alt',
-    'sohwi-alt',
-    'bitwise-alt',
-  );
-
+} else if ( 9 === get_the_id() ) {
   include get_theme_file_path( 'template-parts/hero-service.php' );
-} else if ( 4485 === get_the_id() ) { // visual page
-  $logos = array(
-    'abbq-flat',
-    'aicci-alt',
-    'nilkko-alt',
-    'barexplosive-alt',
-    'byemmi-alt',
-    'verena-alt',
-    'varjola-alt',
-  );
-
+} else if ( 4485 === get_the_id() ) {
   include get_theme_file_path( 'template-parts/hero-service.php' );
+} else if ( 4449 === get_the_id() ) {
+  include get_theme_file_path( 'template-parts/hero-company.php' );
 } else if ( 4487 === get_the_id() ) {
   include get_theme_file_path( 'template-parts/hero-contact.php' );
 } else if ( 4491 === get_the_id() ) {

@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-02-12 17:43:37
+ * @Last Modified time: 2020-07-16 16:06:02
  *
  * @package dude
  */
@@ -20,7 +20,7 @@ $content = '<p>Haluatko olla oman elämäsi Dude tai Dudette? Koetko vahvaa tunn
 <p class="details">Dude maksaa postarit, jos lähetellään Suomen sisällä. Toimitusajat riippuu ihan siitä miten me jaksetaan näitä pakkailla ja postitella. Nämä on sen verran tyylikästä, että palautella ei tartte - eikä otettais vastaankaan. Jos kysyttävää niin heitä viestiä vaikka <a href="#" class="open-chat">chatin avulla tästä</a> tai sähköpostilla <a href="mailto:moro@dude.fi">moro@dude.fi</a>.</p>';
 ?>
 
-<section class="block block-hero-merch block-hero block-hero-side-columns block-hero-enable-transition">
+<section class="block block-hero-merch block-hero block-hero-side-columns">
   <div class="container">
 
     <div class="content">

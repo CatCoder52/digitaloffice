@@ -12,7 +12,7 @@ get_header(); ?>
 	<main role="main" id="main" class="site-main">
 		<div class="container">
 
-<section class="block block-hero block-hero-enable-transition block-hero-404">
+<section class="block block-hero block-hero-404">
   <div class="container opacity-on-load-instant">
 
     <div class="content">

@@ -370,17 +370,6 @@ swup.on("contentReplaced", function () {
       }
     );
 
-    // Add transition class after all animations are completed
-    setTimeout(function () {
-      $(".block-hero").addClass("block-hero-enable-transition");
-    }, 3000);
-
-    // Instant fade in
-    $(".opacity-on-load-instant").addClass("fade-in");
-
-    // Show selection only until loaded
-    $(".block-hero-enable-transition .content").addClass("has-loaded");
-
     // Set up back to top link
     var moveTo = new MoveTo();
     var target = document.getElementById("target");

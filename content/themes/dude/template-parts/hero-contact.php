@@ -3,14 +3,14 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-14 14:23:49
+ * @Last Modified time: 2020-07-16 16:05:33
  *
  * @package dude
  */
 
 ?>
 
-<section class="block block-hero block-hero-contact block-hero-enable-transition">
+<section class="block block-hero block-hero-contact">
   <div class="container">
 
     <div class="content content-contact">

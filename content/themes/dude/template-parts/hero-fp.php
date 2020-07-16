@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-13 17:16:04
+ * @Last Modified time: 2020-07-16 16:05:40
  *
  * @package dude
  */
@@ -18,7 +18,7 @@ if ( has_post_thumbnail() ) {
 }
 ?>
 
-<section class="block block-hero block-hero-fp block-hero-enable-transition">
+<section class="block block-hero block-hero-fp">
   <div class="container">
 
     <div class="content">
