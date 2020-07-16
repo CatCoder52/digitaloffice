@@ -71,6 +71,10 @@
   }
 
   .reference-wrapper {
+    &.reference-wrapper-cols {
+      @include grid(3, $gutter_x: $margin-between-grid-columns-large, $gutter_y: 14rem);
+    }
+
     .reference-title {
       font-size: 24px;
       margin-top: 0;

@@ -19,8 +19,9 @@ get_header(); ?>
 <div id="content" class="content-area">
   <main role="main" id="main" class="site-main">
 
-    <?php include get_theme_file_path( 'template-parts/hero.php' );
-    include get_theme_file_path( 'template-parts/content-modular.php' );
+    <?php
+      include get_theme_file_path( 'template-parts/hero.php' );
+      include get_theme_file_path( 'template-parts/content-modular.php' );
     ?>
 
   </main><!-- #main -->

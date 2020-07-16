@@ -108,6 +108,12 @@ body.page-id-4485 {
   }
 }
 
+body.post-type-archive {
+  .block.block-cta-with-phone-input {
+    background: $color-midnight;
+    padding-bottom: $padding-blocks-medium;
+  }
+}
 
 // 404 stuff
 .error404 .block.block-footer.site-footer {

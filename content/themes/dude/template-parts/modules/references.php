@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:50:23
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-16 14:13:43
+ * @Last Modified time: 2020-07-16 15:53:52
  *
  * @package dude
  */
@@ -25,24 +25,24 @@ if ( ! $references ) {
   );
 
   if ( isset( $big_reference_ids ) ) {
-    $args['post__not_in'] = $big_reference_ids;
+		$args['post__not_in'] = $big_reference_ids;
   }
 
   $query = new WP_Query( $args );
   if ( $query->have_posts() ) {
-    while ( $query->have_posts() ) {
-      $query->the_post();
+		while ( $query->have_posts() ) {
+		  $query->the_post();
 
-      $references[] = array(
-        'id'                => get_the_id(),
-        'title'             => get_the_title(),
-        'image_preload_url' => get_the_post_thumbnail_url( get_the_id(), 'tiny-preload-thumbnail' ),
-        'image_url'         => get_the_post_thumbnail_url( get_the_id(), 'large' ),
-        'image_url_mobile'  => get_the_post_thumbnail_url( get_the_id(), 'large' ),
-        'excerpt'           => get_post_meta( get_the_id(), 'short_desc', true ),
-        'permalink'         => get_the_permalink(),
-      );
-    }
+		  $references[] = array(
+			'id'                => get_the_id(),
+			'title'             => get_the_title(),
+			'image_preload_url' => get_the_post_thumbnail_url( get_the_id(), 'tiny-preload-thumbnail' ),
+			'image_url'         => get_the_post_thumbnail_url( get_the_id(), 'large' ),
+			'image_url_mobile'  => get_the_post_thumbnail_url( get_the_id(), 'large' ),
+			'excerpt'           => get_post_meta( get_the_id(), 'short_desc', true ),
+			'permalink'         => get_the_permalink(),
+		  );
+			}
   }
   wp_reset_postdata();
 
@@ -60,31 +60,28 @@ if ( ! $references ) {
       </div>
     </header>
 
-      <div class="reference-wrapper reference-slider">
+    <div class="reference-wrapper reference-slider">
 
-        <?php foreach ( $references as $reference ) : ?>
+      <?php foreach ( $references as $reference ) : ?>
+        <div class="reference">
+          <a href="<?php echo $reference['permalink'] ?>" class="global-link"><span class="screen-reader-text"><?php echo esc_html( $reference['title'] ) ?></span></a>
 
-          <div class="reference">
-            <a href="<?php echo $reference['permalink'] ?>" class="global-link"><span class="screen-reader-text"><?php echo esc_html( $reference['title'] ) ?></span></a>
-
-            <div class="reference-image">
-              <div class="image">
-                <div class="background-image preview lazyload" style="background-image: url('<?php echo $reference['image_preload_url']; ?>');" data-src="<?php echo $reference['image_url']; ?>" data-src-mobile="<?php echo $reference['image_url_mobile']; ?>" aria-hidden="true"></div>
-                <div aria-hidden="true" class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : // phpcs:ignore ?> style="background-image: url('<?php echo $reference['image_url']; ?>');"<?php endif; ?>></div>
-                <noscript><div aria-hidden="true" class="background-image full-image" style="background-image: url('<?php echo $reference['image_url']; ?>');"></div></noscript>
-              </div>
-
-              <div class="reference-content">
-                <p aria-describedby="reference-<?php echo esc_attr( $reference['title'] ) ?>"><?php echo esc_html( $reference['title'] ) ?></p>
-                  <h3 id="reference-<?php echo esc_attr( $reference['title'] ) ?>" class="reference-title"><?php echo esc_html( $reference['excerpt'] ) ?></h3>
-              </div>
+          <div class="reference-image">
+            <div class="image">
+              <div class="background-image preview lazyload" style="background-image: url('<?php echo $reference['image_preload_url']; ?>');" data-src="<?php echo $reference['image_url']; ?>" data-src-mobile="<?php echo $reference['image_url_mobile']; ?>" aria-hidden="true"></div>
+              <div aria-hidden="true" class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : // phpcs:ignore ?> style="background-image: url('<?php echo $reference['image_url']; ?>');"<?php endif; ?>></div>
+              <noscript><div aria-hidden="true" class="background-image full-image" style="background-image: url('<?php echo $reference['image_url']; ?>');"></div></noscript>
             </div>
 
+            <div class="reference-content">
+              <p aria-describedby="reference-<?php echo esc_html( sanitize_title( $reference['title'] ) ) ?>"><?php echo esc_html( $reference['title'] ) ?></p>
+              <h3 id="reference-<?php echo esc_html( sanitize_title( $reference['title'] ) ); ?>" class="reference-title"><?php echo esc_html( $reference['excerpt'] ) ?></h3>
+            </div>
           </div>
 
-        <?php endforeach; ?>
-
-      </div>
+        </div>
+      <?php endforeach; ?>
+    </div>
 
   </div>
 </section>
