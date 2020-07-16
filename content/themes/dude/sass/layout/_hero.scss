@@ -66,6 +66,8 @@
 
   .container {
     overflow: visible;
+    position: relative;
+    z-index: 2;
   }
 
   .hero-description {

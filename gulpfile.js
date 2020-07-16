@@ -622,6 +622,7 @@ gulp.task("js", function () {
       themeDir + "/node_modules/blueimp-gallery/js/blueimp-gallery-youtube.js",
       themeDir + "/node_modules/blueimp-gallery/js/jquery.blueimp-gallery.js",
       themeDir + "/js/src/scripts.js",
+      themeDir + "/js/src/swup.js",
     ])
     .pipe(sourcemaps.init())
     .pipe(concat("all.js"))

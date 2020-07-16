@@ -9,18 +9,23 @@
     color: $color-white;
   }
 
+  h1 {
+    margin-bottom: 3rem;
+  }
+
   .container {
     color: $color-white;
-    text-align: center;
   }
 
   .content {
     max-width: 870px;
-    margin-left: auto;
-    margin-right: auto;
 
     p {
       @extend %general-heading-small;
+    }
+
+    p:not(.button-wrapper) {
+      margin-bottom: 5rem;
     }
   }
 }
