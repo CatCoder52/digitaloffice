@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-14 14:25:37
+ * @Last Modified time: 2020-07-16 15:00:17
  *
  * @package dude
  */
@@ -31,9 +31,9 @@ if ( has_post_thumbnail() ) {
 
     <div class="content">
       <div class="side-content-box">
-        <h1 class="animate animate-1"><?php echo $title ?></h1>
+        <h1><?php echo $title ?></h1>
 
-        <div class="hero-description animate animate-2">
+        <div class="hero-description">
           <?php if ( ! empty( $content ) ) {
             echo wpautop( $content );
           }
@@ -41,11 +41,11 @@ if ( has_post_thumbnail() ) {
         </div>
 
         <?php if ( 4449 === get_the_id() ) : ?>
-          <p class="cta-link animate animate-3"><a href="<?php echo get_post_type_archive_link( 'reference' ) ?>">Mitä helevettiä? Missä työnäytteet?</a></p>
+          <p class="cta-link"><a href="<?php echo get_post_type_archive_link( 'reference' ) ?>">Mitä helevettiä? Missä työnäytteet?</a></p>
         <?php endif; ?>
 
         <?php if ( 4489 === get_the_id() ) : ?>
-          <p><a class="cta-link cta-link-white animate animate-3" href="https://handbook.dude.fi">Lue Duden handbookia</a></p>
+          <p><a class="cta-link cta-link-white" href="https://handbook.dude.fi">Lue Duden handbookia</a></p>
         <?php endif; ?>
       </div>
     </div>

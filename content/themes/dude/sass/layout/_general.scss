@@ -71,6 +71,14 @@ body.page.page-id-9 {
   }
 }
 
+// Pages where all blocks are dark
+body.post-type-archive-reference {
+  .block {
+    background-color: $color-midnight;
+  }
+}
+
+// Design page is only partial dark
 body.page-id-4485 {
   .block.block-cta-with-phone-input {
     background: $color-midnight;

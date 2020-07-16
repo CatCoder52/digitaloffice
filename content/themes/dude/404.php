@@ -17,13 +17,13 @@ get_header(); ?>
 
     <div class="content">
       <div class="side-content-box contact-information">
-        <h1 class="animate animate-1">Voi prkl! 404! 666!</h1>
+        <h1>Voi prkl! 404! 666!</h1>
 
-        <div class="hero-description animate animate-2">
+        <div class="hero-description">
           <p>Sivua tai tiedostoa ei löydy, eikä täällä ei ole mitään nähtävää, sori!</p>
         </div>
 
-          <p><a class="cta-link cta-link-white animate animate-3" href="<?php echo get_home_url(); ?>">Takaisin etusivulle</a></p>
+          <p><a class="cta-link cta-link-white" href="<?php echo get_home_url(); ?>">Takaisin etusivulle</a></p>
       </div>
     </div>
 

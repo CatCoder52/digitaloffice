@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-14 14:49:41
+ * @Last Modified time: 2020-07-16 15:00:47
  *
  * @package dude
  */
@@ -35,15 +35,15 @@ if ( is_post_type_archive( 'reference' ) ) {
 
     <div class="content">
       <div class="side-content-box contact-information">
-        <h1 class="animate animate-1"><?php echo $title ?></h1>
+        <h1><?php echo $title ?></h1>
 
-        <div class="hero-description animate animate-2">
+        <div class="hero-description">
           <?php if ( ! empty( $content ) ) {
             echo wpautop( $content ); // phpcs:ignore
           } ?>
         </div>
 
-        <ul class="jobs animate animate-3">
+        <ul class="jobs">
           <li class="animate animate-3"><a href="<?php echo get_page_link( 6117 ); ?>">WordPress-kehittäjää <span class="label">Haku päällä nyt!</span></a></li>
         </ul>
       </div>

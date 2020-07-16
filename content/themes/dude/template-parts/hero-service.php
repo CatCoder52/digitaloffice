@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-14 15:26:20
+ * @Last Modified time: 2020-07-16 15:00:24
  *
  * @package dude
  */
@@ -37,10 +37,10 @@ $button = get_post_meta( get_the_id(), 'hero_button', true );
 
 <div class="container">
 
-    <h1 class="animate animate-1"><?php the_title() ?></h1>
+    <h1><?php the_title() ?></h1>
 
     <div class="service-hero-wrap">
-      <div class="content animate animate-2">
+      <div class="content">
         <?php if ( ! empty( $content ) ) {
           echo wpautop( $content ); // phpcs:ignore
         } ?>
