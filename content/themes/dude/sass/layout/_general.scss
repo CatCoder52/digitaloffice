@@ -231,6 +231,18 @@ a.global-link {
   }
 }
 
+%general-heading-large {
+  @include responsive-font($font-size-general-headings-mobile, $font-size-general-headings-desktop);
+  margin-bottom: 4rem;
+  margin-top: 0;
+  line-height: 1.5;
+  font-weight: 400;
+
+  @media (min-width: $container-ipad-landscape) {
+    font-size: $font-size-general-headings-desktop;
+  }
+}
+
 %general-heading-small {
   @include responsive-font(20px, 24px);
   margin-bottom: 2rem;

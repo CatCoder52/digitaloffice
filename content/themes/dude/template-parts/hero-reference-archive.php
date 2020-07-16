@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-16 15:00:05
+ * @Last Modified time: 2020-07-16 15:33:35
  *
  * @package dude
  */
@@ -15,8 +15,8 @@ $content = 'Olemme toteuttaneet monipuolisesti verkkosivuja ja -palveluita erila
 <section class="block block-hero block-hero-reference-archive block-hero-enable-transition">
   <div class="container">
 
-    <p class="block-pre-title" aria-describedby="<?php echo esc_html( sanitize_title( $reference['frontpage_upsell_title'] ) ); ?>"><?php echo esc_html( $reference['upper_title'] ); ?></p>
-    <h1><?php echo esc_html( $title ); ?></h1>
+    <h1 class="block-pre-title" aria-describedby="<?php echo esc_html( sanitize_title( $title ) ); ?>"><?php echo esc_html( $title ); ?></h1>
+    <h2 class="hero-title" id="<?php echo esc_html( sanitize_title( $title ) ); ?>">Näistä olemme erityisen ylpeitä</h2>
 
     <div class="service-hero-wrap">
       <div class="content">

@@ -8,6 +8,12 @@
   background-color: $color-white;
   height: 80vh;
 
+  .block-pre-title {
+    @extend %default;
+    margin: 0 0 4rem;
+    font-size: 20px;
+  }
+
   .content {
     max-width: 60rem;
   }
@@ -33,6 +39,10 @@
     @media (min-width: $container-ipad) {
       margin-right: 2.8rem;
     }
+  }
+
+  .hero-title {
+    @extend %general-heading-large;
   }
 
   h1 {
