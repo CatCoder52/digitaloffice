@@ -175,9 +175,9 @@ if ( $show_chat_greeting ) {
         </button>
 
         <nav id="nav" class="nav-primary" role="navigation" aria-expanded="false">
-          <div class="top-button-holder">
-            <a href="<?php get_the_permalink( 6357 ) ?>" class="button">Aloitetaan projektisi</a>
-          </div>
+          <p class="top-button-holder">
+            <a href="<?php echo esc_url( get_the_permalink( 6357 ) ); ?>" class="button button-glitch">Aloitetaan projektisi<?php include get_theme_file_path( '/svg/arrow-right.svg' ); ?></a>
+          </p>
           <div class="cols">
             <div class="col col-secondary-nav">
               <ul class="menu-items nav-menu">
