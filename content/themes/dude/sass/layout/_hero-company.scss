@@ -1,5 +1,29 @@
 .block.block-hero.block-company {
+  display: block;
+  height: auto;
+  padding-top: 30rem;
+  padding-left: 0;
+  padding-right: 0;
+
+  .hero-description {
+    margin-bottom: 0;
+  }
+
+  .container {
+    transform: none;
+  }
+
   .visual {
-    position: relative;
+    @include aspect-ratio(1680, 398);
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .container {
+    display: block;
+  }
+
+  .content {
+    margin-bottom: 20rem;
   }
 }

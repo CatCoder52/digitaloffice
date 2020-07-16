@@ -37,18 +37,18 @@
     bottom: 2px;
     left: 0;
     z-index: -1;
-    transition: all $transition-duration;
+    transition: all .12s ease-in-out;
   }
 
   &:hover {
-    color: $color-white;
+    color: $color-midnight;
   }
 
   &:hover:after {
-    background: $color-body;
-    height: 25px;
-    width: calc(100% + 8px);
-    left: -4px;
+    background: $color-mint;
+    height: 22px;
+    width: 100%;
+    left: -1px;
   }
 }
 

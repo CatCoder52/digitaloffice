@@ -74,6 +74,74 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_5f1064c3e66f5": {
+                    "key": "layout_5f1064c3e66f5",
+                    "name": "image-in-container",
+                    "label": "Yksi kuva containerissa (2020)",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f1064d3e66f6",
+                            "label": "Kuva",
+                            "name": "image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "",
+                            "preview_size": "medium",
+                            "library": "",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_5f1064e1e66f7": {
+                    "key": "layout_5f1064e1e66f7",
+                    "name": "image-full-width",
+                    "label": "Yksi kokoleveä kuva (2020)",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f1064e1e66f8",
+                            "label": "Kuva",
+                            "name": "image_full_width",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5cd5810ec53d0": {
                     "key": "layout_5cd5810ec53d0",
                     "name": "our-services",
@@ -1338,5 +1406,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1594829574
+    "modified": 1594910595
 }
