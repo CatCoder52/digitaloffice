@@ -43,6 +43,91 @@ body {
 .nav-primary {
   .cols.cols-navs {
     @include grid(2, $gutter_x: 0rem, $gutter_y: 0rem);
+
+    ul,
+    li {
+      line-height: 1.9;
+    }
+
+    .col.col-secondary-nav {
+      border-right: 1px solid rgba($color-white, .5);
+    }
+
+    .col.col-primary-nav {
+      display: flex;
+      justify-content: flex-end;
+
+      li a {
+        @media (min-width: $container-ipad-landscape) {
+          font-size: 50px;
+        }
+      }
+    }
+
+    .col.col-primary-nav .menu-item {
+      text-align: right;
+    }
+
+    li a {
+      font-size: $font-size-general-headings-mobile;
+    }
+
+    a:hover {
+      color: $color-white;
+    }
+  }
+
+  .cols.cols-contact {
+    @include grid(2, $gutter_x: 0rem, $gutter_y: 0rem);
+    border-top: 1px solid rgba($color-white, .5);
+    margin-right: 6.8rem;
+    margin-top: 4rem;
+    padding-top: $margin-between-grid-columns;
+
+    .contact-title {
+      color: $color-white;
+      font-size: 22px;
+      text-align: left;
+      margin-top: 0;
+      margin-bottom: 2.2rem;
+    }
+
+    p,
+    button,
+    a {
+      @extend %default;
+      text-align: left;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    button.chat {
+      @extend %default;
+      color: $color-white;
+      appearance: none;
+      background: transparent;
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    a,
+    button.chat {
+      color: $color-white;
+      box-shadow: inset 0 0 0 rgba($color-white, .3), 0 1px 0 rgba($color-white, .3);
+      transition: box-shadow .22s;
+      overflow: hidden;
+
+      &:hover {
+        box-shadow: inset 0 -1px 0 $color-mint, 0 1px 0 $color-mint;
+      }
+    }
   }
 }
 
@@ -193,7 +278,6 @@ body {
 // Start project button
 .top-button-holder {
   margin: 0;
-  transform: translateY(-82px);
   z-index: 6;
   position: relative;
 
@@ -237,18 +321,6 @@ body {
 
 .nav-primary-desktop .menu-items .menu-item.dude-nav-more {
   margin-left: 2rem;
-}
-
-// Fade out other items when hovering the last one
-.menu-items.fade-out .menu-item a,
-.menu-items.fade-out .menu-item a:after,
-.menu-items.fade-out .menu-item button,
-.menu-items.fade-out .menu-item button:after {
-  opacity: .2;
-}
-
-.menu-items.fade-out .menu-item.dude-nav-more button {
-  opacity: 1;
 }
 
 // When desktop nav open, hide links excepts More-link
@@ -379,20 +451,15 @@ body {
       button:not(.nav-toggle-desktop) {
         font-size: 18px;
         color: $color-nav-links;
-        padding: 2rem 0;
+        padding: 2rem 0 .1rem;
         font-weight: 400;
         transition: all .33s;
+        box-shadow: inset 0 0 0 rgba($color-white, 0), 0 1px 0 rgba($color-white, 0);
+        transition: box-shadow .22s;
+        overflow: hidden;
 
-        &:after {
-          width: 0;
-          height: 1px;
-          background: $color-white;
-          position: relative;
-          content: '';
-          display: block;
-          transition: all $transition-duration;
-          bottom: -.4rem;
-          opacity: .5;
+        &:hover {
+          box-shadow: inset 0 -1px 0 $color-mint, 0 1px 0 $color-mint;
         }
 
         &.disabled {
@@ -406,13 +473,6 @@ body {
         &.highlighted,
         &.current {
           color: $color-nav-links;
-        }
-
-        &:hover:after,
-        &.highlighted:after,
-        &.current:after {
-          width: 100%;
-          opacity: 1;
         }
       }
 
