@@ -98,7 +98,8 @@ body.js-nav-active {
     background-color: $color-white;
   }
 
-  .nav-toggle {
+  .nav-toggle,
+  .nav-toggle:focus {
     .hamburger-inner,
     .hamburger-inner::before,
     .hamburger-inner::after,

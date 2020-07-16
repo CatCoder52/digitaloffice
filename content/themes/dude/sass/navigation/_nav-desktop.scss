@@ -16,6 +16,18 @@ $absolute-navigation: true;
 // Prevent scrolling when nav open
 body.js-nav-active {
   overflow: hidden;
+
+  .nav-toggle,
+  .nav-toggle:focus {
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after,
+    &:focus .hamburger-inner:focus::before,
+    &:focus .hamburger-inner:focus::after {
+      background-color: $color-white;
+      color: $color-white;
+    }
+  }
 }
 
 .toggle-text {
