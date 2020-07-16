@@ -37,6 +37,13 @@ lazyload(images, {
   threshold: 0,
 });
 
+// Swup starts
+swup.on("contentReplaced", function () {
+  // Define Javascript is active by changing the body class
+  document.body.classList.remove("no-js");
+  document.body.classList.add("js");
+});
+
 // jQuery start
 (function ($) {
   // Slide numbering
