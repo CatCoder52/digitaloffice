@@ -96,7 +96,7 @@
     LazyLoad.prototype = {
       init: function () {
         /* Without observers load everything and bail out early.
-             This affects some iOS and Windows Phones */
+               This affects some iOS and Windows Phones */
         if (!root.IntersectionObserver) {
           this.loadImages();
           return;
@@ -123,6 +123,8 @@
               ) {
                 img.nextElementSibling.classList.add("reveal");
               }
+
+              console.log(img);
 
               self.observer.unobserve(entry.target);
               let src = img.getAttribute(self.settings.src);

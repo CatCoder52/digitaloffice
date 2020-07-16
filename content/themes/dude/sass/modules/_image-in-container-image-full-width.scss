@@ -6,3 +6,9 @@
     max-width: 100%;
   }
 }
+
+.block.block-image-full-width img,
+.block.block-image-in-container img {
+  position: relative;
+  z-index: 9;
+}

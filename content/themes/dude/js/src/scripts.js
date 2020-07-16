@@ -29,8 +29,8 @@ const swup = new Swup({
   animationSelector: '[class*="swup-transition-"]',
   plugins: [
     new SwupScriptsPlugin({
-      head: false,
-      body: false,
+      head: true,
+      body: true,
       optin: true,
     }),
     new SwupBodyClassPlugin(),
@@ -43,7 +43,15 @@ swup.on("contentReplaced", function () {
   document.body.classList.remove("no-js");
   document.body.classList.add("js");
 
-  // navigation.js
+  // Init lazyload
+  let images = document.querySelectorAll(".lazyload");
+  lazyload(images, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0,
+  });
+
+  //navigation.js
   (function ($) {
     // Define nav stuff
     var menuContainer = $(".nav-container");
