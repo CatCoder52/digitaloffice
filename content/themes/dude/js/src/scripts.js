@@ -43,18 +43,7 @@ swup.on("contentReplaced", function () {
   document.body.classList.remove("no-js");
   document.body.classList.add("js");
 
-  /*
-An accessible menu for WordPress
-
-https://github.com/theme-smith/accessible-nav-wp
-Kirsten Smith (kirsten@themesmith.co.uk)
-Licensed GPL v.2 (http://www.gnu.org/licenses/gpl-2.0.html)
-
-This work derived from:
-https://github.com/WordPress/twentysixteen (GPL v.2)
-https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-arrow-nav (GPL v.2)
-*/
-
+  // navigation.js
   (function ($) {
     // Define nav stuff
     var menuContainer = $(".nav-container");
@@ -323,7 +312,6 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
       if (-1 !== container.className.indexOf("is-active")) {
         closeMenu(); // Close menu.
       } else {
-        html.className += " disable-scroll";
         body.className += " js-nav-active";
         container.className += " is-active";
         button.className += " is-active";
@@ -403,7 +391,6 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
 
     // Close menu function.
     function closeMenu() {
-      html.className = html.className.replace(" disable-scroll", "");
       body.className = body.className.replace(" js-nav-active", "");
       container.className = container.className.replace(" is-active", "");
       button.className = button.className.replace(" is-active", "");
@@ -414,7 +401,6 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
 
     // Close menu function.
     function closeMenu_desktop() {
-      html.className = html.className.replace(" disable-scroll", "");
       //body.className      = body.className.replace( ' js-nav-active', '' );
       //container.className = container.className.replace( ' is-active', '' );
       button.className = button.className.replace(" is-active", "");

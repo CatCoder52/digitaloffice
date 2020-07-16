@@ -58,11 +58,6 @@ $nav-open-from-top: false;
   @extend .hamburger--spin;
 }
 
-// Disable scroll on html body when menu is opened.
-.disable-scroll {
-  overflow: hidden;
-}
-
 // Opening animations
 .js.js-nav-active {
   .nav-primary {

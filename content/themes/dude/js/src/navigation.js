@@ -268,7 +268,6 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
     if (-1 !== container.className.indexOf("is-active")) {
       closeMenu(); // Close menu.
     } else {
-      html.className += " disable-scroll";
       body.className += " js-nav-active";
       container.className += " is-active";
       button.className += " is-active";
@@ -348,7 +347,6 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
 
   // Close menu function.
   function closeMenu() {
-    html.className = html.className.replace(" disable-scroll", "");
     body.className = body.className.replace(" js-nav-active", "");
     container.className = container.className.replace(" is-active", "");
     button.className = button.className.replace(" is-active", "");
@@ -359,7 +357,6 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
 
   // Close menu function.
   function closeMenu_desktop() {
-    html.className = html.className.replace(" disable-scroll", "");
     //body.className      = body.className.replace( ' js-nav-active', '' );
     //container.className = container.className.replace( ' is-active', '' );
     button.className = button.className.replace(" is-active", "");
