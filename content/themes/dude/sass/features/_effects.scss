@@ -190,7 +190,7 @@ $glitch-steps: 20;
   content: attr(data-text);
   position: absolute;
   left: -2px;
-  text-shadow: -5px 0 #cd28c6;
+  text-shadow: -5px 0 #ff37ae;
   background: $color-white;
   overflow: hidden;
   top: 16px;
@@ -202,7 +202,7 @@ $glitch-steps: 20;
   content: attr(data-text);
   position: absolute;
   left: 2px;
-  text-shadow: 0 0 $color-mint;
+  text-shadow: 0 0 #76ff9b;
   background: $color-white;
   overflow: hidden;
   top: 16px;
@@ -236,7 +236,8 @@ $glitch-steps: 20;
 
   @for $i from 0 through $steps {
     #{percentage($i*(1/$steps))} {
-      text-shadow: -5px 0 $color-mint;
+      $randomizepx: random(5);
+      text-shadow: #{$randomizepx}px 0 #76ff9b;
       $top: random(100);
       $bottom: random(101 - $top);
       clip-path: inset(#{$top}px 0 #{$bottom}px 0);
@@ -370,8 +371,8 @@ $glitch-blue: #3ffeff;
   }
 
   &:hover {
-    background: white;
-    color: black;
+    background: $color-white;
+    color: $color-black;
   }
 
   &:hover:before {
