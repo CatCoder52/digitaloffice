@@ -97,7 +97,7 @@
 }
 
 .cols.cols-two {
-  @include grid(2, $gutter_x: 0rem, $gutter_y: 0rem);
+  @include grid(2, $gutter_x: $margin-between-grid-columns, $gutter_y: $margin-between-grid-columns);
   margin-bottom: 10rem;
 
   &.col-two-opposite .col-content {

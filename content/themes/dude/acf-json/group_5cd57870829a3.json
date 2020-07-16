@@ -354,6 +354,33 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_5f106d5aa9759": {
+                    "key": "layout_5f106d5aa9759",
+                    "name": "mission-vision",
+                    "label": "Missio & Visio (2020)",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f106d5aa975a",
+                            "label": "",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Tämä alue on kovakoodattu ja sitä ei voi muokata hallintapaneelista.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5cd58187c53d2": {
                     "key": "layout_5cd58187c53d2",
                     "name": "references",
@@ -758,33 +785,14 @@
                 },
                 "layout_5ce01c424d7a1": {
                     "key": "layout_5ce01c424d7a1",
-                    "name": "accordion",
-                    "label": "Haitari (2019)",
+                    "name": "values",
+                    "label": "Arvot (2020)",
                     "display": "block",
                     "sub_fields": [
                         {
                             "key": "field_5ce01c494d7a2",
                             "label": "Otsikko",
                             "name": "title",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        },
-                        {
-                            "key": "field_5ce01c5a4d7a3",
-                            "label": "Alaotsikko",
-                            "name": "subtitle",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -1406,5 +1414,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1594910595
+    "modified": 1594913559
 }

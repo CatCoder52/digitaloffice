@@ -1,0 +1,23 @@
+.block.block-mission-vision {
+  h2 {
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: $margin-between-text-elements;
+  }
+
+  .cols.cols-two {
+    @include grid(2, $gutter_x: $margin-between-grid-columns, $gutter_y: $margin-between-grid-columns);
+
+    .col {
+      display: flex;
+    }
+
+    svg {
+      margin-right: $margin-between-grid-columns;
+    }
+  }
+}
+
+.block.block-title-left-text-right + .block.block-mission-vision {
+  padding-top: 0;
+}

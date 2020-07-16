@@ -12,3 +12,10 @@
   position: relative;
   z-index: 9;
 }
+
+.block.block-title-left-text-right + .block.block-image-full-width,
+.block.block-title-left-text-right + .block.block-image-in-container,
+.block.block-mission-vision + .block.block-image-full-width,
+.block.block-mission-vision + .block.block-image-in-container {
+  padding-top: 0;
+}
