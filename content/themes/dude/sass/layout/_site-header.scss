@@ -1,5 +1,6 @@
 .site-header {
   @extend .container;
+  max-width: $site-header-max-width;
   position: relative;
   z-index: 15;
 
