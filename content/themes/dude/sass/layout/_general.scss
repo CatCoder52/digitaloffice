@@ -71,6 +71,35 @@ body.page.page-id-9 {
   }
 }
 
+body.page-id-4485 {
+  .block.block-cta-with-phone-input {
+    background: $color-midnight;
+    padding-bottom: $padding-blocks-medium;
+  }
+
+  .block.block-references {
+    background: $color-midnight;
+
+    h2 {
+      color: $color-mint;
+    }
+
+    .floating-actions button,
+    p,
+    h3 {
+      color: $color-white;
+    }
+
+    .cta-link {
+      color: $color-mint;
+
+      &::after {
+        background-color: $color-mint;
+      }
+    }
+  }
+}
+
 
 // 404 stuff
 .error404 .block.block-footer.site-footer {

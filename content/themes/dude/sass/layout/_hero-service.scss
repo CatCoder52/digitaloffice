@@ -9,13 +9,7 @@
   }
 
   .content {
-    margin-bottom: 7rem;
     color: $color-white;
-
-    @media (max-width: $responsivenav) {
-      padding-left: 2rem;
-      padding-right: 2rem;
-    }
   }
 
   .service-hero-wrap {
