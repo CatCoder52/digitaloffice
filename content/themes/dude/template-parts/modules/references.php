@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:50:23
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-15 14:29:36
+ * @Last Modified time: 2020-07-16 14:13:43
  *
  * @package dude
  */
@@ -53,7 +53,7 @@ if ( ! $references ) {
   <div class="container">
 
     <header class="block-head">
-      <h2 class="block-title screen-reader-text">Töitämme</h2>
+      <h2 class="block-title">Töitämme</h2>
 
       <div class="floating-actions">
         <div class="custom-arrows-references"></div>

@@ -39,6 +39,34 @@
   }
 }
 
+// Pages with alternate module colors
+body.page.page-id-9 {
+  .block.block-title-left-text-right,
+  .block.block-our-services,
+  .block.block-references {
+    background: $color-midnight;
+
+    h2 {
+      color: $color-mint;
+    }
+
+    .floating-actions button,
+    p,
+    h3 {
+      color: $color-white;
+    }
+
+    .cta-link {
+      color: $color-mint;
+
+      &::after {
+        background-color: $color-mint;
+      }
+    }
+  }
+}
+
+
 // 404 stuff
 .error404 .block.block-footer.site-footer {
   padding-top: 8rem;
@@ -147,6 +175,17 @@ a.global-link {
 
   @media (min-width: $container-ipad-landscape) {
     font-size: $font-size-general-headings-medium-ctas;
+  }
+}
+
+%general-heading-alt {
+  @include responsive-font($font-size-general-headings-mobile, 54px);
+  margin-top: 0;
+  line-height: 1.35;
+  font-weight: 400;
+
+  @media (min-width: $container-ipad-landscape) {
+    font-size: 54px;
   }
 }
 

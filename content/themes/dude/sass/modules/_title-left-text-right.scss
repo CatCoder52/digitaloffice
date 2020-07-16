@@ -25,18 +25,3 @@
     width: calc(100% - (600px + 70px));
   }
 }
-
-// Pages with alternate module colors
-body.page.page-id-9 {
-  .block.block-title-left-text-right {
-    background: $color-midnight;
-
-    h2 {
-      color: $color-mint;
-    }
-
-    p {
-      color: $color-white;
-    }
-  }
-}

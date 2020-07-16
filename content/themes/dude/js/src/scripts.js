@@ -42,6 +42,12 @@ swup.on("contentReplaced", function () {
   // Define Javascript is active by changing the body class
   document.body.classList.remove("no-js");
   document.body.classList.add("js");
+
+  // Increase session page visits count
+  sessionStorage.setItem(
+    "chat_greeting_visits",
+    Number(sessionStorage.getItem("chat_greeting_visits")) + 1
+  );
 });
 
 // jQuery start

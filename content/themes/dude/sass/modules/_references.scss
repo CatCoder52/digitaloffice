@@ -143,6 +143,10 @@
     right: 0;
     transform: translateX(4rem) translateY(4rem);
     z-index: 2;
+
+    h3 {
+      margin: 0;
+    }
   }
 
   .reference-content p {
@@ -151,5 +155,31 @@
     height: 22px;
     overflow: hidden;
     padding-right: 85px;
+  }
+}
+
+body:not(.page-id-9) .block.block-references .block-head .block-title {
+  @extend .screen-reader-text;
+}
+
+body.page-id-9 .block.block-references {
+  padding-top: 0;
+
+  .block-head {
+    justify-content: space-between;
+    height: auto;
+
+    .block-title {
+      @extend %general-heading-alt;
+      color: $color-white;
+      margin-bottom: $margin-between-grid-columns-large;
+    }
+  }
+
+  .reference-content {
+    > p,
+    > h3 {
+      color: $color-midnight-blue;
+    }
   }
 }
