@@ -84,7 +84,8 @@ nav ul li button {
 }
 
 // Pages with alternate invert header colors
-body.page.page-id-9 {
+body.page.page-id-9,
+body.js-nav-active {
   .site-branding .site-title a,
   .nav-primary-desktop .menu-items .menu-item button:not(.nav-toggle),
   .nav-primary-desktop .menu-items .menu-item a {

@@ -178,44 +178,50 @@ if ( $show_chat_greeting ) {
           <p class="top-button-holder">
             <a href="<?php echo esc_url( get_the_permalink( 6357 ) ); ?>" class="button button-glitch">Aloitetaan projektisi<?php include get_theme_file_path( '/svg/arrow-right.svg' ); ?></a>
           </p>
-          <div class="cols">
-            <div class="col col-secondary-nav">
-              <ul class="menu-items nav-menu">
-                <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo esc_url( get_post_type_archive_link( 'post' ) ); ?>">Blogi</a></li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo esc_url( get_the_permalink( 4489 ) ); ?>">Koodi & yhteisö</a></li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo esc_url( get_the_permalink( 4449 ) ); ?>">Yritys & kulttuuri</a></li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo esc_url( get_the_permalink( 4491 ) ); ?>">Rekry</a></li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_post_type_archive_link( 'merch' ); ?>">Merch</a></li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="https://handbook.dude.fi">Handbook</a></li>
-              </ul>
 
-              <div class="contact-cols">
-                <div class="col">
-                  <p class="title">Asiakkuudet</p>
-                  <p>Kristian Hohkavaara<br/>
-                    <a href="tel:0408351033">040 835 1033</a><br/>
-                    <a href="mailto:kristian@dude.fi">kristian@dude.fi</a>
-                  </p>
-                </div>
-                <div class="col">
-                  <p class="title">Yhteys</p>
-                  <p>
-                    <a href="mailto:moro@dude.fi">moro@dude.fi</a><br/>
-                    <button class="chat open-chat open-chat-contact" aria-label="Avaa chat" tabindex="0">Avaa chat!</button>
-                  </p>
-                </div>
+          <div class="container">
+
+            <div class="cols cols-navs">
+              <div class="col col-secondary-nav">
+                <ul class="menu-items nav-menu">
+                  <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo esc_url( get_post_type_archive_link( 'post' ) ); ?>">Blogi</a></li>
+                  <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo esc_url( get_the_permalink( 4489 ) ); ?>">Koodi & yhteisö</a></li>
+                  <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo esc_url( get_the_permalink( 4449 ) ); ?>">Yritys & kulttuuri</a></li>
+                  <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo esc_url( get_the_permalink( 4491 ) ); ?>">Rekry</a></li>
+                  <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_post_type_archive_link( 'merch' ); ?>">Merch</a></li>
+                  <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="https://handbook.dude.fi">Handbook</a></li>
+                </ul>
+              </div>
+              <div class="col col-primary-nav">
+                <ul class="menu-items nav-menu">
+                  <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_home_url(); ?>">Etusivu</a></li>
+                  <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_the_permalink( 9 ); ?>">Verkkosivut</a></li>
+                  <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_the_permalink( 4485 ); ?>">Suunnittelu</a></li>
+                  <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_post_type_archive_link( 'reference' ); ?>">Töitämme</a></li>
+                  <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_the_permalink( 4487 ); ?>">Yhteys</a></li>
+                </ul>
               </div>
             </div>
-            <div class="col col-primary-nav">
-              <ul class="menu-items nav-menu">
-                <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_home_url(); ?>">Etusivu</a></li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_the_permalink( 9 ); ?>">Verkkosivut</a></li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_the_permalink( 4485 ); ?>">Suunnittelu</a></li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_post_type_archive_link( 'reference' ); ?>">Töitämme</a></li>
-                <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_the_permalink( 4487 ); ?>">Yhteys</a></li>
-              </ul>
+
+            <div class="cols cols-contact">
+              <div class="col">
+                <h3 class="contact-title">Asiakkuudet</h3>
+                <p>Kristian Hohkavaara<br/>
+                  <a href="tel:0408351033">040 835 1033</a><br/>
+                  <a href="mailto:kristian@dude.fi">kristian@dude.fi</a>
+                </p>
+              </div>
+              <div class="col">
+                <h3 class="contact-title">Yhteys</h3>
+                <p>
+                  <a href="mailto:moro@dude.fi">moro@dude.fi</a><br/>
+                  <button class="chat open-chat open-chat-contact" aria-label="Avaa chat" tabindex="0">Avaa chat!</button>
+                </p>
+              </div>
             </div>
+
           </div>
+
         </nav>
 
         <nav id="nav-desktop" class="nav-primary-desktop" role="navigation">
