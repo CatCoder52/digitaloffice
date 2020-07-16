@@ -125,3 +125,23 @@
     }
   }
 }
+
+.block.block-hero.block-hero-light {
+  text-align: center;
+
+  h1,
+  h2,
+  p {
+    color: $color-midnight-blue;
+  }
+
+  .content {
+    max-width: 870px;
+    margin-left: auto;
+    margin-right: auto;
+
+    p {
+      @extend %general-heading-small;
+    }
+  }
+}

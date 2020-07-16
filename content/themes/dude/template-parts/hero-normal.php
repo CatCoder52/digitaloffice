@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-16 16:06:12
+ * @Last Modified time: 2020-07-16 16:14:36
  *
  * @package dude
  */
@@ -26,28 +26,26 @@ if ( has_post_thumbnail() ) {
 }
 ?>
 
-<section class="block block-hero">
+<section class="block block-hero block-hero-light">
   <div class="container">
 
     <div class="content">
-      <div class="side-content-box">
-        <h1><?php echo $title ?></h1>
+      <h1><?php echo esc_html( $title ); ?></h1>
 
-        <div class="hero-description">
-          <?php if ( ! empty( $content ) ) {
-            echo wpautop( $content );
-          }
-          ?>
-        </div>
-
-        <?php if ( 4449 === get_the_id() ) : ?>
-          <p class="cta-link"><a href="<?php echo get_post_type_archive_link( 'reference' ) ?>">Mitä helevettiä? Missä työnäytteet?</a></p>
-        <?php endif; ?>
-
-        <?php if ( 4489 === get_the_id() ) : ?>
-          <p><a class="cta-link cta-link-white" href="https://handbook.dude.fi">Lue Duden handbookia</a></p>
-        <?php endif; ?>
+      <div class="hero-description">
+        <?php if ( ! empty( $content ) ) {
+          echo wpautop( $content ); // phpcs:ignore
+        }
+        ?>
       </div>
+
+      <?php if ( 4449 === get_the_id() ) : ?>
+        <p class="cta-link"><a href="<?php echo get_post_type_archive_link( 'reference' ) ?>">Mitä helevettiä? Missä työnäytteet?</a></p>
+      <?php endif; ?>
+
+      <?php if ( 4489 === get_the_id() ) : ?>
+        <p><a class="cta-link cta-link-white" href="https://handbook.dude.fi">Lue Duden handbookia</a></p>
+      <?php endif; ?>
     </div>
 
     <?php if ( $bg_image ) { ?>

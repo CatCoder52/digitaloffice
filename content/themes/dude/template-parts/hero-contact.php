@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-16 16:05:33
+ * @Last Modified time: 2020-07-16 16:13:49
  *
  * @package dude
  */
@@ -15,7 +15,7 @@
 
     <div class="content content-contact">
 
-      <div class="side-content-box contact-information">
+      <div class="contact-information">
 
         <div class="textual-content">
           <h1>Yhteystiedot</h1>

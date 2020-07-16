@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-16 16:06:02
+ * @Last Modified time: 2020-07-16 16:14:05
  *
  * @package dude
  */
@@ -24,16 +24,13 @@ $content = '<p>Haluatko olla oman elämäsi Dude tai Dudette? Koetko vahvaa tunn
   <div class="container">
 
     <div class="content">
-      <div class="side-content-box">
-        <h1><?php echo $title; ?></h1>
+      <h1><?php echo $title; ?></h1>
 
-        <div class="hero-description">
-          <?php if ( ! empty( $content ) ) {
-            echo $content;
-          }
-          ?>
-        </div>
-
+      <div class="hero-description">
+        <?php if ( ! empty( $content ) ) {
+          echo $content;
+        }
+        ?>
       </div>
     </div>
 
