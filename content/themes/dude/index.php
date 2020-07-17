@@ -24,46 +24,41 @@ get_header(); ?>
 
       while ( have_posts() ) : the_post();
 			$blog_latest_excerpt_override = get_the_id(); ?>
-        <section class="block block-blog-big">
+        <section class="block block-cta-with-image block-latest-blog-post">
           <div class="container">
 
-            <h1 class="screen-reader-text">Blogi</h1>
+            <h1 class="screen-reader-text">Uusin kirjoitus</h1>
 
             <div class="cols">
               <div class="col col-image has-lazyload">
+                <?php image_lazyload_div( get_post_thumbnail_id( $post->ID ) ); ?>
 
-															<?php
-															$video_bg = get_post_meta( get_the_id(), 'article_video', true );
-															if ( $video_bg ) :
-															?>
-                  <div class="shade"></div>
+								<?php $video_bg = get_post_meta( get_the_id(), 'article_video', true );
+                if ( $video_bg ) : ?>
+
                   <div class="vimeo-wrapper vimeo-wrapper-upsell">
                     <iframe src="https://player.vimeo.com/video/<?php echo str_replace( array( 'http:', 'https:', 'vimeo.com', '/' ), '', $video_bg ) ?>?background=1&autoplay=1&loop=1&byline=0&title=0"
                       frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    </div>
-														  <?php endif; ?>
-
-                <div class="background-image preview lazyload" style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'tiny-preload-thumbnail' ) ?>');" data-src="<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>" data-src-mobile="<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>"></div>
-                <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>');"<?php endif; ?>></div>
-                <noscript><div class="background-image full-image" style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>');"></div></noscript>
+                  </div>
+                <?php endif; ?>
               </div>
 
               <div class="col col-content">
 
-                <header class="block-head">
-                  <p class="block-title-pre" aria-describedby="block-title-<?php echo sanitize_title( get_the_title() ) ?>"><?php echo ucfirst( date_i18n( 'l', get_the_date( 'U' ) ) ) ?>na, <?php echo get_the_date( 'j.n.Y' ) ?></p>
+                <div class="content">
+                  <p class="blog-post-time" aria-describedby="block-title-<?php echo sanitize_title( get_the_title() ) ?>"><?php echo ucfirst( date_i18n( 'l', get_the_date( 'U' ) ) ) ?>na, <?php echo get_the_date( 'j.n.Y' ) ?></p>
+
                   <h2 class="block-title" id="block-title-<?php echo sanitize_title( get_the_title() ) ?>"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
-                </header>
 
-                <div class="description">
-															<?php the_excerpt() ?>
+                  <div class="text-content">
+                    <?php the_excerpt(); ?>
+                  </div>
+
+                  <p class="button-wrapper"><a class="button button-glitch button-white" href="<?php echo esc_url( get_the_permalink() ); ?>">Lue kirjoitus<?php include get_theme_file_path( '/svg/arrow-right.svg' ); ?></a></p>
                 </div>
-
-                <p class="arrow-link-wrapper"><a href="<?php the_permalink() ?>" class="arrow-link">Lue artikkeli<span class="arrow"></span></a></p>
               </div>
-            </div>
 
-          </div>
+            </div>
         </section>
 															<?php break; endwhile; ?>
     <?php else :

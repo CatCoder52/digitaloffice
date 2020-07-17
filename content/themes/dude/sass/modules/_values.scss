@@ -5,7 +5,7 @@
   }
 
   .cols {
-    @include grid(3, $gutter_x: 14rem, $gutter_y: 14rem);
+    @include grid(3, $gutter_x: 10rem, $gutter_y: 8rem);
 
     h3 {
       @extend %general-heading-small;

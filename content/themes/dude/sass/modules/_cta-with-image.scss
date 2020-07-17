@@ -1,6 +1,26 @@
 .block.block-cta-with-image {
   text-align: center;
 
+  &.block-latest-blog-post {
+    text-align: left;
+
+    .button-wrapper {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: $color-midnight-blue;
+    }
+
+    .col.col-image {
+      height: 100%;
+    }
+
+    .blog-post-time {
+      font-size: 13px;
+    }
+  }
+
   .container {
     overflow: visible;
   }
@@ -13,6 +33,11 @@
     @extend %general-heading-cta;
     font-weight: 400;
     margin-bottom: $margin-between-text-elements;
+  }
+
+  h2,
+  p {
+    color: $color-midnight-blue;
   }
 
   .text-content {
