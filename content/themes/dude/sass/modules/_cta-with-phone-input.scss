@@ -3,7 +3,7 @@ $submit-width: 33px;
 
 .block.block-cta-with-phone-input {
   padding-top: 0;
-  padding-bottom: 0;
+  padding-bottom: $padding-blocks-medium;
 
   .container {
     background: $color-mint;
@@ -109,6 +109,7 @@ $submit-width: 33px;
 }
 
 // Exception for front page
-.block.block-testimonials + .block.block-cta-with-phone-input {
+body.home .block.block-testimonials + .block.block-cta-with-phone-input {
   background: $color-midnight;
+  padding-bottom: 0;
 }

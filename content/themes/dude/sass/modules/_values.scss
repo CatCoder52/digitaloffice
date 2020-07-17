@@ -1,2 +1,18 @@
-.block.block-accordion {
+.block.block-values {
+  .block-title {
+    @extend %general-heading-alt;
+    margin-bottom: $margin-between-grid-columns-large;
+  }
+
+  .cols {
+    @include grid(3, $gutter_x: 14rem, $gutter_y: 14rem);
+
+    h3 {
+      @extend %general-heading-small;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
 }
