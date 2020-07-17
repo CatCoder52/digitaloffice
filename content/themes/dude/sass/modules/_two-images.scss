@@ -45,3 +45,7 @@ body.page-id-9 .block.block-two-images {
     }
   }
 }
+
+.block.block-our-services + .block.block-two-images {
+  padding-top: 0;
+}

@@ -7,6 +7,11 @@
     @extend %textlink;
   }
 
+  .block-title {
+    font-weight: 400;
+    margin-bottom: $margin-between-text-elements;
+  }
+
   .row:hover h2,
   .row.active h2 {
     color: $color-cobalt-blue;

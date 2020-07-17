@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 18:54:41
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-17 11:37:34
+ * @Last Modified time: 2020-07-17 17:00:07
  *
  * @package dude
  */
@@ -12,6 +12,8 @@
 
 <section class="block block-timeline">
   <div class="container">
+
+    <h2 class="block-title">Duden historia</h2>
 
     <div class="columns">
       <div class="column col col-timeline is-three-fifths is-multiline">
