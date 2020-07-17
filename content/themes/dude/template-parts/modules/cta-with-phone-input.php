@@ -12,17 +12,19 @@
 <section class="block block-cta-with-phone-input">
   <div class="container">
 
-    <div class="col">
-      <h2>Kyllä, naurettavan hyvännäköistä.</h2>
-      <p>Jos tuntemukset ovat kutakuinkin tuota luokkaa, niin jätäthän meille soittopyynnön. Meidän Kristian soittaa pikimmiten perään.</p>
-    </div>
+    <div class="cols">
+      <div class="col">
+        <h2>Kyllä, naurettavan hyvännäköistä.</h2>
+        <p>Jos tuntemukset ovat kutakuinkin tuota luokkaa, niin jätäthän meille soittopyynnön. Meidän Kristian soittaa pikimmiten perään.</p>
+      </div>
 
-    <div class="col">
-      <?php
-        if ( function_exists( 'gravity_form' ) ) {
-          gravity_form( 1, $display_title = false, $display_description = false, $display_inactive = false, $field_values = null, $ajax = false, $echo = true );
-        }
-      ?>
+      <div class="col">
+        <?php
+          if ( function_exists( 'gravity_form' ) ) {
+            gravity_form( 1, $display_title = false, $display_description = false, $display_inactive = false, $field_values = null, $ajax = false, $echo = true );
+          }
+        ?>
+      </div>
     </div>
 
   </div>

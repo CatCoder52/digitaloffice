@@ -354,6 +354,33 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_5f115d037a9eb": {
+                    "key": "layout_5f115d037a9eb",
+                    "name": "recruiting",
+                    "label": "RekryCTA (2020)",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f115d037a9ec",
+                            "label": "",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Tämä alue on kovakoodattu ja sitä ei voi muokata hallintapaneelista.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5f106d5aa9759": {
                     "key": "layout_5f106d5aa9759",
                     "name": "mission-vision",
@@ -1482,5 +1509,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1594972676
+    "modified": 1594973491
 }

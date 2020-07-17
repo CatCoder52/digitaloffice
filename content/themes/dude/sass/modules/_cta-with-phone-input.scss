@@ -5,6 +5,23 @@ $submit-width: 33px;
   padding-top: 0;
   padding-bottom: $padding-blocks-medium;
 
+  &.block-recruiting .cols .col:first-of-type {
+    width: 875px;
+
+    h2 {
+      max-width: 100%;
+    }
+  }
+
+  &.block-recruiting .cols .col:last-of-type {
+    width: calc(100% - 875px);
+  }
+
+  .cols {
+    display: flex;
+    align-items: center;
+  }
+
   .container {
     background: $color-mint;
     color: $color-midnight-blue;
@@ -12,8 +29,6 @@ $submit-width: 33px;
     padding-bottom: $padding-cta-box-y;
     padding-left: $padding-cta-box-x;
     padding-right: $padding-cta-box-x;
-    display: flex;
-    align-items: center;
 
     .col:first-of-type {
       width: 745px;
