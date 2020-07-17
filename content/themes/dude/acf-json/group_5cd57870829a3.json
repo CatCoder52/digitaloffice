@@ -478,7 +478,7 @@
                 "layout_5ce0041f3583b": {
                     "key": "layout_5ce0041f3583b",
                     "name": "cta-process",
-                    "label": "CTA: Prosessi (2019)",
+                    "label": "Prosessi (2019)",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -1364,6 +1364,74 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_5f11594afa98e": {
+                    "key": "layout_5f11594afa98e",
+                    "name": "cta-with-image",
+                    "label": "CTA-teksti oikealla, kuva vasemmalla (2020)",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f115960fa98f",
+                            "label": "Kuva",
+                            "name": "image",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "preview_size": "medium",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": ""
+                        },
+                        {
+                            "key": "field_5f115967fa990",
+                            "label": "Iso otsikko",
+                            "name": "title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5f11596efa991",
+                            "label": "Linkki",
+                            "name": "link",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5f0f2aed37bb0": {
                     "key": "layout_5f0f2aed37bb0",
                     "name": "logos",
@@ -1414,5 +1482,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1594913559
+    "modified": 1594972676
 }
