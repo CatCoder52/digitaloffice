@@ -1,36 +1,4 @@
 .block.block-reference-quote {
-  background: $color-deep-black;
-  text-align: center;
-
-  .container {
-    padding-top: $padding-default-rows;
-    padding-bottom: $padding-default-rows;
-  }
-
-  h2 {
-    margin-top: 0;
-  }
-
-  h2,
-  p {
-    color: $color-white;
-    max-width: 80rem;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  blockquote p:first-child:before {
-    content: '”';
-    display: inline-block;
-    position: relative;
-    color: $color-white;
-    margin-right: .5rem;
-  }
-
-  p {
-    font-weight: 300;
-  }
-
   .quote-author-info .avatar {
     @include background-cover();
     margin-left: auto;
@@ -43,10 +11,5 @@
 
   .quote-author-info span {
     display: block;
-  }
-
-  .quote-person-title {
-    @include responsive-font(16px, 19px);
-    opacity: .5;
   }
 }

@@ -3,7 +3,19 @@
 // Columns block
 .wp-block-columns {
   @extend .block;
-  display: flex;
+
+  &.features {
+    padding-bottom: $margin-between-grid-columns-large;
+  }
+
+  &.features p {
+    font-size: 16px;
+  }
+
+  &.title-only-block {
+    padding-bottom: $margin-between-grid-columns-large / 2;
+    padding-top: $margin-between-grid-columns-large;
+  }
 
   &.alignwide,
   &.alignfull {
@@ -14,12 +26,13 @@
   &:nth-of-type(1) {
     padding-top: 0;
   }
+
+  + .wp-block-columns {
+    padding-top: 0;
+  }
 }
 
 .wp-block-column {
-  flex: 1;
-  margin: 0 $margin-between-grid-columns;
-
   h2 {
     @extend %general-heading-cta;
     font-weight: 400;

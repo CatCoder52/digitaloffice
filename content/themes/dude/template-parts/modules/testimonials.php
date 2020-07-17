@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:48:37
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-15 15:06:04
+ * @Last Modified time: 2020-07-17 16:38:54
  *
  * @package dude
  */
@@ -13,7 +13,7 @@ $args = array(
   'post_status'             => 'publish',
   'orderby'                 => 'rand',
   'posts_per_page'          => 50,
-  'meta_key'                => '_thumbnail_id',
+  'meta_key'                => '_thumbnail_id', // phpcs:ignore
   'no_found_rows'           => true,
   'cache_results'           => true,
   'update_post_term_cache'  => false,
@@ -42,7 +42,7 @@ if ( $query->have_posts() ) {
 }
 ?>
 
-<section class="block block-testimonials">
+<section class="block block-testimonials block-testimonials-slider">
   <div class="container">
 
     <header class="block-head">
@@ -61,14 +61,14 @@ if ( $query->have_posts() ) {
           // There has to be quote, so let's check that first
           if ( ! empty( $reference['quote'] ) ) : ?>
 
-          <div class="hreview testimonial">
-													<?php if ( ! empty( $reference['quote_person_image'] ) ) : ?>
-              <div class="testimonial-avatar" style="background-image: url('<?php echo wp_get_attachment_image_url( $reference['quote_person_image'], 'medium' ) ?>')"></div>
-            <?php endif; ?>
+            <div class="hreview testimonial">
+							<?php if ( ! empty( $reference['quote_person_image'] ) ) : ?>
+                <div class="testimonial-avatar" style="background-image: url('<?php echo wp_get_attachment_image_url( $reference['quote_person_image'], 'medium' ) ?>')"></div>
+              <?php endif; ?>
 
             <div class="testimonial-content">
               <div class="description">
-													<?php echo wpautop( $reference['quote'] ); // WPCS: XSS OK ?>
+									<?php echo wpautop( $reference['quote'] ); // phpcs:ignore ?>
               </div>
 
               <abbr class="rating screen-reader-text" title="5">*****</abbr>
@@ -79,7 +79,7 @@ if ( $query->have_posts() ) {
             </div>
           </div>
 
-													<?php endif; ?>
+				  <?php endif; ?>
         <?php endforeach; ?>
       </div>
     <?php endif; ?>

@@ -83,16 +83,14 @@ function dude_register_block_editor_assets() {
     'wp-components', // Provides many prebuilt components and controls
   );
 
-  // wp_register_script( 'dude-block-editor', get_theme_file_uri( 'js/src/block.js', __FILE__ ), $dependencies, null );
-  wp_register_style( 'dude-block-editor', get_theme_file_uri( 'css/gutenberg.min.css', __FILE__ ), null, null );
+  wp_register_style( 'dude-block-editor', get_theme_file_uri( 'css/gutenberg.min.css', __FILE__ ), null, null ); // phpcs:ignore
 }
 add_action( 'admin_init',  'dude_register_block_editor_assets' );
 
 // Front end side:
 function dude_register_block_assets() {
   if ( is_admin() ) {
-    // wp_register_script( 'dude-block', get_theme_file_uri( 'js/src/block.js', __FILE__ ), array( 'jquery' ), null, null, null, true );
-    wp_register_style( 'dude-block', get_theme_file_uri( 'css/gutenberg.min.css', __FILE__ ), null, null );
+    wp_register_style( 'dude-block', get_theme_file_uri( 'css/gutenberg.min.css', __FILE__ ), null, null ); // phpcs:ignore
   }
 }
 add_action( 'init',  'dude_register_block_assets' );
@@ -103,100 +101,3 @@ register_block_type( 'dude-plugin-namespace/dude-block', array(
   'script'        => 'dude-block',
   'style'         => 'dude-block',
 ));
-
-// Only allow certain blocks
-// @link https://rudrastyh.com/gutenberg/remove-default-blocks.html
-add_filter( 'allowed_block_types',  'dude_allowed_block_types' );
-
-function dude_allowed_block_types( $allowed_blocks ) {
-
-  return array(
-    'core/image',
-    'core/paragraph',
-    'core/heading',
-    'core/list',
-    'core/heading',
-    'core/gallery',
-    'core/list',
-    'core/pullquote',
-    'core/quote',
-    'core/file',
-    'core/video',
-    'core/html',
-    'core/spacer',
-    'core/table',
-    'core/separator',
-
-    // All blocks:
-    //
-    // core/paragraph
-    // core/image
-    // core/heading
-    // (Deprecated) core/subhead — Subheading
-    // core/gallery
-    // core/list
-    // core/quote
-    // core/audio
-    // core/cover (previously core/cover-image)
-    // core/file
-    // core/video
-    // core/table
-    // core/verse
-    // core/code
-    // core/freeform — Classic
-    // core/html — Custom HTML
-    // core/preformatted
-    // core/pullquote
-    // core/button
-    // core/text-columns — Columns
-    // core/media-text — Media and Text
-    // core/more
-    // core/nextpage — Page break
-    // core/separator
-    // core/spacer
-    // core/shortcode
-    // core/archives
-    // core/categories
-    // core/latest-comments
-    // core/latest-posts
-    // core/calendar
-    // core/rss
-    // core/search
-    // core/tag-cloud
-    // core/embed
-    // core-embed/twitter
-    // core-embed/youtube
-    // core-embed/facebook
-    // core-embed/instagram
-    // core-embed/wordpress
-    // core-embed/soundcloud
-    // core-embed/spotify
-    // core-embed/flickr
-    // core-embed/vimeo
-    // core-embed/animoto
-    // core-embed/cloudup
-    // core-embed/collegehumor
-    // core-embed/dailymotion
-    // core-embed/funnyordie
-    // core-embed/hulu
-    // core-embed/imgur
-    // core-embed/issuu
-    // core-embed/kickstarter
-    // core-embed/meetup-com
-    // core-embed/mixcloud
-    // core-embed/photobucket
-    // core-embed/polldaddy
-    // core-embed/reddit
-    // core-embed/reverbnation
-    // core-embed/screencast
-    // core-embed/scribd
-    // core-embed/slideshare
-    // core-embed/smugmug
-    // core-embed/speaker
-    // core-embed/ted
-    // core-embed/tumblr
-    // core-embed/videopress
-    // core-embed/wordpress-tv
-  );
-
-}

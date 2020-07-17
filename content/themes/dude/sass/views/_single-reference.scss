@@ -5,6 +5,10 @@ body.single.single-reference {
 
     .block {
       background: $color-midnight;
+    }
+
+    .block:not(.block-cta-with-phone-input) {
+      background: $color-midnight;
       color: $color-white;
 
       h1,
@@ -22,42 +26,52 @@ body.single.single-reference {
     }
   }
 
+  .wp-block-column:nth-child(1) {
+    padding-right: $margin-between-grid-columns / 2;
+  }
+
+  .wp-block-column:nth-child(2) {
+    padding-left: $margin-between-grid-columns / 2;
+  }
+
   .wp-block-button {
-    a {
-      @extend %default;
-      background: $color-mint;
-      color: $color-midnight;
-      font-size: 18px;
-      font-weight: 700;
-      border: 0;
-      width: auto;
-      display: inline-block;
-      padding: 1.4rem 2.8rem;
-      margin-bottom: 0;
-      text-decoration: none;
+    margin-top: $margin-between-text-elements;
+  }
+
+  .wp-block-button a {
+    @extend %default;
+    background: $color-mint;
+    color: $color-midnight;
+    font-size: 18px;
+    font-weight: 700;
+    border: 0;
+    width: auto;
+    display: inline-block;
+    padding: 1.4rem 2.8rem;
+    margin-bottom: 0;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    transition: 150ms linear background;
+    font-family: $font-base;
+    border-radius: 0;
+
+    span,
+    svg {
       position: relative;
-      cursor: pointer;
-      transition: 150ms linear background;
-      font-family: $font-base;
-      border-radius: 0;
+      transition: all $transition-duration;
+      transform: translate(0, 0);
+      display: inline-block;
+    }
+
+    &:hover,
+    &:focus {
+      background: $color-white-two;
+      color: $color-midnight;
 
       span,
       svg {
-        position: relative;
-        transition: all $transition-duration;
-        transform: translate(0, 0);
-        display: inline-block;
-      }
-
-      &:hover,
-      &:focus {
-        background: $color-white-two;
-        color: $color-midnight;
-
-        span,
-        svg {
-          transform: translate(2px, 0);
-        }
+        transform: translate(2px, 0);
       }
     }
   }

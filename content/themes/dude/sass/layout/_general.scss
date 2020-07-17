@@ -212,6 +212,14 @@ a.global-link {
   @media (min-width: $container-ipad-landscape) {
     font-size: $font-size-general-headings-desktop;
   }
+
+  &.block-title-large {
+    @extend %general-heading-alt;
+  }
+
+  &.block-title-small {
+    @extend %general-heading-small;
+  }
 }
 
 %general-heading-cta {

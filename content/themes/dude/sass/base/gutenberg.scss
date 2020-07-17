@@ -55,6 +55,9 @@
   // Structure
   @import '../layout/typography';
 
+  // Editor styles
+  color: $color-body;
+
   // No drop cap
   .has-drop-cap:not(:focus):first-letter {
     text-transform: uppercase;
@@ -63,52 +66,47 @@
     float: none;
   }
 
-  .wp-block-button {
-    a {
-      @extend %default;
-      background: $color-mint;
-      color: $color-midnight;
-      font-size: 18px;
-      font-weight: 700;
-      border: 0;
-      width: auto;
-      display: inline-block;
-      padding: 1.4rem 2.8rem;
-      margin-bottom: 0;
-      text-decoration: none;
+  .wp-block-button a {
+    @extend %default;
+    background: $color-mint;
+    color: $color-midnight;
+    font-size: 18px;
+    font-weight: 700;
+    border: 0;
+    width: auto;
+    display: inline-block;
+    padding: 1.4rem 2.8rem;
+    margin-bottom: 0;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    transition: 150ms linear background;
+    font-family: $font-base;
+    border-radius: 0;
+
+    span,
+    svg {
       position: relative;
-      cursor: pointer;
-      transition: 150ms linear background;
-      font-family: $font-base;
-      border-radius: 0;
+      transition: all $transition-duration;
+      transform: translate(0, 0);
+      display: inline-block;
+    }
+
+    &:hover,
+    &:focus {
+      background: $color-white-two;
+      color: $color-midnight;
 
       span,
       svg {
-        position: relative;
-        transition: all $transition-duration;
-        transform: translate(0, 0);
-        display: inline-block;
-      }
-
-      &:hover,
-      &:focus {
-        background: $color-white-two;
-        color: $color-midnight;
-
-        span,
-        svg {
-          transform: translate(2px, 0);
-        }
-
-        .arrow-right {
-          margin-left: 2.5rem;
-        }
+        transform: translate(2px, 0);
       }
     }
-  }
 
-  // Editor styles
-  color: $color-body;
+    .arrow-right {
+      margin-left: 2.5rem;
+    }
+  }
 
   .block-editor-block-list__block[data-type="core/paragraph"] p,
   .block-editor-block-list__block p,

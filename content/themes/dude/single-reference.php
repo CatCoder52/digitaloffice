@@ -11,6 +11,7 @@ the_post();
 
 $quote_pre_title = get_post_meta( get_the_id(), 'quote_pre_title', true );
 $quote = get_post_meta( get_the_id(), 'quote', true );
+$quote_company = get_post_meta( get_the_id(), 'quote_company', true );
 $quote_person = get_post_meta( get_the_id(), 'quote_person', true );
 $quote_person_title = get_post_meta( get_the_id(), 'quote_person_title', true );
 $quote_person_image = get_post_meta( get_the_id(), 'quote_person_image', true );
@@ -71,63 +72,59 @@ get_header(); ?>
     </section>
 
     <?php if ( ! empty( $quote ) && ! empty( $quote_person ) && ! empty( $quote_person_title ) ) : ?>
-      <section class="block block-reference-quote">
+      <section class="block block-testimonials block-reference-quote">
         <div class="container">
 
-          <?php if ( ! empty( $quote_pre_title ) ) : ?>
-            <h2><?php echo esc_html( $quote_pre_title ) ?></h2>
-          <?php endif; ?>
+          <h2 class="screen-reader-text">Asiakkaan palaute</h2>
 
-          <blockquote>
-            <?php echo wpautop( $quote ); ?>
-          </blockquote>
+          <div class="hreview testimonial">
 
-          <div class="quote-author-info">
-            <?php if ( ! empty( $quote_person_image ) ) : ?>
-              <div class="avatar" style="background-image: url('<?php echo wp_get_attachment_image_url( $quote_person_image, 'medium' ) ?>')"></div>
-            <?php endif; ?>
-            <p><span class="quote-person"><?php echo esc_html( $quote_person ) ?></span>
-            <span class="quote-person-title"><?php echo esc_html( $quote_person_title ) ?></span></p>
-          </div>
+              <?php if ( ! empty( $quote_person_image ) ) : ?>
+                <div class="testimonial-avatar" style="background-image: url('<?php echo wp_get_attachment_image_url( $quote_person_image, 'medium' ) ?>')"></div>
+              <?php endif; ?>
+
+              <div class="testimonial-content">
+                <div class="description">
+                  <?php echo wpautop( $quote ); ?>
+                </div>
+
+                <abbr class="rating screen-reader-text" title="5">*****</abbr>
+                <p class="reviewer vcard"><span class="screen-reader-text">Review by</span>
+                  <a class="url fn" href="<?php echo esc_html( get_the_permalink() ); ?>"><?php if ( ! empty( $quote_person ) ) : ?><?php echo esc_html( $quote_person ) ?>, <?php echo esc_html( strtolower( $quote_person_title ) ) ?><?php endif; ?><?php echo esc_html( $quote_company ); ?></a><abbr class="dtreviewed screen-reader-text" title="<?php echo esc_html( get_the_date( 'Y' ) ); ?>-<?php echo esc_html( get_the_date( 'm' ) ); ?>"><?php echo esc_html( get_the_date( 'F' ) ) ?> <?php echo esc_html( get_the_date( 'Y' ) ); ?></abbr>
+                </p>
+
+              </div>
+
+            </div>
 
         </div>
       </section>
     <?php endif; ?>
 
-    <section class="block block-cta-text block-cta-text-single-reference">
-      <div class="container">
-
-        <h2 class="block-title">Kova meno. Olen vakuuttunut, haluan ottaa yhteyttä.</h2>
-        <p><a class="cta-link" href="/yhteystiedot">Ota yhteyttä</a></p>
-
-      </div>
-    </section>
-
     <?php if ( ! empty( $small_references ) ) : ?>
-      <section class="block block-references block-references-related">
+      <section class="block block-references block-references-archive block-references-related">
         <div class="container">
 
-         <header class="block-head block-head-related">
-          <p class="block-title-pre" aria-describedby="block-title-related-references">Muita töitämme</p>
-          <h2 class="block-title" id="block-title-related-references">Tsekkaa myös nämä</h2>
-        </header>
+          <h2 class="block-title block-title-large">Katso myös nämä</h2>
 
-          <div class="cols cols-references">
+          <div class="reference-wrapper reference-wrapper-cols">
             <?php foreach ( $small_references as $reference ) : ?>
-              <div class="col">
-                <div class="reference-image">
-                  <a href="<?php echo esc_html( $reference['permalink'] ) ?>" class="global-link"><span class="screen-reader-text"><?php the_title() ?></span></a>
-                  <div class="background-image preview lazyload" style="background-image: url('<?php echo $reference['image_preload_url']; ?>');" data-src="<?php echo $reference['image_url']; ?>" data-src-mobile="<?php echo $reference['image_url_mobile']; ?>"></div>
-                  <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : // phpcs:ignore ?> style="background-image: url('<?php echo $reference['image_url']; ?>');"<?php endif; ?>></div>
-                  <noscript><div class="background-image full-image" style="background-image: url('<?php echo $reference['image_url']; ?>');"></div></noscript>
-                </div>
+              <div class="reference">
+                <a href="<?php echo esc_html( $reference['permalink'] ) ?>" class="global-link"><span class="screen-reader-text"><?php the_title() ?></span></a>
 
-                <div class="col-content">
-                  <h3 class="block-title>"><a href="<?php echo esc_html( $reference['permalink'] ) ?>"><?php echo esc_html( $reference['title'] ) ?></a></h3>
-                  <p><?php echo esc_html( $reference['excerpt'] ) ?></p>
+                  <div class="reference-image">
+                    <div class="image" aria-hidden="true">
+                      <div class="background-image preview lazyload" style="background-image: url('<?php echo $reference['image_url_mobile']; ?>');" data-src="<?php echo $reference['image_url']; ?>" data-src-mobile="<?php echo $reference['image_url']; ?>" aria-hidden="true"></div>
+                      <div aria-hidden="true" class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : // phpcs:ignore ?> style="background-image: url('<?php echo $reference['image_url']; ?>');"<?php endif; ?>></div>
+                      <noscript><div aria-hidden="true" class="background-image full-image" style="background-image: url('<?php echo $reference['image_url']; ?>');"></div></noscript>
+                    </div>
+                  </div>
 
-                  <p class="arrow-link-wrapper"><a href="<?php echo esc_html( $reference['permalink'] ) ?>" class="arrow-link">Tsekkaa työnäyte<span class="arrow"></span></a></p>
-                </div>
+                  <div class="reference-content">
+                    <p aria-describedby="reference-<?php echo esc_html( sanitize_title( $reference['title'] ) ) ?>"><?php echo esc_html( $reference['title'] ) ?></p>
+                    <h3 id="reference-<?php echo esc_html( sanitize_title( $reference['title'] ) ) ?>" class="reference-title"><?php echo get_post_meta( $reference['id'], 'short_desc', true ) ?></h3>
+                  </div>
+
               </div>
             <?php endforeach; ?>
           </div>
@@ -135,6 +132,8 @@ get_header(); ?>
         </div>
       </section>
     <?php endif; ?>
+
+    <?php include get_theme_file_path( 'template-parts/modules/cta-with-phone-input.php' ); ?>
 
 	</main><!-- #main -->
 </div><!-- #primary -->

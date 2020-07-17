@@ -16,9 +16,7 @@ get_header(); ?>
 <div id="content" class="content-area">
 	<main role="main" id="main" class="site-main">
 
-    <?php
-      include get_theme_file_path( 'template-parts/hero.php' );
-    ?>
+    <?php include get_theme_file_path( 'template-parts/hero.php' ); ?>
 
     <section class="block block-single">
       <div class="container">
@@ -44,7 +42,7 @@ get_header(); ?>
               $person_id = $wpdb->get_results(
                 $wpdb->prepare(
                   "SELECT post_id FROM {$wpdb->prefix}postmeta WHERE meta_key = %s AND meta_value = %s",
-                  "email", get_the_author_meta( 'email' )
+                  'email', get_the_author_meta( 'email' )
                 )
               );
 
@@ -62,8 +60,8 @@ get_header(); ?>
 
                 if ( ! empty( $desc ) ) : ?>
                   <p class="person-description"><?php
-                  echo esc_html( $desc ) ?></p>
-                <?php endif;
+					echo esc_html( $desc ) ?></p>
+											<?php endif;
 
               endif; ?>
             </div>

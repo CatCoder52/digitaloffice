@@ -64,7 +64,7 @@
     width: $grid-base-size;
   }
 
-  .container {
+  &.block-testimonials-slider .container {
     width: 100%;
     max-width: 100%;
     padding-left: 0;
