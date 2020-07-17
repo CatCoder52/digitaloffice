@@ -15,12 +15,6 @@ add_action( 'acf/input/admin_head', 'acf_admin_head_custom_js_css' );
 // Modify ACF Flexible field title to show area title and module type.
 add_filter( 'acf/fields/flexible_content/layout_title', 'flexible_content_layout_title', 10, 4 );
 
-// Register theme options page
-add_action( 'acf/init', 'register_theme_options_page' );
-
-// Icon selector
-add_filter( 'acf/load_field/type=select', 'dynamic_select_for_icon' );
-
 // Save merch stock to our custom post meta instead of ACF's
 add_filter( 'acf/save_post', 'dude_merch_stock_save', 5 );
 function dude_merch_stock_save( $post_id ) {
