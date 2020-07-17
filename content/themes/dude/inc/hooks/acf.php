@@ -387,34 +387,3 @@ function flexible_content_layout_title( $title, $field, $layout, $i ) {
 
   return $title;
 }
-
-/**
- * Register Theme options page
- */
-function register_theme_options_page() {
-  acf_add_options_page([
-		'page_title' 	=> 'Teeman asetukset',
-		'menu_title'	=> 'Teeman asetukset',
-		'menu_slug' 	=> 'theme-settings',
-		'capability'	=> 'edit_posts',
-		'redirect'		=> false,
-  ]);
-}
-/**
- * Icon selector
- */
-function dynamic_select_for_icon( $field ) {
-
-	if ( ! function_exists( 'get_icons_for_user' ) ) {
-    return $field;
-  }
-
-  if ( false === strpos( $field['name'], 'icon_svg' ) ) {
-		return $field;
-  }
-
-  // add icons from "svg/foruser" directory.
-  $field['choices'] = get_icons_for_user();
-
-  return $field;
-}
