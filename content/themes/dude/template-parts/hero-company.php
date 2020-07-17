@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-17 11:45:18
+ * @Last Modified time: 2020-07-17 12:34:53
  *
  * @package dude
  */
@@ -29,7 +29,6 @@ if ( ! empty( $title_alt ) ) {
         }
         ?>
       </div>
-
     </div>
 
   </div>

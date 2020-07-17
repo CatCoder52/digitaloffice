@@ -6,6 +6,7 @@
  *
  * @package dude
  */
+
 the_post();
 
 $quote_pre_title = get_post_meta( get_the_id(), 'quote_pre_title', true );
@@ -22,7 +23,7 @@ if ( ! $small_references ) {
     'post_status'             => 'publish',
     'orderby'                 => 'rand',
     'posts_per_page'          => 3,
-    'meta_key'                => '_thumbnail_id',
+    'meta_key'                => '_thumbnail_id', // phpcs:ignore
     'post__not_in'            => array( get_the_id() ),
     'no_found_rows'           => true,
     'cache_results'           => true,
@@ -49,7 +50,7 @@ if ( ! $small_references ) {
     }
   }
 
-  wp_reset_query();
+  wp_reset_postdata();
 
   wp_cache_set( get_the_id() . '_references', $small_references, 'theme', DAY_IN_SECONDS );
 }
@@ -62,13 +63,11 @@ get_header(); ?>
     <?php get_template_part( 'template-parts/hero', get_post_type() ); ?>
 
     <section class="block block-single block-single-reference">
-      <div class="container">
 
-        <div class="entry-content">
-          <?php the_content() ?>
-        </div><!-- .entry-content -->
-
+      <div class="gutenberg-content">
+        <?php the_content() ?>
       </div>
+
     </section>
 
     <?php if ( ! empty( $quote ) && ! empty( $quote_person ) && ! empty( $quote_person_title ) ) : ?>
@@ -119,7 +118,7 @@ get_header(); ?>
                 <div class="reference-image">
                   <a href="<?php echo esc_html( $reference['permalink'] ) ?>" class="global-link"><span class="screen-reader-text"><?php the_title() ?></span></a>
                   <div class="background-image preview lazyload" style="background-image: url('<?php echo $reference['image_preload_url']; ?>');" data-src="<?php echo $reference['image_url']; ?>" data-src-mobile="<?php echo $reference['image_url_mobile']; ?>"></div>
-                  <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo $reference['image_url']; ?>');"<?php endif; ?>></div>
+                  <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : // phpcs:ignore ?> style="background-image: url('<?php echo $reference['image_url']; ?>');"<?php endif; ?>></div>
                   <noscript><div class="background-image full-image" style="background-image: url('<?php echo $reference['image_url']; ?>');"></div></noscript>
                 </div>
 

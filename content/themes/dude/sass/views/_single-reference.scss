@@ -1,0 +1,64 @@
+body.single.single-reference {
+  .site-content {
+    background: $color-midnight;
+    color: $color-white;
+
+    .block {
+      background: $color-midnight;
+      color: $color-white;
+
+      h1,
+      h2,
+      h3,
+      p {
+        color: $color-white;
+      }
+    }
+  }
+
+  .block.block-single.block-single-reference {
+    .wp-block-image {
+      margin: 0;
+    }
+  }
+
+  .wp-block-button {
+    a {
+      @extend %default;
+      background: $color-mint;
+      color: $color-midnight;
+      font-size: 18px;
+      font-weight: 700;
+      border: 0;
+      width: auto;
+      display: inline-block;
+      padding: 1.4rem 2.8rem;
+      margin-bottom: 0;
+      text-decoration: none;
+      position: relative;
+      cursor: pointer;
+      transition: 150ms linear background;
+      font-family: $font-base;
+      border-radius: 0;
+
+      span,
+      svg {
+        position: relative;
+        transition: all $transition-duration;
+        transform: translate(0, 0);
+        display: inline-block;
+      }
+
+      &:hover,
+      &:focus {
+        background: $color-white-two;
+        color: $color-midnight;
+
+        span,
+        svg {
+          transform: translate(2px, 0);
+        }
+      }
+    }
+  }
+}

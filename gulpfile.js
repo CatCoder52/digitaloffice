@@ -57,6 +57,7 @@ var cssDest = themeDir + "/css";
 var customjs = themeDir + "/js/scripts.js";
 var jsSrc = themeDir + "/js/src/**/*.js";
 var jsDest = themeDir + "/js";
+var gutenbergFile = themeDir + "/sass/base/gutenberg.scss";
 
 /*
 
@@ -246,6 +247,65 @@ gulp.task("styles-expanded", function () {
     .pipe(sourcemaps.write("."))
     .pipe(gulp.dest(cssDest))
     .pipe(browsersync.stream());
+
+  // Save gutenberg styles
+  gulp
+    .src(gutenbergFile)
+
+    .pipe(
+      sass({
+        compass: false,
+        bundleExec: true,
+        sourcemap: false,
+        style: "compressed",
+        debugInfo: true,
+        lineNumbers: true,
+        errLogToConsole: true,
+        includePaths: [
+          themeDir + "/node_modules/",
+          "node_modules/",
+          // require('node-bourbon').includePaths
+        ],
+      })
+    )
+
+    .on("error", handleError("styles"))
+    .pipe(postcss(plugins))
+    .pipe(pixrem())
+    .pipe(
+      cleancss(
+        {
+          compatibility: "ie11",
+          level: {
+            1: {
+              tidyAtRules: true,
+              cleanupCharsets: true,
+              specialComments: 0,
+            },
+          },
+        },
+        function (details) {
+          //console.log('[clean-css] Original size: ' + details.stats.originalSize + ' bytes');
+          //console.log('[clean-css] Minified size: ' + details.stats.minifiedSize + ' bytes');
+          console.log(
+            "[clean-css] Time spent on minification: " +
+              details.stats.timeSpent +
+              " ms"
+          );
+          console.log(
+            "[clean-css] Compression efficiency: " +
+              details.stats.efficiency * 100 +
+              " %"
+          );
+        }
+      )
+    )
+    .pipe(
+      rename({
+        suffix: ".min",
+      })
+    )
+    .pipe(gulp.dest(cssDest));
 });
 
 // Run only manually: gulp uncss, because takes some time

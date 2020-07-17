@@ -66,10 +66,6 @@
       display: inline-block;
     }
 
-    .arrow-right {
-      margin-left: 2.5rem;
-    }
-
     @media (max-width: 400px) {
       // Wrap long buttons on mobile
       display: block;
@@ -337,4 +333,8 @@ form {
   textarea {
     width: 100%;
   }
+}
+
+.arrow-right {
+  margin-left: 2.5rem;
 }

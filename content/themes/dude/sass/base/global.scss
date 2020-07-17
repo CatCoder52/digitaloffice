@@ -39,7 +39,6 @@
 // Modules
 @import '../modules/our-services';
 @import '../modules/references';
-@import '../modules/cta-left-image';
 @import '../modules/latest-selected-mustread';
 @import '../modules/cta-process';
 @import '../modules/text-image';
@@ -56,7 +55,6 @@
 @import '../modules/dudes';
 @import '../modules/cta-text';
 @import '../modules/blog-big';
-@import '../modules/blog';
 @import '../modules/reference-quote';
 @import '../modules/wide-text';
 @import '../modules/open-position';
@@ -80,8 +78,12 @@
 // Views
 @import '../views/page';
 @import '../views/single';
-@import '../views/blog';
+@import '../views/single-reference';
 @import '../views/community-code';
 @import '../views/template-surveys';
 @import '../views/template-surveys-modern';
 @import '../views/merch';
+
+// Gutenberg
+@import '../gutenberg/gutenberg-content';
+@import '../gutenberg/general';

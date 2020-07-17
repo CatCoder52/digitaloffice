@@ -1,0 +1,28 @@
+// Gutenberg blocks on the website side
+
+// Columns block
+.wp-block-columns {
+  @extend .block;
+  display: flex;
+
+  &.alignwide,
+  &.alignfull {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &:nth-of-type(1) {
+    padding-top: 0;
+  }
+}
+
+.wp-block-column {
+  flex: 1;
+  margin: 0 $margin-between-grid-columns;
+
+  h2 {
+    @extend %general-heading-cta;
+    font-weight: 400;
+    margin-bottom: $margin-between-text-elements;
+  }
+}
