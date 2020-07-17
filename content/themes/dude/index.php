@@ -60,7 +60,8 @@ get_header(); ?>
 
             </div>
         </section>
-															<?php break; endwhile; ?>
+
+    <?php break; endwhile; ?>
     <?php else :
       include get_theme_file_path( 'template-parts/hero.php' );
     endif; ?>
@@ -122,20 +123,23 @@ get_header(); ?>
                  <?php
                   $video_bg = get_post_meta( get_the_id(), 'article_video', true );
                   if ( $video_bg ) :
-						?>
+						      ?>
                   <div class="shade"></div>
                   <div class="vimeo-wrapper vimeo-wrapper-upsell">
                     <iframe src="https://player.vimeo.com/video/<?php echo str_replace( array( 'http:', 'https:', 'vimeo.com', '/' ), '', $video_bg ) ?>?background=1&autoplay=1&loop=1&byline=0&title=0"
                       frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                     </div>
-						<?php endif; ?>
+						      <?php endif; ?>
 
-                <div class="background-image preview lazyload" style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'tiny-preload-thumbnail' ) ?>');" data-src="<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>" data-src-mobile="<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>"></div>
-                <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>');"<?php endif; ?>></div>
-                <noscript><div class="background-image full-image" style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>');"></div></noscript>
-              </div>
+                  <?php image_lazyload_div( get_post_thumbnail_id( $post->ID ) ); ?>
+                </div>
 
               <h3><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
+
+              <div class="text-content">
+                <?php the_excerpt(); ?>
+              </div>
+
               <p class="date"><?php echo ucfirst( date_i18n( 'l', get_the_date( 'U' ) ) ) ?>na, <?php echo get_the_date( 'j.n.Y' ) ?></p>
             </div>
           <?php endwhile; ?>

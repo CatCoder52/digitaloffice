@@ -15,16 +15,6 @@
     }
   }
 
-  .block-head.block-head-relevant {
-    // Padding here is navigation height plus regular padding which is exactly 100px in total
-    padding-top: 10rem;
-  }
-
-  .block-head.block-head-archive {
-    // Padding here is navigation height plus regular padding which is exactly 100px in total
-    padding-top: calc(10rem + 113px);
-  }
-
   .block-title.block-title-archive {
     @extend %h2;
   }
@@ -41,14 +31,14 @@
       @include grid(2, $gutter_x: 5rem, $gutter_y: 5rem);
     }
 
-    @media (max-width: 580px) {
-      display: block;
+    .text-content {
+      margin-bottom: $margin-between-text-elements;
 
-      .col {
-        margin-bottom: 8rem;
+      p {
+        font-size: 16px;
       }
 
-      .col:last-child {
+      p:last-child {
         margin-bottom: 0;
       }
     }
@@ -64,16 +54,18 @@
     }
 
     h3 {
-      margin-top: 0;
-      margin-bottom: 2rem;
+      @extend %general-heading-small;
+
+      a {
+        color: $color-midnight;
+      }
     }
   }
 
   .date {
-    @include responsive-font(16px, 19px);
-    opacity: .5;
+    color: $color-midnight;
+    font-size: 13px;
     margin-bottom: 0;
     margin-top: 0;
-    font-weight: 300;
   }
 }

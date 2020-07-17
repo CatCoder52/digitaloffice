@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-02-12 17:43:37
+ * @Last Modified time: 2020-07-17 18:18:18
  *
  * @package dude
  */
@@ -27,23 +27,29 @@ if ( has_post_thumbnail() ) {
 }
 ?>
 
-<section class="block block-hero block-hero-single<?php if ( $video_bg ) : ?> has-video<?php endif; ?>">
+<section class="block block-hero is-centered block-hero-single<?php if ( $video_bg ) : ?> has-video<?php endif; ?>">
 
-  <?php if ( $video_bg ) : ?>
-    <div class="shade"></div>
-    <div class="vimeo-wrapper">
+  <div class="shade"></div>
+  <div class="featured-image">
+    <?php image_lazyload_div( get_post_thumbnail_id( $post->ID ) ); ?>
+    <?php if ( $video_bg ) : ?>
+      <div class="vimeo-wrapper">
       <iframe src="https://player.vimeo.com/video/<?php echo str_replace( array( 'http:', 'https:', 'vimeo.com', '/' ), '', $video_bg ) ?>?background=1&autoplay=1&loop=1&byline=0&title=0"
           frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
-  <?php endif; ?>
+    <?php endif; ?>
+  </div>
 
   <div class="container">
-    <div class="featured-image has-lazyload">
-      <div class="shade"></div>
-      <div class="background-image preview lazyload" style="background-image: url('<?php echo $bg_image_tiny; ?>');" data-src="<?php echo esc_url( $bg_image ); ?>" data-src-mobile="<?php echo esc_url( $bg_image_mobile[0] ); ?>"></div>
-      <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo esc_url( $bg_image ); ?>');"<?php endif; ?>></div>
-      <noscript><div class="background-image full-image" style="background-image: url('<?php echo esc_url( $bg_image ); ?>');"></div></noscript>
-    </div>
+    <div class="content">
+      <p class="block-title-pre" aria-describedby="block-title-<?php echo sanitize_title( get_the_title() ) ?>"><?php echo ucfirst( date_i18n( 'l', get_the_date( 'U' ) ) ) ?>na, <?php echo get_the_date( 'j.n.Y' ) ?></p>
 
+      <h1 id="block-title-<?php echo sanitize_title( get_the_title() ) ?>"><?php the_title() ?></h1>
+
+      <div class="hero-description">
+        <?php echo wpautop( get_the_excerpt() ) ?>
+      </div>
+    </div>
   </div>
+
 </section>
