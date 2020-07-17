@@ -15,12 +15,24 @@
     margin-bottom: $margin-between-text-elements;
   }
 
+  .text-content {
+    margin-bottom: $margin-between-text-elements;
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   .cta-link {
     color: $color-midnight;
 
     &::after {
       background-color: $color-midnight;
     }
+  }
+
+  .cta-link-wrapper {
+    margin-bottom: 0;
   }
 
   .col.col-content {
@@ -51,4 +63,8 @@
 
 .block.block-values + .block.block.block-cta-with-image {
   padding-top: 0;
+}
+
+.block.block-hero + .block-with-image {
+  padding-top: $padding-blocks-medium;
 }

@@ -3,12 +3,13 @@
  * @Author: Roni Laukkarinen
  * @Date:   2020-07-16 17:32:53
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-16 17:44:35
+ * @Last Modified time: 2020-07-17 11:56:53
  * @package dude
  */
 
 $image = get_sub_field( 'image' );
 $title = get_sub_field( 'title' );
+$centered_text = get_sub_field( 'centered_text' );
 $button = get_sub_field( 'link' );
 
 if ( empty( $image ) ) {
@@ -25,6 +26,12 @@ if ( empty( $image ) ) {
         <div class="content">
           <?php if ( ! empty( $title ) ) : ?>
             <h2><?php echo esc_html( $title ); ?></h2>
+          <?php endif; ?>
+
+          <?php if ( ! empty( $centered_text ) ) : ?>
+            <div class="text-content">
+              <?php echo wpautop( $centered_text ); // phpcs:ignore ?>
+            </div>
           <?php endif; ?>
 
           <?php if ( ! empty( $button ) ) : ?>
