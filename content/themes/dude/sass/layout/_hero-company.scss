@@ -9,10 +9,6 @@
     margin-bottom: 0;
   }
 
-  .container {
-    transform: none;
-  }
-
   .visual {
     @include aspect-ratio(1680, 398);
     overflow: hidden;
@@ -21,6 +17,7 @@
 
   .container {
     display: block;
+    transform: none;
   }
 
   .content {

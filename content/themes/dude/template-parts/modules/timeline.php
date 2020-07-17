@@ -3,10 +3,11 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 18:54:41
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-03-07 13:15:23
+ * @Last Modified time: 2020-07-17 11:37:34
  *
  * @package dude
  */
+
 ?>
 
 <section class="block block-timeline">
@@ -47,7 +48,7 @@
 
         <div class="image has-lazyload">
           <div class="background-image preview lazyload" style="background-image: url('<?php echo get_theme_file_uri( 'images/timeline/dude-2013-tiny.jpg' ) ?>' ) ?>');" data-src="<?php echo get_theme_file_uri( 'images/timeline/dude-2013.jpg' ) ?>" data-src-mobile="<?php echo get_theme_file_uri( 'images/timeline/dude-2013.jpg' ) ?>"></div>
-          <div id="dynamicimage" class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo get_theme_file_uri( 'images/timeline/dude-2013.jpg' ) ?>');"<?php endif; ?>></div>
+          <div id="dynamicimage" class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : // phpcs:ignore ?> style="background-image: url('<?php echo get_theme_file_uri( 'images/timeline/dude-2013.jpg' ) ?>');"<?php endif; ?>></div>
           <noscript><div class="background-image full-image" style="background-image: url('<?php echo get_theme_file_uri( 'images/timeline/dude-2013.jpg' ) ?>');"></div></noscript>
         </div>
       </div>

@@ -48,6 +48,16 @@ $focus-text-color: #000;
   }
 }
 
+// Do not show the outline on the skip link target.
+[tabindex="-1"]:focus {
+  outline: 0;
+}
+
+// Suppress focus ring on for mouse users for visual reasons
+[data-whatinput="mouse"] *:focus {
+  outline: none;
+}
+
 // Make theme keyboard accessible with no Javascript enabled
 .no-js *:focus {
   outline: 4px solid $focus-outline-color;

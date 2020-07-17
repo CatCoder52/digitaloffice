@@ -1,32 +1,18 @@
 .block.block-timeline {
-  @media (max-width: 600px) {
-    padding-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  .col a,
+  .active a {
+    @extend %textlink;
   }
 
-  .col,
-  .active {
-    a {
-      background-image: linear-gradient(to top, $color-deep-black, $color-deep-black);
-      background-size: 100% 1px;
-      background-position: left bottom;
-      background-repeat: no-repeat;
-      transition: .3s all;
-      text-decoration: none;
-      overflow: visible;
-    }
-
-    a:hover,
-    a:focus,
-    a:active {
-      background-size: 100% 2.8rem;
-      color: $color-white;
-    }
+  .row:hover h2,
+  .row.active h2 {
+    color: $color-cobalt-blue;
   }
 
   @media (max-width: 1200px) {
-    padding-left: $padding-default-cols-ipad;
-    padding-right: $padding-default-cols-ipad;
-
     .columns {
       flex-wrap: wrap;
     }
@@ -47,7 +33,7 @@
 
   .col-timeline .row {
     display: flex;
-    padding: 4rem 7.5rem;
+    padding: 4rem 7.5rem 4rem 0;
 
     &:hover {
       cursor: pointer;
@@ -84,46 +70,13 @@
     p,
     button.action {
       transition: all $transition-duration;
-
-      a {
-        background-image: linear-gradient(to top, $color-deep-black, $color-deep-black);
-        background-size: 100% 1px;
-        background-position: left bottom;
-        background-repeat: no-repeat;
-        transition: .3s all;
-        text-decoration: none;
-        overflow: visible;
-      }
-
-      a:hover,
-      a:focus,
-      a:active {
-        background-size: 100% 2.8rem;
-        color: $color-white;
-      }
-    }
-
-    &:hover h2,
-    &.active h2 {
-      color: $color-black;
-    }
-
-    &:hover p,
-    &:hover button.action,
-    &.active button.action,
-    &.active * {
-      opacity: 1;
-      color: $color-black;
     }
 
     p,
     button.action,
     button.action:focus {
       @extend %default;
-
-      @include responsive-font(17px, 19px);
       cursor: pointer;
-      opacity: .75;
       width: 80%;
       padding-left: 4rem;
       border: 0;
@@ -151,7 +104,6 @@
     &:first-child h2:after {
       content: '';
       width: 1px;
-      background: rgba($color-black, .2);
       height: 100%;
       position: absolute;
       margin-left: 4.5rem;
@@ -170,7 +122,7 @@
       @extend %h1;
       padding-right: 5rem;
       margin: 0;
-      color: rgba($color-black, .2);
+      font-weight: 400;
 
       @media (max-width: 380px) {
         margin-bottom: 3rem;
@@ -212,8 +164,8 @@
 
   .label {
     @extend %h4;
-    background: $color-black;
-    color: $color-white;
+    background: $color-mint;
+    color: $color-midnight;
     padding: 4rem;
     font-weight: 300;
     max-width: 45rem;

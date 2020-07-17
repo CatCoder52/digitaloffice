@@ -5,6 +5,10 @@
     overflow: visible;
   }
 
+  .cols {
+    @include grid(2, $gutter_x: 0rem, $gutter_y: 0rem);
+  }
+
   h2 {
     @extend %general-heading-cta;
     font-weight: 400;
