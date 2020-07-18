@@ -124,8 +124,6 @@
                 img.nextElementSibling.classList.add("reveal");
               }
 
-              console.log(img);
-
               self.observer.unobserve(entry.target);
               let src = img.getAttribute(self.settings.src);
               let srcset = img.getAttribute(self.settings.srcset);

@@ -49,11 +49,11 @@ get_header(); ?>
                 if ( ! empty( $models ) ) :
                   if ( count( $models ) > 0 ) : ?>
                     <div class="models models-<?php echo count( $models ); ?>">
-                      <?php $y = 0; foreach ( $models as $model ) : ?>
+												<?php $y = 0; foreach ( $models as $model ) : ?>
                       <button<?php if ( 0 === $y ) { echo ' class="active"'; } ?> data-price="<?php echo get_post_meta( get_the_id(), 'price', true ); ?>" data-image="<?php echo wp_get_attachment_url( $model['image'] ); ?>" data-model-slug="<?php echo esc_attr( sanitize_title( $model['name'] ) ) ?>" data-model-name="<?php echo $model['name']; ?>"><?php echo esc_html( $model['name'] ) ?></button>
                       <?php $y++; endforeach; ?>
                     </div>
-                  <?php endif; ?>
+												<?php endif; ?>
                 <?php endif; ?>
 
               <div class="choices">
@@ -80,7 +80,7 @@ get_header(); ?>
       </div><!-- .container -->
     </section>
 
-    <?php include get_theme_file_path( 'template-parts/instagram-merch.php' ); ?>
+    <?php // include get_theme_file_path( 'template-parts/instagram-merch.php' ); ?>
 
 	</main><!-- #main -->
 </div><!-- #primary -->
