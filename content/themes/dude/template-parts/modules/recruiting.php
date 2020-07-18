@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 19:33:53
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-15 15:53:41
+ * @Last Modified time: 2020-07-18 19:21:13
  *
  * @package dude
  */
@@ -16,7 +16,7 @@
     <div class="cols">
       <div class="col">
         <h2>Kiinnostuitko Dudesta työpaikkana?</h2>
-        <p>Meille voi aina hakea, vaikka avoimia paikkoja ei olisikaan välttämättä näkyvillä. Arvioimme tilanteen aina hakijan kykyjen mukaan..</p>
+        <p>Meille voi aina hakea, vaikka avoimia paikkoja ei olisikaan välttämättä näkyvillä. Arvioimme tilanteen aina hakijan kykyjen mukaan.</p>
       </div>
 
       <div class="col">

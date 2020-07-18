@@ -8,6 +8,7 @@
   padding-bottom: 0;
   background-color: $color-white;
   height: 80vh;
+  overflow: hidden;
 
   @media (min-width: $container-ipad-landscape) {
     min-height: 90rem;

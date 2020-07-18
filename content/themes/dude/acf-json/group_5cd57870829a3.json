@@ -529,6 +529,33 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_5f1320ef948b0": {
+                    "key": "layout_5f1320ef948b0",
+                    "name": "jobs",
+                    "label": "Avoimet työpaikat (2020)",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f1320ef948b1",
+                            "label": "",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Tämä alue on kovakoodattu ja sitä ei voi muokata hallintapaneelista.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5f0ef240080e3": {
                     "key": "layout_5f0ef240080e3",
                     "name": "cta-with-phone-input",
@@ -1528,5 +1555,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1595084845
+    "modified": 1595089159
 }

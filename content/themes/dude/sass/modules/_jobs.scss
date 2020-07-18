@@ -1,0 +1,36 @@
+.block.block-jobs {
+  padding-top: 0;
+  padding-bottom: $padding-blocks-medium;
+
+  .job-box {
+    @include grid(2, $gutter_x: 0rem, $gutter_y: 0rem);
+    background: #f6f6f6;
+    padding: 5rem;
+  }
+
+  h2 {
+    font-size: 30px;
+    font-weight: 400;
+    margin: 0 0 .5rem;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  h2,
+  p {
+    color: $color-midnight;
+  }
+
+  .col.col-apply {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    p:not(.button-wrapper) {
+      margin-left: auto;
+      margin-right: 6rem;
+    }
+  }
+}
