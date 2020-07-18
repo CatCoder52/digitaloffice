@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 19:18:00
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-02-12 17:43:36
+ * @Last Modified time: 2020-07-18 18:30:43
  *
  * @package dude
  */
@@ -55,9 +55,12 @@ if ( ! $query->have_posts() ) {
           continue;
         } ?>
 
-        <div class="col" style="background-image:url('<?php echo wp_get_attachment_url( $image ) ?>')">
+        <div class="col">
+          <div class="image">
+            <?php image_lazyload_div( $image ); ?>
+          </div>
           <div class="content">
-            <h3><?php the_title() ?></h3>
+            <h3><?php the_title(); ?></h3>
             <?php if ( ! empty( $title ) ) : ?>
               <p class="person-title"><?php echo esc_html( $title ) ?></p>
             <?php endif; ?>

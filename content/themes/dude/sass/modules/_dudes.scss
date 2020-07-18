@@ -1,15 +1,17 @@
 .block.block-dudes {
-  background: #f0f0f0;
+  background: $color-white;
+  padding-top: 0;
+  padding-bottom: $padding-blocks-medium;
 
   .container {
     overflow: visible;
   }
 
   .cols {
-    @include grid(3, $gutter_x: 6rem, $gutter_y: 8rem);
+    @include grid(3, $gutter_x: 0rem, $gutter_y: 0rem);
 
     @media (max-width: 1000px) {
-      @include grid(2, $gutter_x: 5rem, $gutter_y: 5rem);
+      @include grid(2, $gutter_x: 0rem, $gutter_y: 0rem);
     }
 
     @media (max-width: 660px) {
@@ -18,49 +20,44 @@
   }
 
   .col {
-    @include background-cover();
-    display: flex;
-    align-items: flex-end;
+    overflow: hidden;
     position: relative;
+
+    .preview {
+      display: none;
+    }
+
+    .image {
+      overflow: hidden;
+      position: relative;
+      height: 56rem;
+
+      > div {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
 
     @media (max-width: 660px) {
       margin-bottom: 6rem;
     }
-
-    &:after {
-      content: '';
-      display: block;
-      padding-bottom: 100%;
-    }
   }
 
   .content {
-    background: $color-white;
-    width: 80%;
-    margin-left: -3rem;
-    margin-bottom: -3rem;
-    padding: 5rem;
-
-    @media (max-width: 1300px) {
-      margin-left: -2rem;
-      margin-bottom: -3rem;
-      padding: 3rem;
-    }
-
-    @media (max-width: 1200px) {
-      margin-bottom: -3.5rem;
-    }
+    padding: 2.5rem;
+    text-align: center;
+    height: auto;
 
     h3 {
-      // A bit smaller than %h3, same than in _contact-list.scss
-      @include responsive-font(16px, 28px);
+      @extend %general-heading-small;
       margin-bottom: 1rem;
       margin-top: 0;
-      font-weight: 500;
+      font-weight: 400;
     }
 
     p {
-      @include responsive-font(14px, 22px);
+      font-size: 16px;
       font-weight: 300;
       margin: 0;
 
@@ -68,18 +65,5 @@
         margin-bottom: 2rem;
       }
     }
-
-    .arrow-link-wrapper {
-      margin: 0;
-    }
-
-    .arrow-link-wrapper .arrow {
-      left: 0;
-      margin: 0;
-    }
   }
-}
-
-body.single .block-dudes {
-  margin-bottom: $padding-default-rows;
 }

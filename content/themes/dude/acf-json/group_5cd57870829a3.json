@@ -1089,7 +1089,7 @@
                 "layout_5ce02fdd6fad8": {
                     "key": "layout_5ce02fdd6fad8",
                     "name": "dudes",
-                    "label": "Duuuuuds (2019)",
+                    "label": "Tekijät (2020)",
                     "display": "block",
                     "sub_fields": [
                         {
@@ -1528,5 +1528,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1594975990
+    "modified": 1595084845
 }
