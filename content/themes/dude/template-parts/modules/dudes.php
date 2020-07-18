@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 19:18:00
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-18 18:30:43
+ * @Last Modified time: 2020-07-18 18:57:01
  *
  * @package dude
  */
@@ -34,13 +34,6 @@ if ( ! $query->have_posts() ) {
   <h2 class="screen-reader-text">Henkilöt</h2>
 
   <div class="container">
-
-    <?php if ( is_singular( 'person' ) ) : ?>
-      <header class="block-head block-head-no-padding-top">
-        <p class="block-title-pre" aria-describedby="block-title-related-dudes">Crew</p>
-        <h2 class="block-title" id="block-title-related-dudes">Tsekkaa muut dudet</h2>
-      </header>
-    <?php endif; ?>
 
     <div class="cols">
       <?php while ( $query->have_posts() ) : $query->the_post();

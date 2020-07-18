@@ -1,0 +1,72 @@
+.block.block-hero-person {
+  .container {
+    padding-bottom: 0;
+  }
+
+  .block-title {
+    @extend %general-heading-large;
+    font-weight: 500;
+    margin-bottom: $margin-between-text-elements;
+  }
+
+  .block-title-pre {
+    line-height: 2.06;
+    letter-spacing: 1.51px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  .image {
+    height: 90%;
+    max-height: 100%;
+
+    @media (max-width: 860px) {
+      height: auto;
+      min-height: 0;
+
+      &:after {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+      }
+    }
+  }
+
+  .social a,
+  .social a:hover,
+  .social a:focus,
+  .social a:active {
+    background: none;
+  }
+
+  .social {
+    margin-left: 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+
+    li {
+      margin-right: .5rem;
+    }
+  }
+
+  .social svg {
+    fill: $color-midnight;
+    width: 25px;
+    height: 25px;
+  }
+
+  .cols {
+    @include grid(2, $gutter_x: $margin-between-grid-columns-large, $gutter_y: 0rem);
+  }
+
+  p {
+    @media (min-width: $container-ipad-landscape) {
+      font-size: 16px;
+    }
+  }
+}

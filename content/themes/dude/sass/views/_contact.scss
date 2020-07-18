@@ -24,6 +24,10 @@ body.page-id-4487 .block.block-hero {
 }
 
 body.page-id-4487 {
+  .block.block-title-left-text-right {
+    padding-bottom: $padding-blocks-medium;
+  }
+
   .block.block-cta-with-image .col-content {
     background: $color-white;
     color: $color-midnight;

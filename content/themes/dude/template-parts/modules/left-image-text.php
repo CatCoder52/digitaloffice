@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 17:34:24
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-02-12 17:43:36
+ * @Last Modified time: 2020-07-18 18:50:30
  *
  * @package dude
  */
@@ -27,7 +27,7 @@ if ( empty( $bg_image ) || empty( $content ) ) {
         </div>
       </div>
 
-      <div class="col has-grey-bg has-grey-bg-extend-right">
+      <div class="col">
         <div class="content">
           <?php echo wpautop( $content ); ?>
         </div>
