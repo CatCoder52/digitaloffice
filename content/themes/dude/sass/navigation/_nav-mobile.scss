@@ -101,19 +101,12 @@ body:not(.js-nav-active) .nav-primary.is-animatable {
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
-  padding-left: $padding-default-cols;
-  padding-right: $padding-default-cols;
+  padding-left: 0;
+  padding-right: 0;
   padding-top: 42px;
-  padding-bottom: $padding-default-rows;
+  padding-bottom: 0;
   overflow: auto;
   transition: opacity .6s;
-
-  @media (max-width: $container-ipad) {
-    padding-left: $padding-default-cols-ipad;
-    padding-right: $padding-default-cols-ipad;
-    padding-top: $padding-default-rows-ipad;
-    padding-bottom: $padding-default-rows-ipad;
-  }
 
   @media (max-width: 600px) {
     padding-top: 4rem;
