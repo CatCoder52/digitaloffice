@@ -628,7 +628,7 @@ swup.on("contentReplaced", function () {
         // defaults / fallbacks
         var greetings = [
           "Moi! Verkkosivut uudistuksen tarpeessa? Uutta ilmettä putiikille? Kysy lisää chatissa.",
-          "Moro! Voisimmeko auttaa jotenkin? 🙂",
+          "Moro! 👋 Onko verkkosivustosi tai yritysilmeesi uudistuksen tarpeessa? Laita viestiä!",
           "Terve! Pistä viestiä niin kerron vähän lisää meidän palveluista. 👋",
         ];
       }

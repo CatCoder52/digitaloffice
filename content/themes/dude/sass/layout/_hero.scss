@@ -9,6 +9,10 @@
   background-color: $color-white;
   height: 80vh;
 
+  @media (min-width: $container-ipad-landscape) {
+    min-height: 90rem;
+  }
+
   .block-pre-title {
     @extend %default;
     margin: 0 0 4rem;

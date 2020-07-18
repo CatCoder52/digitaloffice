@@ -4,18 +4,20 @@
   right: 3rem;
   bottom: 3rem;
   background: $color-white;
-  padding: 3rem;
+  padding: 1.5rem;
   cursor: pointer;
   transition: all $transition-duration;
   display: flex;
-  box-shadow: 10px 10px 30px -5px rgba($color-black, .15);
-  max-width: 50rem;
+  box-shadow: 5px 5px 30px 0 rgba($color-midnight, .08);
+  max-width: 37.5rem;
   width: 100%;
   align-items: center;
+  border-radius: 2px;
 
   .message {
     position: relative;
     z-index: 0;
+    padding-right: 3rem;
   }
 
   .open-chat {
@@ -73,11 +75,13 @@
   }
 
   p {
-    @include responsive-font(14px, 18px);
+    font-size: 14px;
     margin: 0;
     font-weight: 300;
 
     &.head {
+      font-size: 14px;
+      color: $color-cobalt-blue;
       font-weight: 600;
       margin-bottom: .4rem;
     }
@@ -86,11 +90,12 @@
   .avatar {
     @include background-cover();
     border-radius: 50%;
-    width: 8rem;
-    min-width: 8rem;
-    height: 8rem;
-    min-height: 8rem;
+    width: 7rem;
+    min-width: 7rem;
+    height: 7rem;
+    min-height: 7rem;
     margin-right: 2rem;
+    box-shadow: 5px 5px 30px 0 rgba($color-midnight, .08);
   }
 
   &:hover {

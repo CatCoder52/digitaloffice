@@ -1,0 +1,38 @@
+body.page-id-4487 .block.block-hero .shade {
+  display: none;
+}
+
+body.page-id-4487 .block.block-hero {
+  @extend .is-centered;
+  overflow: hidden;
+
+  .button {
+    background: $color-midnight;
+    color: $color-white;
+
+    &:hover,
+    &:focus {
+      color: $color-mint;
+      background: $color-midnight-blue;
+
+      span,
+      svg {
+        transform: translate(2px, 0);
+      }
+    }
+  }
+}
+
+body.page-id-4487 {
+  .block.block-cta-with-image .col-content {
+    background: $color-white;
+    color: $color-midnight;
+    box-shadow: 0 2px 39px 0 rgba(0, 0, 0, .07);
+  }
+}
+
+.block.block-hero + .block.block-cta-with-image,
+.block.block-cta-with-image + .block.block-title-left-text-right {
+  padding-top: $padding-blocks-medium;
+}
+
