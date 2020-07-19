@@ -575,15 +575,15 @@ swup.on("contentReplaced", function () {
     // Chat greeting
     if (typeof Storage !== "undefined") {
       if (
-        sessionStorage.getItem("chat_greeting_visits") >= 3 &&
+        sessionStorage.getItem("chat_greeting_visits") >= 0 &&
         sessionStorage.getItem("chat_greeting_sent") === null
       ) {
-        // send chat if user has visited over 3 pages and greeting still not sent
+        // send chat if user has visited over 0 pages and greeting still not sent
         setTimeout(function () {
           maybeSendChatGreeting();
         }, 1500);
       } else if (sessionStorage.getItem("chat_greeting_sent") === null) {
-        // send greeting if not send before
+        // send greeting if not sent before
 
         // init timer
         TimeMe.initialize({
@@ -702,7 +702,7 @@ swup.on("contentReplaced", function () {
 
     $("body").on("click", ".chat-greeting button.close", function (event) {
       $(".chat-greeting")
-        .addClass("removed-item")
+        .addClass("removed-item-chat")
         .one(
           "webkitAnimationEnd oanimationend msAnimationEnd animationend",
           function (e) {
@@ -718,7 +718,7 @@ swup.on("contentReplaced", function () {
       event.preventDefault();
 
       $(".chat-greeting")
-        .addClass("removed-item")
+        .addClass("removed-item-chat")
         .one(
           "webkitAnimationEnd oanimationend msAnimationEnd animationend",
           function (e) {
