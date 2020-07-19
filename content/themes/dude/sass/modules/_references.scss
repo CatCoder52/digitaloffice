@@ -7,6 +7,14 @@
   padding-right: 0;
   padding-bottom: 24rem;
 
+  @media (max-width: 1200px) {
+    padding-bottom: $padding-blocks-medium;
+  }
+
+  @media (max-width: $container-ipad) {
+    padding-bottom: $padding-blocks-medium;
+  }
+
   &.block-references-related:not(.block-cta-with-phone-input) {
     padding-top: 0;
 
@@ -32,6 +40,10 @@
     position: relative;
     text-align: center;
     font-size: $font-min-size;
+
+    @media (max-width: $grid-base-size + 150px) {
+      margin-right: 2rem;
+    }
 
     button {
       color: $color-midnight;

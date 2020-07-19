@@ -274,7 +274,7 @@ a.global-link {
     font-weight: 500;
   }
 
-  @media (min-width: $container-ipad-landscape) {
+  @media (min-width: $container-ipad-landscape + 200px) {
     font-size: $font-size-general-headings-desktop;
   }
 }

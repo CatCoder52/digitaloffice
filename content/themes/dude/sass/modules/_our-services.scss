@@ -124,9 +124,12 @@
   }
 
   .col-content {
-    padding: 13rem 0;
-    padding-right: 10rem;
     padding-left: 0;
+
+    @media (min-width: 1200px) {
+      padding: 13rem 0;
+      padding-right: 10rem;
+    }
   }
 
   .col-image {

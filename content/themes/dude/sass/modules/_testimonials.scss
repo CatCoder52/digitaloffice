@@ -5,7 +5,15 @@
   z-index: 2;
   padding-left: 0;
   padding-right: 0;
-  padding-bottom: 22rem;
+  padding-top: $padding-blocks-small;
+
+  @media (min-width: 1000px) {
+    padding-bottom: $padding-blocks-huge;
+  }
+
+  @media (max-width: $container-ipad) {
+    padding-bottom: $padding-blocks-small;
+  }
 
   .slick-disabled {
     opacity: .2;
@@ -16,6 +24,15 @@
     position: relative;
     text-align: center;
     font-size: $font-min-size;
+
+    @media (max-width: $grid-base-size + 150px) {
+      margin-left: 2rem;
+    }
+
+    @media (max-width: $container-ipad) {
+      margin-left: auto;
+      margin-right: auto;
+    }
 
     button {
       color: $color-white;
@@ -61,7 +78,13 @@
   }
 
   .slick-slide {
-    width: $grid-base-size;
+    width: calc(100vw - 4rem);
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    @media (min-width: $grid-base-size + 150px) {
+      width: $grid-base-size;
+    }
   }
 
   &.block-testimonials-slider .container {
@@ -100,11 +123,29 @@
     height: 170px;
     min-width: 170px;
     margin-right: 5rem;
+
+    @media (max-width: $container-ipad) {
+      width: calc(170px/2);
+      height: calc(170px/2);
+      min-width: calc(170px/2);
+      margin: 0 auto 4rem;
+    }
   }
 
   .testimonial-content {
     width: calc(100% - 220px);
     display: block;
+
+    @media (max-width: $container-ipad) {
+      width: 100%;
+      text-align: center;
+    }
+
+    @media (max-width: $container-mobile) {
+      .description p:not(.reviewer) {
+        font-size: 16px;
+      }
+    }
 
     p:not(.reviewer) {
       @include responsive-font($font-min-size, 34px);

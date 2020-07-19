@@ -30,6 +30,13 @@ $submit-width: 33px;
     padding-left: $padding-cta-box-x;
     padding-right: $padding-cta-box-x;
 
+    @media (max-width: 1040px) {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+
     .col:first-of-type {
       width: 745px;
 
@@ -40,6 +47,7 @@ $submit-width: 33px;
 
     .col:last-of-type {
       width: calc(100% - 745px);
+      min-width: calc(100% - 745px);
       display: flex;
       align-items: center;
     }

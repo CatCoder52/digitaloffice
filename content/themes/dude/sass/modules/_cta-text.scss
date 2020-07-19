@@ -1,23 +1,26 @@
 .block.block-cta-text {
   text-align: left;
-  padding-top: $padding-blocks-huge;
-  padding-bottom: $padding-blocks-huge;
+
+  @media (min-width: 1000px) {
+    padding-top: $padding-blocks-huge;
+    padding-bottom: $padding-blocks-huge;
+  }
 
   .container {
     overflow: visible;
   }
 
   h2 {
-    @include responsive-font(32px, 52px);
+    @extend %general-heading-alt;
     font-weight: 400;
     margin-top: 0;
     width: 100%;
     line-height: 1.48;
     max-width: 1009px;
-    margin-bottom: 10rem;
+    margin-bottom: $margin-between-text-elements;
 
-    @media (min-width: $container-ipad-landscape) {
-      font-size: 52px;
+    @media (min-width: 1000px) {
+      margin-bottom: 10rem;
     }
   }
 
@@ -32,5 +35,7 @@
 
 // Less padding if next is refrence upsell
 .block.block-cta-text + .block.block-references-one {
-  padding-top: 0;
+  @media (min-width: $container-ipad-landscape) {
+    padding-top: 0;
+  }
 }
