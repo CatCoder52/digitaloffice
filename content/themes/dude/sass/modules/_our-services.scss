@@ -9,12 +9,6 @@
     padding-top: 0;
   }
 
-  .step {
-    color: $color-cobalt-blue;
-    margin-bottom: 58px;
-    display: block;
-  }
-
   .cols.cols-services {
     display: flex;
 
@@ -58,31 +52,9 @@
     padding-bottom: 0;
   }
 
-  ul {
-    list-style: none;
-    padding-left: 0;
-  }
-
-  li {
-    line-height: 1.77;
-    padding-left: 0;
-    display: flex;
-    align-items: center;
-    font-weight: 500;
-  }
-
-  li:before {
-    width: 12px;
-    height: 1px;
-    background: $color-cobalt-blue;
-    display: inline-flex;
-    content: '';
-    margin-right: 16px;
-  }
-
   .col-title {
-    @include responsive-font(32px, 60px);
-    color: $color-cobalt-blue;
+    @extend %general-heading-large;
+    color: $color-midnight-blue;
     font-weight: 500;
     margin-top: 0;
     margin-bottom: 5rem;

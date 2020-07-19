@@ -61,6 +61,7 @@
 // Special links
 .cta-link,
 %cta-link {
+  color: $color-midnight-blue;
   font-size: 18px;
   display: inline-block;
   font-weight: 600;
@@ -79,7 +80,7 @@
 .cta-link:after {
   width: 100%;
   height: 2px;
-  background: $color-cobalt-blue;
+  background: $color-midnight-blue;
   position: relative;
   content: '';
   display: block;
