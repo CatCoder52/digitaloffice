@@ -400,6 +400,7 @@ Usage: codyhouse.co/license
 
 .gform_wrapper ul.gfield_checkbox li input[type=checkbox] + br + label::before,
 .gform_wrapper ul.gfield_radio li input[type=radio] + br + label::before,
+input[type=radio] + label::before,
 .radio + label::before,
 .checkbox + label::before { // custom buttons - basic style
   content: '';
@@ -421,6 +422,7 @@ Usage: codyhouse.co/license
 
 .gform_wrapper ul.gfield_checkbox li input[type=checkbox]:not(:checked):not(:focus) + br + label:hover::before,
 .gform_wrapper ul.gfield_radio li input[type=radio]:not(:checked):not(:focus) + br + label:hover::before,
+input[type=radio]:not(:checked):not(:focus) + label:hover::before,
 .radio:not(:checked):not(:focus) + label:hover::before,
 .checkbox:not(:checked):not(:focus) + label:hover::before { // :hover
   border-color: var(--color-contrast-medium);
@@ -429,6 +431,7 @@ Usage: codyhouse.co/license
 @supports (grid-area: auto) {
   .gform_wrapper ul.gfield_checkbox li input[type=checkbox] + br + label::before,
   .gform_wrapper ul.gfield_radio li input[type=radio] + br + label::before,
+  input[type=radio] + label::before,
   .radio + label::before,
   .checkbox + label::before {
     position: relative;
@@ -437,6 +440,7 @@ Usage: codyhouse.co/license
 }
 
 .gform_wrapper ul.gfield_radio li input[type=radio] + br + label::before,
+input[type=radio] + label::before,
 .radio + label::before {
   border-radius: 50%; // radio button radius
 }
@@ -448,6 +452,7 @@ Usage: codyhouse.co/license
 
 .gform_wrapper ul.gfield_checkbox li input[type=checkbox]:checked + br + label::before,
 .gform_wrapper ul.gfield_radio li input[type=radio]:checked + br + label::before,
+input[type=radio]:checked + label::before,
 .radio:checked + label::before,
 .checkbox:checked + label::before {
   // checked state
@@ -459,6 +464,7 @@ Usage: codyhouse.co/license
 
 .gform_wrapper ul.gfield_checkbox li input[type=checkbox]:active + br + label::before,
 .gform_wrapper ul.gfield_radio li input[type=radio]:active + br + label::before,
+input[type=radio]:active + label::before,
 .radio:active + label::before,
 .checkbox:active + label::before {
   // active state
@@ -468,6 +474,7 @@ Usage: codyhouse.co/license
 
 .gform_wrapper ul.gfield_checkbox li input[type=checkbox]:checked:active + br + label::before,
 .gform_wrapper ul.gfield_radio li input[type=radio]:checked:active + br + label::before,
+input[type=radio]:checked:active + label::before,
 .radio:checked:active + label::before,
 .checkbox:checked:active + label::before {
   transform: none;
@@ -475,6 +482,7 @@ Usage: codyhouse.co/license
 }
 
 .gform_wrapper ul.gfield_radio li input[type=radio]:checked + br + label::before,
+input[type=radio]:checked + label::before,
 .radio:checked + label::before {
   // radio button icon
   background-image: url('../svg/radio-check.svg');
@@ -495,6 +503,7 @@ input[type=checkbox]:checked + br + label::before,
 .gform_wrapper ul.gfield_radio li input[type=radio]:checked:active + br + label::before,
 .gform_wrapper ul.gfield_checkbox li input[type=checkbox]:focus + br + label::before,
 .gform_wrapper ul.gfield_radio li input[type=radio]:focus + br + label::before,
+input[type=radio]:focus + label::before,
 .radio:checked:active + label::before,
 .checkbox:checked:active + label::before,
 .radio:focus + label::before,
