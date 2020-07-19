@@ -407,8 +407,8 @@ input[type=radio] + label::before,
   display: inline-block;
   vertical-align: middle; // fallback
   flex-shrink: 0;
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   background-color: var(--color-bg);
   border-width: var(--checkbox-radio-border-width);
   border-color: var(--color-contrast-low);
