@@ -92,42 +92,16 @@
 
   // Merch hero
   &.block-hero-merch {
-    a {
-      background-image: linear-gradient(to top, $color-white, $color-white);
-      background-size: 100% 1px;
-      background-position: left bottom;
-      background-repeat: no-repeat;
-      transition: .3s all;
-      text-decoration: none;
-      overflow: visible;
-    }
-
-    a:hover,
-    a:focus,
-    a:active {
-      background-size: 100% 2.8rem;
-      color: $color-deep-black;
-    }
+    padding-bottom: 0;
 
     .details {
       opacity: .7;
-      font-size: 19px;
-      line-height: 1.6;
+      line-height: 1.5;
       transition: all 1s;
     }
 
     .details:hover {
       opacity: 1;
-    }
-  }
-
-  // Animation stuff
-  .animate {
-    @media (min-width: $container-mobile) {
-      animation-name: fade-in-down;
-      animation-timing-function: ease-in-out;
-      animation-fill-mode: forwards;
-      opacity: 0;
     }
   }
 }

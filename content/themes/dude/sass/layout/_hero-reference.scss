@@ -2,8 +2,22 @@
   background: $color-midnight;
   color: $color-white;
 
+  a,
   h2,
   p {
     color: $color-white;
+  }
+
+  .details {
+    font-size: 16px;
+    margin-top: 4rem;
+
+    a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link) {
+      color: $color-white;
+
+      &::after {
+        display: none;
+      }
+    }
   }
 }

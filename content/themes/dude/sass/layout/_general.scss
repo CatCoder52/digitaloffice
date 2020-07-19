@@ -47,12 +47,14 @@ body.page.page-id-9 {
   .block.block-cta-with-phone-input,
   .block.block-two-images {
     background: $color-midnight;
+    margin-bottom: -1px;
   }
 
   .block.block-title-left-text-right,
   .block.block-our-services,
   .block.block-references {
     background: $color-midnight;
+    margin-bottom: -1px;
 
     h2 {
       color: $color-mint;
@@ -76,7 +78,8 @@ body.page.page-id-9 {
 
 // Pages where all blocks are dark
 body.post-type-archive-reference,
-body.page-id-9 {
+body.page-id-9,
+body.post-type-archive-merch {
   .content-area,
   .block {
     background-color: $color-midnight;
