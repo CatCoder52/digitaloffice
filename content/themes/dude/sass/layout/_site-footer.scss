@@ -7,6 +7,9 @@
   padding-top: $padding-blocks-medium;
   padding-bottom: 0;
 
+  // Sometimes browsers render the white behind blocks
+  margin-top: -1px;
+
   .cols {
     @include grid(4, $gutter_x: $margin-between-grid-columns, $gutter_y: $margin-between-grid-columns);
 

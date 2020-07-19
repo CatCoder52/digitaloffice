@@ -127,6 +127,12 @@
     @extend %general-heading-small;
   }
 
+  &.block-hero-basic {
+    min-height: 0;
+    height: auto;
+    padding-top: $padding-blocks-large;
+  }
+
   h1,
   h2,
   p {

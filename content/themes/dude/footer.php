@@ -102,7 +102,7 @@
     </div>
 
     <div class="disclaimer">
-      <p>Kaikki oikeudet pidätetään. <a class="no-text-link" href="#">Lue tietosuojaseloste</a>.</p>
+      <p>Kaikki oikeudet pidätetään. <a class="no-text-link" href="<?php echo esc_url( get_page_link(3) ); ?>">Lue tietosuojaseloste</a>.</p>
     </div>
 
   </footer><!-- #colophon -->
