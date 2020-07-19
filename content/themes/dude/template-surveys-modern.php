@@ -107,7 +107,7 @@ $hero_content = get_field( 'hero_content' );
 
         <?php if ( ! empty( $form_description ) ) : ?>
           <div class="container">
-            <?php echo wpautop( $form_description ); // WPCS: XSS ok. ?>
+            <?php echo wpautop( $form_description ); // phpcs:ignore ?>
           </div>
         <?php endif; ?>
 

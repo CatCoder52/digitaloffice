@@ -13,6 +13,11 @@
     @include aspect-ratio(1680, 398);
     overflow: hidden;
     width: 100%;
+
+    // Some browsers render incorrectly
+    .preview {
+      display: none;
+    }
   }
 
   .container {

@@ -84,12 +84,23 @@ function dude_scripts() {
   ) );
 
   if ( is_post_type_archive( 'merch' ) ) {
-    wp_enqueue_script( 'store', get_theme_file_uri( 'js/store.js' ), array(), filemtime( get_theme_file_path( 'js/store.js' ) ), true );
+		wp_enqueue_script( 'store', get_theme_file_uri( 'js/store.js' ), array(), filemtime( get_theme_file_path( 'js/store.js' ) ), true );
   }
 }
 add_action( 'wp_enqueue_scripts', 'dude_scripts' );
 
+add_filter( 'script_loader_tag', 'dude_script_loader_tag', 10, 2 );
+
+function dude_script_loader_tag( $tag, $handle ) {
+  if ( 'store' === $handle ) {
+		return str_replace( '<script', '<script data-swup-reload-script data-swup-ignore-script', $tag );
+  }
+
+  return $tag;
+}
+
 add_action( 'after_setup_theme', 'dude_add_image_sizes' );
+
 function dude_add_image_sizes() {
   add_image_size( 'tiny-preload-thumbnail', 20, 20 );
 }
