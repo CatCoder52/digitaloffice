@@ -448,7 +448,19 @@ swup.on("contentReplaced", function () {
       }
     }
   })(jQuery);
+
+  // Always move scroll position to up when clicking a link
+  var moveTo = new MoveTo({
+    tolerance: 0,
+    duration: 0,
+    easing: "easeOutQuart",
+    container: window,
+  });
+
+  var target = document.getElementById("swup");
+  moveTo.move(target);
 });
+// Swup ends
 
 // jQuery start
 (function ($) {
