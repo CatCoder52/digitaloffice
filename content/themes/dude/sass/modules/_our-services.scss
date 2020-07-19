@@ -2,8 +2,11 @@
   background: $color-white;
   color: $color-body;
   overflow: visible;
-  padding-top: $padding-blocks-huge;
-  padding-bottom: $padding-blocks-huge;
+
+  @media (min-width: 1000px) {
+    padding-top: $padding-blocks-huge;
+    padding-bottom: $padding-blocks-huge;
+  }
 
   + .block.block-our-services {
     padding-top: 0;
@@ -15,8 +18,11 @@
     }
 
     .col.col-content {
-      margin-right: $margin-between-grid-columns;
       margin-bottom: $margin-between-grid-columns;
+
+      @media (min-width: 900px) {
+        margin-right: $margin-between-grid-columns;
+      }
 
       @media (min-width: 1500px) {
         width: 400px;
@@ -34,6 +40,10 @@
     .col.col-services {
       @include grid(2, $gutter_x: $margin-between-grid-columns, $gutter_y: $margin-between-grid-columns);
       overflow: hidden;
+
+      @media (max-width: $container-mobile) {
+        @include grid(1, $gutter_x: $margin-between-grid-columns, $gutter_y: $margin-between-grid-columns);
+      }
 
       @media (min-width: 1500px) {
         width: calc(100% - (400px + 150px));
