@@ -100,4 +100,4 @@ $padding-blog-content-box-x: 8.5rem;
 $transition-duration: .22s;
 
 // Where navigation transforms into responsive - scale your window width down to test
-$responsivenav: 800px;
+$responsivenav: $container-ipad-landscape;

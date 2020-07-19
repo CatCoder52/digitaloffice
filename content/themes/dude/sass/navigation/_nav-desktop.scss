@@ -61,8 +61,10 @@ body {
       line-height: 1.9;
     }
 
-    .col.col-secondary-nav {
-      border-right: 1px solid rgba($color-white, .5);
+    @media (min-width: 760px) {
+      .col.col-secondary-nav {
+        border-right: 1px solid rgba($color-white, .5);
+      }
     }
 
     .col.col-primary-nav {
@@ -70,8 +72,12 @@ body {
       justify-content: flex-end;
 
       li a {
-        @media (min-width: $container-ipad-landscape) {
+        @media (min-width: 900px) {
           font-size: 50px;
+        }
+
+        @media (max-width: $container-mobile) {
+          font-size: 18px;
         }
       }
     }
@@ -82,6 +88,10 @@ body {
 
     li a {
       font-size: $font-size-general-headings-mobile;
+
+      @media (max-width: $container-mobile) {
+        font-size: 14px;
+      }
     }
 
     a:hover {
@@ -90,11 +100,41 @@ body {
   }
 
   .cols.cols-contact {
-    @include grid(2, $gutter_x: 0rem, $gutter_y: 0rem);
-    border-top: 1px solid rgba($color-white, .5);
-    margin-right: 6.8rem;
-    margin-top: 4rem;
+    @include grid(2, $gutter_x: $margin-between-grid-columns, $gutter_y: 0rem);
     padding-top: $margin-between-grid-columns;
+
+    @media (min-width: 760px) {
+      margin-right: 6.8rem;
+      margin-top: 4rem;
+    }
+
+    &.show-on-mobile {
+      padding-top: 3rem;
+      padding-bottom: 2rem;
+
+      @media (min-width: 760px) {
+        display: none;
+      }
+
+      h3.contact-tile,
+      p,
+      button,
+      a {
+        font-size: 14px;
+      }
+    }
+
+    &:not(.show-on-mobile) {
+      display: none;
+
+      @media (min-width: 760px) {
+        @include grid(2, $gutter_x: $margin-between-grid-columns, $gutter_y: 0rem);
+      }
+    }
+
+    @media (min-width: 760px) {
+      border-top: 1px solid rgba($color-white, .5);
+    }
 
     .contact-title {
       color: $color-white;
@@ -102,6 +142,11 @@ body {
       text-align: left;
       margin-top: 0;
       margin-bottom: 2.2rem;
+
+      @media (max-width: 760px) {
+        font-size: 14px;
+        margin-bottom: .5rem;
+      }
     }
 
     p,
@@ -292,6 +337,38 @@ body {
   margin: 0;
   z-index: 6;
   position: relative;
+  text-align: center;
+  display: none;
+
+  @media (min-width: 760px) {
+    display: block;
+  }
+
+  @media (max-width: 759px) {
+    &.show-on-mobile {
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 16px;
+      width: 100%;
+      text-align: left;
+
+      .button {
+        font-size: 16px;
+        width: 100%;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      svg {
+        width: 22px;
+        height: 8.34px;
+      }
+    }
+  }
 
   .button {
     @extend %default;
@@ -443,6 +520,8 @@ body {
   .nav-primary-desktop {
     padding-top: 0;
     padding-bottom: 0;
+
+
 
     // Offset half of nav-toggle
     transform: translateX(-15px);

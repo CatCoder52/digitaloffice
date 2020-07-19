@@ -24,6 +24,14 @@ $nav-open-from-top: false;
 
 @import 'hamburgers/_sass/hamburgers/hamburgers';
 
+.show-on-mobile {
+  display: none;
+
+  @media (max-width: 760px) {
+    display: block;
+  }
+}
+
 @media (max-width: 960px) {
   .no-js .nav-primary-desktop {
     display: block;
@@ -101,18 +109,15 @@ body:not(.js-nav-active) .nav-primary.is-animatable {
   overflow: auto;
   transition: opacity .6s;
 
-  @media (max-width: 600px) {
-    padding-top: 4rem;
-    padding-bottom: $padding-default-cols-mobile;
-    display: block;
-    height: 100%;
-    min-height: 100vh;
-    overflow: auto;
+  @media (max-width: $grid-base-size + 150px) {
+    .container {
+      padding-left: $padding-default-cols-mobile;
+      padding-right: $padding-default-cols-mobile;
+    }
   }
 
-  @media (max-width: $container-mobile) {
-    padding-left: $padding-default-cols-mobile;
-    padding-right: $padding-default-cols-mobile;
+  @media (max-width: 760px) {
+    padding-top: 10rem;
   }
 
   .contact-details {
@@ -285,6 +290,13 @@ body:not(.js-nav-active) .nav-primary.is-animatable {
   cursor: pointer;
   position: absolute;
   right: 0;
+
+  @media (max-width: $responsivenav) {
+    right: 2rem;
+
+    // About half offset of nav-toggle height
+    transform: translateY(-8px);
+  }
 
   &.nav-toggle-mobile {
     @media (min-width: $responsivenav) {

@@ -223,6 +223,28 @@ if ( $show_chat_greeting ) {
               </div>
             </div>
 
+            <p class="top-button-holder show-on-mobile">
+              <a href="<?php echo esc_url( get_the_permalink( 6357 ) ); ?>" class="button button-glitch">Aloitetaan projektisi<?php include get_theme_file_path( '/svg/arrow-right.svg' ); ?></a>
+            </p>
+
+            <div class="cols cols-contact show-on-mobile">
+              <div class="col">
+                <h3 class="contact-title">Asiakkuudet</h3>
+                <p>Kristian Hohkavaara<br/>
+                  <a href="tel:0408351033">040 835 1033</a><br/>
+                  <a href="mailto:kristian@dude.fi">kristian@dude.fi</a>
+                </p>
+              </div>
+
+              <div class="col">
+                <h3 class="contact-title">Yhteys</h3>
+                <p>
+                  <a href="mailto:moro@dude.fi">moro@dude.fi</a><br/>
+                  <button class="chat open-chat open-chat-contact" aria-label="Avaa chat" tabindex="0">Avaa chat!</button>
+                </p>
+              </div>
+            </div>
+
           </div>
 
         </nav>
