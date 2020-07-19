@@ -5,3 +5,66 @@
     color: $color-white;
   }
 }
+
+body.page-id-6357 .block.block-wide-text {
+  padding-top: 0;
+
+  .container {
+    max-width: $grid-base-size;
+
+    h2 {
+      @extend %general-heading-large;
+    }
+  }
+
+  // Gravity forms
+  .gform_wrapper .gfield_required {
+    display: none;
+  }
+
+  .gform_wrapper ul.gform_fields li.gfield {
+    padding: 0;
+    margin: 0 0 $margin-between-grid-columns;
+  }
+
+  .gform_wrapper ul.gform_fields {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5rem !important;
+    margin-right: -5rem !important;
+    overflow: hidden;
+  }
+
+  .gform_wrapper form li.gfmc-column {
+    width: 50%;
+
+    &.gfmc-row-1-column,
+    &.gfmc-row-2-column {
+      width: calc(50% - 10rem) !important;
+      margin-left: 5rem !important;
+      margin-right: 5rem !important;
+    }
+
+    &.gfmc-row-3-column {
+      width: 100% !important;
+      margin-left: 5rem !important;
+      margin-right: 5rem !important;
+    }
+  }
+
+  .gform_wrapper legend.gfield_label,
+  .gform_wrapper .top_label .gfield_label {
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  .gform_wrapper input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']) {
+    padding: 2rem 0;
+    background: transparent;
+    border-right: 2px solid $color-midnight-blue;
+    border-bottom: 2px solid $color-midnight-blue;
+    border-top: 0;
+    border-left: 0;
+  }
+}
+

@@ -122,7 +122,8 @@
     "rocketgenius/gravity-forms": "*",
     "humanmade/page-for-post-type": "dev-master",
     "wpackagist-plugin/simple-page-ordering": "*",
-    "wpackagist-plugin/intuitive-custom-post-order": "*"
+    "wpackagist-plugin/intuitive-custom-post-order": "*",
+    "wpackagist-plugin/gf-form-multicolumn": "*"
   },
   "require-dev": {
     "rarst/wps": "*",

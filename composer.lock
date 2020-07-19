@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f858eb6347dddad85055e45363049928",
+    "content-hash": "f68620b69be271b6e8bb84ac9f625a34",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -4615,6 +4615,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/ga-in/"
+        },
+        {
+            "name": "wpackagist-plugin/gf-form-multicolumn",
+            "version": "3.0.3",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/gf-form-multicolumn/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/gf-form-multicolumn.zip?timestamp=1556440047"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/gf-form-multicolumn/"
         },
         {
             "name": "wpackagist-plugin/imagify",
