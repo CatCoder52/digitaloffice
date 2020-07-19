@@ -42,8 +42,12 @@
 
       &:hover,
       &:focus {
-        background: $color-white-two;
-        color: $color-midnight;
+        background: $color-midnight-blue;
+        color: $color-mint;
+
+        svg {
+          color: $color-mint;
+        }
       }
     }
 
