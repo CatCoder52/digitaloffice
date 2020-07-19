@@ -66,5 +66,68 @@ body.page-id-6357 .block.block-wide-text {
     border-top: 0;
     border-left: 0;
   }
+
+  // Range
+  .gform_wrapper form #field_6_11,
+  .gform_wrapper .top_label div.ginput_container,
+  .gform_wrapper form #field_6_11 li {
+    overflow: visible;
+  }
+
+  .gform_wrapper form #field_6_11 .gfield_label {
+    margin-bottom: $margin-between-text-elements;
+  }
+
+  .gform_wrapper .gfield_radio li label {
+    margin: 0;
+
+    @media (min-width: $container-ipad) {
+      font-size: 19px;
+    }
+  }
+
+  .gform_wrapper form #field_6_11 ul {
+    display: flex;
+    width: 100%;
+    position: relative;
+    overflow: visible;
+
+    .checkbox + label::before,
+    .gform_wrapper ul.gfield_checkbox li input[type=checkbox]+br+label::before,
+    .gform_wrapper ul.gfield_radio li input[type=radio]+br+label::before,
+    .radio + label::before,
+    input[type=radio]+label::before {
+      background: $color-white;
+      display: block;
+      margin: 0 auto 3rem;
+    }
+
+    .gform_wrapper ul.gfield_radio li input[type=radio]:checked + br + label::before,
+    input[type=radio]:checked + label::before {
+      background-image: url('../svg/budget-check.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: $color-midnight-blue;
+      width: 4rem;
+      height: 4rem;
+      margin-top: -16px;
+      transform: translateY(8px);
+    }
+
+    &::before {
+      content: '';
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      background: $color-midnight-blue;
+      top: 15px;
+      left: 0;
+    }
+
+    > li {
+      width: 20%;
+      text-align: center;
+    }
+  }
 }
 

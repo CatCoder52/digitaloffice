@@ -485,7 +485,7 @@ input[type=radio]:checked:active + label::before,
 input[type=radio]:checked + label::before,
 .radio:checked + label::before {
   // radio button icon
-  background-image: url('../svg/radio-check.svg');
+  // background-image: url('../svg/radio-check.svg');
   background-color: $color-midnight-blue;
   border-color: $color-midnight-blue !important;
   background-size: var(--radio-marker-size);
