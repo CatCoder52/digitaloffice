@@ -3,7 +3,7 @@
  * @Author:             Roni Laukkarinen, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:50:23
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-15 13:36:49
+ * @Last Modified time: 2020-07-19 19:26:14
  *
  * @package dude
  */
@@ -21,7 +21,6 @@ $reference = array(
   'title'             => ( ! empty( $title ) ) ? $title : get_the_title( $reference_id ),
   'excerpt'           => ( ! empty( $description ) ) ? $description : get_the_excerpt( $reference_id ),
   'permalink'         => get_the_permalink( $reference_id ),
-  'frontpage_upsell_image' => get_field( 'frontpage_upsell_image', $reference_id ),
   'frontpage_upsell_title' => get_field( 'frontpage_upsell_title', $reference_id ),
   'frontpage_upsell_desc' => get_field( 'frontpage_upsell_desc', $reference_id ),
   'image_skew' => get_field( 'image_skew', $reference_id ),

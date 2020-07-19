@@ -3,30 +3,6 @@
     "title": "Työ - esittely muilla sivuilla",
     "fields": [
         {
-            "key": "field_5f0d90f891583",
-            "label": "Kuva",
-            "name": "frontpage_upsell_image",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "id",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
             "key": "field_5f0d910891584",
             "label": "Pääotsikko",
             "name": "frontpage_upsell_title",
@@ -69,7 +45,7 @@
             "label": "Iso kuva (skew)",
             "name": "image_skew",
             "type": "image",
-            "instructions": "",
+            "instructions": "Isossa refunostossa näytettävä kuva.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -86,6 +62,30 @@
             "max_width": "",
             "max_height": "",
             "max_size": 1,
+            "mime_types": ""
+        },
+        {
+            "key": "field_5f14724ab1d66",
+            "label": "Vaihtoehtoinen pieni kuva listauksissa",
+            "name": "alt_image_listings",
+            "type": "image",
+            "instructions": "Esim. slidereissä yms. Jos tätä ei aseteta, näytetään artikkelikuva.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
             "mime_types": ""
         }
     ],
@@ -106,5 +106,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1594803091
+    "modified": 1595175988
 }
