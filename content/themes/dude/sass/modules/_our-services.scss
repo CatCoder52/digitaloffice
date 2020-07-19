@@ -10,11 +10,18 @@
   }
 
   .cols.cols-services {
-    display: flex;
+    @media (min-width: 960px) {
+      display: flex;
+    }
 
     .col.col-content {
-      width: 400px;
-      margin-right: 150px;
+      margin-right: $margin-between-grid-columns;
+      margin-bottom: $margin-between-grid-columns;
+
+      @media (min-width: 1500px) {
+        width: 400px;
+        margin-right: 150px;
+      }
 
       p {
         @media (min-width: $container-ipad) {
@@ -26,8 +33,11 @@
 
     .col.col-services {
       @include grid(2, $gutter_x: $margin-between-grid-columns, $gutter_y: $margin-between-grid-columns);
-      width: calc(100% - (400px + 150px));
       overflow: hidden;
+
+      @media (min-width: 1500px) {
+        width: calc(100% - (400px + 150px));
+      }
     }
 
     h3 {
@@ -45,6 +55,8 @@
     }
 
     .col-inner {
+      min-width: 0;
+
       @media (min-width: $grid-base-size) {
         max-width: 350px;
       }
@@ -71,6 +83,10 @@
       display: block;
       text-align: left;
       margin-top: -145px;
+
+      @media (max-width: 1500px) {
+        margin-top: -125px;
+      }
     }
   }
 }
