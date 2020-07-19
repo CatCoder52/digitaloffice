@@ -238,7 +238,7 @@ function acf_admin_head_custom_js_css() { ?>
       align-items: center;
       position: absolute;
       top: 6px;
-      font-weight: 300;
+      font-weight: 400;
       text-align: center;
       transition: all .66s;
       opacity: 0;

@@ -1,5 +1,5 @@
 .block.block-process {
-  background: $color-cobalt-blue;
+  background: $color-white;
   overflow: visible;
 
   // Because of left image text module, let's add the top margin
@@ -7,54 +7,20 @@
     margin-top: -10rem;
   }
 
-  a {
-    background-image: linear-gradient(to top, $color-white, $color-white);
-    background-size: 100% 1px;
-    background-position: left bottom;
-    background-repeat: no-repeat;
-    transition: .3s all;
-    text-decoration: none;
-    overflow: visible;
-    color: $color-white;
-  }
-
-  a:hover,
-  a:focus,
-  a:active {
-    background-size: 100% 2.8rem;
-    color: $color-deep-black;
-  }
-
-  .container {
-    overflow: visible;
-  }
-
-  @media (min-width: 1400px) {
-    padding-left: 20rem;
-    padding-right: 20rem;
-  }
-
   h2,
   p,
   h3 {
-    color: $color-white;
+    color: $color-midnight-blue;
   }
 
-  .block-head {
-    text-align: center;
-
-    @media (max-width: $container-mobile) {
-      padding-top: 2rem;
-    }
-  }
-
-  .block-title {
-    max-width: 100%;
-    width: 100%;
+  h3 {
+    @extend %general-heading-cta;
+    margin-bottom: $margin-between-text-elements;
+    font-weight: 400;
   }
 
   .cols {
-    @include grid(3, $gutter_x: 10rem, $gutter_y: 0rem);
+    @include grid(3, $gutter_x: $margin-between-grid-columns, $gutter_y: 0rem);
 
     @media (max-width: 1100px) {
       display: flex;
@@ -90,52 +56,8 @@
   }
 
   .col p {
-    @include responsive-font(16px, 19px);
-  }
-
-  .circle {
-    width: 25rem;
-    height: 25rem;
-    overflow: visible;
-    position: relative;
-    margin-bottom: 6.5rem;
-    transition: all $transition-duration;
-
-    @media (max-width: 800px) {
-      margin-left: auto;
-      margin-right: auto;
+    @media (min-width: $container-ipad) {
+      font-size: 16px;
     }
-
-    svg {
-      transition: all $transition-duration;
-      opacity: .3;
-    }
-
-    &:hover {
-      svg {
-        opacity: 1;
-      }
-
-      .long-arrow {
-        width: 10rem;
-      }
-    }
-
-    h3 {
-      position: absolute;
-      bottom: 6rem;
-      left: 9rem;
-    }
-  }
-
-  .long-arrow {
-    bottom: 8rem;
-    left: 18rem;
-  }
-
-  .long-arrow,
-  .long-arrow:after,
-  .long-arrow:before {
-    background: $color-white;
   }
 }
