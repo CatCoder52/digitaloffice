@@ -14,8 +14,12 @@
 
   .content {
     text-align: center;
-    transform: translateY(calc(#{$nav-height} / 2));
     max-width: 100%;
+    transform: translateY(3rem);
+
+    @media (min-width: 760px) {
+      transform: translateY(calc(#{$nav-height} / 2));
+    }
 
     .content-non-statement {
       margin-top: 0;
@@ -58,6 +62,7 @@
       color: $color-midnight;
       font-weight: 500;
       line-height: 1;
+      white-space: nowrap;
 
       @media (max-width: 700px) {
         font-size: 62px;
@@ -66,12 +71,23 @@
       @media (max-width: $container-mobile) {
         font-size: 42px;
       }
+
+      // iPhones
+      @media (max-width: 360px) {
+        font-size: 32px;
+      }
     }
 
     .content-sub-statement {
       @include responsive-font(16px, 20px);
       color: $color-midnight;
       font-size: $font-size-general-small;
+
+
+      // iPhones
+      @media (max-width: 360px) {
+        font-size: 14px;
+      }
     }
   }
 }

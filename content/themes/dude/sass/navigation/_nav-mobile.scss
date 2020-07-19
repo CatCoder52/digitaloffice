@@ -109,8 +109,13 @@ body:not(.js-nav-active) .nav-primary.is-animatable {
   overflow: auto;
   transition: opacity .6s;
 
-  @media (max-width: $grid-base-size + 150px) {
-    .container {
+  .container {
+    @media (max-width: $grid-base-size + 150px) {
+      padding-left: $padding-default-cols-ipad;
+      padding-right: $padding-default-cols-ipad;
+    }
+
+    @media (max-width: $container-ipad) {
       padding-left: $padding-default-cols-mobile;
       padding-right: $padding-default-cols-mobile;
     }

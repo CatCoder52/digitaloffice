@@ -4,7 +4,7 @@
   padding-bottom: $padding-blocks-large;
 
   h2 {
-    @include responsive-font(32px, 54px);
+    @extend %general-heading-alt;
     line-height: 1.24;
     font-weight: 400;
     margin: 0;
@@ -12,16 +12,27 @@
   }
 
   .cols {
-    display: flex;
+    @media (min-width: 900px) {
+      display: flex;
+    }
   }
 
   .col.col-title {
-    width: 600px;
-    margin-right: 70px;
-    margin-bottom: 0;
+    margin-bottom: $margin-between-text-elements;
+
+    @media (min-width: 900px) {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: 1500px) {
+      width: 600px;
+      margin-right: 70px;
+    }
   }
 
   .col.col-text {
-    width: calc(100% - (600px + 70px));
+    @media (min-width: 1500px) {
+      width: calc(100% - (600px + 70px));
+    }
   }
 }

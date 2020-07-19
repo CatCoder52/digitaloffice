@@ -25,11 +25,13 @@
   padding-bottom: $padding-blocks-large;
 
   @media (max-width: $grid-base-size + 150px) {
-    padding-left: $padding-default-cols-mobile;
-    padding-right: $padding-default-cols-mobile;
+    padding-left: $padding-default-cols-ipad;
+    padding-right: $padding-default-cols-ipad;
   }
 
   @media (max-width: $container-ipad) {
+    padding-left: $padding-default-cols-mobile;
+    padding-right: $padding-default-cols-mobile;
     padding-top: $padding-blocks-medium;
     padding-bottom: $padding-blocks-medium;
   }
@@ -242,7 +244,7 @@ a.global-link {
   line-height: 1.35;
   font-weight: 400;
 
-  @media (min-width: $container-ipad-landscape) {
+  @media (min-width: 1300px) {
     font-size: 54px;
   }
 }
