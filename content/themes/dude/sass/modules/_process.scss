@@ -2,9 +2,8 @@
   background: $color-white;
   overflow: visible;
 
-  // Because of left image text module, let's add the top margin
-  @media (min-width: $container-mobile) {
-    margin-top: -10rem;
+  .number svg {
+    margin-bottom: $margin-between-text-elements;
   }
 
   h2,
