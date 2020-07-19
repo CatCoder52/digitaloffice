@@ -117,7 +117,7 @@ body {
 
   // Font smoothing options
   text-size-adjust: none;
-  text-rendering: geometricPrecision;
+  text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
