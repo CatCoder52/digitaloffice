@@ -9,6 +9,22 @@
 .block.block-logos .logo-wall {
   @include grid(6, $gutter_x: 100px, $gutter_y: 100px);
 
+  @media (max-width: 1500px) {
+    @include grid(5, $gutter_x: 100px, $gutter_y: 100px);
+  }
+
+  @media (max-width: 1250px) {
+    @include grid(4, $gutter_x: 100px, $gutter_y: 100px);
+  }
+
+  @media (max-width: 960px) {
+    @include grid(3, $gutter_x: 50px, $gutter_y: 50px);
+  }
+
+  @media (max-width: 650px) {
+    @include grid(2, $gutter_x: 20px, $gutter_y: 40px);
+  }
+
   > div {
     display: flex;
     align-items: center;
@@ -21,6 +37,12 @@
     width: auto;
     height: 100%;
     fill: $color-midnight;
+
+    // iPhone and other phones
+    @media (max-width: 500px) {
+      max-height: 70px;
+      max-width: 100px;
+    }
 
     path:not(.do-not-fill) {
       fill: $color-midnight;
