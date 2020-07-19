@@ -312,7 +312,7 @@ label[for="simpay-4535-text-8"],
   }
 
   .comma {
-    font-weight: 300;
+    font-weight: 400;
 
     // Hide last comma
     &:last-of-type {
@@ -406,7 +406,7 @@ label[for="simpay-4535-text-8"],
     @include responsive-font(14px, 18px);
     display: block;
     margin: 0;
-    font-weight: 300;
+    font-weight: 400;
 
     &.head {
       font-weight: 600;
@@ -450,7 +450,7 @@ label[for="simpay-4535-text-8"],
     &.products,
     &.cart-text,
     &.empty-cart-text {
-      font-weight: 300;
+      font-weight: 400;
       font-style: normal;
 
       &.qty {

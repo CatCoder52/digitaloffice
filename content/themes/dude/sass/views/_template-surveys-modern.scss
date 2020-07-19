@@ -130,7 +130,7 @@ body.template-surveys-modern {
 
     table.gsurvey-likert th.gsurvey-likert-choice-label {
       font-size: 14px !important;
-      font-weight: 300 !important;
+      font-weight: 400 !important;
     }
 
     .description_above .gfield_description {
@@ -225,7 +225,7 @@ body.template-surveys-modern {
       @include responsive-font(17px, 20px);
       line-height: 1 !important;
       margin: 0 !important;
-      font-weight: 300;
+      font-weight: 400;
       display: block;
       position: relative;
       margin-bottom: 20px;
