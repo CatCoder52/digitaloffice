@@ -355,6 +355,12 @@ body {
 }
 
 @media only screen and (min-width: $responsivenav) {
+  .main-navigation-wrapper {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    z-index: 0;
+  }
 
   // Use display block based hovers if no animations enabled
   @if $enable-animations == false {
@@ -437,6 +443,9 @@ body {
   .nav-primary-desktop {
     padding-top: 0;
     padding-bottom: 0;
+
+    // Offset half of nav-toggle
+    transform: translateX(-15px);
 
     .menu-items {
       margin: 0;

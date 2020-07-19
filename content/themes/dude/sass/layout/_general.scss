@@ -24,18 +24,19 @@
   padding-top: $padding-blocks-large;
   padding-bottom: $padding-blocks-large;
 
+  @media (max-width: $grid-base-size + 150px) {
+    padding-left: $padding-default-cols-mobile;
+    padding-right: $padding-default-cols-mobile;
+  }
+
   @media (max-width: $container-ipad) {
-    padding-left: $padding-default-cols-ipad;
-    padding-right: $padding-default-cols-ipad;
     padding-top: $padding-blocks-medium;
     padding-bottom: $padding-blocks-medium;
   }
 
   @media (max-width: $container-mobile) {
-    padding-left: $padding-default-cols-mobile;
-    padding-right: $padding-default-cols-mobile;
-    padding-top: $padding-default-rows-mobile;
-    padding-bottom: $padding-default-rows-mobile;
+    padding-top: $padding-blocks-medium;
+    padding-bottom: $padding-blocks-medium;
   }
 }
 
