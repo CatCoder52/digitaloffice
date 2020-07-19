@@ -111,11 +111,210 @@
 
 <?php wp_footer(); ?>
 
-<script>CRISP_WEBSITE_ID = "-K90vfAnyk27kD-pZAep"</script>
-<script async src="https://client.crisp.im/l.js"></script>
+<script data-swup-reload-script>CRISP_WEBSITE_ID = "-K90vfAnyk27kD-pZAep"</script>
+<script data-swup-reload-script async src="https://client.crisp.im/l.js"></script>
+
+<script data-swup-reload-script>
+  // Chat greeting
+  var daysBetween = function (d1, d2) {
+    var diff = Math.abs(d1.getTime() - d2.getTime());
+    return diff / (1000 * 60 * 60 * 24);
+  };
+
+  var moreThanGreetingThresholdAgo = function (date) {
+    var toCheckAgainst = 300000; // 5 minutes in milliseconds
+    var anAgo = Date.now() - toCheckAgainst;
+
+    return date < anAgo;
+  };
+
+  if (typeof Storage !== "undefined") {
+    if (
+      sessionStorage.getItem("chat_greeting_visits") >= 2 &&
+      sessionStorage.getItem("chat_greeting_sent") === null
+    ) {
+      // send chat if user has visited over 2 pages and greeting still not sent
+      jQuery("body").addClass("chat-box-visible");
+      setTimeout(function () {
+        maybeSendChatGreeting();
+      }, 4500);
+    } else if (sessionStorage.getItem("chat_greeting_sent") === null) {
+      // send greeting if not sent before
+
+      // init timer
+      TimeMe.initialize({
+        currentPageName: document.title,
+        idleTimeoutInSeconds: 10,
+      });
+
+      // trigger chat after X seconds
+      TimeMe.callAfterTimeElapsedInSeconds(5, function () {
+        jQuery("body").addClass("chat-box-visible");
+        maybeSendChatGreeting();
+      });
+    } else if (
+      moreThanGreetingThresholdAgo(
+        new Date(sessionStorage.getItem("chat_greeting_sent"))
+      )
+    ) {
+      // send chat if last time over day ago
+
+      // init timer
+      TimeMe.initialize({
+        currentPageName: document.title,
+        idleTimeoutInSeconds: 10,
+      });
+
+      // trigger chat after X seconds
+      TimeMe.callAfterTimeElapsedInSeconds(5, function () {
+        maybeSendChatGreeting();
+      });
+    } else {
+      // Send if none of above apply
+      // ...if chat box is not visible of course
+      if ( jQuery("body").hasClass("chat-box-visible") === false ) {
+        setTimeout(function () {
+          jQuery("body").addClass("chat-box-visible");
+          maybeSendChatGreeting();
+        }, 4500);
+      }
+      
+    } // end if send chat check
+  } // end storage check
+
+  function maybeSendChatGreeting() {
+    
+    // don't show greeting on contact page
+    if (jQuery("body").hasClass("page-id-4487")) {
+      return;
+    }
+
+    // alter greetings based on page
+    if (jQuery("body").hasClass("page-id-4485")) {
+      // visuaalinen suunnittelu page
+      var greetings = [
+        "Uutta ilmettä putiikille? Kysy lisää chatissa.",
+        "Moi! Mille työn jälki vaikuttaa? 🙂",
+        "Moro! Voisimmeko auttaa jotenkin? 👋",
+      ];
+    } else if (jQuery("body").hasClass("page-id-9")) {
+      // verkkosivut- ja palvelut page
+      var greetings = [
+        "Moottoritie on kuuma, mutta webisivut pitäs saada? 🚀",
+        "Verkkosivut uudistuksen tarpeessa? Pistä viestiä niin kerron vähän lisää meidän palveluista. 🙂",
+        "Moro! Voisimmeko auttaa jotenkin? 👋",
+      ];
+    } else {
+      // defaults / fallbacks
+      var greetings = [
+        "Moi! Verkkosivut uudistuksen tarpeessa? Uutta ilmettä putiikille? Kysy lisää chatissa.",
+        "Moro! 👋 Onko verkkosivustosi tai yritysilmeesi uudistuksen tarpeessa? Laita viestiä!",
+        "Terve! Pistä viestiä niin kerron vähän lisää meidän palveluista. 👋",
+      ];
+    }
+
+    var greeters = [
+      {
+        name: "Roni",
+        image: dude.theme_base + "/images/chat-roni.jpg",
+      },
+      {
+        name: "Timi",
+        image: dude.theme_base + "/images/chat-timi.jpg",
+      },
+    ];
+
+    // do nothing if session is ongoing or user has opened the chat
+    if (
+      $crisp.is("website:available") &&
+      !$crisp.is("session:ongoing") &&
+      !$crisp.is("chat:opened")
+    ) {
+      // get random greeting and greeter
+      if (typeof chat_greeting_override !== "undefined") {
+        var greeting = chat_greeting_override;
+      } else {
+        var greeting =
+          greetings[Math.floor(Math.random() * greetings.length)];
+      }
+
+      var greeter = greeters[Math.floor(Math.random() * greeters.length)];
+
+      // show greeting
+      jQuery("body").append(
+        '<div class="chat-greeting"><button class="open-chat" aria-label="Avaa chat"></button><div class="avatar" style="background-image:url(\'' +
+          greeter.image +
+          '\')"></div><div class="message"><p class="head">Viesti henkilöltä ' +
+          greeter.name +
+          "</p><p>" +
+          greeting +
+          '</p></div><button class="close-chat close" aria-label="Sulje ilmoitus"><svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="currentColor"><path class="clr-i-outline clr-i-outline-path-1" d="M19.41 18l8.29-8.29a1 1 0 0 0-1.41-1.41L18 16.59l-8.29-8.3a1 1 0 0 0-1.42 1.42l8.3 8.29-8.3 8.29A1 1 0 1 0 9.7 27.7l8.3-8.29 8.29 8.29a1 1 0 0 0 1.41-1.41z"/></svg></button></div>'
+      );
+
+      $crisp.push([
+        "on",
+        "chat:opened",
+        function () {
+          $crisp.push(["do", "message:show", ["text", greeting]]);
+          $crisp.push(["off", "chat:opened"]);
+        },
+      ]);
+
+      // save that we have shown the greeting multiple times
+      sessionStorage.setItem(
+        "chat_greeting_sent",
+        new Date().toLocaleString()
+      );
+    }
+  }
+
+  jQuery("body").on("click", ".chat-greeting button.close", function (event) {
+    jQuery("body").removeClass("chat-box-visible");
+
+    jQuery(".chat-greeting")
+      .addClass("removed-item-chat")
+      .one(
+        "webkitAnimationEnd oanimationend msAnimationEnd animationend",
+        function (e) {
+          jQuery(".chat-greeting").remove();
+        }
+      );
+
+    sessionStorage.setItem("chat_greeting_sent", new Date().toLocaleString());
+  });
+
+  // Open chat if element is clicked
+  jQuery("body").on("click", ".open-chat", function (event) {
+    event.preventDefault();
+
+    jQuery(".chat-greeting")
+      .addClass("removed-item-chat")
+      .one(
+        "webkitAnimationEnd oanimationend msAnimationEnd animationend",
+        function (e) {
+          jQuery(".chat-greeting").remove();
+        }
+      );
+
+    $crisp.push(["do", "chat:show"]);
+    $crisp.push(["do", "chat:open"]);
+  });
+
+  // If there is unread posts, show the chat
+  window.CRISP_READY_TRIGGER = function () {
+    setTimeout(function () {
+      // Hide chat circle by default unless there is unread messages or session is ongoing
+      if ($crisp.get("chat:unread:count") > 0 || $crisp.is("session:ongoing")) {
+        $crisp.push(["do", "chat:show"]);
+      } else {
+        $crisp.push(["do", "chat:hide"]);
+      }
+    }, 25);
+  };
+</script>
 
 <!-- Hotjar Tracking Code for www.dude.fi -->
-<script>
+<script data-swup-reload-script>
     (function(h,o,t,j,a,r){
         h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
         h._hjSettings={hjid:8741,hjsv:6};
