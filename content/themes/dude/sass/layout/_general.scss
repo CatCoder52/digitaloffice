@@ -37,8 +37,8 @@
   }
 
   @media (max-width: $container-mobile) {
-    padding-top: $padding-blocks-medium;
-    padding-bottom: $padding-blocks-medium;
+    padding-top: $padding-blocks-small;
+    padding-bottom: $padding-blocks-small;
   }
 }
 
@@ -233,6 +233,11 @@ a.global-link {
   margin-top: 0;
   line-height: 1.35;
 
+  @media (max-width: $container-mobile) {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
   @media (min-width: $container-ipad-landscape) {
     font-size: $font-size-general-headings-medium-ctas;
   }
@@ -243,6 +248,11 @@ a.global-link {
   margin-top: 0;
   line-height: 1.35;
   font-weight: 400;
+
+  @media (max-width: $container-mobile) {
+    font-size: 24px;
+    font-weight: 500;
+  }
 
   @media (min-width: 1300px) {
     font-size: 54px;
@@ -255,6 +265,11 @@ a.global-link {
   margin-top: 0;
   line-height: 1.5;
   font-weight: 400;
+
+  @media (max-width: $container-mobile) {
+    font-size: 24px;
+    font-weight: 500;
+  }
 
   @media (min-width: $container-ipad-landscape) {
     font-size: $font-size-general-headings-desktop;

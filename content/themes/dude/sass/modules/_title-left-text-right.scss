@@ -1,12 +1,8 @@
 .block.block-title-left-text-right {
   background: $color-white;
-  padding-top: $padding-blocks-large;
-  padding-bottom: $padding-blocks-large;
 
   h2 {
     @extend %general-heading-alt;
-    line-height: 1.24;
-    font-weight: 400;
     margin: 0;
     padding-right: 70px;
   }
