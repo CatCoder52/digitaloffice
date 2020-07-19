@@ -65,7 +65,7 @@ get_header(); ?>
 
     <section class="block block-single block-single-reference">
 
-      <div class="gutenberg-content">
+      <div class="gutenberg-content swup-transition-fade">
         <?php the_content() ?>
       </div>
 

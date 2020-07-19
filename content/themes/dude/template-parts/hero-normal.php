@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-17 11:47:56
+ * @Last Modified time: 2020-07-19 12:35:32
  *
  * @package dude
  */
@@ -41,9 +41,9 @@ if ( has_post_thumbnail() ) {
   <div class="container">
 
     <div class="content">
-      <h1><?php echo esc_html( $title ); ?></h1>
+      <h1 class="swup-transition-fade"><?php echo esc_html( $title ); ?></h1>
 
-      <div class="hero-description">
+      <div class="hero-description swup-transition-fade">
         <?php if ( ! empty( $content ) ) {
           echo wpautop( $content ); // phpcs:ignore
         }
@@ -51,7 +51,7 @@ if ( has_post_thumbnail() ) {
       </div>
 
       <?php if ( ! empty( $button ) ) : ?>
-        <p class="button-wrapper"><a class="button button-glitch button-mint" href="<?php echo esc_url( $button['url'] ); ?>"<?php if ( ! empty( $button['target'] ) ) : ?> target="<?php echo esc_html( $button['target'] ); ?>"<?php endif; ?>><?php echo esc_html( $button['title'] ); ?><?php include get_theme_file_path( '/svg/arrow-right.svg' ); ?></a></p>
+        <p class="button-wrapper swup-transition-fade"><a class="button button-glitch button-mint" href="<?php echo esc_url( $button['url'] ); ?>"<?php if ( ! empty( $button['target'] ) ) : ?> target="<?php echo esc_html( $button['target'] ); ?>"<?php endif; ?>><?php echo esc_html( $button['title'] ); ?><?php include get_theme_file_path( '/svg/arrow-right.svg' ); ?></a></p>
       <?php endif; ?>
     </div>
 

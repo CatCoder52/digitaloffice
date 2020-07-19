@@ -3,7 +3,7 @@
  * @Author:             Roni Laukkarinen, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:48:37
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-14 16:16:18
+ * @Last Modified time: 2020-07-19 12:32:33
  *
  * @package dude
  */
@@ -17,7 +17,7 @@ $button = get_sub_field( 'cta-link' );
 <section class="block block-title-left-text-right">
   <div class="container">
 
-    <div class="cols">
+    <div class="cols swup-transition-fade">
       <div class="col col-title">
         <?php if ( ! empty( $title ) ) : ?>
           <h2><?php echo esc_html( $title ); ?></h2>

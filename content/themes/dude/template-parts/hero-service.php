@@ -37,9 +37,9 @@ $button = get_post_meta( get_the_id(), 'hero_button', true );
 
 <div class="container">
 
-    <h1><?php the_title() ?></h1>
+    <h1 class="swup-transition-fade"><?php the_title() ?></h1>
 
-    <div class="service-hero-wrap">
+    <div class="service-hero-wrap swup-transition-fade">
       <div class="content">
         <?php if ( ! empty( $content ) ) {
           echo wpautop( $content ); // phpcs:ignore

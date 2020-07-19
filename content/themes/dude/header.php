@@ -108,7 +108,7 @@ if ( $show_chat_greeting ) {
 </head>
 
 <body <?php body_class( $body_class ); ?>>
-<div class="site swup-transition-fade" id="swup">
+<div class="site" id="swup">
 
 <!-- Glitch effects for buttons -->
 <svg aria-hidden="true" style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg-sprite">
@@ -138,7 +138,7 @@ if ( $show_chat_greeting ) {
    <a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'dude' ); ?></a>
 
    <div class="nav-container">
-    <header class="site-header swup-transition-fade" role="banner">
+    <header class="site-header" role="banner">
 
       <div class="site-branding">
         <?php if ( is_front_page() && is_home() ) : ?>

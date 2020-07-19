@@ -73,7 +73,9 @@ body.page.page-id-9 {
 }
 
 // Pages where all blocks are dark
-body.post-type-archive-reference {
+body.post-type-archive-reference,
+body.page-id-9 {
+  .content-area,
   .block {
     background-color: $color-midnight;
   }

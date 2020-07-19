@@ -23,7 +23,7 @@ get_header(); ?>
 
           <div class="reference-wrapper reference-wrapper-cols">
             <?php while ( have_posts() ) : the_post(); ?>
-              <div class="reference">
+              <div class="reference swup-transition-fade">
                 <a href="<?php the_permalink() ?>" class="global-link"><span class="screen-reader-text"><?php the_title() ?></span></a>
 
                 <div class="reference-image">
