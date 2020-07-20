@@ -5,6 +5,12 @@
   padding-top: 0;
   padding-bottom: 0;
 
+  &.has-style-1 .image-big {
+    @media (min-width: 1000px) {
+      margin-top: 0;
+    }
+  }
+
   &.has-style-2 {
     background: transparent;
     padding-bottom: 0;

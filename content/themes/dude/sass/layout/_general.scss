@@ -24,6 +24,9 @@
   padding-top: $padding-blocks-large;
   padding-bottom: $padding-blocks-large;
 
+  // Sometimes browsers render the light color behind blocks
+  margin-top: -1px;
+
   @media (max-width: $grid-base-size + 150px) {
     padding-left: $padding-default-cols-ipad;
     padding-right: $padding-default-cols-ipad;
@@ -40,9 +43,6 @@
     padding-top: $padding-blocks-small;
     padding-bottom: $padding-blocks-small;
   }
-
-  // Sometimes browsers render the light color behind blocks
-  margin-top: -1px;
 }
 
 // Pages with alternate module colors
