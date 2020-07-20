@@ -26,7 +26,7 @@ body.page-template-template-community-code .block.block-hero.block-hero-light {
 
 .block.block-community {
   background: #fff;
-  z-index: 2;
+  padding-bottom: 0;
 
   @media (max-width: 900px) {
     padding-bottom: 0;
@@ -113,23 +113,6 @@ body.page-template-template-community-code .block.block-hero.block-hero-light {
         text-align: left;
       }
     }
-
-    a:not(.github-link) {
-      background-image: linear-gradient(to top, $color-deep-black, $color-deep-black);
-      background-size: 100% 1px;
-      background-position: left bottom;
-      background-repeat: no-repeat;
-      transition: .3s all;
-      text-decoration: none;
-      overflow: visible;
-    }
-
-    a:not(.github-link):hover,
-    a:not(.github-link):focus,
-    a:not(.github-link):active {
-      background-size: 100% 2.8rem;
-      color: $color-white;
-    }
   }
 
   // Official WordPress badge styles
@@ -210,7 +193,7 @@ body.page-template-template-community-code .block.block-hero.block-hero-light {
     list-style: none;
     margin-left: 0;
     margin-right: 0;
-    margin-top: 0;
+    margin-top: $margin-between-text-elements;
     margin-bottom: 0;
     padding: 0;
     position: relative;
@@ -251,39 +234,8 @@ body.page-template-template-community-code .block.block-hero.block-hero-light {
 }
 
 .block-open-source {
-  padding-top: 0;
-
-  a:not(.github-link) {
-    background-image: linear-gradient(to top, $color-deep-black, $color-deep-black);
-    background-size: 100% 1px;
-    background-position: left bottom;
-    background-repeat: no-repeat;
-    transition: .3s all;
-    text-decoration: none;
-    overflow: visible;
-  }
-
-  a:not(.github-link):hover,
-  a:not(.github-link):focus,
-  a:not(.github-link):active {
-    background-size: 100% 2.8rem;
-    color: $color-white;
-  }
-
-  @media (min-width: 900px) {
-    margin-top: -10rem;
-  }
-
-  .container {
-    padding-top: 0;
-  }
-
   .content {
-    margin-bottom: 8rem;
-
-    @media (min-width: 900px) {
-      max-width: 50%;
-    }
+    margin-bottom: $margin-between-text-elements;
   }
 
   // Pinned GitHub items
@@ -304,12 +256,28 @@ body.page-template-template-community-code .block.block-hero.block-hero-light {
     }
   }
 
+  .github-link {
+    color: #0366d6;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
   .repo {
-    border: 1px solid #d1d5da;
-    border-radius: 3px;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
     width: 100%;
     max-width: 42rem;
     padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    > * {
+      width: 100%;
+    }
 
     @media (max-width: 600px) {
       margin-bottom: 3rem;
@@ -319,15 +287,15 @@ body.page-template-template-community-code .block.block-hero.block-hero-light {
       }
     }
 
-    h3,
-    p {
-      @extend %default;
+    h3 {
+      font-size: 18px;
       margin: 0;
+      font-weight: 500;
+      margin-bottom: .5rem;
     }
 
-    h3 {
-      font-weight: 600;
-      margin-bottom: 1.5rem;
+    p {
+      margin: 0;
     }
 
     h3 svg {
@@ -363,7 +331,7 @@ body.page-template-template-community-code .block.block-hero.block-hero-light {
     ul li,
     p,
     h3 {
-      @include responsive-font(16px, 18px);
+      font-size: 16px;
     }
 
     ul li,
@@ -383,6 +351,10 @@ body.page-template-template-community-code .block.block-hero.block-hero-light {
 
     .css {
       background-color: #563d7c;
+    }
+
+    .shell {
+      background-color: #89e051;
     }
 
     .php {
