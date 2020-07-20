@@ -102,7 +102,7 @@
     </div>
 
     <div class="disclaimer">
-      <p>Kaikki oikeudet pidätetään. <a class="no-text-link" href="<?php echo esc_url( get_page_link(3) ); ?>">Lue tietosuojaseloste</a>.</p>
+      <p>Kaikki oikeudet pidätetään. <a class="no-text-link" href="<?php echo esc_url( get_page_link( 3 ) ); ?>">Lue tietosuojaseloste</a>.</p>
     </div>
 
   </footer><!-- #colophon -->
@@ -171,21 +171,31 @@
       TimeMe.callAfterTimeElapsedInSeconds(5, function () {
         maybeSendChatGreeting();
       });
+
     } else {
       // Send if none of above apply
       // ...if chat box is not visible of course
       if ( jQuery("body").hasClass("chat-box-visible") === false ) {
+
+        // And if it has passed 10 minutes from last time shown
+
+        // Create if here:
+
+        //console.log(Date.now());
+        console.log();
+
         setTimeout(function () {
           jQuery("body").addClass("chat-box-visible");
           maybeSendChatGreeting();
-        }, 4500);
+        }, 10000);
+
       }
-      
+
     } // end if send chat check
   } // end storage check
 
   function maybeSendChatGreeting() {
-    
+
     // don't show greeting on contact page
     if (jQuery("body").hasClass("page-id-4487")) {
       return;

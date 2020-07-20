@@ -40,6 +40,9 @@
     padding-top: $padding-blocks-small;
     padding-bottom: $padding-blocks-small;
   }
+
+  // Sometimes browsers render the light color behind blocks
+  margin-top: -1px;
 }
 
 // Pages with alternate module colors
