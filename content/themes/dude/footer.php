@@ -178,11 +178,9 @@
       if ( jQuery("body").hasClass("chat-box-visible") === false ) {
 
         // And if it has passed 10 minutes from last time shown
-
-        // Create if here:
-
-        //console.log(Date.now());
-        console.log();
+        // TODO: Create if here
+        // console.log(Date.now());
+        // console.log();
 
         setTimeout(function () {
           jQuery("body").addClass("chat-box-visible");
