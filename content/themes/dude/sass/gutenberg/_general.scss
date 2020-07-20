@@ -15,6 +15,10 @@
   &.title-only-block {
     padding-bottom: $margin-between-grid-columns-large / 2;
     padding-top: $margin-between-grid-columns-large;
+
+    .wp-block-column h2 {
+      @extend %general-heading-cta;
+    }
   }
 
   &.alignwide,
@@ -30,6 +34,14 @@
   + .wp-block-columns {
     padding-top: 0;
   }
+
+  .wp-block-column .block-title.block-title-large {
+    @extend %general-heading-alt;
+  }
+
+  .wp-block-column .block-title.block-title-small {
+    @extend %general-heading-small;
+  }
 }
 
 .wp-block-column {
@@ -37,5 +49,16 @@
     @extend %general-heading-cta;
     font-weight: 400;
     margin-bottom: $margin-between-text-elements;
+
+    // Fix alignment
+    transform: translateY(-10px);
+
+    &.block-title-large {
+      @extend %general-heading-alt;
+    }
+
+    &.block-title-small {
+      @extend %general-heading-small;
+    }
   }
 }

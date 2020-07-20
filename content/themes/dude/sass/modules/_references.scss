@@ -22,9 +22,10 @@
     padding-bottom: $padding-blocks-medium + 4rem;
 
     .block-title {
-      @extend %general-heading-alt;
+      @extend %general-heading-cta;
       color: $color-white;
       margin-bottom: $margin-between-grid-columns-large;
+      font-weight: 500;
     }
 
     .reference-wrapper .reference-content {
