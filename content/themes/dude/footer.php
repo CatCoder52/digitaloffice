@@ -135,7 +135,7 @@
       sessionStorage.getItem("chat_greeting_visits") >= 2 &&
       sessionStorage.getItem("chat_greeting_sent") === null
     ) {
-      // send chat if user has visited over 2 pages and greeting still not sent
+      // Send chat if user has visited over 2 pages and greeting still not sent
       jQuery("body").addClass("chat-box-visible");
       setTimeout(function () {
         maybeSendChatGreeting();
@@ -143,13 +143,13 @@
     } else if (sessionStorage.getItem("chat_greeting_sent") === null) {
       // send greeting if not sent before
 
-      // init timer
+      // Init timer
       TimeMe.initialize({
         currentPageName: document.title,
         idleTimeoutInSeconds: 10,
       });
 
-      // trigger chat after X seconds
+      // Trigger chat after X seconds
       TimeMe.callAfterTimeElapsedInSeconds(5, function () {
         jQuery("body").addClass("chat-box-visible");
         maybeSendChatGreeting();
@@ -159,15 +159,15 @@
         new Date(sessionStorage.getItem("chat_greeting_sent"))
       )
     ) {
-      // send chat if last time over day ago
+    // Send chat if last time over day ago
 
-      // init timer
+      // Init timer
       TimeMe.initialize({
         currentPageName: document.title,
         idleTimeoutInSeconds: 10,
       });
 
-      // trigger chat after X seconds
+      // Trigger chat after X seconds
       TimeMe.callAfterTimeElapsedInSeconds(5, function () {
         maybeSendChatGreeting();
       });
@@ -177,15 +177,27 @@
       // ...if chat box is not visible of course
       if ( jQuery("body").hasClass("chat-box-visible") === false ) {
 
-        // And if it has passed 10 minutes from last time shown
-        // TODO: Create if here
-        // console.log(Date.now());
-        // console.log();
+        // Convert sessionStorage time to unix timestamp
+        var dateString = sessionStorage.getItem("chat_greeting_sent"),
+        dateTimeParts = dateString.split(', '),
+        timeParts = dateTimeParts[1].split(':'),
+        dateParts = dateTimeParts[0].split('/'),
+        saveddate;
+        saveddate = new Date(dateParts[2], parseInt(dateParts[1], 10) - 1, dateParts[0], timeParts[0], timeParts[1]);
+        timepassed = saveddate + 300; // Time greeting has been sent + 5 minutes (300 seconds)
 
-        setTimeout(function () {
-          jQuery("body").addClass("chat-box-visible");
-          maybeSendChatGreeting();
-        }, 10000);
+        // And if it has passed 5 minutes from last time shown
+        if ( Date.now() > timepassed ) {
+
+          setTimeout(function () {
+            jQuery("body").addClass("chat-box-visible");
+            maybeSendChatGreeting();
+          }, 10000);
+
+        }
+
+        // console.log(saveddate.getTime()); //1379426880000
+        // console.log(saveddate); //Tue Sep 17 2013 10:08:00 GMT-0400
 
       }
 
