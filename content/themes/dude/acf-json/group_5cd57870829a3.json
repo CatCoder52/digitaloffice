@@ -74,6 +74,33 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_5f15957d81855": {
+                    "key": "layout_5f15957d81855",
+                    "name": "images-recruiting",
+                    "label": "Kuvat: Rekryilmoitus-fiiliskuvat",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_5f15958d81856",
+                            "label": "",
+                            "name": "",
+                            "type": "message",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "message": "Tämä alue on kovakoodattu ja sitä ei voi muokata hallintapaneelista.",
+                            "new_lines": "wpautop",
+                            "esc_html": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5f1064c3e66f5": {
                     "key": "layout_5f1064c3e66f5",
                     "name": "image-in-container",
@@ -1039,5 +1066,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1595246756
+    "modified": 1595250088
 }

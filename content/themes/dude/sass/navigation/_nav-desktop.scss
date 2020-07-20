@@ -521,10 +521,8 @@ body {
     padding-top: 0;
     padding-bottom: 0;
 
-
-
-    // Offset half of nav-toggle
-    transform: translateX(-15px);
+    // Offset of nav-toggle width
+    width: calc(100% - 30px);
 
     .menu-items {
       margin: 0;
