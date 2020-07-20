@@ -253,7 +253,7 @@ a.global-link {
   @include responsive-font($font-size-general-headings-mobile, 54px);
   margin-top: 0;
   line-height: 1.35;
-  font-weight: 400;
+  font-weight: 500;
 
   @media (max-width: $container-mobile) {
     font-size: 24px;

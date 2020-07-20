@@ -117,7 +117,7 @@ body {
 
   // Font smoothing options
   text-size-adjust: none;
-  text-rendering: optimizeSpeed;
+  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -163,7 +163,6 @@ table,
 tr,
 %default {
   @include responsive-font($font-min-size, $font-max-size);
-  letter-spacing: -.003em;
   line-height: $font-base-line-height;
   font-weight: 400;
 }

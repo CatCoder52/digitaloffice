@@ -1,3 +1,29 @@
+body.page-template-template-community-code .block.block-hero.block-hero-light {
+  h1,
+  h2,
+  p {
+    color: $color-white;
+  }
+
+  .shade {
+    display: none;
+  }
+}
+
+.block.block-community-photos {
+  padding-top: 0;
+  padding-bottom: 0;
+
+  .container {
+    @include grid(3, $gutter_x: $margin-between-grid-columns, $gutter_y: $margin-between-grid-columns);
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
 .block.block-community {
   background: #fff;
   z-index: 2;

@@ -137,3 +137,9 @@
     background: $color-default-background;
   }
 }
+
+body.home .block.block-our-services {
+  .col-title {
+    margin-top: -15px;
+  }
+}

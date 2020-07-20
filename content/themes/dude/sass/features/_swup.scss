@@ -3,6 +3,7 @@
   opacity: 1;
   animation: slideUp .9s cubic-bezier(.075, .82, .165, 1) forwards;
   transform: translate3d(0, 2vh, 0);
+  -webkit-font-smoothing: antialiased;
 }
 
 html.is-animating .swup-transition-fade {
