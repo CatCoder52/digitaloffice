@@ -49,28 +49,27 @@
       padding: 0;
       align-items: center;
 
-      &.current-cat a {
-        border-color: $color-midnight-blue;
+      &.current-cat a,
+      a:hover {
+        border-color: $color-midnight;
+        background: $color-midnight;
+        color: $color-mint;
       }
     }
 
     li a {
       margin: 0 13px 13px 0;
       font-size: 16px;
-      border: 1px solid rgba($color-midnight-blue, .25);
+      border: 1px solid $color-midnight;
       padding: 7px 17px;
       line-height: 1;
-      color: $color-midnight-blue;
+      color: $color-midnight;
       text-decoration: none;
 
       @media (max-width: 600px) {
         padding: 6px 8px;
         font-size: 14px;
       }
-    }
-
-    li a:hover {
-      border-color: $color-mint;
     }
   }
 }

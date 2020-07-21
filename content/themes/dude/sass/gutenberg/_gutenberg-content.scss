@@ -5,56 +5,49 @@
 // classes and other WordPress editor formatting.
 // ------------------------------------------------
 
-// WordPress alignments
-.cat-links,
-.tags-links {
-  display: block;
-}
-
-.alignleft {
-  float: left;
-  margin-right: 20px;
-}
-
-.alignright {
-  float: right;
-  margin-left: 20px;
-}
-
-.aligncenter {
-  clear: both;
-  display: block;
-  margin: 0 auto;
-}
-
-del {
-  text-decoration: line-through;
-  color: #666;
-}
-
-// Gutenberg magic
-.container.container-article {
-  max-width: 100%;
-  margin-top: 0;
-  padding-bottom: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 7rem;
-
-  .blocks-gallery-grid {
-    padding-left: 0;
-    margin-left: 0;
-    margin-top: 2.4rem;
-  }
-}
-
 .gutenberg-content {
   max-width: 100%;
   padding-right: 0;
   padding-left: 0;
   padding-top: 0;
   padding-bottom: 0;
+
+  // WordPress alignments
+  .cat-links,
+  .tags-links {
+    display: block;
+  }
+
+  .alignleft {
+    float: left;
+    margin-right: 20px;
+  }
+
+  .alignright {
+    float: right;
+    margin-left: 20px;
+  }
+
+  .aligncenter {
+    clear: both;
+    display: block;
+    margin: 0 auto;
+  }
+
+  del {
+    text-decoration: line-through;
+    color: #666;
+  }
+
+  .wp-block-gallery {
+    @extend .columns;
+    width: 100%;
+    max-width: 100%;
+
+    > * {
+      @extend .column;
+    }
+  }
 
   p {
     line-height: $line-height;
@@ -86,6 +79,14 @@ del {
     border-radius: 4px;
   }
 
+  .wp-block-image .alignleft > figcaption,
+  .wp-block-image .alignright > figcaption,
+  .wp-block-image .aligncenter > figcaption,
+  .wp-block-image.is-resized > figcaption {
+    width: 100%;
+    display: block;
+  }
+
   figcaption,
   cite,
   small {
@@ -100,6 +101,7 @@ del {
     padding-bottom: 0;
     margin-top: 3rem;
     margin-bottom: 6rem;
+    width: 100%;
 
     @media (max-width: $container-mobile) {
       margin-top: 2rem;
@@ -226,11 +228,7 @@ del {
       margin-top: 4rem;
       margin-bottom: 4rem;
 
-      .entry-photo {
-        margin: 0;
-      }
-
-      .entry-photo img {
+      img {
         max-width: 100%;
         width: 100%;
         height: auto;
@@ -502,36 +500,4 @@ p.entry-time {
 .cat {
   margin-top: 0;
   margin-bottom: 10px;
-}
-
-ul.tags {
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  padding-left: 0;
-
-  li {
-    margin-left: 0;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    padding-left: 0;
-    display: inline-block;
-    margin-top: 0;
-
-    a {
-      font-size: 1.2rem;
-      color: #333;
-      padding: .5rem 1rem;
-      display: inline;
-      border-radius: 4px;
-      background: #f0f0f0;
-      opacity: .8;
-    }
-
-    a:hover {
-      color: #fff;
-      background: #aaa;
-      opacity: 1;
-    }
-  }
 }

@@ -18,23 +18,27 @@ get_header(); ?>
 
     <?php include get_theme_file_path( 'template-parts/hero.php' ); ?>
 
-    <section class="block block-single">
-      <div class="container">
-        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <?php
+      $post_year = get_the_time( 'Y' );
+      $now_year = gmdate( 'Y' );
+    ?>
 
-          <div class="entry-content">
+    <section class="block block-single<?php if ( $post_year <= $now_year - 2 ) : ?> is-old<?php endif; ?>">
+      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+          <div class="gutenberg-content">
             <?php the_content(); ?>
-          </div><!-- .entry-content -->
 
-          <footer class="entry-footer">
-            <?php dude_entry_footer(); ?>
-          </footer><!-- .entry-footer -->
+            <footer class="entry-footer">
+              <?php dude_entry_footer(); ?>
+            </footer><!-- .entry-footer -->
+          </div>
 
           <?php if ( 5635 !== get_the_id() ) : ?>
             <div class="entry-author">
               <?php // get author and person corresponding author
               $user_id = get_the_author_meta( 'ID' );
-              $person_id = $wpdb->get_results(
+              $person_id = $wpdb->get_results( // phpcs:ignore
                 $wpdb->prepare(
                   "SELECT post_id FROM {$wpdb->prefix}postmeta WHERE meta_key = %s AND meta_value = %s",
                   'email', get_the_author_meta( 'email' )
@@ -54,22 +58,21 @@ get_header(); ?>
                 <?php endif;
 
                 if ( ! empty( $desc ) ) : ?>
-                  <p class="person-description"><?php
-					echo esc_html( $desc ) ?></p>
-											<?php endif;
+                  <p class="person-description"><?php echo esc_html( $desc ) ?></p>
+									<?php endif;
 
               endif; ?>
             </div>
           <?php endif; ?>
 
-        </article><!-- #post-## -->
-
-      </div>
+      </article><!-- #post-## -->
     </section>
 
-    <?php if ( is_singular( 'post' ) && function_exists( 'relevanssi_the_related_posts' ) ) {
-      relevanssi_the_related_posts();
-    } ?>
+    <?php
+      // if ( is_singular( 'post' ) && function_exists( 'relevanssi_the_related_posts' ) ) {
+      // relevanssi_the_related_posts();
+      // }
+      ?>
 
 	</main><!-- #main -->
 </div><!-- #primary -->

@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-17 18:18:18
+ * @Last Modified time: 2020-07-21 12:19:43
  *
  * @package dude
  */
@@ -52,4 +52,18 @@ if ( has_post_thumbnail() ) {
     </div>
   </div>
 
+  <?php if ( is_singular( 'post' ) ) :
+    $post_year = get_the_time( 'Y' );
+    $now_year = gmdate( 'Y' );
+    ?>
+    <?php if ( $post_year <= $now_year - 2 ) : ?>
+      <div class="notification-box old">
+        <div class="container">
+          <div class="box">
+            <p><svg version="1.1" width="22" height="22" viewBox="0 0 16 16" class="octicon octicon-issue-opened" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm9 3a1 1 0 11-2 0 1 1 0 012 0zm-.25-6.25a.75.75 0 00-1.5 0v3.5a.75.75 0 001.5 0v-3.5z"/></svg>Tämä kirjoitus saattaa sisältää vanhentunutta tietoa, sillä se on julkaistu yli <?php echo esc_attr( $now_year ) - esc_attr( $post_year ); ?> vuotta sitten.</p>
+          </div>
+        </div>
+      </div>
+      <?php endif; ?>
+  <?php endif; ?>
 </section>
