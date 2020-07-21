@@ -7,14 +7,38 @@
   padding-top: $padding-blocks-medium;
   padding-bottom: 0;
 
+  @media (max-width: 600px) {
+    padding-top: $padding-blocks-small;
+  }
+
   // Sometimes browsers render the white behind blocks
   margin-top: -1px;
 
   .cols {
     @include grid(4, $gutter_x: $margin-between-grid-columns, $gutter_y: $margin-between-grid-columns);
 
+    @media (max-width: 900px) {
+      @include grid(2, $gutter_x: 4remrem, $gutter_y: 6rem);
+    }
+
+    @media (max-width: $container-mobile) {
+      // @include grid(1, $gutter_x: 0rem, $gutter_y: 6rem);
+      p,
+      li {
+        font-size: 16px;
+      }
+    }
+
     ul li {
       line-height: 2.06;
+
+      @media (max-width: $container-mobile) {
+        line-height: 1.8;
+
+        a {
+          font-size: 15px;
+        }
+      }
     }
   }
 
@@ -46,6 +70,11 @@
     margin-bottom: 10rem;
     margin-top: 0;
     max-width: 60rem;
+
+    @media (max-width: 500px) {
+      margin-bottom: $margin-between-text-elements;
+      font-size: 18px;
+    }
   }
 
   .shade {
@@ -96,6 +125,10 @@
     border-top: 1px solid rgba($color-white, .2);
     border-bottom: 1px solid rgba($color-white, .2);
 
+    @media (max-width: 900px) {
+      @include grid(2, $gutter_x: 0rem, $gutter_y: 1rem);
+    }
+
     li,
     a {
       margin: 0;
@@ -107,7 +140,7 @@
       box-shadow: none;
       border: 0;
 
-      @media (min-width: $container-ipad-landscape) {
+      @media (min-width: 1400px) {
         font-size: 34px;
       }
     }

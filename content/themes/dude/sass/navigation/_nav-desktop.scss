@@ -13,6 +13,15 @@ $icon-arrow-left: '../svg/chevron-left-dark.svg';
 $hover-intent: .3s;
 $absolute-navigation: true;
 
+// Let's make sure default navigation is not visible on mobile on first paint
+.nav-primary-desktop {
+  display: none;
+
+  @media (min-width: $responsivenav) {
+    display: block !important;
+  }
+}
+
 // Prevent scrolling when nav open
 body.js-nav-active {
   overflow: hidden;
@@ -716,11 +725,5 @@ body {
         margin-bottom: .8rem;
       }
     }
-  }
-}
-
-@media (max-width: $responsivenav) {
-  .nav-primary-desktop {
-    display: none;
   }
 }

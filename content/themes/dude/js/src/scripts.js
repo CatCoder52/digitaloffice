@@ -544,6 +544,7 @@ swup.on("contentReplaced", function () {
 
 // jQuery start
 (function ($) {
+
   // Slide numbering
   var $gallery = $(".testimonials");
   var slideCount = null;
@@ -606,6 +607,11 @@ swup.on("contentReplaced", function () {
 
   // Document ready start
   $(function () {
+    // Apple.com fade in all content that have opacity-on-load class
+    setTimeout(function() {
+      $('.opacity-on-load').addClass('fade-in');
+    }, 500);
+
     // Person image hack
     $(".col-person-image").height($(".col-person-image img").height());
 
