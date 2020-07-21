@@ -12,12 +12,21 @@
  * @package dude
  */
 
-$newsletter_cta_bg_image_id = 4435;
-
 get_header(); ?>
 
 <div id="content" class="content-area">
 	<main role="main" id="main" class="site-main">
+
+    <?php if ( ! is_archive() ) : ?>
+    <block class="block block-hero block-hero-light block-hero-blog block-hero-basic is-centered">
+      <div class="container">
+        <h1>Tarinoita Dudelta</h1>
+        <div class="hero-description">
+          <p>Duden blogi sisältää tekijöiden ajatuksia WordPressistä, verkkosivujen suunnittelusta ja kaikkea siltä väliltä.</p>
+        </div>
+      </div>
+    </block>
+    <?php endif; ?>
 
     <?php if ( ! is_paged() && ! is_category() && ! is_tag() && ! is_author() && ! is_date() ) :
       global $blog_latest_excerpt_override;
@@ -66,52 +75,35 @@ get_header(); ?>
       include get_theme_file_path( 'template-parts/hero.php' );
     endif; ?>
 
-    <section class="block block-blog">
+  <section class="block block-blog block-blog-archive<?php if ( is_archive() ) : ?> is-archive<?php endif; ?>">
       <div class="container">
 
-        <header class="block-head<?php if ( is_category() || is_tag() || is_author() || is_date() ) : ?> block-head-archive<?php endif; ?>">
+        <header class="archive-head block-head<?php if ( is_category() || is_tag() || is_author() || is_date() ) : ?> block-head-archive<?php endif; ?>">
 
           <?php if ( is_tag() ) : ?>
-
-            <p class="block-title-pre" aria-describedby="block-title-block-blog">Avainsana</p>
             <h1 class="block-title block-title-archive" id="block-title-block-blog"><?php echo single_tag_title(); ?></h1>
-
           <?php elseif ( is_category() ) : ?>
-
-            <p class="block-title-pre" aria-describedby="block-title-block-blog">Kategoria</p>
             <h1 class="block-title block-title-archive" id="block-title-block-blog"><?php echo single_cat_title(); ?></h1>
-
           <?php elseif ( is_day() ) : ?>
-
-            <p class="block-title-pre" aria-describedby="block-title-block-blog">Päivä</p>
             <h1 class="block-title block-title-archive" id="block-title-block-blog"><?php echo ucfirst( date_i18n( 'l', get_the_time( 'U' ) ) ) ?>, <?php the_time( 'j.' ) ?> <?php the_time( 'F' ) ?>ta <?php the_time( 'Y' ) ?></h1>
-
           <?php elseif ( is_month() ) : ?>
-
-            <p class="block-title-pre" aria-describedby="block-title-block-blog">Kuukausi</p>
             <h1 class="block-title block-title-archive" id="block-title-block-blog"><?php echo ucfirst( date_i18n( 'F', get_the_time( 'U' ) ) ) ?>, <?php the_time( 'Y' ) ?></h1>
-
           <?php elseif ( is_year() ) : ?>
-
-            <p class="block-title-pre" aria-describedby="block-title-block-blog">Vuosi</p>
             <h1 class="block-title block-title-archive" id="block-title-block-blog"><?php the_time( 'Y' ); ?></h1>
-
           <?php elseif ( is_search() ) : ?>
-
-            <p class="block-title-pre" aria-describedby="block-title-block-blog">Hakutulokset</p>
             <h1 class="block-title block-title-archive" id="block-title-block-blog"><?php $cat = get_the_category(); $cat = $cat[0]; echo $cat->category_count; ?> löytyi</h2>
-
           <?php elseif ( is_author() ) : ?>
-
-            <p class="block-title-pre" aria-describedby="block-title-block-blog">Kirjoittaja</p>
             <h1 class="block-title block-title-archive" id="block-title-block-blog"><?php echo get_the_author(); ?></h1>
-
           <?php else : ?>
-
-            <p class="block-title-pre" aria-describedby="block-title-block-blog">Tekijöiden ajatuksia</p>
-            <h1 class="block-title block-title-archive" id="block-title-block-blog">Blogin kaikki jorinat</h1>
-
+            <h2 class="block-title block-title-archive">Uusimmat kirjoitukset</h2>
           <?php endif; ?>
+
+          <p class="filter-label">Selaa kirjoituksia aiheittain</p>
+            <ul class="filters filter-category">
+              <?php wp_list_categories( [
+                'title_li' => null,
+              ] ); ?>
+            </ul>
         </header>
 
         <div class="cols">
