@@ -536,6 +536,9 @@ swup.on("contentReplaced", function () {
       '<button class="button-next button-reset"><span class="screen-reader-text">Seuraava</span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="17" viewBox="0 0 48 17"><path fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1.852 8.228h44.296m0 0L38.92 1m7.228 7.228l-7.228 7.228"/></svg></button>',
   });
 
+  // Person image hack
+  jQuery(".col-person-image").height(jQuery(".col-person-image img").height());
+
 });
 // Swup ends
 

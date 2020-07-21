@@ -1,6 +1,10 @@
 .block.block-hero-person {
   padding-bottom: $margin-between-text-elements;
 
+  .block-head {
+    padding-top: 8rem;
+  }
+
   .col.col-person-image > .image {
     overflow: visible;
     position: absolute;
@@ -35,20 +39,23 @@
 
   .social {
     margin-left: 0;
-    margin-top: 0;
+    margin-top: $margin-between-text-elements;
     margin-right: 0;
     margin-bottom: 0;
     padding: 0;
     list-style: none;
     display: flex;
 
+    a {
+      color: $color-midnight-blue;
+    }
+
     li {
-      margin-right: .5rem;
+      margin-right: 2rem;
     }
   }
 
   .social svg {
-    fill: $color-midnight;
     width: 25px;
     height: 25px;
   }
