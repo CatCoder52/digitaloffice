@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-18 18:55:21
+ * @Last Modified time: 2020-07-21 15:06:28
  *
  * @package dude
  */
@@ -22,12 +22,9 @@ if ( ! empty( $social ) ) {
 } ?>
 
 <section class="block block-hero-person">
-
   <div class="container">
-
     <div class="cols">
-
-    <div class="col">
+      <div class="col">
 
       <div class="content">
         <header class="block-head">
@@ -55,14 +52,12 @@ if ( ! empty( $social ) ) {
         </div>
       </div>
 
-      <div class="col">
+      <div class="col col-person-image">
         <div class="image has-lazyload">
           <?php image_lazyload_tag( get_post_thumbnail_id( $post->ID ) ); ?>
         </div>
       </div>
-
     </div>
-
   </div>
 </section>
 

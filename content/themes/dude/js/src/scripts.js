@@ -603,6 +603,9 @@ swup.on("contentReplaced", function () {
 
   // Document ready start
   $(function () {
+    // Person image hack
+    $(".col-person-image").height($(".col-person-image img").height());
+
     // Timeline
     $(".col-timeline .row .action").on("click", function () {
       $(".col-timeline .row").removeClass("active");

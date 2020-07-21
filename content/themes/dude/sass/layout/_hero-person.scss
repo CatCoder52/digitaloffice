@@ -1,6 +1,15 @@
 .block.block-hero-person {
-  .container {
-    padding-bottom: 0;
+  padding-bottom: $margin-between-text-elements;
+
+  .col.col-person-image > .image {
+    overflow: visible;
+    position: absolute;
+    right: 0;
+    width: 50vw;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+    top: 14rem;
   }
 
   .block-title {
@@ -15,22 +24,6 @@
     text-transform: uppercase;
     font-size: 16px;
     font-weight: 500;
-  }
-
-  .image {
-    height: 90%;
-    max-height: 100%;
-
-    @media (max-width: 860px) {
-      height: auto;
-      min-height: 0;
-
-      &:after {
-        content: '';
-        display: block;
-        padding-bottom: 100%;
-      }
-    }
   }
 
   .social a,
@@ -62,11 +55,5 @@
 
   .cols {
     @include grid(2, $gutter_x: $margin-between-grid-columns-large, $gutter_y: 0rem);
-  }
-
-  p {
-    @media (min-width: $container-ipad-landscape) {
-      font-size: 16px;
-    }
   }
 }
