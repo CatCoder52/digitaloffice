@@ -63,4 +63,16 @@
   .cols {
     @include grid(2, $gutter_x: $margin-between-grid-columns-large, $gutter_y: 0rem);
   }
+
+  .contact .contact-detail {
+    color: $color-midnight-blue;
+    font-weight: 500;
+    border-bottom: 1px solid transparent;
+    transition: border .22s;
+    overflow: hidden;
+
+    &:hover {
+      border-bottom: 1px solid $color-mint;
+    }
+  }
 }
