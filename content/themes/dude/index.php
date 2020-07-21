@@ -17,22 +17,23 @@ get_header(); ?>
 <div id="content" class="content-area">
 	<main role="main" id="main" class="site-main">
 
-    <?php if ( ! is_archive() ) : ?>
-    <block class="block block-hero block-hero-light block-hero-blog block-hero-basic is-centered">
-      <div class="container">
-        <h1>Tarinoita Dudelta</h1>
-        <div class="hero-description">
-          <p>Duden blogi sisältää tekijöiden ajatuksia WordPressistä, verkkosivujen suunnittelusta ja kaikkea siltä väliltä.</p>
-        </div>
-      </div>
-    </block>
-    <?php endif; ?>
-
     <?php if ( ! is_paged() && ! is_category() && ! is_tag() && ! is_author() && ! is_date() ) :
       global $blog_latest_excerpt_override;
 
       while ( have_posts() ) : the_post();
-			$blog_latest_excerpt_override = get_the_id(); ?>
+      $blog_latest_excerpt_override = get_the_id(); ?>
+
+      <?php if ( ! is_archive() || ! is_paged() ) : ?>
+        <block class="block block-hero block-hero-light block-hero-blog block-hero-basic is-centered">
+          <div class="container">
+            <h1>Tarinoita Dudelta</h1>
+            <div class="hero-description">
+              <p>Duden blogi sisältää tekijöiden ajatuksia WordPressistä, verkkosivujen suunnittelusta ja kaikkea siltä väliltä.</p>
+            </div>
+          </div>
+        </block>
+        <?php endif; ?>
+
         <section class="block block-cta-with-image block-latest-blog-post">
           <div class="container">
 
@@ -75,7 +76,7 @@ get_header(); ?>
       include get_theme_file_path( 'template-parts/hero.php' );
     endif; ?>
 
-  <section class="block block-blog block-blog-archive<?php if ( is_archive() ) : ?> is-archive<?php endif; ?>">
+    <section class="block block-blog block-blog-archive<?php if ( is_archive() || is_paged() ) : ?> is-archive<?php endif; ?>">
       <div class="container">
 
         <header class="archive-head block-head<?php if ( is_category() || is_tag() || is_author() || is_date() ) : ?> block-head-archive<?php endif; ?>">
@@ -137,7 +138,7 @@ get_header(); ?>
           <?php endwhile; ?>
         </div>
 
-        <p class="next-prev"><span class="prev"><?php echo previous_posts_link( 'Edellinen' ); ?></span><span class="next"><?php echo next_posts_link( 'Seuraava' ); ?></span></p>
+        <?php the_posts_pagination(); ?>
 
       </div>
     </section>
