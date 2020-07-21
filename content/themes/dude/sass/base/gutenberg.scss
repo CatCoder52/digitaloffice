@@ -3,30 +3,6 @@
 // Theme options
 @import 'config';
 
-@font-face {
-  font-family: 'Circular';
-  src: url('../fonts/CircularStd-Bold.eot');
-  src: local('Circular'), local('Circular'), url('../fonts/CircularStd-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-Bold.woff2') format('woff2'), url('../fonts/CircularStd-Bold.woff') format('woff'), url('../fonts/CircularStd-Bold.ttf') format('truetype'), url('../fonts/CircularStd-Bold.svg#Circular') format('svg');
-  font-weight: 700;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Circular';
-  src: url('../fonts/CircularStd-Medium.eot');
-  src: local('Circular'), local('Circular'), url('../fonts/CircularStd-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-Medium.woff2') format('woff2'), url('../fonts/CircularStd-Medium.woff') format('woff'), url('../fonts/CircularStd-Medium.ttf') format('truetype'), url('../fonts/CircularStd-Medium.svg#Circular') format('svg');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Circular';
-  src: url('../fonts/CircularStd-Regular.eot');
-  src: local('Circular'), local('Circular'), url('../fonts/CircularStd-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/CircularStd-Regular.woff2') format('woff2'), url('../fonts/CircularStd-Regular.woff') format('woff'), url('../fonts/CircularStd-Regular.ttf') format('truetype'), url('../fonts/CircularStd-Regular.svg#Circular') format('svg');
-  font-weight: 400;
-  font-style: normal;
-}
-
 .edit-post-visual-editor {
   padding-top: 0 !important;
 }
@@ -64,6 +40,12 @@
     font-style: normal;
     font-size: inherit;
     float: none;
+  }
+
+  // Make editor same width than on site
+  .wp-block:not([data-align="full"]):not([data-align="wide"]) {
+    max-width: $article-max-width !important;
+    width: 100%;
   }
 
   .wp-block-button a {
