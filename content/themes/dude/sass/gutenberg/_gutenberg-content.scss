@@ -132,24 +132,14 @@
     line-height: $line-height;
   }
 
-  .featured-image-single {
-    max-width: 920px;
-    margin-bottom: 8rem;
-
-    img {
-      width: 100%;
-      height: auto;
-    }
-  }
-
-  blockquote {
+  > blockquote,
+  > blockquote.wp-block-quote {
     margin-left: auto;
     margin-right: auto;
-    border-left: 2px solid $color-black;
+    border-left: 2px solid $color-cobalt-blue;
     margin-top: 4rem;
     margin-bottom: 4rem;
-    padding: 4rem 6rem;
-    max-width: 920px;
+    padding: 3.5rem 6rem;
     line-height: $line-height;
 
     cite {
@@ -161,11 +151,12 @@
     }
 
     @media (max-width: $container-mobile) {
-      padding: 4rem 2rem;
+      padding: 4rem 4rem 4rem 2rem;
+      margin-left: 2rem;
     }
 
-    p {
-      @include responsive-font($font-min-size, 22px);
+    > p {
+      color: $color-cobalt-blue;
     }
   }
 
