@@ -321,3 +321,37 @@ a.global-link {
 .is-centered {
   text-align: center;
 }
+
+// Better edit link
+.edit-link {
+  text-align: left;
+  width: 100%;
+  display: block;
+  clear: both;
+  max-width: 100%;
+  min-width: 0;
+  margin-bottom: 0;
+  margin-top: 2rem;
+  overflow: hidden;
+  transition: all .22s;
+
+  a {
+    font-weight: 700;
+    clear: both;
+    text-align: center;
+    transition: all .22s;
+    display: block;
+    padding: 2rem;
+    background: #fafafa;
+    color: #999;
+    border: 2px dashed #999;
+    margin: 0;
+    text-decoration: none;
+    max-width: 100%;
+  }
+
+  a:hover {
+    color: #999;
+    background: #efefef;
+  }
+}

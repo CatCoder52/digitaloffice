@@ -30,7 +30,7 @@ if ( ! function_exists( 'dude_entry_footer' ) ) {
 		}
 
 		edit_post_link(
-			sprintf( _x( 'Edit %s', '%s: Name of current post', 'dude' ), the_title( '<span class="screen-reader-text">"', '"</span>', false ) ),
+			sprintf( _x( 'Muokkaa %s', '%s: Name of current post', 'dude' ), the_title( '<span class="screen-reader-text">"', '"</span>', false ) ),
 			'<p class="edit-link">',
 			'</p>'
 		);
