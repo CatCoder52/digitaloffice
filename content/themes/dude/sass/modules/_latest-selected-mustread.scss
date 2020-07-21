@@ -28,7 +28,11 @@ $offset-x: 6.4rem;
   .row.row-latest .post {
     @include grid(2, $gutter_x: 0rem, $gutter_y: 0rem);
     margin-top: $margin-between-grid-columns-large;
-    margin-bottom: $margin-between-grid-columns-large + $offset-y + $margin-between-text-elements;
+    margin-bottom: $padding-blocks-medium;
+
+    @media (min-width: $container-ipad) {
+      margin-bottom: $margin-between-grid-columns-large + $offset-y + $margin-between-text-elements;
+    }
 
     @media (max-width: $container-ipad) {
       display: block;
@@ -100,6 +104,10 @@ $offset-x: 6.4rem;
 
   .row.row-mustread {
     @include grid(3, $gutter_x: $margin-between-grid-columns, $gutter_y: $margin-between-grid-columns);
+
+    @media (max-width: 890px) {
+      @include grid(1, $gutter_x: $margin-between-grid-columns, $gutter_y: $margin-between-grid-columns-large);
+    }
 
     h3 {
       @extend %general-heading-small;

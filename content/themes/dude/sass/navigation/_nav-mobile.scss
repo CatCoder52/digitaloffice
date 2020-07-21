@@ -108,6 +108,7 @@ body:not(.js-nav-active) .nav-primary.is-animatable {
   padding-bottom: 0;
   overflow: auto;
   transition: opacity .6s;
+  flex-direction: column;
 
   .container {
     @media (max-width: $grid-base-size + 150px) {

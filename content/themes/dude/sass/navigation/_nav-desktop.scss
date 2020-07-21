@@ -62,6 +62,10 @@ body {
     }
 
     @media (min-width: 760px) {
+      padding-top: 54px;
+      margin-top: 54px;
+      border-top: 1px solid rgba($color-white, .5);
+
       .col.col-secondary-nav {
         border-right: 1px solid rgba($color-white, .5);
       }
@@ -87,7 +91,7 @@ body {
     }
 
     li a {
-      font-size: $font-size-general-headings-mobile;
+      font-size: 32px;
 
       @media (max-width: $container-mobile) {
         font-size: 14px;
