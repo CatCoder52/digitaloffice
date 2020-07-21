@@ -25,31 +25,16 @@
   font-weight: 700;
   z-index: 1;
   text-decoration: none;
-  transition: all $transition-duration;
-  display: inline-flex;
+  transition: all .18s ease-in-out;
+  display: inline;
   color: $color-body;
+  border-bottom: 1px solid $color-mint;
+  box-shadow: inset 0 -0.125em 0 $color-mint;
 
-  &:after {
-    content: '';
-    background: $color-mint;
-    height: 6px;
-    width: 100%;
-    position: absolute;
-    bottom: 2px;
-    left: 0;
-    z-index: -1;
-    transition: all .12s ease-in-out;
-  }
-
-  &:hover {
-    color: $color-midnight;
-  }
-
-  &:hover:after {
-    background: $color-mint;
-    height: 70%;
-    width: 100%;
-    left: -1px;
+  &:hover,
+  &:focus {
+    box-shadow: inset 0 -1.125em 0 $color-mint;
+    color: $color-body;
   }
 }
 
