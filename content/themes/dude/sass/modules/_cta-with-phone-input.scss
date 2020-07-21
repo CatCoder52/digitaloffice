@@ -46,7 +46,7 @@ $submit-width: 33px;
     }
 
     @media (max-width: 420px) {
-      padding: 4rem 2rem;
+      padding: 4rem;
     }
 
     .col:first-of-type {
@@ -133,6 +133,10 @@ $submit-width: 33px;
     border-top: 0;
     border-left: 0;
     margin-right: 22px;
+
+    @media (max-width: $container-mobile) {
+      padding: 12px 6px 12px 0;
+    }
 
     @media (min-width: 770px) {
       min-width: 250px;

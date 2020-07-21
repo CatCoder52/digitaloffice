@@ -90,11 +90,13 @@
 }
 
 .block.block-our-services + .block.block-images {
-  padding-top: $padding-blocks-large;
+  @media (min-width: $container-ipad) {
+    padding-top: $padding-blocks-large;
+  }
 }
 
 .block.block-images + .block.block-our-services {
-  @media (max-width: 1000px) {
+  @media (min-width: $container-mobile) and (max-width: 1000px) {
     padding-top: $padding-blocks-medium;
     margin-top: 0;
   }

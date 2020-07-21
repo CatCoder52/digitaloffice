@@ -140,8 +140,10 @@
   }
 }
 
-body.home .block.block-our-services {
-  .col-title {
-    margin-top: -15px;
+@media (min-width: 1180px) {
+  body.home .block.block-our-services {
+    .col-title {
+      margin-top: -15px;
+    }
   }
 }

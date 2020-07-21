@@ -30,6 +30,10 @@ $offset-x: 6.4rem;
     margin-top: $margin-between-grid-columns-large;
     margin-bottom: $margin-between-grid-columns-large + $offset-y + $margin-between-text-elements;
 
+    @media (max-width: $container-ipad) {
+      display: block;
+    }
+
     .content {
       background: $color-mint;
       color: $color-midnight-blue;
@@ -37,15 +41,41 @@ $offset-x: 6.4rem;
       padding-bottom: $padding-blog-content-box-y;
       padding-left: $padding-blog-content-box-x;
       padding-right: $padding-blog-content-box-x;
-      transform: translate($offset-x-minus/2, $offset-y);
       position: relative;
       z-index: 2;
-      margin-right: $offset-x-minus / 2;
-    }
 
-    h3 {
-      @extend %general-heading-cta;
-      margin-top: 0;
+      @media (min-width: $container-ipad) {
+        transform: translate($offset-x-minus/2, $offset-y);
+        margin-right: $offset-x-minus / 2;
+      }
+
+      @media (max-width: 1200px) {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+        padding-left: 6rem;
+        padding-right: 6rem;
+      }
+
+      @media (max-width: 500px) {
+        padding: 4rem;
+      }
+
+      h3 {
+        @extend %general-heading-cta;
+        margin-top: 0;
+
+        @media (max-width: 1200px) {
+          font-size: 32px;
+        }
+
+        @media (max-width: 840px) {
+          font-size: 28px;
+        }
+
+        @media (max-width: 500px) {
+          font-size: $font-size-general-headings-mobile;
+        }
+      }
     }
 
     a {
@@ -55,8 +85,13 @@ $offset-x: 6.4rem;
 
   .image {
     position: relative;
-    transform: translateX($offset-x/2);
-    margin-left: $offset-x-minus / 2;
+    height: 40rem;
+
+    @media (min-width: $container-ipad) {
+      height: 100%;
+      transform: translateX($offset-x/2);
+      margin-left: $offset-x-minus / 2;
+    }
   }
 
   .container {
