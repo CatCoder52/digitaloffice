@@ -2,8 +2,8 @@
   display: none;
 }
 
-.block.block-single,
-body.single .block.block-single {
+.block.block-single:not(.block-single-reference),
+body.single .block.block-single:not(.block-single-reference) {
   padding-top: 0;
   padding-left: 0;
   padding-right: 0;
@@ -32,6 +32,24 @@ body.single .block.block-single {
 
     &:first-child {
       margin-top: 0;
+    }
+  }
+
+  // Blog links
+  .post {
+    a {
+      color: $color-midnight-blue;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      > a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link) {
+        color: $color-midnight-blue;
+      }
     }
   }
 
@@ -150,117 +168,6 @@ body.single .block.block-single {
       }
     }
 
-    .entry-content > *,
-    .entry-author {
-      padding-left: $padding-general-content-box;
-      padding-right: $padding-general-content-box;
-
-      @media (max-width: 1200px) {
-        padding-left: 0;
-        padding-right: 0;
-      }
-    }
-
-    .entry-footer {
-      margin-top: 5rem;
-      padding-left: $padding-general-content-box;
-      padding-right: $padding-general-content-box;
-
-      @media (max-width: $container-ipad) {
-        padding-left: $padding-general-content-box-ipad;
-        padding-right: $padding-general-content-box-ipad;
-      }
-
-      @media (max-width: $container-mobile) {
-        padding-left: $padding-default-cols-mobile;
-        padding-right: $padding-default-cols-mobile;
-      }
-    }
-
-    .entry-author {
-      text-align: center;
-      padding-top: 8rem;
-      margin-top: 2rem;
-      // border-top: 1px solid $color-superlightgrey;
-      padding-left: $padding-general-content-box;
-      padding-right: $padding-general-content-box;
-
-      @media (max-width: $container-ipad) {
-        padding-left: $padding-general-content-box-ipad;
-        padding-right: $padding-general-content-box-ipad;
-        padding-bottom: $padding-general-content-box-ipad;
-      }
-
-      @media (max-width: $container-mobile) {
-        padding-left: $padding-default-cols-mobile;
-        padding-right: $padding-default-cols-mobile;
-        padding-bottom: $padding-general-content-box-mobile;
-      }
-
-      .avatar {
-        width: 15rem;
-        height: 15rem;
-        border-radius: 50%;
-        margin-bottom: 2rem;
-      }
-
-      h3 {
-        @extend %h4;
-        margin-bottom: 1rem;
-        font-weight: 600;
-      }
-
-      .job-title {
-        @extend %h5;
-        margin-top: 0;
-      }
-
-      .person-description {
-        @include responsive-font(17px, 19px);
-        max-width: 50rem;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    }
-
-    .block-head {
-      // background: $color-whitegreyish;
-      padding: $padding-general-content-box;
-
-      @media (max-width: 1000px) {
-        padding: $padding-general-content-box-ipad;
-      }
-
-      @media (max-width: $container-mobile) {
-        padding-top: $padding-general-content-box-mobile;
-        padding-bottom: $padding-general-content-box-mobile;
-        padding-left: $padding-default-cols-mobile;
-        padding-right: $padding-default-cols-mobile;
-      }
-    }
-
-    &.block-single-reference .entry-content .wp-block-gallery {
-      @extend .columns;
-      @extend .alignwide;
-      margin-left: auto;
-      margin-right: auto;
-
-      > * {
-        @extend .column;
-      }
-
-      > .blocks-gallery-item {
-        padding: 0;
-        // border: 1px solid rgba($color-whitegreyish, 1);
-        // box-shadow: 10px 10px 30px -5px rgba($color-whitegreyish, 1);
-      }
-    }
-
-    // Blog links
-    a {
-      @extend %textlink;
-    }
-
     figure figcaption,
     cite {
       @include responsive-font(15px, 17px);
@@ -375,6 +282,52 @@ body.single .block.block-single {
 
       &:first-of-type {
         margin-top: 0;
+      }
+    }
+  }
+}
+
+.block.block-single:not(.block-single-reference) > .post > .entry-author,
+.entry-author {
+  padding-top: $padding-blocks-medium;
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: flex-end;
+
+  img {
+    margin-right: $margin-between-text-elements;
+  }
+
+  .author-info {
+    margin-bottom: $padding-blocks-large;
+
+    h3 {
+      @extend %general-heading-small;
+      font-weight: 500;
+      margin: 0 0 .5rem;
+    }
+
+    p {
+      max-width: 760px;
+    }
+
+    p.job-title {
+      opacity: .5;
+      margin-top: 0;
+      margin-bottom: $margin-between-text-elements;
+
+      @media (min-width: $container-mobile) {
+        font-size: 20px;
+      }
+    }
+
+    p.person-description {
+      margin: 0;
+
+      @media (min-width: $container-mobile) {
+        font-size: 20px;
       }
     }
   }

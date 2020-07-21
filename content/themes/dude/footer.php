@@ -115,8 +115,14 @@
 
 <script data-swup-reload-script>CRISP_WEBSITE_ID = "-K90vfAnyk27kD-pZAep"</script>
 <script data-swup-reload-script async src="https://client.crisp.im/l.js"></script>
+<script data-swup-reload-script async src="//www.instagram.com/embed.js"></script>
+<script data-swup-reload-script async src="//platform.twitter.com/widgets.js"></script>
 
 <script data-swup-reload-script>
+  // Prevent Swup from resetting social media embeds
+  window.instgrm.Embeds.process();
+  twttr.widgets.load();
+
   // Chat greeting
   var daysBetween = function (d1, d2) {
     var diff = Math.abs(d1.getTime() - d2.getTime());

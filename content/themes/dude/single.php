@@ -49,19 +49,22 @@ get_header(); ?>
                 $job_title = get_post_meta( $person_id[0]->post_id, 'title', true );
                 $desc = get_post_meta( $person_id[0]->post_id, 'short_desc_blog', true ); ?>
 
-                <a href="<?php echo get_author_posts_url( $user_id ) ?>"><?php echo get_avatar( $user_id, '512' ); ?></a>
-                <h3><?php echo get_the_author_meta( 'display_name' ); ?></h3>
+                <a href="<?php echo get_author_posts_url( $user_id ) ?>"><?php echo get_avatar( $user_id, '607' ); ?></a>
+                <div class="author-info">
+                  <h3><?php echo get_the_author_meta( 'display_name' ); ?></h3>
 
-                <?php if ( ! empty( $job_title ) ) : ?>
-                  <p class="job-title"><?php
-                  echo esc_html( $job_title ) ?></p>
-                <?php endif;
+                  <?php if ( ! empty( $job_title ) ) : ?>
+                    <p class="job-title"><?php
+                    echo esc_html( $job_title ) ?></p>
+                  <?php endif;
 
-                if ( ! empty( $desc ) ) : ?>
-                  <p class="person-description"><?php echo esc_html( $desc ) ?></p>
-									<?php endif;
+                  if ( ! empty( $desc ) ) : ?>
+                    <p class="person-description"><?php echo esc_html( $desc ) ?></p>
+                    <p class="cta-link-wrapper"><a class="cta-link" href="<?php echo esc_url( get_home_url() ); ?>/dudet/<?php echo strtolower( get_the_author_meta( 'first_name' ) ); ?>">Lue lisää</a></p>
+                  <?php endif; ?>
+                </div>
 
-              endif; ?>
+              <?php endif; ?>
             </div>
           <?php endif; ?>
 
