@@ -8,10 +8,10 @@
   }
 
   .cols {
-    @include grid(3, $gutter_x: 0rem, $gutter_y: 0rem);
+    @include grid(3, $gutter_x: $margin-between-grid-columns, $gutter_y: 0);
 
     @media (max-width: 1000px) {
-      @include grid(2, $gutter_x: 0rem, $gutter_y: 0rem);
+      @include grid(2, $gutter_x: $margin-between-grid-columns, $gutter_y: 0);
     }
 
     @media (max-width: 660px) {
@@ -35,7 +35,7 @@
       > div {
         background-size: contain;
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: bottom;
       }
     }
 
