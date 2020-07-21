@@ -13,23 +13,29 @@
   }
 
   .cols.cols-services {
-    @media (min-width: 960px) {
-      display: flex;
+    display: grid;
+    grid-template-columns: 3fr 6fr;
+    grid-column-gap: 15rem;
+    grid-row-gap: $margin-between-text-elements;
+
+    @media (max-width: 1180px) {
+      display: block;
     }
 
     .col.col-content {
       margin-bottom: $margin-between-grid-columns;
 
-      @media (min-width: 900px) {
-        margin-right: $margin-between-grid-columns;
-      }
-
-      @media (min-width: 1500px) {
-        width: 400px;
-        margin-right: 150px;
+      @media (max-width: 1180px) {
+        margin-bottom: $padding-blocks-medium;
       }
 
       p {
+        max-width: 40rem;
+
+        @media (max-width: 1180px) {
+          max-width: $article-max-width;
+        }
+
         @media (min-width: $container-ipad) {
           font-size: 18px;
           line-height: 1.5;
@@ -43,10 +49,6 @@
 
       @media (max-width: $container-mobile) {
         @include grid(1, $gutter_x: $margin-between-grid-columns, $gutter_y: $margin-between-grid-columns);
-      }
-
-      @media (min-width: 1500px) {
-        width: calc(100% - (400px + 150px));
       }
     }
 
