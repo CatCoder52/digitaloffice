@@ -127,6 +127,15 @@
       opacity: .7;
       line-height: 1.5;
       transition: all 1s;
+      margin-bottom: $padding-blocks-medium;
+
+      a {
+        border-bottom: 1px solid rgba($color-white, .5);
+      }
+
+      a:hover {
+        border-color: $color-mint;
+      }
     }
 
     .details:hover {
