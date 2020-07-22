@@ -62,14 +62,22 @@
     margin-bottom: 0;
     padding: 0;
     list-style: none;
-    display: flex;
+    display: inline-flex;
 
     a {
       color: $color-midnight-blue;
+
+      &:hover {
+        color: darken($color-mint, 32%);
+      }
     }
 
     li {
       margin-right: 2rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
 
       &::before {
         display: none;

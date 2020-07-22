@@ -49,6 +49,14 @@
     text-align: center;
     height: auto;
 
+    a {
+      color: $color-midnight-blue;
+    }
+
+    .social {
+      margin-top: 0;
+    }
+
     h3 {
       @extend %general-heading-small;
       margin-bottom: 1rem;

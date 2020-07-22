@@ -39,10 +39,8 @@
       }
 
       @media (min-width: 980px) {
-        &:nth-child(2) > div:nth-child(1) {
-          svg {
-            transform: translateX(-.5rem);
-          }
+        &:nth-child(2) > div:nth-child(1) svg {
+          transform: translateX(-.5rem);
         }
       }
     }

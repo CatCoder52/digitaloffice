@@ -53,14 +53,16 @@ if ( ! $query->have_posts() ) {
 
         <div class="col">
           <div class="image">
+            <a href="<?php the_permalink(); ?>" class="global-link"><span class="screen-reader-text">Lue lisää tyypistä</span></a>
             <?php image_lazyload_div( $image ); ?>
           </div>
 
           <div class="content">
-            <h3><?php the_title(); ?></h3>
+            <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
             <?php if ( ! empty( $title ) ) : ?>
               <p class="person-title"><?php echo esc_html( $title ); ?><br />
-              <?php echo esc_html( $tel ); ?>
+              <a class="no-text-link" href="mailto:<?php echo esc_html( $email ); ?>"><?php echo esc_html( $email ); ?></a><br />
+              <a class="no-text-link" href="<?php echo esc_attr( str_replace( ' ', '', $tel ) ) ?>"><?php echo esc_html( $tel ); ?></a>
               </p>
             <?php endif; ?>
 
@@ -76,7 +78,6 @@ if ( ! $query->have_posts() ) {
             <p class="arrow-link-wrapper"><span href="<?php the_permalink(); ?>" class="arrow-link"><span class="screen-reader-text">Lue lisää tyypistä</span><span class="arrow"></span></span></p>
           </div>
 
-          <a href="<?php the_permalink(); ?>" class="global-link"><span class="screen-reader-text">Lue lisää tyypistä</span></a>
         </div>
 
       <?php endwhile; wp_reset_postdata(); ?>

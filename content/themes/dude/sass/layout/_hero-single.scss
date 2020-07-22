@@ -28,6 +28,7 @@
 
     .container {
       transform: none;
+      overflow: visible;
     }
 
     @media (max-width: $grid-base-size + 150px) {
@@ -36,10 +37,6 @@
 
     @media (max-width: $container-ipad) {
       width: calc(100% - 4rem);
-    }
-
-    .container {
-      overflow: visible;
     }
 
     .box {

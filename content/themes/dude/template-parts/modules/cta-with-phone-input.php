@@ -7,6 +7,7 @@
  *
  * @package dude
  */
+
 ?>
 
 <section class="block block-cta-with-phone-input">
