@@ -156,6 +156,13 @@ tr,
   font-weight: 400;
 }
 
+@media (max-width: $container-ipad) {
+  body .block table {
+    margin-left: 2rem;
+    width: calc(100% - 2rem);
+  }
+}
+
 p {
   margin-top: 2.7rem;
   margin-bottom: 2.7rem;
