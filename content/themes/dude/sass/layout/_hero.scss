@@ -9,15 +9,30 @@
   background-color: $color-white;
   height: 80vh;
   overflow: hidden;
+  min-height: 56rem;
 
   @media (min-width: $container-ipad-landscape) {
     min-height: 90rem;
   }
 
+  @media (max-width: 760px) {
+    height: auto;
+    padding-top: $padding-blocks-large;
+    padding-bottom: $padding-blocks-large;
+
+    @media (max-width: $container-mobile) {
+      padding-top: $padding-blocks-medium;
+      padding-bottom: $padding-blocks-medium;
+    }
+  }
+
   .block-pre-title {
     @extend %default;
     margin: 0 0 4rem;
-    font-size: 20px;
+
+    @media (min-width: 760px) {
+      font-size: 20px;
+    }
   }
 
   .content {
@@ -41,6 +56,10 @@
   .button-wrapper .button {
     @media (min-width: $container-ipad) {
       margin-right: 2.8rem;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 16px;
     }
   }
 
@@ -87,6 +106,10 @@
     p {
       font-weight: 400;
       max-width: 80rem;
+
+      @media (max-width: 600px) {
+        font-size: 16px;
+      }
     }
   }
 
