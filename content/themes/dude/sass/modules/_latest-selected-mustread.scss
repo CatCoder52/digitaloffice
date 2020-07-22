@@ -6,6 +6,10 @@ $offset-x: 6.4rem;
 .block.block-latest-selected-mustread {
   background: $color-midnight;
 
+  &.block-blog-relevant {
+    margin-top: 0;
+  }
+
   .block-head.block-head-small {
     display: flex;
     justify-content: space-between;

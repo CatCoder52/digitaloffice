@@ -86,10 +86,10 @@ get_header(); ?>
     </section>
 
     <?php
-      // if ( is_singular( 'post' ) && function_exists( 'relevanssi_the_related_posts' ) ) {
-      // relevanssi_the_related_posts();
-      // }
-      ?>
+      if ( is_singular( 'post' ) && function_exists( 'relevanssi_the_related_posts' ) ) {
+      relevanssi_the_related_posts();
+      }
+    ?>
 
 	</main><!-- #main -->
 </div><!-- #primary -->

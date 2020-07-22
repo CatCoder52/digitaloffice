@@ -77,7 +77,7 @@ global $blog_latest_excerpt_override; ?>
           <div class="post">
             <div class="content">
               <h3><a href="<?php echo get_the_permalink( $post ) ?>"><?php echo get_the_title( $post ) ?></a></h3>
-              <?php echo wpautop( get_the_excerpt( $post ) ) ?>
+              <?php echo wpautop( get_the_excerpt( $post ) ); // phpcs:ignore ?>
             </div>
           </div>
         <?php endforeach; ?>
