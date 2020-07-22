@@ -14,6 +14,10 @@
 
     .col.col-image {
       height: 100%;
+
+      @media (max-width: $container-ipad) {
+        height: 40rem;
+      }
     }
 
     .blog-post-time {
@@ -27,6 +31,14 @@
 
   .cols {
     @include grid(2, $gutter_x: 0rem, $gutter_y: 0rem);
+
+    @media (min-width: $container-ipad) {
+      margin-bottom: $margin-between-grid-columns-large + $offset-y + $margin-between-text-elements;
+    }
+
+    @media (max-width: $container-ipad) {
+      display: block;
+    }
   }
 
   h2 {
@@ -67,22 +79,39 @@
     padding-bottom: $padding-blog-content-box-y;
     padding-left: $padding-blog-content-box-x;
     padding-right: $padding-blog-content-box-x;
-    transform: translate($offset-x-minus/2, $offset-y);
     position: relative;
     z-index: 2;
-    margin-right: $offset-x-minus / 2;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+
+    @media (min-width: $container-ipad) {
+      transform: translate($offset-x-minus/2, $offset-y);
+      margin-right: $offset-x-minus / 2;
+    }
+
+    @media (max-width: 1200px) {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+      padding-left: 6rem;
+      padding-right: 6rem;
+    }
+
+    @media (max-width: 500px) {
+      padding: 4rem;
+    }
   }
 
   .col.col-image {
     height: 46rem;
     overflow: hidden;
     position: relative;
-    transform: translateX($offset-x/2);
-    margin-left: $offset-x-minus / 2;
+
+    @media (min-width: $container-ipad) {
+      transform: translateX($offset-x/2);
+      margin-left: $offset-x-minus / 2;
+    }
   }
 }
 

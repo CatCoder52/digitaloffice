@@ -63,8 +63,7 @@
   }
 }
 
+.block.block-cta-text + .block.block-references-one,
 .block.block-references-one + .block.block-references {
-  @media (min-width: $container-ipad-landscape) {
-    padding-top: 0;
-  }
+  padding-top: 0;
 }

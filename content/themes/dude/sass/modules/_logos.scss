@@ -1,8 +1,12 @@
 .block.block-logos {
   .block-title {
     @extend %general-heading-small;
-    margin-top: 6rem;
-    margin-bottom: 6rem;
+    margin-bottom: $padding-blocks-small;
+    margin-top: 0;
+
+    @media (max-width: $container-mobile) {
+      text-align: center;
+    }
   }
 }
 

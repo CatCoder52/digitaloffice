@@ -24,14 +24,14 @@ get_header(); ?>
       $blog_latest_excerpt_override = get_the_id(); ?>
 
       <?php if ( ! is_archive() || ! is_paged() ) : ?>
-        <block class="block block-hero block-hero-light block-hero-blog block-hero-basic is-centered">
+        <section class="block block-hero block-hero-light block-hero-blog block-hero-basic is-centered">
           <div class="container">
             <h1>Tarinoita Dudelta</h1>
             <div class="hero-description">
               <p>Duden blogi sisältää tekijöiden ajatuksia WordPressistä, verkkosivujen suunnittelusta ja kaikkea siltä väliltä.</p>
             </div>
           </div>
-        </block>
+        </section>
         <?php endif; ?>
 
         <section class="block block-cta-with-image block-latest-blog-post">
