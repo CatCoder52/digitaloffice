@@ -63,10 +63,10 @@
   }
 
   .cta-link {
-    color: $color-midnight;
+    color: $color-midnight-blue;
 
     &::after {
-      background-color: $color-midnight;
+      background-color: $color-midnight-blue;
     }
   }
 
@@ -76,7 +76,7 @@
 
   .col.col-content {
     background-color: $color-mint;
-    color: $color-midnight;
+    color: $color-midnight-blue;
     padding-top: $padding-blog-content-box-y;
     padding-bottom: $padding-blog-content-box-y;
     padding-left: $padding-blog-content-box-x;
