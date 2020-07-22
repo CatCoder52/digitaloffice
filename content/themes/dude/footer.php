@@ -120,8 +120,13 @@
 
 <script data-swup-reload-script>
   // Prevent Swup from resetting social media embeds
-  window.instgrm.Embeds.process();
-  twttr.widgets.load();
+  if (typeof window.instgrm !== "undefined") {
+    window.instgrm.Embeds.process();
+  }
+
+  if (typeof twttr !== "undefined") {
+    twttr.widgets.load();
+  }
 
   // Chat greeting
   var daysBetween = function (d1, d2) {

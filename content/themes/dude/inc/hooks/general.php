@@ -133,3 +133,12 @@ add_shortcode( 'checkmark', 'dude_shortcode_checkmark' );
 function dude_shortcode_checkmark() {
   return trim( file_get_contents( get_theme_file_path( 'svg/checkmark.svg' ) ) ); // phpcs:ignore
 }
+
+// Swup reload gravity forms for ajax send to work
+add_filter( 'gform_init_scripts_footer', '__return_false' );
+add_filter( 'gform_get_form_filter', function( $form_string, $form ) {
+  return $form_string = str_replace( '<script', '<script data-swup-reload-script data-swup-ignore-script', $form_string );
+}, 10, 2);
+
+// Scroll back to form if not sent with ajax
+add_filter( 'gform_confirmation_anchor', '__return_true' );

@@ -39,6 +39,7 @@ const swup = new Swup({
 
 // Swup starts
 swup.on("contentReplaced", function () {
+
   // Define Javascript is active by changing the body class
   document.body.classList.remove("no-js");
   document.body.classList.add("js");

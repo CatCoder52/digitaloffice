@@ -55,8 +55,7 @@ if ( has_post_thumbnail() ) {
       <?php endif; ?>
 
 
-      <svg class="arrow-down" xmlns="http://www.w3.org/2000/svg" width="18" height="97" viewBox="0 0 18 97"><path fill="none" fill-rule="evenodd" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.148 1.08v94.296m0 0l7.228-7.228m-7.228 7.228L1.92 88.148"/></svg>
-
+      <svg class="arrow-down swup-transition-fade" xmlns="http://www.w3.org/2000/svg" width="18" height="97" viewBox="0 0 18 97"><path fill="none" fill-rule="evenodd" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.148 1.08v94.296m0 0l7.228-7.228m-7.228 7.228L1.92 88.148"/></svg>
 
     </div>
 

@@ -25,7 +25,7 @@ body.page-id-6357 .block.block-wide-text {
 
   .gform_wrapper ul.gform_fields li.gfield {
     padding: 0;
-    margin: 0 0 $margin-between-grid-columns;
+    margin: 0 0 $margin-between-grid-columns !important;
   }
 
   .gform_wrapper ul.gform_fields {
@@ -99,6 +99,7 @@ body.page-id-6357 .block.block-wide-text {
   .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield select,
   .gform_wrapper textarea.medium,
   .gform_wrapper textarea {
+    width: 100% !important;
     padding: 1.8rem 0;
     background-color: transparent;
     border-right: 2px solid $color-midnight-blue;
@@ -170,7 +171,6 @@ body.page-id-6357 .block.block-wide-text {
 
   .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files {
     @extend .button;
-    background: transparent;
     border-radius: 0;
     padding: 1.2rem 2.6rem !important;
     background: transparent;
@@ -310,3 +310,6 @@ body.page-id-6357 .block.block-wide-text {
   }
 }
 
+body.page-id-6357 .block.block.block-wide-text h2 {
+  margin-bottom: $padding-blocks-medium;
+}

@@ -44,10 +44,11 @@
       &:focus {
         background: $color-midnight-blue;
         color: $color-mint;
+      }
 
-        svg {
-          color: $color-mint;
-        }
+      &:hover svg,
+      &:focus svg {
+        color: $color-mint;
       }
     }
 
