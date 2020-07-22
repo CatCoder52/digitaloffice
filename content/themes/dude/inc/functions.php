@@ -13,7 +13,7 @@ if ( ! function_exists( 'dude_entry_footer' ) ) {
 		if ( 'post' === get_post_type() ) {
 			$categories_list = get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma', 'dude' ) );
 			if ( $categories_list ) : ?>
-				<p class="cat"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'dude' ) ); ?></p>
+				<p class="cat"><?php echo get_the_category_list( _x( '  ', 'Used between list items, there is a space after the comma.', 'dude' ) ); ?></p>
 			<?php	endif;
 
 			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'dude' ) );
