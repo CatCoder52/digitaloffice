@@ -470,10 +470,10 @@ swup.on("contentReplaced", function () {
     document.getElementById("dynamicimage").style.backgroundImage =
       "url(" + dynamicimage + ")";
     jQuery("#dynamiclabel span")
-      .animate({ opacity: 0 }, 500, function () {
+      .animate({ opacity: 0 }, 200, function () {
         jQuery(this).text(dynamiclabel);
       })
-      .animate({ opacity: 1 }, 500);
+      .animate({ opacity: 1 }, 200);
   });
 
   // Slide numbering
