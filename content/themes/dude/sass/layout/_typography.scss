@@ -230,8 +230,12 @@ ul {
   padding-left: 2.7rem;
 
   li {
-    padding-left: 1.5rem;
+    padding: 0;
   }
+}
+
+.block ul {
+  list-style: none;
 
   li::before {
     content: '\2022';  /* Add content: \2022 is the CSS Code/unicode for a bullet */
