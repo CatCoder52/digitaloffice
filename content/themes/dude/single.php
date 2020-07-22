@@ -7,8 +7,6 @@
  * @package dude
  */
 
-$newsletter_cta_bg_image_id = 4435;
-
 the_post();
 
 get_header(); ?>
@@ -19,14 +17,18 @@ get_header(); ?>
     <?php include get_theme_file_path( 'template-parts/hero.php' ); ?>
 
     <?php
+    // Variables
       $post_year = get_the_time( 'Y' );
       $now_year = gmdate( 'Y' );
+      $user_id = get_the_author_meta( 'ID' );
     ?>
 
     <section class="block block-single<?php if ( $post_year <= $now_year - 2 ) : ?> is-old<?php endif; ?>">
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
           <div class="gutenberg-content">
+            <a href="<?php echo get_author_posts_url( $user_id ) ?>"><?php echo get_avatar( $user_id, '74' ); ?></a>
+
             <?php the_content(); ?>
 
             <footer class="entry-footer">
@@ -36,8 +38,11 @@ get_header(); ?>
 
           <?php if ( 5635 !== get_the_id() ) : ?>
             <div class="entry-author">
-              <?php // get author and person corresponding author
-              $user_id = get_the_author_meta( 'ID' );
+              <?php
+              // Get big author image
+              $author_image_big = get_field( 'author_image_big', 'user_' . $user_id );
+
+              // Get author and person corresponding author
               $person_id = $wpdb->get_results( // phpcs:ignore
                 $wpdb->prepare(
                   "SELECT post_id FROM {$wpdb->prefix}postmeta WHERE meta_key = %s AND meta_value = %s",
@@ -49,19 +54,24 @@ get_header(); ?>
                 $job_title = get_post_meta( $person_id[0]->post_id, 'title', true );
                 $desc = get_post_meta( $person_id[0]->post_id, 'short_desc_blog', true ); ?>
 
-                <a href="<?php echo get_author_posts_url( $user_id ) ?>"><?php echo get_avatar( $user_id, '607' ); ?></a>
+                <div class="author-image">
+                  <?php if ( ! empty( $author_image_big ) ) : ?><a href="<?php echo get_author_posts_url( $user_id ); ?>" class="author-image-big"><img src="<?php echo esc_url( $author_image_big['url'] ); ?>" alt="<?php echo get_the_author_meta( 'display_name' ); ?>, <?php
+                    echo esc_html( $job_title ) ?>" /></a><?php endif; ?>
+                </div>
                 <div class="author-info">
-                  <h3><?php echo get_the_author_meta( 'display_name' ); ?></h3>
+                  <div class="info-container">
+                    <h3><?php echo get_the_author_meta( 'display_name' ); ?></h3>
 
-                  <?php if ( ! empty( $job_title ) ) : ?>
-                    <p class="job-title"><?php
+                    <?php if ( ! empty( $job_title ) ) : ?>
+                      <p class="job-title"><?php
                     echo esc_html( $job_title ) ?></p>
-                  <?php endif;
+                    <?php endif;
 
-                  if ( ! empty( $desc ) ) : ?>
-                    <p class="person-description"><?php echo esc_html( $desc ) ?></p>
-                    <p class="cta-link-wrapper"><a class="cta-link" href="<?php echo esc_url( get_home_url() ); ?>/dudet/<?php echo strtolower( get_the_author_meta( 'first_name' ) ); ?>">Lue lisää</a></p>
-                  <?php endif; ?>
+                    if ( ! empty( $desc ) ) : ?>
+                      <p class="person-description"><?php echo esc_html( $desc ) ?></p>
+                      <p class="cta-link-wrapper"><a class="cta-link" href="<?php echo esc_url( get_home_url() ); ?>/dudet/<?php echo strtolower( get_the_author_meta( 'first_name' ) ); ?>">Lue lisää</a></p>
+                    <?php endif; ?>
+                  </div>
                 </div>
 
               <?php endif; ?>

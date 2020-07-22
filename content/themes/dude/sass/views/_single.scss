@@ -300,12 +300,48 @@ body.single .block.block-single:not(.block-single-reference) {
   display: flex;
   align-items: flex-end;
 
+  @media (max-width: 1400px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .author-image {
+    margin-right: 5rem;
+    display: flex;
+    justify-content: flex-end;
+
+    @media (max-width: 760px) {
+      margin-right: 2rem;
+      width: 38%;
+    }
+
+    @media (max-width: $container-mobile) {
+      margin: 0;
+    }
+  }
+
   img {
-    margin-right: $margin-between-text-elements;
+    max-width: 48rem;
+    height: auto;
+    width: 100%;
+    min-width: 35rem;
+
+    @media (max-width: 760px) {
+      min-width: 40rem;
+    }
   }
 
   .author-info {
-    margin-bottom: $padding-blocks-large;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    align-self: center;
+    padding-bottom: $padding-blocks-small;
+    padding-top: $padding-blocks-small;
+
+    @media (max-width: 760px) {
+      width: 62%;
+    }
 
     h3 {
       @extend %general-heading-small;
@@ -321,16 +357,24 @@ body.single .block.block-single:not(.block-single-reference) {
       opacity: .5;
       margin-top: 0;
       margin-bottom: $margin-between-text-elements;
+      font-size: 16px;
 
-      @media (min-width: $container-mobile) {
+      @media (min-width: 850px) {
         font-size: 20px;
+      }
+    }
+
+    .cta-link {
+      @media (max-width: 850px) {
+        font-size: 16px;
       }
     }
 
     p.person-description {
       margin: 0;
+      font-size: 16px;
 
-      @media (min-width: $container-mobile) {
+      @media (min-width: 850px) {
         font-size: 20px;
       }
     }
