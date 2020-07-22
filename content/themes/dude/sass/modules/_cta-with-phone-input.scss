@@ -5,6 +5,10 @@ $submit-width: 33px;
   padding-top: 0;
   padding-bottom: $padding-blocks-medium;
 
+  .gform_confirmation_wrapper .gform_confirmation_message {
+    color: $color-midnight-blue !important;
+  }
+
   &.block-recruiting .cols .col:first-of-type {
     @media (min-width: 1170px) {
       width: 875px;
