@@ -27,7 +27,7 @@ get_header(); ?>
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
         <div class="author-card">
-          <p><a class="no-text-link author" href="<?php echo get_author_posts_url( $user_id ) ?>" rel="author"><?php echo get_avatar( $user_id, '100' ); ?><span>Kirjoittanut</span> <?php echo get_the_author_meta( 'display_name' ); ?></a></p>
+          <p><a class="no-text-link author" href="<?php echo get_author_posts_url( $user_id ) ?>" rel="author"><?php echo get_avatar( $user_id, '100' ); ?><span><span class="writtenby">Kirjoittanut</span> <?php echo get_the_author_meta( 'display_name' ); ?></a></span></p>
         </div>
 
         <div class="gutenberg-content">

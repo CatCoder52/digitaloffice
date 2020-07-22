@@ -18,17 +18,41 @@ body.single .block.block-single:not(.block-single-reference) {
     padding-top: $margin-between-grid-columns;
     padding-bottom: $margin-between-grid-columns - 2.7rem;
 
+    @media (max-width: $grid-base-size + 150px) {
+      padding-left: $padding-default-cols-ipad;
+      padding-right: $padding-default-cols-ipad;
+    }
+
+    @media (max-width: $container-ipad) {
+      padding-left: $padding-default-cols-mobile;
+      padding-right: $padding-default-cols-mobile;
+    }
+
     p {
       margin: 0;
+      font-size: 18px;
+
+      @media (max-width: 420px) {
+        font-size: 16px;
+      }
     }
 
     a {
+      @include grid(2, $gutter_x: 2.7rem, $gutter_y: 0rem);
+      grid-template-columns: 74px 2fr;
+      align-items: center;
       box-shadow: none;
       border: 0;
       font-weight: 500;
     }
 
-    a span {
+    a span:not(.writtenby) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    a .writtenby {
       opacity: .4;
       font-weight: 400;
       margin-right: 1rem;
@@ -40,7 +64,11 @@ body.single .block.block-single:not(.block-single-reference) {
       border-radius: 50%;
       box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, .07);
       background-color: #d8d8d8;
-      margin-right: 2.7rem;
+
+      @media (max-width: $container-mobile) {
+        width: 64px;
+        height: 64px;
+      }
     }
   }
 
