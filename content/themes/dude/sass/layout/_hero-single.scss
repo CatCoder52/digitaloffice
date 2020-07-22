@@ -1,10 +1,15 @@
 .single .block.block-hero.block-hero-single {
   height: auto;
-  min-height: 90rem;
   background: $color-white;
-  padding-top: $padding-blocks-huge;
-  padding-bottom: $padding-blocks-large;
   overflow: visible;
+  padding-top: $padding-blocks-medium;
+  padding-bottom: $padding-blocks-medium;
+
+  @media (min-width: $container-ipad-landscape) {
+    min-height: 90rem;
+    padding-top: $padding-blocks-huge;
+    padding-bottom: $padding-blocks-huge;
+  }
 
   .notification-box {
     position: absolute;
@@ -73,7 +78,7 @@
 
   .block-title-pre {
     font-size: 16px;
-    margin-top: 65px;
+    maring-top: 0;
   }
 
   .container {
@@ -84,6 +89,13 @@
     transform: none;
     z-index: 3;
     position: relative;
+
+    // Offset nav height
+    transform: translateY(65px);
+
+    @media (max-width: $container-mobile) {
+      transform: translateY(46px);
+    }
   }
 
   .featured-image {

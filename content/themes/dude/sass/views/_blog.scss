@@ -7,14 +7,14 @@
   }
 
   .cols {
-    @include grid(2, $gutter_x: $padding-general-content-box, $gutter_y: $padding-general-content-box);
+    @include grid(3, $gutter_x: 72px, $gutter_y: $padding-blocks-medium);
 
-    @media (min-width: 1600px) {
-      @include grid(3, $gutter_x: $padding-general-content-box, $gutter_y: $padding-general-content-box);
+    @media (max-width: 1000px) {
+      @include grid(2, $gutter_x: $margin-between-grid-columns, $gutter_y: $margin-between-grid-columns);
     }
 
-    @media (max-width: 900px) {
-      @include grid(2, $gutter_x: 5rem, $gutter_y: 5rem);
+    @media (max-width: 580px) {
+      @include grid(1, $gutter_x: $margin-between-grid-columns, $gutter_y: $margin-between-grid-columns);
     }
 
     .text-content {

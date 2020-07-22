@@ -12,8 +12,12 @@ body.single .block.block-single:not(.block-single-reference) {
   background: transparent;
 
   .gutenberg-content {
-    padding-top: $padding-general-content-box;
+    padding-top: $margin-between-grid-columns;
     padding-bottom: 0;
+
+    @media (max-width: $container-mobile) {
+      padding-top: $padding-blocks-small;
+    }
   }
 
   // Golden ratio
