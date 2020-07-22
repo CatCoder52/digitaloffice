@@ -8,12 +8,56 @@
   .cols.cols-two {
     @include grid(2, $gutter_x: $margin-between-grid-columns, $gutter_y: $margin-between-grid-columns);
 
+    @media (max-width: 980px) {
+      @include grid(1, $gutter_x: $margin-between-grid-columns, $gutter_y: $margin-between-grid-columns);
+    }
+
     .col {
-      display: flex;
+      text-align: center;
+
+      @media (min-width: 600px) {
+        display: flex;
+        text-align: left;
+      }
+
+      @media (max-width: 980px) {
+        > div:nth-child(1) {
+          min-width: 170px;
+          max-width: 170px;
+          display: flex;
+          justify-content: center;
+        }
+      }
+
+      @media (max-width: 600px) {
+        > div:nth-child(1) {
+          min-width: 0;
+          max-width: 100%;
+          display: flex;
+          justify-content: center;
+        }
+      }
+
+      @media (min-width: 980px) {
+        &:nth-child(2) > div:nth-child(1) {
+          svg {
+            transform: translateX(-.5rem);
+          }
+        }
+      }
     }
 
     svg {
       margin-right: $margin-between-grid-columns;
+      margin-bottom: 2.7rem;
+
+      @media (max-width: 980px) {
+        margin-right: 4rem;
+      }
+
+      @media (max-width: 600px) {
+        margin-right: 0;
+      }
     }
   }
 }

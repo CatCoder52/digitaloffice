@@ -2,8 +2,31 @@
   display: block;
   height: auto;
   padding-top: 30rem;
+  padding-bottom: 0;
   padding-left: 0;
   padding-right: 0;
+
+  .content {
+    margin-bottom: $padding-blocks-medium;
+
+    @media (max-width: $grid-base-size + 150px) {
+      padding-left: $padding-default-cols-ipad;
+      padding-right: $padding-default-cols-ipad;
+    }
+
+    @media (min-width: 760px) {
+      margin-bottom: 20rem;
+    }
+
+    @media (max-width: $container-ipad) {
+      padding-left: $padding-default-cols-mobile;
+      padding-right: $padding-default-cols-mobile;
+    }
+  }
+
+  @media (max-width: 760px) {
+    padding-top: $padding-blocks-large;
+  }
 
   .hero-description {
     margin-bottom: 0;
@@ -23,9 +46,5 @@
   .container {
     display: block;
     transform: none;
-  }
-
-  .content {
-    margin-bottom: 20rem;
   }
 }

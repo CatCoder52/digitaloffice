@@ -7,6 +7,14 @@
   .cols {
     @include grid(3, $gutter_x: 10rem, $gutter_y: 8rem);
 
+    @media (max-width: 1130px) {
+      @include grid(2, $gutter_x: 5rem, $gutter_y: 5rem);
+    }
+
+    @media (max-width: 580px) {
+      @include grid(1, $gutter_x: $padding-blocks-small, $gutter_y: $padding-blocks-small);
+    }
+
     h3 {
       @extend %general-heading-small;
     }
