@@ -20,7 +20,7 @@
           <h2>Jätä meille yhteydenottopyyntö</h2>
           <p>Haluatko tietää lisää palveluistamme ja Dudesta yrityksenä? Jätä puhelinnumerosi, niin olemme teihin pikimmiten yhteydessä.</p>
         <?php else : ?>
-          <h2>Kyllä, naurettavan hyvännäköistä.</h2>
+          <h2>Uskottava se on.</h2>
           <p>Jos tuntemukset ovat kutakuinkin tuota luokkaa, niin jätäthän meille soittopyynnön. Meidän Kristian soittaa pikimmiten perään.</p>
         <?php endif; ?>
       </div>
