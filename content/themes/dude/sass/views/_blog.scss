@@ -7,7 +7,7 @@
   }
 
   .cols {
-    @include grid(3, $gutter_x: 72px, $gutter_y: $padding-blocks-medium);
+    @include grid(3, $gutter_x: 72px, $gutter_y: 72px);
 
     @media (max-width: 1000px) {
       @include grid(2, $gutter_x: $margin-between-grid-columns, $gutter_y: $margin-between-grid-columns);

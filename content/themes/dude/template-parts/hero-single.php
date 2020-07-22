@@ -22,12 +22,16 @@ $bg_image_tiny = $bg_image_tiny_default[0];
 $bg_image = null;
 $video_bg = get_post_meta( $post_id, 'article_video', true );
 
+// Variables
+$post_year = get_the_time( 'Y' );
+$now_year = gmdate( 'Y' );
+
 if ( has_post_thumbnail() ) {
   $bg_image = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
 }
 ?>
 
-<section class="block block-hero is-centered block-hero-single<?php if ( $video_bg ) : ?> has-video<?php endif; ?>">
+<section class="block block-hero is-centered block-hero-single<?php if ( $video_bg ) : ?> has-video<?php endif; ?><?php if ( $post_year <= $now_year - 2 ) : ?> is-old<?php endif; ?>">
 
   <div class="shade"></div>
   <div class="featured-image">

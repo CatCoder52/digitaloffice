@@ -5,6 +5,13 @@
   padding-top: $padding-blocks-medium;
   padding-bottom: $padding-blocks-medium;
 
+  @media (max-width: $container-ipad-landscape) {
+    // Let's make space for old notification
+    &.is-old {
+      padding-bottom: $padding-blocks-huge;
+    }
+  }
+
   @media (min-width: $container-ipad-landscape) {
     min-height: 90rem;
     padding-top: $padding-blocks-huge;
@@ -18,6 +25,10 @@
     transform: translateY(45px);
     overflow: visible;
     width: 100%;
+
+    .container {
+      transform: none;
+    }
 
     @media (max-width: $grid-base-size + 150px) {
       width: calc(100% - 10rem);
