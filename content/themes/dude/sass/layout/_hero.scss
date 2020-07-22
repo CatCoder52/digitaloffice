@@ -132,6 +132,10 @@
     height: auto;
     padding-top: $padding-blocks-large;
     overflow: visible;
+
+    @media (max-width: $container-mobile) {
+      padding-top: $padding-blocks-medium;
+    }
   }
 
   + .block.block-wide-text {

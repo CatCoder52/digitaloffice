@@ -1,6 +1,10 @@
 .block.block-blog-archive {
   &.is-archive {
     padding-top: $padding-blocks-large;
+
+    @media (max-width: $container-mobile) {
+      padding-top: $padding-blocks-medium;
+    }
   }
 
   &:not(.is-archive) .archive-head .block-title {
@@ -38,7 +42,7 @@
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: $margin-between-text-elements;
+    margin-bottom: $margin-between-grid-columns;
     margin-top: 0;
     margin-left: 0;
     padding: 0;
