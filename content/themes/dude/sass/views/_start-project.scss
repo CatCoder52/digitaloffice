@@ -20,7 +20,7 @@ body.page-id-6357 .block.block-wide-text {
 
   // Gravity forms
   .gform_wrapper .gfield_required {
-    display: none;
+    color: darken($color-mint, 35%);
   }
 
   .gform_wrapper ul.gform_fields li.gfield {
@@ -34,22 +34,55 @@ body.page-id-6357 .block.block-wide-text {
     margin-left: -5rem !important;
     margin-right: -5rem !important;
     overflow: hidden;
+
+    @media (max-width: 1000px) {
+      margin-left: -2.5rem !important;
+      margin-right: -2.5rem !important;
+    }
+
+    @media (max-width: 760px) {
+      margin: 0 !important;
+    }
   }
 
   .gform_wrapper form li.gfmc-column {
     width: 50%;
+
+    @media (max-width: 760px) {
+      width: 100%;
+    }
 
     &.gfmc-row-1-column,
     &.gfmc-row-2-column {
       width: calc(50% - 10rem) !important;
       margin-left: 5rem !important;
       margin-right: 5rem !important;
+
+      @media (max-width: 1000px) {
+        width: calc(50% - 5rem) !important;
+        margin-left: 2.5rem !important;
+        margin-right: 2.5rem !important;
+      }
+
+      @media (max-width: 760px) {
+        margin: 0 !important;
+        width: 100% !important;
+      }
     }
 
     &.gfmc-row-3-column {
       width: 100% !important;
       margin-left: 5rem !important;
       margin-right: 5rem !important;
+
+      @media (max-width: 1000px) {
+        margin-left: 2.5rem !important;
+        margin-right: 2.5rem !important;
+      }
+
+      @media (max-width: 760px) {
+        margin: 0 !important;
+      }
     }
   }
 
@@ -196,8 +229,21 @@ body.page-id-6357 .block.block-wide-text {
 
   .gform_wrapper .gfield_radio li label {
     margin: 0;
+    font-size: 15px;
 
-    @media (min-width: $container-ipad) {
+    @media (min-width: 1200px) {
+      font-size: 19px;
+    }
+
+    @media (max-width: 450px) {
+      font-size: 13px;
+    }
+  }
+
+  .gform_wrapper .gfield_checkbox li label {
+    font-size: 15px;
+
+    @media (min-width: 1200px) {
       font-size: 19px;
     }
   }
@@ -216,6 +262,19 @@ body.page-id-6357 .block.block-wide-text {
       background: $color-white;
       display: block;
       margin: 0 auto 3rem;
+
+      @media (max-width: 500px) {
+        width: 2.5rem;
+        height: 2.5rem;
+        transform: translateY(2px);
+      }
+    }
+
+    // Let's not effect the radio buttons
+    .gform_wrapper ul.gfield_radio li input[type=radio]+br+label::before,
+    .radio + label::before,
+    input[type=radio]+label::before {
+      transition: none;
     }
 
     .gform_wrapper ul.gfield_radio li input[type=radio]:checked + br + label::before,
@@ -226,8 +285,12 @@ body.page-id-6357 .block.block-wide-text {
       background-color: $color-midnight-blue;
       width: 4rem;
       height: 4rem;
-      margin-top: -16px;
+      margin-top: -10px;
       transform: translateY(8px);
+
+      @media (max-width: 500px) {
+        margin-top: -16px;
+      }
     }
 
     &::before {
