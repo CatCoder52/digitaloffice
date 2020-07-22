@@ -16,6 +16,22 @@ body.page-template-template-community-code .block.block-hero.block-hero-light {
 
   .container {
     @include grid(3, $gutter_x: $margin-between-grid-columns, $gutter_y: $margin-between-grid-columns);
+
+    @media (max-width: 1100px) {
+      @include grid(3, $gutter_x: $padding-blocks-small, $gutter_y: $padding-blocks-small);
+    }
+
+    @media (max-width: 900px) {
+      @include grid(2, $gutter_x: $padding-blocks-small, $gutter_y: $padding-blocks-small);
+    }
+
+    @media (max-width: 700px) {
+      @include grid(2, $gutter_x: 4rem, $gutter_y: 4rem);
+    }
+
+    @media (max-width: $container-mobile) {
+      @include grid(2, $gutter_x: 2rem, $gutter_y: 2rem);
+    }
   }
 
   img {

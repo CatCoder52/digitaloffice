@@ -234,7 +234,7 @@ ul {
   }
 }
 
-.block ul {
+.block:not(.block-footer) ul {
   list-style: none;
 
   li::before {
