@@ -99,13 +99,18 @@
       @media (max-width: 1500px) {
         margin-top: -125px;
       }
+
+      @media (max-width: 1180px) {
+        margin-top: 0;
+      }
     }
   }
 }
 
 .cols.cols-two {
-  @include grid(2, $gutter_x: $margin-between-grid-columns, $gutter_y: $margin-between-grid-columns);
-  margin-bottom: 10rem;
+  @media (min-width: $container-mobile) {
+    @include grid(2, $gutter_x: $margin-between-grid-columns, $gutter_y: $margin-between-grid-columns);
+  }
 
   &.col-two-opposite .col-content {
     order: 2;
