@@ -153,6 +153,11 @@
   }
 }
 
-.block.block-title-left-text-right + .block.block.block-our-services {
+body.page-id-9 .block.block-title-left-text-right + .block.block.block-our-services,
+body.page-id-4485 .block.block-title-left-text-right + .block.block.block-our-services {
   padding-top: 0;
+
+  @media (min-width: 1180px) {
+    padding-top: $padding-blocks-medium;
+  }
 }
