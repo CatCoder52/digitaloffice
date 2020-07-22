@@ -139,6 +139,11 @@
     @media (max-width: $container-ipad) {
       width: 100%;
       text-align: center;
+
+      .description {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
     }
 
     @media (max-width: $container-mobile) {

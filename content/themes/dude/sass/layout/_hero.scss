@@ -54,10 +54,6 @@
   }
 
   .button-wrapper .button {
-    @media (min-width: $container-ipad) {
-      margin-right: 2.8rem;
-    }
-
     @media (max-width: 600px) {
       font-size: 16px;
     }

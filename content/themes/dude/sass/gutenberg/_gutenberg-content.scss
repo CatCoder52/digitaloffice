@@ -12,6 +12,22 @@
   padding-top: 0;
   padding-bottom: 0;
 
+  // Loops to enumerate the classes for columns.
+  .blocks-gallery-grid {
+    display: grid;
+
+    .blocks-gallery-item {
+      width: 100%;
+    }
+  }
+
+  @for $i from 2 through 9 {
+    .columns-#{$i} .blocks-gallery-grid {
+      grid-template-columns: repeat($i, 1fr);
+      grid-column-gap: 3rem;
+    }
+  }
+
   // WordPress alignments
   .cat-links,
   .tags-links {

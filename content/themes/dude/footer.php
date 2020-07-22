@@ -138,10 +138,10 @@
 
   if (typeof Storage !== "undefined") {
     if (
-      sessionStorage.getItem("chat_greeting_visits") >= 2 &&
+      sessionStorage.getItem("chat_greeting_visits") >= 0 &&
       sessionStorage.getItem("chat_greeting_sent") === null
     ) {
-      // Send chat if user has visited over 2 pages and greeting still not sent
+      // Send chat if user has visited over 0 pages and greeting still not sent
       jQuery("body").addClass("chat-box-visible");
       setTimeout(function () {
         maybeSendChatGreeting();
@@ -236,7 +236,7 @@
       // defaults / fallbacks
       var greetings = [
         "Moi! Verkkosivut uudistuksen tarpeessa? Uutta ilmettä putiikille? Kysy lisää chatissa.",
-        "Moro! 👋 Onko verkkosivustosi tai yritysilmeesi uudistuksen tarpeessa? Laita viestiä!",
+        "Moro! 👋  Onko verkkosivustosi tai yritysilmeesi uudistuksen tarpeessa? Laita viestiä!",
         "Terve! Pistä viestiä niin kerron vähän lisää meidän palveluista. 👋",
       ];
     }
@@ -297,6 +297,12 @@
   }
 
   jQuery("body").on("click", ".chat-greeting button.close", function (event) {
+    // Set timestamp for closed chat
+    sessionStorage.setItem(
+      "chat_greeting_closed",
+      new Date().toLocaleString()
+    );
+
     jQuery("body").removeClass("chat-box-visible");
 
     jQuery(".chat-greeting")

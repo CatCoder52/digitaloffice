@@ -8,15 +8,28 @@
     color: $color-white;
   }
 
-  .details {
-    font-size: 16px;
-    margin-top: 4rem;
+  h1 {
+    margin-bottom: $margin-between-text-elements;
+  }
 
-    a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link) {
+  @media (max-width: 420px) {
+    h1 {
+      font-size: 26px;
+    }
+  }
+
+  .hero-description {
+    a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail) {
       color: $color-white;
+      box-shadow: none;
+      border-bottom: 1px solid rgba($color-white, .3);
+      transition: border .22s;
+      overflow: hidden;
+      background: none;
 
-      &::after {
-        display: none;
+      &:hover {
+        border-bottom: 1px solid $color-mint;
+        background: none;
       }
     }
   }

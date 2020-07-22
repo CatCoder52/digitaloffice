@@ -1,11 +1,26 @@
 // Gutenberg blocks on the website side
-
 // Columns block
-.wp-block-columns {
+.wp-block-columns,
+.wp-block-columns.alignwide {
   @extend .block;
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+  margin-top: 0;
+  margin-bottom: 0;
 
-  &.features {
-    padding-bottom: $margin-between-grid-columns-large;
+  @media (max-width: $grid-base-size + 150px) {
+    padding-left: $padding-default-cols-ipad;
+    padding-right: $padding-default-cols-ipad;
+  }
+
+  @media (max-width: $container-ipad) {
+    padding-left: $padding-default-cols-mobile;
+    padding-right: $padding-default-cols-mobile;
+  }
+
+  > .wp-block-column {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   &.features p {
@@ -13,8 +28,10 @@
   }
 
   &.title-only-block {
-    padding-bottom: $margin-between-grid-columns-large / 2;
-    padding-top: $margin-between-grid-columns-large;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 4rem;
+    margin-top: 4rem;
 
     .wp-block-column h2 {
       @extend %general-heading-cta;
@@ -33,6 +50,7 @@
 
   + .wp-block-columns {
     padding-top: 0;
+    padding-bottom: 0;
   }
 
   .wp-block-column .block-title.block-title-large {
@@ -46,7 +64,6 @@
 
 .wp-block-column {
   h2 {
-    @extend %general-heading-cta;
     font-weight: 400;
     margin-bottom: $margin-between-text-elements;
 
