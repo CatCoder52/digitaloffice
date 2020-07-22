@@ -43,6 +43,9 @@ if ( ! $query->have_posts() ) {
 
         $image = get_post_meta( get_the_id(), 'image_square', true );
         $title = get_post_meta( get_the_id(), 'title', true );
+        $tel = get_post_meta( get_the_id(), 'tel', true );
+        $email = get_post_meta( get_the_id(), 'email', true );
+        $social = get_field( 'social_media' );
 
         if ( empty( $image ) ) {
           continue;
@@ -52,15 +55,28 @@ if ( ! $query->have_posts() ) {
           <div class="image">
             <?php image_lazyload_div( $image ); ?>
           </div>
+
           <div class="content">
             <h3><?php the_title(); ?></h3>
             <?php if ( ! empty( $title ) ) : ?>
-              <p class="person-title"><?php echo esc_html( $title ) ?></p>
+              <p class="person-title"><?php echo esc_html( $title ); ?><br />
+              <?php echo esc_html( $tel ); ?>
+              </p>
             <?php endif; ?>
 
-            <p class="arrow-link-wrapper"><span href="<?php the_permalink() ?>" class="arrow-link"><span class="screen-reader-text">Lue lisää tyypistä</span><span class="arrow"></span></span></p>
+            <?php if ( ! empty( $social ) ) : ?>
+              <ul class="social">
+                <?php foreach ( $social as $item ) :
+                  $icon = sanitize_title( $item['name'] ); ?>
+                  <li class="<?php echo $icon; ?>"><a class="contact-detail" href="<?php echo esc_url( $item['value'] ) ?>"><?php include get_theme_file_path( "svg/social/{$icon}.svg" ) ?><span class="screen-reader-text"><?php echo esc_html( $item['name'] ) ?></span></a></li>
+                <?php endforeach; ?>
+              </ul>
+            <?php endif; ?>
+
+            <p class="arrow-link-wrapper"><span href="<?php the_permalink(); ?>" class="arrow-link"><span class="screen-reader-text">Lue lisää tyypistä</span><span class="arrow"></span></span></p>
           </div>
-          <a href="<?php the_permalink() ?>" class="global-link"><span class="screen-reader-text">Lue lisää tyypistä</span></a>
+
+          <a href="<?php the_permalink(); ?>" class="global-link"><span class="screen-reader-text">Lue lisää tyypistä</span></a>
         </div>
 
       <?php endwhile; wp_reset_postdata(); ?>

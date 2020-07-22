@@ -1,6 +1,10 @@
 .block.block-cta-with-image {
   text-align: center;
 
+  &:not(.block-latest-blog-post) {
+    padding-bottom: 0;
+  }
+
   &.block-latest-blog-post {
     text-align: left;
     padding-bottom: 0;
@@ -50,7 +54,8 @@
   }
 
   h2,
-  p {
+  p,
+  a {
     color: $color-midnight-blue;
   }
 
@@ -127,5 +132,9 @@
 }
 
 .block.block-cta-with-image + .block.block-cta-with-phone-input.block-recruiting {
+  padding-top: 0;
+}
+
+body.page-id-4487 .block.block-cta-with-image + .block.block-title-left-text-right {
   padding-top: 0;
 }

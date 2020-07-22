@@ -48,7 +48,7 @@
 
   <div class="container">
 
-    <p class="large-text">Dude on ollut WordPressin yhteisön toiminnassa mukana alusta asti ei ainoastaan koodipuolella, mutta myös esimerkiksi järjestämässä WordPress Meetuppeja ja WordCampeja Suomessa.</p>
+    <p class="large-text">Dude, vuodesta 2013. Paljon on on tehty ja nähty. Jos koet, että olisimme oikea tekijä sinulle ja sinä oikea asiakas meille, <a href="<?php echo get_the_permalink( 4487 ); ?>" class="no-text-link">ota yhteyttä</a>.</p>
 
     <div class="cols cols-four">
 

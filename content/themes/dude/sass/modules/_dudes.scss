@@ -28,9 +28,9 @@
     }
 
     .image {
+      @include aspect-ratio(408, 560);
       overflow: hidden;
       position: relative;
-      height: 56rem;
 
       > div {
         background-size: contain;
@@ -40,7 +40,7 @@
     }
 
     @media (max-width: 660px) {
-      margin-bottom: 6rem;
+      margin-bottom: 2rem;
     }
   }
 
