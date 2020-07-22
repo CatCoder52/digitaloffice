@@ -86,6 +86,10 @@
   @extend %textlink;
 }
 
+.block li a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail) {
+  @extend %textlink;
+}
+
 .block .link-wrapper {
   margin-top: 4.8rem;
 }
@@ -222,11 +226,21 @@ h6,
 
 // Lists
 ul {
-  list-style: circle;
+  list-style: none;
   padding-left: 2.7rem;
 
   li {
-    padding-left: .35rem;
+    padding-left: 1.5rem;
+  }
+
+  li::before {
+    content: '\2022';  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: $color-mint;
+    font-weight: 700;
+    display: inline-block;
+    width: 1rem;
+    margin-left: -2rem;
+    margin-right: 1rem;
   }
 }
 
