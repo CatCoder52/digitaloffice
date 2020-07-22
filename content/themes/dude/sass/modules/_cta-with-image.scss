@@ -119,8 +119,13 @@
 
 .block.block-values + .block.block.block-cta-with-image {
   padding-top: 0;
+  padding-bottom: 0;
 }
 
 .block.block-hero + .block-with-image {
   padding-top: $padding-blocks-medium;
+}
+
+.block.block-cta-with-image + .block.block-cta-with-phone-input.block-recruiting {
+  padding-top: 0;
 }

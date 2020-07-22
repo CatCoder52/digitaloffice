@@ -31,31 +31,16 @@
     }
   }
 
-  @media (max-width: 680px) {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
   .col-timeline .row {
     display: flex;
     padding: 4rem 7.5rem 4rem 0;
 
+    @media (max-width: 1200px) {
+      padding: 4rem 0;
+    }
+
     &:hover {
       cursor: pointer;
-    }
-
-    @media (max-width: $container-ipad) {
-      padding-top: $padding-default-rows-ipad;
-      padding-bottom: $padding-default-rows-ipad;
-      padding-left: $padding-default-cols-ipad;
-      padding-right: $padding-default-cols-ipad;
-    }
-
-    @media (max-width: $container-mobile) {
-      padding-top: $padding-default-rows-mobile;
-      padding-bottom: $padding-default-rows-mobile;
-      padding-left: $padding-default-cols-mobile;
-      padding-right: $padding-default-cols-mobile;
     }
 
     @media (max-width: 380px) {
@@ -125,9 +110,12 @@
 
     h2 {
       @extend %h1;
-      padding-right: 5rem;
       margin: 0;
       font-weight: 400;
+
+      @media (min-width: 720px) {
+        padding-right: 5rem;
+      }
 
       @media (max-width: 380px) {
         margin-bottom: 3rem;
