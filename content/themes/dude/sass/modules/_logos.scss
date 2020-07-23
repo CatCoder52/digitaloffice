@@ -1,4 +1,8 @@
 .block.block-logos {
+  .container {
+    overflow: visible;
+  }
+
   .block-title {
     @extend %general-heading-small;
     margin-bottom: $padding-blocks-small;
@@ -11,7 +15,7 @@
 }
 
 .block.block-logos .logo-wall {
-  @include grid(6, $gutter_x: 100px, $gutter_y: $margin-between-grid-columns);
+  @include grid(6, $gutter_x: 100px, $gutter_y: 7rem);
 
   @media (max-width: 1500px) {
     @include grid(5, $gutter_x: 100px, $gutter_y: $margin-between-grid-columns);
@@ -33,6 +37,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: visible;
   }
 
   svg {
@@ -59,11 +64,16 @@
 
   .logo-ulkoministerio svg {
     max-width: 190px;
-    max-height: 120px;
+    max-height: 140px;
   }
 
   .logo-wotkins svg {
     max-width: 150px;
+  }
+
+  .logo-ark svg {
+    max-width: 100px;
+    max-height: 100px;
   }
 }
 

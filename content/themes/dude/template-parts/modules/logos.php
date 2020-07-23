@@ -3,7 +3,7 @@
  * @Author:             Roni Laukkarinen, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2020-07-15 18:34:29
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-23 20:30:46
+ * @Last Modified time: 2020-07-23 20:35:59
  *
  * @package dude
  */
@@ -33,8 +33,8 @@
       <div><?php include get_theme_file_path( '/svg/logos/nilkko.svg' ); ?></div>
       <div><?php include get_theme_file_path( '/svg/logos/teeleidi.svg' ); ?></div>
       <div><?php include get_theme_file_path( '/svg/logos/liiga.svg' ); ?></div>
-      <div><?php include get_theme_file_path( '/svg/logos/ark.svg' ); ?></div>
-      <div class="wotkins"><?php include get_theme_file_path( '/svg/logos/wotkins.svg' ); ?></div>
+      <div class="logo-ark"><?php include get_theme_file_path( '/svg/logos/ark.svg' ); ?></div>
+      <div class="logo-wotkins"><?php include get_theme_file_path( '/svg/logos/wotkins.svg' ); ?></div>
       <div><?php include get_theme_file_path( '/svg/logos/paytrail.svg' ); ?></div>
 </div>
 
