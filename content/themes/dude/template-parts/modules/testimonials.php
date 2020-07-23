@@ -2,8 +2,8 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:48:37
- * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-23 14:09:43
+ * @Last Modified by:   Timi Wahalahti
+ * @Last Modified time: 2020-07-23 16:35:42
  *
  * @package dude
  */
@@ -30,7 +30,7 @@ if ( $query->have_posts() ) {
 		$references[] = array(
 		'id'                            => get_the_id(),
 		'permalink'                     => get_the_permalink(),
-		'quote'                         => get_post_meta( get_the_id(), 'quote', true ),
+		'quote'                         => get_post_meta( get_the_id(), 'quote_short', true ),
 		'quote_company'                 => get_the_title(),
 		'quote_person'                  => get_post_meta( get_the_id(), 'quote_person', true ),
 		'quote_person_image'            => get_post_meta( get_the_id(), 'quote_person_image', true ),

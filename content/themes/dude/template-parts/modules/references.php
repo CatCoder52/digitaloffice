@@ -2,8 +2,8 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:50:23
- * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-23 14:09:36
+ * @Last Modified by:   Timi Wahalahti
+ * @Last Modified time: 2020-07-23 16:34:44
  *
  * @package dude
  */
@@ -15,8 +15,9 @@ if ( ! $references ) {
     'post_type'               => 'reference',
     'post_status'             => 'publish',
     'orderby'                 => 'rand',
-    'posts_per_page'          => 6,
+    'posts_per_page'          => 8,
     'meta_key'                => 'reference_is_timang', // phpcs:ignore
+    'meta_value'              => true,
     'no_found_rows'           => true,
     'cache_results'           => true,
     'update_post_term_cache'  => false,
