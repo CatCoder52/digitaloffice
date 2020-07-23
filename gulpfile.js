@@ -26,7 +26,6 @@ var cache = require("gulp-cached");
 var phpcs = require("gulp-phpcs");
 var validatehtml = require("gulp-w3c-html-validation");
 var a11y = require("gulp-accessibility");
-var uncss = require("gulp-uncss");
 
 // Better CSS error reporting
 const printGulpPluginErrorBeautifully = require("@wulechuan/printer-for-errors-of-gulp-plugins");
@@ -54,9 +53,10 @@ var sassSrc = themeDir + "/sass/**/*.{sass,scss}";
 var sassFile = themeDir + "/sass/base/global.scss";
 var phpSrc = themeDir + "/**/*.php";
 var cssDest = themeDir + "/css";
-var customjs = themeDir + "/js/scripts.js";
+var customJs = themeDir + "/js/src/scripts.js";
 var jsSrc = themeDir + "/js/src/**/*.js";
 var jsDest = themeDir + "/js";
+var leffatSass = themeDir + "/sass/base/leffat.scss";
 var gutenbergFile = themeDir + "/sass/base/gutenberg.scss";
 
 /*
@@ -139,7 +139,6 @@ gulp.task("scss-lint", function () {
     .src([
       sassSrc,
       "!" + themeDir + "/sass/navigation/_burger.scss",
-      "!" + themeDir + "/sass/layout/_columns.scss",
       "!" + themeDir + "/sass/base/_normalize.scss",
     ])
 
@@ -151,13 +150,16 @@ gulp.task("scss-lint", function () {
 });
 
 gulp.task("styles", function () {
+  // Adds browser fallback (eg. -webkit, -moz, etc.)
+  // When a browser dies, Autoprefixer will automatically stop writing prefixes for that browser
+  // Source: https://css-tricks.com/css-grid-in-ie-css-grid-and-the-new-autoprefixer/
+  // Note: After new version browser settings are in package.json
   var plugins = [autoprefixer({ grid: true })];
 
   // Save compressed version
   gulp
     .src(sassFile)
 
-    .pipe(sourcemaps.init())
     .pipe(
       sass({
         compass: false,
@@ -167,11 +169,7 @@ gulp.task("styles", function () {
         debugInfo: true,
         lineNumbers: true,
         errLogToConsole: true,
-        includePaths: [
-          themeDir + "/node_modules/",
-          "node_modules/",
-          // require('node-bourbon').includePaths
-        ],
+        includePaths: [themeDir + "/node_modules/"],
       })
     )
 
@@ -213,38 +211,30 @@ gulp.task("styles", function () {
     )
     .pipe(gulp.dest(cssDest))
     .pipe(browsersync.stream());
-});
-
-gulp.task("styles-expanded", function () {
-  var plugins = [autoprefixer({ grid: true })];
 
   // Save expanded version
   gulp
     .src(sassFile)
 
-    .pipe(sourcemaps.init())
     .pipe(
       sass({
         compass: false,
         bundleExec: true,
         sourcemap: false,
         style: "expanded",
-        debugInfo: false,
-        lineNumbers: false,
-        errLogToConsole: false,
-        includePaths: [
-          themeDir + "/node_modules/",
-          "node_modules/",
-          // require('node-bourbon').includePaths
-        ],
+        debugInfo: true,
+        lineNumbers: true,
+        errLogToConsole: true,
+        includePaths: [themeDir + "/node_modules/"],
       })
     )
 
     .on("error", handleError("styles"))
     .pipe(postcss(plugins))
     .pipe(pixrem())
+
+    // Process the expanded output with Stylefmt
     .pipe(stylefmt({ configFile: themeDir + "/.stylelintrc" }))
-    .pipe(sourcemaps.write("."))
     .pipe(gulp.dest(cssDest))
     .pipe(browsersync.stream());
 
@@ -305,164 +295,79 @@ gulp.task("styles-expanded", function () {
         suffix: ".min",
       })
     )
-    .pipe(gulp.dest(cssDest));
+    .pipe(gulp.dest(cssDest))
+    .pipe(browsersync.stream());
+});
+
+// Movies page
+gulp.task("leffatsass", function () {
+  var plugins = [autoprefixer({ grid: true })];
+
+  gulp
+    .src(leffatSass)
+
+    .pipe(
+      sass({
+        compass: false,
+        bundleExec: true,
+        sourcemap: false,
+        style: "compressed",
+        debugInfo: true,
+        lineNumbers: true,
+        errLogToConsole: true,
+        includePaths: [
+          themeDir + "/node_modules/",
+          "node_modules/",
+          "bower_components/",
+          // require('node-bourbon').includePaths
+        ],
+      })
+    )
+
+    .on("error", handleError("styles"))
+    .pipe(
+      cleancss(
+        {
+          compatibility: "ie11",
+          level: {
+            1: {
+              tidyAtRules: true,
+              cleanupCharsets: true,
+              specialComments: 0,
+            },
+          },
+        },
+        function (details) {
+          //console.log('[clean-css] Original size: ' + details.stats.originalSize + ' bytes');
+          //console.log('[clean-css] Minified size: ' + details.stats.minifiedSize + ' bytes');
+          console.log(
+            "[clean-css] Time spent on minification: " +
+              details.stats.timeSpent +
+              " ms"
+          );
+          console.log(
+            "[clean-css] Compression efficiency: " +
+              details.stats.efficiency * 100 +
+              " %"
+          );
+        }
+      )
+    )
+    .pipe(pixrem())
+    .pipe(postcss(plugins))
+    .pipe(gulp.dest(cssDest))
+    .pipe(browserSync.stream());
 });
 
 // Run only manually: gulp uncss, because takes some time
 gulp.task("uncss", function () {
   gulp
-    .src(cssDest + "/global.min.css")
+    .src(cssDest + "/global.css")
     .pipe(
       uncss({
         html:
           // Activate gulp-sitemap-generator and go to http://dude.test?show_sitemap, and paste it here:
-          // Updated 10.6.2019 21:39:
-          [
-            "https://www.dude.fi/dude-fi-loi-nahkansa-esittelyssa-uusi-sivusto",
-            "https://www.dude.fi/vihreaa-hostingia-100-green-web-hosting",
-            "https://www.dude.fi/toitamme/ravintola-sohwi",
-            "https://www.dude.fi/toitamme/co2esto",
-            "https://www.dude.fi/toitamme/pama-hockey",
-            "https://www.dude.fi/toitamme/jylkkari",
-            "https://www.dude.fi/toitamme/by-emmi",
-            "https://www.dude.fi/toitamme/crm-service",
-            "https://www.dude.fi/toitamme/saarikoski-incoming",
-            "https://www.dude.fi/toitamme/bar-explosive",
-            "https://www.dude.fi/toitamme/elonen",
-            "https://www.dude.fi/toitamme/paahtimo-papu",
-            "https://www.dude.fi/toitamme/oivangin-lomakartano",
-            "https://www.dude.fi/toitamme/hotelli-alba",
-            "https://www.dude.fi/toitamme/hameen-keskiaikafestivaali",
-            "https://www.dude.fi/toitamme/redan-redan",
-            "https://www.dude.fi/tyopaikat/visuaalinen-suunnittelija",
-            "https://www.dude.fi/kiitos-yhteydenotosta",
-            "https://www.dude.fi/tyopaikat/wordpress-kehittaja",
-            "https://www.dude.fi/toitamme/bitwise",
-            "https://www.dude.fi/toitamme",
-            "https://www.dude.fi/tyopaikat",
-            "https://www.dude.fi/yhteiso-ja-koodi",
-            "https://www.dude.fi/yhteystiedot",
-            "https://www.dude.fi/visuaalinen-suunnittelu",
-            "https://www.dude.fi/dudet/henri",
-            "https://www.dude.fi/dudet/timi",
-            "https://www.dude.fi/dudet/kristian",
-            "https://www.dude.fi/dudet/juha",
-            "https://www.dude.fi/dudet/roni",
-            "https://www.dude.fi/yritys",
-            "https://www.dude.fi/toitamme/bauer-media",
-            "https://www.dude.fi/toitamme/black-bruin",
-            "https://www.dude.fi/toitamme/nodeon",
-            "https://www.dude.fi/toitamme/sievo",
-            "https://www.dude.fi/blogi",
-            "https://www.dude.fi/verkkosivut",
-            "https://www.dude.fi/",
-            "https://www.dude.fi/tietosuojaseloste",
-            "https://www.dude.fi/dudella-uusi-osakas-ja-valoisat-tulevaisuudennakymat",
-            "https://www.dude.fi/tunnustus-tietokantoihin-liittyen",
-            "https://www.dude.fi/parasta-koodarin-tyossa-matkani-koodiapinasta-wordpress-ammattilaiseksi",
-            "https://www.dude.fi/paremman-tarjouspyynnon-anatomia",
-            "https://www.dude.fi/henri-on-duden-uusin-vahvistus-koodipuolella",
-            "https://www.dude.fi/dude-nosti-tasoa-kerroksella-esittelyssa-uusi-kauppakadun-toimisto",
-            "https://www.dude.fi/duden-asiakkaat-ovat-supertyytyvaisia",
-            "https://www.dude.fi/wordcamp-turku",
-            "https://www.dude.fi/nain-pyydat-tarjouksen-verkkosivuista",
-            "https://www.dude.fi/duden-talouskatsaus-2018",
-            "https://www.dude.fi/7-syyta-miksi-sivustoltasi-poistutaan",
-            "https://www.dude.fi/oletko-sina-etsimamme-dude-tai-dudette",
-            "https://www.dude.fi/taytyyko-minun-lisata-sivuille-ponnahdusikkuna-jossa-kerrotaan-evasteista",
-            "https://www.dude.fi/duden-hovivalokuvaaja-on-vuoden-muotokuvaaja-2018",
-            "https://www.dude.fi/hakukoneoptimointi-ei-ole-ominaisuus-jonka-voit-laittaa-paalle",
-            "https://www.dude.fi/ala-hanki-mita-tahansa-webhotellia-wordpress-sivuillesi",
-            "https://www.dude.fi/kooste-duden-wordpress-meetup-kiertueesta-eraan-digitoimiston-tapa-tehda-verkkosivuja",
-            "https://www.dude.fi/verkkosivujen-suunnittelu-aikataulussa-totta-vai-tarua",
-            "https://www.dude.fi/haluatko-pullopostia-rantaasi",
-            "https://www.dude.fi/wordcamp-jyvaskyla-2018-kokosi-wordpress-kehittajat-yhteen",
-            "https://www.dude.fi/roni-puhumassa-wordcamp-jyvaskylassa-9-2-2018",
-            "https://www.dude.fi/sisalto-ei-tule-ensin",
-            "https://www.dude.fi/isojakin-projekteja-pienella-tiimilla-miten-paletti-pysyy-kasassa",
-            "https://www.dude.fi/duden-tiimi-kasvaa-kahdella",
-            "https://www.dude.fi/vuosi-2017-numeroina",
-            "https://www.dude.fi/duden-wordpress-teema-air-esilla-speckyboy-ja-hongkiat-verkkolehdissa",
-            "https://www.dude.fi/duden-pieni-talouskatsaus",
-            "https://www.dude.fi/10-tyonaytetta-syksylta-2017",
-            "https://www.dude.fi/onko-sivustosi-esteeton",
-            "https://www.dude.fi/verkkosivujen-ostaja-teeta-sivut-kerralla-ja-kunnolla",
-            "https://www.dude.fi/sivuston-tekemisen-nakymaton-osuus-tietorakenteen-suunnittelu",
-            "https://www.dude.fi/tehokkuutta-tyoskentelyyn-todoistin-avulla",
-            "https://www.dude.fi/wordpress-tapahtuma-metsassa-kooste-ja-kuulumiset-wp-metsasta",
-            "https://www.dude.fi/mita-lapparin-kansi-kertoo-omistajastaan-esittelyssa-duden-makkien-takakannet",
-            "https://www.dude.fi/talta-nayttaa-duden-kulma-muuttokuulumiset-jyvaskylan-ytimesta",
-            "https://www.dude.fi/miksi-digitoimiston-verkkosivuilla-ei-kerrota-hintoja",
-            "https://www.dude.fi/verkkosivut-kaupantekovalineena-ilman-hienoja-digimarkkinoinnin-trendisanoja",
-            "https://www.dude.fi/google-pagespeed-nopeustestin-tuloksilla-ei-ole-valia",
-            "https://www.dude.fi/duden-virallinen-operointimanuaali-julkaistu",
-            "https://www.dude.fi/mita-lisaosia-dude-kayttaa",
-            "https://www.dude.fi/wordpress-sivut-raatalille-vai-markettiin",
-            "https://www.dude.fi/dude-kehittyy-ja-toimitusjohtaja-vaihtuu",
-            "https://www.dude.fi/sisalto-on-verkkosivuston-sydan",
-            "https://www.dude.fi/onko-wordcamp-europe-kasvanut-liian-isoksi-wceu17-tarpit",
-            "https://www.dude.fi/wchel17-jarjestamisesta-ja-yhteison-tulevaisuudesta",
-            "https://www.dude.fi/mika-niissa-verkkosivuissa-oikein-maksaa",
-            "https://www.dude.fi/miten-tiedat-milloin-wordpress-sivusi-kaatuvat-esittelyssa-adminlabs",
-            "https://www.dude.fi/wordpress-on-suosituin-ja-vaarinymmarretyin-verkkosivualusta",
-            "https://www.dude.fi/nain-duden-sivustouudistus-tapahtui-vaihe-vaiheelta",
-            "https://www.dude.fi/miksi-edes-pohtia-valitseeko-avoimen-vai-suljetun-lahdekoodin-julkaisujarjestelman",
-            "https://www.dude.fi/harharetki-palvelinmaailmassa",
-            "https://www.dude.fi/paljonko-nettisivut-maksavat",
-            "https://www.dude.fi/ensimmainen-suomenkielinen-wordpress-podcast-julkaistu",
-            "https://www.dude.fi/wordpress-tokkii-tarua-vai-totta",
-            "https://www.dude.fi/wordpress-sivut-vielako-joku-kysyy-miksi",
-            "https://www.dude.fi/duden-digitiimi-wordcamp-europessa-kuulumiset-wienin-reissulta",
-            "https://www.dude.fi/katsaus-kevaaseen-2016-tyonaytteita-kuulumisia",
-            "https://www.dude.fi/wordcamp-europe-lahestyy",
-            "https://www.dude.fi/wordcamp-finland-2016-kooste-duden-kuulumiset-retkelta",
-            "https://www.dude.fi/digitoimisto-dude-ruumiinavaus-2016",
-            "https://www.dude.fi/wordpress-optimoitu-palvelin",
-            "https://www.dude.fi/wordpress-jyvaskyla-esteettomyys",
-            "https://www.dude.fi/neljas-dude-remmiin",
-            "https://www.dude.fi/alkuvuoden-tyonaytteita",
-            "https://www.dude.fi/device-lab-responsiivisen-suunnittelun-apuna",
-            "https://www.dude.fi/paras-chat-palvelu-yrityksille",
-            "https://www.dude.fi/parhaat-chat-palvelut-verkkosivuille-osa-2",
-            "https://www.dude.fi/esittelyssa-kaksi-loppuvuoden-isointa-tyonaytetta",
-            "https://www.dude.fi/20-suomalaista-digialan-vaikuttajaa-joita-kannattaa-seurata-twitterissa",
-            "https://www.dude.fi/wordpress-meetup-jyvaskyla",
-            "https://www.dude.fi/se-kolmas-dude",
-            "https://www.dude.fi/digitoimisto-dude-oy-ja-hohkavaara",
-            "https://www.dude.fi/ravintola-sohwin-sivut-uudistuivat",
-            "https://www.dude.fi/vuoden-2015-ensimmaisen-puoliskon-tyonaytteita",
-            "https://www.dude.fi/wordpress-verkkosivualustana",
-            "https://www.dude.fi/avoimen-ja-sosiaalisen-koodaamisen-aikakausi",
-            "https://www.dude.fi/instagram-kuvat-twitteriin-ja-muita-resepteja",
-            "https://www.dude.fi/5-asiaa-joita-et-tiennyt-twitterista",
-            "https://www.dude.fi/wordcamp-finland-2015-oli-onnistunut-reissu",
-            "https://www.dude.fi/yleisimmat-verkkosivujen-myytit",
-            "https://www.dude.fi/millaiset-ovat-perussivut",
-            "https://www.dude.fi/parhaat-chat-palvelut-verkkosivuille",
-            "https://www.dude.fi/kuumimmat-tyokalut-sivuston-kavijoiden-seurantaan",
-            "https://www.dude.fi/hakukoneoptimointi-se-parempi-seo-pikaopas",
-            "https://www.dude.fi/tyokalut-tehokkaampaan-tyoskentelyyn-vuodelle-2015",
-            "https://www.dude.fi/vuosi-paketissa-ja-fiiliksia-tulevasta",
-            "https://www.dude.fi/responsiiviset-verkkosivut-mika-miksi-miten",
-            "https://www.dude.fi/blogi-yritykselle-tarkea-markkinointikanava",
-            "https://www.dude.fi/pikakelaus-duden-kevaaseen",
-            "https://www.dude.fi/se-parempi-twitter-pikaopas",
-            "https://www.dude.fi/odotukset-vuodelle-2014",
-            "https://www.dude.fi/vuosi-2013-paketissa-dude-toivottaa-hyvaa-joulua",
-            "https://www.dude.fi/vihdoinkin-wordpress-nykyaikaistui-kertaheitolla",
-            "https://www.dude.fi/diginatiivi-vai-nortti-elaman-digitalisoituminen-kaytannossa",
-            "https://www.dude.fi/sosiaalinen-media-hapatusta-vai-todellista-hyotya",
-            "https://www.dude.fi/check-innausten-aikakausi",
-            "https://www.dude.fi/bloggaus-nakyy-hakukoneessa-tilapaivitysta-paremmin",
-            "https://www.dude.fi/twitter-selvassa-kasvussa-suomessa",
-            "https://www.dude.fi/hyvien-verkkosivujen-ainekset",
-            "https://www.dude.fi/jos-et-jaa-nakeeko-kukaan",
-            "https://www.dude.fi/lomalaiselle-rentoa-luettavaa",
-            "https://www.dude.fi/tulisiko-responsiivinen-design-pakottaa-kayttajalle",
-            "https://www.dude.fi/pari-juttua-ennen-juhannusta",
-            "https://www.dude.fi/digitoimisto-on-nykyaikainen-mainostoimisto",
-            "https://www.dude.fi/firma-parahti-pystyyn",
-          ],
+          ["http://dude.test/"],
       })
     )
     .pipe(gulp.dest(cssDest));
@@ -471,12 +376,12 @@ gulp.task("uncss", function () {
 /*
 
 PHPCS
-=====
+======
 */
 
 gulp.task("phpcs", function () {
   gulp
-    .src(phpSrc)
+    .src([phpSrc, "!" + themeDir + "/node_modules/**/*"])
 
     // Validate files using PHP Code Sniffer
     .pipe(
@@ -514,7 +419,7 @@ gulp.task("validatehtml", function () {
         reportpath: false,
         doctype: "HTML5",
 
-        // Ignore WordPress/PHP/Vue.js/file structure related error messages
+        // Ignore WordPress/PHP-related/file structure related error messages
         relaxerror: [
           /XML processing/g,
           /role is unnecessary for element/g,
@@ -528,13 +433,9 @@ gulp.task("validatehtml", function () {
           /Try escaping it as/g,
           /Attribute “<\?php”/g,
           /Attribute “post_/g,
-          /Attribute “!”/g,
-          /Duplicate attribute “\)”/g,
-          /Attribute “empty/g,
           /An ID must not contain whitespace/g,
           /Attribute “\?” not allowed on element/g,
           /Attribute “{” not allowed on element/g,
-          /"Attribute “v-/g,
           /“echo”/g,
           /“%1\$s”/g,
           /Attribute “'id” not allowed on element/g,
@@ -571,29 +472,14 @@ gulp.task("validatehtml", function () {
           /Bad value “tel:<\?/g,
           /<\?php/g,
           /This document appears to be written/g,
-          /The document is not mappable to XML/g,
-          /“=” at the start/g,
-          /“=” in an unquoted/g,
-          /No “p” element in scope/g,
-          /Attribute “v-/g,
-          /“data-\*” attribute names must be XML 1.0 4th/g,
-          /Attribute “'_blank'”/g,
-          /Attribute “'”/g,
-          /Attribute “if\(/g,
-          /Attribute “get_/g,
-          /Attribute “'img/g,
-          /Attribute “\)/g,
-          /Attribute “has_/g,
-          /Attribute “content-{\$/g,
-          /Attribute “shade-{\$/g,
-          /Attribute “color/g,
+          ,
           /“<” is not allowed/g,
           /Attribute “'/g,
+          /Attribute “false/g,
           /Attribute “&&”/g,
           /Attribute “isset/g,
           /Duplicate attribute “\$/g,
-          /Duplicate attribute “\(”/g,
-          /Bad value “' . /g,
+          /The document is not mappable to XML/g,
         ],
       })
     );
@@ -607,12 +493,7 @@ ACCESSIBILITY
 
 gulp.task("a11y", function () {
   return gulp
-    .src([
-      phpSrc,
-      "!" + themeDir + "/functions.php",
-      "!" + themeDir + "/node_modules/**/*",
-      "!" + themeDir + "/inc/**/*",
-    ])
+    .src([phpSrc, "!functions.php", "!node_modules/**/*", "!inc/**/*"])
     .pipe(
       a11y({
         accessibilityLevel: "WCAG2A",
@@ -724,24 +605,21 @@ WATCH
 */
 
 // Run the JS task followed by a reload
-gulp.task("js-watch", ["js", "js-store"], browsersync.reload);
+gulp.task("js-watch", ["js"], browsersync.reload);
 gulp.task("watch", ["browsersync"], function () {
-  // Lint SCSS on save, auto correct based on stylefmtfile on change
-  gulp.watch(sassSrc, ["styles", "styles-expanded", "scss-lint"]);
-
-  // Please run validation tests manually:
-  //
-  // gulp validatehtml
-  // gulp phpcs
-  // pa11y-ci --sitemap http://dude.test/sitemap.xml
-
-  // Auto validation (currently disabled)
-  // gulp.watch(phpSrc, ['phpcs', 'validatehtml']);
-  gulp.watch(phpSrc);
-
-  // Update browser window automatically when JavaScript is saved
+  gulp.watch(sassSrc, ["styles", "scss-lint"]); // If you want gulp to handle auto styling, add .on( 'change', stylefmtfile ), but we prefer Sublime Text pcakage Stylefmt to hand this for you
+  gulp.watch(phpSrc, ["phpcs"]);
   gulp.watch(jsSrc, ["js-watch"]);
+
+  // Movies page
+  gulp.watch(leffatSass, ["leffatsass"]);
 });
 
-// The default task (called when you run `gulp` from cli)
+/*
+
+DEFAULT
+=====
+
+*/
+
 gulp.task("default", ["watch"]);

@@ -296,7 +296,6 @@ body:not(.js-nav-active) .nav-primary.is-animatable {
   cursor: pointer;
   position: absolute;
   right: 0;
-  top: 0;
 
   @media (max-width: $responsivenav) {
     right: 2rem;
