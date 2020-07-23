@@ -173,6 +173,9 @@ body.single .block.block-single:not(.block-single-reference) {
     text-decoration: none;
     box-shadow: none;
     font-weight: 400;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
     &:hover {
       border-color: $color-midnight-blue;
