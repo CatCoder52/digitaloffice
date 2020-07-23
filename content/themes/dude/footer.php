@@ -40,7 +40,7 @@
 
 <footer role="contentinfo" id="colophon" class="block block-footer site-footer">
 
-  <p class="back-to-top"><a href="#page" class="js-trigger top" data-mt-duration="300"><span class="screen-reader-text"><?php echo esc_html_e( 'Takaisin ylös', 'dude' ); ?></span><?php include get_theme_file_path( '/svg/chevron-up.svg' ); ?></a></p>
+  <p class="back-to-top"><a href="#page" class="js-trigger top no-text-link" data-mt-duration="300"><span class="screen-reader-text"><?php echo esc_html_e( 'Takaisin ylös', 'dude' ); ?></span><?php include get_theme_file_path( '/svg/chevron-up.svg' ); ?></a></p>
 
   <div class="shade" aria-hidden="true">
     <div class="background-image preview lazyload" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/footer-20.jpg');" data-src="<?php echo get_template_directory_uri(); ?>/images/footer.jpg" data-src-mobile="<?php echo get_template_directory_uri(); ?>/images/footer.jpg"></div>
