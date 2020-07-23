@@ -55,7 +55,7 @@
 
   .button-wrapper .button {
     @media (max-width: 600px) {
-      font-size: 16px;
+      font-size: $font-size-general-small;
     }
   }
 
@@ -104,7 +104,7 @@
       max-width: 80rem;
 
       @media (max-width: 600px) {
-        font-size: 16px;
+        font-size: $font-size-general-small;
       }
     }
   }

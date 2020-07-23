@@ -19,7 +19,7 @@ $services = get_sub_field( 'services' );
   <div class="container">
 
     <header class="block-head screen-reader-text">
-      <h2 class="block-title" id="block-title-our-services">Palvelumme</h2>
+      <h2 class="block-title">Palvelumme</h2>
     </header>
 
     <div class="cols cols-services">

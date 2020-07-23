@@ -5,13 +5,13 @@
 // when hitting the rock bottom.
 // ------------------------------------------------------------
 
-.top {
+.back-to-top {
+  width: 50px;
+  height: 50px;
+  margin: 0;
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: transparent;
-  width: 50px;
-  height: 50px;
   text-decoration: none;
   opacity: 0;
   transition: opacity .3s 0s, visibility 0s .3s;
@@ -19,7 +19,7 @@
 
   // Accessibility: Change color based on background color the element is on
   &.has-light-bg svg {
-    fill: $color-midnight-blue;
+    fill: $color-body;
   }
 
   &.has-dark-bg svg {
@@ -47,6 +47,12 @@
   .no-touch &:hover {
     opacity: 1;
   }
+}
+
+.top {
+  background: transparent;
+  width: 50px;
+  height: 50px;
 
   svg {
     position: absolute;

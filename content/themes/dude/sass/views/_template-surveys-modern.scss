@@ -344,7 +344,7 @@ body.template-surveys-modern {
       }
 
       @media (max-width: 400px) {
-        font-size: 16px;
+        font-size: $font-size-general-small;
         margin-bottom: 2rem;
       }
     }
@@ -689,7 +689,7 @@ body.template-surveys-modern {
         padding-bottom: 18px !important;
 
         @media (max-width: 900px) {
-          font-size: 16px !important;
+          font-size: $font-size-general-small !important;
         }
       }
     }

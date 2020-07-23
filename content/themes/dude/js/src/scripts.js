@@ -47,7 +47,7 @@ swup.on("contentReplaced", function () {
     	var offset = 300; // Browser window scroll (in pixels) after which the "back to top" link is shown
     	var offset_opacity = 1200; // Browser window scroll (in pixels) after which the link opacity is reduced
     	var scroll_top_duration = 700; // Duration of the top scrolling animation (in ms)
-      var link_class = '.top';
+      var link_class = '.back-to-top';
 
       if( jQuery(this).scrollTop() > offset ) {
         jQuery( link_class ).addClass('is-visible');
@@ -660,7 +660,7 @@ swup.on("contentReplaced", function () {
       	var offset = 300; // Browser window scroll (in pixels) after which the "back to top" link is shown
       	var offset_opacity = 1200; // Browser window scroll (in pixels) after which the link opacity is reduced
       	var scroll_top_duration = 700; // Duration of the top scrolling animation (in ms)
-        var link_class = '.top';
+        var link_class = '.back-to-top';
 
         if( $(this).scrollTop() > offset ) {
           $( link_class ).addClass('is-visible');
@@ -677,14 +677,14 @@ swup.on("contentReplaced", function () {
     });
 
     // Accessibility: Ensure back to top is right color on right background
-    var stickyOffset = $(".top").offset();
+    var stickyOffset = $(".back-to-top").offset();
     var $contentDivs = $(".block");
     $(document).scroll(function() {
       $contentDivs.each(function(k) {
         var _thisOffset = $(this).offset();
         var _actPosition = _thisOffset.top - $(window).scrollTop();
         if (_actPosition < stickyOffset.top && _actPosition + $(this).height() > 0) {
-          $(".top").removeClass("has-light-bg has-dark-bg").addClass($(this).hasClass("has-light-bg") ? "has-light-bg" : "has-dark-bg");
+          $(".back-to-top").removeClass("has-light-bg has-dark-bg").addClass($(this).hasClass("has-light-bg") ? "has-light-bg" : "has-dark-bg");
           return false;
         }
       });

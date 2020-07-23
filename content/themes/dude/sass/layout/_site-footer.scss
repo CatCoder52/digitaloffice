@@ -25,7 +25,7 @@
       // @include grid(1, $gutter_x: 0rem, $gutter_y: 6rem);
       p,
       li {
-        font-size: 16px;
+        font-size: $font-size-general-small;
       }
     }
 

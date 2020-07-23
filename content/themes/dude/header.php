@@ -176,7 +176,7 @@ if ( $show_chat_greeting ) {
           <span id="nav-toggle-label" class="screen-reader-text" aria-label="<?php esc_attr_e( 'Menu', 'dude' ); ?>" class="toggle-text"><?php esc_attr_e( 'Lisää', 'dude' ); ?></span>
         </button>
 
-        <nav id="nav" class="nav-primary" role="navigation" aria-expanded="false">
+        <nav id="nav" class="nav-primary" aria-expanded="false" aria-label="Mobiilivalikko">
           <p class="top-button-holder">
             <a href="<?php echo esc_url( get_the_permalink( 6357 ) ); ?>" class="button button-glitch">Aloitetaan projektisi<?php include get_theme_file_path( '/svg/arrow-right.svg' ); ?></a>
           </p>
@@ -252,7 +252,7 @@ if ( $show_chat_greeting ) {
 
         </nav>
 
-        <nav id="nav-desktop" class="nav-primary-desktop" role="navigation" style="display: none;">
+        <nav class="nav-primary-desktop" style="display: none;" aria-label="Työpöydän päävalikko">
           <ul class="menu-items nav-menu">
             <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-18"><a href="<?php echo get_the_permalink( 9 ); ?>" data-text="Verkkosivut">Verkkosivut</a></li>
             <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-19"><a href="<?php echo get_the_permalink( 4485 ); ?>" data-text="Visuaalinen suunnittelu">Visuaalinen suunnittelu</a></li>

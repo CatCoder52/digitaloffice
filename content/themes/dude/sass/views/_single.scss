@@ -33,7 +33,7 @@ body.single .block.block-single:not(.block-single-reference) {
       font-size: 18px;
 
       @media (max-width: 420px) {
-        font-size: 16px;
+        font-size: $font-size-general-small;
       }
     }
 
@@ -165,7 +165,7 @@ body.single .block.block-single:not(.block-single-reference) {
 
   .cat a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link) {
     margin: 0 13px 13px 0;
-    font-size: 16px;
+    font-size: $font-size-general-small;
     border: 1px solid $color-midnight-blue;
     padding: 7px 17px;
     line-height: 1;
@@ -417,7 +417,7 @@ body.single .block.block-single:not(.block-single-reference) {
       opacity: .5;
       margin-top: 0;
       margin-bottom: $margin-between-text-elements;
-      font-size: 16px;
+      font-size: $font-size-general-small;
 
       @media (min-width: 850px) {
         font-size: 20px;
@@ -426,13 +426,13 @@ body.single .block.block-single:not(.block-single-reference) {
 
     .cta-link {
       @media (max-width: 850px) {
-        font-size: 16px;
+        font-size: $font-size-general-small;
       }
     }
 
     p.person-description {
       margin: 0;
-      font-size: 16px;
+      font-size: $font-size-general-small;
 
       @media (min-width: 850px) {
         font-size: 20px;
