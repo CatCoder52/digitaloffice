@@ -207,7 +207,11 @@
 
     @media (max-width: 730px) {
       transform: translateX(2rem) translateY(4rem);
-      padding: 3rem;
+      padding: 5rem;
+    }
+
+    @media (max-width: 430px) {
+      padding: 4rem;
     }
 
     h3 {
