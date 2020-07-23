@@ -297,6 +297,10 @@ body:not(.js-nav-active) .nav-primary.is-animatable {
   position: absolute;
   right: 0;
 
+  @media (min-width: $responsivenav) {
+    top: 0;
+  }
+
   @media (max-width: $responsivenav) {
     right: 2rem;
 
