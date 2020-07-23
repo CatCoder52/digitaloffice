@@ -1,10 +1,12 @@
-body.page-template-page-basic {
-  .block-hero.block-hero-basic + .block.block-wide-text {
-    padding-left: 0;
-    padding-right: 0;
-
+body.page-template-template-basic:not(.page-id-6357) {
+  .block.has-light-bg.block-wide-text {
     @media (max-width: 760px) {
       padding-top: 0;
     }
+  }
+
+  .block.block-wide-text .container * {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
