@@ -3,7 +3,7 @@
  * @Author:             Roni Laukkarinen, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2020-07-15 18:34:29
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-23 14:08:45
+ * @Last Modified time: 2020-07-23 20:30:46
  *
  * @package dude
  */
@@ -21,8 +21,8 @@
       <div class="logo-tulos"><?php include get_theme_file_path( '/svg/logos/tulos.svg' ); ?></div>
       <div><?php include get_theme_file_path( '/svg/logos/bitwise.svg' ); ?></div>
       <div><?php include get_theme_file_path( '/svg/logos/bauermedia.svg' ); ?></div>
-      <div><?php include get_theme_file_path( '/svg/logos/fimpec.svg' ); ?></div>
-      <div><?php include get_theme_file_path( '/svg/logos/nilkko.svg' ); ?></div>
+      <div class="logo-ulkoministerio"><?php include get_theme_file_path( '/svg/logos/ulkoministerio.svg' ); ?></div>
+      <div><?php include get_theme_file_path( '/svg/logos/atena.svg' ); ?></div>
       <div><?php include get_theme_file_path( '/svg/logos/nodeon.svg' ); ?></div>
       <div><?php include get_theme_file_path( '/svg/logos/paahtimopapu.svg' ); ?></div>
       <div><?php include get_theme_file_path( '/svg/logos/northpatrol.svg' ); ?></div>
@@ -30,7 +30,13 @@
       <div><?php include get_theme_file_path( '/svg/logos/varjola-alt.svg' ); ?></div>
       <div><?php include get_theme_file_path( '/svg/logos/crmservice.svg' ); ?></div>
       <div class="logo-elonen"><?php include get_theme_file_path( '/svg/logos/elonen.svg' ); ?></div>
-    </div>
+      <div><?php include get_theme_file_path( '/svg/logos/nilkko.svg' ); ?></div>
+      <div><?php include get_theme_file_path( '/svg/logos/teeleidi.svg' ); ?></div>
+      <div><?php include get_theme_file_path( '/svg/logos/liiga.svg' ); ?></div>
+      <div><?php include get_theme_file_path( '/svg/logos/ark.svg' ); ?></div>
+      <div class="wotkins"><?php include get_theme_file_path( '/svg/logos/wotkins.svg' ); ?></div>
+      <div><?php include get_theme_file_path( '/svg/logos/paytrail.svg' ); ?></div>
+</div>
 
   </div>
 </section>

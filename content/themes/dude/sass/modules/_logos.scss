@@ -11,18 +11,18 @@
 }
 
 .block.block-logos .logo-wall {
-  @include grid(6, $gutter_x: 100px, $gutter_y: 100px);
+  @include grid(6, $gutter_x: 100px, $gutter_y: $margin-between-grid-columns);
 
   @media (max-width: 1500px) {
-    @include grid(5, $gutter_x: 100px, $gutter_y: 100px);
+    @include grid(5, $gutter_x: 100px, $gutter_y: $margin-between-grid-columns);
   }
 
   @media (max-width: 1250px) {
-    @include grid(4, $gutter_x: 100px, $gutter_y: 100px);
+    @include grid(4, $gutter_x: 100px, $gutter_y: $margin-between-grid-columns);
   }
 
   @media (max-width: 960px) {
-    @include grid(3, $gutter_x: 50px, $gutter_y: 50px);
+    @include grid(3, $gutter_x: 50px, $gutter_y: $margin-between-grid-columns);
   }
 
   @media (max-width: 650px) {
@@ -37,7 +37,7 @@
 
   svg {
     max-height: 100px;
-    max-width: 140px;
+    max-width: 130px;
     width: auto;
     height: 100%;
     fill: $color-midnight;
@@ -53,8 +53,17 @@
     }
   }
 
-  .logo-elonen .do-not-fill {
+  .do-not-fill {
     fill: $color-white;
+  }
+
+  .logo-ulkoministerio svg {
+    max-width: 190px;
+    max-height: 120px;
+  }
+
+  .logo-wotkins svg {
+    max-width: 150px;
   }
 }
 
