@@ -189,7 +189,7 @@ if ( $show_chat_greeting ) {
                   <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo esc_url( get_post_type_archive_link( 'post' ) ); ?>">Blogi</a></li>
                   <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo esc_url( get_the_permalink( 4489 ) ); ?>">Koodi & yhteisö</a></li>
                   <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo esc_url( get_the_permalink( 4449 ) ); ?>">Yritys & kulttuuri</a></li>
-                  <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo esc_url( get_the_permalink( 4491 ) ); ?>">Rekry</a></li>
+                  <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo esc_url( get_the_permalink( 4491 ) ); ?>">Työpaikat</a></li>
                   <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a data-no-swup href="<?php echo get_post_type_archive_link( 'merch' ); ?>">Merch</a></li>
                   <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="https://handbook.dude.fi">Handbook</a></li>
                 </ul>
