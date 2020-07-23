@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 19:33:53
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-23 14:29:19
+ * @Last Modified time: 2020-07-23 14:55:23
  *
  * @package dude
  */
@@ -16,8 +16,8 @@
     <div class="cols">
       <div class="col">
         <?php
-        // If contact page
-        if ( is_page( 4487 ) ) : ?>
+        // If contact or FAQ page
+        if ( is_page( 4487 ) || is_page( 6704 ) ) : ?>
           <h2>Jätä meille yhteydenottopyyntö</h2>
           <p>Haluatko tietää lisää palveluistamme ja Dudesta yrityksenä? Jätä puhelinnumerosi, niin olemme teihin pikimmiten yhteydessä.</p>
         <?php else : ?>

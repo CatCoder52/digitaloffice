@@ -74,6 +74,7 @@
           <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="no-text-link" href="<?php echo get_the_permalink( 4489 ); ?>">Koodi & yhteisö</a></li>
           <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="no-text-link" href="<?php echo get_the_permalink( 4449 ); ?>">Yritys & kulttuuri</a></li>
           <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="no-text-link" href="<?php echo get_the_permalink( 4491 ); ?>">Työpaikat</a></li>
+          <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="no-text-link" href="<?php echo esc_url( get_the_permalink( 6704 ) ); ?>">UKK</a></li>
           <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a data-no-swup class="no-text-link" href="<?php echo get_post_type_archive_link( 'merch' ); ?>">Merch</a></li>
           <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="no-text-link" href="https://handbook.dude.fi">Handbook</a></li>
         </ul>
