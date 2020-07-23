@@ -127,7 +127,7 @@ get_header(); ?>
                   <?php image_lazyload_div( get_post_thumbnail_id( $post->ID ) ); ?>
                 </div>
 
-              <h3><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
+              <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 
               <div class="text-content">
                 <?php the_excerpt(); ?>

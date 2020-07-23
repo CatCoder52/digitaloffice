@@ -35,12 +35,6 @@ add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list'
  * Load textdomain.
  */
 load_theme_textdomain( 'dude', get_template_directory() . '/languages' );
-/**
- * Define content width in articles
- */
-if ( ! isset( $content_width ) ) {
-  $content_width = 800;
-}
 
 /**
  * Register widget area.

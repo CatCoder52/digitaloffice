@@ -44,6 +44,13 @@
   display: block;
   z-index: 10;
 
+  @media (max-width: 680px) {
+    svg {
+      width: 70px;
+      height: 13.98px;
+    }
+  }
+
   a {
     color: $color-midnight-blue;
     display: flex;
