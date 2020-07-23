@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 15:26:12
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-23 14:06:58
+ * @Last Modified time: 2020-07-23 19:14:51
  *
  * @package dude
  */
@@ -32,7 +32,7 @@ global $blog_latest_excerpt_override; ?>
 
     <header class="block-head block-head-small">
       <h2 class="block-title">Tarinoita Dudelta</h2>
-      <p class="read-more"><a class="cta-link" href="<?php echo get_option( 'page_for_posts' ); ?>">Katso kaikki</a></p>
+      <p class="read-more"><a class="cta-link" href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ); ?>">Katso kaikki</a></p>
     </header>
 
     <div class="rows">
