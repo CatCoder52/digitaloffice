@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-19 12:35:32
+ * @Last Modified time: 2020-07-23 11:22:35
  *
  * @package dude
  */
@@ -50,9 +50,17 @@ if ( has_post_thumbnail() ) {
         ?>
       </div>
 
-      <?php if ( ! empty( $button ) ) : ?>
-        <p class="button-wrapper swup-transition-fade"><a class="button button-glitch button-mint" href="<?php echo esc_url( $button['url'] ); ?>"<?php if ( ! empty( $button['target'] ) ) : ?> target="<?php echo esc_html( $button['target'] ); ?>"<?php endif; ?>><?php echo esc_html( $button['title'] ); ?><?php include get_theme_file_path( '/svg/arrow-right.svg' ); ?></a></p>
+      <?php
+      // Contact page hero button that scrolls to anchor
+      if ( is_page( 4487 ) ) : ?>
+        <p class="button-wrapper swup-transition-fade"><a class="button button-glitch button-mint js-trigger" data-mt-duration="300" href="#cta">Jätä yhteydenottopyyntö<?php include get_theme_file_path( '/svg/arrow-right.svg' ); ?></a></p>
+      <?php else : ?>
+
+        <?php if ( ! empty( $button ) ) : ?>
+          <p class="button-wrapper swup-transition-fade"><a class="button button-glitch button-mint" href="<?php echo esc_url( $button['url'] ); ?>"<?php if ( ! empty( $button['target'] ) ) : ?> target="<?php echo esc_html( $button['target'] ); ?>"<?php endif; ?>><?php echo esc_html( $button['title'] ); ?><?php include get_theme_file_path( '/svg/arrow-right.svg' ); ?></a></p>
+        <?php endif; ?>
       <?php endif; ?>
+
     </div>
 
   </div>

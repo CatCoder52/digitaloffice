@@ -44,6 +44,30 @@ swup.on("contentReplaced", function () {
   document.body.classList.remove("no-js");
   document.body.classList.add("js");
 
+  // MoveTo triggers
+  document.addEventListener('DOMContentLoaded', function () {
+    const easeFunctions = {
+      easeInQuad: function (t, b, c, d) {
+        t /= d;
+        return c * t * t + b;
+      },
+      easeOutQuad: function (t, b, c, d) {
+        t /= d;
+        return -c * t * (t - 2) + b;
+      },
+    };
+    const moveTo = new MoveTo(
+      {
+        ease: 'easeInQuad',
+      },
+      easeFunctions,
+    );
+    const triggers = document.getElementsByClassName('js-trigger');
+    for (var i = 0; i < triggers.length; i++) {
+      moveTo.registerTrigger(triggers[i]);
+    }
+  });
+
   // Init lazyload
   let images = document.querySelectorAll(".lazyload");
   lazyload(images, {
@@ -608,6 +632,7 @@ swup.on("contentReplaced", function () {
 
   // Document ready start
   $(function () {
+
     // 404 easter egg
     if ( jQuery("body").hasClass("error404") === true ) {
       jQuery(document).bind('keydown keyup', function(e) {
@@ -658,3 +683,27 @@ window.CRISP_READY_TRIGGER = function () {
     }
   }, 25);
 };
+
+// MoveTo triggers
+document.addEventListener('DOMContentLoaded', function () {
+  const easeFunctions = {
+    easeInQuad: function (t, b, c, d) {
+      t /= d;
+      return c * t * t + b;
+    },
+    easeOutQuad: function (t, b, c, d) {
+      t /= d;
+      return -c * t * (t - 2) + b;
+    },
+  };
+  const moveTo = new MoveTo(
+    {
+      ease: 'easeInQuad',
+    },
+    easeFunctions,
+  );
+  const triggers = document.getElementsByClassName('js-trigger');
+  for (var i = 0; i < triggers.length; i++) {
+    moveTo.registerTrigger(triggers[i]);
+  }
+});

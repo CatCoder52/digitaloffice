@@ -3,14 +3,14 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 19:33:53
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-17 12:01:48
+ * @Last Modified time: 2020-07-23 11:17:54
  *
  * @package dude
  */
 
 ?>
 
-<section class="block block-cta-with-phone-input">
+<section class="block block-cta-with-phone-input"<?php if ( is_page( 4487 ) ) : ?> id="cta"<?php endif; ?>>
   <div class="container">
 
     <div class="cols">
