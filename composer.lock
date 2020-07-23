@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f68620b69be271b6e8bb84ac9f625a34",
+    "content-hash": "5954625a8f845de781ab1f285c117d1e",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -998,10 +998,10 @@
         },
         {
             "name": "koodimonni-plugin-language/woocommerce-en_gb",
-            "version": "4.3.0",
+            "version": "4.3.1",
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/translation/plugin/woocommerce/4.3.0/en_GB.zip"
+                "url": "https://downloads.wordpress.org/translation/plugin/woocommerce/4.3.1/en_GB.zip"
             },
             "require": {
                 "koodimonni/composer-dropin-installer": ">=0.2.3"
@@ -1017,10 +1017,10 @@
         },
         {
             "name": "koodimonni-plugin-language/woocommerce-fi",
-            "version": "4.3.0",
+            "version": "4.3.1",
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/translation/plugin/woocommerce/4.3.0/fi.zip"
+                "url": "https://downloads.wordpress.org/translation/plugin/woocommerce/4.3.1/fi.zip"
             },
             "require": {
                 "koodimonni/composer-dropin-installer": ">=0.2.3"
@@ -1344,19 +1344,20 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Koodimonni/Composer-Dropin-Installer.git",
-                "reference": "47eb277e5b1205de23bd7c27530b82d72d22a2b2"
+                "reference": "47cfecc2bf45037d0a92de8ab611a610bb54a138"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Koodimonni/Composer-Dropin-Installer/zipball/47eb277e5b1205de23bd7c27530b82d72d22a2b2",
-                "reference": "47eb277e5b1205de23bd7c27530b82d72d22a2b2",
+                "url": "https://api.github.com/repos/Koodimonni/Composer-Dropin-Installer/zipball/47cfecc2bf45037d0a92de8ab611a610bb54a138",
+                "reference": "47cfecc2bf45037d0a92de8ab611a610bb54a138",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "^1.0 | ^2.0"
+                "composer-plugin-api": "^1.0 | ^2.0",
+                "php": ">=5.3.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "3.7.*-dev"
+                "phpunit/phpunit": "^5.7"
             },
             "type": "composer-plugin",
             "extra": {
@@ -1364,7 +1365,7 @@
             },
             "autoload": {
                 "psr-4": {
-                    "Koodimonni\\Composer\\": "src"
+                    "Koodimonni\\Composer\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1379,7 +1380,7 @@
                 }
             ],
             "description": "Install packages or a few files from packages into custom paths without overwriting existing stuff.",
-            "time": "2020-05-14T06:17:13+00:00"
+            "time": "2020-07-17T19:49:53+00:00"
         },
         {
             "name": "mck89/peast",
@@ -4599,6 +4600,24 @@
             "time": "2020-07-05T12:30:35+00:00"
         },
         {
+            "name": "wpackagist-plugin/duplicate-post",
+            "version": "3.2.5",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/duplicate-post/",
+                "reference": "tags/3.2.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/duplicate-post.3.2.5.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/duplicate-post/"
+        },
+        {
             "name": "wpackagist-plugin/ga-in",
             "version": "5.4.5",
             "source": {
@@ -4672,15 +4691,15 @@
         },
         {
             "name": "wpackagist-plugin/redis-cache",
-            "version": "2.0.4",
+            "version": "2.0.5",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/redis-cache/",
-                "reference": "tags/2.0.4"
+                "reference": "tags/2.0.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/redis-cache.2.0.4.zip"
+                "url": "https://downloads.wordpress.org/plugin/redis-cache.2.0.5.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -4762,15 +4781,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "14.5",
+            "version": "14.6.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/14.5"
+                "reference": "tags/14.6.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.14.5.zip"
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.14.6.1.zip"
             },
             "require": {
                 "composer/installers": "~1.0"

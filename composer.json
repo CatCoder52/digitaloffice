@@ -123,7 +123,8 @@
     "humanmade/page-for-post-type": "dev-master",
     "wpackagist-plugin/simple-page-ordering": "*",
     "wpackagist-plugin/intuitive-custom-post-order": "*",
-    "wpackagist-plugin/gf-form-multicolumn": "*"
+    "wpackagist-plugin/gf-form-multicolumn": "*",
+    "wpackagist-plugin/duplicate-post": "*"
   },
   "require-dev": {
     "rarst/wps": "*",
