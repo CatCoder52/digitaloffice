@@ -58,6 +58,10 @@
       opacity: .2;
     }
 
+    button:focus {
+      opacity: 1;
+    }
+
     .button-prev {
       position: absolute;
       left: 0;

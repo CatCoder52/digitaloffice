@@ -39,6 +39,10 @@
       transition: all $transition-duration;
     }
 
+    button:focus {
+      opacity: 1;
+    }
+
     button:hover {
       cursor: pointer;
       opacity: .2;
