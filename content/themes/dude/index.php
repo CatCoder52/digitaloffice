@@ -71,7 +71,7 @@ get_header(); ?>
             </div>
         </section>
 
-    <?php break; endwhile; ?>
+    <?php break; endwhile; rewind_posts(); ?>
     <?php else :
       include get_theme_file_path( 'template-parts/hero.php' );
     endif; ?>
