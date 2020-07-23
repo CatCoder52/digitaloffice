@@ -16,7 +16,7 @@ get_header(); ?>
     get_template_part( 'template-parts/hero' );
 
     if ( have_posts() ) : ?>
-      <section class="block block-references block-references-archive">
+      <section class="block block-references block-references-archive has-dark-bg">
         <div class="container">
 
           <h2 class="screen-reader-text">Referenssit</h2>

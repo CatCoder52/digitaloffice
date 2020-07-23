@@ -3,14 +3,14 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 18:54:41
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-17 17:00:07
+ * @Last Modified time: 2020-07-23 14:10:25
  *
  * @package dude
  */
 
 ?>
 
-<section class="block block-timeline">
+<section class="block block-timeline has-light-bg">
   <div class="container">
 
     <h2 class="block-title">Duden historia</h2>

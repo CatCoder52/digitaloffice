@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 19:18:00
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-18 18:57:01
+ * @Last Modified time: 2020-07-23 14:08:15
  *
  * @package dude
  */
@@ -29,7 +29,7 @@ if ( ! $query->have_posts() ) {
   return;
 } ?>
 
-<section class="block block-dudes">
+<section class="block has-light-bg block-dudes">
 
   <h2 class="screen-reader-text">Henkilöt</h2>
 

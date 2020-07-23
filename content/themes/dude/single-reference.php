@@ -63,7 +63,7 @@ get_header(); ?>
 
     <?php get_template_part( 'template-parts/hero', get_post_type() ); ?>
 
-    <section class="block block-single block-single-reference">
+    <section class="block block-single block-single-reference has-dark-bg">
 
       <div class="gutenberg-content swup-transition-fade">
         <?php the_content() ?>
@@ -72,7 +72,7 @@ get_header(); ?>
     </section>
 
     <?php if ( ! empty( $quote ) && ! empty( $quote_person ) && ! empty( $quote_person_title ) ) : ?>
-      <section class="block block-testimonials block-reference-quote">
+      <section class="block block-testimonials block-reference-quote has-dark-bg">
         <div class="container">
 
           <h2 class="screen-reader-text">Asiakkaan palaute</h2>
@@ -102,7 +102,7 @@ get_header(); ?>
     <?php endif; ?>
 
     <?php if ( ! empty( $small_references ) ) : ?>
-      <section class="block block-references block-references-archive block-references-related">
+      <section class="block block-references block-references-archive block-references-related has-dark-bg">
         <div class="container">
 
           <h2 class="block-title block-title-large">Katso myös nämä</h2>

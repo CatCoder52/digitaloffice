@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-17 11:47:31
+ * @Last Modified time: 2020-07-23 14:06:38
  *
  * @package dude
  */
@@ -24,7 +24,7 @@ $content = get_post_meta( get_the_id(), 'hero_content', true );
 $button = get_post_meta( get_the_id(), 'hero_button', true );
 ?>
 
-<section class="block block-hero block-hero-service">
+<section class="block block-hero block-hero-service<?php if ( is_page( 9 ) ) : ?> has-dark-bg<?php else : ?> has-light-bg<?php endif; ?>">
 
   <?php if ( $bg_image ) { ?>
     <div class="featured-image" aria-hidden="true">

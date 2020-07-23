@@ -24,7 +24,7 @@ get_header(); ?>
       $blog_latest_excerpt_override = get_the_id(); ?>
 
       <?php if ( ! is_archive() || ! is_paged() ) : ?>
-        <section class="block block-hero block-hero-light block-hero-blog block-hero-basic is-centered">
+        <section class="block block-hero block-hero-light block-hero-blog block-hero-basic is-centered has-light-bg">
           <div class="container">
             <h1>Tarinoita Dudelta</h1>
             <div class="hero-description">
@@ -34,7 +34,7 @@ get_header(); ?>
         </section>
         <?php endif; ?>
 
-        <section class="block block-cta-with-image block-latest-blog-post">
+        <section class="block block-cta-with-image block-latest-blog-post has-light-bg">
           <div class="container">
 
             <h1 class="screen-reader-text">Uusin kirjoitus</h1>
@@ -76,7 +76,7 @@ get_header(); ?>
       include get_theme_file_path( 'template-parts/hero.php' );
     endif; ?>
 
-    <section class="block block-blog block-blog-archive<?php if ( is_archive() || is_paged() ) : ?> is-archive<?php endif; ?>">
+    <section class="block block-blog has-light-bg block-blog-archive<?php if ( is_archive() || is_paged() ) : ?> is-archive<?php endif; ?>">
       <div class="container">
 
         <header class="archive-head block-head<?php if ( is_category() || is_tag() || is_author() || is_date() ) : ?> block-head-archive<?php endif; ?>">

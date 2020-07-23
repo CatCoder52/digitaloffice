@@ -3,7 +3,7 @@
  * @Author:             Roni Laukkarinen, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:50:23
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-19 19:26:14
+ * @Last Modified time: 2020-07-23 14:09:31
  *
  * @package dude
  */
@@ -26,7 +26,7 @@ $reference = array(
   'image_skew' => get_field( 'image_skew', $reference_id ),
 ); ?>
 
-<section class="block block-references-one">
+<section class="block block-references-one has-light-bg">
   <div class="container">
 
     <div class="cols cols-two">

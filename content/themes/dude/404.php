@@ -15,7 +15,7 @@ get_header(); ?>
 	<main role="main" id="main" class="site-main">
 		<div class="container">
 
-      <section class="block block-hero block-hero-404">
+      <section class="block block-hero block-hero-404 has-dark-bg">
         <div class="container">
 
           <div class="content">

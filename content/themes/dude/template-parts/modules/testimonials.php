@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:48:37
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-17 16:38:54
+ * @Last Modified time: 2020-07-23 14:09:43
  *
  * @package dude
  */
@@ -42,7 +42,7 @@ if ( $query->have_posts() ) {
 }
 ?>
 
-<section class="block block-testimonials block-testimonials-slider">
+<section class="block block-testimonials block-testimonials-slider has-dark-bg">
   <div class="container">
 
     <header class="block-head">

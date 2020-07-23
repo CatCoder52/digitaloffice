@@ -676,6 +676,20 @@ swup.on("contentReplaced", function () {
 
     });
 
+    // Accessibility: Ensure back to top is right color on right background
+    var stickyOffset = $(".top").offset();
+    var $contentDivs = $(".block");
+    $(document).scroll(function() {
+      $contentDivs.each(function(k) {
+        var _thisOffset = $(this).offset();
+        var _actPosition = _thisOffset.top - $(window).scrollTop();
+        if (_actPosition < stickyOffset.top && _actPosition + $(this).height() > 0) {
+          $(".top").removeClass("has-light-bg has-dark-bg").addClass($(this).hasClass("has-light-bg") ? "has-light-bg" : "has-dark-bg");
+          return false;
+        }
+      });
+    });
+
     // 404 easter egg
     if ( jQuery("body").hasClass("error404") === true ) {
       jQuery(document).bind('keydown keyup', function(e) {

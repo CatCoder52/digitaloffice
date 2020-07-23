@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:50:23
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-19 19:32:02
+ * @Last Modified time: 2020-07-23 14:09:36
  *
  * @package dude
  */
@@ -51,7 +51,7 @@ if ( ! $references ) {
   wp_cache_set( get_the_id() . '_references', $references, 'theme', DAY_IN_SECONDS );
 } ?>
 
-<section class="block block-references">
+<section class="block block-references has-dark-bg">
   <div class="container">
 
     <header class="block-head">

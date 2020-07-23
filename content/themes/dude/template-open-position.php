@@ -23,7 +23,7 @@ get_header(); ?>
 
     <?php include get_theme_file_path( 'template-parts/hero.php' ); ?>
 
-    <section class="block block-open-position">
+    <section class="block block-open-position has-light-bg">
       <div class="container">
 
         <div class="col col-sidebar">

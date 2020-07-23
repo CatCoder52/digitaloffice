@@ -3,14 +3,14 @@
  * @Author:             Roni Laukkarinen, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2020-07-15 18:34:29
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-23 13:36:19
+ * @Last Modified time: 2020-07-23 14:08:45
  *
  * @package dude
  */
 
 ?>
 
-<section class="block block-logos">
+<section class="block has-light-bg block-logos">
   <div class="container">
 
     <header class="block-head block-head-small">

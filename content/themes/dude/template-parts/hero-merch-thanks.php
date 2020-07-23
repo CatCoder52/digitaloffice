@@ -3,14 +3,14 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-16 16:05:50
+ * @Last Modified time: 2020-07-23 13:55:55
  *
  * @package dude
  */
 
 ?>
 
-<section class="block block-hero block-hero-contact-thanks">
+<section class="block block-hero block-hero-contact-thanks has-dark-bg">
   <div class="container">
 
     <h1><svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#2bc66d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-circle"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>

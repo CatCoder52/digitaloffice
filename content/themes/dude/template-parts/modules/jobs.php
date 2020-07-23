@@ -3,14 +3,14 @@
  * @Author: 						Roni Laukkarinen
  * @Date:   						2020-07-18 19:03:51
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-23 13:34:51
+ * @Last Modified time: 2020-07-23 14:08:40
  *
  * @package dude
  */
 
 ?>
 
-<section class="block block-jobs">
+<section class="block has-light-bg block-jobs">
   <div class="container">
 
     <div class="job-box">

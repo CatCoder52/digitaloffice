@@ -17,6 +17,15 @@
   transition: opacity .3s 0s, visibility 0s .3s;
   z-index: 10000;
 
+  // Accessibility: Change color based on background color the element is on
+  &.has-light-bg svg {
+    fill: $color-midnight-blue;
+  }
+
+  &.has-dark-bg svg {
+    fill: $color-white;
+  }
+
   &.is-visible,
   &.fade-out,
   .no-touch &:hover {
@@ -28,7 +37,7 @@
   }
 
   &.fade-out { // If the user keeps scrolling down, the button is out of focus and becomes less visible
-    opacity: .3;
+    opacity: 1;
 
     &:hover {
       opacity: 1;
@@ -40,21 +49,22 @@
   }
 
   svg {
-    @include centered();
     position: absolute;
     fill: $color-body;
     margin: 0;
     opacity: .8;
     font-size: 19px;
     transition: all .3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &:hover,
   &:focus,
   &:active {
     svg {
-      fill: $color-body;
-      top: 35%;
+      transform: translateY(-.5rem);
     }
   }
 }

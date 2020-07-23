@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:49:22
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-03-11 15:09:52
+ * @Last Modified time: 2020-07-23 14:08:35
  *
  * @package dude
  */
@@ -19,7 +19,7 @@ if ( empty( $image_big ) ) {
 }
 ?>
 
-<section class="block block-images has-style-<?php echo $style; ?>">
+<section class="block has-light-bg block-images has-style-<?php echo $style; ?>">
   <div class="container">
     <?php if ( ! empty( $image_big ) ) : ?>
       <div class="image image-big">

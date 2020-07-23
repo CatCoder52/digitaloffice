@@ -3,14 +3,14 @@
  * @Author:             Roni Laukkarinen, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2020-03-11 15:09:52
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-23 13:36:30
+ * @Last Modified time: 2020-07-23 14:08:29
  *
  * @package dude
  */
 
 ?>
 
-<section class="block block-community-photos block-photos-recruiting">
+<section class="block has-light-bg block-community-photos block-photos-recruiting">
   <div class="container">
     <div class="photo"><img src="<?php echo get_template_directory_uri(); ?>/images/rekry-1.jpg" alt="" /></div>
     <div class="photo"><img src="<?php echo get_template_directory_uri(); ?>/images/rekry-2.jpg" alt="" /></div>

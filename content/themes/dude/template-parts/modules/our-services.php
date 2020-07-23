@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:48:37
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-23 13:36:06
+ * @Last Modified time: 2020-07-23 14:09:22
  *
  * @package dude
  */
@@ -15,7 +15,7 @@ $button = get_sub_field( 'cta-link' );
 $services = get_sub_field( 'services' );
 ?>
 
-<section class="block block-our-services">
+<section class="block has-light-bg block-our-services<?php if ( is_page( 9 ) ) : ?> has-dark-bg<?php else : ?> has-light-bg<?php endif; ?>">
   <div class="container">
 
     <header class="block-head screen-reader-text">

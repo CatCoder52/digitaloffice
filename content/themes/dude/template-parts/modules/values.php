@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 17:54:33
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-16 18:35:49
+ * @Last Modified time: 2020-07-23 14:10:37
  *
  * @package dude
  */
@@ -38,7 +38,7 @@ if ( empty( $accordion ) ) {
   return;
 } ?>
 
-<section class="block block-values">
+<section class="block block-values has-light-bg">
   <div class="container">
 
     <header class="block-head">

@@ -19,7 +19,7 @@ get_header(); ?>
 
     <?php include get_theme_file_path( 'template-parts/hero-merch.php' ); ?>
 
-    <section class="block block-merch">
+    <section class="block block-merch has-dark-bg">
       <div class="container">
 
         <div class="cols">

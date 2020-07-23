@@ -3,7 +3,7 @@
  * @Author:             Roni Laukkarinen, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:48:37
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-19 12:32:33
+ * @Last Modified time: 2020-07-23 14:10:30
  *
  * @package dude
  */
@@ -14,7 +14,7 @@ $content = get_sub_field( 'text' );
 $button = get_sub_field( 'cta-link' );
 ?>
 
-<section class="block block-title-left-text-right">
+<section class="block block-title-left-text-right has-light-bg">
   <div class="container">
 
     <div class="cols swup-transition-fade">

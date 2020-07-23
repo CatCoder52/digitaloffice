@@ -18,7 +18,7 @@ get_header(); ?>
       include get_theme_file_path( 'template-parts/content-modular.php' );
     ?>
 
-    <section class="block block-community-photos">
+    <section class="block block-community-photos has-light-bg">
       <div class="container">
         <div class="photo"><img src="<?php echo get_template_directory_uri(); ?>/images/community.jpg" alt="WordPress-tarroja ja muuta sälää" /></div>
         <div class="photo"><img src="<?php echo get_template_directory_uri(); ?>/images/community-2.jpg" alt="WordPress-yhteisön jäseniä Suomesta" /></div>
@@ -32,7 +32,7 @@ get_header(); ?>
       </div>
     </section>
 
-    <section class="block block-community">
+    <section class="block block-community has-light-bg">
       <div class="container">
 
         <header class="block-head">
@@ -104,7 +104,7 @@ get_header(); ?>
       </div>
     </section>
 
-    <section class="block block-open-source">
+    <section class="block block-open-source has-light-bg">
       <div class="container">
 
         <header class="block-head">

@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-06-01 16:14:58
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-23 11:46:10
+ * @Last Modified time: 2020-07-23 14:10:42
  *
  * @package dude
  */
@@ -14,7 +14,7 @@ if ( empty( $content ) && ! is_page( 4487 ) ) {
   return;
 } ?>
 
-<section class="block block-wide-text"<?php if ( is_page( 6357 ) ) : ?> id="lomake"<?php endif; ?>>
+<section class="block has-light-bg block-wide-text"<?php if ( is_page( 6357 ) ) : ?> id="lomake"<?php endif; ?>>
   <div class="container">
 
     <?php echo wpautop( $content ); ?>

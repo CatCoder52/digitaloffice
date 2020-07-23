@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-23 11:35:13
+ * @Last Modified time: 2020-07-23 13:55:25
  *
  * @package dude
  */
@@ -17,7 +17,7 @@ if ( ! empty( $title_alt ) ) {
 }
 ?>
 
-<section class="block block-hero block-hero-light block-company is-centered">
+<section class="block block-hero block-hero-light block-company is-centered has-light-bg">
   <div class="container">
 
     <div class="content">

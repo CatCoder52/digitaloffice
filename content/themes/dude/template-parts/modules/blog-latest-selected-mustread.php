@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 15:26:12
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-21 16:11:32
+ * @Last Modified time: 2020-07-23 14:06:58
  *
  * @package dude
  */
@@ -27,7 +27,7 @@ if ( ! $query->have_posts() || empty( $mustread ) ) {
 
 global $blog_latest_excerpt_override; ?>
 
-<section class="block block-latest-selected-mustread">
+<section class="block block-latest-selected-mustread has-dark-bg">
   <div class="container">
 
     <header class="block-head block-head-small">

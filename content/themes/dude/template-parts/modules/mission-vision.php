@@ -3,13 +3,13 @@
  * @Author: Roni Laukkarinen
  * @Date:   2020-07-16 17:32:53
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-23 13:36:24
+ * @Last Modified time: 2020-07-23 14:08:49
  * @package dude
  */
 
 ?>
 
-<section class="block block-mission-vision">
+<section class="block has-light-bg block-mission-vision">
   <div class="container">
     <div class="cols cols-two">
 

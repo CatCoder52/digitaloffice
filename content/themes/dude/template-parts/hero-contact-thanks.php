@@ -3,14 +3,14 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-23 12:10:58
+ * @Last Modified time: 2020-07-23 13:55:33
  *
  * @package dude
  */
 
 ?>
 
-<section class="block block-hero block-hero-contact-thanks">
+<section class="block block-hero block-hero-contact-thanks has-dark-bg">
 
     <div class="shade"></div>
     <div class="vimeo-wrapper">

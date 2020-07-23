@@ -23,7 +23,7 @@ get_header(); ?>
       $user_id = get_the_author_meta( 'ID' );
     ?>
 
-    <section class="block block-single<?php if ( $post_year <= $now_year - 2 ) : ?> is-old<?php endif; ?>">
+    <section class="block has-light-bg block-single<?php if ( $post_year <= $now_year - 2 ) : ?> is-old<?php endif; ?>">
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
         <div class="author-card">
