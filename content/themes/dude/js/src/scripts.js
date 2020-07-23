@@ -40,33 +40,53 @@ const swup = new Swup({
 // Swup starts
 swup.on("contentReplaced", function () {
 
+  	// Hide or show the "back to top" link
+  	jQuery(window).scroll(function() {
+
+      // Back to top
+    	var offset = 300; // Browser window scroll (in pixels) after which the "back to top" link is shown
+    	var offset_opacity = 1200; // Browser window scroll (in pixels) after which the link opacity is reduced
+    	var scroll_top_duration = 700; // Duration of the top scrolling animation (in ms)
+      var link_class = '.top';
+
+      if( jQuery(this).scrollTop() > offset ) {
+        jQuery( link_class ).addClass('is-visible');
+      } else {
+        jQuery( link_class ).removeClass('is-visible');
+      }
+
+      if(jQuery(this).scrollTop() > offset_opacity ) {
+        jQuery( link_class ).addClass('fade-out');
+     } else {
+      jQuery( link_class ).removeClass('fade-out');
+    }
+
+  });
+
   // Define Javascript is active by changing the body class
   document.body.classList.remove("no-js");
   document.body.classList.add("js");
 
   // MoveTo triggers
-  document.addEventListener('DOMContentLoaded', function () {
-    const easeFunctions = {
-      easeInQuad: function (t, b, c, d) {
-        t /= d;
-        return c * t * t + b;
-      },
-      easeOutQuad: function (t, b, c, d) {
-        t /= d;
-        return -c * t * (t - 2) + b;
-      },
-    };
-    const moveTo = new MoveTo(
-      {
-        ease: 'easeInQuad',
-      },
-      easeFunctions,
-    );
-    const triggers = document.getElementsByClassName('js-trigger');
-    for (var i = 0; i < triggers.length; i++) {
-      moveTo.registerTrigger(triggers[i]);
-    }
-  });
+  const easeFunctions = {
+    easeInQuad: function (t, b, c, d) {
+      t /= d;
+      return c * t * t + b;
+    },
+    easeOutQuad: function (t, b, c, d) {
+      t /= d;
+      return -c * t * (t - 2) + b;
+    },
+  };
+  const moveTo = new MoveTo({
+    ease: 'easeInQuad',
+  },
+    easeFunctions,
+  );
+  const triggers = document.getElementsByClassName('js-trigger');
+  for (var i = 0; i < triggers.length; i++) {
+    moveTo.registerTrigger(triggers[i]);
+  }
 
   // Init lazyload
   let images = document.querySelectorAll(".lazyload");
@@ -475,7 +495,7 @@ swup.on("contentReplaced", function () {
   })(jQuery);
 
   // Always move scroll position to up when clicking a link
-  var moveTo = new MoveTo({
+  var moveToSwup = new MoveTo({
     tolerance: 0,
     duration: 0,
     easing: "easeOutQuart",
@@ -483,7 +503,7 @@ swup.on("contentReplaced", function () {
   });
 
   var target = document.getElementById("swup");
-  moveTo.move(target);
+  moveToSwup.move(target);
 
   // Timeline
   jQuery(".col-timeline .row .action").on("click", function () {
@@ -633,6 +653,29 @@ swup.on("contentReplaced", function () {
   // Document ready start
   $(function () {
 
+    	// Hide or show the "back to top" link
+    	$(window).scroll(function() {
+
+        // Back to top
+      	var offset = 300; // Browser window scroll (in pixels) after which the "back to top" link is shown
+      	var offset_opacity = 1200; // Browser window scroll (in pixels) after which the link opacity is reduced
+      	var scroll_top_duration = 700; // Duration of the top scrolling animation (in ms)
+        var link_class = '.top';
+
+        if( $(this).scrollTop() > offset ) {
+          $( link_class ).addClass('is-visible');
+        } else {
+          $( link_class ).removeClass('is-visible');
+        }
+
+        if( $(this).scrollTop() > offset_opacity ) {
+         $( link_class ).addClass('fade-out');
+       } else {
+        $( link_class ).removeClass('fade-out');
+      }
+
+    });
+
     // 404 easter egg
     if ( jQuery("body").hasClass("error404") === true ) {
       jQuery(document).bind('keydown keyup', function(e) {
@@ -696,10 +739,9 @@ document.addEventListener('DOMContentLoaded', function () {
       return -c * t * (t - 2) + b;
     },
   };
-  const moveTo = new MoveTo(
-    {
-      ease: 'easeInQuad',
-    },
+  const moveTo = new MoveTo({
+    ease: 'easeInQuad',
+  },
     easeFunctions,
   );
   const triggers = document.getElementsByClassName('js-trigger');
