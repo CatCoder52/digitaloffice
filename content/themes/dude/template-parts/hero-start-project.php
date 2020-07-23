@@ -53,8 +53,7 @@ if ( has_post_thumbnail() ) {
         <p class="button-wrapper swup-transition-fade"><a class="button button-glitch button-mint" href="<?php echo esc_url( $button['url'] ); ?>"<?php if ( ! empty( $button['target'] ) ) : ?> target="<?php echo esc_html( $button['target'] ); ?>"<?php endif; ?>><?php echo esc_html( $button['title'] ); ?><?php include get_theme_file_path( '/svg/arrow-right.svg' ); ?></a></p>
       <?php endif; ?>
 
-
-      <svg class="arrow-down swup-transition-fade" xmlns="http://www.w3.org/2000/svg" width="18" height="97" viewBox="0 0 18 97"><path fill="none" fill-rule="evenodd" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.148 1.08v94.296m0 0l7.228-7.228m-7.228 7.228L1.92 88.148"/></svg>
+      <a href="#lomake" class="js-trigger" data-mt-duration="300"><svg class="arrow-down swup-transition-fade" xmlns="http://www.w3.org/2000/svg" width="18" height="97" viewBox="0 0 18 97"><path fill="none" fill-rule="evenodd" stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.148 1.08v94.296m0 0l7.228-7.228m-7.228 7.228L1.92 88.148"/></svg></a>
 
     </div>
 
