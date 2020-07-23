@@ -3,6 +3,10 @@
     z-index: 7;
   }
 
+  &.block-hero-fail {
+    background: $color-midnight;
+  }
+
   .container {
     z-index: 9;
   }
