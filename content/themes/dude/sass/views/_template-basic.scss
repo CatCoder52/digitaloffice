@@ -1,0 +1,10 @@
+body.page-template-page-basic {
+  .block-hero.block-hero-basic + .block.block-wide-text {
+    padding-left: 0;
+    padding-right: 0;
+
+    @media (max-width: 760px) {
+      padding-top: 0;
+    }
+  }
+}
