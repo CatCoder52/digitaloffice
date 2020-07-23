@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-17 12:34:53
+ * @Last Modified time: 2020-07-23 11:35:13
  *
  * @package dude
  */
@@ -21,14 +21,13 @@ if ( ! empty( $title_alt ) ) {
   <div class="container">
 
     <div class="content">
-      <h1><?php echo $title ?></h1>
+      <h1><?php echo esc_html( $title ); ?></h1>
 
-      <div class="hero-description">
-        <?php if ( ! empty( $content ) ) {
-          echo wpautop( $content ); // phpcs:ignore
-        }
-        ?>
-      </div>
+      <?php if ( ! empty( $content ) ) { ?>
+        <div class="hero-description swup-transition-fade">
+          <?php echo wpautop( $content ); // phpcs:ignore ?>
+        </div>
+      <?php } ?>
     </div>
 
   </div>

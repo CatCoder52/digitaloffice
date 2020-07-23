@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-23 11:22:35
+ * @Last Modified time: 2020-07-23 11:35:37
  *
  * @package dude
  */
@@ -43,12 +43,11 @@ if ( has_post_thumbnail() ) {
     <div class="content">
       <h1 class="swup-transition-fade"><?php echo esc_html( $title ); ?></h1>
 
-      <div class="hero-description swup-transition-fade">
-        <?php if ( ! empty( $content ) ) {
-          echo wpautop( $content ); // phpcs:ignore
-        }
-        ?>
-      </div>
+      <?php if ( ! empty( $content ) ) { ?>
+        <div class="hero-description swup-transition-fade">
+          <?php echo wpautop( $content ); // phpcs:ignore ?>
+        </div>
+      <?php } ?>
 
       <?php
       // Contact page hero button that scrolls to anchor
