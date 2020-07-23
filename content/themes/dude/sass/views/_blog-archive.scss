@@ -81,3 +81,9 @@
     }
   }
 }
+
+@media (max-width: 760px) {
+  .block.block-hero.block-hero-blog + .block-cta-with-image.block-latest-blog-post {
+    padding-top: 0;
+  }
+}
