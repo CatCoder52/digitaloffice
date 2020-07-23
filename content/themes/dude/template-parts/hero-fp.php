@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-16 16:05:40
+ * @Last Modified time: 2020-07-23 13:31:25
  *
  * @package dude
  */
@@ -23,7 +23,7 @@ if ( has_post_thumbnail() ) {
 
     <div class="content">
       <h1 class="swup-transition-fade">Ole <span class="the-word glitch" data-text="uskottava.">uskottava.</span></h1>
-      <p class="content-sub-statement swup-transition-fade">Suunnittelemme visuaalisesti näyttäviä ja teknisesti laadukkaita <span class="capital-p-dangit">WordPress</span>-verkkosivuja.</p>
+      <p class="content-sub-statement swup-transition-fade">Suunnittelemme moderneja ja teknisesti kestäviä <span class="capital-p-dangit">WordPress</span>-verkkosivuja.</p>
     </div>
 
   </div>

@@ -3,10 +3,11 @@
  * @Author:             Roni Laukkarinen, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2020-07-15 18:34:29
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-15 19:28:22
+ * @Last Modified time: 2020-07-23 13:36:19
  *
  * @package dude
  */
+
 ?>
 
 <section class="block block-logos">
