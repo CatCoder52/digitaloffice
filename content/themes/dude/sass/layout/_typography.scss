@@ -41,7 +41,7 @@
 // Text styles
 .text-smaller,
 %text-smaller {
-  @include responsive-font(16px, 18px);
+  @include responsive-font($font-size-general-small, 18px);
 }
 
 // Special links
@@ -228,7 +228,7 @@ h5,
 
 h6,
 %h6 {
-  @include responsive-font(16px, 18px);
+  @include responsive-font($font-size-general-small, 18px);
 }
 
 // Lists

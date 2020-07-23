@@ -83,7 +83,7 @@
     }
 
     .content-sub-statement {
-      @include responsive-font(16px, 20px);
+      @include responsive-font($font-size-general-small, 20px);
       color: $color-midnight;
       font-size: $font-size-general-small;
 

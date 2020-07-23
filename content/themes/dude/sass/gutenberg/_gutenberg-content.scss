@@ -302,7 +302,7 @@
       }
 
       p {
-        @include responsive-font(16px, 19px);
+        @include responsive-font($font-size-general-small, 19px);
         margin-top: 2rem;
         opacity: .8;
 
