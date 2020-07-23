@@ -3,11 +3,10 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:33:00
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-02-12 17:43:35
+ * @Last Modified time: 2020-07-23 13:39:26
  *
  * @package dude
  */
-
 function dude_register_cpt_order() {
   $labels = array(
     'name'               => _x( 'Tilaukset', 'post type general name', 'dude' ),
@@ -23,7 +22,7 @@ function dude_register_cpt_order() {
     'search_items'       => __( 'Etsi tilauksia', 'dude' ),
     'parent_item_colon'  => __( 'Tyypin isäntä:', 'dude' ),
     'not_found'          => __( 'Tilauksia ei löytynyt.', 'dude' ),
-    'not_found_in_trash' => __( 'Tilauksia ei löytynyt roskista.', 'dude' )
+    'not_found_in_trash' => __( 'Tilauksia ei löytynyt roskista.', 'dude' ),
   );
 
   $args = array(
@@ -43,11 +42,11 @@ function dude_register_cpt_order() {
     ),
     'supports'           => array(
       'title',
-      'revisions'
-    )
+      'revisions',
+    ),
   );
 
-  register_post_type( 'order', $args );
+  register_post_type( 'order', $args ); // phpcs:ignore
 }
 
 add_action( 'init', 'dude_register_cpt_order' );

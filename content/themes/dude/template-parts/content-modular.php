@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:05:23
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-02-12 17:43:38
+ * @Last Modified time: 2020-07-23 13:37:19
  *
  * @package dude
  */
@@ -62,7 +62,7 @@ if ( have_rows( 'modular', $have_rows_id ) ) :
     if ( ! array_key_exists( $template_part_name, $exclude_template_part_from_cache ) && getenv( 'WP_ENV' ) !== 'development' ) {
 
       // module can be cached, try to find it is already in cache.
-      if ( ! $template_part_output = wp_cache_get( $template_part_cache_key, 'theme' ) ) {
+      if ( ! $template_part_output = wp_cache_get( $template_part_cache_key, 'theme' ) ) { // phpcs:ignore
 
         // module is not in cache.
         // validate that file actually exists.
@@ -77,17 +77,17 @@ if ( have_rows( 'modular', $have_rows_id ) ) :
           wp_cache_set( $template_part_cache_key, $template_part_output, 'theme', HOUR_IN_SECONDS );
 
           // add log message in development and staging
-          do_action( 'qm/debug', "Module cached: {$template_part_name} ({$template_part_cache_key})" );
+          do_action( 'qm/debug', "Module cached: {$template_part_name} ({$template_part_cache_key})" ); // phpcs:ignore
         }
       } else {
         // add log message in development and staging
-        do_action( 'qm/debug', "Module served from cache: {$template_part_name} ({$template_part_cache_key})" );
+        do_action( 'qm/debug', "Module served from cache: {$template_part_name} ({$template_part_cache_key})" ); // phpcs:ignore
       }
     } else {
       // module is exluded from cache or we are in development envarioment
 
       // add log message in development and staging
-      do_action( 'qm/debug', "Module bypassed cache: {$template_part_name} ({$template_part_cache_key})" );
+      do_action( 'qm/debug', "Module bypassed cache: {$template_part_name} ({$template_part_cache_key})" ); // phpcs:ignore
 
       // validate that file actually exists.
       if ( file_exists( $template_part_path ) ) {
@@ -100,7 +100,7 @@ if ( have_rows( 'modular', $have_rows_id ) ) :
     }
 
     if ( empty( $template_part_output ) ) {
-      do_action( 'qm/error', "Module {$template_part_name} output is empty" );
+      do_action( 'qm/error', "Module {$template_part_name} output is empty" ); // phpcs:ignore
     }
 
     // finally output module content.

@@ -3,9 +3,10 @@
  * @Author: Roni Laukkarinen
  * @Date:   2020-07-16 17:32:53
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-16 17:46:04
+ * @Last Modified time: 2020-07-23 13:36:24
  * @package dude
  */
+
 ?>
 
 <section class="block block-mission-vision">
