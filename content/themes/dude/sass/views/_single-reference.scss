@@ -2,8 +2,14 @@ body.single.single-reference {
   .block.block-testimonials {
     padding-top: 0;
 
-    @media (max-width: $container-ipad-landscape) {
-      padding-top: $padding-blocks-medium;
+    @media (max-width: $grid-base-size + 150px) {
+      padding-left: $padding-default-cols-ipad;
+      padding-right: $padding-default-cols-ipad;
+    }
+
+    @media (max-width: $container-ipad) {
+      padding-left: $padding-default-cols-mobile;
+      padding-right: $padding-default-cols-mobile;
     }
   }
 
@@ -33,7 +39,7 @@ body.single.single-reference {
     padding-bottom: $padding-blocks-large;
 
     @media (max-width: $container-ipad) {
-      padding-bottom: $padding-blocks-medium;
+      padding-bottom: $padding-blocks-small;
     }
 
     // Paddings come from gutenberg blocks
