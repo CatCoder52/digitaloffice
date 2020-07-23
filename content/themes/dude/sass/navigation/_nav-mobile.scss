@@ -296,6 +296,7 @@ body:not(.js-nav-active) .nav-primary.is-animatable {
   cursor: pointer;
   position: absolute;
   right: 0;
+  top: 0;
 
   @media (max-width: $responsivenav) {
     right: 2rem;
@@ -327,7 +328,9 @@ body:not(.js-nav-active) .nav-primary.is-animatable {
 
   // Alternative focus for mobile nav
   &:focus {
-    outline: none;
+    @media (max-width: $container-mobile) {
+      outline: none;
+    }
 
     span span {
       background-color: $nav-toggle-color;

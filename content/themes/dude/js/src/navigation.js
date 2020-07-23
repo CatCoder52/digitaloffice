@@ -16,6 +16,7 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
   var menuToggle = menuContainer.find(".nav-toggle");
   var siteHeaderMenu = menuContainer.find("#main-navigation-wrapper");
   var siteNavigation = menuContainer.find("#nav");
+  var menu = menuContainer.find("#nav");
   var animatedNav = document.querySelector(".nav-primary");
   var animatedHero = document.querySelector(".block-hero-enable-transition");
   var dropdownToggle = $("<button />", {
@@ -53,8 +54,7 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
 
     menuToggle.add(siteNavigation).attr("aria-expanded", "false");
     menuToggle.on("click", function () {
-      // $(this).add(siteHeaderMenu).toggleClass('toggled-on');
-      // $(this).toggleClass('toggled-on');
+
       $("body").toggleClass("js-nav-active");
 
       // Add blur effect after one second from nav triggered open
@@ -62,10 +62,10 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
 
       // Change text to closed and vice versa
       var toggletext = $(this).find(".toggle-text").text();
-      if (toggletext == "Lisää") {
-        $(this).find(".toggle-text").text("Sulje");
+      if (toggletext == "Avaa valikko") {
+        $(this).find(".toggle-text").text("Sulje valikko");
       } else {
-        $(this).find(".toggle-text").text("Lisää");
+        $(this).find(".toggle-text").text("Avaa valikko");
       }
 
       // The 60 FPS Smooth as Butter Solution
@@ -121,6 +121,7 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
 
   // Keyboard navigation
   $(".menu-item a, button.dropdown-toggle").on("keydown", function (e) {
+
     if ([37, 38, 39, 40].indexOf(e.keyCode) == -1) {
       return;
     }
@@ -237,8 +238,8 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
     return;
   }
 
-  container_desktop = document.getElementById("nav-desktop");
-  if (!container_desktop) {
+  container = document.getElementById("nav");
+  if (!container) {
     return;
   }
 
@@ -265,6 +266,7 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
   }
 
   button.onclick = function () {
+
     if (-1 !== container.className.indexOf("is-active")) {
       closeMenu(); // Close menu.
     } else {
@@ -288,14 +290,19 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
         "[contenteditable]",
         '[tabindex]:not([tabindex^="-"])',
       ]);
-      firstFocusableElement = focusableElements[0];
-      lastFocusableElement = focusableElements[focusableElements.length - 1];
+      //firstFocusableElement = focusableElements[0];
+      firstFocusableElement = button;
+      // lastFocusableElement = focusableElements[focusableElements.length - 1];
+      lastFocusableElement = document.getElementById("lastfocusableitem");
+
+      //console.log(focusableElements);
 
       // Redirect last Tab to first focusable element.
       lastFocusableElement.addEventListener("keydown", function (e) {
         if (e.keyCode === 9 && !e.shiftKey) {
+
           e.preventDefault();
-          button.focus(); // Set focus on first element - that's actually close menu button.
+          firstFocusableElement.focus(); // Set focus on first element - that's actually close menu button.
         }
       });
 
@@ -303,13 +310,14 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
       firstFocusableElement.addEventListener("keydown", function (e) {
         if (e.keyCode === 9 && e.shiftKey) {
           e.preventDefault();
-          button.focus(); // Set focus on last element.
+          lastFocusableElement.focus(); // Set focus on last element.
         }
       });
 
       // Redirect Shift+Tab from the toggle button to last focusable element.
       button.addEventListener("keydown", function (e) {
         if (e.keyCode === 9 && e.shiftKey) {
+
           e.preventDefault();
           lastFocusableElement.focus(); // Set focus on last element.
         }
@@ -321,10 +329,10 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
   document.addEventListener("keyup", function (event) {
     if (event.keyCode == 27) {
       var toggletext = $(this).find(".toggle-text").text();
-      if (toggletext == "Lisää") {
-        $(this).find(".toggle-text").text("Sulje");
+      if (toggletext == "Avaa valikko") {
+        $(this).find(".toggle-text").text("Sulje valikko");
       } else {
-        $(this).find(".toggle-text").text("Lisää");
+        $(this).find(".toggle-text").text("Avaa valikko");
       }
 
       $("body").removeClass("js-nav-active");
@@ -351,17 +359,7 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
     container.className = container.className.replace(" is-active", "");
     button.className = button.className.replace(" is-active", "");
     button.setAttribute("aria-expanded", "false");
-    menu.setAttribute("aria-expanded", "false");
-    button.focus();
-  }
-
-  // Close menu function.
-  function closeMenu_desktop() {
-    //body.className      = body.className.replace( ' js-nav-active', '' );
-    //container.className = container.className.replace( ' is-active', '' );
-    button.className = button.className.replace(" is-active", "");
-    button.setAttribute("aria-expanded", "false");
-    menu.setAttribute("aria-expanded", "false");
+    document.getElementById("nav").setAttribute("aria-expanded", "false");
     button.focus();
   }
 

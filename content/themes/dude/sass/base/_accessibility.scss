@@ -6,8 +6,8 @@
 // ---------------------------------------------------------
 
 // Variables
-$focus-background-color: #f9bf47;
-$focus-outline-color: #f9bf47;
+$focus-background-color: $color-cobalt-blue;
+$focus-outline-color: $color-cobalt-blue;
 $focus-text-color: #000;
 
 // Text meant only for screen readers.
@@ -58,6 +58,10 @@ $focus-text-color: #000;
   outline: none;
 }
 
+[data-whatinput="keyboard"] *:focus {
+  outline: 2px solid $focus-outline-color !important;
+}
+
 // Make theme keyboard accessible with no Javascript enabled
 .no-js *:focus {
   outline: 4px solid $focus-outline-color;
@@ -78,4 +82,20 @@ $focus-text-color: #000;
 // @link https://a11yproject.com/posts/never-remove-css-outlines/
 *:focus {
   outline: thin dotted $color-cobalt-blue;
+}
+
+// Navigation trap hack
+// @link https://css-tricks.com/a-css-approach-to-trap-focus-inside-of-an-element/
+.lastfocusableitem:not(:focus-within) {
+  color: $color-white;
+  transition: color .01s;
+}
+
+// Prevent tabbing into hidden content
+nav[aria-expanded="false"] {
+  visibility: hidden;
+
+  * {
+    visibility: hidden;
+  }
 }

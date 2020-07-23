@@ -137,7 +137,7 @@ if ( $show_chat_greeting ) {
   <?php endif; ?>
 
   <div id="page" class="site">
-   <a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'dude' ); ?></a>
+   <a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Hyppää sisältöön', 'dude' ); ?></a>
 
    <div class="nav-container">
     <header class="site-header" role="banner">
@@ -169,16 +169,25 @@ if ( $show_chat_greeting ) {
 
       <div class="main-navigation-wrapper" id="main-navigation-wrapper">
 
-        <button id="nav-toggle" class="nav-toggle nav-toggle-desktop hamburger">
+      <nav class="nav-primary-desktop" style="display: none;" aria-label="Työpöydän päävalikko">
+          <ul class="menu-items nav-menu">
+            <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-18"><a href="<?php echo get_the_permalink( 9 ); ?>" data-text="Verkkosivut">Verkkosivut</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-19"><a href="<?php echo get_the_permalink( 4485 ); ?>" data-text="Visuaalinen suunnittelu">Visuaalinen suunnittelu</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4482"><a href="<?php echo get_the_permalink( 4493 ); ?>" data-text="Töitämme">Töitämme</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-22"><a href="<?php echo get_the_permalink( 4487 ); ?>" data-text=">Ota yhteyttä">Ota yhteyttä</a></li>
+          </ul>
+        </nav><!-- #nav -->
+
+        <button id="nav-toggle" class="nav-toggle nav-toggle-desktop hamburger firstfocusableitem">
           <span class="hamburger-box">
             <span class="hamburger-inner"></span>
           </span>
-          <span id="nav-toggle-label" class="screen-reader-text" aria-label="<?php esc_attr_e( 'Menu', 'dude' ); ?>" class="toggle-text"><?php esc_attr_e( 'Lisää', 'dude' ); ?></span>
+          <span id="nav-toggle-label" class="screen-reader-text toggle-text"><?php esc_attr_e( 'Avaa valikko', 'dude' ); ?></span>
         </button>
 
-        <nav id="nav" class="nav-primary" aria-expanded="false" aria-label="Mobiilivalikko">
+        <nav id="nav" class="nav-primary" aria-expanded="false" aria-label="Mobiilivalikko" tabindex="-1">
           <p class="top-button-holder">
-            <a href="<?php echo esc_url( get_the_permalink( 6357 ) ); ?>" class="button button-glitch">Aloitetaan projektisi<?php include get_theme_file_path( '/svg/arrow-right.svg' ); ?></a>
+            <a href="<?php echo esc_url( get_the_permalink( 6357 ) ); ?>" class="button button-glitch start-project">Aloitetaan projektisi<?php include get_theme_file_path( '/svg/arrow-right.svg' ); ?></a>
           </p>
 
           <div class="container">
@@ -221,7 +230,7 @@ if ( $show_chat_greeting ) {
                   <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_the_permalink( 9 ); ?>">Verkkosivut</a></li>
                   <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_the_permalink( 4485 ); ?>">Suunnittelu</a></li>
                   <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_post_type_archive_link( 'reference' ); ?>">Töitämme</a></li>
-                  <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_the_permalink( 4487 ); ?>">Yhteys</a></li>
+                  <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a id="lastfocusableitem" href="<?php echo get_the_permalink( 4487 ); ?>">Yhteys</a></li>
                 </ul>
               </div>
             </div>
@@ -251,15 +260,6 @@ if ( $show_chat_greeting ) {
           </div>
 
         </nav>
-
-        <nav class="nav-primary-desktop" style="display: none;" aria-label="Työpöydän päävalikko">
-          <ul class="menu-items nav-menu">
-            <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-18"><a href="<?php echo get_the_permalink( 9 ); ?>" data-text="Verkkosivut">Verkkosivut</a></li>
-            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-19"><a href="<?php echo get_the_permalink( 4485 ); ?>" data-text="Visuaalinen suunnittelu">Visuaalinen suunnittelu</a></li>
-            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4482"><a href="<?php echo get_the_permalink( 4493 ); ?>" data-text="Töitämme">Töitämme</a></li>
-            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-22"><a href="<?php echo get_the_permalink( 4487 ); ?>" data-text=">Ota yhteyttä">Ota yhteyttä</a></li>
-          </ul>
-        </nav><!-- #nav -->
       </div>
 
     </header>
