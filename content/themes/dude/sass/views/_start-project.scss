@@ -15,6 +15,14 @@ body.page-id-6357 .block.block-wide-text {
 
     h2 {
       @extend %general-heading-large;
+
+      @media (max-width: 760px) {
+        margin-bottom: $padding-blocks-medium;
+      }
+
+      @media (max-width: $container-mobile) {
+        margin-bottom: $padding-blocks-small;
+      }
     }
   }
 
@@ -235,8 +243,8 @@ body.page-id-6357 .block.block-wide-text {
       font-size: 19px;
     }
 
-    @media (max-width: 450px) {
-      font-size: 13px;
+    @media (max-width: $container-mobile) {
+      font-size: 12px;
     }
   }
 
