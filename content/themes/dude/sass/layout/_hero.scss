@@ -113,6 +113,11 @@
     background-color: rgba(3, 6, 27, .25);
     opacity: 1;
     z-index: 3;
+
+    // Ensure contrast on mobile devices {
+    @media (max-width: 760px) {
+      background-color: rgba(3, 6, 27, .45);
+    }
   }
 
   // Merch hero
