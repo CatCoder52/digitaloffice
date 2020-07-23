@@ -88,7 +88,8 @@ $form_description = get_field( 'form_description' );
 
         <div class="splash">
           <header class="survey-header">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/survey-logo.png" alt="Nyt voi antaa palautetta" />
+            <?php include get_theme_file_path( '/svg/logo.svg' ); ?>
+
 
             <?php if ( ! empty( $form_title ) ) : ?>
               <h1><?php echo $form_title; ?></h1>
