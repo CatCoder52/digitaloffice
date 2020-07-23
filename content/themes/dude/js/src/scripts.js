@@ -608,6 +608,18 @@ swup.on("contentReplaced", function () {
 
   // Document ready start
   $(function () {
+    // 404 easter egg
+    if ( jQuery("body").hasClass("error404") === true ) {
+      jQuery(document).bind('keydown keyup', function(e) {
+        if ( e.which === 116 ) {
+          window.location.href = dude_screenReaderText.homeurl;
+        }
+        if ( e.which === 82 && e.ctrlKey ) {
+          window.location.href = dude_screenReaderText.homeurl;
+        }
+      });
+    }
+
     // Apple.com fade in all content that have opacity-on-load class
     setTimeout(function() {
       $('.opacity-on-load').addClass('fade-in');

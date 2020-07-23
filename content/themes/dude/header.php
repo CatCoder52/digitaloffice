@@ -111,6 +111,7 @@ if ( $show_chat_greeting ) {
 <div class="site" id="swup">
 
 <!-- Glitch effects for buttons -->
+<?php if ( ! preg_match( '/11.1.2 Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : // phpcs:ignore ?>
 <svg aria-hidden="true" style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg-sprite">
     <defs>
         <filter id="filter">
@@ -119,6 +120,7 @@ if ( $show_chat_greeting ) {
         </filter>
     </defs>
 </svg>
+<?php endif; ?>
 
   <?php if ( is_page( 4485 ) ) : ?>
     <div id="blueimp-gallery" class="blueimp-gallery" aria-hidden="true">

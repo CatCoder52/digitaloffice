@@ -9,20 +9,23 @@
 
 get_header(); ?>
 
+<div class="overlay overlay--scanline" aria-hidden="true"></div>
+<div class="overlay overlay--vignette" aria-hidden="true"></div>
+
 	<main role="main" id="main" class="site-main">
 		<div class="container">
 
       <section class="block block-hero block-hero-404">
-        <div class="container opacity-on-load-instant">
+        <div class="container">
 
           <div class="content">
-            <h1>Voi prkl! 404! 666!</h1>
+            <h1 class="screen-reader-text">Sivua ei löydy</h1>
 
             <div class="hero-description">
-              <p>Sivua tai tiedostoa ei löydy, eikä täällä ei ole mitään nähtävää, sori!</p>
+              <p><span class="dudefi">dude.fi</span></p>
+              <p>Sivustolla on tapahtunut ongelma, virhe 404 kohdassa <?php echo esc_html( filter_input( INPUT_SERVER, 'REQUEST_URI' ) ); ?>. Etsimääsi sivua tai tiedostoa ei löydy, se on saatettu poistaa tai siirtää.</p>
+              <p class="press-f5">Paina F5 jatkaaksesi <span class="blink">_</span></p>
             </div>
-
-            <p><a class="cta-link cta-link-white" href="<?php echo get_home_url(); ?>">Takaisin etusivulle</a></p>
           </div>
 
         </div>
