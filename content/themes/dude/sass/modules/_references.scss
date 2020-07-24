@@ -38,7 +38,7 @@
     width: 115px;
     position: relative;
     text-align: center;
-    font-size: $font-min-size;
+    font-size: var(--font-size-general-small);
 
     @media (max-width: $grid-base-size + 150px) {
       margin-right: 2rem;

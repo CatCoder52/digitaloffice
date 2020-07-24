@@ -411,12 +411,12 @@ body {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      font-size: $font-size-general-small;
+      font-size: var(--font-size-general-small);
       width: 100%;
       text-align: left;
 
       .button {
-        font-size: $font-size-general-small;
+        font-size: var(--font-size-general-small);
         width: 100%;
         text-align: left;
         display: flex;

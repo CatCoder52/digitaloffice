@@ -28,7 +28,7 @@ body.page-template-template-faq .block.block-hero.block-hero-light.block-hero-fa
       display: block;
 
       @media (max-width: 700px) {
-        font-size: $font-size-general-small;
+        font-size: var(--font-size-general-small);
         margin-right: 6px;
         padding: 5px 16px;
       }

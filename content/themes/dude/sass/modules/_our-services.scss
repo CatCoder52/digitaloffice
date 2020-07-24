@@ -59,11 +59,7 @@
     }
 
     p {
-      font-size: $font-size-general-small;
-
-      @media (max-width: $container-mobile) {
-        font-size: $font-min-size;
-      }
+      font-size: var(--font-size-general-small);
     }
 
     .col-inner {

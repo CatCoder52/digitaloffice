@@ -56,7 +56,7 @@
 
   .col p {
     @media (min-width: $container-ipad) {
-      font-size: $font-size-general-small;
+      font-size: var(--font-size-general-small);
     }
   }
 }

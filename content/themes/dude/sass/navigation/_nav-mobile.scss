@@ -54,7 +54,7 @@ $nav-open-from-top: false;
       }
 
       li a {
-        font-size: $font-size-general-small;
+        font-size: var(--font-size-general-small);
       }
     }
   }

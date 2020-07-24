@@ -33,7 +33,7 @@ body.single .block.block-single:not(.block-single-reference) {
       font-size: 18px;
 
       @media (max-width: 420px) {
-        font-size: $font-size-general-small;
+        font-size: var(--font-size-general-small);
       }
     }
 
@@ -85,6 +85,10 @@ body.single .block.block-single:not(.block-single-reference) {
     line-height: 1.75;
     margin-top: 2.7rem;
     margin-bottom: 2.7rem;
+
+    @media (max-width: 600px) {
+      font-size: var(--font-size-general-small);
+    }
   }
 
   .post > .gutenberg-content blockquote p {
@@ -165,7 +169,7 @@ body.single .block.block-single:not(.block-single-reference) {
 
   .cat a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link) {
     margin: 0 13px 13px 0;
-    font-size: $font-size-general-small;
+    font-size: var(--font-size-general-small);
     border: 1px solid $color-midnight-blue;
     padding: 7px 17px;
     line-height: 1;
@@ -417,7 +421,7 @@ body.single .block.block-single:not(.block-single-reference) {
       opacity: .5;
       margin-top: 0;
       margin-bottom: $margin-between-text-elements;
-      font-size: $font-size-general-small;
+      font-size: var(--font-size-general-small);
 
       @media (min-width: 850px) {
         font-size: 20px;
@@ -426,13 +430,13 @@ body.single .block.block-single:not(.block-single-reference) {
 
     .cta-link {
       @media (max-width: 850px) {
-        font-size: $font-size-general-small;
+        font-size: var(--font-size-general-small);
       }
     }
 
     p.person-description {
       margin: 0;
-      font-size: $font-size-general-small;
+      font-size: var(--font-size-general-small);
 
       @media (min-width: 850px) {
         font-size: 20px;

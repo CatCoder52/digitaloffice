@@ -23,7 +23,7 @@
     width: 177px;
     position: relative;
     text-align: center;
-    font-size: $font-min-size;
+    font-size: var(--font-size-general-small);
 
     @media (max-width: $grid-base-size + 150px) {
       margin-left: 2rem;
@@ -152,16 +152,20 @@
 
     @media (max-width: $container-mobile) {
       .description p:not(.reviewer) {
-        font-size: $font-size-general-small;
+        font-size: var(--font-size-general-small);
       }
     }
 
     p:not(.reviewer) {
       @include responsive-font($font-min-size, 34px);
+
+      @media (max-width: 600px) {
+        font-size: var(--font-size-general-small);
+      }
     }
 
     .reviewer {
-      font-size: $font-min-size;
+      font-size: var(--font-size-general-small);
       margin: 0;
     }
   }

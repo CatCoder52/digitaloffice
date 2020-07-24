@@ -21,7 +21,7 @@
       margin-bottom: $margin-between-text-elements;
 
       p {
-        font-size: $font-size-general-small;
+        font-size: var(--font-size-general-small);
       }
 
       p:last-child {

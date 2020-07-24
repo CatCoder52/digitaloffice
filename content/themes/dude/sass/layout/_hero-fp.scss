@@ -85,8 +85,11 @@
     .content-sub-statement {
       @include responsive-font($font-size-general-small, 20px);
       color: $color-midnight;
-      font-size: $font-size-general-small;
+      font-size: var(--font-size-general-small);
 
+      @media (max-width: 600px) {
+        font-size: var(--font-size-general-small);
+      }
 
       // iPhones
       @media (max-width: 360px) {

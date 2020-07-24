@@ -38,12 +38,6 @@
   }
 }
 
-// Text styles
-.text-smaller,
-%text-smaller {
-  @include responsive-font($font-size-general-small, 18px);
-}
-
 // Special links
 .cta-link,
 %cta-link {
@@ -154,6 +148,10 @@ tr,
   @include responsive-font($font-min-size, $font-max-size);
   line-height: $font-base-line-height;
   font-weight: 400;
+
+  @media (max-width: 600px) {
+    font-size: var(--font-size-general-small);
+  }
 }
 
 @media (max-width: $container-ipad) {

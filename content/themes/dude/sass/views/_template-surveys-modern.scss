@@ -53,7 +53,7 @@ body.template-surveys-modern {
   }
 
   .gform_wrapper .description_above .gfield_description {
-    font-size: $font-size-general-small;
+    font-size: var(--font-size-general-small);
     padding: 0 0 30px;
     text-align: center;
     max-width: 700px;
@@ -344,7 +344,7 @@ body.template-surveys-modern {
       }
 
       @media (max-width: 400px) {
-        font-size: $font-size-general-small;
+        font-size: var(--font-size-general-small);
         margin-bottom: 2rem;
       }
     }
@@ -689,7 +689,7 @@ body.template-surveys-modern {
         padding-bottom: 18px !important;
 
         @media (max-width: 900px) {
-          font-size: $font-size-general-small !important;
+          font-size: var(--font-size-general-small) !important;
         }
       }
     }

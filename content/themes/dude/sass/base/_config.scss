@@ -47,6 +47,18 @@ $font-base-line-height: 1.5;
 $font-headigns-line-height: 1.23;
 $headings-weight: 500;
 
+// CSS vars
+:root {
+  --font-size-general-small: #{$font-size-general-small};
+}
+
+// Exceptions in font sizes
+@media (min-width: 420px) and (max-width: 600px) {
+  :root {
+    --font-size-general-small: 18px;
+  }
+}
+
 // Breakpoints
 $grid-type: fluid; // 'fluid' or 'snappy'
 $layout-max-width: 100%;

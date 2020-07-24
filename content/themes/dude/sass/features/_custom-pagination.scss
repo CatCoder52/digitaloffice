@@ -14,7 +14,7 @@
   align-items: flex-start;
   justify-content: flex-start;
   width: 100%;
-  font-size: $font-size-general-small;
+  font-size: var(--font-size-general-small);
   margin-top: $padding-blocks-medium;
 
   a {

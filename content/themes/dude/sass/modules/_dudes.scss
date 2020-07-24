@@ -65,7 +65,7 @@
     }
 
     p {
-      font-size: $font-size-general-small;
+      font-size: var(--font-size-general-small);
       font-weight: 400;
       margin: 0;
 

@@ -326,7 +326,7 @@ body.page-template-template-community-code .block.block-hero.block-hero-light {
     }
 
     ul li {
-      font-size: $font-size-general-small;
+      font-size: var(--font-size-general-small);
       margin-right: 2.5rem;
 
       &:nth-child(3) svg {
@@ -341,7 +341,7 @@ body.page-template-template-community-code .block.block-hero.block-hero-light {
     ul li,
     p,
     h3 {
-      font-size: $font-size-general-small;
+      font-size: var(--font-size-general-small);
     }
 
     ul li,

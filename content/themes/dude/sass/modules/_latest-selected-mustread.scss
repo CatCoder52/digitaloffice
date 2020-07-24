@@ -127,7 +127,7 @@ $offset-x: 6.4rem;
     }
 
     p {
-      font-size: $font-size-general-small;
+      font-size: var(--font-size-general-small);
       color: $color-white;
       margin-top: 0;
     }

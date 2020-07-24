@@ -21,7 +21,7 @@ $submit-width: 33px;
 
   @media (max-width: 380px) {
     .button {
-      font-size: $font-size-general-small;
+      font-size: var(--font-size-general-small);
     }
   }
 

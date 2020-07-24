@@ -329,7 +329,7 @@
       figcaption {
         width: 100%;
         color: $color-white;
-        font-size: $font-size-general-small;
+        font-size: var(--font-size-general-small);
         padding: 0 2rem;
         line-height: 1.55;
         margin-bottom: $margin-between-text-elements;

@@ -97,6 +97,10 @@
     font-family: $font-base !important;
     color: $color-body;
 
+    @media (max-width: 600px) {
+      font-size: var(--font-size-general-small);
+    }
+
     > a:not(.button):not(.post-edit-link):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link) {
       @extend %textlink;
       position: relative;
@@ -114,6 +118,10 @@
   strong {
     @include responsive-font($font-min-size, $font-max-size);
     font-family: $font-base !important;
+
+    @media (max-width: 600px) {
+      font-size: var(--font-size-general-small);
+    }
   }
 
   h1,
