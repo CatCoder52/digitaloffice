@@ -41,14 +41,14 @@ const swup = new Swup({
 swup.on("contentReplaced", function () {
 
     // Accessibility: Ensure back to top is right color on right background
-    var stickyOffset = $(".back-to-top").offset();
-    var $contentDivs = $(".block");
-    $(document).scroll(function() {
+    var stickyOffset = jQuery(".back-to-top").offset();
+    var $contentDivs = jQuery(".block");
+    jQuery(document).scroll(function() {
       $contentDivs.each(function(k) {
-        var _thisOffset = $(this).offset();
-        var _actPosition = _thisOffset.top - $(window).scrollTop();
-        if (_actPosition < stickyOffset.top && _actPosition + $(this).height() > 0) {
-          $(".back-to-top").removeClass("has-light-bg has-dark-bg").addClass($(this).hasClass("has-light-bg") ? "has-light-bg" : "has-dark-bg");
+        var _thisOffset = jQuery(this).offset();
+        var _actPosition = _thisOffset.top - jQuery(window).scrollTop();
+        if (_actPosition < stickyOffset.top && _actPosition + jQuery(this).height() > 0) {
+          jQuery(".back-to-top").removeClass("has-light-bg has-dark-bg").addClass(jQuery(this).hasClass("has-light-bg") ? "has-light-bg" : "has-dark-bg");
           return false;
         }
       });

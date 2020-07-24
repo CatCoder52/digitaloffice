@@ -144,18 +144,12 @@
     return date < anAgo;
   };
 
+  // Init chatboxvisible
+  chatboxVisible = 0;
+
   if (typeof Storage !== "undefined") {
-    if (
-      sessionStorage.getItem("chat_greeting_visits") >= 0 &&
-      sessionStorage.getItem("chat_greeting_sent") === null
-    ) {
-      // Send chat if user has visited over 0 pages and greeting still not sent
-      jQuery("body").addClass("chat-box-visible");
-      setTimeout(function () {
-        maybeSendChatGreeting();
-      }, 4500);
-    } else if (sessionStorage.getItem("chat_greeting_sent") === null) {
-      // send greeting if not sent before
+    if (sessionStorage.getItem("chat_greeting_sent") === null && sessionStorage.getItem("chat_greeting_closed") !== null ) {
+      // Send greeting if not sent before
 
       // Init timer
       TimeMe.initialize({
@@ -164,16 +158,13 @@
       });
 
       // Trigger chat after X seconds
-      TimeMe.callAfterTimeElapsedInSeconds(5, function () {
-        jQuery("body").addClass("chat-box-visible");
+      // TimeMe.callAfterTimeElapsedInSeconds(5, function () {
+        chatboxVisible = 1;
         maybeSendChatGreeting();
-      });
-    } else if (
-      moreThanGreetingThresholdAgo(
-        new Date(sessionStorage.getItem("chat_greeting_sent"))
-      )
-    ) {
-    // Send chat if last time over day ago
+      // });
+
+    // If more than 5 minutes ago
+    } else if (moreThanGreetingThresholdAgo( new Date( sessionStorage.getItem("chat_greeting_sent") ) ) ) {
 
       // Init timer
       TimeMe.initialize({
@@ -182,41 +173,55 @@
       });
 
       // Trigger chat after X seconds
-      TimeMe.callAfterTimeElapsedInSeconds(5, function () {
+      // TimeMe.callAfterTimeElapsedInSeconds(5, function () {
         maybeSendChatGreeting();
-      });
+      // });
 
     } else {
       // Send if none of above apply
-      // ...if chat box is not visible of course
-      if ( jQuery("body").hasClass("chat-box-visible") === false ) {
 
-        // Convert sessionStorage time to unix timestamp
-        var dateString = sessionStorage.getItem("chat_greeting_sent"),
-        dateTimeParts = dateString.split(', '),
-        timeParts = dateTimeParts[1].split(':'),
-        dateParts = dateTimeParts[0].split('/'),
-        saveddate;
-        saveddate = new Date(dateParts[2], parseInt(dateParts[1], 10) - 1, dateParts[0], timeParts[0], timeParts[1]);
-        timepassed = saveddate + 300; // Time greeting has been sent + 5 minutes (300 seconds)
+        // If we don't have closed time
+        if (sessionStorage.getItem("chat_greeting_closed") === null) {
+          var dateString = sessionStorage.getItem("chat_greeting_sent"),
+          dateTimeParts = dateString.split(', '),
+          timeParts = dateTimeParts[1].split(':'),
+          dateParts = dateTimeParts[0].split('/'),
+          saveddate;
+          saveddate = new Date(dateParts[2], parseInt(dateParts[1], 10) - 1, dateParts[0], timeParts[0],  timeParts[1]);
+          timepassed = saveddate + 300; // Time greeting has been sent + 5 minutes (300 seconds)
 
-        // And if it has passed 5 minutes from last time shown
+        // If we do have closed time
+        } else {
+          // Convert sessionStorage time to unix timestamp
+          var dateString = sessionStorage.getItem("chat_greeting_closed"),
+          dateTimeParts = dateString.split(', '),
+          timeParts = dateTimeParts[1].split(':'),
+          dateParts = dateTimeParts[0].split('/'),
+          saveddate;
+          saveddate = new Date(dateParts[2], parseInt(dateParts[1], 10) - 1, dateParts[0], timeParts[0],  timeParts[1]);
+          timepassed = saveddate + 300; // Time greeting has been sent + 5 minutes (300 seconds)
+        }
+
+        // And if it has passed 5 minutes from last time closed
         if ( Date.now() > timepassed ) {
 
-          setTimeout(function () {
-            jQuery("body").addClass("chat-box-visible");
+          // Set timeout for 10 seconds
+          // setTimeout(function () {
+            chatboxVisible = 1;
             maybeSendChatGreeting();
-          }, 10000);
+          // }, 10000);
 
         }
 
+        // Test times:
         // console.log(saveddate.getTime()); //1379426880000
         // console.log(saveddate); //Tue Sep 17 2013 10:08:00 GMT-0400
 
-      }
-
     } // end if send chat check
   } // end storage check
+
+  // Test sessionStorage:
+  console.log( sessionStorage.getItem("chat_greeting_sent") );
 
   function maybeSendChatGreeting() {
 
