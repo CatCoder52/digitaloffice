@@ -97,18 +97,6 @@ swup.on("contentReplaced", function () {
   });
 
   //navigation.js
-  /*
-An accessible menu for WordPress
-
-https://github.com/theme-smith/accessible-nav-wp
-Kirsten Smith (kirsten@themesmith.co.uk)
-Licensed GPL v.2 (http://www.gnu.org/licenses/gpl-2.0.html)
-
-This work derived from:
-https://github.com/WordPress/twentysixteen (GPL v.2)
-https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-arrow-nav (GPL v.2)
-*/
-
 (function ($) {
   // Define nav stuff
   var menuContainer = jQuery(".nav-container");
@@ -364,7 +352,13 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
     menu.className += " nav-menu";
   }
 
+  // Accessibility: Init nav opened status
+  navOpened = false;
+
   button.onclick = function () {
+
+    // Toggle boolean
+    navOpened ^= true;
 
     if (-1 !== container.className.indexOf("is-active")) {
       closeMenu(); // Close menu.
@@ -394,31 +388,26 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
       // lastFocusableElement = focusableElements[focusableElements.length - 1];
       lastFocusableElement = document.getElementById("lastfocusableitem");
 
-      //console.log(focusableElements);
-
       // Redirect last Tab to first focusable element.
       lastFocusableElement.addEventListener("keydown", function (e) {
         if (e.keyCode === 9 && !e.shiftKey) {
 
-          e.preventDefault();
-          firstFocusableElement.focus(); // Set focus on first element - that's actually close menu button.
+          if (navOpened === 1) {
+            e.preventDefault();
+            firstFocusableElement.focus(); // Set focus on first element - that's actually close menu button.
+          }
         }
       });
 
       // Redirect first Shift+Tab to toggle button element.
       firstFocusableElement.addEventListener("keydown", function (e) {
-        if (e.keyCode === 9 && e.shiftKey) {
-          e.preventDefault();
-          lastFocusableElement.focus(); // Set focus on last element.
-        }
-      });
 
-      // Redirect Shift+Tab from the toggle button to last focusable element.
-      button.addEventListener("keydown", function (e) {
-        if (e.keyCode === 9 && e.shiftKey) {
+        if (navOpened === 1) {
+          if (e.keyCode === 9 && e.shiftKey) {
 
-          e.preventDefault();
-          lastFocusableElement.focus(); // Set focus on last element.
+            e.preventDefault();
+            lastFocusableElement.focus(); // Set focus on last element.
+          }
         }
       });
     }
@@ -454,6 +443,7 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
 
   // Close menu function.
   function closeMenu() {
+    navOpened = 0;
     body.className = body.className.replace(" js-nav-active", "");
     container.className = container.className.replace(" is-active", "");
     button.className = button.className.replace(" is-active", "");
