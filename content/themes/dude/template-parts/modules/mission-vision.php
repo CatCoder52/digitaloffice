@@ -3,7 +3,7 @@
  * @Author: Roni Laukkarinen
  * @Date:   2020-07-16 17:32:53
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-23 14:08:49
+ * @Last Modified time: 2020-07-24 15:07:20
  * @package dude
  */
 
@@ -20,7 +20,7 @@
 
         <div>
           <h2>Missiomme</h2>
-          <p>Suunnittelemme ja jalostamme asiakkaidemme ideoista verkkopalveluita, joilla uskomme olevan merkitystä yhteiskunnassamme. Laatu ja kokemus suunnittelussa sekä teknisessä toteutuksessa ovat yrityksemme kruunun jalokivet.</p>
+          <p>Suunnittelemme ja toteutamme laadukkaita verkkosivustoja ja -palveluja, joiden avulla asiakkaidemme liikevaihto, tulos ja brändin tunnettuus kasvavat. </p>
         </div>
       </div>
 
@@ -31,7 +31,7 @@
 
         <div>
           <h2>Visiomme</h2>
-          <p>Tavoitteenamme on kasvaa vakaasti ja hallitusti tuottaen asiakkaillemme laadukkaita verkkosivuja, verkkopalveluita ja yritysilmeitä. Haluamme nähdä asiakkaidemme liikevaihdon ja tuloksen kasvavan ansiostamme.</p>
+          <p>Haluamme kasvaa hallitusti Suomen halutuimmaksi ja tunnetuimmaksi WordPress-sivustojen ja verkkopalveluiden toteuttajaksi.</p>
         </div>
       </div>
 
