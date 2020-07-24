@@ -33,7 +33,7 @@ if ( has_post_thumbnail() ) {
 
 <section class="block block-hero is-centered has-dark-bg block-hero-single<?php if ( $video_bg ) : ?> has-video<?php endif; ?><?php if ( $post_year <= $now_year - 2 ) : ?> is-old<?php endif; ?>">
 
-  <div class="shade"></div>
+  <div class="shade" aria-hidden="true"></div>
   <div class="featured-image">
     <?php image_lazyload_div( get_post_thumbnail_id( $post->ID ) ); ?>
     <?php if ( $video_bg ) : ?>

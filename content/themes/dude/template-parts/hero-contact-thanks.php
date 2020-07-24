@@ -12,7 +12,7 @@
 
 <section class="block block-hero block-hero-contact-thanks has-dark-bg">
 
-    <div class="shade"></div>
+    <div class="shade" aria-hidden="true"></div>
     <div class="vimeo-wrapper">
       <iframe data-no-lazy="1" id="video" src="https://player.vimeo.com/video/9778852?autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=1#t=24s" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay; fullscreen" title="Mr Oizo - Flat beat"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
     </div>

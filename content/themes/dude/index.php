@@ -117,7 +117,7 @@ get_header(); ?>
                   $video_bg = get_post_meta( get_the_id(), 'article_video', true );
                   if ( $video_bg ) :
 						      ?>
-                  <div class="shade"></div>
+                  <div class="shade" aria-hidden="true"></div>
                   <div class="vimeo-wrapper vimeo-wrapper-upsell">
                     <iframe src="https://player.vimeo.com/video/<?php echo str_replace( array( 'http:', 'https:', 'vimeo.com', '/' ), '', $video_bg ) ?>?background=1&autoplay=1&loop=1&byline=0&title=0"
                       frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>

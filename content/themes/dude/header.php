@@ -115,8 +115,8 @@ if ( $show_chat_greeting ) {
 <svg aria-hidden="true" style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg-sprite">
     <defs>
         <filter id="filter">
-            <feTurbulence type="fractalNoise" baseFrequency="0.000001 0.000001" numOctaves="1" result="warp" seed="1"></feTurbulence>
-            <feDisplacementMap xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp"></feDisplacementMap>
+            <feTurbulence aria-hidden="true" type="fractalNoise" baseFrequency="0.000001 0.000001" numOctaves="1" result="warp" seed="1"></feTurbulence>
+            <feDisplacementMap aria-hidden="true" xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp"></feDisplacementMap>
         </filter>
     </defs>
 </svg>
@@ -179,8 +179,8 @@ if ( $show_chat_greeting ) {
         </nav><!-- #nav -->
 
         <button id="nav-toggle" class="nav-toggle nav-toggle-desktop hamburger firstfocusableitem">
-          <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
+          <span class="hamburger-box" aria-hidden="true">
+            <span class="hamburger-inner" aria-hidden="true"></span>
           </span>
           <span id="nav-toggle-label" class="screen-reader-text toggle-text"><?php esc_attr_e( 'Avaa valikko', 'dude' ); ?></span>
         </button>
@@ -241,7 +241,7 @@ if ( $show_chat_greeting ) {
 
             <div class="cols cols-contact show-on-mobile">
               <div class="col">
-                <h3 class="contact-title">Asiakkuudet</h3>
+                <h3 class="contact-title contact-title-mobile">Asiakkuudet</h3>
                 <p>Kristian Hohkavaara<br/>
                   <a href="tel:0408351033">040 835 1033</a><br/>
                   <a href="mailto:kristian@dude.fi">kristian@dude.fi</a>
@@ -249,7 +249,7 @@ if ( $show_chat_greeting ) {
               </div>
 
               <div class="col">
-                <h3 class="contact-title">Yhteys</h3>
+                <h3 class="contact-title contact-contact-mobile">Yhteys</h3>
                 <p>
                   <a href="mailto:moro@dude.fi">moro@dude.fi</a><br/>
                   <button class="chat open-chat open-chat-contact" aria-label="Avaa chat" tabindex="0">Avaa chat!</button>

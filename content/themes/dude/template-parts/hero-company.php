@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-23 13:55:25
+ * @Last Modified time: 2020-07-24 11:16:13
  *
  * @package dude
  */
@@ -33,9 +33,9 @@ if ( ! empty( $title_alt ) ) {
   </div>
 
   <div class="visual" aria-hidden="true">
-    <div class="background-image preview lazyload" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/dude-visual-20.jpg');" data-src="<?php echo get_template_directory_uri(); ?>/images/dude-visual.jpg" data-src-mobile="<?php echo get_template_directory_uri(); ?>/images/dude-visual.jpg"></div>
-    <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) :  // phpcs:ignore ?> style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/dude-visual.jpg');"<?php endif; ?>></div>
-    <noscript><div class="background-image full-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/dude-visual.jpg');"></div></noscript>
+    <div aria-hidden="true" class="background-image preview lazyload" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/dude-visual-20.jpg');" data-src="<?php echo get_template_directory_uri(); ?>/images/dude-visual.jpg" data-src-mobile="<?php echo get_template_directory_uri(); ?>/images/dude-visual.jpg"></div>
+    <div aria-hidden="true" class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) :  // phpcs:ignore ?> style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/dude-visual.jpg');"<?php endif; ?>></div>
+    <noscript><div aria-hidden="true" class="background-image full-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/dude-visual.jpg');"></div></noscript>
   </div>
 
 </section>

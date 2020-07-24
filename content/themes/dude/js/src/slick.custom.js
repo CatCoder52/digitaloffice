@@ -192,7 +192,8 @@
         var _ = this;
 
         _.$slideTrack.find('.slick-active').attr({
-            'aria-hidden': 'false'
+            // ASLint: You have defined aria-hidden="false". Caution, as the child content is always readable by screen readers regardless of setting display: none on any child element.
+            // 'aria-hidden': 'false'
         }).find('a, input, button, select').attr({
             'tabindex': '0'
         });

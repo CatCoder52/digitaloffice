@@ -11,7 +11,7 @@
 ?>
 
 <section class="block block-hero block-hero-contact-thanks has-dark-bg">
-  <div class="shade"></div>
+  <div class="shade" aria-hidden="true"></div>
   <div class="vimeo-wrapper"><iframe data-no-lazy="1" style="min-width: 220.77vh;" src="https://www.youtube.com/embed/wTP2RUD_cL0?start=74&autoplay=1&modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&fs=0&color=white&controls=0&disablekb=1" width="560" height="315" frameborder="0" allow='autoplay'></iframe></div>
 
   <div class="container">
