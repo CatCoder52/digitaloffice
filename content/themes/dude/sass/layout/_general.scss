@@ -243,14 +243,14 @@ a.global-link {
 }
 
 %general-heading-large {
-  @include responsive-font($font-size-general-headings-mobile, $font-size-general-headings-desktop);
+  @include responsive-font(36px, $font-size-general-headings-desktop);
   margin-bottom: 4rem;
   margin-top: 0;
   line-height: 1.5;
   font-weight: 400;
 
   @media (max-width: $container-mobile) {
-    font-size: 24px;
+    font-size: 36px;
     font-weight: 500;
   }
 
