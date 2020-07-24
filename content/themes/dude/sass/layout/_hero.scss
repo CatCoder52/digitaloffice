@@ -99,7 +99,22 @@
     margin-bottom: 5rem;
     width: 100%;
 
-    p {
+    button,
+    button.open-chat {
+      @extend %textlink;
+      font-weight: 700;
+      background: transparent;
+      border-radius: 0;
+      padding: 0;
+      border: 0;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    p,
+    button {
       font-weight: 400;
       max-width: 80rem;
 
@@ -162,7 +177,8 @@
 }
 
 .block.block-hero.block-hero-light {
-  p {
+  p,
+  .button {
     @extend %general-heading-small;
   }
 
