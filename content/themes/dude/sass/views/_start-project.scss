@@ -10,6 +10,11 @@ body.page-id-6357 .block.block-wide-text {
   padding-top: 0;
   padding-bottom: 2rem;
 
+  .gform_wrapper form li,
+  .gform_wrapper li {
+    overflow: visible !important;
+  }
+
   .container {
     max-width: $grid-base-size;
 
