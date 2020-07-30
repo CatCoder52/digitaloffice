@@ -6,9 +6,10 @@
 // ---------------------------------------------------------
 
 // Variables
-$focus-background-color: $color-cobalt-blue;
-$focus-outline-color: $color-cobalt-blue;
+$focus-outline-color: #4d4aff;
 $focus-text-color: #000;
+$focus-outline-style: 2px solid;
+$focus-outline-style-large-elements: 4px solid;
 
 // Text meant only for screen readers.
 .screen-reader-text {
@@ -25,6 +26,12 @@ $focus-text-color: #000;
 
   &.skip-link {
     margin: 5px;
+
+    &:focus {
+      background: $color-white;
+      color: $focus-outline-color;
+      outline: 2px solid $focus-outline-color;
+    }
   }
 
   &:focus {
@@ -58,13 +65,33 @@ $focus-text-color: #000;
   outline: none;
 }
 
-[data-whatinput="keyboard"] *:focus {
-  outline: 2px solid $focus-outline-color !important;
+// Visually distinct focus color on keyboard
+[data-whatinput="keyboard"] {
+  input:focus,
+  button:focus,
+  select:focus,
+  textarea:focus,
+  div[tabindex]:focus,
+  nav ul li a:focus,
+  div[tabindex]:focus,
+  a:focus {
+    // Normalize the look of the outline across browsers
+    // @link https://a11yproject.com/posts/never-remove-css-outlines/
+    outline: $focus-outline-style $focus-outline-color;
+    color: $focus-text-color;
+    opacity: 1;
+    z-index: 99;
+  }
+
+  // A bit better focus for large elements
+  a.global-link:focus {
+    outline: $focus-outline-style-large-elements $focus-outline-color;
+  }
 }
 
 // Make theme keyboard accessible with no Javascript enabled
 .no-js *:focus {
-  outline: 4px solid $focus-outline-color;
+  outline: $focus-outline-style $focus-outline-color;
 }
 
 // Links within content must be underlined
@@ -81,7 +108,7 @@ $focus-text-color: #000;
 // Normalize the look of the outline across browsers
 // @link https://a11yproject.com/posts/never-remove-css-outlines/
 *:focus {
-  outline: thin dotted $color-cobalt-blue;
+  outline: $focus-outline-style-large-elements $focus-outline-color;
 }
 
 // Navigation trap hack
