@@ -2,6 +2,10 @@
   .block-title {
     @extend %general-heading-alt;
     margin-bottom: $margin-between-grid-columns-large;
+
+    @media (max-width: $container-mobile) {
+      margin-bottom: 4rem;
+    }
   }
 
   .cols {
