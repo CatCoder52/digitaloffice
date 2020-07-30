@@ -147,7 +147,7 @@
   // Init chatboxvisible
   chatboxVisible = 0;
 
-  if (typeof Storage !== "undefined") {
+  if (typeof Storage !== "undefined" && typeof $crisp !== "undefined") {
     if (sessionStorage.getItem("chat_greeting_sent") === null && sessionStorage.getItem("chat_greeting_closed") !== null ) {
       // Send greeting if not sent before
 
@@ -221,7 +221,7 @@
   } // end storage check
 
   // Test sessionStorage:
-  console.log( sessionStorage.getItem("chat_greeting_sent") );
+  //console.log( sessionStorage.getItem("chat_greeting_sent") );
 
   function maybeSendChatGreeting() {
 
