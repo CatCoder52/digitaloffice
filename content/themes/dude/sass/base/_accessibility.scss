@@ -128,7 +128,7 @@ nav[aria-expanded="false"] {
 }
 
 // Add icon to external links
-a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]) {
+a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail) {
   background-image: url('../svg/external-link.svg') !important;
   background-position: right center !important;
   background-repeat: no-repeat !important;
@@ -139,7 +139,7 @@ a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([h
   }
 }
 
-.menu-item a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not([href="dude.fi"]) {
+.menu-item a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not([href="dude.fi"]):not(.contact-detail) {
   background-image: url('../svg/external-link-white.svg') !important;
 }
 
@@ -148,7 +148,7 @@ a[href^="mailto"] {
   padding-right: 0 !important;
 }
 
-.block-footer .menu-item a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]) {
+.block-footer .menu-item a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail) {
   background-size: 12px 12px !important;
   padding-right: 2rem !important;
 }
@@ -165,7 +165,7 @@ a[href^="mailto"] {
 .block.block-timeline .active a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link),
 .block.block-timeline .col a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link),
 .block.block-title-left-text-right li a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
-.wp-block-columns p a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):not([rel]) {
+.wp-block-columns p a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):not([rel]):not(.contact-detail) {
   background-image: url('../svg/external-link.svg') !important;
   background-position: right center !important;
   background-repeat: no-repeat !important;
