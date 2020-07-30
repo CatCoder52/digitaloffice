@@ -27,7 +27,8 @@
     font-weight: 700;
     border: 0;
     width: auto;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     padding: 1.4rem 2.8rem;
     margin-bottom: 0;
     text-decoration: none;
@@ -35,6 +36,7 @@
     cursor: pointer;
     transition: 150ms linear background;
     font-family: $font-base;
+    white-space: nowrap;
 
     &.button-mint {
       background: $color-mint;
@@ -71,10 +73,13 @@
       display: inline-block;
     }
 
-    @media (max-width: 400px) {
-      // Wrap long buttons on mobile
-      display: block;
-      text-align: center;
+    @media (max-width: 420px) {
+      font-size: 16px;
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
     }
 
     &:hover,
