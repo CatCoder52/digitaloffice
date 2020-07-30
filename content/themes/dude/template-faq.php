@@ -47,7 +47,7 @@ get_header(); ?>
 
         <div class="cols cols-two">
           <div class="col">
-            <h3>Okei, no mihin se hinta sitten pohjautuu?</h3>
+            <h3>Okei, no mihin verkkosivujen hinta sitten pohjautuu?</h3>
             <p>Kyllähän tässä työtunneista puhutaan. Mitä enemmän toiveita asiakkaalla, sitä enemmän tunteja meillä menee niiden toteuttamiseen.</p>
 
             <p>Keskimäärin sivustoon käytetään 50-150 tuntia, joka sisältää suunnittelua kuten aloitustapaamisen, materiaalin koostamista ja siihen perehtymistä sekä asiakkaaseen, kilpailijoihin ja toimialaan tutustumista. Tämän jälkeen päästään toteutukseen: Sivuston etusivuun ja muihin sivupohjiin mietitään käyttöliittymä ja visuaalinen ilme, joiden merkeissä istutaan jälleen alas ja jutellaan. Kun tarvittava visuaalinen paketti on kasassa, siirrytään tekniseen toteutukseen, joka jaetaan meillä front- ja back-kehitykseen (suomeksi: sellaisen koodaamista, joka määrittelee miltä kaikki <em>näyttää</em> eli front-end ja miten kaikki <em>toimii</em> eli back-end). Lopuksi usein vielä istutaan porukalla alas ihmettelemään, että miten tulikin taas näin erinomainen sivusto tehtyä.</p>
@@ -63,7 +63,7 @@ get_header(); ?>
 
     <section class="block block-faq" id="yllapito">
       <div class="container">
-        <h2 class="block-title">WordPress-Ylläpito</h2>
+        <h2 class="block-title">WordPress-ylläpito</h2>
 
         <div class="cols cols-two">
           <div class="col">
