@@ -99,3 +99,49 @@ nav[aria-expanded="false"] {
     visibility: hidden;
   }
 }
+
+// Add icon to external links
+a[href*="dude.fi"] {
+  background-image: url('../svg/external-link.svg') !important;
+  background-position: right center !important;
+  background-repeat: no-repeat !important;
+  padding-right: 3.2rem !important;
+
+  @media (max-width: 600px) {
+    background-size: 14px 14px !important;
+  }
+}
+
+.menu-item a[href*="dude.fi"] {
+  background-image: url('../svg/external-link-white.svg') !important;
+}
+
+a[href^="mailto"] {
+  background-image: none !important;
+  padding-right: 0 !important;
+}
+
+.block-footer .menu-item a[href*="dude.fi"] {
+  background-size: 12px 12px !important;
+  padding-right: 2.2rem !important;
+}
+
+// https://davidwalsh.name/external-links-css
+.gutenberg-content a[href*="//"]:not([href*="dude.fi"]):not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
+.block-hero.wp-block-columns .hero-description button,
+.block-hero.wp-block-columns .hero-description button.open-chat,
+.block-timeline.wp-block-columns .active a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link),
+.block-timeline.wp-block-columns .col a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link),
+.block-title-left-text-right.wp-block-columns li a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
+.block.block-hero .hero-description button,
+.block.block-hero .hero-description button.open-chat,
+.block.block-timeline .active a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link),
+.block.block-timeline .col a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link),
+.block.block-title-left-text-right li a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
+.wp-block-columns p a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):not([rel]) {
+  background-image: url('../svg/external-link.svg') !important;
+  background-position: right center !important;
+  background-repeat: no-repeat !important;
+  background-size: 12px 12px !important;
+  padding-right: 2rem !important;
+}

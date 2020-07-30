@@ -171,7 +171,7 @@ body.single .block.block-single:not(.block-single-reference) {
     margin: 0 13px 13px 0;
     font-size: var(--font-size-general-small);
     border: 1px solid $color-midnight-blue;
-    padding: 7px 17px;
+    padding: 7px 17px !important;
     line-height: 1;
     color: $color-midnight-blue;
     text-decoration: none;
@@ -180,6 +180,7 @@ body.single .block.block-single:not(.block-single-reference) {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    background-image: none !important;
 
     &:hover {
       border-color: $color-midnight-blue;
@@ -213,8 +214,25 @@ body.single .block.block-single:not(.block-single-reference) {
         color: rgba($color-midnight-blue, .6);
         border-width: 1px;
         border-radius: 2px;
-        padding: .2em .6em;
+        padding: .2em .6em !important;
+        background-image: none !important;
         font-weight: 400;
+
+        &:not([href*="dude.fi"]):not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
+        .block-hero.wp-block-columns .hero-description button,
+        .block-hero.wp-block-columns .hero-description button.open-chat,
+        .block-timeline.wp-block-columns .active a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link),
+        .block-timeline.wp-block-columns .col a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link),
+        .block-title-left-text-right.wp-block-columns li a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
+        .block.block-hero .hero-description button,
+        .block.block-hero .hero-description button.open-chat,
+        .block.block-timeline .active a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link),
+        .block.block-timeline .col a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link),
+        .block.block-title-left-text-right li a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
+        .wp-block-columns p a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):not([rel]) {
+          padding: .2em .6em !important;
+          background-image: none !important;
+        }
       }
 
       a:after {

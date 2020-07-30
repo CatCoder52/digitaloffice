@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 18:54:41
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-24 11:18:27
+ * @Last Modified time: 2020-07-30 13:44:02
  *
  * @package dude
  */
@@ -40,7 +40,12 @@
 
         <div class="row">
           <h2 class="action" data-label="Aamupalaverit vietetään joka maanantai. Kauppakatu 14 tiloissa on tilaa useammallekin ihmiselle." data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2019.jpg' ) ?>">2019</h2>
-          <button tabindex="0" class="action" data-label="Aamupalaverit vietetään joka maanantai. Kauppakatu 14 tiloissa on tilaa useammallekin ihmiselle." data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2019.jpg' ) ?>"><a href="https://www.dude.fi/dudella-uusi-osakas-ja-valoisat-tulevaisuudennakymat">Timistä tuli osakas</a>. Palkattiin Henkka ja pari muutakin <a href="https://www.dude.fi/tyopaikat">rekryä tulilla</a>. To be continued...</button>
+          <button tabindex="0" class="action" data-label="Aamupalaverit vietetään joka maanantai. Kauppakatu 14 tiloissa on tilaa useammallekin ihmiselle." data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2019.jpg' ) ?>"><a href="https://www.dude.fi/dudella-uusi-osakas-ja-valoisat-tulevaisuudennakymat">Timistä tuli osakas</a>. Palkattiin Henkka ja pari muutakin <a href="https://www.dude.fi/tyopaikat">rekryä tulilla</a>.</button>
+        </div>
+
+        <div class="row">
+          <h2 class="action" data-label="Tähän jotain sopivan kokoista kuvatekstiä." data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2020.jpg' ) ?>">2020</h2>
+          <button tabindex="0" class="action" data-label="Tähän jotain sopivan kokoista kuvatekstiä." data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2020.jpg' ) ?>">Kari ja Niku tuli taloon, julkaistiin uusi brändi. Menestystarina jatkuu.</button>
         </div>
 
       </div>
