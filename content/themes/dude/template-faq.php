@@ -23,7 +23,7 @@ get_header(); ?>
         <div class="cols cols-two">
           <div class="col">
             <h3>No siis kauanko se verkkosivuston tekeminen oikein kestää?</h3>
-            <p>Sivuston toiminnallisuustoiveista sekä meidän ja asiakkaan välisestä kommunikaationopeudesta riippuen riippuen keskimäärin 2-5 kuukautta. Jos totta puhutaan niin voi mennä pidempäänkin, jos asiakkaan toivelista on pidempi kuin joulupukin parta.</p>
+            <p>Sivuston toiminnallisuustoiveista sekä meidän ja asiakkaan välisestä kommunikaationopeudesta riippuen keskimäärin 2-5 kuukautta. Jos totta puhutaan niin voi mennä pidempäänkin, jos asiakkaan toivelista on pidempi kuin joulupukin parta.</p>
 
             <h3>Kuulostaa hyvältä! Miten aloitellaan?</h3>
             <p>Kiva kuulla! Toimarin numero on <a href="tel:0408351033">040 835 1033</a>, johon kannattaa soittaa hetimmiten. Jos pre-paidista on puheaika tapissa, voit laittaa myös mailia osoitteella <a href="mailto:moro@dude.fi">moro@dude.fi</a>.</p>
