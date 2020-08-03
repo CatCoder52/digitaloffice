@@ -478,22 +478,36 @@ nav[aria-expanded="false"] * {
   visibility: hidden;
 }
 
-a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail) {
+a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail):not(.button) {
   background-image: url('../svg/external-link.svg') !important;
   background-position: right center !important;
   background-repeat: no-repeat !important;
-  padding-right: 32px !important;
-  padding-right: 3.2rem !important;
+  padding-right: 22px !important;
+  padding-right: 2.2rem !important;
+}
+
+@media (max-width: 430px) {
+  a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail):not(.button) {
+    padding-right: 2rem !important;
+  }
 }
 
 @media (max-width: 600px) {
-  a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail) {
+  a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail):not(.button) {
     background-size: 14px 14px !important;
   }
 }
 
-.menu-item a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not([href="dude.fi"]):not(.contact-detail) {
+.menu-item a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not([href="dude.fi"]):not(.contact-detail):not(.button) {
   background-image: url('../svg/external-link-white.svg') !important;
+  padding-right: 32px !important;
+  padding-right: 3.2rem !important;
+}
+
+@media (max-width: 430px) {
+  .menu-item a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not([href="dude.fi"]):not(.contact-detail):not(.button) {
+    padding-right: 2rem !important;
+  }
 }
 
 a[href^="mailto"] {
@@ -501,7 +515,7 @@ a[href^="mailto"] {
   padding-right: 0 !important;
 }
 
-.block-footer .menu-item a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail) {
+.block-footer .menu-item a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail):not(.button) {
   background-size: 12px 12px !important;
   padding-right: 20px !important;
   padding-right: 2rem !important;
@@ -527,7 +541,7 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header a[href*="
 .block-timeline.wp-block-columns .col a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link),
 .block.block-title-left-text-right li a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
 .block-title-left-text-right.wp-block-columns li a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
-.wp-block-columns p a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):not([rel]):not(.contact-detail) {
+.wp-block-columns p a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):not([rel]):not(.contact-detail):not(.button) {
   background-image: url('../svg/external-link.svg') !important;
   background-position: right center !important;
   background-repeat: no-repeat !important;
@@ -1232,8 +1246,10 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns body.single.single-ref
 .block-references-one.wp-block-columns .block-title,
 body.page-id-6357 .block.block-wide-text .container h2,
 body.page-id-6357 .block-wide-text.wp-block-columns .container h2,
+body.page-id-6357 .block-wide-text.wp-block-columns.alignwide .container h2,
 body.page-id-6357 .block.block-wide-text .site-header h2,
-body.page-id-6357 .block-wide-text.wp-block-columns .site-header h2 {
+body.page-id-6357 .block-wide-text.wp-block-columns .site-header h2,
+body.page-id-6357 .block-wide-text.wp-block-columns.alignwide .site-header h2 {
   font-size: 36px;
   margin-bottom: 40px;
   margin-bottom: 4rem;
@@ -1255,8 +1271,10 @@ body.page-id-6357 .block-wide-text.wp-block-columns .site-header h2 {
   .block-references-one.wp-block-columns .block-title,
   body.page-id-6357 .block.block-wide-text .container h2,
   body.page-id-6357 .block-wide-text.wp-block-columns .container h2,
+  body.page-id-6357 .block-wide-text.wp-block-columns.alignwide .container h2,
   body.page-id-6357 .block.block-wide-text .site-header h2,
-  body.page-id-6357 .block-wide-text.wp-block-columns .site-header h2 {
+  body.page-id-6357 .block-wide-text.wp-block-columns .site-header h2,
+  body.page-id-6357 .block-wide-text.wp-block-columns.alignwide .site-header h2 {
     font-size: calc(36px + 28 * ((100vw - 320px) / 1600));
   }
 }
@@ -1274,8 +1292,10 @@ body.page-id-6357 .block-wide-text.wp-block-columns .site-header h2 {
   .block-references-one.wp-block-columns .block-title,
   body.page-id-6357 .block.block-wide-text .container h2,
   body.page-id-6357 .block-wide-text.wp-block-columns .container h2,
+  body.page-id-6357 .block-wide-text.wp-block-columns.alignwide .container h2,
   body.page-id-6357 .block.block-wide-text .site-header h2,
-  body.page-id-6357 .block-wide-text.wp-block-columns .site-header h2 {
+  body.page-id-6357 .block-wide-text.wp-block-columns .site-header h2,
+  body.page-id-6357 .block-wide-text.wp-block-columns.alignwide .site-header h2 {
     font-size: 64px;
   }
 }
@@ -1293,8 +1313,10 @@ body.page-id-6357 .block-wide-text.wp-block-columns .site-header h2 {
   .block-references-one.wp-block-columns .block-title,
   body.page-id-6357 .block.block-wide-text .container h2,
   body.page-id-6357 .block-wide-text.wp-block-columns .container h2,
+  body.page-id-6357 .block-wide-text.wp-block-columns.alignwide .container h2,
   body.page-id-6357 .block.block-wide-text .site-header h2,
-  body.page-id-6357 .block-wide-text.wp-block-columns .site-header h2 {
+  body.page-id-6357 .block-wide-text.wp-block-columns .site-header h2,
+  body.page-id-6357 .block-wide-text.wp-block-columns.alignwide .site-header h2 {
     font-size: 36px;
     font-weight: 500;
   }
@@ -1313,8 +1335,10 @@ body.page-id-6357 .block-wide-text.wp-block-columns .site-header h2 {
   .block-references-one.wp-block-columns .block-title,
   body.page-id-6357 .block.block-wide-text .container h2,
   body.page-id-6357 .block-wide-text.wp-block-columns .container h2,
+  body.page-id-6357 .block-wide-text.wp-block-columns.alignwide .container h2,
   body.page-id-6357 .block.block-wide-text .site-header h2,
-  body.page-id-6357 .block-wide-text.wp-block-columns .site-header h2 {
+  body.page-id-6357 .block-wide-text.wp-block-columns .site-header h2,
+  body.page-id-6357 .block-wide-text.wp-block-columns.alignwide .site-header h2 {
     font-size: 64px;
   }
 }
@@ -5653,7 +5677,10 @@ body.page-id-4487 .block-hero.wp-block-columns .content {
 .block.block-hero.block-hero-light + .block.block-wide-text,
 .block-hero.block-hero-light.wp-block-columns + .block.block-wide-text,
 .block.block-hero.block-hero-light + .block-wide-text.wp-block-columns,
-.block-hero.block-hero-light.wp-block-columns + .block-wide-text.wp-block-columns {
+.block-hero.block-hero-light.wp-block-columns + .block-wide-text.wp-block-columns,
+.block-hero.block-hero-light.wp-block-columns.alignwide + .block-wide-text.wp-block-columns,
+.block.block-hero.block-hero-light + .block-wide-text.wp-block-columns.alignwide,
+.block-hero.block-hero-light.wp-block-columns + .block-wide-text.wp-block-columns.alignwide {
   padding-top: 120px;
   padding-top: 12rem;
 }
@@ -7418,173 +7445,173 @@ body.page-id-6117 .block-hero.block-hero-light p {
 
 @-webkit-keyframes glitch-effect {
   0% {
-    clip: rect(40px, 9999px, 51px, 0);
+    clip: rect(5px, 9999px, 54px, 0);
   }
 
   5% {
-    clip: rect(36px, 9999px, 4px, 0);
+    clip: rect(74px, 9999px, 64px, 0);
   }
 
   10% {
-    clip: rect(33px, 9999px, 13px, 0);
+    clip: rect(95px, 9999px, 45px, 0);
   }
 
   15% {
-    clip: rect(21px, 9999px, 34px, 0);
+    clip: rect(19px, 9999px, 14px, 0);
   }
 
   20% {
-    clip: rect(20px, 9999px, 58px, 0);
+    clip: rect(45px, 9999px, 32px, 0);
   }
 
   25% {
-    clip: rect(78px, 9999px, 26px, 0);
+    clip: rect(31px, 9999px, 21px, 0);
   }
 
   30% {
-    clip: rect(73px, 9999px, 23px, 0);
+    clip: rect(77px, 9999px, 13px, 0);
   }
 
   35% {
-    clip: rect(10px, 9999px, 93px, 0);
+    clip: rect(78px, 9999px, 7px, 0);
   }
 
   40% {
-    clip: rect(82px, 9999px, 4px, 0);
+    clip: rect(29px, 9999px, 40px, 0);
   }
 
   45% {
-    clip: rect(18px, 9999px, 72px, 0);
+    clip: rect(85px, 9999px, 50px, 0);
   }
 
   50% {
-    clip: rect(76px, 9999px, 29px, 0);
+    clip: rect(85px, 9999px, 66px, 0);
   }
 
   55% {
-    clip: rect(91px, 9999px, 28px, 0);
+    clip: rect(25px, 9999px, 40px, 0);
   }
 
   60% {
-    clip: rect(75px, 9999px, 24px, 0);
+    clip: rect(49px, 9999px, 10px, 0);
   }
 
   65% {
-    clip: rect(54px, 9999px, 37px, 0);
+    clip: rect(13px, 9999px, 41px, 0);
   }
 
   70% {
-    clip: rect(35px, 9999px, 91px, 0);
+    clip: rect(59px, 9999px, 90px, 0);
   }
 
   75% {
-    clip: rect(24px, 9999px, 49px, 0);
+    clip: rect(16px, 9999px, 46px, 0);
   }
 
   80% {
-    clip: rect(6px, 9999px, 93px, 0);
+    clip: rect(66px, 9999px, 53px, 0);
   }
 
   85% {
-    clip: rect(12px, 9999px, 10px, 0);
+    clip: rect(82px, 9999px, 42px, 0);
   }
 
   90% {
-    clip: rect(76px, 9999px, 76px, 0);
+    clip: rect(52px, 9999px, 65px, 0);
   }
 
   95% {
-    clip: rect(70px, 9999px, 22px, 0);
+    clip: rect(18px, 9999px, 47px, 0);
   }
 
   100% {
-    clip: rect(50px, 9999px, 25px, 0);
+    clip: rect(25px, 9999px, 40px, 0);
   }
 }
 
 @keyframes glitch-effect {
   0% {
-    clip: rect(40px, 9999px, 51px, 0);
+    clip: rect(5px, 9999px, 54px, 0);
   }
 
   5% {
-    clip: rect(36px, 9999px, 4px, 0);
+    clip: rect(74px, 9999px, 64px, 0);
   }
 
   10% {
-    clip: rect(33px, 9999px, 13px, 0);
+    clip: rect(95px, 9999px, 45px, 0);
   }
 
   15% {
-    clip: rect(21px, 9999px, 34px, 0);
+    clip: rect(19px, 9999px, 14px, 0);
   }
 
   20% {
-    clip: rect(20px, 9999px, 58px, 0);
+    clip: rect(45px, 9999px, 32px, 0);
   }
 
   25% {
-    clip: rect(78px, 9999px, 26px, 0);
+    clip: rect(31px, 9999px, 21px, 0);
   }
 
   30% {
-    clip: rect(73px, 9999px, 23px, 0);
+    clip: rect(77px, 9999px, 13px, 0);
   }
 
   35% {
-    clip: rect(10px, 9999px, 93px, 0);
+    clip: rect(78px, 9999px, 7px, 0);
   }
 
   40% {
-    clip: rect(82px, 9999px, 4px, 0);
+    clip: rect(29px, 9999px, 40px, 0);
   }
 
   45% {
-    clip: rect(18px, 9999px, 72px, 0);
+    clip: rect(85px, 9999px, 50px, 0);
   }
 
   50% {
-    clip: rect(76px, 9999px, 29px, 0);
+    clip: rect(85px, 9999px, 66px, 0);
   }
 
   55% {
-    clip: rect(91px, 9999px, 28px, 0);
+    clip: rect(25px, 9999px, 40px, 0);
   }
 
   60% {
-    clip: rect(75px, 9999px, 24px, 0);
+    clip: rect(49px, 9999px, 10px, 0);
   }
 
   65% {
-    clip: rect(54px, 9999px, 37px, 0);
+    clip: rect(13px, 9999px, 41px, 0);
   }
 
   70% {
-    clip: rect(35px, 9999px, 91px, 0);
+    clip: rect(59px, 9999px, 90px, 0);
   }
 
   75% {
-    clip: rect(24px, 9999px, 49px, 0);
+    clip: rect(16px, 9999px, 46px, 0);
   }
 
   80% {
-    clip: rect(6px, 9999px, 93px, 0);
+    clip: rect(66px, 9999px, 53px, 0);
   }
 
   85% {
-    clip: rect(12px, 9999px, 10px, 0);
+    clip: rect(82px, 9999px, 42px, 0);
   }
 
   90% {
-    clip: rect(76px, 9999px, 76px, 0);
+    clip: rect(52px, 9999px, 65px, 0);
   }
 
   95% {
-    clip: rect(70px, 9999px, 22px, 0);
+    clip: rect(18px, 9999px, 47px, 0);
   }
 
   100% {
-    clip: rect(50px, 9999px, 25px, 0);
+    clip: rect(25px, 9999px, 40px, 0);
   }
 }
 
@@ -7653,481 +7680,481 @@ body.page-id-6117 .block-hero.block-hero-light p {
 
 @-webkit-keyframes noise-1 {
   10% {
-    -webkit-clip-path: inset(30px 0 64px 0);
-    clip-path: inset(30px 0 64px 0);
+    -webkit-clip-path: inset(37px 0 20px 0);
+    clip-path: inset(37px 0 20px 0);
   }
 
   20% {
-    -webkit-clip-path: inset(12px 0 41px 0);
-    clip-path: inset(12px 0 41px 0);
+    -webkit-clip-path: inset(16px 0 39px 0);
+    clip-path: inset(16px 0 39px 0);
   }
 
   30% {
-    -webkit-clip-path: inset(55px 0 24px 0);
-    clip-path: inset(55px 0 24px 0);
+    -webkit-clip-path: inset(2px 0 91px 0);
+    clip-path: inset(2px 0 91px 0);
   }
 
   40% {
-    -webkit-clip-path: inset(33px 0 68px 0);
-    clip-path: inset(33px 0 68px 0);
+    -webkit-clip-path: inset(55px 0 23px 0);
+    clip-path: inset(55px 0 23px 0);
   }
 
   50% {
-    -webkit-clip-path: inset(36px 0 5px 0);
-    clip-path: inset(36px 0 5px 0);
+    -webkit-clip-path: inset(34px 0 54px 0);
+    clip-path: inset(34px 0 54px 0);
   }
 
   60% {
-    -webkit-clip-path: inset(96px 0 1px 0);
-    clip-path: inset(96px 0 1px 0);
+    -webkit-clip-path: inset(65px 0 14px 0);
+    clip-path: inset(65px 0 14px 0);
   }
 
   70% {
-    -webkit-clip-path: inset(57px 0 16px 0);
-    clip-path: inset(57px 0 16px 0);
+    -webkit-clip-path: inset(61px 0 20px 0);
+    clip-path: inset(61px 0 20px 0);
   }
 
   80% {
-    -webkit-clip-path: inset(49px 0 18px 0);
-    clip-path: inset(49px 0 18px 0);
+    -webkit-clip-path: inset(77px 0 1px 0);
+    clip-path: inset(77px 0 1px 0);
   }
 
   90% {
-    -webkit-clip-path: inset(83px 0 10px 0);
-    clip-path: inset(83px 0 10px 0);
+    -webkit-clip-path: inset(40px 0 5px 0);
+    clip-path: inset(40px 0 5px 0);
   }
 
   100% {
-    -webkit-clip-path: inset(83px 0 18px 0);
-    clip-path: inset(83px 0 18px 0);
+    -webkit-clip-path: inset(99px 0 2px 0);
+    clip-path: inset(99px 0 2px 0);
   }
 }
 
 @keyframes noise-1 {
   10% {
-    -webkit-clip-path: inset(30px 0 64px 0);
-    clip-path: inset(30px 0 64px 0);
+    -webkit-clip-path: inset(37px 0 20px 0);
+    clip-path: inset(37px 0 20px 0);
   }
 
   20% {
-    -webkit-clip-path: inset(12px 0 41px 0);
-    clip-path: inset(12px 0 41px 0);
+    -webkit-clip-path: inset(16px 0 39px 0);
+    clip-path: inset(16px 0 39px 0);
   }
 
   30% {
-    -webkit-clip-path: inset(55px 0 24px 0);
-    clip-path: inset(55px 0 24px 0);
+    -webkit-clip-path: inset(2px 0 91px 0);
+    clip-path: inset(2px 0 91px 0);
   }
 
   40% {
-    -webkit-clip-path: inset(33px 0 68px 0);
-    clip-path: inset(33px 0 68px 0);
+    -webkit-clip-path: inset(55px 0 23px 0);
+    clip-path: inset(55px 0 23px 0);
   }
 
   50% {
-    -webkit-clip-path: inset(36px 0 5px 0);
-    clip-path: inset(36px 0 5px 0);
+    -webkit-clip-path: inset(34px 0 54px 0);
+    clip-path: inset(34px 0 54px 0);
   }
 
   60% {
-    -webkit-clip-path: inset(96px 0 1px 0);
-    clip-path: inset(96px 0 1px 0);
+    -webkit-clip-path: inset(65px 0 14px 0);
+    clip-path: inset(65px 0 14px 0);
   }
 
   70% {
-    -webkit-clip-path: inset(57px 0 16px 0);
-    clip-path: inset(57px 0 16px 0);
+    -webkit-clip-path: inset(61px 0 20px 0);
+    clip-path: inset(61px 0 20px 0);
   }
 
   80% {
-    -webkit-clip-path: inset(49px 0 18px 0);
-    clip-path: inset(49px 0 18px 0);
+    -webkit-clip-path: inset(77px 0 1px 0);
+    clip-path: inset(77px 0 1px 0);
   }
 
   90% {
-    -webkit-clip-path: inset(83px 0 10px 0);
-    clip-path: inset(83px 0 10px 0);
+    -webkit-clip-path: inset(40px 0 5px 0);
+    clip-path: inset(40px 0 5px 0);
   }
 
   100% {
-    -webkit-clip-path: inset(83px 0 18px 0);
-    clip-path: inset(83px 0 18px 0);
+    -webkit-clip-path: inset(99px 0 2px 0);
+    clip-path: inset(99px 0 2px 0);
   }
 }
 
 @-webkit-keyframes noise-2 {
   0% {
-    text-shadow: 5px 0 #76ff9b;
-    -webkit-clip-path: inset(8px 0 8px 0);
-    clip-path: inset(8px 0 8px 0);
+    text-shadow: 3px 0 #76ff9b;
+    -webkit-clip-path: inset(15px 0 32px 0);
+    clip-path: inset(15px 0 32px 0);
   }
 
   3.33333% {
-    text-shadow: 3px 0 #76ff9b;
-    -webkit-clip-path: inset(79px 0 6px 0);
-    clip-path: inset(79px 0 6px 0);
-  }
-
-  6.66667% {
-    text-shadow: 3px 0 #76ff9b;
-    -webkit-clip-path: inset(58px 0 15px 0);
-    clip-path: inset(58px 0 15px 0);
-  }
-
-  10% {
-    text-shadow: 1px 0 #76ff9b;
-    -webkit-clip-path: inset(53px 0 6px 0);
-    clip-path: inset(53px 0 6px 0);
-  }
-
-  13.33333% {
-    text-shadow: 1px 0 #76ff9b;
-    -webkit-clip-path: inset(39px 0 24px 0);
-    clip-path: inset(39px 0 24px 0);
-  }
-
-  16.66667% {
-    text-shadow: 5px 0 #76ff9b;
-    -webkit-clip-path: inset(88px 0 8px 0);
-    clip-path: inset(88px 0 8px 0);
-  }
-
-  20% {
-    text-shadow: 3px 0 #76ff9b;
-    -webkit-clip-path: inset(72px 0 13px 0);
-    clip-path: inset(72px 0 13px 0);
-  }
-
-  23.33333% {
-    text-shadow: 3px 0 #76ff9b;
-    -webkit-clip-path: inset(97px 0 1px 0);
-    clip-path: inset(97px 0 1px 0);
-  }
-
-  26.66667% {
-    text-shadow: 2px 0 #76ff9b;
-    -webkit-clip-path: inset(85px 0 9px 0);
-    clip-path: inset(85px 0 9px 0);
-  }
-
-  30% {
-    text-shadow: 3px 0 #76ff9b;
-    -webkit-clip-path: inset(64px 0 17px 0);
-    clip-path: inset(64px 0 17px 0);
-  }
-
-  33.33333% {
-    text-shadow: 3px 0 #76ff9b;
-    -webkit-clip-path: inset(88px 0 8px 0);
-    clip-path: inset(88px 0 8px 0);
-  }
-
-  36.66667% {
-    text-shadow: 5px 0 #76ff9b;
-    -webkit-clip-path: inset(3px 0 55px 0);
-    clip-path: inset(3px 0 55px 0);
-  }
-
-  40% {
-    text-shadow: 3px 0 #76ff9b;
-    -webkit-clip-path: inset(16px 0 24px 0);
-    clip-path: inset(16px 0 24px 0);
-  }
-
-  43.33333% {
-    text-shadow: 5px 0 #76ff9b;
-    -webkit-clip-path: inset(84px 0 4px 0);
-    clip-path: inset(84px 0 4px 0);
-  }
-
-  46.66667% {
-    text-shadow: 2px 0 #76ff9b;
-    -webkit-clip-path: inset(56px 0 11px 0);
-    clip-path: inset(56px 0 11px 0);
-  }
-
-  50% {
-    text-shadow: 2px 0 #76ff9b;
-    -webkit-clip-path: inset(67px 0 13px 0);
-    clip-path: inset(67px 0 13px 0);
-  }
-
-  53.33333% {
-    text-shadow: 3px 0 #76ff9b;
-    -webkit-clip-path: inset(26px 0 65px 0);
-    clip-path: inset(26px 0 65px 0);
-  }
-
-  56.66667% {
-    text-shadow: 4px 0 #76ff9b;
-    -webkit-clip-path: inset(90px 0 7px 0);
-    clip-path: inset(90px 0 7px 0);
-  }
-
-  60% {
-    text-shadow: 3px 0 #76ff9b;
-    -webkit-clip-path: inset(98px 0 1px 0);
-    clip-path: inset(98px 0 1px 0);
-  }
-
-  63.33333% {
     text-shadow: 1px 0 #76ff9b;
     -webkit-clip-path: inset(100px 0 1px 0);
     clip-path: inset(100px 0 1px 0);
   }
 
-  66.66667% {
+  6.66667% {
     text-shadow: 5px 0 #76ff9b;
-    -webkit-clip-path: inset(89px 0 5px 0);
-    clip-path: inset(89px 0 5px 0);
+    -webkit-clip-path: inset(74px 0 17px 0);
+    clip-path: inset(74px 0 17px 0);
+  }
+
+  10% {
+    text-shadow: 5px 0 #76ff9b;
+    -webkit-clip-path: inset(14px 0 2px 0);
+    clip-path: inset(14px 0 2px 0);
+  }
+
+  13.33333% {
+    text-shadow: 1px 0 #76ff9b;
+    -webkit-clip-path: inset(71px 0 9px 0);
+    clip-path: inset(71px 0 9px 0);
+  }
+
+  16.66667% {
+    text-shadow: 1px 0 #76ff9b;
+    -webkit-clip-path: inset(77px 0 8px 0);
+    clip-path: inset(77px 0 8px 0);
+  }
+
+  20% {
+    text-shadow: 1px 0 #76ff9b;
+    -webkit-clip-path: inset(97px 0 2px 0);
+    clip-path: inset(97px 0 2px 0);
+  }
+
+  23.33333% {
+    text-shadow: 3px 0 #76ff9b;
+    -webkit-clip-path: inset(26px 0 36px 0);
+    clip-path: inset(26px 0 36px 0);
+  }
+
+  26.66667% {
+    text-shadow: 5px 0 #76ff9b;
+    -webkit-clip-path: inset(94px 0 5px 0);
+    clip-path: inset(94px 0 5px 0);
+  }
+
+  30% {
+    text-shadow: 5px 0 #76ff9b;
+    -webkit-clip-path: inset(70px 0 14px 0);
+    clip-path: inset(70px 0 14px 0);
+  }
+
+  33.33333% {
+    text-shadow: 2px 0 #76ff9b;
+    -webkit-clip-path: inset(13px 0 50px 0);
+    clip-path: inset(13px 0 50px 0);
+  }
+
+  36.66667% {
+    text-shadow: 2px 0 #76ff9b;
+    -webkit-clip-path: inset(86px 0 15px 0);
+    clip-path: inset(86px 0 15px 0);
+  }
+
+  40% {
+    text-shadow: 3px 0 #76ff9b;
+    -webkit-clip-path: inset(39px 0 17px 0);
+    clip-path: inset(39px 0 17px 0);
+  }
+
+  43.33333% {
+    text-shadow: 3px 0 #76ff9b;
+    -webkit-clip-path: inset(99px 0 2px 0);
+    clip-path: inset(99px 0 2px 0);
+  }
+
+  46.66667% {
+    text-shadow: 1px 0 #76ff9b;
+    -webkit-clip-path: inset(48px 0 19px 0);
+    clip-path: inset(48px 0 19px 0);
+  }
+
+  50% {
+    text-shadow: 1px 0 #76ff9b;
+    -webkit-clip-path: inset(96px 0 1px 0);
+    clip-path: inset(96px 0 1px 0);
+  }
+
+  53.33333% {
+    text-shadow: 4px 0 #76ff9b;
+    -webkit-clip-path: inset(49px 0 50px 0);
+    clip-path: inset(49px 0 50px 0);
+  }
+
+  56.66667% {
+    text-shadow: 3px 0 #76ff9b;
+    -webkit-clip-path: inset(18px 0 13px 0);
+    clip-path: inset(18px 0 13px 0);
+  }
+
+  60% {
+    text-shadow: 5px 0 #76ff9b;
+    -webkit-clip-path: inset(14px 0 83px 0);
+    clip-path: inset(14px 0 83px 0);
+  }
+
+  63.33333% {
+    text-shadow: 4px 0 #76ff9b;
+    -webkit-clip-path: inset(64px 0 30px 0);
+    clip-path: inset(64px 0 30px 0);
+  }
+
+  66.66667% {
+    text-shadow: 4px 0 #76ff9b;
+    -webkit-clip-path: inset(77px 0 17px 0);
+    clip-path: inset(77px 0 17px 0);
   }
 
   70% {
-    text-shadow: 2px 0 #76ff9b;
-    -webkit-clip-path: inset(7px 0 72px 0);
-    clip-path: inset(7px 0 72px 0);
+    text-shadow: 4px 0 #76ff9b;
+    -webkit-clip-path: inset(28px 0 32px 0);
+    clip-path: inset(28px 0 32px 0);
   }
 
   73.33333% {
-    text-shadow: 4px 0 #76ff9b;
-    -webkit-clip-path: inset(15px 0 56px 0);
-    clip-path: inset(15px 0 56px 0);
+    text-shadow: 2px 0 #76ff9b;
+    -webkit-clip-path: inset(94px 0 5px 0);
+    clip-path: inset(94px 0 5px 0);
   }
 
   76.66667% {
     text-shadow: 3px 0 #76ff9b;
-    -webkit-clip-path: inset(53px 0 16px 0);
-    clip-path: inset(53px 0 16px 0);
+    -webkit-clip-path: inset(10px 0 14px 0);
+    clip-path: inset(10px 0 14px 0);
   }
 
   80% {
     text-shadow: 1px 0 #76ff9b;
-    -webkit-clip-path: inset(92px 0 8px 0);
-    clip-path: inset(92px 0 8px 0);
+    -webkit-clip-path: inset(23px 0 46px 0);
+    clip-path: inset(23px 0 46px 0);
   }
 
   83.33333% {
-    text-shadow: 2px 0 #76ff9b;
-    -webkit-clip-path: inset(90px 0 2px 0);
-    clip-path: inset(90px 0 2px 0);
+    text-shadow: 3px 0 #76ff9b;
+    -webkit-clip-path: inset(89px 0 11px 0);
+    clip-path: inset(89px 0 11px 0);
   }
 
   86.66667% {
-    text-shadow: 5px 0 #76ff9b;
-    -webkit-clip-path: inset(82px 0 5px 0);
-    clip-path: inset(82px 0 5px 0);
+    text-shadow: 2px 0 #76ff9b;
+    -webkit-clip-path: inset(85px 0 1px 0);
+    clip-path: inset(85px 0 1px 0);
   }
 
   90% {
-    text-shadow: 5px 0 #76ff9b;
-    -webkit-clip-path: inset(31px 0 18px 0);
-    clip-path: inset(31px 0 18px 0);
+    text-shadow: 2px 0 #76ff9b;
+    -webkit-clip-path: inset(26px 0 32px 0);
+    clip-path: inset(26px 0 32px 0);
   }
 
   93.33333% {
-    text-shadow: 1px 0 #76ff9b;
-    -webkit-clip-path: inset(71px 0 7px 0);
-    clip-path: inset(71px 0 7px 0);
+    text-shadow: 3px 0 #76ff9b;
+    -webkit-clip-path: inset(85px 0 14px 0);
+    clip-path: inset(85px 0 14px 0);
   }
 
   96.66667% {
-    text-shadow: 5px 0 #76ff9b;
-    -webkit-clip-path: inset(87px 0 13px 0);
-    clip-path: inset(87px 0 13px 0);
+    text-shadow: 4px 0 #76ff9b;
+    -webkit-clip-path: inset(86px 0 14px 0);
+    clip-path: inset(86px 0 14px 0);
   }
 
   100% {
-    text-shadow: 5px 0 #76ff9b;
-    -webkit-clip-path: inset(45px 0 26px 0);
-    clip-path: inset(45px 0 26px 0);
+    text-shadow: 4px 0 #76ff9b;
+    -webkit-clip-path: inset(13px 0 21px 0);
+    clip-path: inset(13px 0 21px 0);
   }
 }
 
 @keyframes noise-2 {
   0% {
-    text-shadow: 5px 0 #76ff9b;
-    -webkit-clip-path: inset(8px 0 8px 0);
-    clip-path: inset(8px 0 8px 0);
+    text-shadow: 3px 0 #76ff9b;
+    -webkit-clip-path: inset(15px 0 32px 0);
+    clip-path: inset(15px 0 32px 0);
   }
 
   3.33333% {
-    text-shadow: 3px 0 #76ff9b;
-    -webkit-clip-path: inset(79px 0 6px 0);
-    clip-path: inset(79px 0 6px 0);
-  }
-
-  6.66667% {
-    text-shadow: 3px 0 #76ff9b;
-    -webkit-clip-path: inset(58px 0 15px 0);
-    clip-path: inset(58px 0 15px 0);
-  }
-
-  10% {
-    text-shadow: 1px 0 #76ff9b;
-    -webkit-clip-path: inset(53px 0 6px 0);
-    clip-path: inset(53px 0 6px 0);
-  }
-
-  13.33333% {
-    text-shadow: 1px 0 #76ff9b;
-    -webkit-clip-path: inset(39px 0 24px 0);
-    clip-path: inset(39px 0 24px 0);
-  }
-
-  16.66667% {
-    text-shadow: 5px 0 #76ff9b;
-    -webkit-clip-path: inset(88px 0 8px 0);
-    clip-path: inset(88px 0 8px 0);
-  }
-
-  20% {
-    text-shadow: 3px 0 #76ff9b;
-    -webkit-clip-path: inset(72px 0 13px 0);
-    clip-path: inset(72px 0 13px 0);
-  }
-
-  23.33333% {
-    text-shadow: 3px 0 #76ff9b;
-    -webkit-clip-path: inset(97px 0 1px 0);
-    clip-path: inset(97px 0 1px 0);
-  }
-
-  26.66667% {
-    text-shadow: 2px 0 #76ff9b;
-    -webkit-clip-path: inset(85px 0 9px 0);
-    clip-path: inset(85px 0 9px 0);
-  }
-
-  30% {
-    text-shadow: 3px 0 #76ff9b;
-    -webkit-clip-path: inset(64px 0 17px 0);
-    clip-path: inset(64px 0 17px 0);
-  }
-
-  33.33333% {
-    text-shadow: 3px 0 #76ff9b;
-    -webkit-clip-path: inset(88px 0 8px 0);
-    clip-path: inset(88px 0 8px 0);
-  }
-
-  36.66667% {
-    text-shadow: 5px 0 #76ff9b;
-    -webkit-clip-path: inset(3px 0 55px 0);
-    clip-path: inset(3px 0 55px 0);
-  }
-
-  40% {
-    text-shadow: 3px 0 #76ff9b;
-    -webkit-clip-path: inset(16px 0 24px 0);
-    clip-path: inset(16px 0 24px 0);
-  }
-
-  43.33333% {
-    text-shadow: 5px 0 #76ff9b;
-    -webkit-clip-path: inset(84px 0 4px 0);
-    clip-path: inset(84px 0 4px 0);
-  }
-
-  46.66667% {
-    text-shadow: 2px 0 #76ff9b;
-    -webkit-clip-path: inset(56px 0 11px 0);
-    clip-path: inset(56px 0 11px 0);
-  }
-
-  50% {
-    text-shadow: 2px 0 #76ff9b;
-    -webkit-clip-path: inset(67px 0 13px 0);
-    clip-path: inset(67px 0 13px 0);
-  }
-
-  53.33333% {
-    text-shadow: 3px 0 #76ff9b;
-    -webkit-clip-path: inset(26px 0 65px 0);
-    clip-path: inset(26px 0 65px 0);
-  }
-
-  56.66667% {
-    text-shadow: 4px 0 #76ff9b;
-    -webkit-clip-path: inset(90px 0 7px 0);
-    clip-path: inset(90px 0 7px 0);
-  }
-
-  60% {
-    text-shadow: 3px 0 #76ff9b;
-    -webkit-clip-path: inset(98px 0 1px 0);
-    clip-path: inset(98px 0 1px 0);
-  }
-
-  63.33333% {
     text-shadow: 1px 0 #76ff9b;
     -webkit-clip-path: inset(100px 0 1px 0);
     clip-path: inset(100px 0 1px 0);
   }
 
-  66.66667% {
+  6.66667% {
     text-shadow: 5px 0 #76ff9b;
-    -webkit-clip-path: inset(89px 0 5px 0);
-    clip-path: inset(89px 0 5px 0);
+    -webkit-clip-path: inset(74px 0 17px 0);
+    clip-path: inset(74px 0 17px 0);
+  }
+
+  10% {
+    text-shadow: 5px 0 #76ff9b;
+    -webkit-clip-path: inset(14px 0 2px 0);
+    clip-path: inset(14px 0 2px 0);
+  }
+
+  13.33333% {
+    text-shadow: 1px 0 #76ff9b;
+    -webkit-clip-path: inset(71px 0 9px 0);
+    clip-path: inset(71px 0 9px 0);
+  }
+
+  16.66667% {
+    text-shadow: 1px 0 #76ff9b;
+    -webkit-clip-path: inset(77px 0 8px 0);
+    clip-path: inset(77px 0 8px 0);
+  }
+
+  20% {
+    text-shadow: 1px 0 #76ff9b;
+    -webkit-clip-path: inset(97px 0 2px 0);
+    clip-path: inset(97px 0 2px 0);
+  }
+
+  23.33333% {
+    text-shadow: 3px 0 #76ff9b;
+    -webkit-clip-path: inset(26px 0 36px 0);
+    clip-path: inset(26px 0 36px 0);
+  }
+
+  26.66667% {
+    text-shadow: 5px 0 #76ff9b;
+    -webkit-clip-path: inset(94px 0 5px 0);
+    clip-path: inset(94px 0 5px 0);
+  }
+
+  30% {
+    text-shadow: 5px 0 #76ff9b;
+    -webkit-clip-path: inset(70px 0 14px 0);
+    clip-path: inset(70px 0 14px 0);
+  }
+
+  33.33333% {
+    text-shadow: 2px 0 #76ff9b;
+    -webkit-clip-path: inset(13px 0 50px 0);
+    clip-path: inset(13px 0 50px 0);
+  }
+
+  36.66667% {
+    text-shadow: 2px 0 #76ff9b;
+    -webkit-clip-path: inset(86px 0 15px 0);
+    clip-path: inset(86px 0 15px 0);
+  }
+
+  40% {
+    text-shadow: 3px 0 #76ff9b;
+    -webkit-clip-path: inset(39px 0 17px 0);
+    clip-path: inset(39px 0 17px 0);
+  }
+
+  43.33333% {
+    text-shadow: 3px 0 #76ff9b;
+    -webkit-clip-path: inset(99px 0 2px 0);
+    clip-path: inset(99px 0 2px 0);
+  }
+
+  46.66667% {
+    text-shadow: 1px 0 #76ff9b;
+    -webkit-clip-path: inset(48px 0 19px 0);
+    clip-path: inset(48px 0 19px 0);
+  }
+
+  50% {
+    text-shadow: 1px 0 #76ff9b;
+    -webkit-clip-path: inset(96px 0 1px 0);
+    clip-path: inset(96px 0 1px 0);
+  }
+
+  53.33333% {
+    text-shadow: 4px 0 #76ff9b;
+    -webkit-clip-path: inset(49px 0 50px 0);
+    clip-path: inset(49px 0 50px 0);
+  }
+
+  56.66667% {
+    text-shadow: 3px 0 #76ff9b;
+    -webkit-clip-path: inset(18px 0 13px 0);
+    clip-path: inset(18px 0 13px 0);
+  }
+
+  60% {
+    text-shadow: 5px 0 #76ff9b;
+    -webkit-clip-path: inset(14px 0 83px 0);
+    clip-path: inset(14px 0 83px 0);
+  }
+
+  63.33333% {
+    text-shadow: 4px 0 #76ff9b;
+    -webkit-clip-path: inset(64px 0 30px 0);
+    clip-path: inset(64px 0 30px 0);
+  }
+
+  66.66667% {
+    text-shadow: 4px 0 #76ff9b;
+    -webkit-clip-path: inset(77px 0 17px 0);
+    clip-path: inset(77px 0 17px 0);
   }
 
   70% {
-    text-shadow: 2px 0 #76ff9b;
-    -webkit-clip-path: inset(7px 0 72px 0);
-    clip-path: inset(7px 0 72px 0);
+    text-shadow: 4px 0 #76ff9b;
+    -webkit-clip-path: inset(28px 0 32px 0);
+    clip-path: inset(28px 0 32px 0);
   }
 
   73.33333% {
-    text-shadow: 4px 0 #76ff9b;
-    -webkit-clip-path: inset(15px 0 56px 0);
-    clip-path: inset(15px 0 56px 0);
+    text-shadow: 2px 0 #76ff9b;
+    -webkit-clip-path: inset(94px 0 5px 0);
+    clip-path: inset(94px 0 5px 0);
   }
 
   76.66667% {
     text-shadow: 3px 0 #76ff9b;
-    -webkit-clip-path: inset(53px 0 16px 0);
-    clip-path: inset(53px 0 16px 0);
+    -webkit-clip-path: inset(10px 0 14px 0);
+    clip-path: inset(10px 0 14px 0);
   }
 
   80% {
     text-shadow: 1px 0 #76ff9b;
-    -webkit-clip-path: inset(92px 0 8px 0);
-    clip-path: inset(92px 0 8px 0);
+    -webkit-clip-path: inset(23px 0 46px 0);
+    clip-path: inset(23px 0 46px 0);
   }
 
   83.33333% {
-    text-shadow: 2px 0 #76ff9b;
-    -webkit-clip-path: inset(90px 0 2px 0);
-    clip-path: inset(90px 0 2px 0);
+    text-shadow: 3px 0 #76ff9b;
+    -webkit-clip-path: inset(89px 0 11px 0);
+    clip-path: inset(89px 0 11px 0);
   }
 
   86.66667% {
-    text-shadow: 5px 0 #76ff9b;
-    -webkit-clip-path: inset(82px 0 5px 0);
-    clip-path: inset(82px 0 5px 0);
+    text-shadow: 2px 0 #76ff9b;
+    -webkit-clip-path: inset(85px 0 1px 0);
+    clip-path: inset(85px 0 1px 0);
   }
 
   90% {
-    text-shadow: 5px 0 #76ff9b;
-    -webkit-clip-path: inset(31px 0 18px 0);
-    clip-path: inset(31px 0 18px 0);
+    text-shadow: 2px 0 #76ff9b;
+    -webkit-clip-path: inset(26px 0 32px 0);
+    clip-path: inset(26px 0 32px 0);
   }
 
   93.33333% {
-    text-shadow: 1px 0 #76ff9b;
-    -webkit-clip-path: inset(71px 0 7px 0);
-    clip-path: inset(71px 0 7px 0);
+    text-shadow: 3px 0 #76ff9b;
+    -webkit-clip-path: inset(85px 0 14px 0);
+    clip-path: inset(85px 0 14px 0);
   }
 
   96.66667% {
-    text-shadow: 5px 0 #76ff9b;
-    -webkit-clip-path: inset(87px 0 13px 0);
-    clip-path: inset(87px 0 13px 0);
+    text-shadow: 4px 0 #76ff9b;
+    -webkit-clip-path: inset(86px 0 14px 0);
+    clip-path: inset(86px 0 14px 0);
   }
 
   100% {
-    text-shadow: 5px 0 #76ff9b;
-    -webkit-clip-path: inset(45px 0 26px 0);
-    clip-path: inset(45px 0 26px 0);
+    text-shadow: 4px 0 #76ff9b;
+    -webkit-clip-path: inset(13px 0 21px 0);
+    clip-path: inset(13px 0 21px 0);
   }
 }
 
@@ -12028,8 +12055,10 @@ body.page-id-9 .block-references.wp-block-columns.alignwide .reference-content >
 .gutenberg-content .wp-block-gallery > *,
 body:not(.page-id-6357) .block.block-wide-text .container .wp-block-gallery > *,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container .wp-block-gallery > *,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .wp-block-gallery > *,
 body:not(.page-id-6357) .block.block-wide-text .site-header .wp-block-gallery > *,
-body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .wp-block-gallery > * {
+body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .wp-block-gallery > *,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .wp-block-gallery > * {
   display: block;
   flex-basis: 0;
   flex-grow: 1;
@@ -15420,8 +15449,10 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .wp-block
 .gutenberg-content .wp-block-gallery,
 body:not(.page-id-6357) .block.block-wide-text .container .wp-block-gallery,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container .wp-block-gallery,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .wp-block-gallery,
 body:not(.page-id-6357) .block.block-wide-text .site-header .wp-block-gallery,
-body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .wp-block-gallery {
+body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .wp-block-gallery,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .wp-block-gallery {
   margin-left: -7.5px;
   margin-left: -0.75rem;
   margin-right: -7.5px;
@@ -16665,6 +16696,12 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .is-varia
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container .block-timeline.wp-block-columns .wp-block-gallery .column.col,
   .block-timeline.wp-block-columns.alignwide body:not(.page-id-6357) .block-wide-text.wp-block-columns .container .wp-block-gallery .column.col,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container .block-timeline.wp-block-columns.alignwide .wp-block-gallery .column.col,
+  .block.block-timeline body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .wp-block-gallery .column.col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .block.block-timeline .wp-block-gallery .column.col,
+  .block-timeline.wp-block-columns body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .wp-block-gallery .column.col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .block-timeline.wp-block-columns .wp-block-gallery .column.col,
+  .block-timeline.wp-block-columns.alignwide body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .wp-block-gallery .column.col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .block-timeline.wp-block-columns.alignwide .wp-block-gallery .column.col,
   .block.block-timeline body:not(.page-id-6357) .block.block-wide-text .site-header .wp-block-gallery .column.col,
   body:not(.page-id-6357) .block.block-wide-text .site-header .block.block-timeline .wp-block-gallery .column.col,
   .block-timeline.wp-block-columns body:not(.page-id-6357) .block.block-wide-text .site-header .wp-block-gallery .column.col,
@@ -16677,6 +16714,12 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .is-varia
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .block-timeline.wp-block-columns .wp-block-gallery .column.col,
   .block-timeline.wp-block-columns.alignwide body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .wp-block-gallery .column.col,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .block-timeline.wp-block-columns.alignwide .wp-block-gallery .column.col,
+  .block.block-timeline body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .wp-block-gallery .column.col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .block.block-timeline .wp-block-gallery .column.col,
+  .block-timeline.wp-block-columns body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .wp-block-gallery .column.col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .block-timeline.wp-block-columns .wp-block-gallery .column.col,
+  .block-timeline.wp-block-columns.alignwide body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .wp-block-gallery .column.col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .block-timeline.wp-block-columns.alignwide .wp-block-gallery .column.col,
   .block.block-timeline .columns .gutenberg-content .wp-block-gallery > .col,
   .gutenberg-content .block.block-timeline .columns .wp-block-gallery > .col,
   .block-timeline.wp-block-columns .columns .gutenberg-content .wp-block-gallery > .col,
@@ -16713,6 +16756,18 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .is-varia
   .gutenberg-content .block-timeline.wp-block-columns.alignwide body:not(.page-id-6357) .block-wide-text.wp-block-columns .container .wp-block-gallery > .col,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container .block-timeline.wp-block-columns.alignwide .gutenberg-content .wp-block-gallery > .col,
   .gutenberg-content body:not(.page-id-6357) .block-wide-text.wp-block-columns .container .block-timeline.wp-block-columns.alignwide .wp-block-gallery > .col,
+  .block.block-timeline body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .gutenberg-content .wp-block-gallery > .col,
+  .gutenberg-content .block.block-timeline body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .block.block-timeline .gutenberg-content .wp-block-gallery > .col,
+  .gutenberg-content body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .block.block-timeline .wp-block-gallery > .col,
+  .block-timeline.wp-block-columns body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .gutenberg-content .wp-block-gallery > .col,
+  .gutenberg-content .block-timeline.wp-block-columns body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .block-timeline.wp-block-columns .gutenberg-content .wp-block-gallery > .col,
+  .gutenberg-content body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .block-timeline.wp-block-columns .wp-block-gallery > .col,
+  .block-timeline.wp-block-columns.alignwide body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .gutenberg-content .wp-block-gallery > .col,
+  .gutenberg-content .block-timeline.wp-block-columns.alignwide body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .block-timeline.wp-block-columns.alignwide .gutenberg-content .wp-block-gallery > .col,
+  .gutenberg-content body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .block-timeline.wp-block-columns.alignwide .wp-block-gallery > .col,
   .block.block-timeline body:not(.page-id-6357) .block.block-wide-text .site-header .gutenberg-content .wp-block-gallery > .col,
   .gutenberg-content .block.block-timeline body:not(.page-id-6357) .block.block-wide-text .site-header .wp-block-gallery > .col,
   body:not(.page-id-6357) .block.block-wide-text .site-header .block.block-timeline .gutenberg-content .wp-block-gallery > .col,
@@ -16737,6 +16792,18 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .is-varia
   .gutenberg-content .block-timeline.wp-block-columns.alignwide body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .wp-block-gallery > .col,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .block-timeline.wp-block-columns.alignwide .gutenberg-content .wp-block-gallery > .col,
   .gutenberg-content body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .block-timeline.wp-block-columns.alignwide .wp-block-gallery > .col,
+  .block.block-timeline body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .gutenberg-content .wp-block-gallery > .col,
+  .gutenberg-content .block.block-timeline body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .block.block-timeline .gutenberg-content .wp-block-gallery > .col,
+  .gutenberg-content body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .block.block-timeline .wp-block-gallery > .col,
+  .block-timeline.wp-block-columns body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .gutenberg-content .wp-block-gallery > .col,
+  .gutenberg-content .block-timeline.wp-block-columns body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .block-timeline.wp-block-columns .gutenberg-content .wp-block-gallery > .col,
+  .gutenberg-content body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .block-timeline.wp-block-columns .wp-block-gallery > .col,
+  .block-timeline.wp-block-columns.alignwide body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .gutenberg-content .wp-block-gallery > .col,
+  .gutenberg-content .block-timeline.wp-block-columns.alignwide body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .block-timeline.wp-block-columns.alignwide .gutenberg-content .wp-block-gallery > .col,
+  .gutenberg-content body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .block-timeline.wp-block-columns.alignwide .wp-block-gallery > .col,
   .block.block-timeline .columns body:not(.page-id-6357) .block.block-wide-text .container .wp-block-gallery > .col,
   body:not(.page-id-6357) .block.block-wide-text .container .block.block-timeline .columns .wp-block-gallery > .col,
   .block-timeline.wp-block-columns .columns body:not(.page-id-6357) .block.block-wide-text .container .wp-block-gallery > .col,
@@ -16773,6 +16840,18 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .is-varia
   .block-timeline.wp-block-columns.alignwide body:not(.page-id-6357) .block.block-wide-text .block-wide-text.wp-block-columns .container .wp-block-gallery > .col,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .block.block-wide-text .container .block-timeline.wp-block-columns.alignwide .wp-block-gallery > .col,
   body:not(.page-id-6357) .block.block-wide-text .block-wide-text.wp-block-columns .container .block-timeline.wp-block-columns.alignwide .wp-block-gallery > .col,
+  .block.block-timeline body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .block.block-wide-text .container .wp-block-gallery > .col,
+  .block.block-timeline body:not(.page-id-6357) .block.block-wide-text .block-wide-text.wp-block-columns.alignwide .container .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .block.block-wide-text .container .block.block-timeline .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block.block-wide-text .block-wide-text.wp-block-columns.alignwide .container .block.block-timeline .wp-block-gallery > .col,
+  .block-timeline.wp-block-columns body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .block.block-wide-text .container .wp-block-gallery > .col,
+  .block-timeline.wp-block-columns body:not(.page-id-6357) .block.block-wide-text .block-wide-text.wp-block-columns.alignwide .container .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .block.block-wide-text .container .block-timeline.wp-block-columns .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block.block-wide-text .block-wide-text.wp-block-columns.alignwide .container .block-timeline.wp-block-columns .wp-block-gallery > .col,
+  .block-timeline.wp-block-columns.alignwide body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .block.block-wide-text .container .wp-block-gallery > .col,
+  .block-timeline.wp-block-columns.alignwide body:not(.page-id-6357) .block.block-wide-text .block-wide-text.wp-block-columns.alignwide .container .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .block.block-wide-text .container .block-timeline.wp-block-columns.alignwide .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block.block-wide-text .block-wide-text.wp-block-columns.alignwide .container .block-timeline.wp-block-columns.alignwide .wp-block-gallery > .col,
   .block.block-timeline body:not(.page-id-6357) .block.block-wide-text .site-header .container .wp-block-gallery > .col,
   .block.block-timeline body:not(.page-id-6357) .block.block-wide-text .container .site-header .wp-block-gallery > .col,
   body:not(.page-id-6357) .block.block-wide-text .site-header .block.block-timeline .container .wp-block-gallery > .col,
@@ -16797,6 +16876,18 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .is-varia
   .block-timeline.wp-block-columns.alignwide body:not(.page-id-6357) .block.block-wide-text .container .block-wide-text.wp-block-columns .site-header .wp-block-gallery > .col,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .block-timeline.wp-block-columns.alignwide .block.block-wide-text .container .wp-block-gallery > .col,
   body:not(.page-id-6357) .block.block-wide-text .container .block-wide-text.wp-block-columns .site-header .block-timeline.wp-block-columns.alignwide .wp-block-gallery > .col,
+  .block.block-timeline body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .block.block-wide-text .container .wp-block-gallery > .col,
+  .block.block-timeline body:not(.page-id-6357) .block.block-wide-text .container .block-wide-text.wp-block-columns.alignwide .site-header .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .block.block-timeline .block.block-wide-text .container .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block.block-wide-text .container .block-wide-text.wp-block-columns.alignwide .site-header .block.block-timeline .wp-block-gallery > .col,
+  .block-timeline.wp-block-columns body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .block.block-wide-text .container .wp-block-gallery > .col,
+  .block-timeline.wp-block-columns body:not(.page-id-6357) .block.block-wide-text .container .block-wide-text.wp-block-columns.alignwide .site-header .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .block-timeline.wp-block-columns .block.block-wide-text .container .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block.block-wide-text .container .block-wide-text.wp-block-columns.alignwide .site-header .block-timeline.wp-block-columns .wp-block-gallery > .col,
+  .block-timeline.wp-block-columns.alignwide body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .block.block-wide-text .container .wp-block-gallery > .col,
+  .block-timeline.wp-block-columns.alignwide body:not(.page-id-6357) .block.block-wide-text .container .block-wide-text.wp-block-columns.alignwide .site-header .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .block-timeline.wp-block-columns.alignwide .block.block-wide-text .container .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block.block-wide-text .container .block-wide-text.wp-block-columns.alignwide .site-header .block-timeline.wp-block-columns.alignwide .wp-block-gallery > .col,
   .block.block-timeline .columns body:not(.page-id-6357) .block-wide-text.wp-block-columns .container .wp-block-gallery > .col,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container .block.block-timeline .columns .wp-block-gallery > .col,
   .block-timeline.wp-block-columns .columns body:not(.page-id-6357) .block-wide-text.wp-block-columns .container .wp-block-gallery > .col,
@@ -16833,6 +16924,12 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .is-varia
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container .block-timeline.wp-block-columns .wp-block-gallery > .col,
   .block-timeline.wp-block-columns.alignwide body:not(.page-id-6357) .block-wide-text.wp-block-columns .container .wp-block-gallery > .col,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container .block-timeline.wp-block-columns.alignwide .wp-block-gallery > .col,
+  .block.block-timeline body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .block.block-timeline .wp-block-gallery > .col,
+  .block-timeline.wp-block-columns body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .block-timeline.wp-block-columns .wp-block-gallery > .col,
+  .block-timeline.wp-block-columns.alignwide body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .block-timeline.wp-block-columns.alignwide .wp-block-gallery > .col,
   .block.block-timeline body:not(.page-id-6357) .block.block-wide-text .site-header .block-wide-text.wp-block-columns .container .wp-block-gallery > .col,
   .block.block-timeline body:not(.page-id-6357) .block-wide-text.wp-block-columns .container .block.block-wide-text .site-header .wp-block-gallery > .col,
   body:not(.page-id-6357) .block.block-wide-text .site-header .block.block-timeline .block-wide-text.wp-block-columns .container .wp-block-gallery > .col,
@@ -16857,6 +16954,18 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .is-varia
   .block-timeline.wp-block-columns.alignwide body:not(.page-id-6357) .block-wide-text.wp-block-columns .container .site-header .wp-block-gallery > .col,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .block-timeline.wp-block-columns.alignwide .container .wp-block-gallery > .col,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container .site-header .block-timeline.wp-block-columns.alignwide .wp-block-gallery > .col,
+  .block.block-timeline body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .container .wp-block-gallery > .col,
+  .block.block-timeline body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .site-header .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .block.block-timeline .container .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .site-header .block.block-timeline .wp-block-gallery > .col,
+  .block-timeline.wp-block-columns body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .container .wp-block-gallery > .col,
+  .block-timeline.wp-block-columns body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .site-header .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .block-timeline.wp-block-columns .container .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .site-header .block-timeline.wp-block-columns .wp-block-gallery > .col,
+  .block-timeline.wp-block-columns.alignwide body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .container .wp-block-gallery > .col,
+  .block-timeline.wp-block-columns.alignwide body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .site-header .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .block-timeline.wp-block-columns.alignwide .container .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .site-header .block-timeline.wp-block-columns.alignwide .wp-block-gallery > .col,
   .block.block-timeline .columns body:not(.page-id-6357) .block.block-wide-text .site-header .wp-block-gallery > .col,
   body:not(.page-id-6357) .block.block-wide-text .site-header .block.block-timeline .columns .wp-block-gallery > .col,
   .block-timeline.wp-block-columns .columns body:not(.page-id-6357) .block.block-wide-text .site-header .wp-block-gallery > .col,
@@ -16899,6 +17008,18 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .is-varia
   .block-timeline.wp-block-columns.alignwide body:not(.page-id-6357) .block.block-wide-text .site-header .block-wide-text.wp-block-columns .container .wp-block-gallery > .col,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container .block-timeline.wp-block-columns.alignwide .block.block-wide-text .site-header .wp-block-gallery > .col,
   body:not(.page-id-6357) .block.block-wide-text .site-header .block-wide-text.wp-block-columns .container .block-timeline.wp-block-columns.alignwide .wp-block-gallery > .col,
+  .block.block-timeline body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .block.block-wide-text .site-header .wp-block-gallery > .col,
+  .block.block-timeline body:not(.page-id-6357) .block.block-wide-text .site-header .block-wide-text.wp-block-columns.alignwide .container .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .block.block-timeline .block.block-wide-text .site-header .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block.block-wide-text .site-header .block-wide-text.wp-block-columns.alignwide .container .block.block-timeline .wp-block-gallery > .col,
+  .block-timeline.wp-block-columns body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .block.block-wide-text .site-header .wp-block-gallery > .col,
+  .block-timeline.wp-block-columns body:not(.page-id-6357) .block.block-wide-text .site-header .block-wide-text.wp-block-columns.alignwide .container .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .block-timeline.wp-block-columns .block.block-wide-text .site-header .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block.block-wide-text .site-header .block-wide-text.wp-block-columns.alignwide .container .block-timeline.wp-block-columns .wp-block-gallery > .col,
+  .block-timeline.wp-block-columns.alignwide body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .block.block-wide-text .site-header .wp-block-gallery > .col,
+  .block-timeline.wp-block-columns.alignwide body:not(.page-id-6357) .block.block-wide-text .site-header .block-wide-text.wp-block-columns.alignwide .container .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .block-timeline.wp-block-columns.alignwide .block.block-wide-text .site-header .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block.block-wide-text .site-header .block-wide-text.wp-block-columns.alignwide .container .block-timeline.wp-block-columns.alignwide .wp-block-gallery > .col,
   .block.block-timeline body:not(.page-id-6357) .block.block-wide-text .site-header .wp-block-gallery > .col,
   body:not(.page-id-6357) .block.block-wide-text .site-header .block.block-timeline .wp-block-gallery > .col,
   .block-timeline.wp-block-columns body:not(.page-id-6357) .block.block-wide-text .site-header .wp-block-gallery > .col,
@@ -16917,6 +17038,18 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .is-varia
   .block-timeline.wp-block-columns.alignwide body:not(.page-id-6357) .block.block-wide-text .block-wide-text.wp-block-columns .site-header .wp-block-gallery > .col,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .block.block-wide-text .site-header .block-timeline.wp-block-columns.alignwide .wp-block-gallery > .col,
   body:not(.page-id-6357) .block.block-wide-text .block-wide-text.wp-block-columns .site-header .block-timeline.wp-block-columns.alignwide .wp-block-gallery > .col,
+  .block.block-timeline body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .block.block-wide-text .site-header .wp-block-gallery > .col,
+  .block.block-timeline body:not(.page-id-6357) .block.block-wide-text .block-wide-text.wp-block-columns.alignwide .site-header .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .block.block-wide-text .site-header .block.block-timeline .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block.block-wide-text .block-wide-text.wp-block-columns.alignwide .site-header .block.block-timeline .wp-block-gallery > .col,
+  .block-timeline.wp-block-columns body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .block.block-wide-text .site-header .wp-block-gallery > .col,
+  .block-timeline.wp-block-columns body:not(.page-id-6357) .block.block-wide-text .block-wide-text.wp-block-columns.alignwide .site-header .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .block.block-wide-text .site-header .block-timeline.wp-block-columns .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block.block-wide-text .block-wide-text.wp-block-columns.alignwide .site-header .block-timeline.wp-block-columns .wp-block-gallery > .col,
+  .block-timeline.wp-block-columns.alignwide body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .block.block-wide-text .site-header .wp-block-gallery > .col,
+  .block-timeline.wp-block-columns.alignwide body:not(.page-id-6357) .block.block-wide-text .block-wide-text.wp-block-columns.alignwide .site-header .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .block.block-wide-text .site-header .block-timeline.wp-block-columns.alignwide .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block.block-wide-text .block-wide-text.wp-block-columns.alignwide .site-header .block-timeline.wp-block-columns.alignwide .wp-block-gallery > .col,
   .block.block-timeline .columns body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .wp-block-gallery > .col,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .block.block-timeline .columns .wp-block-gallery > .col,
   .block-timeline.wp-block-columns .columns body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .wp-block-gallery > .col,
@@ -16959,6 +17092,18 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .is-varia
   .block-timeline.wp-block-columns.alignwide body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .container .wp-block-gallery > .col,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container .block-timeline.wp-block-columns.alignwide .site-header .wp-block-gallery > .col,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .container .block-timeline.wp-block-columns.alignwide .wp-block-gallery > .col,
+  .block.block-timeline body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .site-header .wp-block-gallery > .col,
+  .block.block-timeline body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .container .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .block.block-timeline .site-header .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .container .block.block-timeline .wp-block-gallery > .col,
+  .block-timeline.wp-block-columns body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .site-header .wp-block-gallery > .col,
+  .block-timeline.wp-block-columns body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .container .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .block-timeline.wp-block-columns .site-header .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .container .block-timeline.wp-block-columns .wp-block-gallery > .col,
+  .block-timeline.wp-block-columns.alignwide body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .site-header .wp-block-gallery > .col,
+  .block-timeline.wp-block-columns.alignwide body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .container .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .block-timeline.wp-block-columns.alignwide .site-header .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .container .block-timeline.wp-block-columns.alignwide .wp-block-gallery > .col,
   .block.block-timeline body:not(.page-id-6357) .block.block-wide-text .block-wide-text.wp-block-columns .site-header .wp-block-gallery > .col,
   .block.block-timeline body:not(.page-id-6357) .block-wide-text.wp-block-columns .block.block-wide-text .site-header .wp-block-gallery > .col,
   body:not(.page-id-6357) .block.block-wide-text .block-wide-text.wp-block-columns .site-header .block.block-timeline .wp-block-gallery > .col,
@@ -16976,7 +17121,13 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .is-varia
   .block-timeline.wp-block-columns body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .wp-block-gallery > .col,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .block-timeline.wp-block-columns .wp-block-gallery > .col,
   .block-timeline.wp-block-columns.alignwide body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .wp-block-gallery > .col,
-  body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .block-timeline.wp-block-columns.alignwide .wp-block-gallery > .col {
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .block-timeline.wp-block-columns.alignwide .wp-block-gallery > .col,
+  .block.block-timeline body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .block.block-timeline .wp-block-gallery > .col,
+  .block-timeline.wp-block-columns body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .block-timeline.wp-block-columns .wp-block-gallery > .col,
+  .block-timeline.wp-block-columns.alignwide body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .wp-block-gallery > .col,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .block-timeline.wp-block-columns.alignwide .wp-block-gallery > .col {
     width: 100%;
   }
 
@@ -17550,8 +17701,10 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .is-varia
 
 body:not(.page-id-6357) .block.block-wide-text .container,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container,
 body:not(.page-id-6357) .block.block-wide-text .site-header,
-body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header {
+body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header {
   max-width: 870px;
 }
 
@@ -27445,8 +27598,10 @@ body.template-surveys-modern .gform_wrapper ul li.field_description_above div.gi
 
 body.page-template-template-basic:not(.page-id-6357) .block.block-wide-text .container *,
 body.page-template-template-basic:not(.page-id-6357) .block-wide-text.wp-block-columns .container *,
+body.page-template-template-basic:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container *,
 body.page-template-template-basic:not(.page-id-6357) .block.block-wide-text .site-header *,
-body.page-template-template-basic:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header * {
+body.page-template-template-basic:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header *,
+body.page-template-template-basic:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header * {
   padding-left: 0;
   padding-right: 0;
 }
@@ -28510,23 +28665,29 @@ body.page-id-6357 .block-wide-text.wp-block-columns.alignwide {
 
 body.page-id-6357 .block.block-wide-text .gform_wrapper form li,
 body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper form li,
+body.page-id-6357 .block-wide-text.wp-block-columns.alignwide .gform_wrapper form li,
 body.page-id-6357 .block.block-wide-text .gform_wrapper li,
-body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper li {
+body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper li,
+body.page-id-6357 .block-wide-text.wp-block-columns.alignwide .gform_wrapper li {
   overflow: visible !important;
 }
 
 body.page-id-6357 .block.block-wide-text .container,
 body.page-id-6357 .block-wide-text.wp-block-columns .container,
+body.page-id-6357 .block-wide-text.wp-block-columns.alignwide .container,
 body.page-id-6357 .block.block-wide-text .site-header,
-body.page-id-6357 .block-wide-text.wp-block-columns .site-header {
+body.page-id-6357 .block-wide-text.wp-block-columns .site-header,
+body.page-id-6357 .block-wide-text.wp-block-columns.alignwide .site-header {
   max-width: 1345px;
 }
 
 @media (max-width: 760px) {
   body.page-id-6357 .block.block-wide-text .container h2,
   body.page-id-6357 .block-wide-text.wp-block-columns .container h2,
+  body.page-id-6357 .block-wide-text.wp-block-columns.alignwide .container h2,
   body.page-id-6357 .block.block-wide-text .site-header h2,
-  body.page-id-6357 .block-wide-text.wp-block-columns .site-header h2 {
+  body.page-id-6357 .block-wide-text.wp-block-columns .site-header h2,
+  body.page-id-6357 .block-wide-text.wp-block-columns.alignwide .site-header h2 {
     margin-bottom: 12rem;
   }
 }
@@ -28534,14 +28695,17 @@ body.page-id-6357 .block-wide-text.wp-block-columns .site-header {
 @media (max-width: 480px) {
   body.page-id-6357 .block.block-wide-text .container h2,
   body.page-id-6357 .block-wide-text.wp-block-columns .container h2,
+  body.page-id-6357 .block-wide-text.wp-block-columns.alignwide .container h2,
   body.page-id-6357 .block.block-wide-text .site-header h2,
-  body.page-id-6357 .block-wide-text.wp-block-columns .site-header h2 {
+  body.page-id-6357 .block-wide-text.wp-block-columns .site-header h2,
+  body.page-id-6357 .block-wide-text.wp-block-columns.alignwide .site-header h2 {
     margin-bottom: 6rem;
   }
 }
 
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gfield_required,
-body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper .gfield_required {
+body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper .gfield_required,
+body.page-id-6357 .block-wide-text.wp-block-columns.alignwide .gform_wrapper .gfield_required {
   color: #00cb9b;
 }
 
@@ -28667,7 +28831,8 @@ body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper.gf_browser_ch
 body.page-id-6357 .block.block-wide-text .gform_wrapper textarea.medium,
 body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper textarea.medium,
 body.page-id-6357 .block.block-wide-text .gform_wrapper textarea,
-body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper textarea {
+body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper textarea,
+body.page-id-6357 .block-wide-text.wp-block-columns.alignwide .gform_wrapper textarea {
   width: 100% !important;
   padding: 18px 0;
   padding: 1.8rem 0;
@@ -28690,7 +28855,8 @@ body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper.gf_browser_ch
 body.page-id-6357 .block.block-wide-text .gform_wrapper textarea.medium::-moz-placeholder,
 body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper textarea.medium::-moz-placeholder,
 body.page-id-6357 .block.block-wide-text .gform_wrapper textarea::-moz-placeholder,
-body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper textarea::-moz-placeholder {
+body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper textarea::-moz-placeholder,
+body.page-id-6357 .block-wide-text.wp-block-columns.alignwide .gform_wrapper textarea::-moz-placeholder {
   opacity: 1;
   color: #131a50;
 }
@@ -28706,7 +28872,8 @@ body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper.gf_browser_ch
 body.page-id-6357 .block.block-wide-text .gform_wrapper textarea.medium:-ms-input-placeholder,
 body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper textarea.medium:-ms-input-placeholder,
 body.page-id-6357 .block.block-wide-text .gform_wrapper textarea:-ms-input-placeholder,
-body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper textarea:-ms-input-placeholder {
+body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper textarea:-ms-input-placeholder,
+body.page-id-6357 .block-wide-text.wp-block-columns.alignwide .gform_wrapper textarea:-ms-input-placeholder {
   opacity: 1;
   color: #131a50;
 }
@@ -28722,7 +28889,8 @@ body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper.gf_browser_ch
 body.page-id-6357 .block.block-wide-text .gform_wrapper textarea.medium::-ms-input-placeholder,
 body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper textarea.medium::-ms-input-placeholder,
 body.page-id-6357 .block.block-wide-text .gform_wrapper textarea::-ms-input-placeholder,
-body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper textarea::-ms-input-placeholder {
+body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper textarea::-ms-input-placeholder,
+body.page-id-6357 .block-wide-text.wp-block-columns.alignwide .gform_wrapper textarea::-ms-input-placeholder {
   opacity: 1;
   color: #131a50;
 }
@@ -28738,7 +28906,8 @@ body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper.gf_browser_ch
 body.page-id-6357 .block.block-wide-text .gform_wrapper textarea.medium::placeholder,
 body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper textarea.medium::placeholder,
 body.page-id-6357 .block.block-wide-text .gform_wrapper textarea::placeholder,
-body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper textarea::placeholder {
+body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper textarea::placeholder,
+body.page-id-6357 .block-wide-text.wp-block-columns.alignwide .gform_wrapper textarea::placeholder {
   opacity: 1;
   color: #131a50;
 }
@@ -28755,7 +28924,8 @@ body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper textarea::pla
   body.page-id-6357 .block.block-wide-text .gform_wrapper textarea.medium::-moz-placeholder,
   body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper textarea.medium::-moz-placeholder,
   body.page-id-6357 .block.block-wide-text .gform_wrapper textarea::-moz-placeholder,
-  body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper textarea::-moz-placeholder {
+  body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper textarea::-moz-placeholder,
+  body.page-id-6357 .block-wide-text.wp-block-columns.alignwide .gform_wrapper textarea::-moz-placeholder {
     font-size: 18px;
   }
 
@@ -28770,7 +28940,8 @@ body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper textarea::pla
   body.page-id-6357 .block.block-wide-text .gform_wrapper textarea.medium:-ms-input-placeholder,
   body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper textarea.medium:-ms-input-placeholder,
   body.page-id-6357 .block.block-wide-text .gform_wrapper textarea:-ms-input-placeholder,
-  body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper textarea:-ms-input-placeholder {
+  body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper textarea:-ms-input-placeholder,
+  body.page-id-6357 .block-wide-text.wp-block-columns.alignwide .gform_wrapper textarea:-ms-input-placeholder {
     font-size: 18px;
   }
 
@@ -28785,7 +28956,8 @@ body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper textarea::pla
   body.page-id-6357 .block.block-wide-text .gform_wrapper textarea.medium::-ms-input-placeholder,
   body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper textarea.medium::-ms-input-placeholder,
   body.page-id-6357 .block.block-wide-text .gform_wrapper textarea::-ms-input-placeholder,
-  body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper textarea::-ms-input-placeholder {
+  body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper textarea::-ms-input-placeholder,
+  body.page-id-6357 .block-wide-text.wp-block-columns.alignwide .gform_wrapper textarea::-ms-input-placeholder {
     font-size: 18px;
   }
 
@@ -28800,7 +28972,8 @@ body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper textarea::pla
   body.page-id-6357 .block.block-wide-text .gform_wrapper textarea.medium::placeholder,
   body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper textarea.medium::placeholder,
   body.page-id-6357 .block.block-wide-text .gform_wrapper textarea::placeholder,
-  body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper textarea::placeholder {
+  body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper textarea::placeholder,
+  body.page-id-6357 .block-wide-text.wp-block-columns.alignwide .gform_wrapper textarea::placeholder {
     font-size: 18px;
   }
 }
@@ -28817,7 +28990,8 @@ body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper textarea::pla
   body.page-id-6357 .block.block-wide-text .gform_wrapper textarea.medium,
   body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper textarea.medium,
   body.page-id-6357 .block.block-wide-text .gform_wrapper textarea,
-  body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper textarea {
+  body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper textarea,
+  body.page-id-6357 .block-wide-text.wp-block-columns.alignwide .gform_wrapper textarea {
     font-size: 18px;
   }
 }
@@ -28828,7 +29002,8 @@ body.page-id-6357 .block-wide-text.wp-block-columns #field_6_7 {
 }
 
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer,
-body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper .gform_footer {
+body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper .gform_footer,
+body.page-id-6357 .block-wide-text.wp-block-columns.alignwide .gform_wrapper .gform_footer {
   margin-top: 56px !important;
   padding-top: 56px !important;
   border-top: solid 2px #efefef;
@@ -28932,12 +29107,14 @@ body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper ul li.field_d
 
 body.page-id-6357 .block.block-wide-text .checkbox + label,
 body.page-id-6357 .block-wide-text.wp-block-columns .checkbox + label,
+body.page-id-6357 .block-wide-text.wp-block-columns.alignwide .checkbox + label,
 body.page-id-6357 .block.block-wide-text .gform_wrapper ul.gfield_checkbox li input[type=checkbox] + br + label,
 body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper ul.gfield_checkbox li input[type=checkbox] + br + label,
 body.page-id-6357 .block.block-wide-text .gform_wrapper ul.gfield_radio li input[type=radio] + br + label,
 body.page-id-6357 .block-wide-text.wp-block-columns .gform_wrapper ul.gfield_radio li input[type=radio] + br + label,
 body.page-id-6357 .block.block-wide-text .radio + label,
-body.page-id-6357 .block-wide-text.wp-block-columns .radio + label {
+body.page-id-6357 .block-wide-text.wp-block-columns .radio + label,
+body.page-id-6357 .block-wide-text.wp-block-columns.alignwide .radio + label {
   align-items: center;
 }
 
@@ -29595,8 +29772,10 @@ body.error404,
 .gutenberg-content,
 body:not(.page-id-6357) .block.block-wide-text .container,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container,
 body:not(.page-id-6357) .block.block-wide-text .site-header,
-body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header {
+body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header {
   max-width: 100%;
   padding-right: 0;
   padding-left: 0;
@@ -29607,8 +29786,10 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header {
 .gutenberg-content .blocks-gallery-grid,
 body:not(.page-id-6357) .block.block-wide-text .container .blocks-gallery-grid,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container .blocks-gallery-grid,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .blocks-gallery-grid,
 body:not(.page-id-6357) .block.block-wide-text .site-header .blocks-gallery-grid,
-body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .blocks-gallery-grid {
+body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .blocks-gallery-grid,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .blocks-gallery-grid {
   display: -ms-grid;
   display: grid;
 }
@@ -29704,21 +29885,27 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .columns-
 .gutenberg-content .cat-links,
 body:not(.page-id-6357) .block.block-wide-text .container .cat-links,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container .cat-links,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .cat-links,
 body:not(.page-id-6357) .block.block-wide-text .site-header .cat-links,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .cat-links,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .cat-links,
 .gutenberg-content .tags-links,
 body:not(.page-id-6357) .block.block-wide-text .container .tags-links,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container .tags-links,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .tags-links,
 body:not(.page-id-6357) .block.block-wide-text .site-header .tags-links,
-body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .tags-links {
+body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .tags-links,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .tags-links {
   display: block;
 }
 
 .gutenberg-content .alignleft,
 body:not(.page-id-6357) .block.block-wide-text .container .alignleft,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container .alignleft,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .alignleft,
 body:not(.page-id-6357) .block.block-wide-text .site-header .alignleft,
-body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .alignleft {
+body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .alignleft,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .alignleft {
   float: left;
   margin-right: 20px;
 }
@@ -29726,8 +29913,10 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .alignlef
 .gutenberg-content .alignright,
 body:not(.page-id-6357) .block.block-wide-text .container .alignright,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container .alignright,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .alignright,
 body:not(.page-id-6357) .block.block-wide-text .site-header .alignright,
-body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .alignright {
+body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .alignright,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .alignright {
   float: right;
   margin-left: 20px;
 }
@@ -29735,8 +29924,10 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .alignrig
 .gutenberg-content .aligncenter,
 body:not(.page-id-6357) .block.block-wide-text .container .aligncenter,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container .aligncenter,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .aligncenter,
 body:not(.page-id-6357) .block.block-wide-text .site-header .aligncenter,
-body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .aligncenter {
+body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .aligncenter,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .aligncenter {
   clear: both;
   display: block;
   margin: 0 auto;
@@ -29745,8 +29936,10 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .aligncen
 .gutenberg-content del,
 body:not(.page-id-6357) .block.block-wide-text .container del,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container del,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container del,
 body:not(.page-id-6357) .block.block-wide-text .site-header del,
-body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header del {
+body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header del,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header del {
   text-decoration: line-through;
   color: #666;
 }
@@ -29754,8 +29947,10 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header del {
 .gutenberg-content .wp-block-gallery,
 body:not(.page-id-6357) .block.block-wide-text .container .wp-block-gallery,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container .wp-block-gallery,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .wp-block-gallery,
 body:not(.page-id-6357) .block.block-wide-text .site-header .wp-block-gallery,
-body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .wp-block-gallery {
+body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .wp-block-gallery,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .wp-block-gallery {
   width: 100%;
   max-width: 100%;
 }
@@ -29764,8 +29959,10 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .wp-block
   .gutenberg-content .wp-block-gallery,
   body:not(.page-id-6357) .block.block-wide-text .container .wp-block-gallery,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container .wp-block-gallery,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .wp-block-gallery,
   body:not(.page-id-6357) .block.block-wide-text .site-header .wp-block-gallery,
-  body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .wp-block-gallery {
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .wp-block-gallery,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .wp-block-gallery {
     display: block;
   }
 }
@@ -29774,8 +29971,10 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .wp-block
   .gutenberg-content .wp-block-gallery > *,
   body:not(.page-id-6357) .block.block-wide-text .container .wp-block-gallery > *,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container .wp-block-gallery > *,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .wp-block-gallery > *,
   body:not(.page-id-6357) .block.block-wide-text .site-header .wp-block-gallery > *,
-  body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .wp-block-gallery > * {
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .wp-block-gallery > *,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .wp-block-gallery > * {
     display: block;
     width: 100%;
   }
@@ -29784,8 +29983,10 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .wp-block
 .gutenberg-content p,
 body:not(.page-id-6357) .block.block-wide-text .container p,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container p,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container p,
 body:not(.page-id-6357) .block.block-wide-text .site-header p,
-body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header p {
+body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header p,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header p {
   line-height: 1.5;
   color: #131a50;
   font-weight: 400;
@@ -29794,23 +29995,31 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header p {
 .gutenberg-content embed,
 body:not(.page-id-6357) .block.block-wide-text .container embed,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container embed,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container embed,
 body:not(.page-id-6357) .block.block-wide-text .site-header embed,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header embed,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header embed,
 .gutenberg-content iframe,
 body:not(.page-id-6357) .block.block-wide-text .container iframe,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container iframe,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container iframe,
 body:not(.page-id-6357) .block.block-wide-text .site-header iframe,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header iframe,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header iframe,
 .gutenberg-content object,
 body:not(.page-id-6357) .block.block-wide-text .container object,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container object,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container object,
 body:not(.page-id-6357) .block.block-wide-text .site-header object,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header object,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header object,
 .gutenberg-content video,
 body:not(.page-id-6357) .block.block-wide-text .container video,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container video,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container video,
 body:not(.page-id-6357) .block.block-wide-text .site-header video,
-body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header video {
+body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header video,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header video {
   max-width: 100%;
 }
 
@@ -29850,8 +30059,10 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header h6:first-
 .gutenberg-content img,
 body:not(.page-id-6357) .block.block-wide-text .container img,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container img,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container img,
 body:not(.page-id-6357) .block.block-wide-text .site-header img,
-body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header img {
+body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header img,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header img {
   border-radius: 4px;
 }
 
@@ -29882,18 +30093,24 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .wp-block
 .gutenberg-content figcaption,
 body:not(.page-id-6357) .block.block-wide-text .container figcaption,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container figcaption,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container figcaption,
 body:not(.page-id-6357) .block.block-wide-text .site-header figcaption,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header figcaption,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header figcaption,
 .gutenberg-content cite,
 body:not(.page-id-6357) .block.block-wide-text .container cite,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container cite,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container cite,
 body:not(.page-id-6357) .block.block-wide-text .site-header cite,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header cite,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header cite,
 .gutenberg-content small,
 body:not(.page-id-6357) .block.block-wide-text .container small,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container small,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container small,
 body:not(.page-id-6357) .block.block-wide-text .site-header small,
-body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header small {
+body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header small,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header small {
   font-size: 15px;
   font-style: normal;
   color: rgba(75, 75, 90, .9);
@@ -29914,18 +30131,24 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header small {
   .gutenberg-content figcaption,
   body:not(.page-id-6357) .block.block-wide-text .container figcaption,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container figcaption,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container figcaption,
   body:not(.page-id-6357) .block.block-wide-text .site-header figcaption,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header figcaption,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header figcaption,
   .gutenberg-content cite,
   body:not(.page-id-6357) .block.block-wide-text .container cite,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container cite,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container cite,
   body:not(.page-id-6357) .block.block-wide-text .site-header cite,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header cite,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header cite,
   .gutenberg-content small,
   body:not(.page-id-6357) .block.block-wide-text .container small,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container small,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container small,
   body:not(.page-id-6357) .block.block-wide-text .site-header small,
-  body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header small {
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header small,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header small {
     margin-top: 2rem;
   }
 }
@@ -29941,72 +30164,96 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header a:hover {
 .gutenberg-content h1,
 body:not(.page-id-6357) .block.block-wide-text .container h1,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container h1,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container h1,
 body:not(.page-id-6357) .block.block-wide-text .site-header h1,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header h1,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header h1,
 .gutenberg-content h2,
 body:not(.page-id-6357) .block.block-wide-text .container h2,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container h2,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container h2,
 body:not(.page-id-6357) .block.block-wide-text .site-header h2,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header h2,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header h2,
 .gutenberg-content h3,
 body:not(.page-id-6357) .block.block-wide-text .container h3,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container h3,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container h3,
 body:not(.page-id-6357) .block.block-wide-text .site-header h3,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header h3,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header h3,
 .gutenberg-content h4,
 body:not(.page-id-6357) .block.block-wide-text .container h4,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container h4,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container h4,
 body:not(.page-id-6357) .block.block-wide-text .site-header h4,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header h4,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header h4,
 .gutenberg-content h5,
 body:not(.page-id-6357) .block.block-wide-text .container h5,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container h5,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container h5,
 body:not(.page-id-6357) .block.block-wide-text .site-header h5,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header h5,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header h5,
 .gutenberg-content .is-style-ingress,
 body:not(.page-id-6357) .block.block-wide-text .container .is-style-ingress,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container .is-style-ingress,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .is-style-ingress,
 body:not(.page-id-6357) .block.block-wide-text .site-header .is-style-ingress,
-body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .is-style-ingress {
+body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .is-style-ingress,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .is-style-ingress {
   line-height: 1.22;
 }
 
 .gutenberg-content iframe,
 body:not(.page-id-6357) .block.block-wide-text .container iframe,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container iframe,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container iframe,
 body:not(.page-id-6357) .block.block-wide-text .site-header iframe,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header iframe,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header iframe,
 .gutenberg-content .fb-post,
 body:not(.page-id-6357) .block.block-wide-text .container .fb-post,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container .fb-post,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .fb-post,
 body:not(.page-id-6357) .block.block-wide-text .site-header .fb-post,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .fb-post,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .fb-post,
 .gutenberg-content small,
 body:not(.page-id-6357) .block.block-wide-text .container small,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container small,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container small,
 body:not(.page-id-6357) .block.block-wide-text .site-header small,
-body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header small {
+body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header small,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header small {
   display: block;
 }
 
 .gutenberg-content ul,
 body:not(.page-id-6357) .block.block-wide-text .container ul,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container ul,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container ul,
 body:not(.page-id-6357) .block.block-wide-text .site-header ul,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ul,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header ul,
 .gutenberg-content li,
 body:not(.page-id-6357) .block.block-wide-text .container li,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container li,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container li,
 body:not(.page-id-6357) .block.block-wide-text .site-header li,
-body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header li {
+body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header li,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header li {
   line-height: 1.5;
 }
 
 .gutenberg-content > blockquote,
 body:not(.page-id-6357) .block.block-wide-text .container > blockquote,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > blockquote,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > blockquote,
 body:not(.page-id-6357) .block.block-wide-text .site-header > blockquote,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > blockquote,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > blockquote,
 .gutenberg-content > blockquote.wp-block-quote,
 body:not(.page-id-6357) .block.block-wide-text .container > blockquote.wp-block-quote,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > blockquote.wp-block-quote,
@@ -30027,8 +30274,10 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > blockqu
 .gutenberg-content > blockquote cite,
 body:not(.page-id-6357) .block.block-wide-text .container > blockquote cite,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > blockquote cite,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > blockquote cite,
 body:not(.page-id-6357) .block.block-wide-text .site-header > blockquote cite,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > blockquote cite,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > blockquote cite,
 .gutenberg-content > blockquote.wp-block-quote cite,
 body:not(.page-id-6357) .block.block-wide-text .container > blockquote.wp-block-quote cite,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > blockquote.wp-block-quote cite,
@@ -30040,8 +30289,10 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > blockqu
 .gutenberg-content > blockquote *,
 body:not(.page-id-6357) .block.block-wide-text .container > blockquote *,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > blockquote *,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > blockquote *,
 body:not(.page-id-6357) .block.block-wide-text .site-header > blockquote *,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > blockquote *,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > blockquote *,
 .gutenberg-content > blockquote.wp-block-quote *,
 body:not(.page-id-6357) .block.block-wide-text .container > blockquote.wp-block-quote *,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > blockquote.wp-block-quote *,
@@ -30054,8 +30305,10 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > blockqu
   .gutenberg-content > blockquote,
   body:not(.page-id-6357) .block.block-wide-text .container > blockquote,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > blockquote,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > blockquote,
   body:not(.page-id-6357) .block.block-wide-text .site-header > blockquote,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > blockquote,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > blockquote,
   .gutenberg-content > blockquote.wp-block-quote,
   body:not(.page-id-6357) .block.block-wide-text .container > blockquote.wp-block-quote,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > blockquote.wp-block-quote,
@@ -30069,8 +30322,10 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > blockqu
 .gutenberg-content > blockquote > p,
 body:not(.page-id-6357) .block.block-wide-text .container > blockquote > p,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > blockquote > p,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > blockquote > p,
 body:not(.page-id-6357) .block.block-wide-text .site-header > blockquote > p,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > blockquote > p,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > blockquote > p,
 .gutenberg-content > blockquote.wp-block-quote > p,
 body:not(.page-id-6357) .block.block-wide-text .container > blockquote.wp-block-quote > p,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > blockquote.wp-block-quote > p,
@@ -30082,21 +30337,27 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > blockqu
 .gutenberg-content cite,
 body:not(.page-id-6357) .block.block-wide-text .container cite,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container cite,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container cite,
 body:not(.page-id-6357) .block.block-wide-text .site-header cite,
-body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header cite {
+body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header cite,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header cite {
   margin-bottom: 0;
 }
 
 .gutenberg-content ul,
 body:not(.page-id-6357) .block.block-wide-text .container ul,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container ul,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container ul,
 body:not(.page-id-6357) .block.block-wide-text .site-header ul,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ul,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header ul,
 .gutenberg-content ol,
 body:not(.page-id-6357) .block.block-wide-text .container ol,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container ol,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container ol,
 body:not(.page-id-6357) .block.block-wide-text .site-header ol,
-body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ol {
+body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ol,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header ol {
   padding-left: 22px;
   padding-left: 2.2rem;
 }
@@ -30105,13 +30366,17 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ol {
   .gutenberg-content ul,
   body:not(.page-id-6357) .block.block-wide-text .container ul,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container ul,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container ul,
   body:not(.page-id-6357) .block.block-wide-text .site-header ul,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ul,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header ul,
   .gutenberg-content ol,
   body:not(.page-id-6357) .block.block-wide-text .container ol,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container ol,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container ol,
   body:not(.page-id-6357) .block.block-wide-text .site-header ol,
-  body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ol {
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ol,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header ol {
     padding-left: 4.2rem;
   }
 }
@@ -30124,8 +30389,10 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header div[style
 .gutenberg-content .wp-video,
 body:not(.page-id-6357) .block.block-wide-text .container .wp-video,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container .wp-video,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .wp-video,
 body:not(.page-id-6357) .block.block-wide-text .site-header .wp-video,
-body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .wp-video {
+body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .wp-video,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .wp-video {
   width: 100% !important;
   max-width: 870px !important;
   margin-left: auto !important;
@@ -30144,8 +30411,10 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > figure.
 .gutenberg-content > *,
 body:not(.page-id-6357) .block.block-wide-text .container > *,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > *,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > *,
 body:not(.page-id-6357) .block.block-wide-text .site-header > *,
-body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > * {
+body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > * {
   max-width: 870px;
   width: 100%;
   margin-left: auto;
@@ -30156,33 +30425,45 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > * {
 .gutenberg-content > * .twitter-tweet,
 body:not(.page-id-6357) .block.block-wide-text .container > * .twitter-tweet,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > * .twitter-tweet,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > * .twitter-tweet,
 body:not(.page-id-6357) .block.block-wide-text .site-header > * .twitter-tweet,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > * .twitter-tweet,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > * .twitter-tweet,
 .gutenberg-content > * .instagram-media,
 body:not(.page-id-6357) .block.block-wide-text .container > * .instagram-media,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > * .instagram-media,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > * .instagram-media,
 body:not(.page-id-6357) .block.block-wide-text .site-header > * .instagram-media,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > * .instagram-media,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > * .instagram-media,
 .gutenberg-content > * .wp-video,
 body:not(.page-id-6357) .block.block-wide-text .container > * .wp-video,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > * .wp-video,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > * .wp-video,
 body:not(.page-id-6357) .block.block-wide-text .site-header > * .wp-video,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > * .wp-video,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > * .wp-video,
 .gutenberg-content > * .is-provider-instagram,
 body:not(.page-id-6357) .block.block-wide-text .container > * .is-provider-instagram,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > * .is-provider-instagram,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > * .is-provider-instagram,
 body:not(.page-id-6357) .block.block-wide-text .site-header > * .is-provider-instagram,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > * .is-provider-instagram,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > * .is-provider-instagram,
 .gutenberg-content > * .is-provider-twitter,
 body:not(.page-id-6357) .block.block-wide-text .container > * .is-provider-twitter,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > * .is-provider-twitter,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > * .is-provider-twitter,
 body:not(.page-id-6357) .block.block-wide-text .site-header > * .is-provider-twitter,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > * .is-provider-twitter,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > * .is-provider-twitter,
 .gutenberg-content > * .is-provider-facebook,
 body:not(.page-id-6357) .block.block-wide-text .container > * .is-provider-facebook,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > * .is-provider-facebook,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > * .is-provider-facebook,
 body:not(.page-id-6357) .block.block-wide-text .site-header > * .is-provider-facebook,
-body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > * .is-provider-facebook {
+body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > * .is-provider-facebook,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > * .is-provider-facebook {
   width: 100% !important;
   max-width: 870px !important;
   margin-left: auto !important;
@@ -30193,33 +30474,45 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > * .is-p
   .gutenberg-content > * .twitter-tweet,
   body:not(.page-id-6357) .block.block-wide-text .container > * .twitter-tweet,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > * .twitter-tweet,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > * .twitter-tweet,
   body:not(.page-id-6357) .block.block-wide-text .site-header > * .twitter-tweet,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > * .twitter-tweet,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > * .twitter-tweet,
   .gutenberg-content > * .instagram-media,
   body:not(.page-id-6357) .block.block-wide-text .container > * .instagram-media,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > * .instagram-media,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > * .instagram-media,
   body:not(.page-id-6357) .block.block-wide-text .site-header > * .instagram-media,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > * .instagram-media,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > * .instagram-media,
   .gutenberg-content > * .wp-video,
   body:not(.page-id-6357) .block.block-wide-text .container > * .wp-video,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > * .wp-video,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > * .wp-video,
   body:not(.page-id-6357) .block.block-wide-text .site-header > * .wp-video,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > * .wp-video,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > * .wp-video,
   .gutenberg-content > * .is-provider-instagram,
   body:not(.page-id-6357) .block.block-wide-text .container > * .is-provider-instagram,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > * .is-provider-instagram,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > * .is-provider-instagram,
   body:not(.page-id-6357) .block.block-wide-text .site-header > * .is-provider-instagram,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > * .is-provider-instagram,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > * .is-provider-instagram,
   .gutenberg-content > * .is-provider-twitter,
   body:not(.page-id-6357) .block.block-wide-text .container > * .is-provider-twitter,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > * .is-provider-twitter,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > * .is-provider-twitter,
   body:not(.page-id-6357) .block.block-wide-text .site-header > * .is-provider-twitter,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > * .is-provider-twitter,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > * .is-provider-twitter,
   .gutenberg-content > * .is-provider-facebook,
   body:not(.page-id-6357) .block.block-wide-text .container > * .is-provider-facebook,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > * .is-provider-facebook,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > * .is-provider-facebook,
   body:not(.page-id-6357) .block.block-wide-text .site-header > * .is-provider-facebook,
-  body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > * .is-provider-facebook {
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > * .is-provider-facebook,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > * .is-provider-facebook {
     padding-left: 4rem !important;
     padding-right: 4rem !important;
   }
@@ -30229,33 +30522,45 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > * .is-p
   .gutenberg-content > * .twitter-tweet,
   body:not(.page-id-6357) .block.block-wide-text .container > * .twitter-tweet,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > * .twitter-tweet,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > * .twitter-tweet,
   body:not(.page-id-6357) .block.block-wide-text .site-header > * .twitter-tweet,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > * .twitter-tweet,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > * .twitter-tweet,
   .gutenberg-content > * .instagram-media,
   body:not(.page-id-6357) .block.block-wide-text .container > * .instagram-media,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > * .instagram-media,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > * .instagram-media,
   body:not(.page-id-6357) .block.block-wide-text .site-header > * .instagram-media,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > * .instagram-media,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > * .instagram-media,
   .gutenberg-content > * .wp-video,
   body:not(.page-id-6357) .block.block-wide-text .container > * .wp-video,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > * .wp-video,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > * .wp-video,
   body:not(.page-id-6357) .block.block-wide-text .site-header > * .wp-video,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > * .wp-video,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > * .wp-video,
   .gutenberg-content > * .is-provider-instagram,
   body:not(.page-id-6357) .block.block-wide-text .container > * .is-provider-instagram,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > * .is-provider-instagram,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > * .is-provider-instagram,
   body:not(.page-id-6357) .block.block-wide-text .site-header > * .is-provider-instagram,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > * .is-provider-instagram,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > * .is-provider-instagram,
   .gutenberg-content > * .is-provider-twitter,
   body:not(.page-id-6357) .block.block-wide-text .container > * .is-provider-twitter,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > * .is-provider-twitter,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > * .is-provider-twitter,
   body:not(.page-id-6357) .block.block-wide-text .site-header > * .is-provider-twitter,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > * .is-provider-twitter,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > * .is-provider-twitter,
   .gutenberg-content > * .is-provider-facebook,
   body:not(.page-id-6357) .block.block-wide-text .container > * .is-provider-facebook,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > * .is-provider-facebook,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > * .is-provider-facebook,
   body:not(.page-id-6357) .block.block-wide-text .site-header > * .is-provider-facebook,
-  body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > * .is-provider-facebook {
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > * .is-provider-facebook,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > * .is-provider-facebook {
     padding-left: 2rem !important;
     padding-right: 2rem !important;
   }
@@ -30265,8 +30570,10 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > * .is-p
   .gutenberg-content > *,
   body:not(.page-id-6357) .block.block-wide-text .container > *,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > *,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > *,
   body:not(.page-id-6357) .block.block-wide-text .site-header > *,
-  body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > * {
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > * {
     padding-left: 2rem;
     padding-right: 2rem;
   }
@@ -30275,8 +30582,10 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > * .is-p
 .gutenberg-content > *.wp-block-image,
 body:not(.page-id-6357) .block.block-wide-text .container > *.wp-block-image,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > *.wp-block-image,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > *.wp-block-image,
 body:not(.page-id-6357) .block.block-wide-text .site-header > *.wp-block-image,
-body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.wp-block-image {
+body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.wp-block-image,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > *.wp-block-image {
   margin-top: 40px;
   margin-top: 4rem;
   margin-bottom: 40px;
@@ -30296,18 +30605,24 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.wp-bl
 .gutenberg-content > *.twitter-tweet,
 body:not(.page-id-6357) .block.block-wide-text .container > *.twitter-tweet,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > *.twitter-tweet,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > *.twitter-tweet,
 body:not(.page-id-6357) .block.block-wide-text .site-header > *.twitter-tweet,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.twitter-tweet,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > *.twitter-tweet,
 .gutenberg-content > *.instagram-media,
 body:not(.page-id-6357) .block.block-wide-text .container > *.instagram-media,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > *.instagram-media,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > *.instagram-media,
 body:not(.page-id-6357) .block.block-wide-text .site-header > *.instagram-media,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.instagram-media,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > *.instagram-media,
 .gutenberg-content > *.wp-video,
 body:not(.page-id-6357) .block.block-wide-text .container > *.wp-video,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > *.wp-video,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > *.wp-video,
 body:not(.page-id-6357) .block.block-wide-text .site-header > *.wp-video,
-body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.wp-video {
+body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.wp-video,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > *.wp-video {
   width: 100% !important;
   max-width: 870px !important;
   margin-left: auto !important;
@@ -30318,18 +30633,24 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.wp-vi
   .gutenberg-content > *.twitter-tweet,
   body:not(.page-id-6357) .block.block-wide-text .container > *.twitter-tweet,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > *.twitter-tweet,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > *.twitter-tweet,
   body:not(.page-id-6357) .block.block-wide-text .site-header > *.twitter-tweet,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.twitter-tweet,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > *.twitter-tweet,
   .gutenberg-content > *.instagram-media,
   body:not(.page-id-6357) .block.block-wide-text .container > *.instagram-media,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > *.instagram-media,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > *.instagram-media,
   body:not(.page-id-6357) .block.block-wide-text .site-header > *.instagram-media,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.instagram-media,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > *.instagram-media,
   .gutenberg-content > *.wp-video,
   body:not(.page-id-6357) .block.block-wide-text .container > *.wp-video,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > *.wp-video,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > *.wp-video,
   body:not(.page-id-6357) .block.block-wide-text .site-header > *.wp-video,
-  body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.wp-video {
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.wp-video,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > *.wp-video {
     padding-left: 4rem !important;
     padding-right: 4rem !important;
   }
@@ -30339,18 +30660,24 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.wp-vi
   .gutenberg-content > *.twitter-tweet,
   body:not(.page-id-6357) .block.block-wide-text .container > *.twitter-tweet,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > *.twitter-tweet,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > *.twitter-tweet,
   body:not(.page-id-6357) .block.block-wide-text .site-header > *.twitter-tweet,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.twitter-tweet,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > *.twitter-tweet,
   .gutenberg-content > *.instagram-media,
   body:not(.page-id-6357) .block.block-wide-text .container > *.instagram-media,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > *.instagram-media,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > *.instagram-media,
   body:not(.page-id-6357) .block.block-wide-text .site-header > *.instagram-media,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.instagram-media,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > *.instagram-media,
   .gutenberg-content > *.wp-video,
   body:not(.page-id-6357) .block.block-wide-text .container > *.wp-video,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > *.wp-video,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > *.wp-video,
   body:not(.page-id-6357) .block.block-wide-text .site-header > *.wp-video,
-  body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.wp-video {
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.wp-video,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > *.wp-video {
     padding-left: 2rem !important;
     padding-right: 2rem !important;
   }
@@ -30359,8 +30686,10 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.wp-vi
 .gutenberg-content > *.entry-title,
 body:not(.page-id-6357) .block.block-wide-text .container > *.entry-title,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > *.entry-title,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > *.entry-title,
 body:not(.page-id-6357) .block.block-wide-text .site-header > *.entry-title,
-body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.entry-title {
+body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.entry-title,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > *.entry-title {
   font-size: 42px;
   max-width: 1000px;
   line-height: 1;
@@ -30374,8 +30703,10 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.entry
   .gutenberg-content > *.entry-title,
   body:not(.page-id-6357) .block.block-wide-text .container > *.entry-title,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > *.entry-title,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > *.entry-title,
   body:not(.page-id-6357) .block.block-wide-text .site-header > *.entry-title,
-  body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.entry-title {
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.entry-title,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > *.entry-title {
     font-size: calc(42px + 48 * ((100vw - 320px) / 1600));
   }
 }
@@ -30384,8 +30715,10 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.entry
   .gutenberg-content > *.entry-title,
   body:not(.page-id-6357) .block.block-wide-text .container > *.entry-title,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > *.entry-title,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > *.entry-title,
   body:not(.page-id-6357) .block.block-wide-text .site-header > *.entry-title,
-  body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.entry-title {
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.entry-title,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > *.entry-title {
     font-size: 90px;
   }
 }
@@ -30394,8 +30727,10 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.entry
   .gutenberg-content > *.entry-title,
   body:not(.page-id-6357) .block.block-wide-text .container > *.entry-title,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > *.entry-title,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > *.entry-title,
   body:not(.page-id-6357) .block.block-wide-text .site-header > *.entry-title,
-  body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.entry-title {
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.entry-title,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > *.entry-title {
     margin-top: 0;
   }
 }
@@ -30411,8 +30746,10 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.entry
 .gutenberg-content > *.entry-meta,
 body:not(.page-id-6357) .block.block-wide-text .container > *.entry-meta,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > *.entry-meta,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > *.entry-meta,
 body:not(.page-id-6357) .block.block-wide-text .site-header > *.entry-meta,
-body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.entry-meta {
+body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.entry-meta,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > *.entry-meta {
   text-align: center;
   margin-bottom: 90px;
   margin-bottom: 9rem;
@@ -30423,8 +30760,10 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.entry
   .gutenberg-content > *.entry-meta,
   body:not(.page-id-6357) .block.block-wide-text .container > *.entry-meta,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > *.entry-meta,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > *.entry-meta,
   body:not(.page-id-6357) .block.block-wide-text .site-header > *.entry-meta,
-  body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.entry-meta {
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.entry-meta,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > *.entry-meta {
     margin-bottom: 8rem;
   }
 }
@@ -30491,8 +30830,10 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.entry
 .gutenberg-content > *.wp-block-gallery,
 body:not(.page-id-6357) .block.block-wide-text .container > *.wp-block-gallery,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > *.wp-block-gallery,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > *.wp-block-gallery,
 body:not(.page-id-6357) .block.block-wide-text .site-header > *.wp-block-gallery,
-body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.wp-block-gallery {
+body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.wp-block-gallery,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > *.wp-block-gallery {
   overflow: hidden;
   color: #fff;
 }
@@ -30534,8 +30875,10 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.wp-bl
 .gutenberg-content > *.alignwide,
 body:not(.page-id-6357) .block.block-wide-text .container > *.alignwide,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > *.alignwide,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > *.alignwide,
 body:not(.page-id-6357) .block.block-wide-text .site-header > *.alignwide,
-body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.alignwide {
+body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.alignwide,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > *.alignwide {
   width: 100%;
   margin-top: 40px;
   margin-top: 4rem;
@@ -30553,8 +30896,10 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.align
   .gutenberg-content > *.alignwide,
   body:not(.page-id-6357) .block.block-wide-text .container > *.alignwide,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > *.alignwide,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > *.alignwide,
   body:not(.page-id-6357) .block.block-wide-text .site-header > *.alignwide,
-  body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.alignwide {
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.alignwide,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > *.alignwide {
     max-width: 1345px;
     padding-left: 0;
     padding-right: 0;
@@ -30564,8 +30909,10 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.align
 .gutenberg-content > *.alignfull,
 body:not(.page-id-6357) .block.block-wide-text .container > *.alignfull,
 body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > *.alignfull,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > *.alignfull,
 body:not(.page-id-6357) .block.block-wide-text .site-header > *.alignfull,
-body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.alignfull {
+body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.alignfull,
+body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > *.alignfull {
   max-width: 100%;
   width: 100%;
   margin-top: 80px;
@@ -30586,8 +30933,10 @@ body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > *.align
   .gutenberg-content .entry-photo,
   body:not(.page-id-6357) .block.block-wide-text .container .entry-photo,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container .entry-photo,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container .entry-photo,
   body:not(.page-id-6357) .block.block-wide-text .site-header .entry-photo,
-  body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .entry-photo {
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header .entry-photo,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header .entry-photo {
     max-width: 100%;
     text-align: center;
     margin-top: 8rem;
