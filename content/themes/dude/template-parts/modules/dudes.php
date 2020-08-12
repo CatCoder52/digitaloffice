@@ -62,7 +62,7 @@ if ( ! $query->have_posts() ) {
             <?php if ( ! empty( $title ) ) : ?>
               <p class="person-title"><?php echo esc_html( $title ); ?><br />
               <a class="no-text-link" href="mailto:<?php echo esc_html( $email ); ?>"><?php echo esc_html( $email ); ?></a><br />
-              <a class="no-text-link" href="<?php echo esc_attr( str_replace( ' ', '', $tel ) ) ?>"><?php echo esc_html( $tel ); ?></a>
+              <?php if ( 4469 === get_the_id() ) : ?><a class="no-text-link" href="<?php echo esc_attr( str_replace( ' ', '', $tel ) ) ?>"><?php echo esc_html( $tel ); ?></a><?php endif; ?>
               </p>
             <?php endif; ?>
 
