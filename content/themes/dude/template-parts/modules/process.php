@@ -31,7 +31,7 @@
 
           <p>Saat tarjouksen, jossa on avattu erilaiset verkkopalveluun tulevat toiminnallisuudet ja työvaiheet. Tarjouksessa esitetään myös alustava aikataulu projektille.</p>
 
-          <p>Jos hyväksytte tarjouksen, meillä lähtee <a href="https://handbook.dude.fi/tyoskenteleminen-dudella/toimistotila#get-lucky">Get Lucky</a> soimaan. Sen jälkeen sovitaan aloitustapaaminen, jossa muodostetaan yhdessä toteutuksen raamit ja kantavat ajatukset, jotka ohjaavat tapaamisen jälkeen aloitettavaa työstöä.</p>
+          <p>Jos hyväksytte tarjouksen, meillä lähtee <a href="https://handbook.dude.fi/tyoskenteleminen-dudella/toimistotila#get-lucky">Get Lucky</a> soimaan. Sen jälkeen sovitaan Kickoff-workshop, jossa määritellään tavoitteet ja suuntaviivat yhdessä sekä ideoidaan uudistusta.</p>
         </div>
       </div>
 
@@ -45,7 +45,7 @@
         <div class="content">
           <p>Visuaalinen työstö käynnistyy ja verkkopalvelu alkaa saamaan konkreettisia muotoja. Suunnittelija on tiiviissä yhteydessä teidän kanssa, muokaten mielenmaisemaa iteratiivisesti kohti yhteistä tavoitetta.</p>
 
-          <p>Suunnittelija esittelee kaikki oleelliset näkymät, jotta tiedät melko tarkkaan miltä sivusto tulee lopulta näyttämään. Suunnitteluvaiheen aikana viestintä voi olla melko runsastakin, jotta yhteinen sävel löytyy.</p>
+          <p>Suunnittelija rakentaa näkymistä prototyypin, josta näet melko tarkkaan miltä sivusto tulee lopulta näyttämään. Suunnitteluvaiheen aikana viestintä voi olla melko runsastakin, jotta yhteinen sävel löytyy.</p>
 
           <p>Kun verkkopalvelun ulkoasu on hyväksytty, on aika pistää ramppa kalkattamaan!</p>
         </div>
@@ -59,7 +59,7 @@
         </div>
 
         <div class="content">
-          <p>Visuaalisen ilmeen pääpiirteiden hyväksymisen jälkeen aloitetaan tekninen työstö, jonka aikana sivusto herätetään henkiin toiminnallisuuksien kautta.</p>
+          <p>Visuaalisen ilmeen hyväksymisen jälkeen aloitetaan tekninen työstö, jonka aikana sivusto herätetään henkiin toiminnallisuuksien kautta.</p>
 
           <p>Kun sivusto on demovaiheessa, se laitetaan näyttöversioon, jossa pääsette testaamaan ja kommentoimaan tulevaa verkkopalveluanne. Verkkopalvelu testataan ja viimeistellään saadun palautteen perusteella, samalla kun sisällönsyöttö on käynnissä.</p>
 
