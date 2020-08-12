@@ -3,7 +3,7 @@
  * @Author: Roni Laukkarinen
  * @Date:   2020-07-16 17:32:53
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-24 15:07:20
+ * @Last Modified time: 2020-08-12 15:48:58
  * @package dude
  */
 
@@ -31,7 +31,7 @@
 
         <div>
           <h2>Visiomme</h2>
-          <p>Haluamme kasvaa hallitusti Suomen halutuimmaksi ja tunnetuimmaksi WordPress-sivustojen ja verkkopalveluiden toteuttajaksi.</p>
+          <p>Haluamme kasvaa hallitusti Suomen halutuimmaksi ja tunnetuimmaksi WordPress-sivustojen ja verkkopalveluiden suunnittelijaksi ja toteuttajaksi.</p>
         </div>
       </div>
 

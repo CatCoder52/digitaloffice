@@ -3,13 +3,13 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-23 14:05:42
+ * @Last Modified time: 2020-08-12 15:16:31
  *
  * @package dude
  */
 
 $title = 'Töitämme';
-$content = 'Olemme toteuttaneet monipuolisesti verkkosivuja ja -palveluita erilaisille toimijoille. Joihinkin toteutuksiimme voit tutustua täällä tarkemmin.';
+$content = 'Olemme toteuttaneet monipuolisesti verkkopalveluita ja brändi-identiteettejä kaikenlaisille toimijoille.';
 ?>
 
 <section class="block block-hero block-hero-reference-archive has-dark-bg">

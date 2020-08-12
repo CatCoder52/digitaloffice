@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 18:54:41
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-30 13:44:02
+ * @Last Modified time: 2020-08-12 16:10:16
  *
  * @package dude
  */
@@ -34,18 +34,23 @@
         </div>
 
         <div class="row">
+          <h2 class="action" data-label="Tähän jotain tekstiä kuvan rinnalle." data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2017.jpg' ) ?>">2017</h2>
+          <button tabindex="0" class="action" data-label="Tähän jotain tekstiä kuvan rinnalle." data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2017.jpg' ) ?>">Dude muutti Gummeruksenkadun kulmaan ja <a href="https://www.dude.fi/dude-kehittyy-ja-toimitusjohtaja-vaihtuu">Kristianista tuli toimitusjohtaja</a>.</button>
+        </div>
+
+        <div class="row">
           <h2 class="action" data-label="Eräänä kesäisenä päivänä päätettiin hypätä Lillijunaan. Ja sepä olikin yllättävän kivaa!" data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2018.jpg' ) ?>">2018</h2>
           <button tabindex="0" class="action" data-label="Eräänä kesäisenä päivänä päätettiin hypätä Lillijunaan. Ja sepä olikin yllättävän kivaa!" data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2018.jpg' ) ?>">Liikevaihto ylitti 200 000. Soitettiin Get Lucky! Muutettiin isompiin tiloihin Kauppakadulle. Lue myös toimistoesittely ja muuttokuulumiset <a href="https://www.dude.fi/dude-nosti-tasoa-kerroksella-esittelyssa-uusi-kauppakadun-toimisto">tästä näin</a>.</button>
         </div>
 
         <div class="row">
           <h2 class="action" data-label="Aamupalaverit vietetään joka maanantai. Kauppakatu 14 tiloissa on tilaa useammallekin ihmiselle." data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2019.jpg' ) ?>">2019</h2>
-          <button tabindex="0" class="action" data-label="Aamupalaverit vietetään joka maanantai. Kauppakatu 14 tiloissa on tilaa useammallekin ihmiselle." data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2019.jpg' ) ?>"><a href="https://www.dude.fi/dudella-uusi-osakas-ja-valoisat-tulevaisuudennakymat">Timistä tuli osakas</a>. Palkattiin Henkka ja pari muutakin <a href="https://www.dude.fi/tyopaikat">rekryä tulilla</a>.</button>
+          <button tabindex="0" class="action" data-label="Aamupalaverit vietetään joka maanantai. Kauppakatu 14 tiloissa on tilaa useammallekin ihmiselle." data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2019.jpg' ) ?>"><a href="https://www.dude.fi/dudella-uusi-osakas-ja-valoisat-tulevaisuudennakymat">Timistä tuli osakas</a>. <a href="https://www.dude.fi/new-dude-on-the-block">Kari tuli taloon</a>. Aloitimme hahmottelemaan brändiuudistusta. Kävimme jälleen WordCamp Europessa, <a href="https://www.dude.fi/maailman-suurin-wordpress-seminaari-berliinissa-kuulumiset-matkalta">tällä kertaa Saksassa</a>.</button>
         </div>
 
         <div class="row">
           <h2 class="action" data-label="Tähän jotain sopivan kokoista kuvatekstiä." data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2020.jpg' ) ?>">2020</h2>
-          <button tabindex="0" class="action" data-label="Tähän jotain sopivan kokoista kuvatekstiä." data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2020.jpg' ) ?>">Kari ja Niku tuli taloon, julkaistiin uusi brändi. Menestystarina jatkuu.</button>
+          <button tabindex="0" class="action" data-label="Tähän jotain sopivan kokoista kuvatekstiä." data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2020.jpg' ) ?>">Kehittäjätiimi sai Nikusta vahvistuksen, nyt meitä on kuusi. Karista tuli luova johtaja. Uusi brändi julkaistiin. Rekry tulilla taas ja tarina jatkuu...</button>
         </div>
 
       </div>
