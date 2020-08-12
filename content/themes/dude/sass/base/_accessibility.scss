@@ -128,14 +128,33 @@ nav[aria-expanded="false"] {
 }
 
 // Add icon to external links
+.block p a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail):not(.button):not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
+.block li a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail):not(.button):not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
 a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail):not(.button) {
-  background-image: url('../svg/external-link.svg') !important;
-  background-position: right center !important;
-  background-repeat: no-repeat !important;
-  padding-right: 2.2rem !important;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 0;
 
-  @media (max-width: 430px) {
-    padding-right: 2rem !important;
+  &::after {
+    background-image: url('../svg/external-link.svg');
+    background-position: right center;
+    background-repeat: no-repeat;
+    content: '';
+    position: relative;
+    display: flex;
+    width: 16px;
+    height: 16px;
+    right: 0;
+    top: 0;
+    margin-left: .6rem;
+    padding-right: 1rem;
+
+    @media (max-width: 600px) {
+      width: 14px;
+      height: 14px;
+      background-size: 14px 14px;
+    }
   }
 
   @media (max-width: 600px) {
@@ -144,22 +163,25 @@ a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([h
 }
 
 .menu-item a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not([href="dude.fi"]):not(.contact-detail):not(.button) {
-  background-image: url('../svg/external-link-white.svg') !important;
-  padding-right: 3.2rem !important;
-
-  @media (max-width: 430px) {
-    padding-right: 2rem !important;
+  &::after {
+    background-image: url('../svg/external-link-white.svg');
+    padding-right: 2.5rem;
   }
 }
 
 a[href^="mailto"] {
-  background-image: none !important;
-  padding-right: 0 !important;
+  &::after {
+    display: none;
+  }
 }
 
 .block-footer .menu-item a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail):not(.button) {
-  background-size: 12px 12px !important;
-  padding-right: 2rem !important;
+  &::after {
+    background-size: 12px 12px;
+    width: 12px;
+    height: 12px;
+    padding-right: 0;
+  }
 }
 
 // https://davidwalsh.name/external-links-css
@@ -175,9 +197,15 @@ a[href^="mailto"] {
 .block.block-timeline .col a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link),
 .block.block-title-left-text-right li a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
 .wp-block-columns p a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):not([rel]):not(.contact-detail):not(.button) {
-  background-image: url('../svg/external-link.svg') !important;
-  background-position: right center !important;
-  background-repeat: no-repeat !important;
-  background-size: 12px 12px !important;
-  padding-right: 2rem !important;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 0;
+
+  &::after {
+    background-image: url('../svg/external-link.svg');
+    background-size: 12px 12px;
+    width: 12px;
+    height: 12px;
+  }
 }

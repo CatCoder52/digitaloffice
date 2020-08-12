@@ -28,6 +28,14 @@
     p {
       width: 100%;
       max-width: 100%;
+
+      a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail):not(.button) {
+        margin-right: 1rem;
+
+        &::after {
+          background-image: url('../svg/external-link-white.svg') !important;
+        }
+      }
     }
 
     > div,
