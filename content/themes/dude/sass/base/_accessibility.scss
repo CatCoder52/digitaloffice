@@ -134,7 +134,6 @@ a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([h
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
-  margin-right: 0;
 
   &::after {
     background-image: url('../svg/external-link.svg');
@@ -160,10 +159,8 @@ a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([h
   }
 }
 
-a[href^="mailto"] {
-  &::after {
-    display: none;
-  }
+a[href^="mailto"]::after {
+  display: none;
 }
 
 .block-footer .menu-item a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail):not(.button) {
