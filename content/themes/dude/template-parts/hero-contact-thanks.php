@@ -3,24 +3,27 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-06-07 09:34:15
+ * @Last Modified time: 2020-07-23 13:55:33
  *
- * @package dude2019
+ * @package dude
  */
 
 ?>
 
-<section class="block block-hero block-hero-contact-thanks block-hero-enable-transition">
+<section class="block block-hero block-hero-contact-thanks has-dark-bg">
+
+    <div class="shade" aria-hidden="true"></div>
+    <div class="vimeo-wrapper">
+      <iframe data-no-lazy="1" id="video" src="https://player.vimeo.com/video/9778852?autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=1#t=24s" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="autoplay; fullscreen" title="Mr Oizo - Flat beat"></iframe><script src="https://player.vimeo.com/api/player.js"></script>
+    </div>
+
   <div class="container">
 
-    <h1 class="animate animate-1">Kiitos yhteydenotosta!</h1>
+    <div class="content">
+      <h1>Kiitos yhteydenotosta!</h1>
 
-    <div class="contact-wrap">
-      <div class="content animate animate-2">
-        <p>Myyntiosastomme käsittelee viestiäsi parhaillaan...</p>
-
-        <div style="padding:61.25% 0 0 0;position:relative;"><iframe data-no-lazy="1" id="video" src="https://player.vimeo.com/video/9778852?autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=1#t=24s" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" title="Mr Oizo - Flat beat" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-
+      <div class="hero-description">
+        <p><a class="no-text-link" href="https://www.youtube.com/watch?v=qmsbP13xu6k">Myyntiosastomme</a> käsittelee viestiäsi parhaillaan ja palaa asiaan pian!</p>
       </div>
 
     </div>

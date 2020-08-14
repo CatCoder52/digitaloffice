@@ -1,0 +1,186 @@
+body.single.single-reference {
+  .block.block-testimonials {
+    padding-top: 0;
+
+    @media (max-width: $grid-base-size + 150px) {
+      padding-left: $padding-default-cols-ipad;
+      padding-right: $padding-default-cols-ipad;
+    }
+
+    @media (max-width: $container-ipad) {
+      padding-left: $padding-default-cols-mobile;
+      padding-right: $padding-default-cols-mobile;
+    }
+  }
+
+  .site-content {
+    background: $color-midnight;
+    color: $color-white;
+
+    .block {
+      background: $color-midnight;
+    }
+
+    .block:not(.block-cta-with-phone-input) {
+      background: $color-midnight;
+      color: $color-white;
+
+      h1,
+      h2,
+      h3 {
+        color: $color-white;
+      }
+
+      p {
+        color: $color-paragraphs-light;
+      }
+    }
+  }
+
+  .block.block-single.block-single-reference {
+    padding-top: 0;
+    padding-bottom: $padding-blocks-large;
+
+    @media (max-width: $container-ipad) {
+      padding-bottom: $padding-blocks-small;
+    }
+
+    // Paddings come from gutenberg blocks
+    padding-left: 0;
+    padding-right: 0;
+
+    .wp-block-image {
+      margin: 0;
+    }
+
+    .gutenberg-content {
+      > *:not(.wp-block-columns):not(.wp-block-image):not(.alignwide):not(.alignfull):not(.size-full) {
+        max-width: 900px;
+      }
+
+      .wp-block-column h2 {
+        @extend %general-heading-cta;
+        font-weight: 400;
+        margin-bottom: $margin-between-text-elements;
+
+        @media (max-width: 600px) {
+          margin-top: $margin-between-text-elements;
+        }
+
+        // Fix alignment
+        transform: translateY(0);
+
+        &.block-title-large {
+          @extend %general-heading-alt;
+        }
+
+        &.block-title-small {
+          @extend %general-heading-small;
+        }
+      }
+
+      h2 {
+        @extend %general-heading-alt;
+      }
+
+      .wp-block-media-text {
+        grid-column-gap: 4rem;
+
+        @media (max-width: 700px) {
+          max-height: 42rem;
+          overflow: hidden;
+          display: block;
+
+          > figure {
+            display: block;
+          }
+
+          .wp-block-media-text__content {
+            margin-bottom: $margin-between-text-elements;
+          }
+        }
+      }
+
+      .alignwide,
+      .alignfull,
+      .wp-block-image {
+        margin: $margin-between-text-elements*2 auto;
+      }
+
+      figure.aligncenter {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+      }
+
+      p + h2,
+      p + h3 {
+        margin-top: $margin-between-text-elements*2;
+      }
+
+      // Reset refrence links on dark background
+      a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail) {
+        color: $color-white;
+        border-bottom: 1px solid rgba($color-white, .3);
+        transition: border .22s;
+        overflow: hidden;
+        box-shadow: none;
+
+        &:hover {
+          border-bottom: 1px solid $color-mint;
+          background: none;
+        }
+      }
+    }
+  }
+
+  // .wp-block-column:nth-child(1) {
+  //   padding-right: $margin-between-grid-columns / 2;
+  // }
+
+  // .wp-block-column:nth-child(2) {
+  //   padding-left: $margin-between-grid-columns / 2;
+  // }
+
+  .wp-block-button {
+    margin-top: $margin-between-text-elements;
+  }
+
+  .wp-block-button a {
+    @extend %default;
+    background: $color-mint;
+    color: $color-links;
+    font-size: 18px;
+    font-weight: 700;
+    border: 0;
+    width: auto;
+    display: inline-block;
+    padding: 1.4rem 2.8rem;
+    margin-bottom: 0;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    transition: 150ms linear background;
+    font-family: $font-base;
+    border-radius: 0;
+
+    span,
+    svg {
+      position: relative;
+      transition: all $transition-duration;
+      transform: translate(0, 0);
+      display: inline-block;
+    }
+
+    &:hover,
+    &:focus {
+      background: $color-white-two;
+      color: $color-links;
+
+      span,
+      svg {
+        transform: translate(2px, 0);
+      }
+    }
+  }
+}

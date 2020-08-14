@@ -7,34 +7,119 @@
 // -----------------------------------------------------------
 
 // Set up self-hosted fonts here
-@include fontFace('Neuzeit Grotesk', '../fonts/32E13D_0_0', 300);
-@include fontFace('Neuzeit Grotesk', '../fonts/32E13D_2_0', 400);
-@include fontFace('Neuzeit Grotesk', '../fonts/32E13D_3_0', 700);
-@include fontFace('Neuzeit Grotesk', '../fonts/32E13D_1_0', 900);
-@include fontFace('TT Interphases', '../fonts/ttinterphases-thin', 100);
-@include fontFace('TT Interphases', '../fonts/ttinterphases-extralight', 200);
-@include fontFace('TT Interphases', '../fonts/ttinterphases-light', 300);
-@include fontFace('TT Interphases', '../fonts/ttinterphases-regular', 400);
-@include fontFace('TT Interphases', '../fonts/ttinterphases-medium', 500);
-@include fontFace('TT Interphases', '../fonts/ttinterphases-demibold', 600);
-@include fontFace('TT Interphases', '../fonts/ttinterphases-bold', 700);
-@include fontFace('TT Interphases', '../fonts/ttinterphases-extrabold', 800);
-@include fontFace('TT Interphases', '../fonts/ttinterphases-black', 900);
+@include fontFace('Circular', '../fonts/f5437dcddb7d5641ae51a8109a31fa53', 400);
+@include fontFace('Circular', '../fonts/d2eb57af9849479498a3aab358ef6c92', 400, italic);
+@include fontFace('Circular', '../fonts/86a7bec49ba4953ef59891e1597151d1', 500);
+@include fontFace('Circular', '../fonts/469779bbfe42049602ae0c100c517e90', 500, italic);
+@include fontFace('Circular', '../fonts/0fe7d5a9ec1ccd7bf994e3bbe8cd4c10', 700);
+@include fontFace('Circular', '../fonts/e964570c740cb80bd168ac14fbd51b4f', 900);
 
 // Set root size for rems
 :root {
   font-size: 62.5%;
 }
 
+%textlink {
+  position: relative;
+  overflow: visible;
+  font-weight: 700;
+  z-index: 1;
+  text-decoration: none;
+  transition: all .18s ease-in-out;
+  display: inline;
+  color: $color-midnight;
+  border-bottom: 1px solid $color-mint;
+  box-shadow: inset 0 -.1rem 0 $color-mint;
+
+  &:hover,
+  &:focus {
+    box-shadow: inset 0 -3.3rem 0 $color-mint;
+    color: $color-midnight;
+  }
+}
+
+// Special links
+.cta-link,
+%cta-link {
+  color: $color-midnight-blue;
+  font-size: 18px;
+  display: inline-block;
+  font-weight: 600;
+  padding-bottom: 1rem;
+
+  &:after {
+    width: 100%;
+    height: 2px;
+    background: $color-midnight-blue;
+    position: relative;
+    content: '';
+    display: block;
+    transform: translateY(1rem);
+    transition: all $transition-duration;
+  }
+
+  &:hover {
+    color: $color-midnight-blue;
+  }
+
+  &:hover:after {
+    width: 50%;
+    background: $color-midnight-blue;
+  }
+}
+
+.cta-link-wrapper .cta-link:after,
+.link-wrapper .cta-link:after,
+.cta-link:after {
+  width: 100%;
+  height: 2px;
+  background: $color-midnight-blue;
+  position: relative;
+  content: '';
+  display: block;
+  transform: translateY(1rem);
+  transition: all $transition-duration;
+}
+
+.cta-link-wrapper .cta-link:hover:after,
+.link-wrapper .cta-link:hover:after,
+.cta-link:hover:after {
+  width: 50%;
+}
+
+.cta-link.cta-link-white {
+  color: $color-white;
+
+  &:after {
+    background: $color-white;
+  }
+}
+
+.block p a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail) {
+  @extend %textlink;
+}
+
+.block.block-title-left-text-right li a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail) {
+  @extend %textlink;
+}
+
+.block .link-wrapper {
+  margin-top: 4.8rem;
+}
+
+.block .link-wrapper a {
+  @extend %cta-link;
+}
+
 // Start typography settings
 body {
   font-size: 1.7rem;
   font-family: $font-base;
-  color: $color-body;
+  color: $color-paragraphs;
 
   // Font smoothing options
   text-size-adjust: none;
-  text-rendering: geometricPrecision;
+  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -80,14 +165,24 @@ table,
 tr,
 %default {
   @include responsive-font($font-min-size, $font-max-size);
-  letter-spacing: -.003em;
-  line-height: $font-base-line-height-elements;
-  font-weight: 300;
+  line-height: $font-base-line-height;
+  font-weight: 400;
+
+  @media (max-width: 600px) {
+    font-size: var(--font-size-general-small);
+  }
+}
+
+@media (max-width: $container-ipad) {
+  body .block table {
+    margin-left: 2rem;
+    width: calc(100% - 2rem);
+  }
 }
 
 p {
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
+  margin-top: 2.7rem;
+  margin-bottom: 2.7rem;
   line-height: $font-base-line-height;
 
   &:first-child {
@@ -109,6 +204,12 @@ h6 {
   color: $color-headings;
   font-family: $font-headings;
   font-weight: $headings-weight;
+  line-height: 1.5;
+}
+
+h1,
+h2 {
+  line-height: $font-headings-line-height;
 }
 
 // Based on type-scale with 14.255 base size where h1 is max 60px.
@@ -117,7 +218,7 @@ h6 {
 // Define your type scale here: https://type-scale.com/
 h1,
 %h1 {
-  @include responsive-font(32px, 60px);
+  @include responsive-font(32px, 55px);
 }
 
 h2,
@@ -144,16 +245,30 @@ h5,
 
 h6,
 %h6 {
-  @include responsive-font(16px, 18px);
+  @include responsive-font($font-size-general-small, 18px);
 }
 
 // Lists
 ul {
-  list-style: circle;
+  list-style: none;
   padding-left: 2.7rem;
 
   li {
-    padding-left: .35rem;
+    padding: 0;
+  }
+}
+
+.block.block-title-left-text-right ul {
+  list-style: none;
+
+  li::before {
+    content: '\2022';  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: $color-mint;
+    font-weight: 700;
+    display: inline-block;
+    width: 1rem;
+    margin-left: -2rem;
+    margin-right: 1rem;
   }
 }
 
@@ -209,7 +324,7 @@ figure {
 figcaption {
   margin-top: 0;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 // Quotes.

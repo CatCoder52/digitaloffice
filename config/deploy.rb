@@ -1,6 +1,6 @@
-set :application, "dude2019"
-set :repo_url, "git@github.com:digitoimistodude/dude2019.git"
-set :branch, :master
+set :application, "dude"
+set :repo_url, "git@github.com:digitoimistodude/dude.git"
+set :branch, "brand-2020"
 set :log_level, :debug
 set :linked_files, %w{.env}
 set :linked_dirs, %w{media}

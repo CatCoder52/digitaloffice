@@ -1,167 +1,36 @@
-body .block.block-hero-reference {
-  .arrow-link-wrapper {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-  }
-}
+.block.block-hero-reference {
+  background: $color-midnight;
+  color: $color-white;
 
-body .block.block-hero-reference,
-body .block-hero-person {
-  // Padding here is navigation height plus regular padding which is exactly 100px in total
-  padding-top: calc(15rem + 113px);
-
-  @media (max-width: 870px) {
-    padding-top: 13rem;
+  a,
+  h2,
+  p {
+    color: $color-white;
   }
 
-  @media (max-width: 500px) {
-    padding-top: 11rem;
+  h1 {
+    margin-bottom: $margin-between-text-elements;
   }
 
-  .cols {
-    @include grid(2, $gutter_x: 0rem, $gutter_y: 0rem);
-    grid-template-columns: 6fr 4fr;
+  @media (max-width: 420px) {
+    h1 {
+      font-size: 26px;
+    }
+  }
 
-    @media (max-width: $container-ipad) {
-      display: flex;
-      flex-wrap: wrap;
+  .hero-description {
+    a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail) {
+      color: $color-white;
+      box-shadow: none;
+      border-bottom: 1px solid rgba($color-white, .3);
+      transition: border .22s;
+      overflow: hidden;
+      background: none;
 
-      .col.has-grey-bg {
-        order: 1;
+      &:hover {
+        border-bottom: 1px solid $color-mint;
+        background: none;
       }
-
-      .col:not(.has-grey-bg) {
-        width: 100%;
-        height: 100%;
-        order: 3;
-      }
-    }
-  }
-
-  .col.has-grey-bg {
-    background: transparent;
-  }
-
-  .breadcrumb {
-    font-size: 16px;
-    margin-bottom: 0;
-    margin-top: -4rem;
-    padding: 4rem;
-    display: flex;
-    align-items: center;
-    font-weight: 300;
-
-    @media (max-width: 870px) {
-      margin-top: 0;
-      padding-left: 0;
-    }
-
-    a {
-      font-weight: 400;
-    }
-
-    svg {
-      margin-left: 1rem;
-      margin-right: 1rem;
-      width: 12px;
-      height: 12px;
-    }
-  }
-
-  .content h1 {
-    @extend %h2;
-  }
-}
-
-body .block.block-hero-reference {
-  padding-bottom: 0;
-
-  @media (max-width: $container-mobile) {
-    .image {
-      height: 40rem;
-    }
-  }
-
-  .arrow-link-wrapper {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 100%;
-  }
-
-  .arrow-link-wrapper a {
-    @extend %default;
-
-    // Needs fixed width, otherwise arrow will spread the box
-    width: 286.98px;
-    background: $color-links;
-    color: $color-dude-white;
-    border: 0;
-    display: block;
-    padding: 2.5rem 3rem;
-    margin-bottom: 1rem;
-    text-decoration: none;
-    cursor: pointer;
-    transition: 150ms linear background;
-    font-family: $font-base;
-    position: absolute;
-    text-align: left;
-    right: -2rem;
-    bottom: -5rem;
-    align-items: center;
-    white-space: nowrap;
-    overflow: visible;
-
-    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-      bottom: -1rem;
-      right: 0;
-    }
-
-    @supports (-ms-ime-align: auto) {
-      bottom: -1rem;
-      right: 0;
-    }
-
-    .arrow {
-      background: $color-dude-white;
-      position: relative;
-      top: -4px;
-
-      &:before,
-      &:after {
-        background: $color-dude-white;
-      }
-    }
-
-    &:hover .arrow {
-      background: $color-links;
-      width: 12rem;
-
-      &:before,
-      &:after {
-        background: $color-links;
-      }
-    }
-  }
-
-  .content {
-    a:not(.arrow-link) {
-      background-image: linear-gradient(to top, $color-dude-deep-black, $color-dude-deep-black);
-      background-size: 100% 1px;
-      background-position: left bottom;
-      background-repeat: no-repeat;
-      transition: .3s all;
-      text-decoration: none;
-      overflow: visible;
-    }
-
-    a:not(.arrow-link):hover,
-    a:not(.arrow-link):focus,
-    a:not(.arrow-link):active {
-      background-size: 100% 2.8rem;
-      color: $color-dude-white;
     }
   }
 }

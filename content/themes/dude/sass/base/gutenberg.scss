@@ -1,0 +1,138 @@
+@charset 'utf-8';
+
+// Theme options
+@import 'config';
+
+.edit-post-visual-editor {
+  padding-top: 0 !important;
+}
+
+.components-editor-notices__dismissible,
+.components-notice-list {
+  top: 0 !important;
+}
+
+.components-editor-notices__dismissible .components-notice,
+.components-editor-notices__pinned .components-notice {
+  margin-bottom: 0 !important;
+}
+
+@media (max-width: 782px) {
+  body.wp-admin {
+    overflow-x: hidden !important;
+  }
+}
+
+.editor-styles-wrapper {
+  // Helpers
+  @import 'helpers';
+  @import 'accessibility';
+
+  // Structure
+  @import '../layout/typography';
+
+  // Editor styles
+  color: $color-paragraphs;
+
+  // No drop cap
+  .has-drop-cap:not(:focus):first-letter {
+    text-transform: uppercase;
+    font-style: normal;
+    font-size: inherit;
+    float: none;
+  }
+
+  // Make editor same width than on site
+  .wp-block:not([data-align="full"]):not([data-align="wide"]) {
+    max-width: $article-max-width !important;
+    width: 100%;
+  }
+
+  .wp-block-button a {
+    @extend %default;
+    background: $color-mint;
+    color: $color-links;
+    font-size: 18px;
+    font-weight: 700;
+    border: 0;
+    width: auto;
+    display: inline-block;
+    padding: 1.4rem 2.8rem;
+    margin-bottom: 0;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    transition: 150ms linear background;
+    font-family: $font-base;
+    border-radius: 0;
+
+    span,
+    svg {
+      position: relative;
+      transition: all $transition-duration;
+      transform: translate(0, 0);
+      display: inline-block;
+    }
+
+    &:hover,
+    &:focus {
+      background: $color-white-two;
+      color: $color-midnight;
+
+      span,
+      svg {
+        transform: translate(2px, 0);
+      }
+    }
+
+    .arrow-right {
+      margin-left: 2.5rem;
+    }
+  }
+
+  .block-editor-block-list__block[data-type="core/paragraph"] p,
+  .block-editor-block-list__block p,
+  p {
+    @include responsive-font($font-min-size, 19px);
+    font-family: $font-base !important;
+    color: $color-body;
+
+    @media (max-width: 600px) {
+      font-size: var(--font-size-general-small);
+    }
+
+    > a:not(.button):not(.post-edit-link):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link) {
+      @extend %textlink;
+      position: relative;
+      text-decoration: none;
+    }
+  }
+
+  * a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link) {
+    @extend %textlink;
+    position: relative;
+    text-decoration: none;
+  }
+
+  b,
+  strong {
+    @include responsive-font($font-min-size, $font-max-size);
+    font-family: $font-base !important;
+
+    @media (max-width: 600px) {
+      font-size: var(--font-size-general-small);
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li,
+  * {
+    font-family: $font-base !important;
+  }
+}

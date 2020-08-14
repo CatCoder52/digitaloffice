@@ -4,8 +4,8 @@
 // The main layout for the website navigation, for a desktop
 // devices only.
 // -----------------------------------------------------------
-$color-nav-dropdown-links: #fff;
-$color-nav-links: #fff;
+$color-nav-dropdown-links: $color-midnight-blue;
+$color-nav-links: $color-midnight-blue;
 $dropdown-width: 19rem;
 $icon-arrow-right: '../svg/chevron-right-dark.svg';
 $icon-arrow-down: '../svg/chevron-down-dark.svg';
@@ -13,9 +13,30 @@ $icon-arrow-left: '../svg/chevron-left-dark.svg';
 $hover-intent: .3s;
 $absolute-navigation: true;
 
+// Let's make sure default navigation is not visible on mobile on first paint
+.nav-primary-desktop {
+  display: none;
+
+  @media (min-width: $responsivenav) {
+    display: block !important;
+  }
+}
+
 // Prevent scrolling when nav open
 body.js-nav-active {
   overflow: hidden;
+
+  .nav-toggle,
+  .nav-toggle:focus {
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after,
+    &:focus .hamburger-inner:focus::before,
+    &:focus .hamburger-inner:focus::after {
+      background-color: $color-white;
+      color: $color-white;
+    }
+  }
 }
 
 .toggle-text {
@@ -35,7 +56,196 @@ body {
   .nav-toggle:focus .hamburger-inner:focus,
   .nav-toggle:focus .hamburger-inner:focus::after,
   .nav-toggle:focus .hamburger-inner:focus::before {
-    background-color: $color-dude-white;
+    background-color: $color-midnight-blue;
+  }
+}
+
+// Custom nav
+.nav-primary {
+  .cols.cols-navs {
+    @include grid(2, $gutter_x: 0rem, $gutter_y: 0rem);
+
+    ul,
+    li {
+      line-height: 1.9;
+    }
+
+    @media (min-width: 760px) {
+      padding-top: 54px;
+      margin-top: 54px;
+      border-top: 1px solid rgba($color-white, .5);
+
+      .col.col-secondary-nav {
+        border-right: 1px solid rgba($color-white, .5);
+      }
+    }
+
+    .col.col-secondary-nav {
+      li a {
+        @media (max-width: 760px) {
+          font-size: 24px;
+        }
+
+        // Regular phones
+        @media (max-width: 500px) {
+          font-size: 20px;
+        }
+
+        // iPhone
+        @media (max-width: 400px) {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .col.col-primary-nav {
+      display: flex;
+      justify-content: flex-end;
+
+      li a {
+        @media (min-width: 900px) {
+          font-size: 50px;
+        }
+
+        // Regular phones
+        @media (max-width: 500px) {
+          font-size: 26px;
+        }
+
+        // iPhone
+        @media (max-width: 400px) {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .col.col-primary-nav .menu-item {
+      text-align: right;
+    }
+
+    li a {
+      font-size: 32px;
+
+
+
+      // Regular phones
+      @media (max-width: 500px) {
+        font-size: 18px;
+      }
+
+      // iPhone
+      @media (max-width: 400px) {
+        font-size: 15px;
+      }
+    }
+
+    a:hover {
+      color: $color-white;
+    }
+  }
+
+  .cols.cols-contact {
+    @include grid(2, $gutter_x: $margin-between-grid-columns, $gutter_y: 0rem);
+    padding-top: $margin-between-grid-columns;
+
+    @media (min-width: 760px) {
+      margin-right: 6.8rem;
+      margin-top: 4rem;
+    }
+
+    &.show-on-mobile {
+      padding-top: 3rem;
+      padding-bottom: 2rem;
+
+      @media (min-width: 760px) {
+        display: none;
+      }
+
+      h3.contact-tile,
+      p,
+      button,
+      a {
+        font-size: 14px;
+
+        // Regular phones
+        @media (max-width: 760px) {
+          font-size: 18px;
+        }
+
+        // iPhone
+        @media (max-width: 400px) {
+          font-size: 14px;
+        }
+      }
+    }
+
+    &:not(.show-on-mobile) {
+      display: none;
+
+      @media (min-width: 760px) {
+        @include grid(2, $gutter_x: $margin-between-grid-columns, $gutter_y: 0rem);
+      }
+    }
+
+    @media (min-width: 760px) {
+      border-top: 1px solid rgba($color-white, .5);
+    }
+
+    .contact-title {
+      color: $color-white;
+      font-size: 22px;
+      text-align: left;
+      margin-top: 0;
+      margin-bottom: 2.2rem;
+
+      // Regular phones
+      @media (max-width: 760px) {
+        font-size: 18px;
+        margin-bottom: .5rem;
+      }
+
+      // iPhone
+      @media (max-width: 400px) {
+        font-size: 14px;
+      }
+    }
+
+    p,
+    button,
+    a {
+      @extend %default;
+      text-align: left;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    button.chat {
+      @extend %default;
+      color: $color-white;
+      appearance: none;
+      background: transparent;
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    a,
+    button.chat {
+      color: $color-white;
+      border-bottom: 1px solid rgba($color-white, .3);
+      transition: border .22s;
+      overflow: hidden;
+
+      &:hover {
+        border-bottom: 1px solid $color-mint;
+      }
+    }
   }
 }
 
@@ -49,13 +259,13 @@ body {
     // Main level links
     .nav-primary > ul > li > a,
     .nav-primary-desktop > ul > li > a {
-      color: #fff;
+      color: $color-nav-links;
       position: relative;
     }
 
     .nav-primary > ul > li > a:hover,
     .nav-primary-desktop > ul > li > a:hover {
-      color: #fff;
+      color: $color-nav-links;
     }
   }
 }
@@ -174,68 +384,93 @@ body {
   }
 }
 
+.js-nav-active .nav-primary-desktop {
+  position: relative;
+  z-index: 0;
+}
+
+.nav-primary .container {
+  max-width: $site-header-max-width;
+}
+
+// Start project button
+.top-button-holder {
+  margin: 0;
+  z-index: 6;
+  position: relative;
+  text-align: center;
+  display: none;
+
+  @media (min-width: 760px) {
+    display: block;
+  }
+
+  @media (max-width: 759px) {
+    &.show-on-mobile {
+      margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: var(--font-size-general-small);
+      width: 100%;
+      text-align: left;
+
+      .button {
+        font-size: var(--font-size-general-small);
+        width: 100%;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      svg {
+        width: 22px;
+        height: 8.34px;
+      }
+    }
+  }
+
+  .button {
+    @extend %default;
+    background: $color-white;
+    color: $color-midnight;
+    font-size: 22px;
+    font-weight: 400;
+    border: 0;
+    width: auto;
+    display: inline-block;
+    padding: 1.2rem 2.8rem;
+    margin-bottom: 0;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    transition: 150ms linear background;
+    font-family: $font-base;
+
+    &:hover {
+      background: $color-mint;
+    }
+
+    svg {
+      margin-left: 3rem;
+    }
+  }
+}
+
 // Nav on front-page
 .home .nav-primary-desktop .menu-items .menu-item a,
 .home .nav-primary-desktop .menu-items .menu-item a:hover,
 .home .nav-primary-desktop .menu-items .menu-item a:focus {
-  color: $color-dude-white;
+  color: $color-nav-links;
 }
 
 .menu-items {
   transition: all $transition-duration;
 }
 
-// Fade out other items when hovering the last one
-.menu-items.fade-out .menu-item a,
-.menu-items.fade-out .menu-item a:after,
-.menu-items.fade-out .menu-item button,
-.menu-items.fade-out .menu-item button:after {
-  opacity: .2;
-}
-
-.menu-items.fade-out .menu-item.dude-nav-more button {
-  opacity: 1;
-  padding-top: 0;
-}
-
-// Plus to cross animation
-.nav-primary-desktop .menu-items .menu-item.dude-nav-more button {
-  position: relative;
-  padding-right: 2rem;
-  display: flex;
-  padding-top: 0;
-  padding-bottom: 0;
-  background: transparent;
-  border: 0;
-  align-items: center;
-  transform: translateY(1px);
-
-  &:hover {
-    cursor: pointer;
-  }
-
-  .plus-cross {
-    font-size: 2.6rem;
-    transform: rotate(0deg);
-    transition: all $transition-duration;
-    position: absolute;
-    top: -.4rem;
-    left: 0;
-    margin-left: 4.7rem;
-  }
-
-  &:hover .plus-cross {
-    transform: rotate(180deg);
-  }
-}
-
-// Toggled state, "cross"
-.nav-primary-desktop .menu-items .menu-item.dude-nav-more[aria-expanded="true"] .plus-cross {
-  transform: rotate(45deg);
-}
-
-.nav-primary-desktop .menu-items .menu-item.dude-nav-more[aria-expanded="true"] button:hover .plus-cross {
-  transform: rotate(90deg);
+.nav-primary-desktop .menu-items .menu-item.dude-nav-more {
+  margin-left: 2rem;
 }
 
 // When desktop nav open, hide links excepts More-link
@@ -258,6 +493,12 @@ body {
 }
 
 @media only screen and (min-width: $responsivenav) {
+  .main-navigation-wrapper {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    z-index: 0;
+  }
 
   // Use display block based hovers if no animations enabled
   @if $enable-animations == false {
@@ -341,6 +582,9 @@ body {
     padding-top: 0;
     padding-bottom: 0;
 
+    // Offset of nav-toggle width
+    width: calc(100% - 30px);
+
     .menu-items {
       margin: 0;
       padding: 0;
@@ -348,41 +592,32 @@ body {
       position: relative;
       display: flex;
       align-items: center;
+      width: 100%;
+      justify-content: center;
     }
 
     // General menu items
     .menu-items .menu-item {
       position: relative;
       margin-top: 0;
-      margin-left: 0;
-      margin-right: 3rem;
+      margin-left: 4rem;
+      margin-right: 4rem;
       margin-bottom: 0;
-
-      &:last-child,
-      &:last-of-type {
-        margin-right: 0;
-      }
+      line-height: 1;
 
       // Main level
       a,
-      button {
-        // "+" icon works best with 18px, sharpest
+      button:not(.nav-toggle-desktop) {
         font-size: 18px;
         color: $color-nav-links;
-        padding: 2rem 0;
+        padding: 2rem 0 .1rem;
         font-weight: 400;
-        transition: all $transition-duration;
+        transition: border .22s;
+        overflow: hidden;
+        border-bottom: 1px solid rgba($color-white, 0);
 
-        &:after {
-          width: 0;
-          height: 1px;
-          background: $color-dude-white;
-          position: relative;
-          content: '';
-          display: block;
-          transition: all $transition-duration;
-          bottom: -.4rem;
-          opacity: .5;
+        &:hover {
+          border-bottom: 1px solid $color-mint;
         }
 
         &.disabled {
@@ -396,13 +631,6 @@ body {
         &.highlighted,
         &.current {
           color: $color-nav-links;
-        }
-
-        &:hover:after,
-        &.highlighted:after,
-        &.current:after {
-          width: 100%;
-          opacity: 1;
         }
       }
 
@@ -482,7 +710,7 @@ body {
         }
 
         a,
-        button {
+        button:not(.nav-toggle-desktop) {
           padding: .8rem 1.5rem;
           color: $color-nav-dropdown-links;
           display: block;
@@ -545,11 +773,5 @@ body {
         margin-bottom: .8rem;
       }
     }
-  }
-}
-
-@media (max-width: $responsivenav) {
-  .nav-primary-desktop {
-    display: none;
   }
 }

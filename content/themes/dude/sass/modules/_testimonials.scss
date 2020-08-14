@@ -1,0 +1,190 @@
+.block.block-testimonials {
+  background: $color-midnight;
+  color: $color-white;
+  overflow: visible;
+  z-index: 2;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: $padding-blocks-small;
+
+  @media (min-width: 1000px) {
+    padding-bottom: $padding-blocks-huge;
+  }
+
+  @media (max-width: $container-ipad) {
+    padding-bottom: $padding-blocks-medium;
+  }
+
+  @media (max-width: $container-mobile) {
+    padding-bottom: $padding-blocks-small;
+  }
+
+  .slick-disabled {
+    opacity: .2;
+  }
+
+  .floating-actions {
+    width: 177px;
+    position: relative;
+    text-align: center;
+    font-size: var(--font-size-general-small);
+
+    @media (max-width: $grid-base-size + 150px) {
+      margin-left: 2rem;
+    }
+
+    @media (max-width: $container-ipad) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    button {
+      color: $color-white;
+      transition: all $transition-duration;
+    }
+
+    button:hover {
+      cursor: pointer;
+      opacity: .2;
+    }
+
+    button:focus {
+      opacity: 1;
+    }
+
+    .button-prev {
+      position: absolute;
+      left: 0;
+    }
+
+    .button-next {
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  .container .block-head {
+    @extend %container;
+    display: flex;
+    flex-wrap: wrap;
+
+    // Ensure space after arrows are 60px
+    height: 76px;
+    margin-bottom: $margin-between-grid-columns;
+    margin-top: $margin-between-grid-columns;
+
+    @media (max-width: $container-mobile) {
+      height: auto;
+      margin-top: 0;
+      margin-bottom: $margin-between-grid-columns;
+    }
+
+    // We don't have title in this module so justifying content to left end
+    justify-content: flex-start;
+
+    .block-title {
+      margin-bottom: 12rem;
+    }
+
+    .block-title:before {
+      background: $color-white;
+    }
+  }
+
+  .slick-slide {
+    width: calc(100vw - 4rem);
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    @media (min-width: $grid-base-size + 150px) {
+      width: $grid-base-size;
+    }
+  }
+
+  &.block-testimonials-slider .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .block-title,
+  a {
+    color: $color-white;
+  }
+
+  .testimonials.slider,
+  .container {
+    overflow: visible;
+  }
+
+  .testimonial {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .description {
+    margin-bottom: 5rem;
+    max-width: 850px;
+    width: 100%;
+  }
+
+  .testimonial-avatar {
+    @include background-cover();
+    background-color: $color-white;
+    border-radius: 50%;
+    width: 170px;
+    height: 170px;
+    min-width: 170px;
+    margin-right: 5rem;
+
+    @media (max-width: $container-ipad) {
+      width: calc(170px/2);
+      height: calc(170px/2);
+      min-width: calc(170px/2);
+      margin: 0 auto 4rem;
+    }
+  }
+
+  .testimonial-content {
+    width: calc(100% - 220px);
+    display: block;
+
+    @media (max-width: $container-ipad) {
+      width: 100%;
+      text-align: center;
+
+      .description {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+    }
+
+    @media (max-width: $container-mobile) {
+      .description p:not(.reviewer) {
+        font-size: var(--font-size-general-small);
+      }
+    }
+
+    p:not(.reviewer) {
+      @include responsive-font($font-min-size, 34px);
+
+      @media (max-width: 600px) {
+        font-size: var(--font-size-general-small);
+      }
+    }
+
+    .reviewer {
+      font-size: var(--font-size-general-small);
+      margin: 0;
+    }
+  }
+}
+
+.page-id-9 .block.block-our-services + .block.block-testimonials {
+  padding-top: 0;
+
+  .block-head {
+    margin-top: 0;
+  }
+}

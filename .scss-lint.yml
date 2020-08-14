@@ -106,11 +106,11 @@ linters:
   NameFormat:
     enabled: false
     allow_leading_underscore: true
-    convention: hyphenated_lowercase # or 'camel_case', or 'snake_case', or a regex pattern
+    convention: null # or 'camel_case', or 'snake_case', or a regex pattern
 
   NestingDepth:
     enabled: true
-    max_depth: 4
+    max_depth: 5
     ignore_parent_selectors: false
 
   PlaceholderInExtend:
@@ -123,7 +123,7 @@ linters:
   PropertyCount:
     enabled: false
     include_nested: false
-    max_properties: 10
+    max_properties: 20
 
   PropertySortOrder:
     enabled: false
@@ -161,7 +161,7 @@ linters:
 
   SelectorDepth:
     enabled: true
-    max_depth: 8
+    max_depth: 20
 
   SelectorFormat:
     enabled: false

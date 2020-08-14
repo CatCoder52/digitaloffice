@@ -19,23 +19,112 @@
   position: relative;
   min-height: 100px;
   max-width: $layout-max-width;
-  padding-left: $padding-default-cols;
-  padding-right: $padding-default-cols;
-  padding-top: $padding-default-rows;
-  padding-bottom: $padding-default-rows;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: $padding-blocks-large;
+  padding-bottom: $padding-blocks-large;
 
-  @media (max-width: $container-ipad) {
+  // Sometimes browsers render the light color behind blocks
+  margin-top: -1px;
+
+  @media (max-width: $grid-base-size + 150px) {
     padding-left: $padding-default-cols-ipad;
     padding-right: $padding-default-cols-ipad;
-    padding-top: $padding-default-rows-ipad;
-    padding-bottom: $padding-default-rows-ipad;
   }
 
-  @media (max-width: $container-mobile) {
+  @media (max-width: $container-ipad) {
     padding-left: $padding-default-cols-mobile;
     padding-right: $padding-default-cols-mobile;
-    padding-top: $padding-default-rows-mobile;
-    padding-bottom: $padding-default-rows-mobile;
+    padding-top: $padding-blocks-medium;
+    padding-bottom: $padding-blocks-medium;
+  }
+
+  // @media (max-width: $container-mobile) {
+  //   padding-top: $padding-blocks-small;
+  //   padding-bottom: $padding-blocks-small;
+  // }
+}
+
+// Pages with alternate module colors
+body.page.page-id-9 {
+  .block.block-cta-with-phone-input,
+  .block.block-two-images {
+    background: $color-midnight;
+    margin-bottom: -1px;
+  }
+
+  .block.block-title-left-text-right,
+  .block.block-our-services,
+  .block.block-references {
+    background: $color-midnight;
+    margin-bottom: -1px;
+
+    h2 {
+      color: $color-mint;
+    }
+
+    .floating-actions button,
+    h3 {
+      color: $color-white;
+    }
+
+    p {
+      color: $color-paragraphs-light;
+    }
+
+    .cta-link {
+      color: $color-mint;
+
+      &::after {
+        background-color: $color-mint;
+      }
+    }
+  }
+}
+
+// Pages where all blocks are dark
+body.post-type-archive-reference,
+body.page-id-9,
+body.post-type-archive-merch {
+  .content-area,
+  .block {
+    background-color: $color-midnight;
+  }
+}
+
+// Design page is only partial dark
+body.page-id-4485 {
+  .block.block-cta-with-phone-input {
+    background: $color-midnight;
+  }
+
+  .block.block-references {
+    background: $color-midnight;
+
+    h2 {
+      color: $color-mint;
+    }
+
+    .floating-actions button,
+    p,
+    h3 {
+      color: $color-white;
+    }
+
+    .cta-link {
+      color: $color-mint;
+
+      &::after {
+        background-color: $color-mint;
+      }
+    }
+  }
+}
+
+body.post-type-archive,
+body.page-id-9 {
+  .block.block-cta-with-phone-input {
+    background: $color-midnight;
   }
 }
 
@@ -66,13 +155,15 @@
 }
 
 // Containers
-.container {
+.container,
+%container {
   margin: 0 auto;
   padding-top: 0;
   padding-bottom: 0;
   padding-left: 0;
   padding-right: 0;
   max-width: $grid-base-size;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -90,29 +181,6 @@
   display: block;
 }
 
-// Edit
-.edit-link {
-  text-align: left;
-  width: 100%;
-  display: block;
-  clear: both;
-  max-width: 100%;
-  min-width: 0;
-  margin-bottom: 0;
-  margin-top: 0;
-  top: 0;
-  bottom: 0;
-  padding: 0;
-  overflow: hidden;
-
-  a {
-    clear: both;
-    display: block;
-    margin-top: 40px;
-    padding: 0;
-  }
-}
-
 // Global link helper
 // This is useful in services -type of areas where the whole block is a link
 // Remember to define aria-label or screen-reader-text for accessibility
@@ -127,151 +195,101 @@ a.global-link {
 
 // Dude specific general typography related styles
 .block-title {
-  max-width: 45vw;
-  margin: 0;
-  line-height: 1.33;
+  @include responsive-font($font-size-general-headings-mobile, $font-size-general-headings-desktop);
+  margin-bottom: $margin-between-text-elements;
+  margin-top: 0;
+  position: relative;
 
-  @media (max-width: 1200px) {
-    max-width: 60%;
+  @media (min-width: $container-ipad-landscape) {
+    font-size: $font-size-general-headings-desktop;
   }
 
-  @media (max-width: 900px) {
-    max-width: 100%;
+  &.block-title-large {
+    @extend %general-heading-alt;
   }
+
+  &.block-title-small {
+    @extend %general-heading-small;
+  }
+}
+
+%general-heading-cta {
+  @include responsive-font($font-size-general-headings-mobile, $font-size-general-headings-medium-ctas);
+  margin-bottom: 2rem;
+  margin-top: 0;
+  line-height: 1.35;
+
+  @media (max-width: $container-mobile) {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  @media (min-width: $container-ipad-landscape) {
+    font-size: $font-size-general-headings-medium-ctas;
+  }
+}
+
+%general-heading-alt {
+  @include responsive-font($font-size-general-headings-mobile, 54px);
+  margin-top: 0;
+  line-height: 1.35;
+  font-weight: 500;
+
+  @media (max-width: $container-mobile) {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  @media (min-width: 1300px) {
+    font-size: 54px;
+  }
+}
+
+%general-heading-large {
+  @include responsive-font(36px, $font-size-general-headings-desktop);
+  margin-bottom: 4rem;
+  margin-top: 0;
+  line-height: 1.5;
+  font-weight: 400;
+
+  @media (max-width: $container-mobile) {
+    font-size: 36px;
+    font-weight: 500;
+  }
+
+  @media (min-width: $container-ipad-landscape + 200px) {
+    font-size: $font-size-general-headings-desktop;
+  }
+}
+
+%general-heading-small {
+  @include responsive-font(20px, 24px);
+  margin-bottom: 2rem;
+  margin-top: 0;
+  line-height: 1.5;
+  font-weight: 400;
+
+  @media (min-width: $container-ipad-landscape) {
+    font-size: 24px;
+  }
+}
+
+.large-text,
+%large-text {
+  @extend %general-heading-small;
 }
 
 .block-head {
-  padding-top: 15rem;
-  padding-bottom: 10rem;
+  padding: 0;
 
-  @media (max-width: 1600px) {
-    padding-top: 10rem;
-    padding-bottom: 8rem;
-  }
-
-  @media (max-width: 1100px) {
-    padding-top: 8rem;
-    padding-bottom: 5rem;
-  }
-
-  @media (max-width: 500px) {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+  p.read-more {
+    margin: 0;
   }
 }
 
-.block-title-pre {
-  @extend %h4;
-  opacity: .5;
-  margin-bottom: 2rem;
+.block-pre-title {
   margin-top: 0;
-}
-
-// Text styles
-.text-smaller,
-%text-smaller {
-  @include responsive-font(16px, 18px);
-}
-
-// Special links
-.cta-link {
-  display: inline-block;
-
-  &:hover:after {
-    width: 100%;
-    opacity: 1;
-  }
-}
-
-.cta-link:after {
-  width: 50%;
-  height: 1px;
-  background: $color-body;
-  position: relative;
-  content: '';
-  display: block;
-  bottom: -1rem;
-  transition: all $transition-duration;
-  opacity: .5;
-}
-
-.cta-link.cta-link-white {
-  color: $color-dude-white;
-
-  &:after {
-    background: $color-dude-white;
-  }
-}
-
-.arrow-link-wrapper {
-  margin: 0;
-}
-
-.arrow-link {
-  display: flex;
-  align-items: center;
-}
-
-.block-dudes .col:hover .arrow,
-.arrow-link:hover .arrow {
-  width: 15rem;
-}
-
-.block.block-cta-left-image form button:hover .arrow {
-  width: 10rem;
-}
-
-.arrow-link .arrow,
-.long-arrow,
-.block.block-cta-left-image form button .arrow {
-  width: 6rem;
-  height: 1px;
-  background: $color-body;
-  position: relative;
-  display: inline-block;
-  margin-left: 1.5rem;
-  transition: all 1s;
-  bottom: -1px;
-
-  &:after,
-  &:before {
-    content: '';
-    position: absolute;
-    background: $color-body;
-    width: 7px;
-    height: 1px;
-    right: 0;
-  }
-
-  &:before {
-    transform: rotate(45deg);
-    bottom: 2px;
-    right: -3px;
-  }
-
-  &:after {
-    transform: rotate(-45deg);
-    bottom: -2px;
-    right: -3px;
-  }
-}
-
-.arrow-wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.button:hover .long-arrow {
-  width: 15rem;
-}
-
-.button .long-arrow,
-.button .long-arrow:after,
-.button .long-arrow:before,
-.block.block-cta-left-image form button .arrow,
-.block.block-cta-left-image form button .arrow:before,
-.block.block-cta-left-image form button .arrow:after {
-  background: $color-dude-white;
+  margin-bottom: $margin-between-text-elements;
 }
 
 // Descriptions and notes
@@ -284,32 +302,36 @@ a.global-link {
   text-align: center;
 }
 
-// General backgrounds of cols and boxes
-.has-grey-bg {
-  background: $color-dude-whitegreyish;
-  position: relative;
+// Better edit link
+.edit-link {
+  text-align: left;
+  width: 100%;
+  display: block;
+  clear: both;
+  max-width: 100%;
+  min-width: 0;
+  margin-bottom: 0;
+  margin-top: 2rem;
+  overflow: hidden;
+  transition: all .22s;
 
-  &.has-grey-bg-extend-left:before {
-    background: $color-dude-whitegreyish;
-    position: absolute;
-    height: 100%;
-    width: 50vw;
-    content: '';
+  a {
+    font-weight: 700;
+    clear: both;
+    text-align: center;
+    transition: all .22s;
     display: block;
-    z-index: 0;
-    top: 0;
-    left: -50vw;
+    padding: 2rem;
+    background: #fafafa;
+    color: #999;
+    border: 2px dashed #999;
+    margin: 0;
+    text-decoration: none;
+    max-width: 100%;
   }
 
-  &.has-grey-bg-extend-right:after {
-    background: $color-dude-whitegreyish;
-    position: absolute;
-    height: 100%;
-    width: 50vw;
-    content: '';
-    display: block;
-    z-index: 0;
-    top: 0;
-    right: -50vw;
+  a:hover {
+    color: #999;
+    background: #efefef;
   }
 }

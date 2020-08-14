@@ -2,10 +2,66 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:48:37
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-05-18 14:45:49
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2020-07-23 14:09:22
  *
- * @package dude2019
+ * @package dude
  */
 
-include get_theme_file_path( 'template-parts/modules/static/our-services.php' );
+// Fields
+$title = get_sub_field( 'title' );
+$description = get_sub_field( 'description' );
+$button = get_sub_field( 'cta-link' );
+$services = get_sub_field( 'services' );
+?>
+
+<section class="block has-light-bg block-our-services<?php if ( is_page( 9 ) ) : ?> has-dark-bg<?php else : ?> has-light-bg<?php endif; ?>">
+  <div class="container">
+
+    <header class="block-head screen-reader-text">
+      <h2 class="block-title">Palvelumme</h2>
+    </header>
+
+    <div class="cols cols-services">
+
+      <div class="col col-content">
+        <?php if ( ! empty( $title ) ) : ?>
+        <h2 class="col-title"><?php if ( ! is_front_page() && 'Suunnittelu' === $title || ! is_front_page() && 'UI/UX' === $title ) : ?><svg xmlns="http://www.w3.org/2000/svg" width="76" height="63" viewBox="0 0 76 63"><path fill="none" stroke="currentColor" d="M24.642 62.362c3.808 0 7.192-.747 10.151-2.24a19.13 19.13 0 007.25-6.329c1.876-2.725 3.297-5.933 4.264-9.624.966-3.691 1.45-7.808 1.45-12.349 0-6.093-.828-11.389-2.483-15.886-1.655-4.497-4.24-8.057-7.756-10.679S29.71 1.322 24.642 1.322c-5.069 0-9.36 1.311-12.876 3.933s-6.109 6.19-7.779 10.701c-1.67 4.512-2.505 9.8-2.505 15.864 0 9.024 1.744 16.084 5.23 21.182 4.16 6.24 10.137 9.36 17.93 9.36zm0-7.822c-3.75 0-6.841-1.26-9.273-3.78-3.428-3.603-5.141-9.916-5.141-18.94 0-8.994 1.713-15.293 5.141-18.896 2.432-2.52 5.523-3.78 9.273-3.78s6.84 1.26 9.272 3.78c3.398 3.574 5.098 9.873 5.098 18.896 0 9.053-1.7 15.367-5.098 18.94-2.432 2.52-5.522 3.78-9.272 3.78zM75.444 61V2.685H67.71c-.674 3.252-2.366 5.888-5.076 7.91-2.71 2.021-6.027 3.047-9.953 3.076v6.196h14.15V61h8.613z"/></svg><?php elseif ( ! is_front_page() && 'Kehitys' === $title || ! is_front_page() && 'Ilme' === $title ) : ?><svg xmlns="http://www.w3.org/2000/svg" width="95" height="63" viewBox="0 0 95 63"><path fill="none" stroke="currentColor" d="M24.642 62.362c3.808 0 7.192-.747 10.151-2.24a19.13 19.13 0 007.25-6.329c1.876-2.725 3.297-5.933 4.264-9.624.966-3.691 1.45-7.808 1.45-12.349 0-6.093-.828-11.389-2.483-15.886-1.655-4.497-4.24-8.057-7.756-10.679S29.71 1.322 24.642 1.322c-5.069 0-9.36 1.311-12.876 3.933s-6.109 6.19-7.779 10.701c-1.67 4.512-2.505 9.8-2.505 15.864 0 9.024 1.744 16.084 5.23 21.182 4.16 6.24 10.137 9.36 17.93 9.36zm0-7.822c-3.75 0-6.841-1.26-9.273-3.78-3.428-3.603-5.141-9.916-5.141-18.94 0-8.994 1.713-15.293 5.141-18.896 2.432-2.52 5.523-3.78 9.273-3.78s6.84 1.26 9.272 3.78c3.398 3.574 5.098 9.873 5.098 18.896 0 9.053-1.7 15.367-5.098 18.94-2.432 2.52-5.522 3.78-9.272 3.78zM94.429 61v-8.174h-29.97c.644-2.9 3.017-5.64 7.118-8.218l11.514-7.382c7.324-4.6 10.986-10.591 10.986-17.974 0-5.156-1.794-9.434-5.383-12.832-3.589-3.399-8.357-5.098-14.304-5.098-6.006 0-10.87 1.81-14.59 5.428-3.72 3.618-5.581 8.107-5.581 13.469 0 1.23.03 2.021.088 2.373l8.833 1.054c-.117-1.582-.176-2.446-.176-2.592 0-3.633.981-6.54 2.944-8.723 1.963-2.183 4.732-3.274 8.306-3.274 3.37 0 6.042.974 8.02 2.922 1.978 1.948 2.966 4.402 2.966 7.36 0 4.63-2.68 8.673-8.042 12.13l-9.712 6.328c-4.775 3.047-8.24 6.423-10.393 10.13C54.9 51.631 53.75 55.99 53.603 61H94.43z"/></svg><?php elseif ( ! is_front_page() && 'Ylläpito' === $title ) : ?><svg xmlns="http://www.w3.org/2000/svg" width="98" height="63" viewBox="0 0 98 63"><path fill="none" stroke="currentColor" d="M24.642 62.362c3.808 0 7.192-.747 10.151-2.24 2.959-1.495 5.376-3.604 7.25-6.329 1.876-2.725 3.297-5.933 4.264-9.624.966-3.691 1.45-7.808 1.45-12.349 0-6.093-.828-11.389-2.483-15.886-1.655-4.497-4.24-8.057-7.756-10.679S29.71 1.322 24.642 1.322c-5.069 0-9.36 1.311-12.876 3.933s-6.109 6.19-7.779 10.701c-1.67 4.512-2.505 9.8-2.505 15.864 0 9.024 1.744 16.084 5.23 21.182 4.16 6.24 10.137 9.36 17.93 9.36zm0-7.822c-3.75 0-6.841-1.26-9.273-3.78-3.428-3.603-5.141-9.916-5.141-18.94 0-8.994 1.713-15.293 5.141-18.896 2.432-2.52 5.523-3.78 9.273-3.78s6.84 1.26 9.272 3.78c3.398 3.574 5.098 9.873 5.098 18.896 0 9.053-1.7 15.367-5.098 18.94-2.432 2.52-5.522 3.78-9.272 3.78zm50.802 7.91c3.194 0 6.13-.49 8.812-1.472 2.68-.981 4.914-2.314 6.701-3.999s3.179-3.67 4.175-5.955 1.494-4.716 1.494-7.295c0-5.36-1.765-9.66-5.295-12.897-3.53-3.238-7.771-4.856-12.722-4.856l16.655-15.381v-7.91H55.669v8.086h27.905L66.348 26.635l4.35 7.295c1.729-.616 3.443-.923 5.142-.923 3.398 0 6.226.96 8.481 2.878 2.256 1.92 3.384 4.593 3.384 8.02 0 3.135-1.12 5.72-3.362 7.757-2.24 2.036-5.236 3.054-8.986 3.054-3.633 0-6.658-1.165-9.075-3.494-2.417-2.329-3.713-5.368-3.89-9.118L53.78 44.08c.323 5.244 2.447 9.617 6.373 13.118 3.925 3.5 9.023 5.251 15.292 5.251z"/></svg><?php endif; ?><?php echo esc_attr( $title ); ?></h2>
+
+          <?php if ( ! empty( $description ) ) {
+            echo wpautop( $description ); // phpcs:ignore
+          } ?>
+
+          <?php if ( ! empty( $button ) ) : ?>
+            <p class="link-wrapper"><a class="cta-link" href="<?php echo esc_url( $button['url'] ); ?>"<?php if ( ! empty( $button['target'] ) ) : ?> target="<?php echo esc_html( $button['target'] ); ?>"<?php endif; ?>><?php echo esc_html( $button['title'] ); ?></a></p>
+          <?php endif; ?>
+      </div>
+
+      <?php if ( ! empty( $services ) ) : ?>
+        <div class="col col-services">
+
+        <?php foreach ( $services as $service ) :
+
+          // Repeater fields
+          $service_name = $service['service_name'];
+          $service_description = $service['service_description'];
+          ?>
+            <div class="col-inner">
+              <?php if ( ! empty( $service_name ) ) : ?>
+                <h3><?php echo esc_attr( $service_name ); ?></h3>
+              <?php endif; ?>
+
+              <?php if ( ! empty( $service_description ) ) : ?>
+                <?php echo wpautop( $service_description ); // phpcs:ignore ?>
+              <?php endif; ?>
+            </div>
+
+          <?php endforeach; ?>
+
+        </div>
+      <?php endif; ?>
+
+    </div>
+    <?php endif; ?>
+
+</section>

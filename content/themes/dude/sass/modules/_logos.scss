@@ -1,0 +1,96 @@
+.block.block-logos {
+  .container {
+    overflow: visible;
+  }
+
+  .block-title {
+    @extend %general-heading-small;
+    margin-bottom: $padding-blocks-small;
+    margin-top: 0;
+
+    @media (max-width: $container-mobile) {
+      text-align: center;
+    }
+  }
+}
+
+.block.block-logos .logo-wall {
+  @include grid(6, $gutter_x: 100px, $gutter_y: 7rem);
+
+  @media (max-width: 1500px) {
+    @include grid(5, $gutter_x: 100px, $gutter_y: $margin-between-grid-columns);
+  }
+
+  @media (max-width: 1250px) {
+    @include grid(4, $gutter_x: 100px, $gutter_y: $margin-between-grid-columns);
+  }
+
+  @media (max-width: 960px) {
+    @include grid(3, $gutter_x: 50px, $gutter_y: $margin-between-grid-columns);
+  }
+
+  @media (max-width: 650px) {
+    @include grid(2, $gutter_x: 20px, $gutter_y: 40px);
+  }
+
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    max-width: 150px;
+  }
+
+  svg {
+    max-height: 100px;
+    max-width: 130px;
+    width: auto;
+    height: 100%;
+    fill: $color-midnight;
+
+    // iPhone and other phones
+    @media (max-width: 500px) {
+      max-height: 70px;
+      max-width: 100px;
+      width: 100%;
+    }
+
+    path:not(.do-not-fill) {
+      fill: $color-midnight;
+    }
+  }
+
+  .do-not-fill {
+    fill: $color-white;
+  }
+
+  .logo-ulkoministerio svg {
+    max-width: 190px;
+    max-height: 140px;
+  }
+
+  .logo-wotkins svg {
+    max-width: 150px;
+  }
+
+  .logo-sfcaravan svg {
+    max-width: 150px;
+  }
+
+  .logo-mediashake svg {
+    max-width: 170px;
+    max-height: 150px;
+    width: 170px;
+    height: auto;
+  }
+
+  .logo-ark svg,
+  .logo-blackbruin svg {
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
+
+.block.block-our-services + .block.block-logos {
+  padding-top: 0;
+}

@@ -3,9 +3,9 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-06-25 13:35:57
+ * @Last Modified time: 2020-07-23 13:55:37
  *
- * @package dude2019
+ * @package dude
  */
 
 // Featured image
@@ -18,32 +18,12 @@ if ( has_post_thumbnail() ) {
 }
 ?>
 
-<section class="block block-hero-side-columns block-hero block-hero-frontpage block-hero-enable-transition">
-  <div class="container opacity-on-load-instant">
+<section class="block block-hero block-hero-fp has-light-bg">
+  <div class="container">
 
-    <div class="content content-select-service">
-
-      <h1 class="screen-reader-text">Mitä saisi olla?</h1>
-
-      <div class="side-content-box selection">
-        <ul>
-          <li><a href="<?php echo get_page_link( 9 ); ?>">Haluan uudet verkkosivut</a></li>
-          <li><a href="<?php echo get_page_link( 4485 ); ?>">Tarvitsen visuaalista suunnittelua</a></li>
-          <li><a href="<?php echo get_page_link( 4493 ); ?>">Kunhan vaan kahtelen...</a></li>
-        </ul>
-
-        <p class="cta-link cta-link-front"><a href="<?php echo get_page_link( 4487 ); ?>">Ota yhteyttä</a></p>
-      </div>
-    </div>
-
-    <div class="featured-image featured-image-side">
-      <div class="shade"></div>
-
-      <?php if ( $bg_image ) { ?>
-        <div class="background-image preview lazyload" style="background-image: url('<?php echo $bg_image_tiny; ?>');" data-src="<?php echo esc_url( $bg_image ); ?>" data-src-mobile="<?php echo esc_url( $bg_image_mobile[0] ); ?>"></div>
-        <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo esc_url( $bg_image ); ?>');"<?php endif; ?>></div>
-        <noscript><div class="background-image full-image" style="background-image: url('<?php echo esc_url( $bg_image ); ?>');"></div></noscript>
-      <?php } ?>
+    <div class="content">
+      <h1 class="swup-transition-fade">Ole <span class="the-word glitch" data-text="uskottava.">uskottava.</span></h1>
+      <p class="content-sub-statement swup-transition-fade">Suunnittelemme moderneja ja teknisesti kestäviä <span class="capital-p-dangit">WordPress</span>-verkkosivuja.</p>
     </div>
 
   </div>

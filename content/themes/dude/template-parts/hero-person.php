@@ -3,9 +3,9 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-06-25 13:37:53
+ * @Last Modified time: 2020-07-23 14:05:38
  *
- * @package dude2019
+ * @package dude
  */
 
 $job_title = get_post_meta( get_the_id(), 'title', true );
@@ -21,23 +21,12 @@ if ( ! empty( $social ) ) {
   }
 } ?>
 
-<section class="block block-hero-person">
-
+<section class="block block-hero-person has-light-bg">
   <div class="container">
-
     <div class="cols">
       <div class="col">
-        <div class="image has-lazyload">
-          <div class="background-image preview lazyload" style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'tiny-preload-thumbnail' ) ?>');" data-src="<?php echo get_the_post_thumbnail_url( get_the_id(), 'full' ) ?>" data-src-mobile="<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>"></div>
-          <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'full' ) ?>');"<?php endif; ?>></div>
-          <noscript><div class="background-image full-image" style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'full' ) ?>');"></div></noscript>
-        </div>
-      </div>
 
-      <div class="col has-grey-bg">
-        <p class="breadcrumb"><a href="<?php echo get_page_link( 4449 ); ?>">Yritys</a> <?php include get_theme_file_path( '/svg/arrow-breadcrumb.svg' ); ?> <?php the_title() ?></p>
-
-        <div class="content">
+      <div class="content">
         <header class="block-head">
           <p class="block-title-pre" aria-describedby="block-title-job-title"><?php echo esc_html( $job_title ) ?></p>
           <h1 class="block-title" id="block-title-job-title"><?php the_title() ?></h1>
@@ -62,8 +51,13 @@ if ( ! empty( $social ) ) {
           <?php endif; ?>
         </div>
       </div>
-    </div>
 
+      <div class="col col-person-image">
+        <div class="image has-lazyload">
+          <?php image_lazyload_tag( get_post_thumbnail_id( $post->ID ) ); ?>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 

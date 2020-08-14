@@ -30,18 +30,11 @@ add_theme_support( 'automatic-feed-links' );
 add_theme_support( 'title-tag' );
 add_theme_support( 'post-thumbnails' );
 add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption' ) );
-// add_theme_support( 'woocommerce' );
 
 /**
  * Load textdomain.
  */
 load_theme_textdomain( 'dude', get_template_directory() . '/languages' );
-/**
- * Define content width in articles
- */
-if ( ! isset( $content_width ) ) {
-  $content_width = 800;
-}
 
 /**
  * Register widget area.
@@ -79,17 +72,32 @@ function dude_scripts() {
   ) );
 
   wp_localize_script( 'scripts', 'dude_screenReaderText', array(
-    'expand'      => esc_html__( 'Open child menu', 'dude' ),
-    'collapse'    => esc_html__( 'Close child menu', 'dude' ),
+    'expand'      => esc_html__( 'Avaa alavalikko', 'dude' ),
+    'collapse'    => esc_html__( 'Sulje alavalikko', 'dude' ),
+    'homeurl'      => esc_url( get_home_url() ),
   ) );
 
   if ( is_post_type_archive( 'merch' ) ) {
-    wp_enqueue_script( 'store', get_theme_file_uri( 'js/store.js' ), array(), filemtime( get_theme_file_path( 'js/store.js' ) ), true );
+		wp_enqueue_script( 'store', get_theme_file_uri( 'js/store.js' ), array(), filemtime( get_theme_file_path( 'js/store.js' ) ), true );
   }
+
+  // Disable air-helper stuff
+  remove_action( 'wp_footer', 'air_helper_enqueue_instantpage_script', 50 );
 }
 add_action( 'wp_enqueue_scripts', 'dude_scripts' );
 
+add_filter( 'script_loader_tag', 'dude_script_loader_tag', 10, 2 );
+
+function dude_script_loader_tag( $tag, $handle ) {
+  if ( 'store' === $handle ) {
+		return str_replace( '<script', '<script data-swup-reload-script data-swup-ignore-script', $tag );
+  }
+
+  return $tag;
+}
+
 add_action( 'after_setup_theme', 'dude_add_image_sizes' );
+
 function dude_add_image_sizes() {
   add_image_size( 'tiny-preload-thumbnail', 20, 20 );
 }

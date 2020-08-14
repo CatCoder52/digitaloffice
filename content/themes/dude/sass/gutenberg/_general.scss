@@ -1,0 +1,81 @@
+// Gutenberg blocks on the website side
+// Columns block
+.wp-block-columns,
+.wp-block-columns.alignwide {
+  @extend .block;
+  padding-bottom: 4rem;
+  padding-top: 4rem;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @media (max-width: $grid-base-size + 150px) {
+    padding-left: $padding-default-cols-ipad;
+    padding-right: $padding-default-cols-ipad;
+  }
+
+  @media (max-width: $container-ipad) {
+    padding-left: $padding-default-cols-mobile;
+    padding-right: $padding-default-cols-mobile;
+  }
+
+  > .wp-block-column {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &.features p {
+    font-size: var(--font-size-general-small);
+  }
+
+  &.title-only-block {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+
+    .wp-block-column h2 {
+      @extend %general-heading-cta;
+    }
+  }
+
+  &.alignwide,
+  &.alignfull {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  &:nth-of-type(1) {
+    padding-top: 0;
+  }
+
+  + .wp-block-columns {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .wp-block-column .block-title.block-title-large {
+    @extend %general-heading-alt;
+  }
+
+  .wp-block-column .block-title.block-title-small {
+    @extend %general-heading-small;
+  }
+}
+
+.wp-block-column {
+  h2 {
+    font-weight: 400;
+    margin-bottom: $margin-between-text-elements;
+
+    // Fix alignment
+    transform: translateY(-10px);
+
+    &.block-title-large {
+      @extend %general-heading-alt;
+    }
+
+    &.block-title-small {
+      @extend %general-heading-small;
+    }
+  }
+}

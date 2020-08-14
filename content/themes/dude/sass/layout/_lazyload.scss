@@ -10,7 +10,7 @@
   &.reveal {
     filter: none;
     will-change: transform, opacity;
-    animation: progressive-reveal 1s ease-out;
+    animation: progressive-reveal .55s ease-out;
   }
 
   &.preview {
@@ -26,12 +26,10 @@
 
 @keyframes progressive-reveal {
   0% {
-    // transform: scale(1.05);
-    opacity: .6;
+    opacity: 0;
   }
 
   100% {
-    // transform: scale(1);
     opacity: 1;
   }
 }

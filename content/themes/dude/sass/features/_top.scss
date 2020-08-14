@@ -5,17 +5,33 @@
 // when hitting the rock bottom.
 // ------------------------------------------------------------
 
-.top {
+.back-to-top {
+  width: auto;
+  height: auto;
+  margin: 0;
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: $color_body;
-  width: 50px;
-  height: 50px;
+  bottom: 4px;
+  right: 4px;
   text-decoration: none;
   opacity: 0;
   transition: opacity .3s 0s, visibility 0s .3s;
   z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:focus {
+    outline: none;
+  }
+
+  // Accessibility: Change color based on background color the element is on
+  &.has-light-bg svg {
+    fill: $color-midnight;
+  }
+
+  &.has-dark-bg svg {
+    fill: $color-white;
+  }
 
   &.is-visible,
   &.fade-out,
@@ -28,7 +44,7 @@
   }
 
   &.fade-out { // If the user keeps scrolling down, the button is out of focus and becomes less visible
-    opacity: .3;
+    opacity: 1;
 
     &:hover {
       opacity: 1;
@@ -38,25 +54,36 @@
   .no-touch &:hover {
     opacity: 1;
   }
+}
+
+.top {
+  background: transparent;
+
+  // Makes it 50x50
+  padding: 16px;
 
   svg {
-    @include centered();
-    position: absolute;
-    fill: #fff;
+    fill: $color-midnight;
     margin: 0;
     opacity: .8;
-    font-size: 19px;
     transition: all .3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+
+    @media (max-width: $container-mobile) {
+      width: 15px;
+      height: 15px;
+    }
   }
 
   &:hover,
   &:focus,
   &:active {
-    background: $color_links;
-
     svg {
-      fill: #fff;
-      top: 35%;
+      transform: translateY(-.5rem);
     }
   }
 }

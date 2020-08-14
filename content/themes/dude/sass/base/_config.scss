@@ -5,45 +5,69 @@
 // This is the core file where most of the theme magic happens.
 // --------------------------------------------------------------
 
+// Brand 2020
+$color-cobalt-blue: #4d4aff;
+$color-midnight-blue: #131a50;
+$color-midnight: #03061b;
+$color-mint: #7effe1;
+
 // Brand colors
-$color-dude-black: #222;
-$color-dude-deep-black: #050505;
-$color-dark-blueish: #16202a;
-$color-dude-grey-text: #5a5a5a;
-$color-dude-white: #fff;
-$color-dude-whitegreyish: #f0f0f0;
-$color-dude-darkgrey: #272727;
-$color-superlightgrey: #e7e7e7;
-$color-lightgrey: #808080;
+$color-black: $color-midnight;
+$color-white: #fff;
+$color-default-background: #f0f0f0;
+$color-white-two: #f8f8f8;
+$color-button-white-hover: #f2f2f2;
 
 // Default colors
-$color-links: $color-dude-deep-black;
-$color-hover: rgba($color-dude-black, .8);
-$color-body: $color-dude-black;
-$color-headings: $color-dude-black;
+$color-links: $color-midnight;
+$color-hover: $color-mint;
+$color-paragraphs: #545773;
+$color-paragraphs-light: #e3e5ec;
+$color-body: $color-midnight-blue;
+$color-headings: $color-midnight-blue;
 $color-darkgrey: #4f5964;
 $color-placeholder: #ababab;
 
 // Fonts
-$font-base: 'Neuzeit Grotesk', 'Helvetica Neue', Helvetica, sans-serif;
-$font-headings: 'Neuzeit Grotesk', 'Helvetica Neue', Helvetica, sans-serif;
+$font-base: 'Circular', 'Helvetica Neue', Helvetica, sans-serif;
+$font-headings: 'Circular', 'Helvetica Neue', Helvetica, sans-serif;
 $font-alt: 'TT Interphases', 'Helvetica Neue', Helvetica, sans-serif;
 $font-monospace: 'Menlo', 'Courier', monospace;
 
 // Font settings
-$font-min-size: 18px;
-$font-max-size: 22px;
-$font-base-line-height: 1.55;
-$font-base-line-height-elements: 1.55;
-$headings-weight: 300;
+$font-size-general-small: 17px;
+$font-size-general-large: 22px;
+$font-size-general-headings-mobile: 24px;
+$font-size-general-headings-medium-ctas: 40px;
+$font-size-general-headings-desktop: 64px;
+$font-min-size: 17px;
+$font-max-size: 18px;
+$font-base-line-height: 1.5;
+$font-headings-line-height: 1.23;
+$headings-weight: 500;
+
+// CSS vars
+:root {
+  --font-size-general-small: #{$font-size-general-small};
+  --font-size-github: 16px;
+}
+
+// Exceptions in font sizes
+@media (min-width: 420px) and (max-width: 600px) {
+  :root {
+    --font-size-general-small: 18px;
+  }
+}
 
 // Breakpoints
 $grid-type: fluid; // 'fluid' or 'snappy'
 $layout-max-width: 100%;
 
-// Container widths
-$grid-base-size: 100%; // Layout container max width on desktop. This is default .container size
-$article-max-width: 1000px; // Max width for articles (see also $content_width in functions.php!)
+// Element sizes, widths and heights
+$grid-base-size: 1345px; // Layout container max width on desktop. This is default .container size
+$site-header-max-width: 1480px;
+$article-max-width: 870px; // Max width for articles (see also $content_width in functions.php!)
+$nav-height: 160px;
 
 // Breakpoints
 $container-mobile: 480px;
@@ -55,10 +79,11 @@ $container-desktop: 1662px;
 $margin-default-cols: 7.5rem;
 $margin-default-rows: 7.5rem;
 $margin-reasonable-space: 3.5rem;
+$margin-between-grid-columns: 6rem;
+$margin-between-grid-columns-large: 9rem;
+$margin-between-text-elements: 4rem;
 
 // Paddings
-$padding-default-cols: 8rem;
-$padding-default-rows: 10rem;
 $padding-default-cols-ipad: 5rem;
 $padding-default-rows-ipad: 8rem;
 $padding-default-rows-mobile: 5rem;
@@ -69,9 +94,19 @@ $padding-general-content-box-mobile: 4rem;
 $margin-general-offset: -8rem;
 $padding-accordion-content: 2.5rem;
 $padding-accordion-content-mobile: 2rem;
+$padding-blocks-huge: 22rem;
+$padding-blocks-large: 18rem;
+$padding-blocks-medium: 12rem;
+$padding-blocks-small: 6rem;
+$padding-default-cols: 8rem;
+$padding-default-rows: $padding-blocks-medium;
+$padding-cta-box-y: 7.5rem;
+$padding-cta-box-x: 10rem;
+$padding-blog-content-box-y: 7.5rem;
+$padding-blog-content-box-x: 8.5rem;
 
 // Transition duration and animations
-$transition-duration: .6s;
+$transition-duration: .22s;
 
 // Where navigation transforms into responsive - scale your window width down to test
-$responsivenav: 800px;
+$responsivenav: $container-ipad-landscape;

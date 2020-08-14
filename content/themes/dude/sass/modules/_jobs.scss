@@ -1,0 +1,68 @@
+.block.block-jobs {
+  padding-top: 0;
+  padding-bottom: 0;
+
+  .job-box {
+    background: #f6f6f6;
+    padding: 3rem;
+
+    @media (min-width: 800px) {
+      @include grid(2, $gutter_x: 0rem, $gutter_y: 0rem);
+      padding: 5rem;
+    }
+
+    .button {
+      min-width: 215px;
+    }
+
+    + .job-box {
+      margin-top: $margin-between-text-elements;
+    }
+  }
+
+  @media (max-width: 900px) {
+    p,
+    .button {
+      font-size: var(--font-size-general-small);
+    }
+  }
+
+  h2 {
+    @include responsive-font(22px, 30px);
+    font-weight: 400;
+    margin: 0 0 .5rem;
+    color: $color-headings;
+
+    @media (min-width: 900px) {
+      font-size: 30px;
+    }
+  }
+
+  p {
+    margin: 0;
+    color: $color-paragraphs;
+  }
+
+  p:not(.button-wrapper) {
+    margin-bottom: 2.7rem;
+  }
+
+  .col.col-apply {
+    p {
+      @media (min-width: 800px) {
+        margin: 0;
+      }
+    }
+
+    @media (min-width: 800px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      p:not(.button-wrapper) {
+        margin-left: auto;
+        margin-right: 6rem;
+      }
+    }
+  }
+}

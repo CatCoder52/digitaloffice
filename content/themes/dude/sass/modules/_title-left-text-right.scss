@@ -1,0 +1,41 @@
+.block.block-title-left-text-right {
+  background: $color-white;
+
+  h2 {
+    @extend %general-heading-alt;
+    margin: 0;
+
+    @media (min-width: 750px) {
+      margin-top: -15px;
+    }
+  }
+
+  .cols {
+    @media (min-width: 750px) {
+      @include grid(2, $gutter_x: $margin-default-cols, $gutter_y: $margin-between-grid-columns);
+    }
+  }
+
+  .col.col-title {
+    margin-bottom: $margin-between-text-elements;
+
+    @media (min-width: 1300px) {
+      padding-right: $margin-default-cols;
+    }
+
+    @media (min-width: 900px) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.block.block-title-left-text-right + .block.block-title-left-text-right {
+  padding-top: 0;
+}
+
+// Exceptions
+.page-id-9 .block.block-title-left-text-right .cols .col.col-title {
+  @media (min-width: 1300px) {
+    padding-right: 0;
+  }
+}

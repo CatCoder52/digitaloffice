@@ -1,0 +1,52 @@
+.block.block-hero.block-hero-contact-thanks {
+  .shade {
+    z-index: 7;
+  }
+
+  &.block-hero-fail {
+    background: $color-midnight;
+  }
+
+  .container {
+    z-index: 9;
+  }
+
+  .hero-description a {
+    border-bottom: 1px solid rgba($color-white, .3);
+    transition: border .22s;
+    color: $color-white;
+
+    &:hover {
+      border-bottom: 1px solid $color-mint;
+    }
+  }
+
+  .content {
+    text-align: center;
+    margin: 0 auto;
+
+    p {
+      width: 100%;
+      max-width: 100%;
+
+      a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail):not(.button) {
+        margin-right: 1rem;
+
+        &::after {
+          background-image: url('../svg/external-link-white.svg') !important;
+        }
+      }
+    }
+
+    > div,
+    iframe {
+      border-radius: 4px;
+    }
+  }
+
+  h1,
+  p {
+    color: $color-white;
+    text-align: center;
+  }
+}

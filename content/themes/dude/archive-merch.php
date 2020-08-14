@@ -19,7 +19,7 @@ get_header(); ?>
 
     <?php include get_theme_file_path( 'template-parts/hero-merch.php' ); ?>
 
-    <section class="block block-merch">
+    <section class="block block-merch has-dark-bg">
       <div class="container">
 
         <div class="cols">
@@ -29,10 +29,10 @@ get_header(); ?>
             <div class="product-image">
               <!-- <h2 class="sold-out">Loppuunmyyty</h2> -->
 
-              <div class="image has-lazyload">
-                <div class="background-image preview lazyload" style="background-image: url('<?php echo the_post_thumbnail_url( 'tiny-preload-thumbnail' ); ?>');" data-src="<?php echo the_post_thumbnail_url( 'large' ); ?>" data-src-mobile="<?php echo the_post_thumbnail_url( 'large' ); ?>"></div>
-                <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo the_post_thumbnail_url( 'large' ); ?>');"<?php endif; ?>></div>
-                <noscript><div class="background-image full-image" style="background-image: url('<?php echo the_post_thumbnail_url( 'large' ); ?>');"></div></noscript>
+              <div class="image has-lazyload" aria-hidden="true">
+                <div aria-hidden="true" class="background-image preview lazyload" style="background-image: url('<?php echo the_post_thumbnail_url( 'tiny-preload-thumbnail' ); ?>');" data-src="<?php echo the_post_thumbnail_url( 'large' ); ?>" data-src-mobile="<?php echo the_post_thumbnail_url( 'large' ); ?>"></div>
+                <div aria-hidden="true" class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : // phpcs:ignore ?> style="background-image: url('<?php echo the_post_thumbnail_url( 'large' ); ?>');"<?php endif; ?>></div>
+                <noscript><div aria-hidden="true" class="background-image full-image" style="background-image: url('<?php echo the_post_thumbnail_url( 'large' ); ?>');"></div></noscript>
               </div>
             </div>
 
@@ -49,11 +49,11 @@ get_header(); ?>
                 if ( ! empty( $models ) ) :
                   if ( count( $models ) > 0 ) : ?>
                     <div class="models models-<?php echo count( $models ); ?>">
-                      <?php $y = 0; foreach ( $models as $model ) : ?>
+												<?php $y = 0; foreach ( $models as $model ) : ?>
                       <button<?php if ( 0 === $y ) { echo ' class="active"'; } ?> data-price="<?php echo get_post_meta( get_the_id(), 'price', true ); ?>" data-image="<?php echo wp_get_attachment_url( $model['image'] ); ?>" data-model-slug="<?php echo esc_attr( sanitize_title( $model['name'] ) ) ?>" data-model-name="<?php echo $model['name']; ?>"><?php echo esc_html( $model['name'] ) ?></button>
                       <?php $y++; endforeach; ?>
                     </div>
-                  <?php endif; ?>
+												<?php endif; ?>
                 <?php endif; ?>
 
               <div class="choices">
@@ -79,8 +79,6 @@ get_header(); ?>
 
       </div><!-- .container -->
     </section>
-
-    <?php include get_theme_file_path( 'template-parts/instagram-merch.php' ); ?>
 
 	</main><!-- #main -->
 </div><!-- #primary -->

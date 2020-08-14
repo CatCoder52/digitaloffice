@@ -1,185 +1,256 @@
-.block.block-cta-text.block-cta-text-single-reference {
-  background: $color-dude-whitegreyish;
-}
-
-.block .block-head.block-head-no-padding-top {
-  padding-top: 0;
+.floating-actions button:focus {
+  outline: 0;
 }
 
 .block.block-references {
-  &.block-references-related {
+  padding-bottom: 24rem;
+
+  @media (max-width: 1200px) {
+    padding-bottom: $padding-blocks-medium;
+  }
+
+  @media (max-width: $container-ipad) {
+    padding-bottom: $padding-blocks-medium;
+  }
+
+  &.block-references-related:not(.block-cta-with-phone-input) {
     padding-top: 0;
+
+    // Adding offset amount to padding
+    padding-bottom: $padding-blocks-medium + 4rem;
+
+    .block-title {
+      @extend %general-heading-cta;
+      color: $color-white;
+      margin-bottom: $margin-between-grid-columns-large;
+      font-weight: 500;
+    }
+
+    .reference-wrapper .reference-content {
+      > p,
+      > h3 {
+        color: $color-midnight-blue;
+      }
+    }
+  }
+
+  .floating-actions {
+    width: 115px;
+    position: relative;
+    text-align: center;
+    font-size: var(--font-size-general-small);
+
+    @media (max-width: $grid-base-size + 150px) {
+      margin-right: 2rem;
+    }
+
+    button {
+      color: $color-midnight;
+      transition: all $transition-duration;
+    }
+
+    .slick-disabled {
+      opacity: .2;
+    }
+
+    button:hover {
+      cursor: pointer;
+      opacity: .2;
+    }
+
+    button:focus {
+      opacity: 1;
+    }
+
+    .button-prev {
+      position: absolute;
+      left: 0;
+    }
+
+    .button-next {
+      position: absolute;
+      right: 0;
+    }
   }
 
   .container {
     overflow: visible;
   }
 
-  .cols.cols-references {
-    margin-top: $padding-default-rows;
-  }
+  .container .block-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: $padding-blocks-small;
 
-  .col-featured-image {
-    position: relative;
-  }
+    // Ensure space after arrows are 60px
+    height: 76px;
 
-  .block-head {
-    @media (min-width: $container-mobile) {
-      padding-bottom: 7rem;
+    // We don't have title in this module so justifying content to right end
+    justify-content: flex-end;
+
+    .block-title {
+      margin-bottom: 12rem;
     }
 
-    &.block-head-related {
-      padding-bottom: 0;
-    }
-  }
-
-  .cols {
-    @include grid(2, $gutter_x: $padding-general-content-box, $gutter_y: 0rem);
-    position: relative;
-    z-index: 2;
-
-    @media (max-width: 900px) {
-      @include grid(2, $gutter_x: $padding-general-content-box-mobile, $gutter_y: 0rem);
-    }
-
-    @media (max-width: 640px) {
-      display: block;
+    .block-title:before {
+      background: $color-white;
     }
   }
 
-  .col.has-grey-bg {
-    margin-top: $margin-general-offset;
-
-    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-      margin-top: 0;
-    }
-
-    @supports (-ms-ime-align: auto) {
-      margin-top: 0;
-    }
-
-    // Blog links
-    a:not(.arrow-link) {
-      background-image: linear-gradient(to top, $color-dude-deep-black, $color-dude-deep-black);
-      background-size: 100% 1px;
-      background-position: left bottom;
-      background-repeat: no-repeat;
-      transition: .3s all;
-      text-decoration: none;
-      overflow: visible;
-    }
-
-    a:not(.arrow-link):hover,
-    a:not(.arrow-link):focus,
-    a:not(.arrow-link):active {
-      background-size: 100% 2.8rem;
-      color: $color-dude-white;
-    }
+  .slick-list {
+    overflow: visible;
   }
 
-  .col {
-    padding: $padding-general-content-box;
-    position: relative;
-    padding-left: 2rem;
+  .slick-slide {
+    min-width: 384px;
+    margin-right: $margin-between-grid-columns-large;
+  }
 
-    &.col-quote {
-      padding-top: 0;
+  .reference-wrapper {
+    &.reference-wrapper-cols {
+      @include grid(3, $gutter_x: $margin-between-grid-columns-large, $gutter_y: 14rem);
 
-      @media (max-width: $container-mobile) {
-        padding-bottom: 0;
+      @media (max-width: 1100px) {
+        @include grid(2, $gutter_x: $margin-between-grid-columns-large, $gutter_y: 14rem);
+        width: calc(100% - 4rem);
+      }
+
+      @media (max-width: 730px) {
+        @include grid(1, $gutter_x: $margin-between-grid-columns-large, $gutter_y: 14rem);
+        width: 100%;
       }
     }
 
-    &.col-quote blockquote p:first-child:before {
-      content: '”';
-      display: inline-block;
+    .reference-title {
+      font-size: 24px;
+      margin-top: 0;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    .reference-title a {
+      color: $color-midnight;
+    }
+
+    .reference {
+      display: flex;
+      flex-wrap: wrap;
       position: relative;
-      color: $color-body;
-      margin-right: .5rem;
-    }
+      height: 536px;
+      width: 100%;
 
-    @media (max-width: 900px) {
-      padding-right: $padding-general-content-box-mobile;
-    }
-  }
+      &:hover .reference-content {
+        transform: translateX(3.5rem) translateY(3.5rem);
+      }
 
-  blockquote {
-    margin: 0;
-    padding-top: $padding-general-content-box;
-    padding-bottom: 3rem;
-    color: $color-dude-grey-text;
+      @media (min-width: 730px) {
+        max-width: 384px;
+      }
 
-    footer {
-      color: $color-dude-grey-text;
+      &:after {
+        height: auto;
+        content: '';
+        display: block;
+
+        // Aspect ratio
+        padding-bottom: 133%;
+
+        @media (max-width: 1200px) {
+          padding-bottom: 120%;
+        }
+      }
     }
   }
 
   .reference-image {
-    width: 100%;
     position: relative;
-    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    height: 536px;
+    width: 100%;
 
-    &:not(.reference-image-main) .background-image:after,
-    &:not(.reference-image-main):after {
+    &:after {
       height: auto;
       content: '';
       display: block;
-      padding-bottom: 100%;
-    }
 
-    &.reference-image-main {
-      height: 70rem;
+      // Aspect ratio
+      padding-bottom: 133%;
 
-      @media (max-width: 860px) {
-        height: auto;
-
-        &:after {
-          content: '';
-          display: block;
-          padding-bottom: 100%;
-        }
+      @media (max-width: 1200px) {
+        padding-bottom: 120%;
       }
     }
   }
 
-  .cols-references .content {
-    padding: 2rem;
-  }
+  .reference-image .image {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: 536px;
 
-  .cols-references {
-    @include grid(2, $gutter_x: $padding-general-content-box, $gutter_y: $padding-general-content-box);
-
-    @media (min-width: 1300px) {
-      @include grid(3, $gutter_x: $padding-general-content-box, $gutter_y: $padding-general-content-box);
-    }
-
-    @media (max-width: $container-ipad) {
+    &:after {
+      height: auto;
+      content: '';
       display: block;
+
+      // Aspect ratio
+      padding-bottom: 133%;
+    }
+  }
+
+  .reference-content {
+    padding: 4.5rem;
+    overflow: hidden;
+    background: $color-white;
+    box-shadow: 0 2px 28px 0 rgba($color-black, .07);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transform: translateX(4rem) translateY(4rem);
+    z-index: 2;
+    transition: all .33s ease-in-out;
+
+    @media (max-width: 730px) {
+      transform: translateX(2rem) translateY(4rem);
+      padding: 5rem;
     }
 
-    .col {
-      padding: 0;
+    @media (max-width: 430px) {
+      padding: 4rem;
+    }
 
-      @media (max-width: $container-ipad) {
-        margin-bottom: 5rem;
-
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
+    h3 {
+      margin: 0;
     }
   }
 }
 
-.home .block.block-references .cols.cols-references {
-  margin-top: $padding-default-rows;
-
-  @media (max-width: $container-ipad) {
-    margin-bottom: 0;
-  }
+body:not(.page-id-9):not(.page-id-4485) .block.block-references .block-head .block-title {
+  @extend .screen-reader-text;
 }
 
-.block.block-references-archive .cols.cols-references {
-  margin-top: 0;
-  margin-bottom: 0;
+body.page-id-4485 .block.block-references,
+body.page-id-9 .block.block-references {
+  padding-top: 0;
+
+  .container .block-head {
+    justify-content: space-between;
+    height: auto;
+    margin-bottom: 4.5rem;
+
+    .block-title {
+      @extend %general-heading-alt;
+      color: $color-white;
+      margin-bottom: 0;
+    }
+  }
+
+  .reference-content {
+    > p,
+    > h3 {
+      color: $color-midnight-blue;
+    }
+  }
 }

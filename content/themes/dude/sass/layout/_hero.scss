@@ -1,696 +1,221 @@
 .block.block-hero {
-  margin-left: 0;
-  margin-right: 0;
-  text-align: center;
   display: flex;
-  padding: 0;
+  flex-wrap: wrap;
   align-items: center;
   z-index: 1;
-  background: $color-dude-deep-black;
-  color: $color-dude-white;
-  height: 100vh; // Use vh as a fallback for browsers that do not support Custom Properties
-  height: calc(var(--vh, 1vh) * 100);
-  min-height: 65rem;
+  color: $color-white;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: $color-white;
+  height: 80vh;
+  overflow: hidden;
+  min-height: 56rem;
 
-  @media (max-width: 480px) {
-    min-height: 85rem;
+  @media (min-width: $container-ipad-landscape) {
+    min-height: 90rem;
+  }
+
+  @media (max-width: 760px) {
     height: auto;
-  }
+    padding-top: $padding-blocks-large;
+    padding-bottom: $padding-blocks-large;
 
-  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    @media (max-width: 870px) {
-      height: auto;
+    @media (max-width: $container-mobile) {
+      padding-top: $padding-blocks-medium;
+      padding-bottom: $padding-blocks-medium;
     }
   }
 
-  @supports (-ms-ime-align: auto) {
-    @media (max-width: 870px) {
-      height: auto;
+  .block-pre-title {
+    @extend %default;
+    margin: 0 0 4rem;
+
+    @media (min-width: 760px) {
+      font-size: 20px;
     }
+  }
+
+  .content {
+    max-width: 870px;
+    // max-width: 60rem;
+  }
+
+  .featured-image {
+    z-index: 0;
+  }
+
+  @media (max-width: 1160px) {
+    flex-wrap: wrap;
+  }
+
+  .button-wrapper {
+    margin-top: $margin-between-grid-columns;
+    margin-bottom: 0;
+  }
+
+  .button-wrapper .button {
+    @media (max-width: 600px) {
+      font-size: var(--font-size-general-small);
+    }
+  }
+
+  .hero-title {
+    @extend %general-heading-large;
   }
 
   h1 {
-    color: $color-dude-white;
+    color: $color-white;
     margin-top: 0;
+
+    @media (min-width: $container-ipad-landscape) {
+      font-size: $font-size-general-headings-desktop;
+    }
+  }
+
+  p {
+    &:not(.button-wrapper) {
+      color: $color-white;
+    }
+
+    @media (min-width: $container-ipad-landscape) {
+      font-size: $font-size-general-large;
+    }
   }
 
   .container {
     overflow: visible;
+    position: relative;
+    z-index: 2;
+
+    // Offset nav height
+    transform: translateY(65px);
+
+    @media (max-width: $container-mobile) {
+      transform: translateY(46px);
+    }
   }
 
   .hero-description {
     margin-bottom: 5rem;
     width: 100%;
 
-    p {
-      font-weight: 300;
+    button,
+    button.open-chat {
+      @extend %textlink;
+      font-weight: 700;
+      background: transparent;
+      border-radius: 0;
+      padding: 0;
+      border: 0;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    p,
+    button {
+      font-weight: 400;
       max-width: 80rem;
+
+      @media (max-width: 600px) {
+        font-size: var(--font-size-general-small);
+      }
     }
   }
 
   .shade {
-    background: linear-gradient(to bottom, #28392a 0%, transparent 50%);
-    opacity: .5;
+    background-color: rgba(3, 6, 27, .25);
+    opacity: 1;
     z-index: 3;
+
+    // Ensure contrast on mobile devices {
+    @media (max-width: 760px) {
+      background-color: rgba(3, 6, 27, .45);
+    }
   }
 
   // Merch hero
   &.block-hero-merch {
-    a {
-      background-image: linear-gradient(to top, $color-dude-white, $color-dude-white);
-      background-size: 100% 1px;
-      background-position: left bottom;
-      background-repeat: no-repeat;
-      transition: .3s all;
-      text-decoration: none;
-      overflow: visible;
-    }
+    padding-bottom: 0;
 
-    a:hover,
-    a:focus,
-    a:active {
-      background-size: 100% 2.8rem;
-      color: $color-dude-deep-black;
+    .hero-description p {
+      color: $color-paragraphs-light;
     }
 
     .details {
       opacity: .7;
-      font-size: 19px;
-      line-height: 1.6;
+      line-height: 1.5;
       transition: all 1s;
+      margin-bottom: $padding-blocks-medium;
+
+      a {
+        border-bottom: 1px solid rgba($color-white, .5);
+      }
+
+      a:hover {
+        border-color: $color-mint;
+      }
     }
 
     .details:hover {
       opacity: 1;
     }
   }
+}
 
-  // Contact thanks
-  &.block-hero-contact-thanks {
-    margin-bottom: 8rem;
-    min-height: 100rem;
+.is-centered {
+  text-align: center;
 
-    .container {
-      width: 100%;
-      max-width: 80rem;
-      margin-bottom: -6rem;
-    }
+  .hero-description,
+  .hero-description p {
+    margin-right: auto;
+    margin-left: auto;
+  }
 
-    .content {
-      margin-bottom: 0;
+  .content {
+    max-width: 870px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
-      p {
-        max-width: 80rem;
-      }
-    }
+.block.block-hero.block-hero-light {
+  p,
+  .button {
+    @extend %general-heading-small;
+  }
 
-    h1 {
-      margin-bottom: 2rem;
+  &.block-hero-basic {
+    min-height: 0;
+    height: auto;
+    padding-top: $padding-blocks-large;
+    overflow: visible;
+
+    @media (max-width: $container-mobile) {
+      padding-top: $padding-blocks-medium;
     }
   }
 
-  // Jobs hero
-  .side-content-box {
-    @media (max-width: 800px) {
-      padding-left: $padding-default-cols-mobile;
-      padding-right: $padding-default-cols-mobile;
-    }
+  + .block.block-wide-text {
+    padding-top: $padding-blocks-medium;
   }
 
-  &.block-hero-jobs .jobs {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  h1,
+  h2,
+  p {
+    color: $color-midnight-blue;
+  }
+}
 
-    li,
-    a {
-      color: $color-dude-white;
-      font-weight: 300;
-    }
-
-    a {
-      display: inline-block;
-      padding-bottom: 1rem;
-      padding-top: 1rem;
-
-      @media (max-width: 570px) {
-        width: 100%;
-      }
-
-      &:hover:after {
-        width: 0;
-      }
-
-      &:hover .label {
-        background-color: lighten($color-dude-darkgrey, 10%);
-      }
-    }
-
-    a:after {
-      width: 100%;
-      height: 1px;
-      background: #fff;
-      position: relative;
-      content: '';
-      display: block;
-      transition: all $transition-duration;
-      bottom: -1rem;
-      opacity: .5;
-    }
-
-    li {
-      margin-bottom: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    li:last-child {
-      margin-bottom: 0;
-    }
-
-    .label {
-      font-size: 1.4rem;
-      padding: .5rem 1rem;
-      background: $color-dude-darkgrey;
-      color: #fff;
-      font-weight: 300;
-      margin-left: 2rem;
-      transition: all $transition-duration;
-
-      @media (max-width: 570px) {
-        display: block;
-        margin-left: 0;
-        margin-top: .8rem;
-      }
-    }
+body.page-id-6117 .block-hero.block-hero-light {
+  .shade {
+    background-color: rgba(3, 6, 27, .45);
   }
 
-  // Hero for contact page
-  &.block-hero-contact {
-    position: relative;
-
-    @media (max-width: 600px) {
-      height: auto;
-    }
-
-    h1,
-    .contact-details {
-      width: 100%;
-      font-weight: 300;
-    }
-
-    @media (max-width: 600px) {
-      .side-content-box.contact-information {
-        height: auto;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        padding-top: 0;
-        padding-bottom: 0;
-        padding-left: 0;
-        padding-right: 0;
-      }
-
-      .textual-content {
-        padding-left: 2rem;
-        padding-right: 2rem;
-      }
-    }
-
-    svg {
-      fill: $color-dude-white;
-      width: 1.8rem;
-      height: 1.8rem;
-      margin-right: .8rem;
-      position: relative;
-      top: 3px;
-    }
-
-    .open-chat {
-      background: transparent;
-      border: 0;
-      padding: 0;
-      color: $color-dude-white;
-      font-weight: 300;
-      cursor: pointer;
-      transition: all $transition-duration;
-
-      &:hover {
-        opacity: .5;
-        cursor: pointer;
-      }
-
-      &:after {
-        display: none;
-      }
-
-      svg {
-        fill: transparent;
-        stroke: $color-dude-white;
-      }
-    }
-
-    a:after,
-    button:after {
-      width: 100%;
-      height: 1px;
-      background: #fff;
-      position: relative;
-      content: '';
-      display: block;
-      transition: all $transition-duration;
-      bottom: .2rem;
-      opacity: .5;
-    }
-
-    a {
-      display: inline-block;
-      width: auto;
-    }
-
-    a:hover:after,
-    button:hover:after {
-      width: 0;
-    }
-
-    .form-box {
-      background: $color-dude-white;
-      color: $color-body;
-      padding: 6rem;
-      max-width: 45rem;
-      overflow: visible;
-      position: absolute;
-      left: calc(50% - 8rem);
-      bottom: 8rem;
-      z-index: 6;
-
-      @media (max-width: 700px) {
-        width: 100%;
-        max-width: 100%;
-        left: 0;
-        margin-top: 6rem;
-        margin-bottom: 0;
-        display: none;
-      }
-
-      @media (max-width: 500px) {
-        position: static;
-        padding: 4rem 2rem;
-      }
-
-      button:after {
-        display: none;
-      }
-
-      @media (max-width: 700px) {
-        position: static;
-      }
-
-      .arrow-link-wrapper {
-        @extend %h4;
-        font-weight: 600;
-        margin-bottom: 3rem;
-        width: 50vw;
-        background: transparent;
-        border: 0;
-        color: $color-dude-deep-black;
-        text-align: left;
-        padding: 0;
-
-        @media (max-width: 700px) {
-          width: 100vw;
-        }
-      }
-
-      .arrow-link-wrapper:hover,
-      .arrow-link-wrapper:focus {
-        cursor: pointer;
-      }
-
-      .arrow-link-wrapper .arrow-link {
-        display: flex;
-        align-items: center;
-        white-space: nowrap;
-      }
-
-      p {
-        @extend .text-smaller;
-        margin: 0;
-        font-weight: 300;
-      }
-
-      p,
-      a {
-        color: $color-body;
-      }
-
-      a:after {
-        display: none;
-      }
-    }
-  }
-
-  // Animation stuff
-  .animate {
-    @media (min-width: $container-mobile) {
-      animation-name: fade-in-down;
-      animation-timing-function: ease-in-out;
-      animation-fill-mode: forwards;
-      opacity: 0;
-    }
-  }
-
-  li:nth-child(1),
-  .animate-1 {
-    @media (min-width: $container-mobile) {
-      animation-duration: 1s;
-      animation-delay: 1s;
-      opacity: 0;
-    }
-  }
-
-  li:nth-child(2),
-  .animate-2 {
-    @media (min-width: $container-mobile) {
-      animation-duration: 1s;
-      animation-delay: 1.5s;
-      opacity: 0;
-    }
-  }
-
-  li:nth-child(3),
-  .animate-3 {
-    @media (min-width: $container-mobile) {
-      animation-duration: 1s;
-      animation-delay: 2s;
-      opacity: 0;
-    }
-  }
-
-  // Hero for front page and side columns
-  &.block-hero-frontpage,
-  &.block-hero-side-columns {
-    background: $color-dude-deep-black;
-    color: $color-dude-white;
-    z-index: 4;
-
-    // Let's reset the padding from the hero container, no need in full width hero
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-    padding-right: 0;
-
-    @media (max-width: 600px) {
-      min-height: 80rem;
-      height: auto;
-    }
-
-    .cta-link {
-      @media (min-width: $container-mobile) {
-        opacity: 0;
-        animation-name: fade-in-down;
-        animation-timing-function: ease-in-out;
-        animation-fill-mode: forwards;
-        animation-duration: 1s;
-        animation-delay: 2s;
-
-        &.cta-link-front {
-          animation-delay: 2.5s;
-        }
-      }
-
-      @media (max-height: 600px) {
-        margin-top: 0;
-      }
-    }
-
-    .cta-link:after {
-      background: $color-dude-white;
-    }
-
-    .container {
-      @include grid(2, $gutter_x: 0rem, $gutter_y: 0rem);
-      width: 100%;
-      height: 100%;
-      margin: 0;
-      text-align: left;
-
-      @media (max-width: 1400px) {
-        grid-template-columns: 60vw 40vw;
-      }
-
-      @media (max-width: 1020px) {
-        grid-template-columns: 70vw 30vw;
-      }
-
-      @media (max-width: 600px) {
-        display: block;
-      }
-
-      // Let's show overlapping featured-image
-      overflow: visible;
-
-      // Let's reset the padding from the hero container, no need in full width hero
-      padding: 0;
-
-      @media (max-width: 800px) {
-        overflow: hidden;
-      }
-    }
-
-    .featured-image.featured-image-side {
-      width: 50vw;
-      height: calc(100vh + 8rem);
-      position: relative;
-      z-index: 2;
-      transition: all $transition-duration;
-      top: 0;
-      right: 0;
-      overflow: hidden;
-
-      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-        width: 50%;
-
-        @media (max-width: 870px) {
-          width: 100%;
-          height: 50rem;
-        }
-      }
-
-      @supports (-ms-ime-align: auto) {
-        width: 50%;
-
-        @media (max-width: 870px) {
-          width: 100%;
-          height: 50rem;
-        }
-      }
-
-      @media (max-width: 600px) {
-        width: 100%;
-        height: auto;
-
-        &:after {
-          content: '';
-          display: block;
-          padding-bottom: 100%;
-        }
-      }
-    }
-
-    .side-content-box {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-
-      // Nav offset
-      margin-bottom: -6rem;
-
-      // These are the same values than in general containers
-      padding-left: $padding-default-cols;
-      padding-right: $padding-default-cols;
-      padding-top: $padding-default-rows;
-      padding-bottom: $padding-default-rows;
-
-      @media (max-width: $container-ipad) {
-        padding-left: $padding-default-cols-ipad;
-        padding-right: $padding-default-cols-ipad;
-        padding-top: $padding-default-rows-ipad;
-        padding-bottom: $padding-default-rows-ipad;
-      }
-
-      @media (max-width: 600px) {
-        height: auto;
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-      }
-
-      @media (max-width: $container-mobile) {
-        padding-left: $padding-default-cols-mobile;
-        padding-right: $padding-default-cols-mobile;
-      }
-
-      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-        @media (max-width: 870px) {
-          padding-top: 20rem;
-          padding-bottom: 20rem;
-          margin-top: 0;
-          margin-bottom: 0;
-          height: auto;
-          width: 100%;
-          display: block;
-        }
-      }
-
-      @supports (-ms-ime-align: auto) {
-        @media (max-width: 870px) {
-          padding-top: 20rem;
-          padding-bottom: 20rem;
-          margin-top: 0;
-          margin-bottom: 0;
-          height: auto;
-          width: 100%;
-          display: block;
-        }
-      }
-    }
-
-    h1,
-    h2,
-    a {
-      color: $color-dude-white;
-    }
-
-    .content {
-      display: flex;
-      align-items: center;
-      z-index: 4;
-
-      @media (min-width: $container-mobile) {
-        opacity: 0;
-        transition: all $transition-duration;
-      }
-
-      @media (max-width: 600px) {
-        height: 100vh; // Use vh as a fallback for browsers that do not support Custom Properties
-        height: calc(var(--vh, 1vh) * 100);
-      }
-
-      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-        @media (max-width: 870px) {
-          margin-top: 0;
-          margin-bottom: 0;
-          height: auto;
-          width: 100%;
-          display: block;
-        }
-      }
-
-      @supports (-ms-ime-align: auto) {
-        @media (max-width: 870px) {
-          margin-top: 0;
-          margin-bottom: 0;
-          height: auto;
-          width: 100%;
-          display: block;
-        }
-      }
-
-      @media (min-width: $container-mobile) {
-        &.has-loaded {
-          opacity: 1;
-        }
-      }
-
-      @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-        width: 50%;
-      }
-
-      @supports (-ms-ime-align: auto) {
-        width: 50%;
-      }
-
-      ul,
-      li {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        transition: all $transition-duration;
-      }
-
-      ul {
-        margin-bottom: 6rem;
-        width: 100%;
-
-        @media (max-height: 600px) {
-          margin-bottom: 3rem;
-        }
-      }
-
-      li {
-        margin-top: 0;
-        margin-bottom: 0;
-        line-height: 1.22;
-
-        @media (min-width: $container-mobile) {
-          animation-name: fade-in-down;
-          animation-timing-function: ease-in-out;
-          animation-fill-mode: forwards;
-          opacity: 0;
-        }
-      }
-
-      li:last-of-type {
-        margin-bottom: 0;
-      }
-
-      li a {
-        @extend %h2;
-        font-weight: 300;
-        line-height: 1.2;
-        display: inline-block;
-        transition: all $transition-duration;
-        padding-bottom: $margin-reasonable-space;
-        margin-bottom: 0;
-        margin-top: 0;
-
-        @media (max-width: $container-ipad) {
-          padding-bottom: 2rem;
-        }
-      }
-
-      // Fade all out except hovered one
-      ul:hover li a {
-        opacity: .2;
-      }
-
-      ul:hover a:hover,
-      ul:hover li:hover a {
-        opacity: 1;
-      }
-
-      li a:hover:after {
-        width: 100%;
-      }
-
-      li a:after {
-        width: 0;
-        height: .2rem;
-        background: $color-dude-white;
-        position: relative;
-        content: '';
-        display: block;
-        transition: all $transition-duration;
-      }
-
-      .init:after {
-        width: 100%;
-      }
-
-      .init:hover:after {
-        width: 0;
-      }
-    }
+  h1,
+  h2,
+  p {
+    color: $color-white;
   }
 }

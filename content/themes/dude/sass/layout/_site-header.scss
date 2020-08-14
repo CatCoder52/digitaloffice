@@ -1,8 +1,75 @@
+.site-header {
+  @extend .container;
+  max-width: $site-header-max-width;
+  position: relative;
+  z-index: 15;
+
+  // Easier flex way to align logo and navigation
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 62px;
+  padding-bottom: 62px;
+
+  @media (max-width: $grid-base-size + 150px) {
+    padding-left: $padding-default-cols-ipad;
+    padding-right: $padding-default-cols-ipad;
+  }
+
+  @media (max-width: $container-ipad) {
+    padding-left: $padding-default-cols-mobile;
+    padding-right: $padding-default-cols-mobile;
+  }
+
+  @media (max-width: 760px) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.site-branding {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  z-index: 10;
+}
+
+.site-title {
+  margin: 0;
+  font-weight: 700;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  z-index: 10;
+
+  @media (max-width: 680px) {
+    svg {
+      width: 70px;
+      height: 13.98px;
+    }
+  }
+
+  a {
+    color: $color-midnight-blue;
+    display: flex;
+    align-items: center;
+  }
+}
+
+// If dark hero, fix colors according to the situation
+nav ul li a,
+nav ul li button {
+  color: $color-white;
+}
+
 .call-me-maybe {
   display: none;
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
   margin-left: auto;
-  margin-right: 2rem;
+  margin-right: 5rem;
 
   svg {
     width: 17px;
@@ -15,64 +82,66 @@
   }
 
   a {
-    color: #2ecc71;
+    color: #4cd9b8;
     display: flex;
     align-items: center;
   }
 
-  a:hover {
-    color: lighten(#2ecc71, 15%);
+  a:hover,
+  a:focus {
+    color: darken(#4cd9b8, 15%);
 
     svg {
-      stroke: lighten(#2ecc71, 15%);
+      stroke: darken(#4cd9b8, 15%);
     }
   }
 }
 
-.site-header {
-  position: relative;
-  z-index: 15;
-  max-width: $grid-base-size;
-  margin-left: auto;
-  margin-right: auto;
-
-  // Easier flex way to align logo and navigation
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: $padding-default-cols;
-  padding-right: $padding-default-cols;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-
-  @media (max-width: $container-ipad) {
-    padding-left: $padding-default-cols-ipad;
-    padding-right: $padding-default-cols-ipad;
+// Pages with alternate invert header colors
+body.page-id-4485,
+body.page.page-id-9,
+body.page.page-id-4491,
+body.post-type-archive-reference,
+body.js-nav-active,
+body.single-reference,
+body.single-post,
+body.post-type-archive-merch,
+body.page.page-id-6357,
+body.page-template-template-community-code,
+body.error404,
+body.page-id-6117,
+body.page-id-4737,
+body.page-template-template-faq,
+body.page-id-5973,
+body.page-id-5975 {
+  .site-branding .site-title a,
+  .nav-primary-desktop .menu-items .menu-item button:not(.nav-toggle),
+  .nav-primary-desktop .menu-items .menu-item a {
+    color: $color-white;
   }
 
-  @media (max-width: $container-mobile) {
-    padding-left: $padding-default-cols-mobile;
-    padding-right: $padding-default-cols-mobile;
+  .hero-description a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail) {
+    color: $color-white;
+
+    &:hover,
+    &:focus {
+      color: $color-midnight;
+    }
   }
-}
 
-.site-title {
-  margin: 0;
-  font-weight: 700;
-
-  a {
-    color: #111;
+  .nav-primary-desktop .menu-items .menu-item a:after {
+    background-color: $color-white;
   }
-}
 
-// If dark hero, fix colors according to the situation
-nav ul li a,
-nav ul li button {
-  color: $color-dude-white;
-}
-
-.site-title svg,
-.site-title g,
-.site-title path {
-  fill: $color-dude-white;
+  .nav-toggle,
+  .nav-toggle:focus {
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after,
+    &:focus .hamburger-inner:focus::before,
+    &:focus .hamburger-inner:focus::after {
+      background-color: $color-white;
+      color: $color-white;
+    }
+  }
 }

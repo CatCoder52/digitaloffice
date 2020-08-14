@@ -2,37 +2,53 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-06-01 18:13:13
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2020-07-24 11:17:52
  *
- * @package dude2019
+ * @package dude
  */
 
-$hero_content = get_post_meta( get_the_id(), 'hero_content', true ); ?>
+// Featured image
+$bg_image_tiny_default = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'tiny-preload-thumbnail' );
+$bg_image_tiny = $bg_image_tiny_default[0];
+$bg_image_mobile = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
+$bg_image = null;
+if ( has_post_thumbnail() ) {
+  $bg_image = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ) );
+}
 
-<section class="block block-hero block-hero-service block-hero-enable-transition">
-  <div class="container">
+// Fields
+$title = get_the_title();
+$title_alt = get_post_meta( get_the_id(), 'title_alt', true );
+$content = get_post_meta( get_the_id(), 'hero_content', true );
+$button = get_post_meta( get_the_id(), 'hero_button', true );
+?>
 
-    <h1 class="animate animate-1"><?php the_title() ?></h1>
+<section class="block block-hero block-hero-service<?php if ( is_page( 9 ) ) : ?> has-dark-bg<?php else : ?> has-light-bg<?php endif; ?>">
 
-    <div class="service-hero-wrap">
-      <div class="content animate animate-2">
-        <?php if ( ! empty( $hero_content ) ) {
-          echo wpautop( $hero_content );
+  <?php if ( $bg_image ) { ?>
+    <div class="featured-image" aria-hidden="true">
+      <div class="shade" aria-hidden="true"></div>
+        <div aria-hidden="true" class="background-image preview lazyload" style="background-image: url('<?php echo $bg_image_tiny; ?>');" data-src="<?php echo esc_url( $bg_image ); ?>" data-src-mobile="<?php echo esc_url( $bg_image_mobile[0] ); ?>"></div>
+        <div aria-hidden="true" class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : // phpcs:ignore ?> style="background-image: url('<?php echo esc_url( $bg_image ); ?>');"<?php endif; ?>></div>
+        <noscript><div aria-hidden="true" class="background-image full-image" style="background-image: url('<?php echo esc_url( $bg_image ); ?>');"></div></noscript>
+    </div>
+  <?php } ?>
+
+<div class="container">
+
+    <h1 class="swup-transition-fade"><?php the_title() ?></h1>
+
+    <div class="service-hero-wrap swup-transition-fade">
+      <div class="content">
+        <?php if ( ! empty( $content ) ) {
+          echo wpautop( $content ); // phpcs:ignore
         } ?>
-      </div>
 
-      <?php if ( isset( $logos ) ) : ?>
-        <div class="customer-logos animate animate-3">
-          <ul class="customer-logos-list">
-            <?php foreach ( $logos as $logo ) : ?>
-              <li>
-                <?php include get_theme_file_path( "svg/logos/{$logo}.svg" ) ?>
-              </li>
-            <?php endforeach; ?>
-          </ul>
-        </div>
-      <?php endif; ?>
+        <?php if ( ! empty( $button ) ) : ?>
+          <p class="button-wrapper"><a class="button button-glitch button-mint" href="<?php echo esc_url( $button['url'] ); ?>"<?php if ( ! empty( $button['target'] ) ) : ?> target="<?php echo esc_html( $button['target'] ); ?>"<?php endif; ?>><?php echo esc_html( $button['title'] ); ?><?php include get_theme_file_path( '/svg/arrow-right.svg' ); ?></a></p>
+        <?php endif; ?>
+      </div>
     </div>
 
   </div>

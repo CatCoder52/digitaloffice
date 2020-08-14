@@ -1,0 +1,328 @@
+.block-hero.block-hero-light.block-hero-start-project {
+  h1,
+  h2,
+  p {
+    color: $color-white;
+  }
+}
+
+body.page-id-6357 .block.block-wide-text {
+  padding-top: 0;
+  padding-bottom: 2rem;
+
+  .gform_wrapper form li,
+  .gform_wrapper li {
+    overflow: visible !important;
+  }
+
+  .container {
+    max-width: $grid-base-size;
+
+    h2 {
+      @extend %general-heading-large;
+
+      @media (max-width: 760px) {
+        margin-bottom: $padding-blocks-medium;
+      }
+
+      @media (max-width: $container-mobile) {
+        margin-bottom: $padding-blocks-small;
+      }
+    }
+  }
+
+  // Gravity forms
+  .gform_wrapper .gfield_required {
+    color: darken($color-mint, 35%);
+  }
+
+  .gform_wrapper ul.gform_fields li.gfield {
+    padding: 0;
+    margin: 0 0 $margin-between-grid-columns !important;
+  }
+
+  .gform_wrapper ul.gform_fields {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5rem !important;
+    margin-right: -5rem !important;
+    overflow: hidden;
+
+    @media (max-width: 1000px) {
+      margin-left: -2.5rem !important;
+      margin-right: -2.5rem !important;
+    }
+
+    @media (max-width: 760px) {
+      margin: 0 !important;
+    }
+  }
+
+  .gform_wrapper form li.gfmc-column {
+    width: 50%;
+
+    @media (max-width: 760px) {
+      width: 100%;
+    }
+
+    &.gfmc-row-1-column,
+    &.gfmc-row-2-column {
+      width: calc(50% - 10rem) !important;
+      margin-left: 5rem !important;
+      margin-right: 5rem !important;
+
+      @media (max-width: 1000px) {
+        width: calc(50% - 5rem) !important;
+        margin-left: 2.5rem !important;
+        margin-right: 2.5rem !important;
+      }
+
+      @media (max-width: 760px) {
+        margin: 0 !important;
+        width: 100% !important;
+      }
+    }
+
+    &.gfmc-row-3-column {
+      width: 100% !important;
+      margin-left: 5rem !important;
+      margin-right: 5rem !important;
+
+      @media (max-width: 1000px) {
+        margin-left: 2.5rem !important;
+        margin-right: 2.5rem !important;
+      }
+
+      @media (max-width: 760px) {
+        margin: 0 !important;
+      }
+    }
+  }
+
+  .gform_wrapper legend.gfield_label,
+  .gform_wrapper .top_label .gfield_label {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+
+  .gform_wrapper input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']),
+  .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield div.ginput_complex span.ginput_left select,
+  .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield div.ginput_complex span.ginput_right select,
+  .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield select,
+  .gform_wrapper textarea.medium,
+  .gform_wrapper textarea {
+    width: 100% !important;
+    padding: 1.8rem 0;
+    background-color: transparent;
+    border-right: 2px solid $color-midnight-blue;
+    border-bottom: 2px solid $color-midnight-blue;
+    border-top: 0;
+    border-left: 0;
+    color: $color-midnight-blue;
+
+    &::placeholder {
+      opacity: 1;
+      color: $color-midnight-blue;
+
+      @media (min-width: $container-ipad) {
+        font-size: 18px;
+      }
+    }
+
+    @media (min-width: $container-ipad) {
+      font-size: 18px;
+    }
+  }
+
+  #field_6_7 {
+    margin-bottom: 0 !important;
+  }
+
+  .gform_wrapper .gform_footer {
+    margin-top: 56px !important;
+    padding-top: 56px !important;
+    border-top: solid 2px #efefef;
+    text-align: right;
+
+    input {
+      @extend .button;
+      margin-right: 0;
+      background-color: $color-midnight-blue;
+
+      &:hover {
+        background-color: $color-midnight;
+        border-color: $color-midnight;
+      }
+    }
+  }
+
+  .gform_wrapper.gf_browser_chrome ul.gform_fields li.gfield select {
+    width: 98%;
+  }
+
+  // File upload
+  .gform_wrapper .gform_fileupload_multifile .gform_drop_area {
+    border: 0;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+    color: $color-midnight-blue;
+    margin-top: 2rem;
+    padding: 0;
+  }
+
+  .gform_wrapper span.gform_drop_instructions {
+    font-size: 14px;
+    opacity: .6;
+    margin-bottom: 2rem;
+  }
+
+  .gform_wrapper .field_description_below .gfield_description {
+    padding-top: 0;
+  }
+
+  .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files {
+    @extend .button;
+    border-radius: 0;
+    padding: 1.2rem 2.6rem !important;
+    background: transparent;
+    border: 2px solid $color-midnight-blue !important;
+    color: $color-midnight-blue !important;
+
+    &:hover,
+    &:focus {
+      background: $color-midnight-blue;
+      color: $color-white !important;
+    }
+  }
+
+  // Checkboxes
+  .gform_wrapper ul li.field_description_below div.ginput_container_checkbox ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      margin-top: 36px;
+      margin-bottom: 0;
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        margin-top: 18px;
+      }
+    }
+
+    label {
+      @media (min-width: $container-ipad) {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .checkbox + label,
+  .gform_wrapper ul.gfield_checkbox li input[type=checkbox]+br+label,
+  .gform_wrapper ul.gfield_radio li input[type=radio]+br+label,
+  .radio + label {
+    align-items: center;
+  }
+
+  // Range
+  .gform_wrapper form #field_6_11,
+  .gform_wrapper .top_label div.ginput_container,
+  .gform_wrapper form #field_6_11 li {
+    overflow: visible;
+  }
+
+  .gform_wrapper form #field_6_11 .gfield_label {
+    margin-bottom: $margin-between-text-elements;
+  }
+
+  .gform_wrapper .gfield_radio li label {
+    margin: 0;
+    font-size: 15px;
+
+    @media (min-width: 1200px) {
+      font-size: 19px;
+    }
+
+    @media (max-width: $container-mobile) {
+      font-size: 12px;
+    }
+  }
+
+  .gform_wrapper .gfield_checkbox li label {
+    font-size: 15px;
+
+    @media (min-width: 1200px) {
+      font-size: 19px;
+    }
+  }
+
+  .gform_wrapper form #field_6_11 ul {
+    display: flex;
+    width: 100%;
+    position: relative;
+    overflow: visible;
+
+    .checkbox + label::before,
+    .gform_wrapper ul.gfield_checkbox li input[type=checkbox]+br+label::before,
+    .gform_wrapper ul.gfield_radio li input[type=radio]+br+label::before,
+    .radio + label::before,
+    input[type=radio]+label::before {
+      background: $color-white;
+      display: block;
+      margin: 0 auto 3rem;
+
+      @media (max-width: 500px) {
+        width: 2.5rem;
+        height: 2.5rem;
+        transform: translateY(2px);
+      }
+    }
+
+    // Let's not effect the radio buttons
+    .gform_wrapper ul.gfield_radio li input[type=radio]+br+label::before,
+    .radio + label::before,
+    input[type=radio]+label::before {
+      transition: none;
+    }
+
+    .gform_wrapper ul.gfield_radio li input[type=radio]:checked + br + label::before,
+    input[type=radio]:checked + label::before {
+      background-image: url('../svg/budget-check.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: $color-midnight-blue;
+      width: 4rem;
+      height: 4rem;
+      margin-top: -10px;
+      transform: translateY(8px);
+
+      @media (max-width: 500px) {
+        margin-top: -16px;
+      }
+    }
+
+    &::before {
+      content: '';
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      background: $color-midnight-blue;
+      top: 15px;
+      left: 0;
+    }
+
+    > li {
+      width: 20%;
+      text-align: center;
+    }
+  }
+}
+
+body.page-id-6357 .block.block.block-wide-text h2 {
+  margin-bottom: $padding-blocks-medium;
+}

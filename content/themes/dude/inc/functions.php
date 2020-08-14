@@ -13,7 +13,7 @@ if ( ! function_exists( 'dude_entry_footer' ) ) {
 		if ( 'post' === get_post_type() ) {
 			$categories_list = get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma', 'dude' ) );
 			if ( $categories_list ) : ?>
-				<p class="cat"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'dude' ) ); ?></p>
+				<p class="cat"><?php echo get_the_category_list( _x( '  ', 'Used between list items, there is a space after the comma.', 'dude' ) ); // phpcs:ignore ?></p>
 			<?php	endif;
 
 			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'dude' ) );
@@ -30,7 +30,7 @@ if ( ! function_exists( 'dude_entry_footer' ) ) {
 		}
 
 		edit_post_link(
-			sprintf( _x( 'Edit %s', '%s: Name of current post', 'dude' ), the_title( '<span class="screen-reader-text">"', '"</span>', false ) ),
+			sprintf( _x( 'Muokkaa %s', '%s: Name of current post', 'dude' ), the_title( '<span class="screen-reader-text">"', '"</span>', false ) ),
 			'<p class="edit-link">',
 			'</p>'
 		);
@@ -41,8 +41,7 @@ if ( ! function_exists( 'dude_comments' ) ) {
 	/**
 	 *  Custom comments function.
 	 */
-	function dude_comments( $comment, $args, $depth ) {
-		// $GLOBALS['comment'] = $comment; ?>
+	function dude_comments( $comment, $args, $depth ) { ?>
 
 		<li id="li-comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
 			<div id="comment-<?php comment_ID(); ?>">

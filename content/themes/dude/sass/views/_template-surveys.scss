@@ -90,7 +90,7 @@ body.template-surveys {
 
     table.gsurvey-likert th.gsurvey-likert-choice-label {
       font-size: 14px !important;
-      font-weight: 300 !important;
+      font-weight: 400 !important;
     }
 
     .description_above .gfield_description {
@@ -164,12 +164,12 @@ body.template-surveys {
       @extend %h5;
       line-height: 1 !important;
       margin: 0 !important;
-      font-weight: 300 !important;
+      font-weight: 400 !important;
       display: block;
       position: relative;
       padding-left: 35px;
       margin-bottom: 20px;
-      color: $color-dude-black;
+      color: $color-black;
       cursor: pointer;
       user-select: none;
     }
@@ -183,7 +183,7 @@ body.template-surveys {
       display: block;
       width: 20px;
       height: 20px;
-      border: 1px solid $color-dude-black;
+      border: 1px solid $color-black;
       position: absolute;
       left: 0;
       top: 0;
@@ -211,12 +211,12 @@ body.template-surveys {
       @extend %h5;
       line-height: 1 !important;
       margin: 0 !important;
-      font-weight: 300 !important;
+      font-weight: 400 !important;
       display: block;
       position: relative;
       padding-left: 35px;
       margin-bottom: 20px;
-      color: $color-dude-black;
+      color: $color-black;
       cursor: pointer;
       user-select: none;
     }
@@ -230,7 +230,7 @@ body.template-surveys {
       display: block;
       width: 20px;
       height: 20px;
-      border: 1px solid $color-dude-black;
+      border: 1px solid $color-black;
       border-radius: 50%;
       position: absolute;
       left: 0;
@@ -252,7 +252,7 @@ body.template-surveys {
 
     .gfield_label {
       @extend %h4;
-      font-weight: 300;
+      font-weight: 400;
     }
 
     ul.gform_fields li.gfield {
@@ -358,7 +358,6 @@ body.template-surveys {
     position: fixed;
     left: 0;
     bottom: 0;
-    width: 100%;
     z-index: 10;
     height: 70px;
     background-color: rgba(#000, .05);

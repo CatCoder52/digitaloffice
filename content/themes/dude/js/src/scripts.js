@@ -3,448 +3,779 @@
  */
 
 // Define Javascript is active by changing the body class
-document.body.classList.remove('no-js');
-document.body.classList.add('js');
+document.body.classList.remove("no-js");
+document.body.classList.add("js");
 
 // Increase session page visits count
-sessionStorage.setItem( 'chat_greeting_visits', Number( sessionStorage.getItem( 'chat_greeting_visits' ) ) + 1 );
+sessionStorage.setItem(
+  "chat_greeting_visits",
+  Number(sessionStorage.getItem("chat_greeting_visits")) + 1
+);
 
 // Init lazyload
-let images = document.querySelectorAll('.lazyload');
+let images = document.querySelectorAll(".lazyload");
 lazyload(images, {
-     root: null,
-     rootMargin: "0px",
-     threshold: 0
+  root: null,
+  rootMargin: "0px",
+  threshold: 0,
 });
 
-// jQuery start
-( function( $ ) {
+// Initiate Swup transitions
+const swup = new Swup({
+  linkSelector:
+    'a[href^="' +
+    window.location.origin +
+    '"]:not([data-no-swup]), a[href^="/"]:not([data-no-swup]), a[href^="#"]:not([data-no-swup])',
+  animationSelector: '[class*="swup-transition-"]',
+  plugins: [
+    new SwupScriptsPlugin({
+      head: true,
+      body: true,
+      optin: true,
+    }),
+    new SwupBodyClassPlugin(),
+  ],
+});
 
-    // Scroll down -button
-    $('.scroll-to-form').click(function(e) {
-      e.preventDefault();
-      var $target = $('.block-wide-text');
+// Swup starts
+swup.on("contentReplaced", function () {
 
-      $('html, body').animate({
-        scrollTop: $target.offset().top
-      }, 'slow');
+    // Accessibility: Ensure back to top is right color on right background
+    var stickyOffset = jQuery(".back-to-top").offset();
+    var $contentDivs = jQuery(".block");
+    jQuery(document).scroll(function() {
+      $contentDivs.each(function(k) {
+        var _thisOffset = jQuery(this).offset();
+        var _actPosition = _thisOffset.top - jQuery(window).scrollTop();
+        if (_actPosition < stickyOffset.top && _actPosition + jQuery(this).height() > 0) {
+          jQuery(".back-to-top").removeClass("has-light-bg has-dark-bg").addClass(jQuery(this).hasClass("has-light-bg") ? "has-light-bg" : "has-dark-bg");
+          return false;
+        }
+      });
     });
 
-    // Gallery
-    var galleryelement = document.getElementById('gallery');
-    if (typeof(galleryelement) != 'undefined' && galleryelement != null) {
-      document.getElementById('gallery').onclick = function (event) {
-        event = event || window.event;
-        var target = event.target || event.srcElement,
-        link = target.src ? target.parentNode : target,
-        options = {
-          index: link,
-          event: event,
-          fullScreen: false,
-          stretchImages: 'cover',
-          onopen: function (index, slide) {
-            current = this.getIndex();
-            total = this.getNumber();
-            document.getElementById('pos').textContent = current + 1;
-            document.getElementById('count').textContent = total;
-          },
-          onslide: function (index, slide) {
-            current = this.getIndex();
-            total = this.getNumber();
-            document.getElementById('pos').textContent = current + 1;
-            document.getElementById('count').textContent = total;
-          }
-        },
-        links = this.getElementsByTagName('a');
-        blueimp.Gallery(links, options);
-      };
-    }
+  	// Hide or show the "back to top" link
+  	jQuery(window).scroll(function() {
 
-    // Check if gallery is portrait and show/hide notification accordingly
-    if(window.innerHeight < window.innerWidth) {
-      $('.please-rotate-nag').addClass('is-landscape');
-    } else {
-      $('.please-rotate-nag').removeClass('is-landscape');
-    }
+      // Back to top
+    	var offset = 300; // Browser window scroll (in pixels) after which the "back to top" link is shown
+    	var offset_opacity = 1200; // Browser window scroll (in pixels) after which the link opacity is reduced
+    	var scroll_top_duration = 700; // Duration of the top scrolling animation (in ms)
+      var link_class = '.back-to-top';
 
-    // The same on resize
-    jQuery( window ).resize(function() {
-      if(window.innerHeight < window.innerWidth) {
-        $('.please-rotate-nag').addClass('is-landscape');
+      if( jQuery(this).scrollTop() > offset ) {
+        jQuery( link_class ).addClass('is-visible');
       } else {
-        $('.please-rotate-nag').removeClass('is-landscape');
+        jQuery( link_class ).removeClass('is-visible');
       }
+
+      if(jQuery(this).scrollTop() > offset_opacity ) {
+        jQuery( link_class ).addClass('fade-out');
+     } else {
+      jQuery( link_class ).removeClass('fade-out');
+    }
+
+  });
+
+  // Define Javascript is active by changing the body class
+  document.body.classList.remove("no-js");
+  document.body.classList.add("js");
+
+  // MoveTo triggers
+  const easeFunctions = {
+    easeInQuad: function (t, b, c, d) {
+      t /= d;
+      return c * t * t + b;
+    },
+    easeOutQuad: function (t, b, c, d) {
+      t /= d;
+      return -c * t * (t - 2) + b;
+    },
+  };
+  const moveTo = new MoveTo({
+    ease: 'easeInQuad',
+  },
+    easeFunctions,
+  );
+  const triggers = document.getElementsByClassName('js-trigger');
+  for (var i = 0; i < triggers.length; i++) {
+    moveTo.registerTrigger(triggers[i]);
+  }
+
+  // Init lazyload
+  let images = document.querySelectorAll(".lazyload");
+  lazyload(images, {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0,
+  });
+
+  //navigation.js
+(function ($) {
+  // Define nav stuff
+  var menuContainer = jQuery(".nav-container");
+  var menuToggle = menuContainer.find(".nav-toggle");
+  var siteHeaderMenu = menuContainer.find("#main-navigation-wrapper");
+  var siteNavigation = menuContainer.find("#nav");
+  var menu = menuContainer.find("#nav");
+  var animatedNav = document.querySelector(".nav-primary");
+  var animatedHero = document.querySelector(".block-hero-enable-transition");
+  var dropdownToggle = jQuery("<button />", {
+    class: "dropdown-toggle",
+    "aria-expanded": false,
+  }).append(
+    jQuery("<span />", {
+      class: "screen-reader-text",
+      text: dude_screenReaderText.expand,
+    })
+  );
+
+  // Transition end function
+  function OnTransitionEndHero() {
+    animatedHero.classList.remove("is-animatable");
+  }
+
+  function OnTransitionEndNav() {
+    animatedNav.classList.remove("is-animatable");
+  }
+
+  if (jQuery(".block-hero-enable-transition").length) {
+    animatedHero.addEventListener("transitionend", OnTransitionEndHero, false);
+  }
+
+  if (jQuery(".nav-primary").length) {
+    animatedNav.addEventListener("transitionend", OnTransitionEndNav, false);
+  }
+
+  // Toggles the menu button
+  (function () {
+    if (!menuToggle.length) {
+      return;
+    }
+
+    menuToggle.add(siteNavigation).attr("aria-expanded", "false");
+    menuToggle.on("click", function () {
+
+      jQuery("body").toggleClass("js-nav-active");
+
+      // Add blur effect after one second from nav triggered open
+      jQuery(".block-hero-enable-transition").toggleClass("add-blur");
+
+      // Change text to closed and vice versa
+      var toggletext = jQuery(this).find(".toggle-text").text();
+      if (toggletext == "Avaa valikko") {
+        jQuery(this).find(".toggle-text").text("Sulje valikko");
+      } else {
+        jQuery(this).find(".toggle-text").text("Avaa valikko");
+      }
+
+      // The 60 FPS Smooth as Butter Solution
+      // Source: https://medium.com/outsystems-experts/how-to-achieve-60-fps-animations-with-css3-db7b98610108
+      jQuery(".nav-primary").addClass("is-animatable");
+      jQuery(".block-hero-enable-transition").addClass("is-animatable");
+
+      // jscs:disable
+      jQuery(this)
+        .add(siteNavigation)
+        .attr(
+          "aria-expanded",
+          jQuery(this).add(siteNavigation).attr("aria-expanded") === "false"
+            ? "true"
+            : "false"
+        );
+      // jscs:enable
     });
+  })();
 
-	// Hide or show the "back to top" link
-	$(window).scroll(function() {
+  // Adds the dropdown toggle button
+  jQuery(".menu-item-has-children > a").after(dropdownToggle);
 
-    // Back to top
-  	var offset = 300; // Browser window scroll (in pixels) after which the "back to top" link is shown
-  	var offset_opacity = 1200; // Browser window scroll (in pixels) after which the link opacity is reduced
-  	var scroll_top_duration = 700; // Duration of the top scrolling animation (in ms)
-    var link_class = '.top';
+  // Adds aria attribute
+  siteHeaderMenu.find(".menu-item-has-children").attr("aria-haspopup", "true");
 
-		if( $(this).scrollTop() > offset ) {
-      $( link_class ).addClass('is-visible');
+  // Toggles the sub-menu when dropdown toggle button clicked
+  siteHeaderMenu.find(".dropdown-toggle").click(function (e) {
+    screenReaderSpan = jQuery(this).find(".screen-reader-text");
+    dropdownMenu = jQuery(this).nextAll(".sub-menu");
+
+    e.preventDefault();
+    jQuery(this).toggleClass("toggled-on");
+    dropdownMenu.toggleClass("toggled-on");
+
+    // jscs:disable
+    jQuery(this).attr(
+      "aria-expanded",
+      jQuery(this).attr("aria-expanded") === "false" ? "true" : "false"
+    );
+    // jscs:enable
+    screenReaderSpan.text(
+      screenReaderSpan.text() === dude_screenReaderText.expand
+        ? dude_screenReaderText.collapse
+        : dude_screenReaderText.expand
+    );
+  });
+
+  // Adds a class to sub-menus for styling
+  jQuery(".sub-menu .menu-item-has-children")
+    .parent(".sub-menu")
+    .addClass("has-sub-menu");
+
+  // Keyboard navigation
+  jQuery(".menu-item a, button.dropdown-toggle").on("keydown", function (e) {
+
+    if ([37, 38, 39, 40].indexOf(e.keyCode) == -1) {
+      return;
+    }
+
+    switch (e.keyCode) {
+      case 37: // left key
+        e.preventDefault();
+        e.stopPropagation();
+
+        if (jQuery(this).hasClass("dropdown-toggle")) {
+          jQuery(this).prev("a").focus();
+        } else {
+          if (
+            jQuery(this).parent().prev().children("button.dropdown-toggle").length
+          ) {
+            jQuery(this).parent().prev().children("button.dropdown-toggle").focus();
+          } else {
+            jQuery(this).parent().prev().children("a").focus();
+          }
+        }
+
+        if (jQuery(this).is("ul ul ul.sub-menu.toggled-on li:first-child a")) {
+          jQuery(this)
+            .parents("ul.sub-menu.toggled-on li")
+            .children("button.dropdown-toggle")
+            .focus();
+        }
+
+        break;
+
+      case 39: // right key
+        e.preventDefault();
+        e.stopPropagation();
+
+        if (jQuery(this).next("button.dropdown-toggle").length) {
+          jQuery(this).next("button.dropdown-toggle").focus();
+        } else {
+          jQuery(this).parent().next().children("a").focus();
+        }
+
+        if (jQuery(this).is("ul.sub-menu .dropdown-toggle.toggled-on")) {
+          jQuery(this).parent().find("ul.sub-menu li:first-child a").focus();
+        }
+
+        break;
+
+      case 40: // down key
+        e.preventDefault();
+        e.stopPropagation();
+
+        if (jQuery(this).next().length) {
+          jQuery(this).next().find("li:first-child a").first().focus();
+        } else {
+          jQuery(this).parent().next().children("a").focus();
+        }
+
+        if (
+          jQuery(this).is("ul.sub-menu a") &&
+          jQuery(this).next("button.dropdown-toggle").length
+        ) {
+          jQuery(this).parent().next().children("a").focus();
+        }
+
+        if (
+          jQuery(this).is("ul.sub-menu .dropdown-toggle") &&
+          jQuery(this).parent().next().children(".dropdown-toggle").length
+        ) {
+          jQuery(this).parent().next().children(".dropdown-toggle").focus();
+        }
+
+        break;
+
+      case 38: // up key
+        e.preventDefault();
+        e.stopPropagation();
+
+        if (jQuery(this).parent().prev().length) {
+          jQuery(this).parent().prev().children("a").focus();
+        } else {
+          jQuery(this)
+            .parents("ul")
+            .first()
+            .prev(".dropdown-toggle.toggled-on")
+            .focus();
+        }
+
+        if (
+          jQuery(this).is("ul.sub-menu .dropdown-toggle") &&
+          jQuery(this).parent().prev().children(".dropdown-toggle").length
+        ) {
+          jQuery(this).parent().prev().children(".dropdown-toggle").focus();
+        }
+
+        break;
+    }
+  });
+
+  var html,
+    body,
+    container,
+    button,
+    menu,
+    menuWrapper,
+    links,
+    subMenus,
+    i,
+    len,
+    focusableElements,
+    firstFocusableElement,
+    lastFocusableElement;
+
+  container = document.getElementById("nav");
+  if (!container) {
+    return;
+  }
+
+  container = document.getElementById("nav");
+  if (!container) {
+    return;
+  }
+
+  button = document.getElementById("nav-toggle");
+  if ("undefined" === typeof button) {
+    return;
+  }
+
+  // Set vars.
+  html = document.getElementsByTagName("html")[0];
+  body = document.getElementsByTagName("body")[0];
+  menu = container.getElementsByTagName("ul")[0];
+  menuWrapper = document.getElementById("main-navigation-wrapper");
+
+  // Hide menu toggle button if menu is empty and return early.
+  if ("undefined" === typeof menu) {
+    button.style.display = "none";
+    return;
+  }
+
+  menu.setAttribute("aria-expanded", "false");
+  if (-1 === menu.className.indexOf("nav-menu")) {
+    menu.className += " nav-menu";
+  }
+
+  // Accessibility: Init nav opened status
+  navOpened = false;
+
+  button.onclick = function () {
+
+    // Toggle boolean
+    navOpened ^= true;
+
+    if (-1 !== container.className.indexOf("is-active")) {
+      closeMenu(); // Close menu.
     } else {
-      $( link_class ).removeClass('is-visible');
-    }
+      body.className += " js-nav-active";
+      container.className += " is-active";
+      button.className += " is-active";
+      button.setAttribute("aria-expanded", "true");
+      menu.setAttribute("aria-expanded", "true");
 
-		if( $(this).scrollTop() > offset_opacity ) {
-			$( link_class ).addClass('fade-out');
-		} else {
-      $( link_class ).removeClass('fade-out');
-    }
+      // Set focusable elements inside main navigation.
+      focusableElements = container.querySelectorAll([
+        "a[href]",
+        "area[href]",
+        "input:not([disabled])",
+        "select:not([disabled])",
+        "textarea:not([disabled])",
+        "button:not([disabled])",
+        "iframe",
+        "object",
+        "embed",
+        "[contenteditable]",
+        '[tabindex]:not([tabindex^="-"])',
+      ]);
+      //firstFocusableElement = focusableElements[0];
+      firstFocusableElement = button;
+      // lastFocusableElement = focusableElements[focusableElements.length - 1];
+      lastFocusableElement = document.getElementById("lastfocusableitem");
 
+      // Redirect last Tab to first focusable element.
+      lastFocusableElement.addEventListener("keydown", function (e) {
+        if (e.keyCode === 9 && !e.shiftKey) {
+
+          if (navOpened === 1) {
+            e.preventDefault();
+            firstFocusableElement.focus(); // Set focus on first element - that's actually close menu button.
+          }
+        }
+      });
+
+      // Redirect first Shift+Tab to toggle button element.
+      firstFocusableElement.addEventListener("keydown", function (e) {
+
+        if (navOpened === 1) {
+          if (e.keyCode === 9 && e.shiftKey) {
+
+            e.preventDefault();
+            lastFocusableElement.focus(); // Set focus on last element.
+          }
+        }
+      });
+    }
+  };
+
+  // Close menu using Esc key.
+  document.addEventListener("keyup", function (event) {
+    if (event.keyCode == 27) {
+      var toggletext = jQuery(this).find(".toggle-text").text();
+      if (toggletext == "Avaa valikko") {
+        jQuery(this).find(".toggle-text").text("Sulje valikko");
+      } else {
+        jQuery(this).find(".toggle-text").text("Avaa valikko");
+      }
+
+      jQuery("body").removeClass("js-nav-active");
+
+      if (-1 !== container.className.indexOf("is-active")) {
+        closeMenu(); // Close menu.
+      }
+    }
+  });
+
+  // Close menu clicking menu wrapper area.
+  menuWrapper.onclick = function (e) {
+    if (
+      e.target == menuWrapper &&
+      -1 !== container.className.indexOf("is-active")
+    ) {
+      closeMenu(); // Close menu.
+    }
+  };
+
+  // Close menu function.
+  function closeMenu() {
+    navOpened = 0;
+    body.className = body.className.replace(" js-nav-active", "");
+    container.className = container.className.replace(" is-active", "");
+    button.className = button.className.replace(" is-active", "");
+    button.setAttribute("aria-expanded", "false");
+    document.getElementById("nav").setAttribute("aria-expanded", "false");
+    button.focus();
+  }
+
+  // Get all the link elements within the menu.
+  links = menu.getElementsByTagName("a");
+  subMenus = menu.getElementsByTagName("ul");
+
+  // Each time a menu link is focused or blurred, toggle focus.
+  for (i = 0, len = links.length; i < len; i++) {
+    links[i].addEventListener("focus", toggleFocus, true);
+    links[i].addEventListener("blur", toggleFocus, true);
+  }
+
+  /**
+   * Sets or removes .focus class on an element.
+   */
+  function toggleFocus() {
+    var self = this;
+
+    // Move up through the ancestors of the current link until we hit .nav-menu.
+    while (-1 === self.className.indexOf("nav-menu")) {
+      // On li elements toggle the class .focus.
+      if ("li" === self.tagName.toLowerCase()) {
+        if (-1 !== self.className.indexOf("focus")) {
+          self.className = self.className.replace(" focus", "");
+        } else {
+          self.className += " focus";
+        }
+      }
+
+      self = self.parentElement;
+    }
+  }
+})(jQuery);
+
+  // Always move scroll position to up when clicking a link
+  var moveToSwup = new MoveTo({
+    tolerance: 0,
+    duration: 0,
+    easing: "easeOutQuart",
+    container: window,
+  });
+
+  var target = document.getElementById("swup");
+  moveToSwup.move(target);
+
+  // Timeline
+  jQuery(".col-timeline .row .action").on("click", function () {
+    jQuery(".col-timeline .row").removeClass("active");
+
+    var dynamicimage = jQuery(this).attr("data-image");
+    var dynamiclabel = jQuery(this).attr("data-label");
+    jQuery(this).parent().addClass("active");
+    document.getElementById("dynamicimage").style.backgroundImage =
+      "url(" + dynamicimage + ")";
+    jQuery("#dynamiclabel span")
+      .animate({ opacity: 0 }, 200, function () {
+        jQuery(this).text(dynamiclabel);
+      })
+      .animate({ opacity: 1 }, 200);
+  });
+
+  // Slide numbering
+  var $gallery = jQuery(".testimonials");
+  var slideCount = null;
+
+  $gallery.on("init", function (event, slick) {
+    slideCount = slick.slideCount;
+    setSlideCount();
+    setCurrentSlideNumber(slick.currentSlide);
+  });
+
+  $gallery.on("beforeChange", function (event, slick, currentSlide, nextSlide) {
+    setCurrentSlideNumber(nextSlide);
+  });
+
+  function setSlideCount() {
+    var $el = jQuery(".slide-numbering").find(".total");
+    $el.text(slideCount);
+  }
+
+  function setCurrentSlideNumber(currentSlide) {
+    var $el = jQuery(".slide-numbering").find(".current");
+    $el.text(currentSlide + 1);
+  }
+
+  // Testimonial slider
+  jQuery(".testimonials").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    infinite: false,
+    fade: false,
+    adaptiveHeight: true,
+    variableWidth: true,
+    centerMode: true,
+    appendArrows: jQuery(".custom-arrows"),
+    prevArrow:
+      '<button class="button-prev button-reset"><span class="screen-reader-text">Edellinen</span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="17" viewBox="0 0 48 17"><path fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M46.148 8.228H1.852m0 0L9.08 1M1.852 8.228l7.228 7.228" /></svg></button>',
+    nextArrow:
+      '<button class="button-next button-reset"><span class="screen-reader-text">Seuraava</span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="17" viewBox="0 0 48 17"><path fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1.852 8.228h44.296m0 0L38.92 1m7.228 7.228l-7.228 7.228"/></svg></button>',
+  });
+
+  // Reference slider
+  jQuery(".reference-slider").slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    infinite: false,
+    fade: false,
+    adaptiveHeight: true,
+    variableWidth: true,
+    centerMode: false,
+    appendArrows: jQuery(".custom-arrows-references"),
+    prevArrow:
+      '<button class="button-prev button-reset"><span class="screen-reader-text">Edellinen</span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="17" viewBox="0 0 48 17"><path fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M46.148 8.228H1.852m0 0L9.08 1M1.852 8.228l7.228 7.228" /></svg></button>',
+    nextArrow:
+      '<button class="button-next button-reset"><span class="screen-reader-text">Seuraava</span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="17" viewBox="0 0 48 17"><path fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1.852 8.228h44.296m0 0L38.92 1m7.228 7.228l-7.228 7.228"/></svg></button>',
+  });
+
+  // Person image hack
+  jQuery(".col-person-image").height(jQuery(".col-person-image img").height());
+
+});
+// Swup ends
+
+// jQuery start
+(function ($) {
+
+  // Slide numbering
+  var $gallery = $(".testimonials");
+  var slideCount = null;
+
+  $gallery.on("init", function (event, slick) {
+    slideCount = slick.slideCount;
+    setSlideCount();
+    setCurrentSlideNumber(slick.currentSlide);
+  });
+
+  $gallery.on("beforeChange", function (event, slick, currentSlide, nextSlide) {
+    setCurrentSlideNumber(nextSlide);
+  });
+
+  function setSlideCount() {
+    var $el = $(".slide-numbering").find(".total");
+    $el.text(slideCount);
+  }
+
+  function setCurrentSlideNumber(currentSlide) {
+    var $el = $(".slide-numbering").find(".current");
+    $el.text(currentSlide + 1);
+  }
+
+  // Testimonial slider
+  $(".testimonials").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    infinite: false,
+    fade: false,
+    adaptiveHeight: true,
+    variableWidth: true,
+    centerMode: true,
+    appendArrows: $(".custom-arrows"),
+    prevArrow:
+      '<button class="button-prev button-reset"><span class="screen-reader-text">Edellinen</span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="17" viewBox="0 0 48 17"><path fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M46.148 8.228H1.852m0 0L9.08 1M1.852 8.228l7.228 7.228" /></svg></button>',
+    nextArrow:
+      '<button class="button-next button-reset"><span class="screen-reader-text">Seuraava</span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="17" viewBox="0 0 48 17"><path fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1.852 8.228h44.296m0 0L38.92 1m7.228 7.228l-7.228 7.228"/></svg></button>',
+  });
+
+  // Reference slider
+  $(".reference-slider").slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    dots: false,
+    infinite: false,
+    fade: false,
+    adaptiveHeight: true,
+    variableWidth: true,
+    centerMode: false,
+    appendArrows: $(".custom-arrows-references"),
+    prevArrow:
+      '<button class="button-prev button-reset"><span class="screen-reader-text">Edellinen</span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="17" viewBox="0 0 48 17"><path fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M46.148 8.228H1.852m0 0L9.08 1M1.852 8.228l7.228 7.228" /></svg></button>',
+    nextArrow:
+      '<button class="button-next button-reset"><span class="screen-reader-text">Seuraava</span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="17" viewBox="0 0 48 17"><path fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1.852 8.228h44.296m0 0L38.92 1m7.228 7.228l-7.228 7.228"/></svg></button>',
   });
 
   // Document ready start
-  $(function() {
+  $(function () {
 
-  // Timeline
-  $('.col-timeline .row .action').on('click', function() {
-    $('.col-timeline .row').removeClass('active');
+    	// Hide or show the "back to top" link
+    	$(window).scroll(function() {
 
-    var dynamicimage = $(this).attr('data-image');
-    var dynamiclabel = $(this).attr('data-label');
-    $(this).parent().addClass('active');
-    document.getElementById("dynamicimage").style.backgroundImage = "url(" + dynamicimage + ")";
-    $('#dynamiclabel span').animate({'opacity': 0}, 500, function () {
-      $(this).text(dynamiclabel);
-    }).animate({'opacity': 1}, 500);
-  });
+        // Back to top
+      	var offset = 300; // Browser window scroll (in pixels) after which the "back to top" link is shown
+      	var offset_opacity = 1200; // Browser window scroll (in pixels) after which the link opacity is reduced
+      	var scroll_top_duration = 700; // Duration of the top scrolling animation (in ms)
+        var link_class = '.back-to-top';
 
-  // Linkable accordion sections
-  $('.accordion').each(function() {
-    var $t = $(this);
+        if( $(this).scrollTop() > offset ) {
+          $( link_class ).addClass('is-visible');
+        } else {
+          $( link_class ).removeClass('is-visible');
+        }
 
-    if($t.attr("data-href") == window.location.hash) {
-
-      // Remove all open-accordion classes by default when going to section via hash
-      $('.accordion').removeClass('open-accordion');
-
-      if($t.next('.accordion-content').is(':hidden')) {
-        $('.accordion-content').stop(true, false).slideUp(225);
-        $t.next('.accordion-content').stop(true, false).slideDown(250, function() {
-          $(this).css({
-            display: "grid"
-          });
-          $('html, body').animate({ scrollTop: $t.offset().top - 100 }, 200);
-        });
-
-        $t.addClass('open-accordion');
-        $('.accordion').children('.arr').removeClass('open');
-        $t.children('.arr').addClass('open');
-        window.location.hash = $t.attr("data-href");
-
-      } else {
-        $t.removeClass('open-accordion');
-        $('.accordion').children('.arr').removeClass('open');
-        $('.accordion-content').stop(true, false).slideUp(250);
-
-        var slug = $(this).attr("data-href");
-        window.location.hash = $t.attr("data-href");
+        if( $(this).scrollTop() > offset_opacity ) {
+         $( link_class ).addClass('fade-out');
+       } else {
+        $( link_class ).removeClass('fade-out');
       }
 
-      return false;
-    }
-  });
-
-  // Accordions
-  $('.accordion').on('click', function() {
-    var $t = $(this);
-
-    // Remove all open-accordion classes by default when clicking
-    $('.accordion').removeClass('open-accordion');
-
-    if($t.next('.accordion-content').is(':hidden')) {
-      $('.accordion-content').stop(true, false).slideUp(225);
-      $t.next('.accordion-content').stop(true, false).slideDown(250, function() {
-        $(this).css({
-          display: "grid"
-        });
-        $('html, body').animate({ scrollTop: $t.offset().top - 100 }, 200);
-      });
-
-      $t.addClass('open-accordion');
-      $('.accordion').children('.arr').removeClass('open');
-      $t.children('.arr').addClass('open');
-      window.location.hash = $t.attr("data-href");
-
-      } else {
-        $t.removeClass('open-accordion');
-        $('.accordion').children('.arr').removeClass('open');
-        $('.accordion-content').stop(true, false).slideUp(250);
-
-        var slug = $(this).attr("data-href");
-        window.location.hash = $t.attr("data-href");
-      }
     });
 
-    // Gutter and switch effect in content-side-switch module
-    var doc = document;
-    if ( $( '#service-switcher' ).length) {
+    // Accessibility: Ensure back to top is right color on right background
+    // Detect Visible section on viewport from bottom
+    // @link https://codepen.io/BoyWithSilverWings/pen/MJgQqR
+    $.fn.isInViewport = function () {
+      var elementTop = $(this).offset().top;
+      var elementBottom = elementTop + $(this).outerHeight();
 
-      var anchors = doc.getElementById('service-switcher').getElementsByTagName('button');
-      var highlight = doc.getElementById('highlight');
+      var viewportTop = $(window).scrollTop();
+      var viewportBottom = viewportTop + $(window).height();
 
-      // Loop through buttons
-      for (var i = 0, len = anchors.length; i < len; i++) {
+      return elementBottom > viewportTop && elementTop < viewportBottom;
+    };
 
-        // When mouse overing, move tha ball to target position
-        anchors[i].addEventListener('mouseover', function(e) {
-          var target = e.target;
-          var init = doc.getElementById('init');
-          highlight.style.top = target.offsetTop + 'px';
-        });
+    // Accessibility: Ensure back to top is right color on right background
+    $(window).on("resize scroll", function () {
+      $(".block").each(function () {
+        if ($(this).isInViewport()) {
+          $(".back-to-top")
+            .removeClass("has-light-bg has-dark-bg")
+            .addClass(
+              $(this).hasClass("has-light-bg") ? "has-light-bg" : "has-dark-bg"
+            );
+        }
+      });
+    });
 
-        // When mouse out, move back to original position, or position where clicked
-        anchors[i].addEventListener('mouseout', function(e) {
-          var target = e.target;
-          var init = doc.getElementById('init');
-          var getClicked = document.getElementsByClassName('clicked');
-
-          // Let's check if there's clicked position
-          if ( typeof getClicked !== 'undefined') {
-            var clickedElement = getClicked[0];
-            var clickedPosition = clickedElement.offsetTop + 'px';
-          }
-
-          // If there's clicked position, move ball to content
-          if ( target.classList.contains('clicked') ) {
-            highlight.style.top = clickedPosition;
-            target.classList.add('has-focus');
-          } else {
-
-            // If no clicked position, move back to start
-            if ( typeof clickedPosition !== 'undefined') {
-              highlight.style.top = clickedPosition;
-            } else {
-              highlight.style.top = 0;
-              init.classList.add('has-focus');
-            }
-
-            // Let's make sure there's no clicked items if clicked position undefined
-            target.classList.remove('clicked');
-          }
-        });
-
-        // What happens when we click the list item
-        anchors[i].addEventListener('click', function(e) {
-          var target = e.target;
-
-          // Let's remove classes from all other list items
-          jQuery('.service-switcher button').removeClass('has-focus clicked');
-
-          // Adding classes to clicked item
-          target.classList.add('clicked');
-          target.classList.add('has-focus');
-
-          // Moving to position
-          highlight.style.top = target.offsetTop + 'px';
-
-          // Getting right content to show
-          var tabId = target.getAttribute('data-tab');
-
-          // Fade out old content
-          jQuery('.content-tab').fadeOut(600, function() {
-            $(this).removeClass('is-visible');
-          });
-
-          // Add class to the content that is corresponding to the clicked item
-          jQuery('#' + tabId).addClass('animating');
-          jQuery('#' + tabId).fadeIn(600, function() {
-            $(this).addClass('is-visible');
-            $(this).removeClass('animating');
-          });
-        });
-      }
+    // 404 easter egg
+    if ( jQuery("body").hasClass("error404") === true ) {
+      jQuery(document).bind('keydown keyup', function(e) {
+        if ( e.which === 116 ) {
+          window.location.href = dude_screenReaderText.homeurl;
+        }
+        if ( e.which === 82 && e.ctrlKey ) {
+          window.location.href = dude_screenReaderText.homeurl;
+        }
+      });
     }
-
-    // Fade out other menu items when selected more-item
-    $( '.dude-nav-more button' ).hover(
-      function() {
-        $( this ).parent().parent().addClass('fade-out');
-      }, function() {
-        $( this ).parent().parent().removeClass('fade-out');
-      }
-    );
 
     // Apple.com fade in all content that have opacity-on-load class
     setTimeout(function() {
       $('.opacity-on-load').addClass('fade-in');
     }, 500);
 
-    // Add transition class after all animations are completed
-    setTimeout(function() {
-      $('.block-hero').addClass('block-hero-enable-transition');
-    }, 3000);
+    // Person image hack
+    $(".col-person-image").height($(".col-person-image img").height());
 
-    // Instant fade in
-    $('.opacity-on-load-instant').addClass('fade-in');
+    // Timeline
+    $(".col-timeline .row .action").on("click", function () {
+      $(".col-timeline .row").removeClass("active");
 
-    // Show selection only until loaded
-    $('.block-hero-enable-transition .content').addClass('has-loaded');
-
-    // Set up back to top link
-    var moveTo = new MoveTo();
-    var target = document.getElementById('target');
-    moveTo.move(target);
-
-    // Register a back to top trigger
-    var trigger = document.getElementsByClassName('js-trigger')[0];
-    moveTo.registerTrigger(trigger);
-
-    // Chat greeting
-    if ( typeof( Storage ) !== 'undefined' ) {
-      if ( sessionStorage.getItem( 'chat_greeting_visits' ) >= 3 && sessionStorage.getItem( 'chat_greeting_sent' ) === null ) {
-        // send chat if user has visited over 3 pages and greeting still not sent
-        setTimeout( function() {
-          maybeSendChatGreeting();
-        }, 1500 );
-      } else if ( sessionStorage.getItem( 'chat_greeting_sent' ) === null ) {
-        // send greeting if not send before
-
-        // init timer
-        TimeMe.initialize({
-          currentPageName: document.title ,
-          idleTimeoutInSeconds: 10
-        });
-
-        // trigger chat after X seconds
-        TimeMe.callAfterTimeElapsedInSeconds( 5, function() {
-          maybeSendChatGreeting();
-        } );
-      } else if ( moreThanGreetingThresholdAgo( new Date( sessionStorage.getItem( 'chat_greeting_sent' ) ) ) ) {
-        // send chat if last time over day ago
-
-        // init timer
-        TimeMe.initialize({
-          currentPageName: document.title ,
-          idleTimeoutInSeconds: 10
-        });
-
-        // trigger chat after X seconds
-        TimeMe.callAfterTimeElapsedInSeconds( 5, function() {
-          maybeSendChatGreeting();
-        } );
-      } // end if send chat check
-    } // end storage check
-
-    function maybeSendChatGreeting() {
-      // don't show greeting on contact page
-      if ( jQuery('body').hasClass('page-id-4487') ) {
-        return;
-      }
-
-      // alter greetings based on page
-      if ( jQuery('body').hasClass('page-id-4485') ) {
-        // visuaalinen suunnittelu page
-        var greetings = [
-          'Uutta ilmettä putiikille? Kysy lisää chatissa.',
-          'Moi! Mille työn jälki vaikuttaa? 🙂',
-          'Moro! Voisimmeko auttaa jotenkin? 👋',
-        ];
-      } else if ( jQuery('body').hasClass('page-id-9') ) {
-        // verkkosivut- ja palvelut page
-        var greetings = [
-          'Moottoritie on kuuma, mutta webisivut pitäs saada? 🚀',
-          'Verkkosivut uudistuksen tarpeessa? Pistä viestiä niin kerron vähän lisää meidän palveluista. 🙂',
-          'Moro! Voisimmeko auttaa jotenkin? 👋',
-        ];
-      } else {
-        // defaults / fallbacks
-        var greetings = [
-          'Moi! Verkkosivut uudistuksen tarpeessa? Uutta ilmettä putiikille? Kysy lisää chatissa.',
-          'Moro! Voisimmeko auttaa jotenkin? 🙂',
-          'Terve! Pistä viestiä niin kerron vähän lisää meidän palveluista. 👋',
-        ];
-      }
-
-      var greeters = [
-        {
-          name: 'Roni',
-          image: dude.theme_base + '/images/chat-roni.jpg',
-        },
-        {
-          name: 'Timi',
-          image: dude.theme_base + '/images/chat-timi.jpg',
-        },
-      ];
-
-      // do nothing if session is ongoing or user has opened the chat
-      if ( $crisp.is('website:available') && ! $crisp.is('session:ongoing') && ! $crisp.is('chat:opened') ) {
-
-        // get random greeting and greeter
-        if ( typeof chat_greeting_override !== 'undefined' ) {
-          var greeting = chat_greeting_override;
-        } else {
-          var greeting = greetings[ Math.floor( Math.random() * greetings.length ) ];
-        }
-
-        var greeter = greeters[ Math.floor( Math.random() * greeters.length ) ];
-
-        // show greeting
-        $('body').append('<div class="chat-greeting"><button class="open-chat" aria-label="Avaa chat"></button><div class="avatar" style="background-image:url(\'' + greeter.image + '\')"></div><div class="message"><p class="head">Viesti henkilöltä ' + greeter.name + '</p><p>' + greeting + '</p></div><button class="close-chat close" aria-label="Sulje ilmoitus"><svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="currentColor"><path class="clr-i-outline clr-i-outline-path-1" d="M19.41 18l8.29-8.29a1 1 0 0 0-1.41-1.41L18 16.59l-8.29-8.3a1 1 0 0 0-1.42 1.42l8.3 8.29-8.3 8.29A1 1 0 1 0 9.7 27.7l8.3-8.29 8.29 8.29a1 1 0 0 0 1.41-1.41z"/></svg></button></div>')
-
-        $crisp.push(['on', 'chat:opened', function() {
-          $crisp.push(['do', 'message:show', ['text', greeting]]);
-          $crisp.push(['off', 'chat:opened']);
-        }]);
-
-        // save that we have shown the greeting multiple times
-        sessionStorage.setItem( 'chat_greeting_sent', new Date().toLocaleString() );
-      }
-    }
-
-    $('body').on( 'click', '.chat-greeting button.close', function(event) {
-
-      $('.chat-greeting').addClass('removed-item')
-      .one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
-        $('.chat-greeting').remove();
-      });
-
-      sessionStorage.setItem( 'chat_greeting_sent', new Date().toLocaleString() );
-    });
-
-    // Open chat if element is clicked
-    $('body').on( 'click', '.open-chat', function(event) {
-      event.preventDefault();
-
-      $('.chat-greeting').addClass('removed-item')
-      .one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
-        $('.chat-greeting').remove();
-      });
-
-      $crisp.push(['do', 'chat:show']);
-      $crisp.push(['do', 'chat:open']);
+      var dynamicimage = $(this).attr("data-image");
+      var dynamiclabel = $(this).attr("data-label");
+      $(this).parent().addClass("active");
+      document.getElementById("dynamicimage").style.backgroundImage =
+        "url(" + dynamicimage + ")";
+      $("#dynamiclabel span")
+        .animate({ opacity: 0 }, 500, function () {
+          $(this).text(dynamiclabel);
+        })
+        .animate({ opacity: 1 }, 500);
     });
 
   });
-
-  var daysBetween = function( d1, d2 ) {
-    var diff = Math.abs( d1.getTime() - d2.getTime() );
-    return diff / (1000 * 60 * 60 * 24);
-  };
-
-  var moreThanGreetingThresholdAgo = function( date ) {
-    var toCheckAgainst = 900000; // 15 minutes in milliseconds
-    var anAgo = Date.now() - toCheckAgainst;
-
-    return date < anAgo;
-  };
-
-} )( jQuery );
+})(jQuery);
 
 // If there is unread posts, show the chat
-window.CRISP_READY_TRIGGER = function() {
-  setTimeout( function() {
+window.CRISP_READY_TRIGGER = function () {
+  setTimeout(function () {
     // Hide chat circle by default unless there is unread messages or session is ongoing
-    if ( $crisp.get('chat:unread:count') > 0 || $crisp.is('session:ongoing')) {
-      $crisp.push(['do', 'chat:show']);
+    if ($crisp.get("chat:unread:count") > 0 || $crisp.is("session:ongoing")) {
+      $crisp.push(["do", "chat:show"]);
     } else {
-      $crisp.push(['do', 'chat:hide']);
+      $crisp.push(["do", "chat:hide"]);
     }
-  }, 25 );
+  }, 25);
 };
+
+// MoveTo triggers
+document.addEventListener('DOMContentLoaded', function () {
+  const easeFunctions = {
+    easeInQuad: function (t, b, c, d) {
+      t /= d;
+      return c * t * t + b;
+    },
+    easeOutQuad: function (t, b, c, d) {
+      t /= d;
+      return -c * t * (t - 2) + b;
+    },
+  };
+  const moveTo = new MoveTo({
+    ease: 'easeInQuad',
+  },
+    easeFunctions,
+  );
+  const triggers = document.getElementsByClassName('js-trigger');
+  for (var i = 0; i < triggers.length; i++) {
+    moveTo.registerTrigger(triggers[i]);
+  }
+});

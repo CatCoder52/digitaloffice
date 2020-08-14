@@ -3,14 +3,15 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-06-25 13:37:35
+ * @Last Modified time: 2020-07-24 11:17:42
  *
- * @package dude2019
+ * @package dude
  */
 
 $title = get_the_title();
 $title_alt = get_post_meta( get_the_id(), 'title_alt', true );
 $content = get_post_meta( get_the_id(), 'hero_content', true );
+$button = get_post_meta( get_the_id(), 'hero_button', true );
 
 if ( ! empty( $title_alt ) ) {
   $title = $title_alt;
@@ -26,38 +27,40 @@ if ( has_post_thumbnail() ) {
 }
 ?>
 
-<section class="block block-hero<?php if ( $bg_image ) { ?> block-hero-side-columns<?php } ?> block-hero-enable-transition">
-  <div class="container opacity-on-load-instant">
+<section class="block block-hero block-hero-light has-light-bg">
+
+  <?php if ( $bg_image ) { ?>
+    <div class="featured-image" aria-hidden="true">
+      <div class="shade" aria-hidden="true"></div>
+        <div aria-hidden="true" class="background-image preview lazyload" style="background-image: url('<?php echo $bg_image_tiny; ?>');" data-src="<?php echo esc_url( $bg_image ); ?>" data-src-mobile="<?php echo esc_url( $bg_image_mobile[0] ); ?>"></div>
+        <div aria-hidden="true" class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : // phpcs:ignore ?> style="background-image: url('<?php echo esc_url( $bg_image ); ?>');"<?php endif; ?>></div>
+        <noscript><div aria-hidden="true" class="background-image full-image" style="background-image: url('<?php echo esc_url( $bg_image ); ?>');"></div></noscript>
+    </div>
+  <?php } ?>
+
+  <div class="container">
 
     <div class="content">
-      <div class="side-content-box">
-        <h1 class="animate animate-1"><?php echo $title ?></h1>
+      <h1 class="swup-transition-fade"><?php echo esc_html( $title ); ?></h1>
 
-        <div class="hero-description animate animate-2">
-          <?php if ( ! empty( $content ) ) {
-            echo wpautop( $content );
-          }
-          ?>
+      <?php if ( ! empty( $content ) ) { ?>
+        <div class="hero-description swup-transition-fade">
+          <?php echo wpautop( $content ); // phpcs:ignore ?>
         </div>
+      <?php } ?>
 
-        <?php if ( 4449 === get_the_id() ) : ?>
-          <p class="cta-link animate animate-3"><a href="<?php echo get_post_type_archive_link( 'reference' ) ?>">Mitä helevettiä? Missä työnäytteet?</a></p>
+      <?php
+      // Contact page hero button that scrolls to anchor
+      if ( is_page( 4487 ) ) : ?>
+        <p class="button-wrapper swup-transition-fade"><a class="button button-glitch button-mint js-trigger" data-mt-duration="300" href="#cta">Jätä yhteydenottopyyntö<?php include get_theme_file_path( '/svg/arrow-right.svg' ); ?></a></p>
+      <?php else : ?>
+
+        <?php if ( ! empty( $button ) ) : ?>
+          <p class="button-wrapper swup-transition-fade"><a class="button button-glitch button-mint" href="<?php echo esc_url( $button['url'] ); ?>"<?php if ( ! empty( $button['target'] ) ) : ?> target="<?php echo esc_html( $button['target'] ); ?>"<?php endif; ?>><?php echo esc_html( $button['title'] ); ?><?php include get_theme_file_path( '/svg/arrow-right.svg' ); ?></a></p>
         <?php endif; ?>
+      <?php endif; ?>
 
-        <?php if ( 4489 === get_the_id() ) : ?>
-          <p><a class="cta-link cta-link-white animate animate-3" href="https://handbook.dude.fi">Lue Duden handbookia</a></p>
-        <?php endif; ?>
-      </div>
     </div>
-
-    <?php if ( $bg_image ) { ?>
-    <div class="featured-image featured-image-side">
-      <div class="shade"></div>
-        <div class="background-image preview lazyload" style="background-image: url('<?php echo $bg_image_tiny; ?>');" data-src="<?php echo esc_url( $bg_image ); ?>" data-src-mobile="<?php echo esc_url( $bg_image_mobile[0] ); ?>"></div>
-        <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo esc_url( $bg_image ); ?>');"<?php endif; ?>></div>
-        <noscript><div class="background-image full-image" style="background-image: url('<?php echo esc_url( $bg_image ); ?>');"></div></noscript>
-    </div>
-    <?php } ?>
 
   </div>
 </section>

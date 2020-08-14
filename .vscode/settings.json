@@ -1,0 +1,11 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": false,
+    "source.fixAll.tslint": false,
+    "source.fixAll.stylelint": true
+  },
+  "[javascript]": {
+    "editor.formatOnSave": false
+  },
+  "git.ignoreLimitWarning": true,
+}

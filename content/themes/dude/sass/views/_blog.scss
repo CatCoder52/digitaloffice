@@ -1,470 +1,56 @@
-// Nav on white background when in blog
-body.blog,
-body.single-reference,
-body.single-person,
-body.archive.category,
-body.archive.tag {
-  .site-header nav > ul > li > a,
-  .site-header nav > ul > li > button {
-    color: $color-body;
+.block.block-blog {
+  padding-top: 0;
+  overflow: visible;
+
+  .container {
+    overflow: visible;
   }
 
-  .site-header .site-title svg,
-  .site-header .site-title g,
-  .site-header .site-title path {
-    fill: $color-body;
-  }
+  .cols {
+    @include grid(3, $gutter_x: 72px, $gutter_y: 72px);
 
-  &:not(.js-nav-active) .site-header .hamburger-inner,
-  &:not(.js-nav-active) .site-header .hamburger-inner::after,
-  &:not(.js-nav-active) .site-header .hamburger-inner::before,
-  &:not(.js-nav-active) .site-header .hamburger-inner:focus,
-  &:not(.js-nav-active) .site-header .hamburger-inner:focus::after,
-  &:not(.js-nav-active) .site-header .hamburger-inner:focus::before,
-  &:not(.js-nav-active) .site-header .nav-toggle:focus .hamburger-inner,
-  &:not(.js-nav-active) .site-header .nav-toggle:focus .hamburger-inner::after,
-  &:not(.js-nav-active) .site-header .nav-toggle:focus .hamburger-inner::before,
-  &:not(.js-nav-active) .site-header .nav-toggle:focus .hamburger-inner:focus,
-  &:not(.js-nav-active) .site-header .nav-toggle:focus .hamburger-inner:focus::after,
-  &:not(.js-nav-active) .site-header .nav-toggle:focus .hamburger-inner:focus::before {
-    background-color: $color-body;
-  }
-
-  &:not(.js-nav-active) {
-    .site-header nav .toggle-text {
-      color: $color-body;
+    @media (max-width: 1000px) {
+      @include grid(2, $gutter_x: $margin-between-grid-columns, $gutter_y: $margin-between-grid-columns);
     }
-  }
 
-  @media (min-width: $responsivenav) {
-    &:not(.js-nav-active) {
-      .nav-primary-desktop .menu-items > .menu-item > a,
-      .nav-primary-desktop .menu-items > .menu-item button,
-      .nav-primary-desktop .menu-items > .menu-item.dude-nav-more button .plus-cross {
-        color: $color-body;
+    @media (max-width: 580px) {
+      @include grid(1, $gutter_x: $margin-between-grid-columns, $gutter_y: $margin-between-grid-columns);
+    }
+
+    .text-content {
+      margin-bottom: $margin-between-text-elements;
+
+      p {
+        font-size: var(--font-size-general-small);
       }
 
-      .nav-primary-desktop .menu-items > .menu-item > a:after,
-      .nav-primary-desktop .menu-items > .menu-item button:after {
-        background: $color-body;
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .image {
+      margin-bottom: 4rem;
+
+      &:after {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+      }
+    }
+
+    h3 {
+      @extend %general-heading-small;
+
+      a {
+        color: $color-midnight-blue;
       }
     }
   }
-}
 
-// WordPress alignments
-.cat-links,
-.tags-links {
-  display: block;
-}
-
-.alignleft {
-  display: inline;
-  float: left;
-  margin-right: 20px;
-}
-
-.alignright {
-  display: inline;
-  float: right;
-  margin-left: 20px;
-}
-
-.aligncenter {
-  clear: both;
-  display: block;
-  margin: 0 auto;
-}
-
-del {
-  text-decoration: line-through;
-  color: #666;
-}
-
-// Required sticky class
-.sticky {
-  background-color: #fafafa;
-  border: 1px solid #e0e0e0;
-  padding: 3rem;
-}
-
-// Required post author comment
-.comments-area .comment-list li.bypostauthor {
-  background-color: #fff6e8;
-  padding: 3rem;
-}
-
-// WordPress captions
-.wp-caption {
-  max-width: 100%;
-
-  img[class*="wp-image-"] {
-    display: block;
-    margin: 0 auto;
-  }
-
-  .wp-caption-text {
-    text-align: left;
-    font-style: italic;
-    padding: 1rem 0;
-    margin-bottom: 20px;
-  }
-}
-
-// Embeds
-.entry-content {
-  margin-bottom: 2em;
-
-  embed,
-  iframe,
-  object,
-  video {
-    max-width: 100%;
-  }
-
-  // Don't add extra margin on top of first title
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-}
-
-// Tables, codes and pres
-table {
-  border-spacing: 0;
-  border-collapse: collapse;
-}
-
-td,
-th {
-  font-family: $font-base;
-  height: 3rem;
-  padding: 1rem;
-
-  @media (max-width: 600px) {
-    @include stack();
-    display: inline-block;
-    height: auto;
-    padding: 10px 0;
-    text-align: center;
-  }
-}
-
-// Table heading cells
-th {
-  font-weight: 700;
-}
-
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-
-b,
-strong {
-  font-weight: bold;
-}
-
-dfn {
-  font-style: italic;
-}
-
-kbd {
-  border: 1px solid #ccc;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f7f7f7;
-  color: #333;
-  box-shadow: 0 1px 0 rgba(#000, .2), 0 0 0 2px #fff inset;
-  border-radius: 4px;
-  display: inline-block;
-  text-shadow: 0 1px 0 #fff;
-  line-height: 1.4;
-  white-space: nowrap;
-  padding: 0 .5rem;
-}
-
-pre {
-  display: block;
-  padding: 9.5px;
-  margin: 0 0 .625rem;
-  color: #333;
-  word-break: break-all;
-  word-wrap: break-word;
-  background-color: #f5f5f5;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  overflow: auto;
-
-  &.debug {
-    font-size: 11px;
-    line-height: 1.5;
-  }
-
-  code {
-    padding: 0;
-    font-size: inherit;
-    color: inherit;
-    white-space: pre-wrap;
-    background-color: transparent;
-    border-radius: 0;
-  }
-}
-
-// Taxonomies
-.taxonomy-description {
-  margin-bottom: 2rem;
-}
-
-.post {
-  margin-bottom: 30px;
-}
-
-.entry-header {
-  .entry-title {
-    margin-bottom: .1em;
-
-    a {
-      color: $color-body;
-    }
-  }
-}
-
-.entry-meta {
-  * {
-    color: $color-darkgrey;
-  }
-}
-
-.cat {
-  margin-top: 0;
-  margin-bottom: 2rem;
-
-  a {
-    @extend .cta-link;
-  }
-}
-
-ul.tags {
-  overflow: hidden;
-  margin-top: 4rem;
-  margin-left: 0;
-  margin-right: 0;
-  margin-bottom: 4rem;
-  padding: 0;
-  padding-left: 0;
-
-  li,
-  a {
-    line-height: 1.1;
-    text-transform: lowercase;
-  }
-
-  li {
-    margin-left: 0;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    padding-left: 0;
-    display: inline-block;
-    float: left;
+  .date {
+    font-size: 13px;
+    margin-bottom: 0;
     margin-top: 0;
-    position: relative;
-    background: transparent;
-
-    &:before,
-    &:after {
-      content: '';
-      width: 0;
-      height: 1px;
-      position: absolute;
-      transition: all .2s linear;
-      background: $color-dude-deep-black;
-    }
-
-    a:before,
-    a:after {
-      content: '';
-      width: 1px;
-      height: 0;
-      position: absolute;
-      transition: all .1s linear;
-      background: $color-dude-deep-black;
-    }
-
-    &:hover:before,
-    &:hover:after {
-      width: 100%;
-    }
-
-    &:hover a:before,
-    &:hover a:after {
-      height: 100%;
-    }
-
-    a {
-      @include responsive-font(16px, 18px);
-      display: inline-block;
-      position: relative;
-      padding: 3px 5px;
-      border: 1px solid rgba($color-dude-deep-black, .1);
-    }
-
-    a:hover {
-      color: $color-dude-deep-black;
-    }
-
-    &:after {
-      left: 0;
-      bottom: 0;
-      transition-delay: .6;
-    }
-
-    a:after {
-      transition-delay: .4s;
-      right: -1px;
-      bottom: 0;
-    }
-
-    &:before {
-      right: 0;
-      top: 0;
-      transition-delay: .2s;
-    }
-
-    a:before {
-      transition-delay: 0s;
-      left: -1px;
-      top: 0;
-    }
-
-    &:hover:after {
-      transition-delay: 0s;
-    }
-
-    &:hover a:after {
-      transition-delay: .2s;
-    }
-
-    &:hover:before {
-      transition-delay: .4s;
-    }
-
-    &:hover a:before {
-      transition-delay: .6s;
-    }
-  }
-}
-
-.comments-link {
-  @extend %small;
-  text-align: right;
-  display: block;
-
-  svg {
-    fill: #777;
-    position: relative;
-    top: 1px;
-    margin-right: 2px;
-  }
-
-  &:hover,
-  &:focus {
-    color: #111;
-
-    a,
-    a:link,
-    a:visited,
-    svg {
-      color: #111;
-      fill: #111;
-    }
-  }
-}
-
-.entry-footer {
-  margin-top: 0;
-  margin-bottom: 0;
-
-  a {
-    color: $color-darkgrey;
-
-    &:hover {
-      color: $color-links;
-      text-decoration: none;
-    }
-  }
-}
-
-// Posts and comments navigation
-.site-main .comment-navigation,
-.site-main .posts-navigation,
-.site-main .post-navigation {
-  @include clearfix;
-  margin: 1.5em 0;
-  overflow: hidden;
-}
-
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-  float: left;
-  width: 50%;
-}
-
-.comment-navigation .nav-previous a:before,
-.posts-navigation .nav-previous a:before,
-.post-navigation .nav-previous a:before {
-  content: '← ';
-}
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-  float: right;
-  text-align: right;
-  width: 50%;
-}
-
-.comment-navigation .nav-next a:after,
-.posts-navigation .nav-next a:after,
-.post-navigation .nav-next a:after {
-  content: ' →';
-}
-
-.next-prev {
-  display: flex;
-  justify-content: space-between;
-
-  .prev {
-    float: left;
-  }
-
-  .next {
-    float: right;
-  }
-}
-
-.next-prev a {
-  @extend .cta-link;
-  margin-top: $padding-default-rows;
-
-  &:first-child {
-    margin-right: 2rem;
-  }
-
-  &:after {
-    width: 50%;
-    height: 1px;
-    background: $color-body;
-    position: relative;
-    content: '';
-    display: block;
-    bottom: -1rem;
-    transition: all $transition-duration;
-    opacity: .5;
   }
 }

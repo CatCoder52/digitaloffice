@@ -2,12 +2,11 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:33:00
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-05-30 15:32:55
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2020-07-23 13:38:50
  *
- * @package dude2019
+ * @package dude
  */
-
 function dude_register_cpt_person() {
   $labels = array(
     'name'               => _x( 'Tyypit', 'post type general name', 'dude' ),
@@ -23,7 +22,7 @@ function dude_register_cpt_person() {
     'search_items'       => __( 'Etsi tyyppejä', 'dude' ),
     'parent_item_colon'  => __( 'Tyypin isäntä:', 'dude' ),
     'not_found'          => __( 'Tyyppejä ei löytynyt.', 'dude' ),
-    'not_found_in_trash' => __( 'Tyyppejä ei löytynyt roskista.', 'dude' )
+    'not_found_in_trash' => __( 'Tyyppejä ei löytynyt roskista.', 'dude' ),
   );
 
   $args = array(
@@ -45,8 +44,8 @@ function dude_register_cpt_person() {
       'editor',
       'thumbnail',
       'page-attributes',
-      'revisions'
-    )
+      'revisions',
+    ),
   );
 
   register_post_type( 'person', $args );

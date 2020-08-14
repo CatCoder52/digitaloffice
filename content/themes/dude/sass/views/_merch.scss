@@ -1,13 +1,26 @@
 .content-area .block.block-merch {
-  margin-top: 6rem;
+  padding-top: 0;
   position: relative;
   z-index: 4;
 
+  @media (min-width: 900px) {
+    margin-top: -9rem;
+  }
+
+  .content p {
+    margin-top: 0;
+  }
+
+  h2,
+  p {
+    color: $color-white;
+  }
+
   .cols {
-    @include grid(3, $gutter_x: 4rem, $gutter_y: 4rem);
+    @include grid(3, $gutter_x: $margin-between-grid-columns-large, $gutter_y: $margin-between-grid-columns-large);
 
     @media (max-width: 1550px) {
-      @include grid(2, $gutter_x: 4rem, $gutter_y: 4rem);
+      @include grid(2, $gutter_x: $margin-between-grid-columns, $gutter_y: $margin-between-grid-columns);
     }
 
     @media (max-width: 760px) {
@@ -33,10 +46,8 @@
     z-index: 33;
     transform: rotate(-45deg);
     background: #e64242;
-    width: 500px;
     width: 69rem;
     padding-left: 0;
-    left: -50px;
     left: -20rem;
     padding-right: 14rem;
     font-size: 31px;
@@ -50,14 +61,21 @@
   .product-header {
     display: flex;
     justify-content: space-between;
+    margin-top: 1rem;
 
     h2 {
-      @extend %h4;
+      @extend %general-heading-small;
       margin-bottom: .5rem;
+      font-weight: 500;
     }
 
     p {
       font-weight: 600;
+    }
+
+    .price {
+      @extend %general-heading-small;
+      color: $color-mint;
     }
   }
 
@@ -69,8 +87,20 @@
 
   .image {
     width: 100%;
-    height: 60rem;
+    height: 58rem;
     margin-bottom: 2rem;
+
+    @media (min-width: 1200px) {
+      height: 65rem;
+    }
+
+    @media (min-width: 1555px) {
+      height: 48rem;
+    }
+
+    > div {
+      transition: none;
+    }
   }
 
   .models {
@@ -84,9 +114,9 @@
     button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button) {
       width: 50%;
       height: 5.5rem;
-      background: $color-dude-white;
-      border: 1px solid $color-dude-deep-black;
-      color: $color-dude-deep-black;
+      background: transparent;
+      border: 1px solid $color-mint;
+      color: $color-mint;
       padding-top: 0;
       padding-bottom: 0;
       align-items: center;
@@ -101,9 +131,9 @@
       }
 
       &.active {
-        background: $color-dude-deep-black;
-        border-color: $color-dude-deep-black;
-        color: $color-dude-white;
+        background: $color-mint;
+        border-color: $color-mint;
+        color: $color-midnight;
       }
 
       &:first-child {
@@ -146,9 +176,9 @@
     padding: 0;
     align-items: center;
     justify-content: center;
-    background: $color-dude-white;
-    border: 1px solid $color-dude-deep-black;
-    color: $color-dude-deep-black;
+    background: transparent;
+    border: 1px solid $color-mint;
+    color: $color-mint;
 
     @media (max-width: 1580px) {
       width: 4.5rem;
@@ -156,26 +186,27 @@
     }
 
     &:hover {
-      background-color: $color-superlightgrey;
+      background: $color-mint;
+      color: $color-midnight;
     }
 
     &.active {
-      background: $color-dude-deep-black;
-      border-color: $color-dude-deep-black;
-      color: $color-dude-white;
+      background: $color-mint;
+      border-color: $color-mint;
+      color: $color-midnight;
     }
   }
 
   button.add-to-cart:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button) {
-    background: $color-dude-white;
-    border: 1px solid $color-dude-deep-black;
-    color: $color-dude-deep-black;
+    border: 1px solid $color-mint;
+    background: $color-mint;
     height: 5.5rem;
     display: inline-flex;
     padding: 0 3rem;
     align-items: center;
     justify-content: center;
     white-space: nowrap;
+    color: $color-midnight;
 
     @media (max-width: 1580px) {
       height: auto;
@@ -264,11 +295,11 @@ label[for="simpay-4535-text-8"],
   z-index: 8;
   left: 0;
   bottom: 0;
-  background: $color-dude-black;
+  background: $color-black;
   padding: 3rem;
   transition: all $transition-duration;
   display: flex;
-  box-shadow: 10px 10px 30px -5px rgba($color-dude-black, .15);
+  box-shadow: 10px 10px 30px -5px rgba($color-black, .15);
   max-width: 100%;
   width: 100%;
   align-items: center;
@@ -281,7 +312,7 @@ label[for="simpay-4535-text-8"],
   }
 
   .comma {
-    font-weight: 300;
+    font-weight: 400;
 
     // Hide last comma
     &:last-of-type {
@@ -340,8 +371,8 @@ label[for="simpay-4535-text-8"],
 
   button {
     background: transparent;
-    color: $color-dude-white;
-    border: 1px solid $color-dude-white;
+    color: $color-mint;
+    border: 1px solid $color-mint;
     padding: 1rem 2rem;
     transition: all $transition-duration;
 
@@ -364,9 +395,9 @@ label[for="simpay-4535-text-8"],
     }
 
     &:hover {
-      background: $color-dude-white;
-      color: $color-dude-black;
-      border-color: 1px solid $color-dude-white;
+      background: $color-mint;
+      color: $color-midnight;
+      border-color: 1px solid $color-mint;
       cursor: pointer;
     }
   }
@@ -375,7 +406,7 @@ label[for="simpay-4535-text-8"],
     @include responsive-font(14px, 18px);
     display: block;
     margin: 0;
-    font-weight: 300;
+    font-weight: 400;
 
     &.head {
       font-weight: 600;
@@ -384,7 +415,7 @@ label[for="simpay-4535-text-8"],
   }
 
   svg {
-    stroke: $color-dude-white;
+    stroke: $color-white;
     margin-right: 1.5rem;
     width: 24px;
     height: 24px;
@@ -419,7 +450,7 @@ label[for="simpay-4535-text-8"],
     &.products,
     &.cart-text,
     &.empty-cart-text {
-      font-weight: 300;
+      font-weight: 400;
       font-style: normal;
 
       &.qty {
@@ -429,7 +460,7 @@ label[for="simpay-4535-text-8"],
   }
 
   * {
-    color: $color-dude-white;
+    color: $color-white;
   }
 
   @media (max-width: 600px) {
@@ -438,7 +469,6 @@ label[for="simpay-4535-text-8"],
 
   &:hover {
     cursor: pointer;
-    transform: scale(1.01);
   }
 }
 
@@ -464,14 +494,5 @@ label[for="simpay-4535-text-8"],
 @media (max-width: 600px) {
   .post-type-archive-merch .featured-image-side {
     display: none;
-  }
-
-  .post-type-archive-merch .block.block-hero .content {
-    height: auto;
-    min-height: 90rem;
-
-    .hero-description {
-      margin-bottom: 0;
-    }
   }
 }

@@ -107,7 +107,7 @@ $hero_content = get_field( 'hero_content' );
 
         <?php if ( ! empty( $form_description ) ) : ?>
           <div class="container">
-            <?php echo wpautop( $form_description ); // WPCS: XSS ok. ?>
+            <?php echo wpautop( $form_description ); // phpcs:ignore ?>
           </div>
         <?php endif; ?>
 
@@ -128,8 +128,6 @@ $hero_content = get_field( 'hero_content' );
     </div><!-- #primary -->
 
   </div><!-- #page -->
-
-<script src="//instant.page/1.2.2" type="module" integrity="sha384-2xV8M5griQmzyiY3CDqh1dn4z3llDVqZDqzjzcY+jCBCk/a5fXJmuZ/40JJAPeoU"></script>
 
 <!-- Hotjar Tracking Code for www.dude.fi -->
 <script>

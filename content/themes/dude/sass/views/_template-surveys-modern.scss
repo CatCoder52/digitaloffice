@@ -4,16 +4,38 @@
 
 // Vars
 $max-width: 100rem;
-$color-checked: #67d88c;
+$color-checked: $color-mint;
+$color-borders: #898888;
 
 body.template-surveys-modern {
-  background-image: url('../images/survey-bg.jpg');
+  // background-image: url('../images/survey-bg.jpg');
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: top;
-  background-color: #111;
+  background-color: $color-midnight;
   background-attachment: fixed;
-  color: $color-dude-white;
+  color: $color-white;
+
+  .gsurvey-likert * {
+    border-radius: 0 !important;
+  }
+
+  table.gsurvey-likert th.gsurvey-likert-choice-label {
+    background-color: transparent;
+  }
+
+  .gform_wrapper table.gsurvey-likert {
+    margin-bottom: 36px;
+  }
+
+  .gform_wrapper table.gsurvey-likert,
+  table.gsurvey-likert th.gsurvey-likert-choice-label,
+  table.gsurvey-likert tr td,
+  table.gsurvey-likert .gsurvey-likert-choice,
+  table.gsurvey-likert .gsurvey-likert-row-label {
+    border: 0;
+    box-shadow: none;
+  }
 
   .gsurvey-likert * {
     border-radius: 0 !important;
@@ -52,6 +74,7 @@ body.template-surveys-modern {
   }
 
   .gform_wrapper .description_above .gfield_description {
+    font-size: var(--font-size-general-small);
     padding: 0 0 30px;
     text-align: center;
     max-width: 700px;
@@ -106,8 +129,8 @@ body.template-surveys-modern {
   }
 
   * {
-    font-family: $font-alt;
-    color: $color-dude-white;
+    font-family: $font-base;
+    color: $color-white;
   }
 
   .site {
@@ -155,7 +178,7 @@ body.template-surveys-modern {
     .gform_confirmation_message {
       @include responsive-font(18px, 30px);
       line-height: 1.5;
-      color: $color-dude-white;
+      color: $color-white;
     }
   }
 
@@ -247,7 +270,7 @@ body.template-surveys-modern {
         width: auto;
         min-width: 123px;
         margin-right: 1rem;
-        border: 1px solid #808182;
+        border: 1px solid $color-borders;
         background: transparent;
         border-radius: 0;
         padding: 0 !important;
@@ -283,7 +306,7 @@ body.template-surveys-modern {
       display: block;
       position: relative;
       margin-bottom: 20px;
-      color: $color-dude-white;
+      color: $color-white;
       cursor: pointer;
       user-select: none;
       padding: 12px !important;
@@ -342,14 +365,14 @@ body.template-surveys-modern {
       }
 
       @media (max-width: 400px) {
-        font-size: 16px;
+        font-size: var(--font-size-general-small);
         margin-bottom: 2rem;
       }
     }
 
     ul.gform_fields li.gfield {
       margin-bottom: 10rem;
-      border: 1px solid #898888;
+      border: 1px solid $color-borders;
       padding: 4rem 5rem 0;
       overflow: hidden;
 
@@ -463,7 +486,7 @@ body.template-surveys-modern {
     }
 
     svg {
-      fill: $color-dude-white;
+      fill: $color-white;
       width: 100px;
       height: 26px;
       margin-top: 8px;
@@ -515,7 +538,6 @@ body.template-surveys-modern {
 
     p {
       margin-top: 0;
-      margin-bottom: 0;
       padding-bottom: 4rem;
       margin-bottom: 9rem;
       font-size: 17px;
@@ -545,7 +567,6 @@ body.template-surveys-modern {
   }
 
   .survey-start-wrapper {
-    width: 100%;
     display: flex;
     text-align: center;
     align-items: center;
@@ -601,7 +622,7 @@ body.template-surveys-modern {
     white-space: nowrap !important;
     min-height: 48px !important;
     background-color: $color-checked !important;
-    color: $color-dude-white !important;
+    color: $color-white !important;
     transition: background-color .2s ease 0s, color .2s ease 0s, border-color .2s ease 0s, opacity .2s ease 0s !important;
     outline: none !important;
     border-width: 1px !important;
@@ -626,7 +647,7 @@ body.template-surveys-modern {
       padding-top: 3rem !important;
       padding-bottom: 3rem !important;
       border: 0 !important;
-      background: #68d98b;
+      background: #68d98b !important;
 
       &:hover {
         background: darken(#68d98b, 15%) !important;
@@ -689,7 +710,7 @@ body.template-surveys-modern {
         padding-bottom: 18px !important;
 
         @media (max-width: 900px) {
-          font-size: 16px !important;
+          font-size: var(--font-size-general-small) !important;
         }
       }
     }

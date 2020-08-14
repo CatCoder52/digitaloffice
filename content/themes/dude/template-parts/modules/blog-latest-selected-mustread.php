@@ -3,9 +3,9 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 15:26:12
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-06-25 13:39:51
+ * @Last Modified time: 2020-07-24 11:18:09
  *
- * @package dude2019
+ * @package dude
  */
 
 $args = array(
@@ -27,14 +27,16 @@ if ( ! $query->have_posts() || empty( $mustread ) ) {
 
 global $blog_latest_excerpt_override; ?>
 
-<section class="block block-latest-selected-mustread">
+<section class="block block-latest-selected-mustread has-dark-bg">
   <div class="container">
 
-    <div class="cols">
+    <header class="block-head block-head-small">
+      <h2 class="block-title">Tarinoita Dudelta</h2>
+      <p class="read-more"><a class="cta-link" href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ); ?>">Katso kaikki</a></p>
+    </header>
 
-      <div class="col col-latest">
-        <h2 class="block-title">Uusin bloggauksemme</h2>
-
+    <div class="rows">
+      <div class="row row-latest">
         <?php while ( $query->have_posts() ) : $query->the_post();
           $blog_latest_excerpt_override = get_the_id();
           $video_bg = get_post_meta( get_the_id(), 'article_video', true );
@@ -44,7 +46,7 @@ global $blog_latest_excerpt_override; ?>
             <div class="image has-lazyload">
 
               <?php if ( $video_bg ) : ?>
-                <div class="shade"></div>
+                <div class="shade" aria-hidden="true"></div>
                 <div class="vimeo-wrapper vimeo-wrapper-upsell-front-page">
                   <iframe src="https://player.vimeo.com/video/<?php echo str_replace( array( 'http:', 'https:', 'vimeo.com', '/' ), '', $video_bg ) ?>?background=1&autoplay=1&loop=1&byline=0&title=0"
                     frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
@@ -52,64 +54,34 @@ global $blog_latest_excerpt_override; ?>
               <?php endif; ?>
 
               <a href="<?php the_permalink() ?>" class="global-link"><span class="screen-reader-text"><?php the_title() ?></span></a>
-              <div class="background-image preview lazyload" style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'tiny-preload-thumbnail' ) ?>');" data-src="<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>" data-src-mobile="<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>"></div>
-              <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>');"<?php endif; ?>></div>
-              <noscript><div class="background-image full-image" style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>');"></div></noscript>
+              <div aria-hidden="true" class="background-image preview lazyload" style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'tiny-preload-thumbnail' ) ?>');" data-src="<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>" data-src-mobile="<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>"></div>
+              <div aria-hidden="true" class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : // phpcs:ignore ?> style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>');"<?php endif; ?>></div>
+              <noscript><div aria-hidden="true" class="background-image full-image" style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>');"></div></noscript>
             </div>
 
             <div class="content">
               <h3><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
               <?php the_excerpt(); ?>
+
+              <p class="button-wrapper"><a class="button button-glitch button-white" href="<?php echo esc_url( get_the_permalink() ); ?>">Lue kirjoitus</a></p>
+
             </div>
           </div>
 
-        <?php endwhile; wp_reset_query(); wp_reset_postdata(); ?>
+        <?php endwhile; wp_reset_postdata(); wp_reset_postdata(); ?>
       </div>
 
-      <div class="col col-mustread">
-        <h2 class="block-title">Valitsemiamme juttuja sinulle</h2>
+      <div class="row row-mustread">
 
         <?php foreach ( $mustread as $post ) : ?>
           <div class="post">
-            <div class="image">
-
-              <?php
-              $video_bg = get_post_meta( get_the_id(), 'article_video', true );
-              if ( $video_bg ) : ?>
-                <div class="shade"></div>
-                <div class="vimeo-wrapper vimeo-wrapper-upsell-small">
-                  <iframe src="https://player.vimeo.com/video/<?php echo str_replace( array( 'http:', 'https:', 'vimeo.com', '/' ), '', $video_bg ) ?>?background=1&autoplay=1&loop=1&byline=0&title=0"
-                    frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                </div>
-              <?php endif; ?>
-
-              <div class="background-image preview lazyload" style="background-image: url('<?php echo get_the_post_thumbnail_url( $post, 'tiny-preload-thumbnail' ) ?>');" data-src="<?php echo get_the_post_thumbnail_url( $post, 'large' ) ?>" data-src-mobile="<?php echo get_the_post_thumbnail_url( $post, 'medium' ) ?>"></div>
-              <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo get_the_post_thumbnail_url( $post, 'medium' ) ?>');"<?php endif; ?>></div>
-              <noscript><div class="background-image full-image" style="background-image: url('<?php echo get_the_post_thumbnail_url( $post, 'medium' ) ?>');"></div></noscript>
-            </div>
-
             <div class="content">
               <h3><a href="<?php echo get_the_permalink( $post ) ?>"><?php echo get_the_title( $post ) ?></a></h3>
-              <?php echo wpautop( get_the_excerpt( $post ) ) ?>
+              <?php echo wpautop( get_the_excerpt( $post ) ); // phpcs:ignore ?>
             </div>
           </div>
         <?php endforeach; ?>
       </div>
     </div>
-
-    <div class="newsletter has-grey-bg has-grey-bg-extend-right">
-      <form action="https://dude.us8.list-manage.com/subscribe/post?u=bda4635b58bba8d9716eb90a6&amp;id=efe9db80e6" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
-        <h2 class="block-title">Tilaa bittivirtojen pulloposti</h2>
-        <p>Koottuja kuulumisia sisältävä bittivirtojen pulloposti saapuu rantaasi noin kolmen kuukauden välein.</p>
-        <label for="mce-EMAIL" class="screen-reader-text">Sähköpostiosoite:</label>
-
-        <div class="inputs">
-          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Sähköpostiosoite">
-          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_bda4635b58bba8d9716eb90a6_efe9db80e6" tabindex="-1" value=""></div>
-          <input type="submit" value="Lähetä" name="subscribe" id="mc-embedded-subscribe" class="button">
-        </div>
-      </form>
-    </div>
-
   </div>
 </section>

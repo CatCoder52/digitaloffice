@@ -1,59 +1,35 @@
 .block.block-hero.block-hero-service,
 .block.block-hero.block-hero-reference-archive {
-  background: $color-dude-deep-black;
-  color: $color-dude-white;
+  background-color: $color-midnight;
+  color: $color-white;
+  overflow: hidden;
+
+  h1,
+  h2 {
+    color: $color-white;
+  }
 
   h1 {
-    color: $color-dude-white;
+    margin-bottom: 3rem;
+  }
+
+  .container {
+    color: $color-white;
   }
 
   .content {
-    max-width: 70rem;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 7rem;
+    max-width: 870px;
 
-    @media (max-width: $responsivenav) {
-      padding-left: 2rem;
-      padding-right: 2rem;
+    p {
+      @extend %general-heading-small;
+    }
+
+    p:not(.button-wrapper) {
+      margin-bottom: 5rem;
     }
   }
+}
 
-  .service-hero-wrap {
-    // Nav offset
-    margin-bottom: -6rem;
-  }
-
-  .customer-logos svg {
-    display: block;
-    max-width: 100px;
-    margin-bottom: 2rem;
-
-    @media (max-width: $container-ipad) {
-      margin-bottom: .5rem;
-    }
-
-    @media (max-width: 600px) {
-      max-width: 60px;
-    }
-  }
-
-  .customer-logos-list {
-    margin-top: 3.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    padding: 0;
-
-    li {
-      display: inline-block;
-      opacity: 1;
-    }
-
-    > * {
-      margin: 0 2.5rem;
-    }
-  }
+.block.block-hero.block-hero-reference-archive + .block.block-references.block-references-archive {
+  padding-top: 0;
 }

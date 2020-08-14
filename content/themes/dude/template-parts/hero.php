@@ -2,40 +2,20 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:05:23
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-06-07 13:19:42
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2020-07-18 19:09:03
  *
- * @package dude2019
+ * @package dude
  */
 
 if ( is_front_page() ) {
   include get_theme_file_path( 'template-parts/hero-fp.php' );
-} else if ( 9 === get_the_id() ) { // tech page
-  $logos = array(
-    'sievo-alt',
-    'bauermedia-alt',
-    'realsnacks-alt',
-    'elonen-flat',
-    'blackbruin-alt',
-    'sohwi-alt',
-    'bitwise-alt',
-  );
-
+} else if ( 9 === get_the_id() ) {
   include get_theme_file_path( 'template-parts/hero-service.php' );
-} else if ( 4485 === get_the_id() ) { // visual page
-  $logos = array(
-    'abbq-flat',
-    'aicci-alt',
-    'nilkko-alt',
-    'barexplosive-alt',
-    'byemmi-alt',
-    'verena-alt',
-    'varjola-alt',
-  );
-
+} else if ( 4485 === get_the_id() ) {
   include get_theme_file_path( 'template-parts/hero-service.php' );
-} else if ( 4487 === get_the_id() ) {
-  include get_theme_file_path( 'template-parts/hero-contact.php' );
+} else if ( 4449 === get_the_id() ) {
+  include get_theme_file_path( 'template-parts/hero-company.php' );
 } else if ( 4491 === get_the_id() ) {
   include get_theme_file_path( 'template-parts/hero-jobs.php' );
 } else if ( is_home() || is_category() || is_tag() || is_author() ) {
@@ -46,6 +26,8 @@ if ( is_front_page() ) {
   include get_theme_file_path( 'template-parts/hero-contact-thanks.php' );
 } else if ( 5973 === get_the_id() ) {
   include get_theme_file_path( 'template-parts/hero-merch-thanks.php' );
+} else if ( 6357 === get_the_id() ) {
+  include get_theme_file_path( 'template-parts/hero-start-project.php' );
 } else if ( 5975 === get_the_id() ) {
   include get_theme_file_path( 'template-parts/hero-merch-fail.php' );
 } else if ( is_post_type_archive( 'reference' ) ) {

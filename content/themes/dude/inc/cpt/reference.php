@@ -2,12 +2,11 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:30:53
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2019-06-03 17:42:21
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2020-07-23 13:39:09
  *
- * @package dude2019
+ * @package dude
  */
-
 function dude_register_cpt_reference() {
   $labels = array(
     'name'               => _x( 'Työt', 'post type general name', 'dude' ),
@@ -45,7 +44,7 @@ function dude_register_cpt_reference() {
       'thumbnail',
       'excerpt',
       'revisions',
-      'page-attributes'
+      'page-attributes',
     ),
   );
 

@@ -89,7 +89,7 @@ if ( $show_chat_greeting ) {
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="profile" href="http://gmpg.org/xfn/11">
-  <noscript><link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/noscript.css"></noscript>
+  <noscript><link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/noscript.css"></noscript>
 
   <?php wp_head();
 
@@ -108,26 +108,25 @@ if ( $show_chat_greeting ) {
 </head>
 
 <body <?php body_class( $body_class ); ?>>
+<div class="site" id="swup">
 
-  <?php if ( is_page( 4485 ) ) : ?>
-    <div id="blueimp-gallery" class="blueimp-gallery" aria-hidden="true">
-      <div class="slides"></div>
-      <h3 class="title"></h3>
-      <a class="prev">‹</a>
-      <a class="next">›</a>
-      <a class="close">×</a>
-      <a class="play-pause"></a>
-      <ol class="indicator"></ol>
-      <div class="numbers"><span id="pos"></span> / <span id="count"></span></div>
-      <div class="please-rotate-nag"><div class="content"><div class="phone"></div><div class="message">Käännä älylaitteesi vaakatasoon</div></div></div>
-    </div>
-  <?php endif; ?>
+<!-- Glitch effects for buttons -->
+<?php if ( ! preg_match( '/11.1.2 Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : // phpcs:ignore ?>
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="svg-sprite">
+    <defs>
+        <filter id="filter">
+            <feTurbulence aria-hidden="true" type="fractalNoise" baseFrequency="0.000001 0.000001" numOctaves="1" result="warp" seed="1"></feTurbulence>
+            <feDisplacementMap aria-hidden="true" xChannelSelector="R" yChannelSelector="G" scale="30" in="SourceGraphic" in2="warp"></feDisplacementMap>
+        </filter>
+    </defs>
+</svg>
+<?php endif; ?>
 
   <div id="page" class="site">
-   <a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'dude' ); ?></a>
+   <a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Hyppää sisältöön', 'dude' ); ?></a>
 
    <div class="nav-container">
-    <header class="site-header opacity-on-load" role="banner">
+    <header class="site-header" role="banner">
 
       <div class="site-branding">
         <?php if ( is_front_page() && is_home() ) : ?>
@@ -148,97 +147,107 @@ if ( $show_chat_greeting ) {
 
         $description = get_bloginfo( 'description', 'display' );
         if ( $description || is_customize_preview() ) : ?>
-          <p class="site-description screen-reader-text"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+          <p class="site-description screen-reader-text"><?php echo $description; // phpcs:ignore ?></p>
         <?php endif; ?>
       </div><!-- .site-branding -->
 
       <p class="call-me-maybe"><a href="tel:0408351033"><?php include get_theme_file_path( '/svg/phone.svg' ); ?> <span>Kilauta</span></a></p>
 
-      <div class="main-navigation-wrapper opacity-on-load" id="main-navigation-wrapper">
+      <div class="main-navigation-wrapper" id="main-navigation-wrapper">
 
-        <button id="nav-toggle" class="nav-toggle nav-toggle-mobile hamburger" type="button" aria-label="<?php esc_attr_e( 'Menu', 'dude' ); ?>">
-          <span class="hamburger-box">
-            <span class="hamburger-inner"></span>
+      <nav class="nav-primary-desktop" style="display: none;" aria-label="Työpöydän päävalikko">
+          <ul class="menu-items nav-menu">
+            <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-18"><a href="<?php echo get_the_permalink( 9 ); ?>" data-text="Verkkosivut">Verkkosivut</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-19"><a href="<?php echo get_the_permalink( 4485 ); ?>" data-text="Suunnittelu">Suunnittelu</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4482"><a href="<?php echo get_the_permalink( 4493 ); ?>" data-text="Töitämme">Töitämme</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-22"><a href="<?php echo get_the_permalink( 4487 ); ?>" data-text=">Ota yhteyttä">Ota yhteyttä</a></li>
+          </ul>
+        </nav><!-- #nav -->
+
+        <button id="nav-toggle" class="nav-toggle nav-toggle-desktop hamburger firstfocusableitem">
+          <span class="hamburger-box" aria-hidden="true">
+            <span class="hamburger-inner" aria-hidden="true"></span>
           </span>
-          <span id="nav-toggle-label" class="screen-reader-text" aria-label="<?php esc_attr_e( 'Menu', 'dude' ); ?>"><?php esc_attr_e( 'Menu', 'dude' ); ?></span>
+          <span id="nav-toggle-label" class="screen-reader-text toggle-text"><?php esc_attr_e( 'Avaa valikko', 'dude' ); ?></span>
         </button>
 
-        <nav id="nav" class="nav-primary" role="navigation" aria-expanded="false">
+        <nav id="nav" class="nav-primary" aria-expanded="false" aria-label="Mobiilivalikko" tabindex="-1">
+          <p class="top-button-holder">
+            <a href="<?php echo esc_url( get_the_permalink( 6357 ) ); ?>" class="button button-glitch start-project">Aloitetaan projektisi<?php include get_theme_file_path( '/svg/arrow-right.svg' ); ?></a>
+          </p>
 
-        <div class="nav-items">
-          <div class="content">
-            <h2>Palvelumme</h2>
-            <ul class="menu-items nav-menu" aria-expanded="false">
-              <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-18"><a href="<?php echo get_page_link( 9 ); ?>">Verkkosivut</a></li>
-              <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-19"><a href="<?php echo get_page_link( 4485 ); ?>">Visuaalinen suunnittelu</a></li>
-            </ul>
-          </div>
+          <div class="container">
 
-          <div class="content">
-            <h2>Tekemisemme</h2>
-            <ul class="menu-items nav-menu" aria-expanded="false">
-              <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4482"><a href="<?php echo get_page_link( 4493 ); ?>">Töitämme</a></li>
-              <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4480"><a href="<?php echo get_page_link( 4489 ); ?>">Yhteisö & koodi</a></li>
-            </ul>
-          </div>
+            <div class="cols cols-navs">
+              <div class="col col-secondary-nav">
+                <ul class="menu-items nav-menu">
+                  <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo esc_url( get_post_type_archive_link( 'post' ) ); ?>">Blogi</a></li>
+                  <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo esc_url( get_the_permalink( 4489 ) ); ?>">Koodi & yhteisö</a></li>
+                  <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo esc_url( get_the_permalink( 4449 ) ); ?>">Yritys & kulttuuri</a></li>
+                  <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo esc_url( get_the_permalink( 4491 ) ); ?>">Työpaikat</a></li>
+                  <li style="display: none" class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo esc_url( get_the_permalink( 6704 ) ); ?>">UKK</a></li>
+                  <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a data-no-swup href="<?php echo get_post_type_archive_link( 'merch' ); ?>">Merch</a></li>
+                  <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="https://handbook.dude.fi">Handbook</a></li>
+                </ul>
 
-          <div class="content">
-            <h2>Meistä lisää</h2>
-            <ul class="menu-items nav-menu" aria-expanded="false">
-              <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-4478"><a href="<?php echo get_page_link( 4449 ); ?>">Yritys</a></li>
-              <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4481"><a href="<?php echo get_page_link( 4491 ); ?>">Työpaikat</a></li>
-              <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-4479"><a href="<?php echo get_page_link( 11 ); ?>">Blogi</a></li>
-              <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-4450"><a href="<?php echo get_home_url(); ?>/merch">Merch</a></li>
-            </ul>
-          </div>
+                <div class="cols cols-contact">
+                  <div class="col">
+                    <h3 class="contact-title">Asiakkuudet</h3>
+                    <p>Kristian Hohkavaara<br/>
+                      <a href="tel:0408351033">040 835 1033</a><br/>
+                      <a href="mailto:kristian@dude.fi">kristian@dude.fi</a>
+                    </p>
+                  </div>
 
-          <div class="content">
-            <h2>Yhteydet</h2>
+                  <div class="col">
+                    <h3 class="contact-title">Yhteys</h3>
+                    <p>
+                      <a href="mailto:moro@dude.fi">moro@dude.fi</a><br/>
+                      <button class="chat open-chat open-chat-contact" aria-label="Avaa chat" tabindex="0">Avaa chat!</button>
+                    </p>
+                  </div>
+                </div>
 
-            <ul class="menu-items nav-menu" aria-expanded="false">
-              <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-22"><a href="<?php echo get_page_link( 4487 ); ?>">Yhteystiedot</a></li>
-            </ul>
+              </div>
 
-            <p class="contact-details">Kauppakatu 14<br />
-              40100 Jyväskylä<br />
-              <a href="https://maamerkit.dude.fi" target="_blank"><?php include get_theme_file_path( '/svg/globe.svg' ); ?>Maamerkit kartalla</a>
+              <div class="col col-primary-nav">
+                <ul class="menu-items nav-menu">
+                  <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_home_url(); ?>">Etusivu</a></li>
+                  <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_the_permalink( 9 ); ?>">Verkkosivut</a></li>
+                  <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_the_permalink( 4485 ); ?>">Suunnittelu</a></li>
+                  <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_post_type_archive_link( 'reference' ); ?>">Töitämme</a></li>
+                  <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a id="lastfocusableitem" href="<?php echo get_the_permalink( 4487 ); ?>">Yhteys</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <p class="top-button-holder show-on-mobile">
+              <a href="<?php echo esc_url( get_the_permalink( 6357 ) ); ?>" class="button button-glitch">Aloitetaan projektisi<?php include get_theme_file_path( '/svg/arrow-right.svg' ); ?></a>
             </p>
 
-            <ul class="contact-actions">
-              <li><a class="email" href="mailto:moro@dude.fi">moro@dude.fi</a></li>
-              <li><a class="phone" href="tel:0408351033" aria-label="Soita numeroon 040 835 1033">040 835 1033</a></li>
-              <li><button class="chat open-chat" aria-label="Avaa chat"><?php include get_theme_file_path( '/svg/chat.svg' ); ?>Avaa chat</button></li>
-            </ul>
+            <div class="cols cols-contact show-on-mobile">
+              <div class="col">
+                <h3 class="contact-title contact-title-mobile">Asiakkuudet</h3>
+                <p>Kristian Hohkavaara<br/>
+                  <a href="tel:0408351033">040 835 1033</a><br/>
+                  <a href="mailto:kristian@dude.fi">kristian@dude.fi</a>
+                </p>
+              </div>
+
+              <div class="col">
+                <h3 class="contact-title contact-contact-mobile">Yhteys</h3>
+                <p>
+                  <a href="mailto:moro@dude.fi">moro@dude.fi</a><br/>
+                  <button class="chat open-chat open-chat-contact" aria-label="Avaa chat" tabindex="0">Avaa chat!</button>
+                </p>
+              </div>
+            </div>
+
           </div>
-        </div>
 
         </nav>
-
-        <nav id="nav-desktop" class="nav-primary-desktop" role="navigation">
-
-          <ul class="menu-items nav-menu">
-            <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-18"><a href="<?php echo get_page_link( 9 ); ?>">Verkkosivut</a></li>
-            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-19"><a href="<?php echo get_page_link( 4485 ); ?>">Visuaalinen suunnittelu</a></li>
-            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4482"><a href="<?php echo get_page_link( 4493 ); ?>">Töitämme</a></li>
-            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-22"><a href="<?php echo get_page_link( 4487 ); ?>">Ota yhteyttä</a></li>
-            <li class="dude-nav-more nav-toggle menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4477"><button id="nav-toggle-desktop"><span class="toggle-text">Lisää</span> <span class="plus-cross">+</span></button></li>
-          </ul>
-
-           <noscript>
-             <ul class="menu-items menu-items-no-js nav-menu">
-              <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-18"><a href="<?php echo get_page_link( 9 ); ?>">Verkkosivut</a></li>
-              <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-19"><a href="<?php echo get_page_link( 4485 ); ?>">Visuaalinen suunnittelu</a></li>
-              <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4482"><a href="<?php echo get_page_link( 4493 ); ?>">Töitämme</a></li>
-              <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-22"><a href="<?php echo get_page_link( 4487 ); ?>">Ota yhteyttä</a></li>
-              <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item"><a href="<?php echo get_page_link( 4449 ); ?>">Yritys</a></li>
-               <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_page_link( 4491 ); ?>">Työpaikat</a></li>
-               <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item"><a href="<?php echo get_page_link( 11 ); ?>">Blogi</a></li>
-               <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_page_link( 4489 ); ?>">Yhteisö & koodi</a></li>
-              </ul>
-            </noscript>
-
-        </nav><!-- #nav -->
       </div>
+
     </header>
   </div><!-- .nav-container -->
 

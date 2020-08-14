@@ -3,9 +3,9 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2019-06-25 13:38:08
+ * @Last Modified time: 2020-07-23 14:05:45
  *
- * @package dude2019
+ * @package dude
  */
 
 $title = get_the_title();
@@ -17,34 +17,20 @@ if ( ! empty( $title_alt ) ) {
   $title = $title_alt;
 } ?>
 
-<section class="block block-hero-reference">
+<section class="block block-hero block-hero-reference is-centered has-dark-bg">
 
   <div class="container">
+    <div class="content">
 
-    <div class="cols">
-      <div class="col">
-        <div class="image has-lazyload">
-          <div class="background-image preview lazyload" style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'tiny-preload-thumbnail' ) ?>');" data-src="<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>" data-src-mobile="<?php echo get_the_post_thumbnail_url( get_the_id(), 'medium' ) ?>"></div>
-          <div class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : ?> style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>');"<?php endif; ?>></div>
-          <noscript><div class="background-image full-image" style="background-image: url('<?php echo get_the_post_thumbnail_url( get_the_id(), 'large' ) ?>');"></div></noscript>
-        </div>
-      </div>
+      <h1 class="swup-transition-fade"><?php echo esc_html( $title ); ?></h1>
 
-      <div class="col has-grey-bg">
-        <p class="breadcrumb"><a href="<?php echo get_post_type_archive_link( 'reference' ) ?>">Töitämme</a> <?php include get_theme_file_path( '/svg/arrow-breadcrumb.svg' ); ?> <?php the_title() ?></p>
-
-        <div class="content">
-          <?php if ( ! empty( $logofile ) && file_exists( get_theme_file_path( "svg/logos/{$logofile}.svg" ) ) ) {
-            include get_theme_file_path( "svg/logos/{$logofile}.svg" );
-          } ?>
-
-          <h1><?php echo esc_html( $title ) ?></h1>
+        <div class="hero-description swup-transition-fade">
           <?php the_excerpt(); ?>
 
-          <p class="arrow-link-wrapper"><a href="<?php echo esc_url( $url ) ?>" class="arrow-link">Vieraile sivustolla<span class="arrow"></span></a></p>
+          <p class="button-wrapper"><a class="button button-glitch button-mint" href="<?php echo esc_url( $url ) ?>">Siirry sivustolle<?php include get_theme_file_path( '/svg/arrow-right.svg' ); ?></a></p>
         </div>
-      </div>
-    </div>
 
+    </div>
   </div>
+
 </section>

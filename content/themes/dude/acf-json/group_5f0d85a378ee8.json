@@ -1,0 +1,43 @@
+{
+    "key": "group_5f0d85a378ee8",
+    "title": "Työn nosto",
+    "fields": [
+        {
+            "key": "field_5f0d85b2ffc18",
+            "label": "Timanttinen työnäyte",
+            "name": "reference_is_timang",
+            "type": "true_false",
+            "instructions": "Timanttisille työnäytteille annetaan suurempi painoarvo.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "reference"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1594721780
+}
