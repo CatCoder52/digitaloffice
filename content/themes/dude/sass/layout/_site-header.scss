@@ -82,16 +82,17 @@ nav ul li button {
   }
 
   a {
-    color: #2ecc71;
+    color: #4cd9b8;
     display: flex;
     align-items: center;
   }
 
-  a:hover {
-    color: lighten(#2ecc71, 15%);
+  a:hover,
+  a:focus {
+    color: darken(#4cd9b8, 15%);
 
     svg {
-      stroke: lighten(#2ecc71, 15%);
+      stroke: darken(#4cd9b8, 15%);
     }
   }
 }
