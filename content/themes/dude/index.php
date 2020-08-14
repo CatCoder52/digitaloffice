@@ -26,7 +26,7 @@ get_header(); ?>
       <?php if ( ! is_archive() || ! is_paged() ) : ?>
         <section class="block block-hero block-hero-light block-hero-blog block-hero-basic is-centered has-light-bg">
           <div class="container">
-            <h1>Tarinoita Dudelta</h1>
+            <h1 id="content">Tarinoita Dudelta</h1>
             <div class="hero-description">
               <p>Duden blogi sisältää tekijöiden ajatuksia WordPressistä, verkkosivujen suunnittelusta ja kaikkea siltä väliltä.</p>
             </div>

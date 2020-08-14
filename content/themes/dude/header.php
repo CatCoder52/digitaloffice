@@ -123,7 +123,7 @@ if ( $show_chat_greeting ) {
 <?php endif; ?>
 
   <div id="page" class="site">
-   <a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Hyppää sisältöön', 'dude' ); ?></a>
+   <a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Hyppää sisältöön', 'dude' ); ?></a>
 
    <div class="nav-container">
     <header class="site-header" role="banner">

@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-23 14:05:27
+ * @Last Modified time: 2020-08-14 22:43:07
  *
  * @package dude
  */
@@ -18,7 +18,7 @@ $content = '<p>Haluatko olla oman elämäsi Dude tai Dudette? Koetko vahvaa tunn
   <div class="container">
 
     <div class="content">
-      <h1><?php echo $title; ?></h1>
+      <h1 id="content"><?php echo $title; ?></h1>
 
       <?php if ( ! empty( $content ) ) { ?>
         <div class="hero-description swup-transition-fade">

@@ -91,7 +91,7 @@ $hero_content = get_field( 'hero_content' );
         <header class="survey-header">
           <div class="survey-header--text">
             <?php if ( ! empty( $form_title ) ) : ?>
-              <h1><?php echo $form_title; ?></h1>
+              <h1 id="content"><?php echo $form_title; ?></h1>
             <?php endif; ?>
 
             <?php if ( ! empty( $hero_content ) ) : ?>

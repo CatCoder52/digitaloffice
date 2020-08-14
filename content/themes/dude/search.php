@@ -19,7 +19,7 @@ get_template_part( 'template-parts/hero', get_post_type() ); ?>
       <?php if ( have_posts() ) { ?>
 
         <header class="page-header">
-          <h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'dude' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+          <h1 id="content" class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'dude' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
         </header><!-- .page-header -->
 
       <?php while ( have_posts() ) {

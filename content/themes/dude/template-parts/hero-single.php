@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-23 14:06:50
+ * @Last Modified time: 2020-08-14 22:45:12
  *
  * @package dude
  */
@@ -46,7 +46,7 @@ if ( has_post_thumbnail() ) {
 
   <div class="container">
     <div class="content">
-      <p class="block-title-pre" aria-describedby="block-title-<?php echo sanitize_title( get_the_title() ) ?>"><?php echo ucfirst( date_i18n( 'l', get_the_date( 'U' ) ) ) ?>na, <?php echo get_the_date( 'j.n.Y' ) ?></p>
+      <p id="content" class="block-title-pre" aria-describedby="block-title-<?php echo sanitize_title( get_the_title() ) ?>"><?php echo ucfirst( date_i18n( 'l', get_the_date( 'U' ) ) ) ?>na, <?php echo get_the_date( 'j.n.Y' ) ?></p>
 
       <h1 id="block-title-<?php echo sanitize_title( get_the_title() ) ?>"><?php the_title() ?></h1>
 

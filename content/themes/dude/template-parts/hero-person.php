@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-23 14:05:38
+ * @Last Modified time: 2020-08-14 22:44:48
  *
  * @package dude
  */
@@ -28,7 +28,7 @@ if ( ! empty( $social ) ) {
 
       <div class="content">
         <header class="block-head">
-          <p class="block-title-pre" aria-describedby="block-title-job-title"><?php echo esc_html( $job_title ) ?></p>
+          <p id="content" class="block-title-pre" aria-describedby="block-title-job-title"><?php echo esc_html( $job_title ) ?></p>
           <h1 class="block-title" id="block-title-job-title"><?php the_title() ?></h1>
         </header>
 

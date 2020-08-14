@@ -90,7 +90,6 @@ $form_description = get_field( 'form_description' );
           <header class="survey-header">
             <?php include get_theme_file_path( '/svg/logo.svg' ); ?>
 
-
             <?php if ( ! empty( $form_title ) ) : ?>
               <h1><?php echo $form_title; ?></h1>
             <?php endif; ?>

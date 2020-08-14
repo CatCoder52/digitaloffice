@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-24 11:17:52
+ * @Last Modified time: 2020-08-14 22:45:03
  *
  * @package dude
  */
@@ -37,7 +37,7 @@ $button = get_post_meta( get_the_id(), 'hero_button', true );
 
 <div class="container">
 
-    <h1 class="swup-transition-fade"><?php the_title() ?></h1>
+    <h1 id="content" class="swup-transition-fade"><?php the_title() ?></h1>
 
     <div class="service-hero-wrap swup-transition-fade">
       <div class="content">

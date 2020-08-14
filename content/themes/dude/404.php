@@ -19,7 +19,7 @@ get_header(); ?>
         <div class="container">
 
           <div class="content">
-            <h1 class="screen-reader-text">Sivua ei löydy</h1>
+            <h1 id="content" class="screen-reader-text" id="content">Sivua ei löydy</h1>
 
             <div class="hero-description">
               <p><span class="dudefi">dude.fi</span></p>
