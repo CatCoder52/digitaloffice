@@ -172,7 +172,7 @@ if ( $show_chat_greeting ) {
       <nav class="nav-primary-desktop" style="display: none;" aria-label="Työpöydän päävalikko">
           <ul class="menu-items nav-menu">
             <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-18"><a href="<?php echo get_the_permalink( 9 ); ?>" data-text="Verkkosivut">Verkkosivut</a></li>
-            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-19"><a href="<?php echo get_the_permalink( 4485 ); ?>" data-text="Visuaalinen suunnittelu">Visuaalinen suunnittelu</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-19"><a href="<?php echo get_the_permalink( 4485 ); ?>" data-text="Suunnittelu">Suunnittelu</a></li>
             <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4482"><a href="<?php echo get_the_permalink( 4493 ); ?>" data-text="Töitämme">Töitämme</a></li>
             <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-22"><a href="<?php echo get_the_permalink( 4487 ); ?>" data-text=">Ota yhteyttä">Ota yhteyttä</a></li>
           </ul>
