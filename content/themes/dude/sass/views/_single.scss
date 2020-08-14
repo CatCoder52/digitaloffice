@@ -387,6 +387,10 @@ body.single .block.block-single:not(.block-single-reference) {
     padding-right: 2rem;
   }
 
+  @media (max-width: 600px) {
+    flex-wrap: wrap;
+  }
+
   .author-image {
     margin-right: 5rem;
     display: flex;
@@ -400,6 +404,10 @@ body.single .block.block-single:not(.block-single-reference) {
     @media (max-width: $container-mobile) {
       margin: 0;
     }
+
+    @media (max-width: 600px) {
+      width: 100%;
+    }
   }
 
   img {
@@ -410,6 +418,10 @@ body.single .block.block-single:not(.block-single-reference) {
 
     @media (max-width: 760px) {
       min-width: 40rem;
+    }
+
+    @media (max-width: 600px) {
+      min-width: 0;
     }
   }
 
@@ -423,6 +435,11 @@ body.single .block.block-single:not(.block-single-reference) {
 
     @media (max-width: 760px) {
       width: 62%;
+    }
+
+    @media (max-width: 600px) {
+      width: 100%;
+      padding-top: 4rem;
     }
 
     h3 {
