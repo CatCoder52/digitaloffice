@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 18:54:41
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-08-12 16:10:16
+ * @Last Modified time: 2020-08-14 10:46:43
  *
  * @package dude
  */
@@ -49,8 +49,8 @@
         </div>
 
         <div class="row">
-          <h2 class="action" data-label="Tähän jotain sopivan kokoista kuvatekstiä." data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2020.jpg' ) ?>">2020</h2>
-          <button tabindex="0" class="action" data-label="Tähän jotain sopivan kokoista kuvatekstiä." data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2020.jpg' ) ?>">Kehittäjätiimi sai Nikusta vahvistuksen, nyt meitä on kuusi. Karista tuli luova johtaja. Uusi brändi julkaistiin. Rekry tulilla taas ja tarina jatkuu...</button>
+          <h2 class="action" data-label="Toimiston lounge uudistui ja porukkaa viihdyttää jatkossa arcade sekä darts-taulu." data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2020.jpg' ) ?>">2020</h2>
+          <button tabindex="0" class="action" data-label="Toimiston lounge uudistui ja porukkaa viihdyttää jatkossa arcade sekä darts-taulu." data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2020.jpg' ) ?>">Kehittäjätiimi sai Nikusta vahvistuksen, nyt meitä on kuusi. Karista tuli luova johtaja. Uusi brändi julkaistiin. Rekry tulilla taas ja tarina jatkuu...</button>
         </div>
 
       </div>
