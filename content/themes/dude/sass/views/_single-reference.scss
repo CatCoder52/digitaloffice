@@ -27,9 +27,12 @@ body.single.single-reference {
 
       h1,
       h2,
-      h3,
-      p {
+      h3 {
         color: $color-white;
+      }
+
+      p {
+        color: $color-paragraphs-light;
       }
     }
   }

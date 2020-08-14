@@ -64,9 +64,12 @@ body.page.page-id-9 {
     }
 
     .floating-actions button,
-    p,
     h3 {
       color: $color-white;
+    }
+
+    p {
+      color: $color-paragraphs-light;
     }
 
     .cta-link {
