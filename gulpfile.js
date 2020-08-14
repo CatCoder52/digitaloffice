@@ -552,16 +552,6 @@ gulp.task("js", function () {
       themeDir +
         "/node_modules/@swup/body-class-plugin/dist/SwupBodyClassPlugin.js",
       themeDir + "/node_modules/@swup/scripts-plugin/dist/SwupScriptsPlugin.js",
-      themeDir + "/node_modules/blueimp-gallery/js/blueimp-helper.js",
-      themeDir + "/node_modules/blueimp-gallery/js/blueimp-gallery.js",
-      themeDir +
-        "/node_modules/blueimp-gallery/js/blueimp-gallery-fullscreen.js",
-      themeDir +
-        "/node_modules/blueimp-gallery/js/blueimp-gallery-indicator.js",
-      themeDir + "/node_modules/blueimp-gallery/js/blueimp-gallery-video.js",
-      themeDir + "/node_modules/blueimp-gallery/js/blueimp-gallery-vimeo.js",
-      themeDir + "/node_modules/blueimp-gallery/js/blueimp-gallery-youtube.js",
-      themeDir + "/node_modules/blueimp-gallery/js/jquery.blueimp-gallery.js",
       themeDir + "/js/src/scripts.js",
     ])
     .pipe(sourcemaps.init())
