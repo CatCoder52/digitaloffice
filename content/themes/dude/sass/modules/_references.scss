@@ -139,6 +139,11 @@
       position: relative;
       height: 536px;
       width: 100%;
+      transition: all .33s ease-in-out;
+
+      &:hover .reference-content {
+        transition: translate(-20px, -20px);
+      }
 
       @media (min-width: 730px) {
         max-width: 384px;
