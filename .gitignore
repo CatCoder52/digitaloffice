@@ -1,4 +1,5 @@
 # Dotfiles and directories
+media-backup-before-optimage
 content/cache
 .DS_Store
 .env
