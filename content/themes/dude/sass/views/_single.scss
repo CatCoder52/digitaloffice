@@ -129,8 +129,8 @@ body.single .block.block-single:not(.block-single-reference) {
   h2,
   h3 {
     @extend %general-heading-small;
-    margin-bottom: $margin-between-text-elements;
-    margin-top: $margin-between-text-elements * 1.5;
+    margin-bottom: 0;
+    margin-top: $margin-between-text-elements;
     font-weight: 500;
   }
 
