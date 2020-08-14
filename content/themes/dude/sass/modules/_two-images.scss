@@ -12,6 +12,11 @@
 
     @media (max-width: $container-mobile) {
       height: 22rem;
+      margin-bottom: $margin-between-text-elements;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
