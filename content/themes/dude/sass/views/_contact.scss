@@ -15,6 +15,10 @@ body.page-id-4487 .block.block-hero {
       color: $color-mint;
       background: $color-midnight-blue;
 
+      svg path {
+        stroke: $color-mint;
+      }
+
       span,
       svg {
         transform: translate(2px, 0);
