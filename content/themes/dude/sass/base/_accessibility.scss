@@ -141,7 +141,7 @@ a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([h
     background-repeat: no-repeat;
     content: '';
     position: relative;
-    display: flex;
+    display: inline-flex;
     width: 14px;
     height: 14px;
     background-size: 14px 14px;
