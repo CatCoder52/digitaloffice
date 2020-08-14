@@ -2,7 +2,15 @@
   background: $color-midnight;
   color: $color-white;
 
-  a,
+  .hero-description a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail) {
+    color: $color-white;
+
+    &:hover,
+    &:focus {
+      color: $color-white;
+    }
+  }
+
   h2,
   p {
     color: $color-white;
