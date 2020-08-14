@@ -38,6 +38,7 @@
     align-items: center;
     justify-content: center;
     overflow: visible;
+    max-width: 150px;
   }
 
   svg {
@@ -51,6 +52,7 @@
     @media (max-width: 500px) {
       max-height: 70px;
       max-width: 100px;
+      width: 100%;
     }
 
     path:not(.do-not-fill) {
@@ -71,7 +73,19 @@
     max-width: 150px;
   }
 
-  .logo-ark svg {
+  .logo-sfcaravan svg {
+    max-width: 150px;
+  }
+
+  .logo-mediashake svg {
+    max-width: 170px;
+    max-height: 150px;
+    width: 170px;
+    height: auto;
+  }
+
+  .logo-ark svg,
+  .logo-blackbruin svg {
     max-width: 100px;
     max-height: 100px;
   }
