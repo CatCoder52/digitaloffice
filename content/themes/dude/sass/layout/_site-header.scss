@@ -118,6 +118,10 @@ body.page-id-5975 {
   .nav-primary-desktop .menu-items .menu-item button:not(.nav-toggle),
   .nav-primary-desktop .menu-items .menu-item a {
     color: $color-white;
+
+    &:hover {
+      color: $color-white;
+    }
   }
 
   .hero-description a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail) {
