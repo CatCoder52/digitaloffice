@@ -131,7 +131,7 @@ nav[aria-expanded="false"] {
 .block p a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail):not(.button):not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):not(.no-external-link-indicator):not(.wp-block-button__link),
 .block li a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail):not(.button):not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):not(.no-external-link-indicator):not(.wp-block-button__link),
 a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail):not(.button):not(.no-external-link-indicator):not(.wp-block-button__link) {
-  display: inline-flex;
+  display: inline;
   justify-content: space-between;
   align-items: center;
 
@@ -141,7 +141,7 @@ a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([h
     background-repeat: no-repeat;
     content: '';
     position: relative;
-    display: inline-flex;
+    display: inline;
     width: 14px;
     height: 14px;
     background-size: 14px 14px;
@@ -153,7 +153,7 @@ a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([h
 }
 
 .extra-external-link {
-  display: inline-flex;
+  display: inline;
   justify-content: space-between;
   align-items: center;
 
@@ -201,7 +201,7 @@ a[href^="mailto"]::after {
 .block.block-timeline .col a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link),
 .block.block-title-left-text-right li a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
 .wp-block-columns p a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):not([rel]):not(.contact-detail):not(.button):not(.no-external-link-indicator) {
-  display: inline-flex;
+  display: inline;
   justify-content: space-between;
   align-items: center;
   margin-right: 0;
