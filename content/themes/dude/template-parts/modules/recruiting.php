@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 19:33:53
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-23 14:09:26
+ * @Last Modified time: 2020-08-14 18:25:36
  *
  * @package dude
  */
@@ -20,7 +20,7 @@
       </div>
 
       <div class="col">
-        <p class="button-wrapper"><a class="button button-glitch" href="<?php echo esc_url( get_page_link(4491) ); ?>">Hae töihin Dudelle<?php include get_theme_file_path( '/svg/arrow-right.svg' ); ?></a></p>
+        <p class="button-wrapper"><a class="button button-glitch" href="<?php echo esc_url( get_page_link( 4491 ) ); ?>">Hae töihin Dudelle<?php include get_theme_file_path( '/svg/arrow-right.svg' ); ?></a></p>
       </div>
     </div>
 
