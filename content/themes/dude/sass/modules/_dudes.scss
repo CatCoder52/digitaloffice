@@ -80,3 +80,12 @@
   padding: 0 !important;
   background-image: none !important;
 }
+
+.page-id-4449 .block.block-dudes {
+  padding-top: $padding-blocks-medium;
+  padding-bottom: $padding-blocks-medium;
+
+  + .block.block-cta-with-image {
+    padding-top: 0;
+  }
+}
