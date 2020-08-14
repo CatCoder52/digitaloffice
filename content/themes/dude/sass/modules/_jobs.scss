@@ -41,9 +41,12 @@
     margin: 0;
   }
 
-  h2,
+  h2 {
+    color: $color-headings;
+  }
+
   p {
-    color: $color-midnight;
+    color: $color-paragraphs;
   }
 
   p:not(.button-wrapper) {

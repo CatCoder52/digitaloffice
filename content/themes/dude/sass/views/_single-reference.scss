@@ -146,7 +146,7 @@ body.single.single-reference {
   .wp-block-button a {
     @extend %default;
     background: $color-mint;
-    color: $color-midnight;
+    color: $color-links;
     font-size: 18px;
     font-weight: 700;
     border: 0;
@@ -172,7 +172,7 @@ body.single.single-reference {
     &:hover,
     &:focus {
       background: $color-white-two;
-      color: $color-midnight;
+      color: $color-links;
 
       span,
       svg {

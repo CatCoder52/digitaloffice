@@ -32,7 +32,7 @@
   @import '../layout/typography';
 
   // Editor styles
-  color: $color-body;
+  color: $color-paragraphs;
 
   // No drop cap
   .has-drop-cap:not(:focus):first-letter {
@@ -51,7 +51,7 @@
   .wp-block-button a {
     @extend %default;
     background: $color-mint;
-    color: $color-midnight;
+    color: $color-links;
     font-size: 18px;
     font-weight: 700;
     border: 0;

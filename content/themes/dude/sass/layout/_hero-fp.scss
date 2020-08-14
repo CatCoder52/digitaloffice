@@ -84,7 +84,7 @@
 
     .content-sub-statement {
       @include responsive-font($font-size-general-small, 20px);
-      color: $color-midnight;
+      color: $color-midnight-blue;
       font-size: var(--font-size-general-small);
 
       @media (max-width: 600px) {

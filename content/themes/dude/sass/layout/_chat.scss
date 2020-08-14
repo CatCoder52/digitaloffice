@@ -44,7 +44,7 @@
   }
 
   .close-chat {
-    fill: $color-body;
+    fill: $color-midnight;
     background: none;
     border: 0;
     position: absolute;
@@ -57,7 +57,7 @@
       cursor: pointer;
 
       svg {
-        fill: rgba($color-body, .5);
+        fill: rgba($color-midnight, .5);
         transform: scale(1.3);
       }
     }
