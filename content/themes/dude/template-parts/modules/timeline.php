@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 18:54:41
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-08-14 10:46:43
+ * @Last Modified time: 2020-08-14 11:10:20
  *
  * @package dude
  */
@@ -34,8 +34,8 @@
         </div>
 
         <div class="row">
-          <h2 class="action" data-label="Tähän jotain tekstiä kuvan rinnalle." data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2017.jpg' ) ?>">2017</h2>
-          <button tabindex="0" class="action" data-label="Tähän jotain tekstiä kuvan rinnalle." data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2017.jpg' ) ?>">Dude muutti Gummeruksenkadun kulmaan ja <a href="https://www.dude.fi/dude-kehittyy-ja-toimitusjohtaja-vaihtuu">Kristianista tuli toimitusjohtaja</a>.</button>
+          <h2 class="action" data-label="R.I.P. Toimitusjohtaja Laukkarinen 2013-2017. Welcome Toimitusjohtaja Hohkavaara." data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2017.jpg' ) ?>">2017</h2>
+          <button tabindex="0" class="action" data-label="R.I.P. Toimitusjohtaja Laukkarinen 2013-2017. Welcome Toimitusjohtaja Hohkavaara." data-image="<?php echo get_theme_file_uri( 'images/timeline/dude-2017.jpg' ) ?>">Dude muutti Gummeruksenkadun kulmaan ja <a href="https://www.dude.fi/dude-kehittyy-ja-toimitusjohtaja-vaihtuu">Kristianista tuli toimitusjohtaja</a>.</button>
         </div>
 
         <div class="row">
