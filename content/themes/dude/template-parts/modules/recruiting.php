@@ -20,7 +20,7 @@
       </div>
 
       <div class="col">
-        <p class="button-wrapper"><a class="button button-glitch" href="<?php echo esc_url( get_page_link() ); ?>">Hae töihin Dudelle<?php include get_theme_file_path( '/svg/arrow-right.svg' ); ?></a></p>
+        <p class="button-wrapper"><a class="button button-glitch" href="<?php echo esc_url( get_page_link(4491) ); ?>">Hae töihin Dudelle<?php include get_theme_file_path( '/svg/arrow-right.svg' ); ?></a></p>
       </div>
     </div>
 
