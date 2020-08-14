@@ -14,6 +14,14 @@ body.page-template-template-community-code .block.block-hero.block-hero-light {
   padding-top: 0;
   padding-bottom: 0;
 
+  &.block-photos-recruiting {
+    margin-bottom: $padding-blocks-large;
+
+    @media (max-width: $container-ipad) {
+      margin-bottom: $padding-blocks-medium;
+    }
+  }
+
   .container {
     @include grid(3, $gutter_x: $margin-between-grid-columns, $gutter_y: $margin-between-grid-columns);
 
