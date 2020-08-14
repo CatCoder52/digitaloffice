@@ -16,6 +16,11 @@
 add_filter( 'gform_tabindex', '__return_false' );
 
 /**
+ * Disable native lazyload.
+ */
+add_filter( 'wp_lazy_loading_enabled', '__return_false' );
+
+/**
  * Fix some old images being mixed case
  */
 add_filter( 'wp_get_attachment_url', 'dude_wp_get_attachment_url' );
