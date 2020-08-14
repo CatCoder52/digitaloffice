@@ -105,6 +105,10 @@
   .slick-slide {
     min-width: 384px;
     margin-right: $margin-between-grid-columns-large;
+
+    @media (max-width: 730px) {
+      min-width: 320px;
+    }
   }
 
   .reference-wrapper {
@@ -140,8 +144,10 @@
       height: 536px;
       width: 100%;
 
-      &:hover .reference-content {
-        transform: translateX(3.5rem) translateY(3.5rem);
+      @media (min-width: 730px) {
+        &:hover .reference-content {
+          transform: translateX(3.5rem) translateY(3.5rem);
+        }
       }
 
       @media (min-width: 730px) {
