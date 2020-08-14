@@ -53,14 +53,9 @@
       }
 
       @media (max-width: 530px) {
-        margin-left: -15%;
+        margin-left: 0;
+        min-width: 0;
       }
-    }
-  }
-
-  @media (max-width: 420px) {
-    .col.col-person-image {
-      display: none;
     }
   }
 
@@ -96,11 +91,18 @@
     }
 
     @media (max-width: 530px) {
-      grid-template-columns: 70% 30%;
-    }
-
-    @media (max-width: 420px) {
       @include grid(1, $gutter_x: 0rem, $gutter_y: 0rem);
+
+      .col.col-person-image {
+        // Have to use !important, because of JS height
+        height: auto !important;
+        order: 1;
+        margin-bottom: $margin-between-text-elements;
+      }
+
+      .col {
+        order: 2;
+      }
     }
   }
 
