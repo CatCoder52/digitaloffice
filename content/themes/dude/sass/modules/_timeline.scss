@@ -1143,9 +1143,11 @@ $variable-columns: true !default;
       @extend %h1;
       margin: 0;
       font-weight: 400;
+      max-width: 8rem;
+      width: 100%;
 
       @media (min-width: 720px) {
-        padding-right: 5rem;
+        max-width: 15rem;
       }
 
       @media (max-width: 380px) {
