@@ -80,6 +80,8 @@
   .container .block-head {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: $padding-blocks-small;
 
     // Ensure space after arrows are 60px
     height: 76px;
@@ -228,14 +230,15 @@ body.page-id-4485 .block.block-references,
 body.page-id-9 .block.block-references {
   padding-top: 0;
 
-  .block-head {
+  .container .block-head {
     justify-content: space-between;
     height: auto;
+    margin-bottom: 4.5rem;
 
     .block-title {
       @extend %general-heading-alt;
       color: $color-white;
-      margin-bottom: $margin-between-grid-columns-large;
+      margin-bottom: 0;
     }
   }
 
