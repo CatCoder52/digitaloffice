@@ -23,8 +23,9 @@
     overflow: hidden;
     position: relative;
 
-    .preview {
-      display: none;
+    // Some browsers render incorrectly
+    .background-image.preview {
+      filter: none;
     }
 
     .image {

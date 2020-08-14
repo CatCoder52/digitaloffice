@@ -38,8 +38,8 @@
     width: 100%;
 
     // Some browsers render incorrectly
-    .preview {
-      display: none;
+    .background-image.preview {
+      filter: none;
     }
   }
 
