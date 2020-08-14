@@ -128,8 +128,8 @@ nav[aria-expanded="false"] {
 }
 
 // Add icon to external links
-.block p a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail):not(.button):not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
-.block li a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail):not(.button):not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
+.block p a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail):not(.button):not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):not(.no-external-link-indicator),
+.block li a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail):not(.button):not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):not(.no-external-link-indicator),
 a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail):not(.button):not(.no-external-link-indicator) {
   display: inline-flex;
   justify-content: space-between;
@@ -164,18 +164,22 @@ a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([h
   }
 }
 
-.menu-item a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not([href="dude.fi"]):not(.contact-detail):not(.button) {
+.menu-item a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not([href="dude.fi"]):not(.contact-detail):not(.button):not(.no-external-link-indicator) {
   &::after {
     background-image: url('../svg/external-link-white.svg');
     padding-right: 2.5rem;
   }
 }
 
+body.single-reference section.block a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail):not(.button):not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):not(.no-external-link-indicator)::after {
+  background-image: url('../svg/external-link-white.svg');
+}
+
 a[href^="mailto"]::after {
   display: none;
 }
 
-.block-footer .menu-item a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail):not(.button) {
+.block-footer .menu-item a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail):not(.button):not(.no-external-link-indicator) {
   &::after {
     background-size: 12px 12px;
     width: 12px;
@@ -196,7 +200,7 @@ a[href^="mailto"]::after {
 .block.block-timeline .active a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link),
 .block.block-timeline .col a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link),
 .block.block-title-left-text-right li a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
-.wp-block-columns p a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):not([rel]):not(.contact-detail):not(.button) {
+.wp-block-columns p a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):not([rel]):not(.contact-detail):not(.button):not(.no-external-link-indicator) {
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
