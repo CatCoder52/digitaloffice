@@ -139,6 +139,10 @@
   &.block-hero-merch {
     padding-bottom: 0;
 
+    .hero-description p {
+      color: $color-paragraphs-light;
+    }
+
     .details {
       opacity: .7;
       line-height: 1.5;
