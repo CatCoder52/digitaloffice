@@ -3,7 +3,7 @@
  * @Author: Roni Laukkarinen
  * @Date:   2020-07-16 17:32:53
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-17 11:56:53
+ * @Last Modified time: 2020-08-14 08:30:12
  * @package dude
  */
 
@@ -35,7 +35,7 @@ if ( empty( $image ) ) {
           <?php endif; ?>
 
           <?php if ( ! empty( $button ) ) : ?>
-            <p class="cta-link-wrapper"><a class="cta-link" href="<?php echo esc_url( $button['url'] ); ?>"<?php if ( ! empty( $button['target'] ) ) : ?> target="<?php echo esc_html( $button['target'] ); ?>"<?php endif; ?>><?php echo esc_html( $button['title'] ); ?></a></p>
+          <p class="cta-link-wrapper"><a class="cta-link extra-external-link no-external-link-indicator" href="<?php echo esc_url( $button['url'] ); ?>"<?php if ( ! empty( $button['target'] ) ) : ?> target="<?php echo esc_html( $button['target'] ); ?>"<?php endif; ?>><?php echo esc_html( $button['title'] ); ?><?php if ( 'https://handbook.dude.fi'  === $button['url'] ) : ?><?php include get_theme_file_path( '/svg/external-link.svg' ); ?><?php endif; ?></a></p>
           <?php endif; ?>
         </div>
       </div>

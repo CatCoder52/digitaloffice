@@ -130,7 +130,7 @@ nav[aria-expanded="false"] {
 // Add icon to external links
 .block p a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail):not(.button):not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
 .block li a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail):not(.button):not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
-a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail):not(.button) {
+a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail):not(.button):not(.no-external-link-indicator) {
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
@@ -147,8 +147,20 @@ a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([h
     background-size: 14px 14px;
     right: 0;
     top: 0;
+    margin-left: 5px;
+    margin-right: 2px;
+  }
+}
+
+.extra-external-link {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+
+  svg {
+    width: 14px;
+    height: 14px;
     margin-left: .6rem;
-    padding-right: 1rem;
   }
 }
 
