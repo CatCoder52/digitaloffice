@@ -628,10 +628,11 @@ body.template-surveys-modern {
       padding-top: 3rem !important;
       padding-bottom: 3rem !important;
       border: 0 !important;
-      background: #68d98b !important;
+      background: $color-mint !important;
+      color: $color-midnight-blue !important;
 
       &:hover {
-        background: darken(#68d98b, 15%) !important;
+        background: $color-white-two !important;
       }
     }
   }
