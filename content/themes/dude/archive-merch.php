@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-<div id="content" class="content-area">
+<div class="content-area">
 	<main role="main" id="main" class="site-main">
 
     <?php include get_theme_file_path( 'template-parts/hero-merch.php' ); ?>

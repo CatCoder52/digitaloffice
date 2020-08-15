@@ -108,13 +108,6 @@ $enable-animations: false;
 }
 
 .dropdown-toggle:after,
-.dropdown-toggle.toggled-on:after,
-.nav-toggle:before,
-.nav-toggle.toggled-on:before {
-  speak: none;
-}
-
-.dropdown-toggle:after,
 .dropdown-toggle.toggled-on:after {
   font-size: 1.3rem;
 }

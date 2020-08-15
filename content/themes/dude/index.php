@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-<div id="content" class="content-area">
+<div class="content-area">
 	<main role="main" id="main" class="site-main">
 
     <?php if ( ! is_paged() && ! is_category() && ! is_tag() && ! is_author() && ! is_date() ) :
