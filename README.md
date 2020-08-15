@@ -11,7 +11,7 @@ This project is built on [digitoimistodude/dudestack](https://github.com/digitoi
 
 ## Basic details
 
-**Developers:** [ronilaukkarinen](https://github.com/ronilaukkarinen), [timiwahalahti](https://github.com/timiwahalahti)
+**Developers:** [ronilaukkarinen](https://github.com/ronilaukkarinen), [timiwahalahti](https://github.com/timiwahalahti)  
 **Custom post type plugin:** ACF Pro
 
 ## Theme screenshot
@@ -31,9 +31,9 @@ On top of features included in [digitoimistodude/air-light](https://github.com/d
 
 Green checkmarks show if the environment is already set up and running, red cross indicates if it's not yet there or disabled.
 
-✅ Development: [dude.test](http://dude.test)
-✅ Staging: [dude.vaiheessa.fi](https://dude.vaiheessa.fi)
-✅ Production: [dude.fi](https://www.dude.fi/)
+✅ Development: [dude.test](http://dude.test)  
+✅ Staging: [dude.vaiheessa.fi](https://dude.vaiheessa.fi)  
+✅ Production: [dude.fi](https://www.dude.fi/)  
 
 ## Setting it up initially
 
