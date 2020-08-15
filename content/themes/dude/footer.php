@@ -108,7 +108,9 @@
       <p>Kaikki oikeudet pidätetään. <a class="no-text-link" href="<?php echo esc_url( get_page_link( 3 ) ); ?>">Lue tietosuojaseloste</a>.</p>
     </div>
 
-  </footer><!-- #colophon -->
+  </div>
+
+</footer><!-- #colophon -->
 
 </div><!-- #page -->
 
