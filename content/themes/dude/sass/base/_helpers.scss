@@ -134,6 +134,7 @@
     src: url('#{$src}.eot?#iefix') format('embedded-opentype'), url('#{$src}.woff') format('woff'), url('#{$src}.woff2') format('woff2'), url('#{$src}.ttf') format('truetype'), url('#{$src}.svg##{$family}') format('svg');
     font-style: $style;
     font-weight: $weight;
+    font-display: swap;
   }
 }
 
