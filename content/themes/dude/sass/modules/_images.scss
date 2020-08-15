@@ -78,11 +78,15 @@
     @media (min-width: 1000px) {
       margin-top: 140px;
     }
+
+    @media (max-width: 1000px) {
+      margin-bottom: $margin-between-text-elements;
+    }
   }
 
   .image-small-left {
     @include aspect-ratio(1060, 654);
-    margin-bottom: 0;
+    margin-bottom: $margin-between-text-elements;
 
     @media (min-width: 1000px) {
       left: -70px;
@@ -90,6 +94,7 @@
       bottom: -140px;
       max-width: 444px;
       height: 300px;
+      margin-bottom: 0;
     }
   }
 
