@@ -10,7 +10,7 @@
 
 ?>
 
-<section class="block block-cta-with-phone-input"<?php if ( is_front_page() ) : ?> has-dark-bg<?php else : ?> has-light-bg<?php endif; ?><?php if ( is_page( 4487 ) ) : ?> id="cta"<?php endif; ?>>
+<section class="block block-cta-with-phone-input<?php if ( is_front_page() ) : ?> has-dark-bg<?php else : ?> has-light-bg<?php endif; ?>"<?php if ( is_page( 4487 ) ) : ?> id="cta"<?php endif; ?>>
   <div class="container">
 
     <div class="cols">
