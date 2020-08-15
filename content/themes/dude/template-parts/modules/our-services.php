@@ -64,4 +64,6 @@ $services = get_sub_field( 'services' );
     </div>
     <?php endif; ?>
 
+  </div>
+
 </section>
