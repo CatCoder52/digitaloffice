@@ -37,27 +37,6 @@ body.template-surveys-modern {
     box-shadow: none;
   }
 
-  .gsurvey-likert * {
-    border-radius: 0 !important;
-  }
-
-  table.gsurvey-likert th.gsurvey-likert-choice-label {
-    background-color: transparent;
-  }
-
-  .gform_wrapper table.gsurvey-likert {
-    margin-bottom: 36px;
-  }
-
-  .gform_wrapper table.gsurvey-likert,
-  table.gsurvey-likert th.gsurvey-likert-choice-label,
-  table.gsurvey-likert tr td,
-  table.gsurvey-likert .gsurvey-likert-choice,
-  table.gsurvey-likert .gsurvey-likert-row-label {
-    border: 0;
-    box-shadow: none;
-  }
-
   @media (max-width: 1000px) {
     background-size: cover;
   }
@@ -338,6 +317,8 @@ body.template-surveys-modern {
       transition: all 1s;
       // border: 1px solid $color-checked;
       margin: -1px;
+      border-radius: 0;
+      border: 0;
     }
 
     input[type="checkbox"]:checked + label:before,
