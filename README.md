@@ -1,5 +1,5 @@
-# Dude.fi - 2019
-![based_on_air_version 4.6.5_](https://img.shields.io/badge/based_on_air_version-4.6.5_-brightgreen.svg?style=flat-square) ![project_created 09_May_2019](https://img.shields.io/badge/project_created-09_May_2019-blue.svg?style=flat-square) ![Tested_up_to WordPress_5.2.1](https://img.shields.io/badge/Tested_up_to-WordPress_5.2.1-blue.svg?style=flat-square) ![Compatible_with PHP_7.2](https://img.shields.io/badge/Compatible_with-PHP_7.2-green.svg?style=flat-square)
+# Dude.fi - 2020
+![based_on_air_version 5.3.0_](https://img.shields.io/badge/based_on_air_version-4.3.0_-brightgreen.svg?style=flat-square) ![project_created 09_May_2019](https://img.shields.io/badge/project_created-09_May_2019-blue.svg?style=flat-square) ![Tested_up_to WordPress_5.5](https://img.shields.io/badge/Tested_up_to-WordPress_5.5-blue.svg?style=flat-square) ![Compatible_with PHP_7.2](https://img.shields.io/badge/Compatible_with-PHP_7.2-green.svg?style=flat-square)
 
 ## Stack
 
