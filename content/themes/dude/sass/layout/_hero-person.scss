@@ -63,6 +63,7 @@
     @extend %general-heading-large;
     font-weight: 500;
     margin-bottom: $margin-between-text-elements;
+    line-height: 1.3;
   }
 
   .block-title-pre {
@@ -98,6 +99,11 @@
         height: auto !important;
         order: 1;
         margin-bottom: $margin-between-text-elements;
+
+        // iOS does not behave well with flex in this case
+        > .image {
+          display: block;
+        }
       }
 
       .col {

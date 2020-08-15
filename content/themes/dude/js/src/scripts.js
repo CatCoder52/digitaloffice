@@ -724,7 +724,11 @@ swup.on("contentReplaced", function () {
     }, 500);
 
     // Person image hack
-    $(".col-person-image").height($(".col-person-image img").height());
+    var iOS = ['iPad', 'iPhone', 'iPod'].indexOf(navigator.platform) >= 0;
+
+    if ( ! iOS || window.innerWidth < 530 ) {
+      $(".col-person-image").height($(".col-person-image img").height());
+    }
 
     // Timeline
     $(".col-timeline .row .action").on("click", function () {
