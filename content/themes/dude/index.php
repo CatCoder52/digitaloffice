@@ -102,7 +102,8 @@ get_header(); ?>
           <p class="filter-label">Selaa kirjoituksia aiheittain</p>
             <ul class="filters filter-category">
               <?php wp_list_categories( [
-                'title_li' => null,
+                'title_li'  => null,
+                'orderby'   => 'order',
               ] ); ?>
             </ul>
         </header>
