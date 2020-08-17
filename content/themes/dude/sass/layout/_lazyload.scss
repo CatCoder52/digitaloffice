@@ -9,7 +9,7 @@
 
   &.reveal {
     filter: none;
-    animation: progressive-reveal 2s ease-out;
+    animation: progressive-reveal .88s ease-out;
   }
 
   &.preview {
@@ -23,9 +23,14 @@
   }
 }
 
+.block.block-hero .featured-image .background-image {
+  transition: .0001s;
+  animation: progressive-reveal .0001s ease-out;
+}
+
 @keyframes progressive-reveal {
   0% {
-    opacity: .5;
+    opacity: 0;
   }
 
   100% {
