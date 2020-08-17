@@ -76,7 +76,7 @@
 
   p {
     line-height: $line-height;
-    color: $color-midnight-blue;
+    color: $color-paragraphs;
     font-weight: 400;
   }
 
@@ -191,7 +191,11 @@
 
   ul,
   ol {
-    padding-left: 2.2rem;
+    padding-left: 3.4rem;
+
+    li {
+      @include responsive-font($font-size-general-small, 19px);
+    }
 
     @media (max-width: $article-max-width + 40px) {
       padding-left: 4.2rem;
@@ -305,6 +309,7 @@
         @include responsive-font($font-size-general-small, 19px);
         margin-top: 2rem;
         opacity: .8;
+        color: $color-paragraphs;
 
         @media (max-width: $container-mobile) {
           font-size: 15px;
@@ -461,7 +466,7 @@ kbd {
   border: 1px solid #ccc;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #f7f7f7;
-  color: #333;
+  color: $color-midnight;
   box-shadow: 0 1px 0 rgba(#000, .2), 0 0 0 2px #fff inset;
   border-radius: 4px;
   display: inline-block;
