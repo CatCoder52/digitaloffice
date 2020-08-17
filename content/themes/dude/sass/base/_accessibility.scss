@@ -214,3 +214,41 @@ a[href^="mailto"]::after {
     height: 12px;
   }
 }
+
+// Disable animations if disabled from OS or browser
+@media (print), (prefers-reduced-motion: reduce) {
+  .glitch,
+  .background-image,
+  .background-image.reveal,
+  .full-image,
+  .button-glitch,
+  .button-glitch.button-glitch-active {
+    transition: .0001s !important;
+    animation: none !important;
+    transform: none !important;
+  }
+
+  .background-image.full-image {
+    transition: opacity .0001s !important;
+  }
+
+  .swup-transition-fade {
+    transition: .0001s !important;
+    animation: slideUp .0001s cubic-bezier(.075, .82, .165, 1) forwards !important;
+  }
+
+  .button-glitch.button-glitch-active {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+  }
+
+  .glitch::before,
+  .glitch::after,
+  .button-glitch::after,
+  .button-glitch::before,
+  .button-glitch.button-glitch-active::after,
+  .button-glitch.button-glitch-active::before {
+    display: none !important;
+  }
+}
