@@ -14,7 +14,6 @@
 
   &.preview {
     filter: blur(1vw);
-    transform: scale(1.05);
   }
 
   &.full-image {
@@ -26,6 +25,10 @@
 .block.block-hero .featured-image .background-image {
   transition: .0001s;
   animation: progressive-reveal .0001s ease-out;
+
+  &.preview {
+    transform: scale(1.05);
+  }
 }
 
 @keyframes progressive-reveal {
