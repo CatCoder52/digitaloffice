@@ -256,15 +256,22 @@
       ];
     }
 
+    // var greeters = [
+    //   {
+    //     name: "Roni",
+    //     image: dude.theme_base + "/images/chat-roni.jpg",
+    //   },
+    //   {
+    //     name: "Timi",
+    //     image: dude.theme_base + "/images/chat-timi.jpg",
+    //   },
+    // ];
+
     var greeters = [
       {
-        name: "Roni",
-        image: dude.theme_base + "/images/chat-roni.jpg",
-      },
-      {
-        name: "Timi",
-        image: dude.theme_base + "/images/chat-timi.jpg",
-      },
+        name: "Kristian",
+        image: dude.theme_base + "/images/chat-kristian.jpg",
+      }
     ];
 
     // do nothing if session is ongoing or user has opened the chat
