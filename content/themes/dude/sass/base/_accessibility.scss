@@ -151,6 +151,16 @@ a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([h
     margin-left: 5px;
     margin-right: 2px;
   }
+
+  @media (max-width: $container-mobile) {
+    padding-bottom: 4px;
+    display: inline;
+
+    &::after {
+      min-width: 14px;
+      min-height: 14px;
+    }
+  }
 }
 
 .extra-external-link {
