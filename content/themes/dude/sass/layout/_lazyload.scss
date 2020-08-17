@@ -9,24 +9,23 @@
 
   &.reveal {
     filter: none;
-    will-change: transform, opacity;
-    animation: progressive-reveal .55s ease-out;
+    animation: progressive-reveal 2s ease-out;
   }
 
   &.preview {
     filter: blur(1vw);
-    // transform: scale(1.05);
+    transform: scale(1.05);
   }
 
   &.full-image {
     z-index: 1;
-    transition: opacity $transition-duration;
+    transition: all .88s;
   }
 }
 
 @keyframes progressive-reveal {
   0% {
-    opacity: 0;
+    opacity: .5;
   }
 
   100% {
