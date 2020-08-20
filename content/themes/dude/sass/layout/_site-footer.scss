@@ -101,6 +101,7 @@
     border-bottom: 1px solid rgba($color-white, .3);
     transition: border .22s;
     overflow: hidden;
+    display: inline-flex;
 
     &:hover {
       border-bottom: 1px solid $color-mint;

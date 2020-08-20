@@ -13,6 +13,7 @@ $exclude_template_part_from_cache = array(
   'cta-left-image'        => true,
   'wide-text'             => true,
   'cta-with-phone-input'  => true,
+  'cta-references'        => true,
 );
 
 // normally we want to use current page id
