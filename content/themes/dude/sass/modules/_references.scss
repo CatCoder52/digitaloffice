@@ -23,7 +23,7 @@
       @extend %general-heading-cta;
       color: $color-white;
       margin-bottom: $margin-between-grid-columns-large;
-      font-weight: 500;
+      font-weight: $headings-weight;
     }
 
     .reference-wrapper .reference-content {

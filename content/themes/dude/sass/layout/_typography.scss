@@ -7,12 +7,14 @@
 // -----------------------------------------------------------
 
 // Set up self-hosted fonts here
-@include fontFace('Circular', '../fonts/f5437dcddb7d5641ae51a8109a31fa53', 400);
-@include fontFace('Circular', '../fonts/d2eb57af9849479498a3aab358ef6c92', 400, italic);
-@include fontFace('Circular', '../fonts/86a7bec49ba4953ef59891e1597151d1', 500);
-@include fontFace('Circular', '../fonts/469779bbfe42049602ae0c100c517e90', 500, italic);
-@include fontFace('Circular', '../fonts/0fe7d5a9ec1ccd7bf994e3bbe8cd4c10', 700);
-@include fontFace('Circular', '../fonts/e964570c740cb80bd168ac14fbd51b4f', 900);
+@include fontFace('Circular', '../fonts/circular-400', 400);
+@include fontFace('Circular', '../fonts/circular-400-italic', 400, italic);
+@include fontFace('Circular', '../fonts/circular-500', 500);
+@include fontFace('Circular', '../fonts/circular-500-italic', 500, italic);
+@include fontFace('Circular', '../fonts/circular-600', 600);
+@include fontFace('Circular', '../fonts/circular-600-italic', 600, italic);
+@include fontFace('Circular', '../fonts/circular-700', 700);
+@include fontFace('Circular', '../fonts/circular-900', 900);
 
 // Set root size for rems
 :root {

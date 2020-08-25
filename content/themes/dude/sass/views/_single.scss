@@ -43,7 +43,7 @@ body.single .block.block-single:not(.block-single-reference) {
       align-items: center;
       box-shadow: none;
       border: 0;
-      font-weight: 500;
+      font-weight: $headings-weight;
     }
 
     a span:not(.writtenby) {
@@ -93,7 +93,7 @@ body.single .block.block-single:not(.block-single-reference) {
 
   .post > .gutenberg-content blockquote p {
     @include responsive-font(20px, 28px);
-    font-weight: 500;
+    font-weight: $headings-weight;
 
     &:first-child {
       margin-top: 0;
@@ -131,7 +131,7 @@ body.single .block.block-single:not(.block-single-reference) {
     @extend %general-heading-small;
     margin-bottom: 0;
     margin-top: $margin-between-text-elements;
-    font-weight: 500;
+    font-weight: $headings-weight;
   }
 
   .block-head .block-title {
@@ -444,7 +444,7 @@ body.single .block.block-single:not(.block-single-reference) {
 
     h3 {
       @extend %general-heading-small;
-      font-weight: 500;
+      font-weight: $headings-weight;
       margin: 0 0 .5rem;
     }
 

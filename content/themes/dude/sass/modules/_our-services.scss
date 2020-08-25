@@ -82,7 +82,7 @@
   .col-title {
     @extend %general-heading-large;
     color: $color-midnight-blue;
-    font-weight: 500;
+    font-weight: $headings-weight;
     margin-top: 0;
     margin-bottom: 5rem;
 

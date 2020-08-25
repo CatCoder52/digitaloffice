@@ -12,7 +12,7 @@
 
   .block-title {
     @extend %general-heading-large;
-    font-weight: 500;
+    font-weight: $headings-weight;
     line-height: 1.23;
   }
 

@@ -238,7 +238,7 @@ input[type="checkbox"].simpay-modal-control {
 .simpay-checkout-form.simpay-checkout-form--embedded {
   @include font-checkout();
   font-size: 15px;
-  font-weight: 500;
+  font-weight: $headings-weight;
   color: $base-text-color;
 
   .simpay-form-control {
@@ -259,7 +259,7 @@ input[type="checkbox"].simpay-modal-control {
     .simpay-card-wrap {
       @include font-checkout();
       font-size: 15px;
-      font-weight: 500;
+      font-weight: $headings-weight;
       color: $input-text-color;
 
       // Form styles not repeated in Elements JS
@@ -277,7 +277,7 @@ input[type="checkbox"].simpay-modal-control {
       &::placeholder {
         @include font-checkout();
         font-size: 15px;
-        font-weight: 500;
+        font-weight: $headings-weight;
         color: $input-placeholder-color;
       }
 

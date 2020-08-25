@@ -221,7 +221,7 @@ a.global-link {
 
   @media (max-width: $container-mobile) {
     font-size: 24px;
-    font-weight: 500;
+    font-weight: $headings-weight;
   }
 
   @media (min-width: $container-ipad-landscape) {
@@ -233,11 +233,11 @@ a.global-link {
   @include responsive-font($font-size-general-headings-mobile, 54px);
   margin-top: 0;
   line-height: 1.35;
-  font-weight: 500;
+  font-weight: $headings-weight;
 
   @media (max-width: $container-mobile) {
     font-size: 24px;
-    font-weight: 500;
+    font-weight: $headings-weight;
   }
 
   @media (min-width: 1300px) {
@@ -254,7 +254,7 @@ a.global-link {
 
   @media (max-width: $container-mobile) {
     font-size: 36px;
-    font-weight: 500;
+    font-weight: $headings-weight;
   }
 
   @media (min-width: $container-ipad-landscape + 200px) {

@@ -3,7 +3,7 @@
   h3,
   h4 {
     @extend %general-heading-small;
-    font-weight: 500;
+    font-weight: $headings-weight;
   }
 }
 

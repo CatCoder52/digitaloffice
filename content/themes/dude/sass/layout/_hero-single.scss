@@ -79,7 +79,7 @@
 
   h1 {
     @extend %general-heading-large;
-    font-weight: 500;
+    font-weight: $headings-weight;
     margin-bottom: $margin-between-text-elements;
     line-height: 1.23;
   }
