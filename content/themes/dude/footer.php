@@ -105,7 +105,7 @@
     </div>
 
     <div class="disclaimer">
-      <p>Kaikki oikeudet pidätetään. <a class="no-text-link" href="<?php echo esc_url( get_page_link( 3 ) ); ?>">Lue tietosuojaseloste</a>.</p>
+      <p><a class="no-text-link no-external-link-indicator" href="https://www.asiakastieto.fi/yritykset/fi/digitoimisto-dude-oy/25480215/yleiskuva" aria-label="Ulospäin vievä linkki: Digitoimisto Duden Asiakastieto-profiili">Digitoimisto Dude Oy</a> - Digitaalinen mainostoimisto, Jyväskylä. Kaikki oikeudet pidätetään. <a class="no-text-link" href="<?php echo esc_url( get_page_link( 3 ) ); ?>">Lue tietosuojaseloste</a>.</p>
     </div>
 
   </div>
