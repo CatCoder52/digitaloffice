@@ -36,7 +36,7 @@
       <div class="logo-ark"><?php include get_theme_file_path( '/svg/logos/ark.svg' ); ?></div>
       <div class="logo-wotkins"><?php include get_theme_file_path( '/svg/logos/wotkins.svg' ); ?></div>
       <div><?php include get_theme_file_path( '/svg/logos/paytrail.svg' ); ?></div>
-</div>
+    </div>
 
   </div>
 </section>

@@ -117,9 +117,7 @@
 }
 
 .block.block-our-services + .block.block-images {
-  @media (min-width: $container-ipad) {
-    padding-top: $padding-blocks-large;
-  }
+  padding-top: 0;
 }
 
 .block.block-images + .block.block-our-services {
@@ -127,8 +125,4 @@
     padding-top: $padding-blocks-medium;
     margin-top: 0;
   }
-}
-
-.block-our-services + .block-images {
-  padding-top: 0;
 }
