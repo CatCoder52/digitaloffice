@@ -81,50 +81,50 @@ function dude_custom_css_js() {
   echo '<style>
   @font-face {
     font-family: "Circular";
-    src: url("' . get_template_directory_uri() . '/fonts/f5437dcddb7d5641ae51a8109a31fa53.eot");
-    src: url("' . get_template_directory_uri() . '/fonts/f5437dcddb7d5641ae51a8109a31fa53.eot?#iefix") format("embedded-opentype"), url("' . get_template_directory_uri() . '/fonts/f5437dcddb7d5641ae51a8109a31fa53.woff") format("woff"), url("' . get_template_directory_uri() . '/fonts/f5437dcddb7d5641ae51a8109a31fa53.woff2") format("woff2"), url("' . get_template_directory_uri() . '/fonts/f5437dcddb7d5641ae51a8109a31fa53.ttf") format("truetype"), url("' . get_template_directory_uri() . '/fonts/f5437dcddb7d5641ae51a8109a31fa53.svg#Circular") format("svg");
+    src: url("' . get_template_directory_uri() . '/fonts/circular-400.eot");
+    src: url("' . get_template_directory_uri() . '/fonts/circular-400.eot?#iefix") format("embedded-opentype"), url("' . get_template_directory_uri() . '/fonts/circular-400.woff") format("woff"), url("' . get_template_directory_uri() . '/fonts/circular-400.woff2") format("woff2"), url("' . get_template_directory_uri() . '/fonts/circular-400.ttf") format("truetype"), url("' . get_template_directory_uri() . '/fonts/circular-400.svg#Circular") format("svg");
     font-style: normal;
     font-weight: 400;
   }
 
   @font-face {
     font-family: "Circular";
-    src: url("' . get_template_directory_uri() . '/fonts/d2eb57af9849479498a3aab358ef6c92.eot");
-    src: url("' . get_template_directory_uri() . '/fonts/d2eb57af9849479498a3aab358ef6c92.eot?#iefix") format("embedded-opentype"), url("' . get_template_directory_uri() . '/fonts/d2eb57af9849479498a3aab358ef6c92.woff") format("woff"), url("' . get_template_directory_uri() . '/fonts/d2eb57af9849479498a3aab358ef6c92.woff2") format("woff2"), url("' . get_template_directory_uri() . '/fonts/d2eb57af9849479498a3aab358ef6c92.ttf") format("truetype"), url("' . get_template_directory_uri() . '/fonts/d2eb57af9849479498a3aab358ef6c92.svg#Circular") format("svg");
+    src: url("' . get_template_directory_uri() . '/fonts/circular-400-italic.eot");
+    src: url("' . get_template_directory_uri() . '/fonts/circular-400-italic.eot?#iefix") format("embedded-opentype"), url("' . get_template_directory_uri() . '/fonts/circular-400-italic.woff") format("woff"), url("' . get_template_directory_uri() . '/fonts/circular-400-italic.woff2") format("woff2"), url("' . get_template_directory_uri() . '/fonts/circular-400-italic.ttf") format("truetype"), url("' . get_template_directory_uri() . '/fonts/circular-400-italic.svg#Circular") format("svg");
     font-style: italic;
     font-weight: 400;
   }
 
   @font-face {
     font-family: "Circular";
-    src: url("' . get_template_directory_uri() . '/fonts/86a7bec49ba4953ef59891e1597151d1.eot");
-    src: url("' . get_template_directory_uri() . '/fonts/86a7bec49ba4953ef59891e1597151d1.eot?#iefix") format("embedded-opentype"), url("' . get_template_directory_uri() . '/fonts/86a7bec49ba4953ef59891e1597151d1.woff") format("woff"), url("' . get_template_directory_uri() . '/fonts/86a7bec49ba4953ef59891e1597151d1.woff2") format("woff2"), url("' . get_template_directory_uri() . '/fonts/86a7bec49ba4953ef59891e1597151d1.ttf") format("truetype"), url("' . get_template_directory_uri() . '/fonts/86a7bec49ba4953ef59891e1597151d1.svg#Circular") format("svg");
+    src: url("' . get_template_directory_uri() . '/fonts/circular-500.eot");
+    src: url("' . get_template_directory_uri() . '/fonts/circular-500.eot?#iefix") format("embedded-opentype"), url("' . get_template_directory_uri() . '/fonts/circular-500.woff") format("woff"), url("' . get_template_directory_uri() . '/fonts/circular-500.woff2") format("woff2"), url("' . get_template_directory_uri() . '/fonts/circular-500.ttf") format("truetype"), url("' . get_template_directory_uri() . '/fonts/circular-500.svg#Circular") format("svg");
     font-style: normal;
     font-weight: 500;
   }
 
   @font-face {
     font-family: "Circular";
-    src: url("' . get_template_directory_uri() . '/fonts/469779bbfe42049602ae0c100c517e90.eot");
-    src: url("' . get_template_directory_uri() . '/fonts/469779bbfe42049602ae0c100c517e90.eot?#iefix") format("embedded-opentype"), url("' . get_template_directory_uri() . '/fonts/469779bbfe42049602ae0c100c517e90.woff") format("woff"), url("' . get_template_directory_uri() . '/fonts/469779bbfe42049602ae0c100c517e90.woff2") format("woff2"), url("' . get_template_directory_uri() . '/fonts/469779bbfe42049602ae0c100c517e90.ttf") format("truetype"), url("' . get_template_directory_uri() . '/fonts/469779bbfe42049602ae0c100c517e90.svg#Circular") format("svg");
+    src: url("' . get_template_directory_uri() . '/fonts/circular-500-italic.eot");
+    src: url("' . get_template_directory_uri() . '/fonts/circular-500-italic.eot?#iefix") format("embedded-opentype"), url("' . get_template_directory_uri() . '/fonts/circular-500-italic.woff") format("woff"), url("' . get_template_directory_uri() . '/fonts/circular-500-italic.woff2") format("woff2"), url("' . get_template_directory_uri() . '/fonts/circular-500-italic.ttf") format("truetype"), url("' . get_template_directory_uri() . '/fonts/circular-500-italic.svg#Circular") format("svg");
     font-style: italic;
     font-weight: 500;
   }
 
   @font-face {
     font-family: "Circular";
-    src: url("' . get_template_directory_uri() . '/fonts/0fe7d5a9ec1ccd7bf994e3bbe8cd4c10.eot");
-    src: url("' . get_template_directory_uri() . '/fonts/0fe7d5a9ec1ccd7bf994e3bbe8cd4c10.eot?#iefix") format("embedded-opentype"), url("' . get_template_directory_uri() . '/fonts/0fe7d5a9ec1ccd7bf994e3bbe8cd4c10.woff") format("woff"), url("' . get_template_directory_uri() . '/fonts/0fe7d5a9ec1ccd7bf994e3bbe8cd4c10.woff2") format("woff2"), url("' . get_template_directory_uri() . '/fonts/0fe7d5a9ec1ccd7bf994e3bbe8cd4c10.ttf") format("truetype"), url("' . get_template_directory_uri() . '/fonts/0fe7d5a9ec1ccd7bf994e3bbe8cd4c10.svg#Circular") format("svg");
+    src: url("' . get_template_directory_uri() . '/fonts/circular-600.eot");
+    src: url("' . get_template_directory_uri() . '/fonts/circular-600.eot?#iefix") format("embedded-opentype"), url("' . get_template_directory_uri() . '/fonts/circular-600.woff") format("woff"), url("' . get_template_directory_uri() . '/fonts/circular-600.woff2") format("woff2"), url("' . get_template_directory_uri() . '/fonts/circular-600.ttf") format("truetype"), url("' . get_template_directory_uri() . '/fonts/circular-600.svg#Circular") format("svg");
     font-style: normal;
-    font-weight: 700;
+    font-weight: 600;
   }
 
   @font-face {
     font-family: "Circular";
-    src: url("' . get_template_directory_uri() . '/fonts/e964570c740cb80bd168ac14fbd51b4f.eot");
-    src: url("' . get_template_directory_uri() . '/fonts/e964570c740cb80bd168ac14fbd51b4f.eot?#iefix") format("embedded-opentype"), url("' . get_template_directory_uri() . '/fonts/e964570c740cb80bd168ac14fbd51b4f.woff") format("woff"), url("' . get_template_directory_uri() . '/fonts/e964570c740cb80bd168ac14fbd51b4f.woff2") format("woff2"), url("' . get_template_directory_uri() . '/fonts/e964570c740cb80bd168ac14fbd51b4f.ttf") format("truetype"), url("' . get_template_directory_uri() . '/fonts/e964570c740cb80bd168ac14fbd51b4f.svg#Circular") format("svg");
-    font-style: normal;
-    font-weight: 900;
+    src: url("' . get_template_directory_uri() . '/fonts/circular-600-italic.eot");
+    src: url("' . get_template_directory_uri() . '/fonts/circular-600-italic.eot?#iefix") format("embedded-opentype"), url("' . get_template_directory_uri() . '/fonts/circular-600-italic.woff") format("woff"), url("' . get_template_directory_uri() . '/fonts/circular-600-italic.woff2") format("woff2"), url("' . get_template_directory_uri() . '/fonts/circular-600-italic.ttf") format("truetype"), url("' . get_template_directory_uri() . '/fonts/circular-600-italic.svg#Circular") format("svg");
+    font-style: italic;
+    font-weight: 600;
   }
   </style>';
 }
