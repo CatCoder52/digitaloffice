@@ -1,5 +1,6 @@
-const themeDir = 'content/themes/dude';
+"use strict";
 
+var themeDir = 'content/themes/dude';
 module.exports = {
   cleancss: {
     opts: {
@@ -8,13 +9,15 @@ module.exports = {
         1: {
           tidyAtRules: true,
           cleanupCharsets: true,
-          specialComments: 0,
-        },
-      },
+          specialComments: 0
+        }
+      }
     }
   },
   rename: {
-    min: { suffix: '.min' }
+    min: {
+      suffix: '.min'
+    }
   },
   browsersync: {
     src: [themeDir + '/css/*'],
@@ -24,12 +27,9 @@ module.exports = {
       proxy: 'dude.test',
       browser: 'Google Chrome',
       open: false,
-      notify: true,
+      notify: true
     },
-    watch: [
-      themeDir + '/**/*.php',
-      themeDir + '/js/src/**/*.js',
-    ]
+    watch: [themeDir + '/**/*.php', themeDir + '/js/src/**/*.js']
   },
   styles: {
     gutenberg: themeDir + '/sass/base/gutenberg.scss',
@@ -44,7 +44,7 @@ module.exports = {
         debugInfo: true,
         lineNumbers: true,
         errLogToConsole: true,
-        includePaths: [themeDir + '/node_modules/'],
+        includePaths: [themeDir + '/node_modules/']
       },
       production: {
         bundleExec: true,
@@ -52,7 +52,7 @@ module.exports = {
         debugInfo: true,
         lineNumbers: true,
         errLogToConsole: true,
-        includePaths: [themeDir + '/node_modules/'],
+        includePaths: [themeDir + '/node_modules/']
       }
     }
   },
@@ -63,7 +63,7 @@ module.exports = {
     uglify: {
       opts: {
         compress: true,
-        mangle: true,
+        mangle: true
       }
     }
   },
@@ -75,7 +75,7 @@ module.exports = {
     opts: {
       bin: '/usr/local/bin/phpcs',
       standard: themeDir + '/phpcs.xml',
-      warningSeverity: 0,
+      warningSeverity: 0
     }
   }
-}
+};
