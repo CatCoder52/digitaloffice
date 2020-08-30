@@ -140,6 +140,8 @@
       @extend %general-heading-small;
       box-shadow: none;
       border: 0;
+      border-bottom: 1px solid rgba($color-white, 0);
+      transition: border .22s;
 
       @media (min-width: 1400px) {
         font-size: 34px;
