@@ -60,7 +60,7 @@ body.single.single-reference {
 
       .wp-block-column h2 {
         @extend %general-heading-cta;
-        font-weight: 400;
+        font-weight: $headings-weight;
         margin-bottom: $margin-between-text-elements;
 
         @media (max-width: 600px) {
