@@ -59,7 +59,7 @@ if ( ! $small_references ) {
 get_header(); ?>
 
 <div class="content-area">
-	<main role="main" id="main" class="site-main">
+  <main role="main" id="main" class="site-main">
 
     <?php get_template_part( 'template-parts/hero', get_post_type() ); ?>
 
@@ -72,70 +72,72 @@ get_header(); ?>
     </section>
 
     <?php if ( ! empty( $quote ) && ! empty( $quote_person ) && ! empty( $quote_person_title ) ) : ?>
-      <section class="block block-testimonials block-reference-quote has-dark-bg">
-        <div class="container">
+    <section class="block block-testimonials block-reference-quote has-dark-bg">
+      <div class="container">
 
-          <h2 class="screen-reader-text">Asiakkaan palaute</h2>
+        <h2 class="screen-reader-text">Asiakkaan palaute</h2>
 
-          <div class="hreview testimonial">
+        <div class="hreview testimonial">
 
-              <?php if ( ! empty( $quote_person_image ) ) : ?>
-                <div class="testimonial-avatar" aria-hidden="true" style="background-image: url('<?php echo wp_get_attachment_image_url( $quote_person_image, 'medium' ) ?>')"></div>
-              <?php endif; ?>
+          <?php if ( ! empty( $quote_person_image ) ) : ?>
+          <div class="testimonial-avatar" aria-hidden="true" style="background-image: url('<?php echo wp_get_attachment_image_url( $quote_person_image, 'medium' ) ?>')"></div>
+          <?php endif; ?>
 
-              <div class="testimonial-content">
-                <div class="description">
-                  <?php echo wpautop( $quote ); ?>
-                </div>
-
-                <abbr class="rating screen-reader-text" title="5">*****</abbr>
-                <p class="reviewer vcard"><span class="screen-reader-text">Review by</span>
-                  <a class="url fn" href="<?php echo esc_html( get_the_permalink() ); ?>"><?php if ( ! empty( $quote_person ) ) : ?><?php echo esc_html( $quote_person ) ?>, <?php echo esc_html( strtolower( $quote_person_title ) ) ?><?php endif; ?><?php echo esc_html( $quote_company ); ?></a><abbr class="dtreviewed screen-reader-text" title="<?php echo esc_html( get_the_date( 'Y' ) ); ?>-<?php echo esc_html( get_the_date( 'm' ) ); ?>"><?php echo esc_html( get_the_date( 'F' ) ) ?> <?php echo esc_html( get_the_date( 'Y' ) ); ?></abbr>
-                </p>
-
-              </div>
-
+          <div class="testimonial-content">
+            <div class="description">
+              <?php echo wpautop( $quote ); ?>
             </div>
 
-        </div>
-      </section>
-    <?php endif; ?>
+            <abbr class="rating screen-reader-text" title="5">*****</abbr>
+            <p class="reviewer vcard"><span class="screen-reader-text">Review by</span>
+              <a class="url fn" href="<?php echo esc_html( get_the_permalink() ); ?>"><?php if ( ! empty( $quote_person ) ) : ?><?php echo esc_html( $quote_person ) ?>, <?php echo esc_html( $quote_person_title ) ?><?php endif; ?><?php echo esc_html( $quote_company ); ?></a><abbr class="dtreviewed screen-reader-text" title="<?php echo esc_html( get_the_date( 'Y' ) ); ?>-<?php echo esc_html( get_the_date( 'm' ) ); ?>"><?php echo esc_html( get_the_date( 'F' ) ) ?> <?php echo esc_html( get_the_date( 'Y' ) ); ?></abbr>
+            </p>
 
-    <?php if ( ! empty( $small_references ) ) : ?>
-      <section class="block block-references block-references-archive block-references-related has-dark-bg">
-        <div class="container">
-
-          <h2 class="block-title block-title-large">Katso myös nämä</h2>
-
-          <div class="reference-wrapper reference-wrapper-cols">
-            <?php foreach ( $small_references as $reference ) : ?>
-              <div class="reference">
-                <a href="<?php echo esc_html( $reference['permalink'] ) ?>" class="global-link"><span class="screen-reader-text"><?php the_title() ?></span></a>
-
-                  <div class="reference-image" aria-hidden="true">
-                    <div class="image" aria-hidden="true">
-                      <div class="background-image preview lazyload" style="background-image: url('<?php echo $reference['image_url_mobile']; ?>');" data-src="<?php echo $reference['image_url']; ?>" data-src-mobile="<?php echo $reference['image_url']; ?>" aria-hidden="true"></div>
-                      <div aria-hidden="true" class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : // phpcs:ignore ?> style="background-image: url('<?php echo $reference['image_url']; ?>');"<?php endif; ?>></div>
-                      <noscript><div aria-hidden="true" class="background-image full-image" style="background-image: url('<?php echo $reference['image_url']; ?>');"></div></noscript>
-                    </div>
-                  </div>
-
-                  <div class="reference-content">
-                    <p aria-describedby="reference-<?php echo esc_html( sanitize_title( $reference['title'] ) ) ?>"><?php echo esc_html( $reference['title'] ) ?></p>
-                    <h3 id="reference-<?php echo esc_html( sanitize_title( $reference['title'] ) ) ?>" class="reference-title"><?php echo get_post_meta( $reference['id'], 'short_desc', true ) ?></h3>
-                  </div>
-
-              </div>
-            <?php endforeach; ?>
           </div>
 
         </div>
-      </section>
+
+      </div>
+    </section>
+    <?php endif; ?>
+
+    <?php if ( ! empty( $small_references ) ) : ?>
+    <section class="block block-references block-references-archive block-references-related has-dark-bg">
+      <div class="container">
+
+        <h2 class="block-title block-title-large">Katso myös nämä</h2>
+
+        <div class="reference-wrapper reference-wrapper-cols">
+          <?php foreach ( $small_references as $reference ) : ?>
+          <div class="reference">
+            <a href="<?php echo esc_html( $reference['permalink'] ) ?>" class="global-link"><span class="screen-reader-text"><?php the_title() ?></span></a>
+
+            <div class="reference-image" aria-hidden="true">
+              <div class="image" aria-hidden="true">
+                <div class="background-image preview lazyload" style="background-image: url('<?php echo $reference['image_url_mobile']; ?>');" data-src="<?php echo $reference['image_url']; ?>" data-src-mobile="<?php echo $reference['image_url']; ?>" aria-hidden="true"></div>
+                <div aria-hidden="true" class="background-image full-image" <?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : // phpcs:ignore ?> style="background-image: url('<?php echo $reference['image_url']; ?>');" <?php endif; ?>></div>
+                <noscript>
+                  <div aria-hidden="true" class="background-image full-image" style="background-image: url('<?php echo $reference['image_url']; ?>');"></div>
+                </noscript>
+              </div>
+            </div>
+
+            <div class="reference-content">
+              <p aria-describedby="reference-<?php echo esc_html( sanitize_title( $reference['title'] ) ) ?>"><?php echo esc_html( $reference['title'] ) ?></p>
+              <h3 id="reference-<?php echo esc_html( sanitize_title( $reference['title'] ) ) ?>" class="reference-title"><?php echo get_post_meta( $reference['id'], 'short_desc', true ) ?></h3>
+            </div>
+
+          </div>
+          <?php endforeach; ?>
+        </div>
+
+      </div>
+    </section>
     <?php endif; ?>
 
     <?php include get_theme_file_path( 'template-parts/modules/cta-with-phone-input.php' ); ?>
 
-	</main><!-- #main -->
+  </main><!-- #main -->
 </div><!-- #primary -->
 
 <?php get_footer();

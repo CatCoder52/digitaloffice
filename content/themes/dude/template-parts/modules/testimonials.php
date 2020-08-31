@@ -55,33 +55,33 @@ if ( $query->have_posts() ) {
     </header>
 
     <?php if ( ! empty( $references ) ) : ?>
-      <div class="testimonials slider">
-        <?php foreach ( $references as $reference ) :
+    <div class="testimonials slider">
+      <?php foreach ( $references as $reference ) :
 
           // There has to be quote, so let's check that first
           if ( ! empty( $reference['quote'] ) ) : ?>
 
-            <div class="hreview testimonial">
-							<?php if ( ! empty( $reference['quote_person_image'] ) ) : ?>
-                <div class="testimonial-avatar" aria-hidden="true" style="background-image: url('<?php echo wp_get_attachment_image_url( $reference['quote_person_image'], 'medium' ) ?>')"></div>
-              <?php endif; ?>
+      <div class="hreview testimonial">
+        <?php if ( ! empty( $reference['quote_person_image'] ) ) : ?>
+        <div class="testimonial-avatar" aria-hidden="true" style="background-image: url('<?php echo wp_get_attachment_image_url( $reference['quote_person_image'], 'medium' ) ?>')"></div>
+        <?php endif; ?>
 
-            <div class="testimonial-content">
-              <div class="description">
-									<?php echo wpautop( $reference['quote'] ); // phpcs:ignore ?>
-              </div>
-
-              <abbr class="rating screen-reader-text" title="5">*****</abbr>
-              <p class="reviewer vcard"><span class="screen-reader-text">Review by</span>
-                <a class="url fn" href="<?php echo esc_html( $reference['permalink'] ); ?>"><?php if ( ! empty( $reference['quote_person'] ) ) : ?><?php echo esc_html( $reference['quote_person'] ) ?>, <?php endif; ?><?php echo esc_html( $reference['quote_company'] ); ?></a>
-                <abbr class="dtreviewed screen-reader-text" title="<?php echo esc_html( $reference['created_date_y'] ); ?>-<?php echo esc_html( $reference['created_date_m'] ); ?>"><?php echo esc_html( $reference['created_date_writtenmonth'] ) ?> <?php echo esc_html( $reference['created_date_y'] ); ?></abbr>
-              </p>
-            </div>
+        <div class="testimonial-content">
+          <div class="description">
+            <?php echo wpautop( $reference['quote'] ); // phpcs:ignore ?>
           </div>
 
-				  <?php endif; ?>
-        <?php endforeach; ?>
+          <abbr class="rating screen-reader-text" title="5">*****</abbr>
+          <p class="reviewer vcard"><span class="screen-reader-text">Review by</span>
+            <a class="url fn" href="<?php echo esc_html( $reference['permalink'] ); ?>"><?php if ( ! empty( $reference['quote_person'] ) ) : ?><?php echo esc_html( $reference['quote_person'] ) ?>, <?php endif; ?><?php echo esc_html( $reference['quote_company'] ); ?></a>
+            <abbr class="dtreviewed screen-reader-text" title="<?php echo esc_html( $reference['created_date_y'] ); ?>-<?php echo esc_html( $reference['created_date_m'] ); ?>"><?php echo esc_html( $reference['created_date_writtenmonth'] ) ?> <?php echo esc_html( $reference['created_date_y'] ); ?></abbr>
+          </p>
+        </div>
       </div>
+
+      <?php endif; ?>
+      <?php endforeach; ?>
+    </div>
     <?php endif; ?>
 
   </div>
