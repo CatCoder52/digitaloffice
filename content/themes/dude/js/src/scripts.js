@@ -2,6 +2,18 @@
  * Air theme JavaScript.
  */
 
+ // Import modules
+import "./skip-link-focus-fix.js";
+import "what-input";
+import "./slick.custom.js";
+import "./navigation.js";
+import "./lazyload.js";
+import "./svg-morpheus.js";
+import MoveTo from "moveto";
+import Swup from 'swup';
+import SwupScriptsPlugin from '@swup/scripts-plugin';
+import SwupBodyClassPlugin from '@swup/body-class-plugin';
+
 // Define Javascript is active by changing the body class
 document.body.classList.remove("no-js");
 document.body.classList.add("js");
@@ -782,4 +794,241 @@ document.addEventListener('DOMContentLoaded', function () {
   for (var i = 0; i < triggers.length; i++) {
     moveTo.registerTrigger(triggers[i]);
   }
+});
+
+jQuery( document ).ready(function() {
+  // Prevent Swup from resetting social media embeds
+  if (typeof window.instgrm !== "undefined") {
+    window.instgrm.Embeds.process();
+  }
+
+  if (typeof twttr !== "undefined") {
+    twttr.widgets.load();
+  }
+
+  if (typeof Storage !== "undefined" && typeof $crisp !== "undefined") {
+    maybeSendChatGreeting();
+  }
+
+  function maybeSendChatGreeting() {
+    // Don't show greeting on contact page
+    if (jQuery("body").hasClass("page-id-4487")) {
+      return;
+    }
+
+    // Alter greetings based on page
+    if (jQuery("body").hasClass("page-id-4485")) {
+      // visuaalinen suunnittelu page
+      var greetings = [
+        "Uutta ilmettä putiikille? Kysy lisää chatissa.",
+        "Moi! Mille työn jälki vaikuttaa? 🙂",
+        "Moro! Voisimmeko auttaa jotenkin? 👋",
+      ];
+    } else if (jQuery("body").hasClass("page-id-9")) {
+      // verkkosivut- ja palvelut page
+      var greetings = [
+        "Moottoritie on kuuma, mutta webisivut pitäs saada? 🚀",
+        "Verkkosivut uudistuksen tarpeessa? Pistä viestiä niin kerron vähän lisää meidän palveluista. 🙂",
+        "Moro! Voisimmeko auttaa jotenkin? 👋",
+      ];
+    } else {
+      // defaults / fallbacks
+      var greetings = [
+        "Moi! Verkkosivut uudistuksen tarpeessa? Uutta ilmettä putiikille? Kysy lisää chatissa.",
+        "Moro! 👋  Onko verkkosivustosi tai yritysilmeesi uudistuksen tarpeessa? Laita viestiä!",
+        "Terve! Pistä viestiä niin kerron vähän lisää meidän palveluista. 👋",
+      ];
+    }
+
+    var greeters = [
+      {
+        name: "Kristian",
+        image: dude.theme_base + "/images/chat-kristian.jpg",
+      }
+    ];
+
+    // Do nothing if session is ongoing or user has opened the chat
+    if (
+      $crisp.is("website:available") &&
+      !$crisp.is("session:ongoing") &&
+      !$crisp.is("chat:opened")
+    ) {
+      // Get random greeting and greeter
+      if (typeof chat_greeting_override !== "undefined") {
+        var greeting = chat_greeting_override;
+      } else {
+        var greeting =
+          greetings[Math.floor(Math.random() * greetings.length)];
+      }
+
+      var greeter = greeters[Math.floor(Math.random() * greeters.length)];
+
+      // Convert closed time to unix timestamp
+      if (sessionStorage.getItem("chat_greeting_closed") !== null) {
+        var dateStringClosed = sessionStorage.getItem("chat_greeting_closed");
+        var dateTimePartsClosed = dateStringClosed.split(', ');
+        var timePartsClosed = dateTimePartsClosed[1].split(':');
+        var datePartsClosed = dateTimePartsClosed[0].split('/');
+        var saveddateClosed = new Date(datePartsClosed[2], parseInt(datePartsClosed[1], 10) - 1, datePartsClosed[0], timePartsClosed[0], timePartsClosed[1]);
+        var newtimeClosed = new Date(saveddateClosed).getTime();
+
+        // Add X milliseconds
+        var unixstampClosed = newtimeClosed + 180000;
+        var dateClosed = Date(unixstampClosed).toLocaleString();
+      }
+
+      // Convert opened time to unix timestamp
+      if (sessionStorage.getItem("chat_greeting_sent") !== null) {
+        var dateStringSent = sessionStorage.getItem("chat_greeting_sent");
+        var dateTimePartsSent = dateStringSent.split(', ');
+        var timePartsSent = dateTimePartsSent[1].split(':');
+        var datePartsSent = dateTimePartsSent[0].split('/');
+        var saveddateSent = new Date(datePartsSent[2], parseInt(datePartsSent[1], 10) - 1, datePartsSent[0], timePartsSent[0], timePartsSent[1]);
+        var newtimeSent = new Date(saveddateSent).getTime();
+
+        // Add X milliseconds
+        var unixstampSent = newtimeSent + 180000;
+        var dateWillSend = new Date(unixstampSent).toLocaleString();
+      }
+
+      // If both not defined, then we'll just send the greeting
+      if (sessionStorage.getItem("chat_greeting_sent") === null && sessionStorage.getItem("chat_greeting_closed") === null) {
+        var unixstampSent = Date.now() - 100;
+        var unixstampClosed = Date.now() - 100;
+      }
+
+      // console.log('Sent: ' + saveddateSent);
+      // console.log('Will send next: ' + dateWillSend);
+      // console.log('Now: ' + Date());
+
+      // If it has passed X minutes from last time sent or if not sent at all
+      if (Date.now() > unixstampSent) {
+
+          // Show greeting
+          jQuery("body").append(
+            '<div class="chat-greeting"><button class="open-chat" aria-label="Avaa chat"></button><div class="avatar" style="background-image:url(\'' +
+            greeter.image +
+            '\')"></div><div class="message"><p class="head">Viesti henkilöltä ' +
+            greeter.name +
+            "</p><p>" +
+            greeting +
+            '</p></div><button class="close-chat close" aria-label="Sulje ilmoitus"><svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="currentColor"><path class="clr-i-outline clr-i-outline-path-1" d="M19.41 18l8.29-8.29a1 1 0 0 0-1.41-1.41L18 16.59l-8.29-8.3a1 1 0 0 0-1.42 1.42l8.3 8.29-8.3 8.29A1 1 0 1 0 9.7 27.7l8.3-8.29 8.29 8.29a1 1 0 0 0 1.41-1.41z"/></svg></button></div>'
+          );
+
+          console.log('Greeting sent at ' + sessionStorage.getItem("chat_greeting_sent") + '. Next time will send ' + dateWillSend);
+
+          // Save that we have shown the greeting
+          sessionStorage.setItem(
+            "chat_greeting_sent",
+            new Date().toLocaleString()
+          );
+
+          // Crisp triggers
+          $crisp.push([
+            "on",
+            "chat:opened",
+            function () {
+              $crisp.push(["do", "message:show", ["text", greeting]]);
+              $crisp.push(["off", "chat:opened"]);
+            },
+          ]);
+
+        // If closed is defined
+        } else {
+
+          // Cool off 5 minutes from closed time
+          if (Date.now() > unixstampClosed) {
+
+            // Show greeting
+            jQuery("body").append(
+              '<div class="chat-greeting"><button class="open-chat" aria-label="Avaa chat"></button><div class="avatar" style="background-image:url(\'' +
+              greeter.image +
+              '\')"></div><div class="message"><p class="head">Viesti henkilöltä ' +
+              greeter.name +
+              "</p><p>" +
+              greeting +
+              '</p></div><button class="close-chat close" aria-label="Sulje ilmoitus"><svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" fill="currentColor"><path class="clr-i-outline clr-i-outline-path-1" d="M19.41 18l8.29-8.29a1 1 0 0 0-1.41-1.41L18 16.59l-8.29-8.3a1 1 0 0 0-1.42 1.42l8.3 8.29-8.3 8.29A1 1 0 1 0 9.7 27.7l8.3-8.29 8.29 8.29a1 1 0 0 0 1.41-1.41z"/></svg></button></div>'
+            );
+
+            console.log('Greeting sent at ' + sessionStorage.getItem("chat_greeting_sent") + '. Next time will send ' + dateWillSend);
+
+            // Save that we have shown the greeting
+            sessionStorage.setItem(
+              "chat_greeting_sent",
+              new Date().toLocaleString()
+            );
+
+            // Crisp triggers
+            $crisp.push([
+              "on",
+              "chat:opened",
+              function () {
+                $crisp.push(["do", "message:show", ["text", greeting]]);
+                $crisp.push(["off", "chat:opened"]);
+              },
+            ]);
+
+          } else {
+            if (typeof dateClosed === "undefined") {
+              console.log('Greeting not sent, because now is ' + Date() + ' and next greeting sending time is at ' + dateWillSend + ' and chat was never closed.');
+            } else {
+              console.log('Greeting not sent, because now is ' + Date() + ' and next greeting sending time is at ' + dateWillSend + ' and chat was closed at ' + dateClosed);
+          }
+      }
+
+        }
+    }
+  }
+
+  // What happens if chat is closed
+  jQuery("body").on("click", ".chat-greeting button.close", function (event) {
+
+    // Set timestamp for closed chat
+    sessionStorage.setItem(
+      "chat_greeting_closed",
+      new Date().toLocaleString()
+    );
+
+    console.log('Greeting closed at ' + sessionStorage.getItem("chat_greeting_closed"));
+
+    jQuery("body").removeClass("chat-box-visible");
+
+    jQuery(".chat-greeting")
+      .addClass("removed-item-chat")
+      .one(
+        "webkitAnimationEnd oanimationend msAnimationEnd animationend",
+        function (e) {
+          jQuery(".chat-greeting").remove();
+        }
+      );
+  });
+
+  // Open chat if element is clicked
+  jQuery("body").on("click", ".open-chat", function (event) {
+    event.preventDefault();
+
+    jQuery(".chat-greeting")
+      .addClass("removed-item-chat")
+      .one(
+        "webkitAnimationEnd oanimationend msAnimationEnd animationend",
+        function (e) {
+          jQuery(".chat-greeting").remove();
+        }
+      );
+
+    $crisp.push(["do", "chat:show"]);
+    $crisp.push(["do", "chat:open"]);
+  });
+
+  // If there is unread posts, show the chat
+  window.CRISP_READY_TRIGGER = function () {
+    setTimeout(function () {
+      // Hide chat circle by default unless there is unread messages or session is ongoing
+      if ($crisp.get("chat:unread:count") > 0 || $crisp.is("session:ongoing")) {
+        $crisp.push(["do", "chat:show"]);
+      } else {
+        $crisp.push(["do", "chat:hide"]);
+      }
+    }, 25);
+  };
 });
