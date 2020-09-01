@@ -122,13 +122,10 @@
 
 </div><!-- #page -->
 
-<script data-swup-reload-script>
-  CRISP_WEBSITE_ID = "-K90vfAnyk27kD-pZAep"
-</script>
-
-<script data-swup-reload-script async src="https://client.crisp.im/l.js"></script>
 <script data-swup-reload-script async src="//www.instagram.com/embed.js"></script>
 <script data-swup-reload-script async src="//platform.twitter.com/widgets.js"></script>
+<script data-swup-reload-script async>CRISP_WEBSITE_ID = "-K90vfAnyk27kD-pZAep"</script>
+<script data-swup-reload-script async src="https://client.crisp.chat/l.js"></script>
 
 <?php wp_footer(); ?>
 
