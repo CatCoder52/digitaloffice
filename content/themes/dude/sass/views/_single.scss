@@ -82,12 +82,22 @@ body.single .block.block-single:not(.block-single-reference) {
   .post > .gutenberg-content p {
     @include responsive-font($font-min-size, 20px);
     font-weight: 400;
-    line-height: 1.75;
+    line-height: $line-height-blog;
     margin-top: 2.7rem;
     margin-bottom: 2.7rem;
 
     @media (max-width: 600px) {
       font-size: var(--font-size-general-small);
+    }
+  }
+
+  .post > .gutenberg-content ul,
+  .post > .gutenberg-content ol {
+    padding-left: 2.2rem;
+    line-height: $line-height-blog;
+
+    @media (max-width: $article-max-width + 40px) {
+      padding-left: 4.2rem;
     }
   }
 

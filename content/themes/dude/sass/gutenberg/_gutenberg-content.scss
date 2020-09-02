@@ -152,9 +152,16 @@
     display: block;
   }
 
+  ol,
+  ul li,
+  ol li,
   ul,
   li {
-    line-height: $line-height;
+    @include responsive-font($font-min-size, 20px);
+
+    @media (max-width: $container-mobile) {
+      font-size: 15px;
+    }
   }
 
   > blockquote,
@@ -187,19 +194,6 @@
 
   cite {
     margin-bottom: 0;
-  }
-
-  ul,
-  ol {
-    padding-left: 3.4rem;
-
-    li {
-      @include responsive-font($font-size-general-small, 19px);
-    }
-
-    @media (max-width: $article-max-width + 40px) {
-      padding-left: 4.2rem;
-    }
   }
 
   div[style="width: 640px;"],

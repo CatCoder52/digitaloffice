@@ -1953,9 +1953,13 @@ ul {
   ul li {
     padding: 0; }
 
-.block.block-title-left-text-right ul, .block-title-left-text-right.wp-block-columns ul {
+.gutenberg-content ul, body:not(.page-id-6357) .block.block-wide-text .container ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns .container ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container ul, body:not(.page-id-6357) .block.block-wide-text .site-header ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header ul,
+.block.block-title-left-text-right ul,
+.block-title-left-text-right.wp-block-columns ul {
   list-style: none; }
-  .block.block-title-left-text-right ul li::before, .block-title-left-text-right.wp-block-columns ul li::before {
+  .gutenberg-content ul li::before, body:not(.page-id-6357) .block.block-wide-text .container ul li::before, body:not(.page-id-6357) .block-wide-text.wp-block-columns .container ul li::before, body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container ul li::before, body:not(.page-id-6357) .block.block-wide-text .site-header ul li::before, body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ul li::before, body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header ul li::before,
+  .block.block-title-left-text-right ul li::before,
+  .block-title-left-text-right.wp-block-columns ul li::before {
     content: '\2022';
     /* Add content: \2022 is the CSS Code/unicode for a bullet */
     color: #7effe1;
@@ -5002,47 +5006,47 @@ body.page-id-6117 .block-hero.block-hero-light p {
 
 @keyframes glitch-effect {
   0% {
-    clip: rect(4px, 9999px, 17px, 0); }
+    clip: rect(28px, 9999px, 59px, 0); }
   5% {
-    clip: rect(81px, 9999px, 96px, 0); }
+    clip: rect(61px, 9999px, 41px, 0); }
   10% {
-    clip: rect(31px, 9999px, 40px, 0); }
+    clip: rect(32px, 9999px, 56px, 0); }
   15% {
-    clip: rect(96px, 9999px, 16px, 0); }
+    clip: rect(92px, 9999px, 53px, 0); }
   20% {
-    clip: rect(44px, 9999px, 55px, 0); }
+    clip: rect(70px, 9999px, 99px, 0); }
   25% {
-    clip: rect(100px, 9999px, 53px, 0); }
+    clip: rect(55px, 9999px, 24px, 0); }
   30% {
-    clip: rect(65px, 9999px, 20px, 0); }
+    clip: rect(42px, 9999px, 68px, 0); }
   35% {
-    clip: rect(100px, 9999px, 33px, 0); }
+    clip: rect(50px, 9999px, 9px, 0); }
   40% {
-    clip: rect(90px, 9999px, 91px, 0); }
+    clip: rect(62px, 9999px, 3px, 0); }
   45% {
-    clip: rect(75px, 9999px, 74px, 0); }
+    clip: rect(94px, 9999px, 59px, 0); }
   50% {
-    clip: rect(8px, 9999px, 54px, 0); }
+    clip: rect(73px, 9999px, 18px, 0); }
   55% {
-    clip: rect(75px, 9999px, 36px, 0); }
+    clip: rect(86px, 9999px, 63px, 0); }
   60% {
-    clip: rect(46px, 9999px, 37px, 0); }
+    clip: rect(38px, 9999px, 41px, 0); }
   65% {
-    clip: rect(24px, 9999px, 87px, 0); }
+    clip: rect(98px, 9999px, 45px, 0); }
   70% {
-    clip: rect(48px, 9999px, 60px, 0); }
+    clip: rect(96px, 9999px, 4px, 0); }
   75% {
-    clip: rect(31px, 9999px, 86px, 0); }
+    clip: rect(28px, 9999px, 69px, 0); }
   80% {
-    clip: rect(55px, 9999px, 57px, 0); }
+    clip: rect(8px, 9999px, 59px, 0); }
   85% {
-    clip: rect(89px, 9999px, 96px, 0); }
+    clip: rect(98px, 9999px, 88px, 0); }
   90% {
-    clip: rect(100px, 9999px, 77px, 0); }
+    clip: rect(80px, 9999px, 13px, 0); }
   95% {
-    clip: rect(9px, 9999px, 9px, 0); }
+    clip: rect(27px, 9999px, 5px, 0); }
   100% {
-    clip: rect(66px, 9999px, 70px, 0); } }
+    clip: rect(12px, 9999px, 55px, 0); } }
 
 .glitch {
   color: #131a50;
@@ -5083,120 +5087,120 @@ body.page-id-6117 .block-hero.block-hero-light p {
 
 @keyframes noise-1 {
   10% {
-    clip-path: inset(87px 0 8px 0); }
+    clip-path: inset(100px 0 1px 0); }
   20% {
-    clip-path: inset(97px 0 1px 0); }
+    clip-path: inset(51px 0 14px 0); }
   30% {
-    clip-path: inset(5px 0 8px 0); }
+    clip-path: inset(22px 0 32px 0); }
   40% {
-    clip-path: inset(71px 0 1px 0); }
+    clip-path: inset(20px 0 40px 0); }
   50% {
-    clip-path: inset(37px 0 60px 0); }
+    clip-path: inset(98px 0 1px 0); }
   60% {
-    clip-path: inset(11px 0 82px 0); }
+    clip-path: inset(26px 0 42px 0); }
   70% {
-    clip-path: inset(32px 0 37px 0); }
+    clip-path: inset(53px 0 23px 0); }
   80% {
-    clip-path: inset(93px 0 4px 0); }
+    clip-path: inset(7px 0 73px 0); }
   90% {
-    clip-path: inset(82px 0 2px 0); }
+    clip-path: inset(54px 0 18px 0); }
   100% {
-    clip-path: inset(51px 0 50px 0); } }
+    clip-path: inset(24px 0 75px 0); } }
 
 @keyframes noise-2 {
   0% {
-    text-shadow: 4px 0 #76ff9b;
-    clip-path: inset(39px 0 38px 0); }
+    text-shadow: 1px 0 #76ff9b;
+    clip-path: inset(24px 0 1px 0); }
   3.33333% {
-    text-shadow: 4px 0 #76ff9b;
-    clip-path: inset(74px 0 8px 0); }
-  6.66667% {
-    text-shadow: 5px 0 #76ff9b;
-    clip-path: inset(66px 0 29px 0); }
-  10% {
-    text-shadow: 3px 0 #76ff9b;
-    clip-path: inset(16px 0 21px 0); }
-  13.33333% {
     text-shadow: 2px 0 #76ff9b;
-    clip-path: inset(63px 0 38px 0); }
+    clip-path: inset(15px 0 32px 0); }
+  6.66667% {
+    text-shadow: 4px 0 #76ff9b;
+    clip-path: inset(58px 0 33px 0); }
+  10% {
+    text-shadow: 2px 0 #76ff9b;
+    clip-path: inset(53px 0 37px 0); }
+  13.33333% {
+    text-shadow: 1px 0 #76ff9b;
+    clip-path: inset(49px 0 33px 0); }
   16.66667% {
-    text-shadow: 4px 0 #76ff9b;
-    clip-path: inset(58px 0 32px 0); }
+    text-shadow: 1px 0 #76ff9b;
+    clip-path: inset(56px 0 42px 0); }
   20% {
-    text-shadow: 4px 0 #76ff9b;
-    clip-path: inset(66px 0 13px 0); }
+    text-shadow: 3px 0 #76ff9b;
+    clip-path: inset(10px 0 54px 0); }
   23.33333% {
     text-shadow: 4px 0 #76ff9b;
-    clip-path: inset(15px 0 14px 0); }
+    clip-path: inset(63px 0 10px 0); }
   26.66667% {
-    text-shadow: 5px 0 #76ff9b;
-    clip-path: inset(66px 0 7px 0); }
+    text-shadow: 2px 0 #76ff9b;
+    clip-path: inset(28px 0 18px 0); }
   30% {
     text-shadow: 2px 0 #76ff9b;
-    clip-path: inset(44px 0 24px 0); }
+    clip-path: inset(50px 0 40px 0); }
   33.33333% {
-    text-shadow: 4px 0 #76ff9b;
-    clip-path: inset(4px 0 85px 0); }
-  36.66667% {
-    text-shadow: 5px 0 #76ff9b;
-    clip-path: inset(32px 0 43px 0); }
-  40% {
     text-shadow: 1px 0 #76ff9b;
-    clip-path: inset(51px 0 17px 0); }
+    clip-path: inset(99px 0 2px 0); }
+  36.66667% {
+    text-shadow: 3px 0 #76ff9b;
+    clip-path: inset(49px 0 38px 0); }
+  40% {
+    text-shadow: 2px 0 #76ff9b;
+    clip-path: inset(100px 0 1px 0); }
   43.33333% {
     text-shadow: 2px 0 #76ff9b;
-    clip-path: inset(19px 0 37px 0); }
+    clip-path: inset(35px 0 31px 0); }
   46.66667% {
-    text-shadow: 3px 0 #76ff9b;
-    clip-path: inset(1px 0 2px 0); }
+    text-shadow: 2px 0 #76ff9b;
+    clip-path: inset(16px 0 82px 0); }
   50% {
     text-shadow: 1px 0 #76ff9b;
-    clip-path: inset(53px 0 47px 0); }
+    clip-path: inset(1px 0 13px 0); }
   53.33333% {
     text-shadow: 1px 0 #76ff9b;
-    clip-path: inset(98px 0 3px 0); }
+    clip-path: inset(43px 0 22px 0); }
   56.66667% {
-    text-shadow: 1px 0 #76ff9b;
-    clip-path: inset(39px 0 31px 0); }
+    text-shadow: 2px 0 #76ff9b;
+    clip-path: inset(91px 0 3px 0); }
   60% {
-    text-shadow: 1px 0 #76ff9b;
-    clip-path: inset(7px 0 92px 0); }
+    text-shadow: 5px 0 #76ff9b;
+    clip-path: inset(43px 0 11px 0); }
   63.33333% {
     text-shadow: 4px 0 #76ff9b;
-    clip-path: inset(93px 0 4px 0); }
+    clip-path: inset(3px 0 11px 0); }
   66.66667% {
     text-shadow: 1px 0 #76ff9b;
-    clip-path: inset(16px 0 43px 0); }
+    clip-path: inset(17px 0 29px 0); }
   70% {
-    text-shadow: 3px 0 #76ff9b;
-    clip-path: inset(35px 0 45px 0); }
+    text-shadow: 2px 0 #76ff9b;
+    clip-path: inset(50px 0 8px 0); }
   73.33333% {
-    text-shadow: 1px 0 #76ff9b;
-    clip-path: inset(98px 0 2px 0); }
+    text-shadow: 2px 0 #76ff9b;
+    clip-path: inset(29px 0 46px 0); }
   76.66667% {
-    text-shadow: 3px 0 #76ff9b;
-    clip-path: inset(96px 0 3px 0); }
+    text-shadow: 2px 0 #76ff9b;
+    clip-path: inset(51px 0 40px 0); }
   80% {
     text-shadow: 3px 0 #76ff9b;
-    clip-path: inset(76px 0 10px 0); }
+    clip-path: inset(44px 0 32px 0); }
   83.33333% {
     text-shadow: 5px 0 #76ff9b;
-    clip-path: inset(1px 0 76px 0); }
+    clip-path: inset(79px 0 11px 0); }
   86.66667% {
-    text-shadow: 3px 0 #76ff9b;
-    clip-path: inset(100px 0 1px 0); }
+    text-shadow: 4px 0 #76ff9b;
+    clip-path: inset(33px 0 40px 0); }
   90% {
     text-shadow: 4px 0 #76ff9b;
-    clip-path: inset(9px 0 59px 0); }
+    clip-path: inset(83px 0 11px 0); }
   93.33333% {
     text-shadow: 1px 0 #76ff9b;
-    clip-path: inset(93px 0 2px 0); }
+    clip-path: inset(69px 0 3px 0); }
   96.66667% {
-    text-shadow: 5px 0 #76ff9b;
-    clip-path: inset(29px 0 29px 0); }
+    text-shadow: 1px 0 #76ff9b;
+    clip-path: inset(6px 0 29px 0); }
   100% {
-    text-shadow: 5px 0 #76ff9b;
-    clip-path: inset(33px 0 39px 0); } }
+    text-shadow: 4px 0 #76ff9b;
+    clip-path: inset(61px 0 31px 0); } }
 
 @keyframes glitch-2 {
   1% {
@@ -11967,6 +11971,120 @@ body.single .block-single.wp-block-columns:not(.block-single-reference) {
       body.single .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .site-header p,
       body:not(.page-id-6357) .block-wide-text.wp-block-columns body.single .block-single.wp-block-columns:not(.block-single-reference) .post > .site-header p {
         font-size: var(--font-size-general-small); } }
+  .block.block-single:not(.block-single-reference) .post > .gutenberg-content ul, .block-single.wp-block-columns:not(.block-single-reference) .post > .gutenberg-content ul, .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container ul, body:not(.page-id-6357) .block.block-wide-text .block.block-single:not(.block-single-reference) .post > .container ul, .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container ul, body:not(.page-id-6357) .block.block-wide-text .block-single.wp-block-columns:not(.block-single-reference) .post > .container ul, .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .container ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns .block.block-single:not(.block-single-reference) .post > .container ul, .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .container ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns .block-single.wp-block-columns:not(.block-single-reference) .post > .container ul, .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header ul, body:not(.page-id-6357) .block.block-wide-text .block.block-single:not(.block-single-reference) .post > .site-header ul, .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header ul, body:not(.page-id-6357) .block.block-wide-text .block-single.wp-block-columns:not(.block-single-reference) .post > .site-header ul, .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .site-header ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns .block.block-single:not(.block-single-reference) .post > .site-header ul, .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .site-header ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns .block-single.wp-block-columns:not(.block-single-reference) .post > .site-header ul,
+  .block.block-single:not(.block-single-reference) .post > .gutenberg-content ol,
+  .block-single.wp-block-columns:not(.block-single-reference) .post > .gutenberg-content ol,
+  .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container ol,
+  body:not(.page-id-6357) .block.block-wide-text .block.block-single:not(.block-single-reference) .post > .container ol,
+  .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container ol,
+  body:not(.page-id-6357) .block.block-wide-text .block-single.wp-block-columns:not(.block-single-reference) .post > .container ol,
+  .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .container ol,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns .block.block-single:not(.block-single-reference) .post > .container ol,
+  .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .container ol,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns .block-single.wp-block-columns:not(.block-single-reference) .post > .container ol,
+  .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header ol,
+  body:not(.page-id-6357) .block.block-wide-text .block.block-single:not(.block-single-reference) .post > .site-header ol,
+  .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header ol,
+  body:not(.page-id-6357) .block.block-wide-text .block-single.wp-block-columns:not(.block-single-reference) .post > .site-header ol,
+  .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .site-header ol,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns .block.block-single:not(.block-single-reference) .post > .site-header ol,
+  .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .site-header ol,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns .block-single.wp-block-columns:not(.block-single-reference) .post > .site-header ol,
+  body.single .block.block-single:not(.block-single-reference) .post > .gutenberg-content ul,
+  body.single .block-single.wp-block-columns:not(.block-single-reference) .post > .gutenberg-content ul,
+  body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container ul,
+  body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:not(.block-single-reference) .post > .container ul,
+  body.single .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container ul,
+  body:not(.page-id-6357) .block.block-wide-text body.single .block-single.wp-block-columns:not(.block-single-reference) .post > .container ul,
+  body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .container ul,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns body.single .block.block-single:not(.block-single-reference) .post > .container ul,
+  body.single .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .container ul,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns body.single .block-single.wp-block-columns:not(.block-single-reference) .post > .container ul,
+  body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header ul,
+  body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:not(.block-single-reference) .post > .site-header ul,
+  body.single .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header ul,
+  body:not(.page-id-6357) .block.block-wide-text body.single .block-single.wp-block-columns:not(.block-single-reference) .post > .site-header ul,
+  body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .site-header ul,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns body.single .block.block-single:not(.block-single-reference) .post > .site-header ul,
+  body.single .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .site-header ul,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns body.single .block-single.wp-block-columns:not(.block-single-reference) .post > .site-header ul,
+  body.single .block.block-single:not(.block-single-reference) .post > .gutenberg-content ol,
+  body.single .block-single.wp-block-columns:not(.block-single-reference) .post > .gutenberg-content ol,
+  body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container ol,
+  body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:not(.block-single-reference) .post > .container ol,
+  body.single .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container ol,
+  body:not(.page-id-6357) .block.block-wide-text body.single .block-single.wp-block-columns:not(.block-single-reference) .post > .container ol,
+  body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .container ol,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns body.single .block.block-single:not(.block-single-reference) .post > .container ol,
+  body.single .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .container ol,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns body.single .block-single.wp-block-columns:not(.block-single-reference) .post > .container ol,
+  body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header ol,
+  body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:not(.block-single-reference) .post > .site-header ol,
+  body.single .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header ol,
+  body:not(.page-id-6357) .block.block-wide-text body.single .block-single.wp-block-columns:not(.block-single-reference) .post > .site-header ol,
+  body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .site-header ol,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns body.single .block.block-single:not(.block-single-reference) .post > .site-header ol,
+  body.single .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .site-header ol,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns body.single .block-single.wp-block-columns:not(.block-single-reference) .post > .site-header ol {
+    padding-left: 2.2rem;
+    line-height: 1.75; }
+    @media (max-width: 910px) {
+      .block.block-single:not(.block-single-reference) .post > .gutenberg-content ul, .block-single.wp-block-columns:not(.block-single-reference) .post > .gutenberg-content ul, .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container ul, body:not(.page-id-6357) .block.block-wide-text .block.block-single:not(.block-single-reference) .post > .container ul, .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container ul, body:not(.page-id-6357) .block.block-wide-text .block-single.wp-block-columns:not(.block-single-reference) .post > .container ul, .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .container ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns .block.block-single:not(.block-single-reference) .post > .container ul, .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .container ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns .block-single.wp-block-columns:not(.block-single-reference) .post > .container ul, .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header ul, body:not(.page-id-6357) .block.block-wide-text .block.block-single:not(.block-single-reference) .post > .site-header ul, .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header ul, body:not(.page-id-6357) .block.block-wide-text .block-single.wp-block-columns:not(.block-single-reference) .post > .site-header ul, .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .site-header ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns .block.block-single:not(.block-single-reference) .post > .site-header ul, .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .site-header ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns .block-single.wp-block-columns:not(.block-single-reference) .post > .site-header ul,
+      .block.block-single:not(.block-single-reference) .post > .gutenberg-content ol,
+      .block-single.wp-block-columns:not(.block-single-reference) .post > .gutenberg-content ol,
+      .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container ol,
+      body:not(.page-id-6357) .block.block-wide-text .block.block-single:not(.block-single-reference) .post > .container ol,
+      .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container ol,
+      body:not(.page-id-6357) .block.block-wide-text .block-single.wp-block-columns:not(.block-single-reference) .post > .container ol,
+      .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .container ol,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns .block.block-single:not(.block-single-reference) .post > .container ol,
+      .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .container ol,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns .block-single.wp-block-columns:not(.block-single-reference) .post > .container ol,
+      .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header ol,
+      body:not(.page-id-6357) .block.block-wide-text .block.block-single:not(.block-single-reference) .post > .site-header ol,
+      .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header ol,
+      body:not(.page-id-6357) .block.block-wide-text .block-single.wp-block-columns:not(.block-single-reference) .post > .site-header ol,
+      .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .site-header ol,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns .block.block-single:not(.block-single-reference) .post > .site-header ol,
+      .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .site-header ol,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns .block-single.wp-block-columns:not(.block-single-reference) .post > .site-header ol,
+      body.single .block.block-single:not(.block-single-reference) .post > .gutenberg-content ul,
+      body.single .block-single.wp-block-columns:not(.block-single-reference) .post > .gutenberg-content ul,
+      body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container ul,
+      body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:not(.block-single-reference) .post > .container ul,
+      body.single .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container ul,
+      body:not(.page-id-6357) .block.block-wide-text body.single .block-single.wp-block-columns:not(.block-single-reference) .post > .container ul,
+      body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .container ul,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns body.single .block.block-single:not(.block-single-reference) .post > .container ul,
+      body.single .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .container ul,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns body.single .block-single.wp-block-columns:not(.block-single-reference) .post > .container ul,
+      body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header ul,
+      body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:not(.block-single-reference) .post > .site-header ul,
+      body.single .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header ul,
+      body:not(.page-id-6357) .block.block-wide-text body.single .block-single.wp-block-columns:not(.block-single-reference) .post > .site-header ul,
+      body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .site-header ul,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns body.single .block.block-single:not(.block-single-reference) .post > .site-header ul,
+      body.single .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .site-header ul,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns body.single .block-single.wp-block-columns:not(.block-single-reference) .post > .site-header ul,
+      body.single .block.block-single:not(.block-single-reference) .post > .gutenberg-content ol,
+      body.single .block-single.wp-block-columns:not(.block-single-reference) .post > .gutenberg-content ol,
+      body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container ol,
+      body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:not(.block-single-reference) .post > .container ol,
+      body.single .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container ol,
+      body:not(.page-id-6357) .block.block-wide-text body.single .block-single.wp-block-columns:not(.block-single-reference) .post > .container ol,
+      body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .container ol,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns body.single .block.block-single:not(.block-single-reference) .post > .container ol,
+      body.single .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .container ol,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns body.single .block-single.wp-block-columns:not(.block-single-reference) .post > .container ol,
+      body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header ol,
+      body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:not(.block-single-reference) .post > .site-header ol,
+      body.single .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header ol,
+      body:not(.page-id-6357) .block.block-wide-text body.single .block-single.wp-block-columns:not(.block-single-reference) .post > .site-header ol,
+      body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .site-header ol,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns body.single .block.block-single:not(.block-single-reference) .post > .site-header ol,
+      body.single .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .site-header ol,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns body.single .block-single.wp-block-columns:not(.block-single-reference) .post > .site-header ol {
+        padding-left: 4.2rem; } }
   .block.block-single:not(.block-single-reference) .post > .gutenberg-content blockquote p, .block-single.wp-block-columns:not(.block-single-reference) .post > .gutenberg-content blockquote p, .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container blockquote p, body:not(.page-id-6357) .block.block-wide-text .block.block-single:not(.block-single-reference) .post > .container blockquote p, .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container blockquote p, body:not(.page-id-6357) .block.block-wide-text .block-single.wp-block-columns:not(.block-single-reference) .post > .container blockquote p, .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .container blockquote p, body:not(.page-id-6357) .block-wide-text.wp-block-columns .block.block-single:not(.block-single-reference) .post > .container blockquote p, .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .container blockquote p, body:not(.page-id-6357) .block-wide-text.wp-block-columns .block-single.wp-block-columns:not(.block-single-reference) .post > .container blockquote p, .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header blockquote p, body:not(.page-id-6357) .block.block-wide-text .block.block-single:not(.block-single-reference) .post > .site-header blockquote p, .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header blockquote p, body:not(.page-id-6357) .block.block-wide-text .block-single.wp-block-columns:not(.block-single-reference) .post > .site-header blockquote p, .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .site-header blockquote p, body:not(.page-id-6357) .block-wide-text.wp-block-columns .block.block-single:not(.block-single-reference) .post > .site-header blockquote p, .block-single.wp-block-columns:not(.block-single-reference) body:not(.page-id-6357) .block-wide-text.wp-block-columns .post > .site-header blockquote p, body:not(.page-id-6357) .block-wide-text.wp-block-columns .block-single.wp-block-columns:not(.block-single-reference) .post > .site-header blockquote p,
   body.single .block.block-single:not(.block-single-reference) .post > .gutenberg-content blockquote p,
   body.single .block-single.wp-block-columns:not(.block-single-reference) .post > .gutenberg-content blockquote p,
@@ -15809,7 +15927,21 @@ body.error404,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header small,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header small {
     display: block; }
-  .gutenberg-content ul, body:not(.page-id-6357) .block.block-wide-text .container ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns .container ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container ul, body:not(.page-id-6357) .block.block-wide-text .site-header ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header ul,
+  .gutenberg-content ol, body:not(.page-id-6357) .block.block-wide-text .container ol, body:not(.page-id-6357) .block-wide-text.wp-block-columns .container ol, body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container ol, body:not(.page-id-6357) .block.block-wide-text .site-header ol, body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ol, body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header ol,
+  .gutenberg-content ul li,
+  body:not(.page-id-6357) .block.block-wide-text .container ul li,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns .container ul li,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container ul li,
+  body:not(.page-id-6357) .block.block-wide-text .site-header ul li,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ul li,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header ul li,
+  .gutenberg-content ol li,
+  body:not(.page-id-6357) .block.block-wide-text .container ol li,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns .container ol li,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container ol li,
+  body:not(.page-id-6357) .block.block-wide-text .site-header ol li,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ol li,
+  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header ol li, .gutenberg-content ul, body:not(.page-id-6357) .block.block-wide-text .container ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns .container ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container ul, body:not(.page-id-6357) .block.block-wide-text .site-header ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header ul,
   .gutenberg-content li,
   body:not(.page-id-6357) .block.block-wide-text .container li,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .container li,
@@ -15817,7 +15949,79 @@ body.error404,
   body:not(.page-id-6357) .block.block-wide-text .site-header li,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header li,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header li {
-    line-height: 1.5; }
+    font-size: 17px; }
+    @media screen and (min-width: 320px) {
+      .gutenberg-content ol, body:not(.page-id-6357) .block.block-wide-text .container ol, body:not(.page-id-6357) .block-wide-text.wp-block-columns .container ol, body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container ol, body:not(.page-id-6357) .block.block-wide-text .site-header ol, body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ol, body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header ol,
+      .gutenberg-content ul li,
+      body:not(.page-id-6357) .block.block-wide-text .container ul li,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns .container ul li,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container ul li,
+      body:not(.page-id-6357) .block.block-wide-text .site-header ul li,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ul li,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header ul li,
+      .gutenberg-content ol li,
+      body:not(.page-id-6357) .block.block-wide-text .container ol li,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns .container ol li,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container ol li,
+      body:not(.page-id-6357) .block.block-wide-text .site-header ol li,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ol li,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header ol li, .gutenberg-content ul, body:not(.page-id-6357) .block.block-wide-text .container ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns .container ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container ul, body:not(.page-id-6357) .block.block-wide-text .site-header ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header ul,
+      .gutenberg-content li,
+      body:not(.page-id-6357) .block.block-wide-text .container li,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns .container li,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container li,
+      body:not(.page-id-6357) .block.block-wide-text .site-header li,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header li,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header li {
+        font-size: calc(17px + 3 * ((100vw - 320px) / 1600)); } }
+    @media screen and (min-width: 1920px) {
+      .gutenberg-content ol, body:not(.page-id-6357) .block.block-wide-text .container ol, body:not(.page-id-6357) .block-wide-text.wp-block-columns .container ol, body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container ol, body:not(.page-id-6357) .block.block-wide-text .site-header ol, body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ol, body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header ol,
+      .gutenberg-content ul li,
+      body:not(.page-id-6357) .block.block-wide-text .container ul li,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns .container ul li,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container ul li,
+      body:not(.page-id-6357) .block.block-wide-text .site-header ul li,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ul li,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header ul li,
+      .gutenberg-content ol li,
+      body:not(.page-id-6357) .block.block-wide-text .container ol li,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns .container ol li,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container ol li,
+      body:not(.page-id-6357) .block.block-wide-text .site-header ol li,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ol li,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header ol li, .gutenberg-content ul, body:not(.page-id-6357) .block.block-wide-text .container ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns .container ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container ul, body:not(.page-id-6357) .block.block-wide-text .site-header ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header ul,
+      .gutenberg-content li,
+      body:not(.page-id-6357) .block.block-wide-text .container li,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns .container li,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container li,
+      body:not(.page-id-6357) .block.block-wide-text .site-header li,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header li,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header li {
+        font-size: 20px; } }
+    @media (max-width: 480px) {
+      .gutenberg-content ol, body:not(.page-id-6357) .block.block-wide-text .container ol, body:not(.page-id-6357) .block-wide-text.wp-block-columns .container ol, body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container ol, body:not(.page-id-6357) .block.block-wide-text .site-header ol, body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ol, body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header ol,
+      .gutenberg-content ul li,
+      body:not(.page-id-6357) .block.block-wide-text .container ul li,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns .container ul li,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container ul li,
+      body:not(.page-id-6357) .block.block-wide-text .site-header ul li,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ul li,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header ul li,
+      .gutenberg-content ol li,
+      body:not(.page-id-6357) .block.block-wide-text .container ol li,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns .container ol li,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container ol li,
+      body:not(.page-id-6357) .block.block-wide-text .site-header ol li,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ol li,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header ol li, .gutenberg-content ul, body:not(.page-id-6357) .block.block-wide-text .container ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns .container ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container ul, body:not(.page-id-6357) .block.block-wide-text .site-header ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header ul,
+      .gutenberg-content li,
+      body:not(.page-id-6357) .block.block-wide-text .container li,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns .container li,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container li,
+      body:not(.page-id-6357) .block.block-wide-text .site-header li,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header li,
+      body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header li {
+        font-size: 15px; } }
   .gutenberg-content > blockquote, body:not(.page-id-6357) .block.block-wide-text .container > blockquote, body:not(.page-id-6357) .block-wide-text.wp-block-columns .container > blockquote, body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container > blockquote, body:not(.page-id-6357) .block.block-wide-text .site-header > blockquote, body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header > blockquote, body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header > blockquote,
   .gutenberg-content > blockquote.wp-block-quote,
   body:not(.page-id-6357) .block.block-wide-text .container > blockquote.wp-block-quote,
@@ -15870,54 +16074,6 @@ body.error404,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header cite,
   body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header cite {
     margin-bottom: 0; }
-  .gutenberg-content ul, body:not(.page-id-6357) .block.block-wide-text .container ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns .container ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container ul, body:not(.page-id-6357) .block.block-wide-text .site-header ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header ul,
-  .gutenberg-content ol,
-  body:not(.page-id-6357) .block.block-wide-text .container ol,
-  body:not(.page-id-6357) .block-wide-text.wp-block-columns .container ol,
-  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container ol,
-  body:not(.page-id-6357) .block.block-wide-text .site-header ol,
-  body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ol,
-  body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header ol {
-    padding-left: 3.4rem; }
-    .gutenberg-content ul li, body:not(.page-id-6357) .block.block-wide-text .container ul li, body:not(.page-id-6357) .block-wide-text.wp-block-columns .container ul li, body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container ul li, body:not(.page-id-6357) .block.block-wide-text .site-header ul li, body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ul li, body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header ul li,
-    .gutenberg-content ol li,
-    body:not(.page-id-6357) .block.block-wide-text .container ol li,
-    body:not(.page-id-6357) .block-wide-text.wp-block-columns .container ol li,
-    body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container ol li,
-    body:not(.page-id-6357) .block.block-wide-text .site-header ol li,
-    body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ol li,
-    body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header ol li {
-      font-size: 17px; }
-      @media screen and (min-width: 320px) {
-        .gutenberg-content ul li, body:not(.page-id-6357) .block.block-wide-text .container ul li, body:not(.page-id-6357) .block-wide-text.wp-block-columns .container ul li, body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container ul li, body:not(.page-id-6357) .block.block-wide-text .site-header ul li, body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ul li, body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header ul li,
-        .gutenberg-content ol li,
-        body:not(.page-id-6357) .block.block-wide-text .container ol li,
-        body:not(.page-id-6357) .block-wide-text.wp-block-columns .container ol li,
-        body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container ol li,
-        body:not(.page-id-6357) .block.block-wide-text .site-header ol li,
-        body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ol li,
-        body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header ol li {
-          font-size: calc(17px + 2 * ((100vw - 320px) / 1600)); } }
-      @media screen and (min-width: 1920px) {
-        .gutenberg-content ul li, body:not(.page-id-6357) .block.block-wide-text .container ul li, body:not(.page-id-6357) .block-wide-text.wp-block-columns .container ul li, body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container ul li, body:not(.page-id-6357) .block.block-wide-text .site-header ul li, body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ul li, body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header ul li,
-        .gutenberg-content ol li,
-        body:not(.page-id-6357) .block.block-wide-text .container ol li,
-        body:not(.page-id-6357) .block-wide-text.wp-block-columns .container ol li,
-        body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container ol li,
-        body:not(.page-id-6357) .block.block-wide-text .site-header ol li,
-        body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ol li,
-        body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header ol li {
-          font-size: 19px; } }
-    @media (max-width: 910px) {
-      .gutenberg-content ul, body:not(.page-id-6357) .block.block-wide-text .container ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns .container ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container ul, body:not(.page-id-6357) .block.block-wide-text .site-header ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ul, body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header ul,
-      .gutenberg-content ol,
-      body:not(.page-id-6357) .block.block-wide-text .container ol,
-      body:not(.page-id-6357) .block-wide-text.wp-block-columns .container ol,
-      body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .container ol,
-      body:not(.page-id-6357) .block.block-wide-text .site-header ol,
-      body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header ol,
-      body:not(.page-id-6357) .block-wide-text.wp-block-columns.alignwide .site-header ol {
-        padding-left: 4.2rem; } }
   .gutenberg-content div[style="width: 640px;"], body:not(.page-id-6357) .block.block-wide-text .container div[style="width: 640px;"], body:not(.page-id-6357) .block-wide-text.wp-block-columns .container div[style="width: 640px;"], body:not(.page-id-6357) .block.block-wide-text .site-header div[style="width: 640px;"], body:not(.page-id-6357) .block-wide-text.wp-block-columns .site-header div[style="width: 640px;"],
   .gutenberg-content .wp-video,
   body:not(.page-id-6357) .block.block-wide-text .container .wp-video,
