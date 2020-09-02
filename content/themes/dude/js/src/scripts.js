@@ -633,9 +633,9 @@ swup.on("contentReplaced", function () {
     } else if (jQuery("body").hasClass("page-id-9")) {
       // verkkosivut- ja palvelut page
       var greetings = [
-        "Moottoritie on kuuma, mutta webisivut pitäs saada? 🚀",
+        "Tarvitsetko uudet, uskottavat verkkosivut? Me voimme auttaa! 🚀",
         "Verkkosivut uudistuksen tarpeessa? Pistä viestiä niin kerron vähän lisää meidän palveluista. 🙂",
-        "Moro! Voisimmeko auttaa jotenkin? 👋",
+        "Moro! 👋 Voisimmeko me olla oikea tekijä seuraavassa projektissanne? ",
       ];
     } else {
       // defaults / fallbacks
@@ -650,7 +650,7 @@ swup.on("contentReplaced", function () {
       {
         name: "Kristian",
         image: dude.theme_base + "/images/chat-kristian.jpg",
-      }
+      },
     ];
 
     // Do nothing if session is ongoing or user has opened the chat
@@ -1035,9 +1035,9 @@ window.CRISP_READY_TRIGGER = function () {
     } else if (jQuery("body").hasClass("page-id-9")) {
       // verkkosivut- ja palvelut page
       var greetings = [
-        "Moottoritie on kuuma, mutta webisivut pitäs saada? 🚀",
+        "Tarvitsetko uudet, uskottavat verkkosivut? Me voimme auttaa! 🚀",
         "Verkkosivut uudistuksen tarpeessa? Pistä viestiä niin kerron vähän lisää meidän palveluista. 🙂",
-        "Moro! Voisimmeko auttaa jotenkin? 👋",
+        "Moro! 👋 Voisimmeko me olla oikea tekijä seuraavassa projektissanne? ",
       ];
     } else {
       // defaults / fallbacks
