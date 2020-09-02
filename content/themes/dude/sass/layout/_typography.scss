@@ -261,7 +261,7 @@ ul {
 }
 
 .gutenberg-content ul,
-.block.block-title-left-text-right ul {
+.block.block-title-left-text-right ul:not(.tags) {
   list-style: none;
 
   li::before {
