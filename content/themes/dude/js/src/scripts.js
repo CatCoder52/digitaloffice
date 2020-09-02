@@ -635,7 +635,7 @@ swup.on("contentReplaced", function () {
       var greetings = [
         "Tarvitsetko uudet, uskottavat verkkosivut? Me voimme auttaa! 🚀",
         "Verkkosivut uudistuksen tarpeessa? Pistä viestiä niin kerron vähän lisää meidän palveluista. 🙂",
-        "Moro! 👋 Voisimmeko me olla oikea tekijä seuraavassa projektissanne? ",
+        "Moro! 👋  Voisimmeko me olla oikea tekijä seuraavassa projektissanne? ",
       ];
     } else {
       // defaults / fallbacks
