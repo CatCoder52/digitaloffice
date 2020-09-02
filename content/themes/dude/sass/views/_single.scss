@@ -96,6 +96,10 @@ body.single .block.block-single:not(.block-single-reference) {
     padding-left: 2.2rem;
     line-height: $line-height-blog;
 
+    li {
+      line-height: $line-height-blog;
+    }
+
     @media (max-width: $article-max-width + 40px) {
       padding-left: 4.2rem;
     }

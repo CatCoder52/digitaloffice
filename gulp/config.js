@@ -3,12 +3,21 @@ const themeDir = 'content/themes/dude';
 module.exports = {
   cleancss: {
     opts: {
-      compatibility: 'ie11',
+      compatibility: 'ie11,-properties.merging',
       level: {
-        1: {
+        2: {
           tidyAtRules: true,
           cleanupCharsets: true,
-          specialComments: 0,
+          specialComments: 'all',
+          mergeSemantically: false,
+          overrideProperties: true,
+          removeEmpty: true,
+          removeDuplicateRules: true,
+          reduceNonAdjacentRules: true,
+          removeDuplicateFontRules: true,
+          removeDuplicateMediaBlocks: true,
+          removeUnusedAtRules: true,
+          restructureRules: true,
         },
       },
     }
