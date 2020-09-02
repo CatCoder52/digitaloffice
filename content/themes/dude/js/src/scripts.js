@@ -809,6 +809,19 @@ swup.on("contentReplaced", function () {
       );
   });
 
+  // If there is unread posts, show the chat
+  window.CRISP_READY_TRIGGER = function () {
+    setTimeout(function () {
+      // Hide chat circle by default unless there is unread messages or session is ongoing
+      if ($crisp.get("chat:unread:count") > 0 || $crisp.is("session:ongoing")) {
+        $crisp.push(["do", "chat:show"]);
+      } else {
+        $crisp.push(["do", "chat:hide"]);
+      }
+    }, 25);
+  };
+  // Crisp:end
+
   // Open chat if element is clicked
   jQuery("body").on("click", ".open-chat", function (event) {
     event.preventDefault();
@@ -825,19 +838,6 @@ swup.on("contentReplaced", function () {
     $crisp.push(["do", "chat:show"]);
     $crisp.push(["do", "chat:open"]);
   });
-
-  // If there is unread posts, show the chat
-  window.CRISP_READY_TRIGGER = function () {
-    setTimeout(function () {
-      // Hide chat circle by default unless there is unread messages or session is ongoing
-      if ($crisp.get("chat:unread:count") > 0 || $crisp.is("session:ongoing")) {
-        $crisp.push(["do", "chat:show"]);
-      } else {
-        $crisp.push(["do", "chat:hide"]);
-      }
-    }, 25);
-  };
-  // Crisp:end
 });
 // Swup ends
 
@@ -1211,23 +1211,6 @@ window.CRISP_READY_TRIGGER = function () {
       );
   });
 
-  // Open chat if element is clicked
-  jQuery("body").on("click", ".open-chat", function (event) {
-    event.preventDefault();
-
-    jQuery(".chat-greeting")
-      .addClass("removed-item-chat")
-      .one(
-        "webkitAnimationEnd oanimationend msAnimationEnd animationend",
-        function (e) {
-          jQuery(".chat-greeting").remove();
-        }
-      );
-
-    $crisp.push(["do", "chat:show"]);
-    $crisp.push(["do", "chat:open"]);
-  });
-
   // Hide chat circle by default unless there is unread messages or session iongoing
   if ($crisp.get("chat:unread:count") > 0 || $crisp.is("session:ongoing")) {
     $crisp.push(["do", "chat:show"]);
@@ -1260,4 +1243,21 @@ document.addEventListener('DOMContentLoaded', function () {
   for (var i = 0; i < triggers.length; i++) {
     moveTo.registerTrigger(triggers[i]);
   }
+
+  // Open chat if element is clicked
+  jQuery("body").on("click", ".open-chat", function (event) {
+    event.preventDefault();
+
+    jQuery(".chat-greeting")
+      .addClass("removed-item-chat")
+      .one(
+        "webkitAnimationEnd oanimationend msAnimationEnd animationend",
+        function (e) {
+          jQuery(".chat-greeting").remove();
+        }
+      );
+
+    $crisp.push(["do", "chat:show"]);
+    $crisp.push(["do", "chat:open"]);
+  });
 });
