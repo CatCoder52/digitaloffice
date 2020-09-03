@@ -55,8 +55,6 @@ function dude_gutenberg_can_edit_post_type( $can_edit, $post_type ) {
   return $can_edit;
 }
 
-
-
 // Button block: Allow for setting custom link class
 // @link https://github.com/WordPress/gutenberg/issues/14121#issuecomment-510585925
 add_filter( 'render_block', function( $block_content, $block ) {
