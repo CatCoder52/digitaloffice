@@ -325,19 +325,6 @@
   }
 
   @media (min-width: 1170px) {
-    // Big photos
-    .entry-photo {
-      max-width: 100%;
-      text-align: center;
-      margin-top: 8rem;
-      margin-bottom: 8rem;
-
-      img {
-        max-width: 70%;
-        margin: 0 auto;
-      }
-    }
-
     small[style="text-align: center;"] {
       width: 100%;
       max-width: 100%;
