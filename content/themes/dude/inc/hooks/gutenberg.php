@@ -12,11 +12,11 @@
 /**
  * Disable the custom color picker in Gutenberg.
  */
-function bauermedia_gutenberg_disable_custom_colors() {
+function dude_gutenberg_disable_custom_colors() {
   add_theme_support( 'editor-color-palette' );
   add_theme_support( 'disable-custom-colors' );
 }
-add_action( 'after_setup_theme', 'bauermedia_gutenberg_disable_custom_colors' );
+add_action( 'after_setup_theme', 'dude_gutenberg_disable_custom_colors' );
 
 /**
  * Enable Gutenberg extra features.
