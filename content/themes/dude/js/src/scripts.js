@@ -968,11 +968,6 @@ swup.on("contentReplaced", function () {
       });
     }
 
-    // Apple.com fade in all content that have opacity-on-load class
-    setTimeout(function() {
-      $('.opacity-on-load').addClass('fade-in');
-    }, 500);
-
     // Person image hack
     var iOS = ['iPad', 'iPhone', 'iPod'].indexOf(navigator.platform) >= 0;
 
