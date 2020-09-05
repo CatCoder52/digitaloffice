@@ -1,8 +1,9 @@
 body.template-surveys {
-  @include background-auto();
-  background-position: top;
   background-image: url('../images/survey-bg.png');
   background-attachment: fixed;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: top;
 
   ul,
   li {

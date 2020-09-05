@@ -92,7 +92,7 @@ body.post-type-archive-merch {
   }
 }
 
-// Design page is only partial dark
+// Design page is only partially dark
 body.page-id-4485 {
   .block.block-cta-with-phone-input {
     background: $color-midnight;
@@ -290,11 +290,6 @@ a.global-link {
 .block-pre-title {
   margin-top: 0;
   margin-bottom: $margin-between-text-elements;
-}
-
-// Descriptions and notes
-.col-description {
-  opacity: .5;
 }
 
 // Positions

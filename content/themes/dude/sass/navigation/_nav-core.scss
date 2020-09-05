@@ -4,8 +4,6 @@
 // The main layout for the website navigation, for both mobile
 // and desktop devices.
 // -----------------------------------------------------------
-$enable-animations: false;
-
 .nav-primary .menu-items,
 .nav-primary-desktop .menu-items {
   position: relative;
@@ -42,74 +40,6 @@ $enable-animations: false;
     margin: 0;
     padding: 0;
   }
-}
-
-// Hide by default if no animations enabled
-@if $enable-animations == false {
-  @media only screen and (min-width: $responsivenav) {
-    .nav-primary .menu-items ul,
-    .nav-primary-desktop .menu-items ul {
-      display: none;
-    }
-  }
-}
-
-// Disable animations on IE10 + IE11
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  @media only screen and (min-width: $responsivenav) {
-    .nav-primary .menu-items ul,
-    .nav-primary-desktop .menu-items ul {
-      display: none;
-    }
-  }
-}
-
-@media only screen and (max-width: $responsivenav) {
-  .js .nav-primary .menu-items ul,
-  .js .nav-primary-desktop .menu-items ul {
-    display: none;
-  }
-}
-
-.nav-primary ul ul,
-.nav-primary-desktop ul ul {
-  margin-top: 0;
-  margin-left: 25px;
-
-  ul {
-    margin-left: 25px;
-  }
-}
-
-@if $enable-animations == false {
-  @media only screen and (min-width: $responsivenav) {
-    .js .nav-primary ul .sub-menu.toggled-on,
-    .js .nav-primary-desktop ul .sub-menu.toggled-on {
-      display: block;
-    }
-  }
-}
-
-// Disable animations on IE10 + IE11
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  @media only screen and (min-width: $responsivenav) {
-    .js .nav-primary ul .sub-menu.toggled-on,
-    .js .nav-primary-desktop ul .sub-menu.toggled-on {
-      display: block;
-    }
-  }
-}
-
-@media only screen and (max-width: $responsivenav) {
-  .js .nav-primary ul .sub-menu.toggled-on,
-  .js .nav-primary-desktop ul .sub-menu.toggled-on {
-    display: block;
-  }
-}
-
-.dropdown-toggle:after,
-.dropdown-toggle.toggled-on:after {
-  font-size: 1.3rem;
 }
 
 .no-js .nav-toggle {

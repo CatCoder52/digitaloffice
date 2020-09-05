@@ -76,53 +76,11 @@
   }
 }
 
-@mixin background-auto() {
-  background: {
-    size: 100% auto;
-    repeat: no-repeat;
-    position: center;
-  }
-}
-
-// General
-@mixin hiddentext() {
-  text-indent: -9999px;
-  overflow: hidden;
-  text-decoration: none;
-  display: block;
-  font-size: 0;
-  text-align: start;
-}
-
-// Clearfix
-@mixin clearfix() {
-  &::after {
-    display: block;
-    content: '';
-    clear: both;
-  }
-}
-
 // Positioning
 @mixin vertical-align {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
-  transform-style: preserve-3d;
-}
-
-@mixin horizontal-align {
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  transform-style: preserve-3d;
-}
-
-@mixin centered {
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
   transform-style: preserve-3d;
 }
 
