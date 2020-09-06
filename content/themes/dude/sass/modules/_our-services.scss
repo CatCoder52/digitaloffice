@@ -103,6 +103,7 @@
   }
 }
 
+.block.block-references-one .cols.cols-two,
 .block.block-our-services .cols.cols-two {
   @media (min-width: $container-mobile) {
     @include grid(2, $gutter_x: $margin-between-grid-columns, $gutter_y: $margin-between-grid-columns);
