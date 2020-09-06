@@ -18,10 +18,6 @@ $services = get_sub_field( 'services' );
 <section class="block has-light-bg block-our-services<?php if ( is_page( 9 ) ) : ?> has-dark-bg<?php else : ?> has-light-bg<?php endif; ?>">
   <div class="container">
 
-    <header class="block-head screen-reader-text">
-      <h2 class="block-title">Palvelumme</h2>
-    </header>
-
     <div class="cols cols-services">
 
       <div class="col col-content">
