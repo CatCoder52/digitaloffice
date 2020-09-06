@@ -88,6 +88,7 @@ if ( $show_chat_greeting ) {
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="XF8_bRTu-S4gCsZgA0J78vtv0S5dfIjIFa0Lfm7kO_Y" />
   <link rel="profile" href="http://gmpg.org/xfn/11">
   <noscript><link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/noscript.css"></noscript>
   <?php wp_head();
