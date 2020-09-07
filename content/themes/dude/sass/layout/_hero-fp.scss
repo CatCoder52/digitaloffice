@@ -7,6 +7,9 @@
   padding-top: 0;
   padding-bottom: 0;
 
+  // Fix rendering bug
+  overflow: visible;
+
   @media (max-width: 500px) {
     max-height: 60rem;
   }
