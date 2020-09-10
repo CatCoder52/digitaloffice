@@ -44,6 +44,11 @@
       width: 100%;
       min-width: 75rem;
 
+      @media (max-width: 1300px) {
+        min-width: 60rem;
+        max-width: 80rem;
+      }
+
       @media (max-width: 760px) {
         min-width: 60rem;
       }
@@ -80,6 +85,11 @@
 
   .cols {
     @include grid(2, $gutter_x: $margin-between-grid-columns-large, $gutter_y: 0rem);
+
+    .col:not(.col-person-image) {
+      position: relative;
+      z-index: 3;
+    }
 
     @media (max-width: $container-ipad-landscape) {
       grid-template-columns: 60% 40%;
