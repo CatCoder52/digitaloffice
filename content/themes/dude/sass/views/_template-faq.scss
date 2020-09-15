@@ -61,5 +61,9 @@ body.page-template-template-faq .block-faq {
     h3 {
       @extend %general-heading-small;
     }
+
+    @media (min-width: $container-mobile) {
+      @include grid(2, $gutter_x: $margin-between-grid-columns, $gutter_y: $margin-between-grid-columns);
+    }
   }
 }
