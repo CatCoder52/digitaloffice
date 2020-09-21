@@ -175,9 +175,10 @@ body.single .block.block-single:not(.block-single-reference) {
     margin-bottom: 6rem;
   }
 
-  @media (max-width: 500px) {
+  @media (max-width: 700px) {
     iframe[width="1140"] {
-      max-height: 300px !important;
+      max-height: 450px !important;
+      min-height: 400px !important;
     }
   }
 
