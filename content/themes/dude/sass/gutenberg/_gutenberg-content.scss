@@ -24,7 +24,7 @@
   @for $i from 2 through 9 {
     .columns-#{$i} .blocks-gallery-grid {
       grid-template-columns: repeat($i, 1fr);
-      grid-column-gap: 3rem;
+      grid-column-gap: 1.5rem;
     }
   }
 
@@ -59,9 +59,19 @@
     @extend .columns;
     width: 100%;
     max-width: 100%;
+    padding-left: 15px;
+
+    @media (max-width: 910px) {
+      padding-right: .5rem !important;
+      padding-left: 2rem;
+    }
 
     @media (max-width: 600px) {
       display: block;
+    }
+
+    .blocks-gallery-item:last-child {
+      margin-right: 0 !important;
     }
 
     > * {
