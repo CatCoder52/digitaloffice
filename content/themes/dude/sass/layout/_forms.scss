@@ -210,24 +210,48 @@ body .gform_confirmation_wrapper .gform_confirmation_message {
 
 .gform_wrapper li.gfield_error input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']),
 .gform_wrapper li.gfield_error textarea {
-  border: 1px solid #ef5f5b !important;
+  border: 1px solid $color-error !important;
+}
+
+// Gravity forms overrides
+.gform_wrapper form ol.validation_list {
+  padding: 0;
+  margin: 0;
+
+  li {
+    padding: 0;
+    list-style-type: none !important;
+  }
+
+  a {
+    color: $color-error;
+    font-weight: 700;
+  }
+}
+
+.gfmc-column > ul,
+.gfmc-column > ol {
+  padding-left: 0 !important;
+}
+
+// Validation and errors
+body .gform_wrapper div.validation_error {
+  font-weight: bold;
+  padding-bottom: 15px;
+  background: $color-error;
+  color: $color-white;
+  border: 0;
+  padding: 2rem;
+  margin-top: -8rem;
+  margin-bottom: 4rem;
+}
+
+body .gform_wrapper .gfield_error .gfield_label {
+  color: $color-error;
 }
 
 // General
 form {
-
-  // Hide validation header
-  > .validation_error {
-    display: none;
-  }
-
-  // Validation and errors
-  .validation_error {
-    font-size: 1.2em;
-    font-weight: bold;
-    padding-bottom: 15px;
-  }
-
   li.gfield {
     &.gfield_error {
       background: transparent;
@@ -235,10 +259,10 @@ form {
       padding-top: 15px;
       border: 0;
       font-weight: 400;
-      color: #ef5f5b;
+      color: $color-error;
 
       * {
-        color: #ef5f5b;
+        color: $color-error;
         font-weight: 400;
       }
     }
