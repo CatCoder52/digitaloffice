@@ -330,3 +330,32 @@ a.global-link {
     background: #efefef;
   }
 }
+
+// Legacy for old blog posts
+.fa-thumbs-up {
+  background-image: url('../svg/thumbs-up.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px 24px;
+  margin-right: 7px !important;
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  position: relative;
+  top: 4px;
+}
+
+.fa-thumbs-down {
+  background-image: url('../svg/thumbs-up.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px 24px;
+  margin-right: 7px !important;
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  position: relative;
+  top: 4px;
+}
