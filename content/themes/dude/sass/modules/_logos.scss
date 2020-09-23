@@ -17,7 +17,6 @@
 .block.block-logos .logo-wall {
   @include grid(6, $gutter_x: 100px, $gutter_y: 7rem);
 
-
   @media (max-width: 1500px) {
     @include grid(5, $gutter_x: 100px, $gutter_y: $margin-between-grid-columns);
   }
