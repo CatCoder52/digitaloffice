@@ -956,6 +956,18 @@ swup.on("contentReplaced", function () {
       });
     });
 
+    // Accessibility add "External link:" aria label for external links
+    var currentHost = new RegExp(location.host);
+    $('a').each(function () {
+      var attr = $(this).attr('aria-label');
+      if (!currentHost.test($(this).attr('href')) && !attr) {
+        // A link that does not contain the current host
+        var txt = $(this).text();
+        $(this).addClass('is-external-link');
+       $(this).attr('aria-label', dude_screenReaderText.external_link + ' ' + txt);
+     }
+   });
+
     // 404 easter egg
     if ( jQuery("body").hasClass("error404") === true ) {
       jQuery(document).bind('keydown keyup', function(e) {

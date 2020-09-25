@@ -74,6 +74,7 @@ function dude_scripts() {
   wp_localize_script( 'scripts', 'dude_screenReaderText', array(
     'expand'      => esc_html__( 'Avaa alavalikko', 'dude' ),
     'collapse'    => esc_html__( 'Sulje alavalikko', 'dude' ),
+    'external_link' => esc_html__( 'Ulkoinen sivusto:', 'dude' ),
     'homeurl'      => esc_url( get_home_url() ),
   ) );
 
