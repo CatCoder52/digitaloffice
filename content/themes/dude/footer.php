@@ -157,6 +157,10 @@
   })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
 </script>
 
+<!-- Albacross -->
+<script>window._nQc = "89938094";</script>
+<script async src="https://serve.albacross.com/track.js"></script>
+
 <script data-swup-reload-script>
   var motionQuery = matchMedia('(prefers-reduced-motion)');
 
