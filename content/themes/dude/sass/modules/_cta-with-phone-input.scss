@@ -93,10 +93,6 @@ $submit-width: 33px;
   }
 
   &.block-recruiting .cols .col:last-of-type {
-    @media (min-width: 1170px) {
-      width: calc(100% - 875px);
-    }
-
     @media (max-width: 1210px) {
       max-width: 300px;
       margin-top: 2rem;
@@ -104,12 +100,12 @@ $submit-width: 33px;
 
     @media (min-width: 380px) {
       .button {
-        min-width: 265px;
+        white-space: nowrap;
       }
     }
   }
 
-  .container {
+  &:not(.block-recruiting) .container {
     background: $color-mint;
     color: $color-midnight-blue;
     padding-top: $padding-cta-box-y;
@@ -129,7 +125,7 @@ $submit-width: 33px;
     }
   }
 
-  &.block-recruting .container {
+  .container {
     background: $color-mint;
     color: $color-midnight-blue;
     padding-top: $padding-cta-box-y;

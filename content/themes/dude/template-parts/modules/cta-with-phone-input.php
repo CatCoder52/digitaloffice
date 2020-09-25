@@ -19,10 +19,10 @@
         // If contact or FAQ page
         if ( is_page( 4487 ) || is_page( 6704 ) ) : ?>
           <h2>Jätä meille yhteydenottopyyntö</h2>
-          <p>Haluatko tietää lisää palveluistamme ja Dudesta yrityksenä? Täytähän oheisen lomakkeen, niin olemme teihin pikimmiten yhteydessä.</p>
+          <p>Haluatko tietää lisää palveluistamme ja Dudesta yrityksenä? Täytäthän oheisen lomakkeen, niin olemme teihin pikimmiten yhteydessä.</p>
         <?php else : ?>
           <h2>Uskottava se on.</h2>
-          <p>Jos tuntemukset ovat kutakuinkin tuota luokkaa, niin täytähän oheisen lomakkeen. Meidän Kristian soittaa pikimmiten perään.</p>
+          <p>Jos tuntemukset ovat kutakuinkin tuota luokkaa, niin täytäthän oheisen lomakkeen ja olemme teihin pikimmiten yhteydessä.</p>
         <?php endif; ?>
       </div>
 
