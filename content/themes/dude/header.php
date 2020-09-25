@@ -200,7 +200,7 @@ if ( $show_chat_greeting ) {
                   </div>
 
                   <div class="col">
-                    <h3 class="contact-title">Yhteys</h3>
+                    <h3 class="contact-title">Yhteystiedot</h3>
                     <p>
                       <a href="mailto:moro@dude.fi">moro@dude.fi</a><br/>
                       <button class="chat open-chat open-chat-contact" aria-label="Avaa chat" tabindex="0">Avaa chat!</button>
@@ -216,7 +216,7 @@ if ( $show_chat_greeting ) {
                   <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_the_permalink( 9 ); ?>">Verkkosivut</a></li>
                   <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_the_permalink( 4485 ); ?>">Suunnittelu</a></li>
                   <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo get_post_type_archive_link( 'reference' ); ?>">Töitämme</a></li>
-                  <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a id="lastfocusableitem" href="<?php echo get_the_permalink( 4487 ); ?>">Yhteys</a></li>
+                  <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a id="lastfocusableitem" href="<?php echo get_the_permalink( 4487 ); ?>">Yhteystiedot</a></li>
                 </ul>
               </div>
             </div>
@@ -235,7 +235,7 @@ if ( $show_chat_greeting ) {
               </div>
 
               <div class="col">
-                <h3 class="contact-title contact-contact-mobile">Yhteys</h3>
+                <h3 class="contact-title contact-contact-mobile">Yhteystiedot</h3>
                 <p>
                   <a href="mailto:moro@dude.fi">moro@dude.fi</a><br/>
                   <button class="chat open-chat open-chat-contact" aria-label="Avaa chat" tabindex="0">Avaa chat!</button>

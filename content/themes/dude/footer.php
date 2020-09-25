@@ -57,7 +57,7 @@
 
   <div class="container">
 
-    <p class="large-text">Dude, vuodesta 2013. Paljon on nähty ja tehty. Tuntuuko, että olisimme oikea tekijä sinulle ja sinä oikea asiakas meille? <a href="<?php echo get_the_permalink( 4487 ); ?>" class="no-text-link">Ota yhteyttä</a>.</p>
+    <p class="large-text">Dude, vuodesta 2013. Paljon on nähty ja tehty. Tuntuuko, että olisimme oikea tekijä sinulle ja sinä oikea asiakas meille? <a href="<?php echo get_the_permalink( 4487 ); ?>" class="no-text-link">Yhteystiedot</a>.</p>
 
     <div class="cols cols-four">
 
@@ -126,7 +126,7 @@
 <script data-swup-reload-script async src="//platform.twitter.com/widgets.js"></script>
 <script data-swup-reload-script>CRISP_WEBSITE_ID = "-K90vfAnyk27kD-pZAep"</script>
 <script data-swup-reload-script async src="https://client.crisp.chat/l.js"></script>
-<script async>window.CRISP_READY_TRIGGER = function () { 
+<script async>window.CRISP_READY_TRIGGER = function () {
   // Hide chat circle by default unless there is unread messages or session iongoing
   if ($crisp.get("chat:unread:count") > 0 || $crisp.is("session:ongoing")) {
     $crisp.push(["do", "chat:show"]);
