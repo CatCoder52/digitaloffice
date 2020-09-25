@@ -57,7 +57,7 @@
 
   <div class="container">
 
-    <p class="large-text">Dude, vuodesta 2013. Paljon on nähty ja tehty. Tuntuuko, että olisimme oikea tekijä sinulle ja sinä oikea asiakas meille? <a href="<?php echo get_the_permalink( 4487 ); ?>" class="no-text-link">Yhteystiedot</a>.</p>
+    <p class="large-text">Dude, vuodesta 2013. Paljon on nähty ja tehty. Tuntuuko, että olisimme oikea tekijä sinulle ja sinä oikea asiakas meille? <a href="<?php echo get_the_permalink( 4487 ); ?>" class="no-text-link">Ota meihin yhteyttä</a>.</p>
 
     <div class="cols cols-four">
 
