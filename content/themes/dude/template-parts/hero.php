@@ -27,7 +27,7 @@ if ( is_front_page() ) {
 } else if ( 5973 === get_the_id() ) {
   include get_theme_file_path( 'template-parts/hero-merch-thanks.php' );
 } else if ( 6357 === get_the_id() ) {
-  include get_theme_file_path( 'template-parts/hero-start-project.php' );
+// include get_theme_file_path( 'template-parts/hero-start-project.php' );
 } else if ( 5975 === get_the_id() ) {
   include get_theme_file_path( 'template-parts/hero-merch-fail.php' );
 } else if ( is_post_type_archive( 'reference' ) ) {

@@ -160,7 +160,7 @@ if ( $show_chat_greeting ) {
             <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-18"><a href="<?php echo get_the_permalink( 9 ); ?>" data-text="Verkkosivut">Verkkosivut</a></li>
             <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-19"><a href="<?php echo get_the_permalink( 4485 ); ?>" data-text="Suunnittelu">Suunnittelu</a></li>
             <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4482"><a href="<?php echo get_the_permalink( 4493 ); ?>" data-text="Töitämme">Töitämme</a></li>
-            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-22"><a href="<?php echo get_the_permalink( 4487 ); ?>" data-text=">Ota yhteyttä">Ota yhteyttä</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-22"><a href="<?php echo get_the_permalink( 6357 ); ?>" data-text=">Ota yhteyttä">Ota yhteyttä</a></li>
           </ul>
         </nav><!-- #nav -->
 
@@ -173,7 +173,7 @@ if ( $show_chat_greeting ) {
 
         <nav id="nav" class="nav-primary" aria-expanded="false" aria-label="Mobiilivalikko" tabindex="-1">
           <p class="top-button-holder">
-            <a href="<?php echo esc_url( get_the_permalink( 6357 ) ); ?>" class="button button-glitch start-project">Aloitetaan projektisi<?php include get_theme_file_path( '/svg/arrow-right.svg' ); ?></a>
+            <a href="<?php echo esc_url( get_the_permalink( 6357 ) ); ?>" class="button button-glitch start-project">Ota yhteyttä<?php include get_theme_file_path( '/svg/arrow-right.svg' ); ?></a>
           </p>
 
           <div class="container">
@@ -222,7 +222,7 @@ if ( $show_chat_greeting ) {
             </div>
 
             <p class="top-button-holder show-on-mobile">
-              <a href="<?php echo esc_url( get_the_permalink( 6357 ) ); ?>" class="button button-glitch">Aloitetaan projektisi<?php include get_theme_file_path( '/svg/arrow-right.svg' ); ?></a>
+              <a href="<?php echo esc_url( get_the_permalink( 6357 ) ); ?>" class="button button-glitch">Ota yhteyttä<?php include get_theme_file_path( '/svg/arrow-right.svg' ); ?></a>
             </p>
 
             <div class="cols cols-contact show-on-mobile">

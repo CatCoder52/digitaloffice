@@ -7,7 +7,7 @@
 }
 
 body.page-id-6357 .block.block-wide-text {
-  padding-top: 0;
+  padding-top: 20rem;
   padding-bottom: 2rem;
 
   .gform_wrapper form li,
@@ -20,6 +20,7 @@ body.page-id-6357 .block.block-wide-text {
 
     h2 {
       @extend %general-heading-large;
+      font-weight: $headings-weight;
 
       @media (max-width: 760px) {
         margin-bottom: $padding-blocks-medium;
