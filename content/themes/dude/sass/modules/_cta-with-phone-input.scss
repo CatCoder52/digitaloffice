@@ -25,74 +25,41 @@ $submit-width: 33px;
     }
   }
 
-  &.block-recruiting .cols .col:last-of-type {
-    @media (min-width: 1170px) {
-      width: calc(100% - 875px);
-    }
-
-    @media (max-width: 1210px) {
-      max-width: 300px;
-      margin-top: 2rem;
-    }
-
-    @media (min-width: 380px) {
-      .button {
-        min-width: 265px;
-      }
-    }
-  }
-
-  @media (max-width: 1210px) {
-    .cols {
-      flex-wrap: wrap;
-
-      .col {
-        width: 100%;
-      }
-    }
-  }
-
-  .cols {
+  &.block-recruiting .cols {
     display: flex;
     align-items: center;
+
+    form {
+      display: flex;
+    }
+
+    .gform_wrapper .gform_footer {
+      width: $submit-width;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .gform_wrapper .gform_footer input.button,
+    .gform_wrapper .gform_page_footer input.button,
+    .gform_wrapper .gform_footer input[type=submit],
+    .gform_wrapper .gform_page_footer input[type=submit] {
+      background-image: url('../svg/paper-plane.svg');
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-position: center;
+      text-indent: -9999px;
+      width: $submit-width;
+      height: 40px;
+      margin: 0;
+      padding: 0;
+    }
 
     @media (max-width: 1000px) {
       flex-wrap: wrap;
 
       .col {
         width: 100%;
-      }
-    }
-  }
-
-  .container {
-    background: $color-mint;
-    color: $color-midnight-blue;
-    padding-top: $padding-cta-box-y;
-    padding-bottom: $padding-cta-box-y;
-    padding-left: $padding-cta-box-x;
-    padding-right: $padding-cta-box-x;
-
-    @media (max-width: 1285px) {
-      padding-top: 5rem;
-      padding-bottom: 5rem;
-      padding-left: 5rem;
-      padding-right: 5rem;
-    }
-
-    @media (max-width: 420px) {
-      padding: 4rem;
-    }
-
-    .col:first-of-type {
-      padding-right: 2rem;
-
-      @media (min-width: 1375px) {
-        width: 745px;
-      }
-
-      * {
-        max-width: 645px;
       }
     }
 
@@ -111,6 +78,75 @@ $submit-width: 33px;
         margin-top: 2rem;
       }
     }
+
+    .col:first-of-type {
+      padding-right: 2rem;
+
+      @media (min-width: 1375px) {
+        width: 745px;
+      }
+
+      * {
+        max-width: 645px;
+      }
+    }
+  }
+
+  &.block-recruiting .cols .col:last-of-type {
+    @media (min-width: 1170px) {
+      width: calc(100% - 875px);
+    }
+
+    @media (max-width: 1210px) {
+      max-width: 300px;
+      margin-top: 2rem;
+    }
+
+    @media (min-width: 380px) {
+      .button {
+        min-width: 265px;
+      }
+    }
+  }
+
+  .container {
+    background: $color-mint;
+    color: $color-midnight-blue;
+    padding-top: $padding-cta-box-y;
+    padding-bottom: $padding-cta-box-y;
+    padding-left: $padding-cta-box-x;
+    padding-right: 6.5rem;
+
+    @media (max-width: 1285px) {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+      padding-left: 5rem;
+      padding-right: 1.7rem;
+    }
+
+    @media (max-width: 420px) {
+      padding: 4rem .7rem 4rem 4rem;
+    }
+  }
+
+  &.block-recruting .container {
+    background: $color-mint;
+    color: $color-midnight-blue;
+    padding-top: $padding-cta-box-y;
+    padding-bottom: $padding-cta-box-y;
+    padding-left: $padding-cta-box-x;
+    padding-right: $padding-cta-box-x;
+
+    @media (max-width: 1285px) {
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+
+    @media (max-width: 420px) {
+      padding: 4rem;
+    }
   }
 
   h2 {
@@ -122,14 +158,57 @@ $submit-width: 33px;
     margin: 0;
   }
 
+  @media (max-width: 600px) {
+    h2,
+    p {
+      padding-right: 4rem;
+    }
+  }
+
   // Gravity forms
   .gform_wrapper {
     width: 100%;
     margin: 0;
     padding: 0;
 
-    form {
+    &#gform_wrapper_7 .gform_footer {
+      max-width: calc(100% - 33px) !important;
+    }
+
+    #gform_fields_7 {
       display: flex;
+      flex-wrap: wrap;
+      margin-top: 4rem !important;
+
+      @media (min-width: 960px) {
+        margin-left: -10px !important;
+        margin-right: -10px !important;
+      }
+    }
+
+    #field_7_4,
+    #field_7_2,
+    #field_7_1 {
+      width: 100%;
+      margin-bottom: 3rem !important;
+
+      @media (min-width: 960px) {
+        width: calc(33.3% - 20px);
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+        margin-bottom: 0 !important;
+      }
+    }
+
+    #field_7_5 {
+      width: 100%;
+      margin-top: 3rem !important;
+      margin-bottom: 3rem !important;
+
+      @media (min-width: 960px) {
+        margin-left: 10px !important;
+        margin-right: 10px !important;
+      }
     }
   }
 
@@ -137,21 +216,9 @@ $submit-width: 33px;
     width: calc(100% - #{$submit-width});
   }
 
-  .gform_wrapper .gform_footer {
-    width: $submit-width;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
   .gform_wrapper ul.gform_fields li.gfield {
     margin: 0;
     padding: 0;
-  }
-
-  .gform_wrapper legend.gfield_label,
-  .gform_wrapper .top_label .gfield_label {
-    @extend .screen-reader-text;
   }
 
   .gform_wrapper .top_label div.ginput_container,
@@ -160,14 +227,15 @@ $submit-width: 33px;
     padding: 0;
   }
 
-  .gform_wrapper input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']) {
-    padding: 17px 6px;
-    width: calc(100% - 22px);
+  .gform_wrapper input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']),
+  textarea {
+    padding: 15px 6px;
+    width: 100%;
     border-bottom: 2px solid $color-midnight-blue;
     border-right: 2px solid $color-midnight-blue;
     border-top: 0;
     border-left: 0;
-    margin-right: 22px;
+    margin: 0;
 
     @media (max-width: $container-mobile) {
       padding: 12px 6px 12px 0;
@@ -181,21 +249,6 @@ $submit-width: 33px;
       color: $color-midnight-blue;
       opacity: 1;
     }
-  }
-
-  .gform_wrapper .gform_footer input.button,
-  .gform_wrapper .gform_page_footer input.button,
-  .gform_wrapper .gform_footer input[type=submit],
-  .gform_wrapper .gform_page_footer input[type=submit] {
-    background-image: url('../svg/paper-plane.svg');
-    background-color: transparent;
-    background-repeat: no-repeat;
-    background-position: center;
-    text-indent: -9999px;
-    width: $submit-width;
-    height: 40px;
-    margin: 0;
-    padding: 0;
   }
 }
 

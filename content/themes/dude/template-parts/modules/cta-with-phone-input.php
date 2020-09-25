@@ -19,17 +19,17 @@
         // If contact or FAQ page
         if ( is_page( 4487 ) || is_page( 6704 ) ) : ?>
           <h2>Jätä meille yhteydenottopyyntö</h2>
-          <p>Haluatko tietää lisää palveluistamme ja Dudesta yrityksenä? Jätä puhelinnumerosi, niin olemme teihin pikimmiten yhteydessä.</p>
+          <p>Haluatko tietää lisää palveluistamme ja Dudesta yrityksenä? Täytähän oheisen lomakkeen, niin olemme teihin pikimmiten yhteydessä.</p>
         <?php else : ?>
           <h2>Uskottava se on.</h2>
-          <p>Jos tuntemukset ovat kutakuinkin tuota luokkaa, niin jätäthän meille soittopyynnön. Meidän Kristian soittaa pikimmiten perään.</p>
+          <p>Jos tuntemukset ovat kutakuinkin tuota luokkaa, niin täytähän oheisen lomakkeen. Meidän Kristian soittaa pikimmiten perään.</p>
         <?php endif; ?>
       </div>
 
       <div class="col">
         <?php
           if ( function_exists( 'gravity_form' ) ) {
-            gravity_form( 1, $display_title = false, $display_description = false, $display_inactive = false, $field_values = null, $ajax = false, $echo = true );
+            gravity_form( 7, $display_title = false, $display_description = false, $display_inactive = false, $field_values = null, $ajax = false, $echo = true );
           }
         ?>
       </div>
