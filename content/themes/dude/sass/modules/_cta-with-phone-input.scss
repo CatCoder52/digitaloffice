@@ -175,10 +175,25 @@ $submit-width: 33px;
       max-width: calc(100% - 33px) !important;
     }
 
+    li.gfield_error input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
+    li.gfield_error textarea {
+      border-width: 2px !important;
+    }
+
+    form li.gfield.gfield_error,
+    form li.gfield.gfield_error * {
+      font-weight: 600 !important;
+    }
+
     #gform_fields_7 {
       display: flex;
       flex-wrap: wrap;
       margin-top: 4rem !important;
+
+      textarea,
+      input {
+        padding-left: 0 !important;
+      }
 
       @media (min-width: 960px) {
         margin-left: -10px !important;

@@ -242,12 +242,21 @@ body .gform_wrapper div.validation_error {
   color: $color-white;
   border: 0;
   padding: 2rem;
+  margin-top: 3rem;
+}
+
+body.page-id-6357 .gform_wrapper div.validation_error {
   margin-top: -8rem;
   margin-bottom: 4rem;
 }
 
 body .gform_wrapper .gfield_error .gfield_label {
   color: $color-error;
+}
+
+.gform_wrapper li.gfield.gfield_error.gfield_contains_required label.gfield_label,
+.gform_wrapper li.gfield.gfield_error.gfield_contains_required div.ginput_container {
+  margin-top: 0 !important;
 }
 
 // General

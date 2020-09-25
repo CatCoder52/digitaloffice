@@ -17,6 +17,7 @@ body.page-id-6357 .block.block-wide-text {
 
   .container {
     max-width: $grid-base-size;
+    overflow: visible;
 
     h2 {
       @extend %general-heading-large;
