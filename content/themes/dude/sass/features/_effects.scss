@@ -241,18 +241,30 @@ $glitch-steps: 20;
   left: 4px;
   text-shadow: 2px 0 #00ffea;
   animation: effect 2s infinite linear, 5s 5.05s infinite glitch;
+
+  @media (max-width: $container-mobile) {
+    text-shadow: 1px 0 #00ffea;
+  }
 }
 
 .glitch:after {
   left: 4px;
   text-shadow: -2px 0 #fe3a7f;
   animation: effect 2s infinite linear, 5s 5.05s infinite glitch;
+
+  @media (max-width: $container-mobile) {
+    text-shadow: -1px 0 #fe3a7f;
+  }
 }
 
 .glitch-fulltilt:before {
-  left: 140px;
+  left: 90px;
   text-shadow: 2px 0 #00ffea;
   animation: effect 3s infinite linear;
+
+  @media (max-width: $container-mobile) {
+    left: 30px;
+  }
 }
 
 @keyframes effect {
