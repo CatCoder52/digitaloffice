@@ -22,7 +22,7 @@ if ( has_post_thumbnail() ) {
   <div class="container">
 
     <div class="content">
-      <h1 id="content" class="swup-transition-fade">Ole <span class="the-word glitch" data-text="uskottava.">uskottava.</span></h1>
+      <h1 id="content" class="swup-transition-fade glitch" data-text="Ole uskottava.">Ole <span class="the-word" data-text="uskottava.">uskottava.</span></h1>
       <p class="content-sub-statement swup-transition-fade">Suunnittelemme moderneja ja teknisesti kestäviä <span class="capital-p-dangit">WordPress</span>-verkkosivuja.</p>
     </div>
 

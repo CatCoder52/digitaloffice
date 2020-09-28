@@ -907,6 +907,16 @@ swup.on("contentReplaced", function () {
   // Document ready start
   $(function () {
 
+      // Glitch improvements for main title
+      setInterval(function(){
+        // toggle the class every X seconds
+        $('.glitch').toggleClass('glitch-fulltilt');
+        setTimeout(function(){
+          // toggle back after X seconds
+          $('.glitch').toggleClass('glitch-fulltilt');
+        }, 1000);
+      }, 4000);
+
     	// Hide or show the "back to top" link
     	$(window).scroll(function() {
 
