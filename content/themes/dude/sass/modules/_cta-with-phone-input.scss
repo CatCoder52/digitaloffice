@@ -181,10 +181,15 @@ $submit-width: 33px;
       font-weight: 600 !important;
     }
 
+    ul {
+      padding-left: 0;
+    }
+
     #gform_fields_7 {
       display: flex;
       flex-wrap: wrap;
       margin-top: 4rem !important;
+      padding-left: 0 !important;
 
       textarea,
       input {
