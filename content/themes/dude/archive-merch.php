@@ -32,7 +32,6 @@ get_header(); ?>
               <div class="image has-lazyload" aria-hidden="true">
                 <div aria-hidden="true" class="background-image preview lazyload" style="background-image: url('<?php echo the_post_thumbnail_url( 'tiny-preload-thumbnail' ); ?>');" data-src="<?php echo the_post_thumbnail_url( 'large' ); ?>" data-src-mobile="<?php echo the_post_thumbnail_url( 'large' ); ?>"></div>
                 <div aria-hidden="true" class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : // phpcs:ignore ?> style="background-image: url('<?php echo the_post_thumbnail_url( 'large' ); ?>');"<?php endif; ?>></div>
-                <noscript><div aria-hidden="true" class="background-image full-image" style="background-image: url('<?php echo the_post_thumbnail_url( 'large' ); ?>');"></div></noscript>
               </div>
             </div>
 

@@ -116,9 +116,6 @@ get_header(); ?>
               <div class="image" aria-hidden="true">
                 <div class="background-image preview lazyload" style="background-image: url('<?php echo $reference['image_url_mobile']; ?>');" data-src="<?php echo $reference['image_url']; ?>" data-src-mobile="<?php echo $reference['image_url']; ?>" aria-hidden="true"></div>
                 <div aria-hidden="true" class="background-image full-image" <?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : // phpcs:ignore ?> style="background-image: url('<?php echo $reference['image_url']; ?>');" <?php endif; ?>></div>
-                <noscript>
-                  <div aria-hidden="true" class="background-image full-image" style="background-image: url('<?php echo $reference['image_url']; ?>');"></div>
-                </noscript>
               </div>
             </div>
 

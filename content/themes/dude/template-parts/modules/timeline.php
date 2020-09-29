@@ -61,7 +61,6 @@
         <div class="image has-lazyload" aria-hidden="true">
           <div aria-hidden="true" class="background-image preview lazyload" style="background-image: url('<?php echo get_theme_file_uri( 'images/timeline/dude-2013-tiny.jpg' ) ?>' ) ?>');" data-src="<?php echo get_theme_file_uri( 'images/timeline/dude-2013.jpg' ) ?>" data-src-mobile="<?php echo get_theme_file_uri( 'images/timeline/dude-2013.jpg' ) ?>"></div>
           <div aria-hidden="true" id="dynamicimage" class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : // phpcs:ignore ?> style="background-image: url('<?php echo get_theme_file_uri( 'images/timeline/dude-2013.jpg' ) ?>');"<?php endif; ?>></div>
-          <noscript><div aria-hidden="true" class="background-image full-image" style="background-image: url('<?php echo get_theme_file_uri( 'images/timeline/dude-2013.jpg' ) ?>');"></div></noscript>
         </div>
       </div>
     </div>
