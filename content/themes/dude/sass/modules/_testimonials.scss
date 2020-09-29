@@ -130,13 +130,13 @@
   }
 
   .testimonial-avatar {
-    @include background-cover();
-    background-color: $color-white;
     border-radius: 50%;
     width: 170px;
     height: 170px;
     min-width: 170px;
     margin-right: 5rem;
+    position: relative;
+    overflow: hidden;
 
     @media (max-width: $container-ipad) {
       width: calc(170px/2);

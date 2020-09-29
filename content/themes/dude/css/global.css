@@ -3651,47 +3651,47 @@ body.page-id-6117 .block-hero.block-hero-light p {
 
 @keyframes glitch-effect {
   0% {
-    clip: rect(80px, 9999px, 31px, 0); }
+    clip: rect(77px, 9999px, 16px, 0); }
   5% {
-    clip: rect(25px, 9999px, 45px, 0); }
+    clip: rect(16px, 9999px, 89px, 0); }
   10% {
-    clip: rect(81px, 9999px, 89px, 0); }
+    clip: rect(33px, 9999px, 63px, 0); }
   15% {
-    clip: rect(2px, 9999px, 40px, 0); }
+    clip: rect(40px, 9999px, 1px, 0); }
   20% {
-    clip: rect(26px, 9999px, 51px, 0); }
+    clip: rect(90px, 9999px, 36px, 0); }
   25% {
-    clip: rect(59px, 9999px, 39px, 0); }
+    clip: rect(41px, 9999px, 38px, 0); }
   30% {
-    clip: rect(67px, 9999px, 11px, 0); }
+    clip: rect(94px, 9999px, 7px, 0); }
   35% {
-    clip: rect(86px, 9999px, 89px, 0); }
+    clip: rect(61px, 9999px, 94px, 0); }
   40% {
-    clip: rect(45px, 9999px, 31px, 0); }
+    clip: rect(57px, 9999px, 47px, 0); }
   45% {
-    clip: rect(57px, 9999px, 72px, 0); }
+    clip: rect(79px, 9999px, 32px, 0); }
   50% {
-    clip: rect(59px, 9999px, 60px, 0); }
+    clip: rect(44px, 9999px, 5px, 0); }
   55% {
-    clip: rect(76px, 9999px, 98px, 0); }
+    clip: rect(83px, 9999px, 66px, 0); }
   60% {
-    clip: rect(25px, 9999px, 97px, 0); }
+    clip: rect(20px, 9999px, 88px, 0); }
   65% {
-    clip: rect(4px, 9999px, 5px, 0); }
+    clip: rect(98px, 9999px, 70px, 0); }
   70% {
-    clip: rect(14px, 9999px, 7px, 0); }
+    clip: rect(21px, 9999px, 87px, 0); }
   75% {
-    clip: rect(47px, 9999px, 64px, 0); }
+    clip: rect(47px, 9999px, 13px, 0); }
   80% {
-    clip: rect(49px, 9999px, 82px, 0); }
+    clip: rect(83px, 9999px, 1px, 0); }
   85% {
-    clip: rect(89px, 9999px, 31px, 0); }
+    clip: rect(6px, 9999px, 2px, 0); }
   90% {
-    clip: rect(60px, 9999px, 83px, 0); }
+    clip: rect(41px, 9999px, 65px, 0); }
   95% {
-    clip: rect(2px, 9999px, 5px, 0); }
+    clip: rect(4px, 9999px, 86px, 0); }
   100% {
-    clip: rect(15px, 9999px, 39px, 0); } }
+    clip: rect(83px, 9999px, 2px, 0); } }
 
 .glitch {
   position: relative;
@@ -3785,120 +3785,120 @@ body.page-id-6117 .block-hero.block-hero-light p {
 
 @keyframes noise-1 {
   10% {
-    clip-path: inset(92px 0 7px 0); }
+    clip-path: inset(97px 0 3px 0); }
   20% {
-    clip-path: inset(48px 0 40px 0); }
+    clip-path: inset(48px 0 7px 0); }
   30% {
-    clip-path: inset(42px 0 4px 0); }
+    clip-path: inset(87px 0 2px 0); }
   40% {
-    clip-path: inset(40px 0 42px 0); }
+    clip-path: inset(57px 0 32px 0); }
   50% {
-    clip-path: inset(4px 0 8px 0); }
+    clip-path: inset(26px 0 46px 0); }
   60% {
-    clip-path: inset(58px 0 3px 0); }
+    clip-path: inset(89px 0 12px 0); }
   70% {
-    clip-path: inset(13px 0 54px 0); }
+    clip-path: inset(68px 0 5px 0); }
   80% {
-    clip-path: inset(87px 0 8px 0); }
+    clip-path: inset(73px 0 19px 0); }
   90% {
-    clip-path: inset(99px 0 2px 0); }
+    clip-path: inset(96px 0 5px 0); }
   100% {
-    clip-path: inset(82px 0 10px 0); } }
+    clip-path: inset(16px 0 31px 0); } }
 
 @keyframes noise-2 {
   0% {
-    text-shadow: 2px 0 #76ff9b;
-    clip-path: inset(10px 0 5px 0); }
-  3.33333% {
-    text-shadow: 5px 0 #76ff9b;
-    clip-path: inset(50px 0 4px 0); }
-  6.66667% {
-    text-shadow: 5px 0 #76ff9b;
-    clip-path: inset(13px 0 78px 0); }
-  10% {
     text-shadow: 1px 0 #76ff9b;
-    clip-path: inset(100px 0 1px 0); }
-  13.33333% {
-    text-shadow: 3px 0 #76ff9b;
-    clip-path: inset(57px 0 27px 0); }
-  16.66667% {
+    clip-path: inset(77px 0 8px 0); }
+  3.33333% {
+    text-shadow: 1px 0 #76ff9b;
+    clip-path: inset(60px 0 17px 0); }
+  6.66667% {
+    text-shadow: 1px 0 #76ff9b;
+    clip-path: inset(46px 0 20px 0); }
+  10% {
     text-shadow: 2px 0 #76ff9b;
-    clip-path: inset(12px 0 75px 0); }
-  20% {
+    clip-path: inset(1px 0 29px 0); }
+  13.33333% {
+    text-shadow: 1px 0 #76ff9b;
+    clip-path: inset(61px 0 18px 0); }
+  16.66667% {
     text-shadow: 4px 0 #76ff9b;
-    clip-path: inset(80px 0 13px 0); }
+    clip-path: inset(17px 0 32px 0); }
+  20% {
+    text-shadow: 2px 0 #76ff9b;
+    clip-path: inset(35px 0 5px 0); }
   23.33333% {
-    text-shadow: 3px 0 #76ff9b;
-    clip-path: inset(97px 0 3px 0); }
+    text-shadow: 4px 0 #76ff9b;
+    clip-path: inset(49px 0 8px 0); }
   26.66667% {
-    text-shadow: 5px 0 #76ff9b;
-    clip-path: inset(20px 0 43px 0); }
+    text-shadow: 1px 0 #76ff9b;
+    clip-path: inset(99px 0 1px 0); }
   30% {
     text-shadow: 3px 0 #76ff9b;
-    clip-path: inset(93px 0 2px 0); }
+    clip-path: inset(47px 0 37px 0); }
   33.33333% {
-    text-shadow: 1px 0 #76ff9b;
-    clip-path: inset(36px 0 36px 0); }
+    text-shadow: 3px 0 #76ff9b;
+    clip-path: inset(38px 0 48px 0); }
   36.66667% {
-    text-shadow: 2px 0 #76ff9b;
-    clip-path: inset(76px 0 3px 0); }
+    text-shadow: 1px 0 #76ff9b;
+    clip-path: inset(33px 0 1px 0); }
   40% {
-    text-shadow: 2px 0 #76ff9b;
-    clip-path: inset(88px 0 9px 0); }
+    text-shadow: 3px 0 #76ff9b;
+    clip-path: inset(67px 0 7px 0); }
   43.33333% {
     text-shadow: 5px 0 #76ff9b;
-    clip-path: inset(1px 0 22px 0); }
+    clip-path: inset(68px 0 6px 0); }
   46.66667% {
-    text-shadow: 2px 0 #76ff9b;
-    clip-path: inset(98px 0 3px 0); }
-  50% {
-    text-shadow: 4px 0 #76ff9b;
-    clip-path: inset(44px 0 4px 0); }
-  53.33333% {
     text-shadow: 3px 0 #76ff9b;
-    clip-path: inset(33px 0 2px 0); }
-  56.66667% {
-    text-shadow: 4px 0 #76ff9b;
-    clip-path: inset(30px 0 41px 0); }
-  60% {
+    clip-path: inset(74px 0 15px 0); }
+  50% {
     text-shadow: 2px 0 #76ff9b;
-    clip-path: inset(3px 0 52px 0); }
+    clip-path: inset(15px 0 11px 0); }
+  53.33333% {
+    text-shadow: 1px 0 #76ff9b;
+    clip-path: inset(24px 0 60px 0); }
+  56.66667% {
+    text-shadow: 2px 0 #76ff9b;
+    clip-path: inset(76px 0 13px 0); }
+  60% {
+    text-shadow: 1px 0 #76ff9b;
+    clip-path: inset(56px 0 34px 0); }
   63.33333% {
     text-shadow: 2px 0 #76ff9b;
-    clip-path: inset(55px 0 1px 0); }
+    clip-path: inset(54px 0 2px 0); }
   66.66667% {
     text-shadow: 3px 0 #76ff9b;
-    clip-path: inset(45px 0 55px 0); }
+    clip-path: inset(35px 0 46px 0); }
   70% {
-    text-shadow: 3px 0 #76ff9b;
-    clip-path: inset(58px 0 34px 0); }
+    text-shadow: 2px 0 #76ff9b;
+    clip-path: inset(40px 0 9px 0); }
   73.33333% {
-    text-shadow: 5px 0 #76ff9b;
-    clip-path: inset(11px 0 64px 0); }
-  76.66667% {
     text-shadow: 3px 0 #76ff9b;
-    clip-path: inset(56px 0 5px 0); }
+    clip-path: inset(30px 0 34px 0); }
+  76.66667% {
+    text-shadow: 2px 0 #76ff9b;
+    clip-path: inset(12px 0 73px 0); }
   80% {
     text-shadow: 4px 0 #76ff9b;
-    clip-path: inset(74px 0 27px 0); }
+    clip-path: inset(7px 0 4px 0); }
   83.33333% {
-    text-shadow: 5px 0 #76ff9b;
-    clip-path: inset(10px 0 26px 0); }
+    text-shadow: 3px 0 #76ff9b;
+    clip-path: inset(38px 0 63px 0); }
   86.66667% {
-    text-shadow: 5px 0 #76ff9b;
-    clip-path: inset(26px 0 9px 0); }
+    text-shadow: 3px 0 #76ff9b;
+    clip-path: inset(29px 0 65px 0); }
   90% {
     text-shadow: 3px 0 #76ff9b;
-    clip-path: inset(59px 0 11px 0); }
+    clip-path: inset(30px 0 2px 0); }
   93.33333% {
-    text-shadow: 4px 0 #76ff9b;
-    clip-path: inset(61px 0 40px 0); }
+    text-shadow: 5px 0 #76ff9b;
+    clip-path: inset(20px 0 8px 0); }
   96.66667% {
-    text-shadow: 1px 0 #76ff9b;
-    clip-path: inset(100px 0 1px 0); }
-  100% {
     text-shadow: 2px 0 #76ff9b;
-    clip-path: inset(96px 0 1px 0); } }
+    clip-path: inset(31px 0 37px 0); }
+  100% {
+    text-shadow: 5px 0 #76ff9b;
+    clip-path: inset(43px 0 14px 0); } }
 
 @keyframes glitch {
   1% {
@@ -7425,15 +7425,13 @@ body .block.block-open-position .col.col-sidebar ol {
     max-width: 850px;
     width: 100%; }
   .block.block-testimonials .testimonial-avatar {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #fff;
     border-radius: 50%;
     width: 170px;
     height: 170px;
     min-width: 170px;
-    margin-right: 5rem; }
+    margin-right: 5rem;
+    position: relative;
+    overflow: hidden; }
     @media (max-width: 870px) {
       .block.block-testimonials .testimonial-avatar {
         width: calc(170px/2);
@@ -7852,10 +7850,13 @@ body .block.block-open-position .col.col-sidebar ol {
     .block.block-cta-with-phone-input .gform_wrapper form li.gfield.gfield_error,
     .block.block-cta-with-phone-input .gform_wrapper form li.gfield.gfield_error * {
       font-weight: 600 !important; }
+    .block.block-cta-with-phone-input .gform_wrapper ul {
+      padding-left: 0; }
     .block.block-cta-with-phone-input .gform_wrapper #gform_fields_7 {
       display: flex;
       flex-wrap: wrap;
-      margin-top: 4rem !important; }
+      margin-top: 4rem !important;
+      padding-left: 0 !important; }
       .block.block-cta-with-phone-input .gform_wrapper #gform_fields_7 textarea,
       .block.block-cta-with-phone-input .gform_wrapper #gform_fields_7 input {
         padding-left: 0 !important; }

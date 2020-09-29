@@ -63,7 +63,7 @@ if ( $query->have_posts() ) {
 
       <div class="hreview testimonial">
         <?php if ( ! empty( $reference['quote_person_image'] ) ) : ?>
-        <div class="testimonial-avatar" aria-hidden="true" style="background-image: url('<?php echo wp_get_attachment_image_url( $reference['quote_person_image'], 'medium' ) ?>')"></div>
+        <div class="testimonial-avatar" aria-hidden="true"><?php image_lazyload_div( $reference['quote_person_image'] ); ?></div>
         <?php endif; ?>
 
         <div class="testimonial-content">
