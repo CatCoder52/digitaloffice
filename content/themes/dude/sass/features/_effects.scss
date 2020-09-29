@@ -217,7 +217,8 @@ $glitch-steps: 20;
 .glitch {
   position: relative;
   top: 0;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   color: $color-midnight-blue;
   font-weight: 600;
   text-align: center;
