@@ -12,7 +12,7 @@
   "rules": {
     "csstools/value-no-unknown-custom-properties": [true, {
       "importFrom": [
-        "content/themes/THEMENAME/css/global.css"
+        "content/themes/dude/css/global.css"
       ]
     }],
     "sh-waqar/declaration-use-variable": [

@@ -23,12 +23,14 @@ module.exports = {
           removeDuplicateMediaBlocks: true,
           removeUnusedAtRules: true,
           restructureRules: true
-        },
-      },
+        }
+      }
     }
   },
   rename: {
-    min: { suffix: '.min' }
+    min: {
+      suffix: '.min'
+    }
   },
   browsersync: {
     src: [themeDir + '/css/*'],
@@ -38,11 +40,11 @@ module.exports = {
       proxy: 'dude.test',
       browser: 'Google Chrome',
       open: false,
-      notify: true,
+      notify: true
     },
     watch: [
       themeDir + '/**/*.php',
-      themeDir + '/js/src/**/*.js',
+      themeDir + '/js/src/**/*.js'
     ]
   },
   styles: {
@@ -50,7 +52,19 @@ module.exports = {
     main: themeDir + '/sass/base/global.scss',
     src: themeDir + '/sass/**/*.{sass,scss}',
     dest: themeDir + '/css',
-    scsslintexcludes: ['!' + themeDir + '/sass/navigation/_burger.scss', '!' + themeDir + '/sass/base/_normalize.scss'],
+    exclude: ['!' + themeDir + '/sass/navigation/_burger.scss', '!' + themeDir + '/sass/base/_normalize.scss'],
+    stylelint: {
+      opts: {
+        fix: false,
+        ignoreFiles: ['!*.scss'],
+        reporters: [{
+          formatter: 'string',
+          console: true,
+          failAfterError: false,
+          debug: false
+        }]
+      }
+    },
     opts: {
       development: {
         bundleExec: true,
@@ -58,7 +72,7 @@ module.exports = {
         debugInfo: true,
         lineNumbers: true,
         errLogToConsole: true,
-        includePaths: [themeDir + '/node_modules/'],
+        includePaths: [themeDir + '/node_modules/']
       },
       production: {
         bundleExec: true,
@@ -66,7 +80,7 @@ module.exports = {
         debugInfo: true,
         lineNumbers: true,
         errLogToConsole: true,
-        includePaths: [themeDir + '/node_modules/'],
+        includePaths: [themeDir + '/node_modules/']
       }
     }
   },
@@ -77,7 +91,7 @@ module.exports = {
     uglify: {
       opts: {
         compress: true,
-        mangle: true,
+        mangle: true
       }
     }
   },
@@ -89,7 +103,7 @@ module.exports = {
     opts: {
       bin: '/usr/local/bin/phpcs',
       standard: themeDir + '/phpcs.xml',
-      warningSeverity: 0,
+      warningSeverity: 0
     }
   }
-}
+};
