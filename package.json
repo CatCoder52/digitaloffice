@@ -32,7 +32,7 @@
     "webpack-stream": "^6.1.0"
   },
   "dependencies": {
-    "npm-check-updates": "^7.1.1",
+    "npm-check-updates": "^9.0.3",
     "npx": "^10.2.2"
   }
 }
