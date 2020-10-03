@@ -84,7 +84,7 @@ $form_description = get_field( 'form_description' );
   <div id="page" class="site">
    <div class="site-content">
 
-      <main role="main" id="main" class="site-main">
+      <main id="main" class="site-main">
 
         <div class="splash">
           <header class="survey-header">

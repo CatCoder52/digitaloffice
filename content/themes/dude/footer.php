@@ -43,7 +43,7 @@
 </script>
 <?php endif; ?>
 
-<footer role="contentinfo" id="colophon" class="block block-footer site-footer">
+<footer id="colophon" class="block block-footer site-footer">
 
   <p class="back-to-top"><a href="#page" class="js-trigger top no-text-link" data-mt-duration="300"><span class="screen-reader-text"><?php echo esc_html_e( 'Takaisin ylös', 'dude' ); ?></span><?php include get_theme_file_path( '/svg/chevron-up.svg' ); ?></a></p>
 
@@ -123,7 +123,7 @@
 <script data-swup-reload-script async src="//platform.twitter.com/widgets.js"></script>
 <script data-swup-reload-script>CRISP_WEBSITE_ID = "-K90vfAnyk27kD-pZAep"</script>
 <script data-swup-reload-script async src="https://client.crisp.chat/l.js"></script>
-<script async>window.CRISP_READY_TRIGGER = function () {
+<script>window.CRISP_READY_TRIGGER = function () {
   // Hide chat circle by default unless there is unread messages or session iongoing
   if ($crisp.get("chat:unread:count") > 0 || $crisp.is("session:ongoing")) {
     $crisp.push(["do", "chat:show"]);
@@ -156,7 +156,7 @@
 
 <!-- Albacross -->
 <script>window._nQc = "89938094";</script>
-<script async src="https://serve.albacross.com/track.js"></script>
+<script src="https://serve.albacross.com/track.js"></script>
 
 <script data-swup-reload-script>
   var motionQuery = matchMedia('(prefers-reduced-motion)');

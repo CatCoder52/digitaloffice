@@ -86,7 +86,7 @@ $hero_content = get_field( 'hero_content' );
   <div id="page" class="site">
    <div class="site-content">
 
-      <main role="main" id="main" class="site-main">
+      <main id="main" class="site-main">
 
         <header class="survey-header">
           <div class="survey-header--text">

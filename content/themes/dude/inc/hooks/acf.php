@@ -290,7 +290,7 @@ function acf_admin_head_custom_js_css() { ?>
     }
   </style>
 
-  <script type="text/javascript">
+  <script>
     jQuery(function($) {
 
       /*

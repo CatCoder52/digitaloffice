@@ -15,7 +15,7 @@
 get_header(); ?>
 
 <div class="content-area">
-	<main role="main" id="main" class="site-main">
+	<main id="main" class="site-main">
 
     <?php if ( ! is_paged() && ! is_category() && ! is_tag() && ! is_author() && ! is_date() ) :
       global $blog_latest_excerpt_override;

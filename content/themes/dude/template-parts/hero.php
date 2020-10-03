@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:05:23
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-18 19:09:03
+ * @Last Modified time: 2020-10-04 01:40:18
  *
  * @package dude
  */
@@ -26,7 +26,7 @@ if ( is_front_page() ) {
   include get_theme_file_path( 'template-parts/hero-contact-thanks.php' );
 } else if ( 5973 === get_the_id() ) {
   include get_theme_file_path( 'template-parts/hero-merch-thanks.php' );
-} else if ( 6357 === get_the_id() ) {
+// } else if ( 6357 === get_the_id() ) {
 // include get_theme_file_path( 'template-parts/hero-start-project.php' );
 } else if ( 5975 === get_the_id() ) {
   include get_theme_file_path( 'template-parts/hero-merch-fail.php' );

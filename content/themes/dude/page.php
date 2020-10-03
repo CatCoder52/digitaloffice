@@ -17,7 +17,7 @@ the_post();
 get_header(); ?>
 
 <div class="content-area">
-  <main role="main" id="main" class="site-main">
+  <main id="main" class="site-main">
 
     <?php
       include get_theme_file_path( 'template-parts/hero.php' );

@@ -59,7 +59,7 @@ if ( ! $small_references ) {
 get_header(); ?>
 
 <div class="content-area">
-  <main role="main" id="main" class="site-main">
+  <main id="main" class="site-main">
 
     <?php get_template_part( 'template-parts/hero', get_post_type() ); ?>
 

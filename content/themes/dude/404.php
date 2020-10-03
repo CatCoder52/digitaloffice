@@ -12,7 +12,7 @@ get_header(); ?>
 <div class="overlay overlay--scanline" aria-hidden="true"></div>
 <div class="overlay overlay--vignette" aria-hidden="true"></div>
 
-	<main role="main" id="main" class="site-main">
+	<main id="main" class="site-main">
 		<div class="container">
 
       <section class="block block-hero block-hero-404 has-dark-bg">

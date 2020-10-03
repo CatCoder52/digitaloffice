@@ -25,7 +25,13 @@ if ( $show_chat_greeting ) {
 }
 
 ?><!doctype html>
-<html <?php language_attributes(); ?>><script>
+<html <?php language_attributes(); ?>>
+<head>
+<meta charset="<?php bloginfo( 'charset' ); ?>">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-site-verification" content="XF8_bRTu-S4gCsZgA0J78vtv0S5dfIjIFa0Lfm7kO_Y" />
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<script>
 /**
  *
  * 👋 Moi!
@@ -85,12 +91,6 @@ if ( $show_chat_greeting ) {
  *
  */
 </script>
-<head>
-  <meta charset="<?php bloginfo( 'charset' ); ?>">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="google-site-verification" content="XF8_bRTu-S4gCsZgA0J78vtv0S5dfIjIFa0Lfm7kO_Y" />
-  <link rel="profile" href="http://gmpg.org/xfn/11">
-  <noscript><link rel="stylesheet" type="text/css" href="<?php echo esc_url( get_template_directory_uri() ); ?>/css/noscript.css"></noscript>
   <?php wp_head();
 
   if ( is_singular( 'reference' ) ) :
@@ -103,7 +103,7 @@ if ( $show_chat_greeting ) {
 
   $chat_greeting_override = get_post_meta( get_the_id(), 'chat_greeting_override', true );
   if ( ! empty( $chat_greeting_override ) ) : ?>
-    <script type="text/javascript">var chat_greeting_override = '<?php echo esc_html( $chat_greeting_override ) ?>';</script>
+    <script>var chat_greeting_override = '<?php echo esc_html( $chat_greeting_override ) ?>';</script>
   <?php endif; ?>
 </head>
 
