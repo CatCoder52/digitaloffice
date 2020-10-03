@@ -1,3 +1,7 @@
+
+// Transition duration and animations
+$transition-duration: .22s;
+
 @keyframes underline-idle {
   0% {
     width: 0%;
@@ -159,7 +163,7 @@ $glitch-steps: 20;
 @keyframes glitch-effect {
   @for $i from 0 through $glitch-steps {
     #{percentage($i*(1/$glitch-steps))} {
-      clip: rect(random(100)+px, 9999px, random(100)+px, 0);
+      clip: rect(random(100) +px, 9999px, random(100) +px, 0);
     }
   }
 }
@@ -226,8 +230,8 @@ $glitch-steps: 20;
   overflow: visible;
 }
 
-.glitch:before,
-.glitch:after {
+.glitch::before,
+.glitch::after {
   content: attr(data-text);
   position: absolute;
   top: 0;
@@ -238,7 +242,7 @@ $glitch-steps: 20;
   color: $color-midnight-blue;
 }
 
-.glitch:before {
+.glitch::before {
   left: 4px;
   text-shadow: 2px 0 #00ffea;
   animation: effect 2s infinite linear, 5s 5.05s infinite glitch;
@@ -248,7 +252,7 @@ $glitch-steps: 20;
   }
 }
 
-.glitch:after {
+.glitch::after {
   left: 4px;
   text-shadow: -2px 0 #fe3a7f;
   animation: effect 2s infinite linear, 5s 5.05s infinite glitch;
@@ -258,7 +262,7 @@ $glitch-steps: 20;
   }
 }
 
-.glitch-fulltilt:before {
+.glitch-fulltilt::before {
   left: 90px;
   text-shadow: 2px 0 #00ffea;
   animation: effect 3s infinite linear;
@@ -487,28 +491,28 @@ $glitch-blue: #3ffeff;
   position: relative;
   text-align: center;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     content: attr(data-text);
     position: absolute;
     top: 0;
     left: 0;
     padding: 8px 0;
     width: 100%;
-    -webkit-clip: rect(0px, 0px, 0px, 0px);
-    clip: rect(0px, 0px, 0px, 0px);
+    -webkit-clip: rect(0, 0, 0, 0);
+    clip: rect(0, 0, 0, 0);
     background: #fff;
     color: #000;
   }
 
-  &:before {
+  &::before {
     left: -3px;
     top: -2px;
     text-shadow: 2px 0 #fff;
     box-shadow: 2px 0 #fff;
   }
 
-  &:after {
+  &::after {
     left: 2px;
     bottom: -2px;
     text-shadow: -1px 0 #fff;
@@ -520,85 +524,85 @@ $glitch-blue: #3ffeff;
     color: $color-black;
   }
 
-  &:hover:before {
+  &:hover::before {
     animation: glitch-test 1.5s infinite linear alternate-reverse;
   }
 
-  &:hover:after {
+  &:hover::after {
     animation: glitch-test 2s infinite linear alternate;
   }
 }
 
 @keyframes glitch-test {
   0% {
-    clip: rect(-3px, 600px, 0px, 0px);
+    clip: rect(-3px, 600px, 0, 0);
   }
 
   5.88235% {
-    clip: rect(0px, 600px, 0px, 0px);
+    clip: rect(0, 600px, 0, 0);
   }
 
   11.76471% {
-    clip: rect(-3px, 600px, 0px, 0px);
+    clip: rect(-3px, 600px, 0, 0);
   }
 
   17.64706% {
-    clip: rect(-3px, 600px, 0px, 0px);
+    clip: rect(-3px, 600px, 0, 0);
   }
 
   23.52941% {
-    clip: rect(100px, 600px, 100px, 0px);
+    clip: rect(100px, 600px, 100px, 0);
   }
 
   29.41176% {
-    clip: rect(0px, 600px, 600px, 0px);
+    clip: rect(0, 600px, 600px, 0);
   }
 
   35.29412% {
-    clip: rect(100px, 600px, 0px, 0px);
+    clip: rect(100px, 600px, 0, 0);
   }
 
   41.17647% {
-    clip: rect(0px, 600px, 600px, 0px);
+    clip: rect(0, 600px, 600px, 0);
   }
 
   47.05882% {
-    clip: rect(100px, 600px, 0px, 0px);
+    clip: rect(100px, 600px, 0, 0);
   }
 
   52.94118% {
-    clip: rect(-3px, 600px, 0px, 0px);
+    clip: rect(-3px, 600px, 0, 0);
   }
 
   58.82353% {
-    clip: rect(100px, 450px, 100px, 0px);
+    clip: rect(100px, 450px, 100px, 0);
   }
 
   64.70588% {
-    clip: rect(0px, 450px, 0px, 0px);
+    clip: rect(0, 450px, 0, 0);
   }
 
   70.58824% {
-    clip: rect(100px, 450px, 100px, 0px);
+    clip: rect(100px, 450px, 100px, 0);
   }
 
   76.47059% {
-    clip: rect(0px, 450px, 0px, 0px);
+    clip: rect(0, 450px, 0, 0);
   }
 
   82.35294% {
-    clip: rect(0px, 450px, 0px, 0px);
+    clip: rect(0, 450px, 0, 0);
   }
 
   88.23529% {
-    clip: rect(0px, 450px, 0px, 0px);
+    clip: rect(0, 450px, 0, 0);
   }
 
   94.11765% {
-    clip: rect(0px, 450px, 0px, 0px);
+    clip: rect(0, 450px, 0, 0);
   }
 
   100% {
-    clip: rect(0px, 450px, 0px, 0px);
+    clip: rect(0, 450px, 0, 0);
   }
 }

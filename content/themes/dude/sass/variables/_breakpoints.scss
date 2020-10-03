@@ -1,0 +1,18 @@
+// Breakpoints
+$grid-type: fluid; // 'fluid' or 'snappy'
+$layout-max-width: 100%;
+
+// Element sizes, widths and heights
+$grid-base-size: 1345px;
+$site-header-max-width: 1480px;
+$article-max-width: 870px;
+$nav-height: 160px;
+
+// Breakpoints
+$container-mobile: 480px;
+$container-ipad: 870px;
+$container-ipad-landscape: 1024px;
+$container-desktop: 1662px;
+
+// Where navigation transforms into responsive - scale your window width down to test
+$responsivenav: $container-ipad-landscape;

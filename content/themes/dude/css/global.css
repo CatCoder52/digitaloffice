@@ -43,6 +43,1255 @@ button:-moz-focusring,
 	--font-size-github: 16px;
 }
 
+.back-to-top {
+	width: auto;
+	height: auto;
+	margin: 0;
+	position: fixed;
+	bottom: 2rem;
+	right: 2rem;
+	text-decoration: none;
+	opacity: 0;
+	transition: opacity .3s 0s, visibility 0s .3s;
+	z-index: 10000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.back-to-top:focus {
+	outline: none;
+}
+
+.back-to-top.has-light-bg svg {
+	fill: #03061b;
+}
+
+.back-to-top.has-dark-bg svg {
+	fill: #fff;
+}
+
+.back-to-top.is-visible,
+.back-to-top.fade-out,
+.no-touch .back-to-top:hover {
+	transition: opacity .3s 0s, visibility 0s 0s;
+}
+
+.back-to-top.is-visible {
+	opacity: 1;
+}
+
+.back-to-top.fade-out {
+	opacity: 1;
+}
+
+.back-to-top.fade-out:hover {
+	opacity: 1;
+}
+
+.no-touch .back-to-top:hover {
+	opacity: 1;
+}
+
+.top {
+	background: transparent;
+	padding: 16px;
+}
+
+.top svg {
+	fill: #03061b;
+	margin: 0;
+	opacity: .8;
+	transition: all .3s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 18px;
+	height: 18px;
+}
+
+.top:hover svg,
+.top:focus svg,
+.top:active svg {
+	transform: translateY(-0.5rem);
+}
+
+.has-glitch {
+	position: relative;
+	margin: 0 auto;
+	color: #131a50;
+	transform: scale3d(1, 1, 1);
+}
+
+.has-glitch::before,
+.has-glitch::after {
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	overflow: hidden;
+	background: #fff;
+	color: #131a50;
+	clip: rect(0, 900px, 0, 0);
+}
+
+.has-glitch::before {
+	left: 7px;
+	text-shadow: 1px 0 #fff;
+	animation: glitch-effect 3s infinite linear alternate-reverse;
+}
+
+.has-glitch::after {
+	left: 3px;
+	text-shadow: -1px 0 #7effe1;
+	animation: glitch-effect 2s infinite linear alternate-reverse;
+}
+
+.glitch {
+	position: relative;
+	top: 0;
+	margin-left: auto;
+	margin-right: auto;
+	color: #131a50;
+	font-weight: 600;
+	text-align: center;
+	display: block;
+	overflow: visible;
+}
+
+.glitch::before,
+.glitch::after {
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	overflow: visible;
+	background-color: #fff;
+	color: #131a50;
+}
+
+.glitch::before {
+	left: 4px;
+	text-shadow: 2px 0 #00ffea;
+	animation: effect 2s infinite linear, 5s 5.05s infinite glitch;
+}
+
+.glitch::after {
+	left: 4px;
+	text-shadow: -2px 0 #fe3a7f;
+	animation: effect 2s infinite linear, 5s 5.05s infinite glitch;
+}
+
+.glitch-fulltilt::before {
+	left: 90px;
+	text-shadow: 2px 0 #00ffea;
+	animation: effect 3s infinite linear;
+}
+
+.button-glitch {
+	transform: translateZ(0);
+	overflow: visible;
+	transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.button-glitch.button-glitch-active {
+	filter: url("#filter");
+}
+
+.button-glitch.button-glitch-active::after,
+.button-glitch.button-glitch-active::before {
+	content: '';
+	width: 1px;
+	position: absolute;
+	top: -1px;
+	bottom: -1px;
+}
+
+.button-glitch.button-glitch-active::after {
+	left: -2px;
+	background-color: #ff536b;
+	animation: colorshift-red 2.6s infinite;
+	animation-timing-function: step-end;
+}
+
+.button-glitch.button-glitch-active::before {
+	right: -2px;
+	background-color: #3ffeff;
+	animation: colorshift-blue 2.6s infinite;
+	animation-timing-function: step-end;
+}
+
+.button-glitch-alt {
+	position: relative;
+	text-align: center;
+}
+
+.button-glitch-alt::before,
+.button-glitch-alt::after {
+	content: attr(data-text);
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 8px 0;
+	width: 100%;
+	-webkit-clip: rect(0, 0, 0, 0);
+	clip: rect(0, 0, 0, 0);
+	background: #fff;
+	color: #000;
+}
+
+.button-glitch-alt::before {
+	left: -3px;
+	top: -2px;
+	text-shadow: 2px 0 #fff;
+	box-shadow: 2px 0 #fff;
+}
+
+.button-glitch-alt::after {
+	left: 2px;
+	bottom: -2px;
+	text-shadow: -1px 0 #fff;
+	box-shadow: -1px 0 #fff;
+}
+
+.button-glitch-alt:hover {
+	background: #fff;
+	color: #03061b;
+}
+
+.button-glitch-alt:hover::before {
+	animation: glitch-test 1.5s infinite linear alternate-reverse;
+}
+
+.button-glitch-alt:hover::after {
+	animation: glitch-test 2s infinite linear alternate;
+}
+
+.swup-transition-fade {
+	transition: .33s;
+	opacity: 1;
+	animation: slideUp 0.9s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+	transform: translate3d(0, 2vh, 0);
+	-webkit-font-smoothing: antialiased;
+}
+
+html.is-animating .swup-transition-fade {
+	opacity: 0;
+}
+
+.simpay-clearfix::before,
+.simpay-clearfix::after {
+	content: ' ';
+	display: table;
+}
+
+.simpay-clearfix::after {
+	clear: both;
+}
+
+.simpay-form-control {
+	margin-bottom: 15px;
+}
+
+.simpay-form-control .simpay-coupon-field {
+	display: inline-block;
+	min-width: 150px;
+	width: 150px;
+}
+
+.simpay-form-control .simpay-apply-coupon {
+	margin-left: 10px;
+}
+
+.simpay-form-control .simpay-custom-amount-input,
+.simpay-form-control .simpay-currency-symbol {
+	box-sizing: border-box;
+	border: 1px solid #d1d1d1;
+	border-radius: 0;
+	margin: 0;
+	padding: 0 10px;
+	float: left;
+}
+
+.simpay-form-control .simpay-custom-amount-input {
+	height: 36px;
+	width: 125px;
+	min-width: 125px;
+}
+
+.simpay-form-control .simpay-currency-symbol {
+	background-color: #f2f2f2;
+	line-height: 34px;
+}
+
+.simpay-form-control .simpay-currency-symbol-left {
+	border-right: 0;
+}
+
+.simpay-form-control .simpay-currency-symbol-right {
+	border-left: 0;
+}
+
+.simpay-form-control .simpay-checkbox-wrap label,
+.simpay-form-control .simpay-same-address-toggle-wrap label {
+	display: inline;
+}
+
+.simpay-form-control .simpay-field-error,
+.simpay-form-control .simpay-field-error label.error {
+	color: #eb1c26;
+	display: block;
+	font-weight: normal;
+}
+
+input[type="checkbox"].simpay-modal-control {
+	display: none;
+}
+
+.simpay-modal-control-open {
+	display: inline-block;
+	margin: 0 0 15px;
+	padding: 0;
+	position: relative;
+	cursor: pointer;
+}
+
+.simpay-modal-control-open .simpay-form-control {
+	margin: 0;
+}
+
+.simpay-modal-control-open * {
+	pointer-events: none;
+}
+
+.simpay-modal-control-close {
+	font-family: "Circular", "Helvetica Neue", helvetica, sans-serif;
+	color: #a6a6a6;
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	padding: 5px 10px;
+	cursor: pointer;
+}
+
+.simpay-modal-control-close:hover {
+	color: #8d8d8d;
+}
+
+.simpay-modal-overlay-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: -1;
+}
+
+.simpay-modal {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 999999999;
+	overflow: hidden;
+	height: 0;
+	opacity: 0;
+	transition: opacity .3s;
+}
+
+.simpay-modal .simpay-form-title,
+.simpay-modal .simpay-form-description {
+	text-align: center;
+}
+
+.simpay-modal .simpay-form-title {
+	margin-top: 0;
+	margin-bottom: .5em;
+}
+
+.simpay-modal__body {
+	width: 100vw;
+	max-width: 440px;
+	max-height: calc(100vh - 60px);
+	overflow-y: auto;
+	z-index: 1;
+}
+
+.simpay-modal__content {
+	position: relative;
+	padding: 30px 30px 15px;
+	background: #fff;
+}
+
+.simpay-embedded-heading {
+	margin-top: 15px;
+}
+
+.simpay-form-title,
+.simpay-form-description {
+	font-weight: 600;
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+}
+
+.simpay-form-title {
+	font-size: 20px;
+	color: #333;
+	margin-bottom: 10px;
+}
+
+.simpay-form-description {
+	font-size: var(--font-size-general-small);
+	color: #666;
+	margin-bottom: 20px;
+}
+
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled,
+.simpay-checkout-form.simpay-checkout-form--overlay,
+.simpay-checkout-form.simpay-checkout-form--embedded {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 15px;
+	font-weight: 600;
+	color: #333;
+}
+
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="date"],
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="time"],
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="datetime-local"],
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="week"],
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="month"],
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="text"],
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="email"],
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="url"],
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="password"],
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="search"],
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="tel"],
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="number"],
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control select,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control textarea,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-card-wrap,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="date"],
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="time"],
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="datetime-local"],
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="week"],
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="month"],
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="text"],
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="email"],
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="url"],
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="password"],
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="search"],
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="tel"],
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="number"],
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control select,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control textarea,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-card-wrap,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="date"],
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="time"],
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="datetime-local"],
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="week"],
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="month"],
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="text"],
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="email"],
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="url"],
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="password"],
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="search"],
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="tel"],
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="number"],
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control select,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control textarea,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-card-wrap {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 15px;
+	font-weight: 600;
+	color: #32325d;
+	margin-bottom: 0;
+	background: #fff;
+	box-shadow: none;
+	border: 1px solid #d1d1d1;
+	border-radius: 4px;
+	padding: 0 .4375em;
+	height: auto;
+	min-height: 36px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="date"]::placeholder,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="time"]::placeholder,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="datetime-local"]::placeholder,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="week"]::placeholder,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="month"]::placeholder,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="text"]::placeholder,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="email"]::placeholder,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="url"]::placeholder,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="password"]::placeholder,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="search"]::placeholder,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="tel"]::placeholder,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="number"]::placeholder,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control select::placeholder,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control textarea::placeholder,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-card-wrap::placeholder,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="date"]::placeholder,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="time"]::placeholder,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="datetime-local"]::placeholder,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="week"]::placeholder,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="month"]::placeholder,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="text"]::placeholder,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="email"]::placeholder,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="url"]::placeholder,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="password"]::placeholder,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="search"]::placeholder,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="tel"]::placeholder,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="number"]::placeholder,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control select::placeholder,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control textarea::placeholder,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-card-wrap::placeholder,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="date"]::placeholder,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="time"]::placeholder,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="datetime-local"]::placeholder,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="week"]::placeholder,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="month"]::placeholder,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="text"]::placeholder,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="email"]::placeholder,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="url"]::placeholder,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="password"]::placeholder,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="search"]::placeholder,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="tel"]::placeholder,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="number"]::placeholder,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control select::placeholder,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control textarea::placeholder,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-card-wrap::placeholder {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 15px;
+	font-weight: 600;
+	color: #aab7c4;
+}
+
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="date"]:focus,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="time"]:focus,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="datetime-local"]:focus,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="week"]:focus,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="month"]:focus,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="text"]:focus,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="email"]:focus,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="url"]:focus,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="password"]:focus,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="search"]:focus,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="tel"]:focus,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="number"]:focus,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control select:focus,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control textarea:focus,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-card-wrap:focus,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="date"]:focus,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="time"]:focus,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="datetime-local"]:focus,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="week"]:focus,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="month"]:focus,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="text"]:focus,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="email"]:focus,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="url"]:focus,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="password"]:focus,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="search"]:focus,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="tel"]:focus,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="number"]:focus,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control select:focus,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control textarea:focus,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-card-wrap:focus,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="date"]:focus,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="time"]:focus,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="datetime-local"]:focus,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="week"]:focus,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="month"]:focus,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="text"]:focus,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="email"]:focus,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="url"]:focus,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="password"]:focus,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="search"]:focus,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="tel"]:focus,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="number"]:focus,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control select:focus,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control textarea:focus,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-card-wrap:focus {
+	background-color: #fff;
+	border-color: #007acc;
+	color: #32325d;
+	outline: 0;
+}
+
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="date"].simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="time"].simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="datetime-local"].simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="week"].simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="month"].simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="text"].simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="email"].simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="url"].simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="password"].simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="search"].simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="tel"].simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="number"].simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control select.simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control textarea.simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-card-wrap.simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="date"].simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="time"].simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="datetime-local"].simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="week"].simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="month"].simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="text"].simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="email"].simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="url"].simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="password"].simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="search"].simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="tel"].simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="number"].simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control select.simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control textarea.simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-card-wrap.simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="date"].simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="time"].simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="datetime-local"].simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="week"].simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="month"].simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="text"].simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="email"].simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="url"].simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="password"].simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="search"].simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="tel"].simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="number"].simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control select.simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control textarea.simpay-input-error,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-card-wrap.simpay-input-error {
+	border-color: #eb1c26;
+}
+
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .StripeElement--webkit-autofill,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .StripeElement--webkit-autofill,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .StripeElement--webkit-autofill {
+	background: transparent !important;
+}
+
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control select,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control select:-webkit-autofill,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control select,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control select:-webkit-autofill,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control select,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control select:-webkit-autofill {
+	appearance: none;
+	background-position: calc(100% - 8px);
+	background-size: 10px 5px;
+	background-repeat: no-repeat;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding-right: 25px;
+}
+
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-card-wrap.StripeElement,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-card-wrap.StripeElement,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-card-wrap.StripeElement {
+	display: flex;
+	align-items: center;
+	height: 1px;
+	min-height: 36px;
+}
+
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-card-wrap.StripeElement > div,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-card-wrap.StripeElement > div,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-card-wrap.StripeElement > div {
+	flex: 1;
+}
+
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-card-wrap.StripeElement--focus,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-card-wrap.StripeElement--focus,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-card-wrap.StripeElement--focus {
+	background-color: #fff;
+	border-color: #007acc;
+	color: #32325d;
+	outline: 0;
+}
+
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="tel"].simpay-custom-amount-input,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="number"].simpay-custom-amount-input,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="text"].simpay-custom-amount-input,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="tel"].simpay-custom-amount-input,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="number"].simpay-custom-amount-input,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="text"].simpay-custom-amount-input,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="tel"].simpay-custom-amount-input,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="number"].simpay-custom-amount-input,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="text"].simpay-custom-amount-input {
+	width: 125px;
+}
+
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="tel"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-left,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="number"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-left,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="text"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-left,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="tel"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-left,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="number"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-left,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="text"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-left,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="tel"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-left,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="number"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-left,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="text"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-left {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="tel"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-right,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="number"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-right,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="text"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-right,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="tel"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-right,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="number"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-right,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="text"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-right,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="tel"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-right,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="number"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-right,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="text"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-right {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-currency-symbol,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-currency-symbol,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-currency-symbol {
+	border-radius: 4px;
+}
+
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-currency-symbol-left,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-currency-symbol-left,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-currency-symbol-left {
+	border-right: 0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-currency-symbol-right,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-currency-symbol-right,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-currency-symbol-right {
+	border-left: 0;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control select,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control select,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control select {
+	width: auto;
+	max-width: 100%;
+}
+
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control textarea,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control textarea,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control textarea {
+	height: auto;
+}
+
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="text"].simpay-coupon-field,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="text"].simpay-coupon-field,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="text"].simpay-coupon-field {
+	width: calc(100% - 120px);
+}
+
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-payment-btn:not(.stripe-button-el),
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el),
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-checkout-btn:not(.stripe-button-el),
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-payment-btn:not(.stripe-button-el),
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el),
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-checkout-btn:not(.stripe-button-el),
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-payment-btn:not(.stripe-button-el),
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el),
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-checkout-btn:not(.stripe-button-el) {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 15px;
+	font-weight: 600;
+	color: #fff;
+	background-color: #24b47e;
+	background-image: none;
+	display: block;
+	height: 36px;
+	line-height: 1.5;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-radius: 4px;
+	outline: none;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-payment-btn:not(.stripe-button-el):hover,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el):hover,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-checkout-btn:not(.stripe-button-el):hover,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-payment-btn:not(.stripe-button-el):hover,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el):hover,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-checkout-btn:not(.stripe-button-el):hover,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-payment-btn:not(.stripe-button-el):hover,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el):hover,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-checkout-btn:not(.stripe-button-el):hover {
+	background-color: #249a65;
+	background-image: none;
+}
+
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-payment-btn:not(.stripe-button-el):disabled,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el):disabled,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-checkout-btn:not(.stripe-button-el):disabled,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-payment-btn:not(.stripe-button-el):disabled,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el):disabled,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-checkout-btn:not(.stripe-button-el):disabled,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-payment-btn:not(.stripe-button-el):disabled,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el):disabled,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-checkout-btn:not(.stripe-button-el):disabled {
+	pointer-events: none;
+}
+
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-payment-btn:not(.stripe-button-el).simpay-disabled,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el).simpay-disabled,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-checkout-btn:not(.stripe-button-el).simpay-disabled,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-payment-btn:not(.stripe-button-el).simpay-disabled,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el).simpay-disabled,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-checkout-btn:not(.stripe-button-el).simpay-disabled,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-payment-btn:not(.stripe-button-el).simpay-disabled,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el).simpay-disabled,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-checkout-btn:not(.stripe-button-el).simpay-disabled {
+	background-color: #aab7c4;
+}
+
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-apply-coupon,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-apply-coupon,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-apply-coupon {
+	width: 110px;
+	float: right;
+}
+
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el),
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el),
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el) {
+	width: 110px;
+	background-color: #aab7c4;
+	background-image: none;
+}
+
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el):hover,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el):hover,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el):hover {
+	background-color: #888;
+	background-image: none;
+}
+
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-address-container .simpay-field-wrap,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-address-container .simpay-field-wrap,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-address-container .simpay-field-wrap {
+	margin-bottom: 15px;
+}
+
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-address-container .simpay-address-city-container,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-address-container .simpay-address-state-container,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-address-container .simpay-address-zip-container,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-address-container .simpay-address-country-container,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-address-container .simpay-address-city-container,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-address-container .simpay-address-state-container,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-address-container .simpay-address-zip-container,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-address-container .simpay-address-country-container,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-address-container .simpay-address-city-container,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-address-container .simpay-address-state-container,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-address-container .simpay-address-zip-container,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-address-container .simpay-address-country-container {
+	float: left;
+	width: 48%;
+}
+
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-address-container .simpay-address-state-container,
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-address-container .simpay-address-country-container,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-address-container .simpay-address-state-container,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-address-container .simpay-address-country-container,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-address-container .simpay-address-state-container,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-address-container .simpay-address-country-container {
+	float: right;
+}
+
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-test-mode-badge-container,
+.simpay-checkout-form.simpay-checkout-form--overlay .simpay-test-mode-badge-container,
+.simpay-checkout-form.simpay-checkout-form--embedded .simpay-test-mode-badge-container {
+	text-align: center;
+}
+
+.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled,
+.simpay-checkout-form.simpay-checkout-form--embedded {
+	max-width: 400px;
+}
+
+.simpay-payment-request-button-container {
+	margin: 15px 0;
+}
+
+.simpay-payment-request-button-container__or {
+	font-size: 90%;
+	text-align: center;
+	overflow: hidden;
+}
+
+.simpay-payment-request-button-container__or:before,
+.simpay-payment-request-button-container__or:after {
+	background-color: #d1d1d1;
+	content: '';
+	display: inline-block;
+	height: 1px;
+	position: relative;
+	vertical-align: middle;
+	width: 50%;
+}
+
+.simpay-payment-request-button-container__or:before {
+	right: .5em;
+	margin-left: -50%;
+}
+
+.simpay-payment-request-button-container__or:after {
+	left: .5em;
+	margin-right: -50%;
+}
+
+.simpay-payment-request-button-container__button + .simpay-payment-request-button-container__or,
+.simpay-payment-request-button-container__or + .simpay-payment-request-button-container__button {
+	margin-top: 15px;
+}
+
+.simpay-clearfix::before,
+.simpay-clearfix::after {
+	content: ' ';
+	display: table;
+}
+
+.simpay-clearfix::after {
+	clear: both;
+}
+
+.simpay-total-amount-value {
+	font-style: normal;
+}
+
+.simpay-form-control::before,
+.simpay-form-control::after {
+	content: ' ';
+	display: table;
+}
+
+.simpay-form-control::after {
+	clear: both;
+}
+
+.simpay-form-control p {
+	padding: 0;
+	margin: 0;
+}
+
+.simpay-form-control ul {
+	margin: 0 0 .5em;
+}
+
+.simpay-form-control ul li {
+	list-style-type: none;
+}
+
+.simpay-form-control ul li label {
+	display: block;
+	margin: 0 0 .5em;
+}
+
+.simpay-form-control ul li label input[type="radio"],
+.simpay-form-control ul li label input[type="checkbox"] {
+	margin-right: .5em;
+}
+
+.simpay-form-control label {
+	cursor: pointer;
+	display: block;
+}
+
+.simpay-form-control .simpay-field-wrap::before,
+.simpay-form-control .simpay-field-wrap::after {
+	content: ' ';
+	display: table;
+}
+
+.simpay-form-control .simpay-field-wrap::after {
+	clear: both;
+}
+
+.simpay-errors {
+	color: #eb1c26;
+	margin-bottom: 15px;
+}
+
+.simpay-test-mode-badge-container .simpay-test-mode-badge {
+	background-color: #f7e633;
+	color: #333;
+	border-radius: 5px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-weight: 700;
+	font-size: 11px;
+	text-transform: uppercase;
+	padding: 5px 9px;
+}
+
+.slick-list {
+	position: relative;
+	overflow: hidden;
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+.slick-list:focus {
+	outline: none;
+}
+
+.slick-list.dragging {
+	cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+	transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+	position: relative;
+	left: 0;
+	top: 0;
+	display: block;
+	zoom: 1;
+	z-index: 9999;
+}
+
+.slick-track:before,
+.slick-track:after {
+	content: '';
+	display: table;
+}
+
+.slick-track:after {
+	clear: both;
+}
+
+.slick-loading .slick-track {
+	visibility: hidden;
+}
+
+.slick-slide {
+	float: left;
+	height: 100%;
+	min-height: 1px;
+}
+
+.slick-slide img {
+	display: block;
+}
+
+.slick-slide.slick-loading img {
+	display: none;
+}
+
+.slick-slide.dragging img {
+	pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+	display: block;
+}
+
+.slick-loading .slick-slide {
+	visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+	display: block;
+	height: auto;
+}
+
+.slick-dots {
+	position: absolute;
+	bottom: 0;
+	list-style: none;
+	display: block;
+	text-align: center;
+	padding: 0;
+	width: 100%;
+}
+
+.slick-dots li {
+	position: relative;
+	display: inline-block;
+	height: 10px;
+	width: 10px;
+	margin: 0 5px;
+	padding: 0;
+	cursor: pointer;
+}
+
+.slick-dots li.slick-active button,
+.slick-dots li.slick-active button[type="button"],
+.slick-dots li.slick-active button:focus,
+.slick-dots li.slick-active button[type="button"]:focus {
+	opacity: 1;
+	background: #fff;
+}
+
+.slick-dots li button,
+.slick-dots li button[type="button"] {
+	text-indent: -9999px;
+	overflow: hidden;
+	text-decoration: none;
+	font-size: 0;
+	text-align: start;
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	margin: 0 4px;
+	cursor: pointer;
+	transition: background .5s, opacity .5s;
+	opacity: .4;
+	border: 2px solid #fff;
+	border-radius: 6px;
+	padding: 0;
+}
+
+.slick-dots li button:hover,
+.slick-dots li button:focus[type="button"] {
+	outline: none;
+	background: transparent;
+}
+
+.slick-dots li button:hover:before,
+.slick-dots li button:focus[type="button"]:before {
+	opacity: 1;
+}
+
+.slider {
+	position: relative;
+	display: block; /* autoprefixer: ignore next */
+	box-sizing: border-box;
+	user-select: none;
+	touch-action: pan-y;
+	clear: both;
+	overflow: hidden;
+	margin-bottom: 0;
+}
+
+.slider .slick-prev,
+.slider .slick-next {
+	position: absolute;
+	display: block;
+	height: 60px;
+	width: 60px;
+	line-height: 0;
+	font-size: 0;
+	cursor: pointer;
+	color: transparent;
+	top: 50%;
+	margin-top: -30px;
+	padding: 0;
+	border: 0;
+	outline: none;
+	z-index: 200;
+	transition: all .33s;
+	background-color: transparent;
+	opacity: .2;
+}
+
+.slider .slick-prev:hover,
+.slider .slick-next:hover {
+	outline: none;
+	color: transparent;
+	transition: all .33s;
+	background-color: transparent;
+	opacity: 1;
+}
+
+.slider .slick-prev:focus,
+.slider .slick-next:focus {
+	outline: none;
+	color: transparent;
+	transition: all .33s;
+	background-color: transparent;
+	opacity: 1;
+}
+
+.slider .slick-prev {
+	left: 0;
+	background-image: url("../svg/slider-left-arrow.svg");
+	background-color: transparent;
+}
+
+.slider .slick-prev:hover {
+	background-image: url("../svg/slider-left-arrow.svg");
+}
+
+.slider .slick-next {
+	right: 0;
+	background-image: url("../svg/slider-right-arrow.svg");
+	background-color: transparent;
+}
+
+.slider .slick-next:hover {
+	background-image: url("../svg/slider-right-arrow.svg");
+}
+
+.nav-links {
+	text-align: left;
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	width: 100%;
+	font-size: var(--font-size-general-small);
+	margin-top: 12rem;
+}
+
+.nav-links a {
+	text-decoration: none;
+}
+
+.nav-links .page-numbers {
+	border: 1px solid #131a50;
+	width: 35px;
+	height: 35px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: .5rem;
+	margin-left: .5rem;
+	color: #131a50;
+}
+
+.nav-links a.page-numbers:hover {
+	background: #131a50;
+	border-color: #131a50;
+	color: #7effe1;
+}
+
+.nav-links .page-numbers.current {
+	background: #131a50;
+	border-color: #131a50;
+	color: #7effe1;
+}
+
+.nav-links .page-numbers.next,
+.nav-links .page-numbers.prev {
+	display: none;
+}
+
 html,
 *,
 *:before,
@@ -774,7 +2023,7 @@ body.page-id-4487 .block.block-hero {
 
 body {
 	font-size: 1.7rem;
-	font-family: "Circular", "Helvetica Neue", Helvetica, sans-serif;
+	font-family: "Circular", "Helvetica Neue", helvetica, sans-serif;
 	color: #545773;
 	text-size-adjust: none;
 	text-rendering: optimizeLegibility;
@@ -888,7 +2137,7 @@ h4,
 h5,
 h6 {
 	color: #131a50;
-	font-family: "Circular", "Helvetica Neue", Helvetica, sans-serif;
+	font-family: "Circular", "Helvetica Neue", helvetica, sans-serif;
 	font-weight: 600;
 	line-height: 1.5;
 }
@@ -1583,7 +2832,7 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .conte
 	position: relative;
 	cursor: pointer;
 	transition: 150ms linear background;
-	font-family: "Circular", "Helvetica Neue", Helvetica, sans-serif;
+	font-family: "Circular", "Helvetica Neue", helvetica, sans-serif;
 	white-space: nowrap;
 }
 
@@ -1947,7 +3196,7 @@ input[type="month"],
 input[type="week"],
 input[type="email"],
 input[type="search"] {
-	font-family: "Circular", "Helvetica Neue", Helvetica, sans-serif;
+	font-family: "Circular", "Helvetica Neue", helvetica, sans-serif;
 	background: transparent;
 	border: 0;
 	padding: 15px 20px;
@@ -3105,1255 +4354,6 @@ body.page-id-6117 .block-hero.block-hero-light p {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-}
-
-.back-to-top {
-	width: auto;
-	height: auto;
-	margin: 0;
-	position: fixed;
-	bottom: 2rem;
-	right: 2rem;
-	text-decoration: none;
-	opacity: 0;
-	transition: opacity .3s 0s, visibility 0s .3s;
-	z-index: 10000;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.back-to-top:focus {
-	outline: none;
-}
-
-.back-to-top.has-light-bg svg {
-	fill: #03061b;
-}
-
-.back-to-top.has-dark-bg svg {
-	fill: #fff;
-}
-
-.back-to-top.is-visible,
-.back-to-top.fade-out,
-.no-touch .back-to-top:hover {
-	transition: opacity .3s 0s, visibility 0s 0s;
-}
-
-.back-to-top.is-visible {
-	opacity: 1;
-}
-
-.back-to-top.fade-out {
-	opacity: 1;
-}
-
-.back-to-top.fade-out:hover {
-	opacity: 1;
-}
-
-.no-touch .back-to-top:hover {
-	opacity: 1;
-}
-
-.top {
-	background: transparent;
-	padding: 16px;
-}
-
-.top svg {
-	fill: #03061b;
-	margin: 0;
-	opacity: .8;
-	transition: all .3s ease;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 18px;
-	height: 18px;
-}
-
-.top:hover svg,
-.top:focus svg,
-.top:active svg {
-	transform: translateY(-0.5rem);
-}
-
-.has-glitch {
-	position: relative;
-	margin: 0 auto;
-	color: #131a50;
-	transform: scale3d(1, 1, 1);
-}
-
-.has-glitch::before,
-.has-glitch::after {
-	content: attr(data-text);
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	overflow: hidden;
-	background: #fff;
-	color: #131a50;
-	clip: rect(0, 900px, 0, 0);
-}
-
-.has-glitch::before {
-	left: 7px;
-	text-shadow: 1px 0 #fff;
-	animation: glitch-effect 3s infinite linear alternate-reverse;
-}
-
-.has-glitch::after {
-	left: 3px;
-	text-shadow: -1px 0 #7effe1;
-	animation: glitch-effect 2s infinite linear alternate-reverse;
-}
-
-.glitch {
-	position: relative;
-	top: 0;
-	margin-left: auto;
-	margin-right: auto;
-	color: #131a50;
-	font-weight: 600;
-	text-align: center;
-	display: block;
-	overflow: visible;
-}
-
-.glitch:before,
-.glitch:after {
-	content: attr(data-text);
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	overflow: visible;
-	background-color: #fff;
-	color: #131a50;
-}
-
-.glitch:before {
-	left: 4px;
-	text-shadow: 2px 0 #00ffea;
-	animation: effect 2s infinite linear, 5s 5.05s infinite glitch;
-}
-
-.glitch:after {
-	left: 4px;
-	text-shadow: -2px 0 #fe3a7f;
-	animation: effect 2s infinite linear, 5s 5.05s infinite glitch;
-}
-
-.glitch-fulltilt:before {
-	left: 90px;
-	text-shadow: 2px 0 #00ffea;
-	animation: effect 3s infinite linear;
-}
-
-.button-glitch {
-	transform: translateZ(0);
-	overflow: visible;
-	transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.button-glitch.button-glitch-active {
-	filter: url("#filter");
-}
-
-.button-glitch.button-glitch-active::after,
-.button-glitch.button-glitch-active::before {
-	content: '';
-	width: 1px;
-	position: absolute;
-	top: -1px;
-	bottom: -1px;
-}
-
-.button-glitch.button-glitch-active::after {
-	left: -2px;
-	background-color: #ff536b;
-	animation: colorshift-red 2.6s infinite;
-	animation-timing-function: step-end;
-}
-
-.button-glitch.button-glitch-active::before {
-	right: -2px;
-	background-color: #3ffeff;
-	animation: colorshift-blue 2.6s infinite;
-	animation-timing-function: step-end;
-}
-
-.button-glitch-alt {
-	position: relative;
-	text-align: center;
-}
-
-.button-glitch-alt:before,
-.button-glitch-alt:after {
-	content: attr(data-text);
-	position: absolute;
-	top: 0;
-	left: 0;
-	padding: 8px 0;
-	width: 100%;
-	-webkit-clip: rect(0px, 0px, 0px, 0px);
-	clip: rect(0px, 0px, 0px, 0px);
-	background: #fff;
-	color: #000;
-}
-
-.button-glitch-alt:before {
-	left: -3px;
-	top: -2px;
-	text-shadow: 2px 0 #fff;
-	box-shadow: 2px 0 #fff;
-}
-
-.button-glitch-alt:after {
-	left: 2px;
-	bottom: -2px;
-	text-shadow: -1px 0 #fff;
-	box-shadow: -1px 0 #fff;
-}
-
-.button-glitch-alt:hover {
-	background: #fff;
-	color: #03061b;
-}
-
-.button-glitch-alt:hover:before {
-	animation: glitch-test 1.5s infinite linear alternate-reverse;
-}
-
-.button-glitch-alt:hover:after {
-	animation: glitch-test 2s infinite linear alternate;
-}
-
-.swup-transition-fade {
-	transition: .33s;
-	opacity: 1;
-	animation: slideUp 0.9s cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
-	transform: translate3d(0, 2vh, 0);
-	-webkit-font-smoothing: antialiased;
-}
-
-html.is-animating .swup-transition-fade {
-	opacity: 0;
-}
-
-.simpay-clearfix::before,
-.simpay-clearfix::after {
-	content: ' ';
-	display: table;
-}
-
-.simpay-clearfix::after {
-	clear: both;
-}
-
-.simpay-form-control {
-	margin-bottom: 15px;
-}
-
-.simpay-form-control .simpay-coupon-field {
-	display: inline-block;
-	min-width: 150px;
-	width: 150px;
-}
-
-.simpay-form-control .simpay-apply-coupon {
-	margin-left: 10px;
-}
-
-.simpay-form-control .simpay-custom-amount-input,
-.simpay-form-control .simpay-currency-symbol {
-	box-sizing: border-box;
-	border: 1px solid #d1d1d1;
-	border-radius: 0;
-	margin: 0;
-	padding: 0 10px;
-	float: left;
-}
-
-.simpay-form-control .simpay-custom-amount-input {
-	height: 36px;
-	width: 125px;
-	min-width: 125px;
-}
-
-.simpay-form-control .simpay-currency-symbol {
-	background-color: #f2f2f2;
-	line-height: 34px;
-}
-
-.simpay-form-control .simpay-currency-symbol-left {
-	border-right: 0;
-}
-
-.simpay-form-control .simpay-currency-symbol-right {
-	border-left: 0;
-}
-
-.simpay-form-control .simpay-checkbox-wrap label,
-.simpay-form-control .simpay-same-address-toggle-wrap label {
-	display: inline;
-}
-
-.simpay-form-control .simpay-field-error,
-.simpay-form-control .simpay-field-error label.error {
-	color: #eb1c26;
-	display: block;
-	font-weight: normal;
-}
-
-input[type="checkbox"].simpay-modal-control {
-	display: none;
-}
-
-.simpay-modal-control-open {
-	display: inline-block;
-	margin: 0 0 15px;
-	padding: 0;
-	position: relative;
-	cursor: pointer;
-}
-
-.simpay-modal-control-open .simpay-form-control {
-	margin: 0;
-}
-
-.simpay-modal-control-open * {
-	pointer-events: none;
-}
-
-.simpay-modal-control-close {
-	font-family: "Circular", "Helvetica Neue", Helvetica, sans-serif;
-	color: #a6a6a6;
-	position: absolute;
-	top: 2px;
-	right: 2px;
-	padding: 5px 10px;
-	cursor: pointer;
-}
-
-.simpay-modal-control-close:hover {
-	color: #8d8d8d;
-}
-
-.simpay-modal-overlay-close {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	z-index: -1;
-}
-
-.simpay-modal {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	background: rgba(0, 0, 0, 0.8);
-	z-index: 999999999;
-	overflow: hidden;
-	height: 0;
-	opacity: 0;
-	transition: opacity .3s;
-}
-
-.simpay-modal .simpay-form-title,
-.simpay-modal .simpay-form-description {
-	text-align: center;
-}
-
-.simpay-modal .simpay-form-title {
-	margin-top: 0;
-	margin-bottom: .5em;
-}
-
-.simpay-modal__body {
-	width: 100vw;
-	max-width: 440px;
-	max-height: calc(100vh - 60px);
-	overflow-y: auto;
-	z-index: 1;
-}
-
-.simpay-modal__content {
-	position: relative;
-	padding: 30px 30px 15px;
-	background: #fff;
-}
-
-.simpay-embedded-heading {
-	margin-top: 15px;
-}
-
-.simpay-form-title,
-.simpay-form-description {
-	font-weight: 600;
-	margin: 0;
-	padding: 0;
-	line-height: 1;
-}
-
-.simpay-form-title {
-	font-size: 20px;
-	color: #333;
-	margin-bottom: 10px;
-}
-
-.simpay-form-description {
-	font-size: var(--font-size-general-small);
-	color: #666;
-	margin-bottom: 20px;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled,
-.simpay-checkout-form.simpay-checkout-form--overlay,
-.simpay-checkout-form.simpay-checkout-form--embedded {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font-size: 15px;
-	font-weight: 600;
-	color: #333;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="date"],
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="time"],
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="datetime-local"],
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="week"],
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="month"],
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="text"],
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="email"],
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="url"],
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="password"],
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="search"],
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="tel"],
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="number"],
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control select,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control textarea,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-card-wrap,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="date"],
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="time"],
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="datetime-local"],
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="week"],
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="month"],
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="text"],
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="email"],
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="url"],
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="password"],
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="search"],
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="tel"],
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="number"],
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control select,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control textarea,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-card-wrap,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="date"],
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="time"],
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="datetime-local"],
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="week"],
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="month"],
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="text"],
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="email"],
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="url"],
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="password"],
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="search"],
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="tel"],
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="number"],
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control select,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control textarea,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-card-wrap {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font-size: 15px;
-	font-weight: 600;
-	color: #32325d;
-	margin-bottom: 0;
-	background: #fff;
-	box-shadow: none;
-	border: 1px solid #d1d1d1;
-	border-radius: 4px;
-	padding: 0 .4375em;
-	height: auto;
-	min-height: 36px;
-	width: 100%;
-	box-sizing: border-box;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="date"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="time"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="datetime-local"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="week"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="month"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="text"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="email"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="url"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="password"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="search"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="tel"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="number"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control select::placeholder,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control textarea::placeholder,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-card-wrap::placeholder,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="date"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="time"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="datetime-local"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="week"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="month"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="text"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="email"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="url"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="password"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="search"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="tel"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="number"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control select::placeholder,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control textarea::placeholder,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-card-wrap::placeholder,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="date"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="time"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="datetime-local"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="week"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="month"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="text"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="email"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="url"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="password"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="search"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="tel"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="number"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control select::placeholder,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control textarea::placeholder,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-card-wrap::placeholder {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font-size: 15px;
-	font-weight: 600;
-	color: #aab7c4;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="date"]:focus,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="time"]:focus,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="datetime-local"]:focus,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="week"]:focus,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="month"]:focus,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="text"]:focus,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="email"]:focus,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="url"]:focus,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="password"]:focus,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="search"]:focus,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="tel"]:focus,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="number"]:focus,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control select:focus,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control textarea:focus,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-card-wrap:focus,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="date"]:focus,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="time"]:focus,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="datetime-local"]:focus,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="week"]:focus,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="month"]:focus,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="text"]:focus,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="email"]:focus,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="url"]:focus,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="password"]:focus,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="search"]:focus,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="tel"]:focus,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="number"]:focus,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control select:focus,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control textarea:focus,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-card-wrap:focus,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="date"]:focus,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="time"]:focus,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="datetime-local"]:focus,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="week"]:focus,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="month"]:focus,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="text"]:focus,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="email"]:focus,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="url"]:focus,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="password"]:focus,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="search"]:focus,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="tel"]:focus,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="number"]:focus,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control select:focus,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control textarea:focus,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-card-wrap:focus {
-	background-color: #fff;
-	border-color: #007acc;
-	color: #32325d;
-	outline: 0;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="date"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="time"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="datetime-local"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="week"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="month"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="text"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="email"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="url"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="password"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="search"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="tel"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="number"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control select.simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control textarea.simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-card-wrap.simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="date"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="time"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="datetime-local"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="week"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="month"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="text"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="email"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="url"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="password"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="search"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="tel"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="number"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control select.simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control textarea.simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-card-wrap.simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="date"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="time"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="datetime-local"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="week"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="month"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="text"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="email"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="url"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="password"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="search"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="tel"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="number"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control select.simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control textarea.simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-card-wrap.simpay-input-error {
-	border-color: #eb1c26;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .StripeElement--webkit-autofill,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .StripeElement--webkit-autofill,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .StripeElement--webkit-autofill {
-	background: transparent !important;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control select,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control select:-webkit-autofill,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control select,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control select:-webkit-autofill,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control select,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control select:-webkit-autofill {
-	appearance: none;
-	background-position: calc(100% - 8px);
-	background-size: 10px 5px;
-	background-repeat: no-repeat;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	padding-right: 25px;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-card-wrap.StripeElement,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-card-wrap.StripeElement,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-card-wrap.StripeElement {
-	display: flex;
-	align-items: center;
-	height: 1px;
-	min-height: 36px;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-card-wrap.StripeElement > div,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-card-wrap.StripeElement > div,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-card-wrap.StripeElement > div {
-	flex: 1;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-card-wrap.StripeElement--focus,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-card-wrap.StripeElement--focus,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-card-wrap.StripeElement--focus {
-	background-color: #fff;
-	border-color: #007acc;
-	color: #32325d;
-	outline: 0;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="tel"].simpay-custom-amount-input,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="number"].simpay-custom-amount-input,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="text"].simpay-custom-amount-input,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="tel"].simpay-custom-amount-input,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="number"].simpay-custom-amount-input,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="text"].simpay-custom-amount-input,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="tel"].simpay-custom-amount-input,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="number"].simpay-custom-amount-input,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="text"].simpay-custom-amount-input {
-	width: 125px;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="tel"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-left,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="number"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-left,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="text"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-left,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="tel"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-left,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="number"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-left,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="text"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-left,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="tel"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-left,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="number"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-left,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="text"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-left {
-	border-top-left-radius: 0;
-	border-bottom-left-radius: 0;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="tel"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-right,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="number"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-right,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="text"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-right,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="tel"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-right,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="number"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-right,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="text"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-right,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="tel"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-right,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="number"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-right,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="text"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-right {
-	border-top-right-radius: 0;
-	border-bottom-right-radius: 0;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-currency-symbol,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-currency-symbol,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-currency-symbol {
-	border-radius: 4px;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-currency-symbol-left,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-currency-symbol-left,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-currency-symbol-left {
-	border-right: 0;
-	border-top-right-radius: 0;
-	border-bottom-right-radius: 0;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-currency-symbol-right,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-currency-symbol-right,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-currency-symbol-right {
-	border-left: 0;
-	border-top-left-radius: 0;
-	border-bottom-left-radius: 0;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control select,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control select,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control select {
-	width: auto;
-	max-width: 100%;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control textarea,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control textarea,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control textarea {
-	height: auto;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="text"].simpay-coupon-field,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="text"].simpay-coupon-field,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="text"].simpay-coupon-field {
-	width: calc(100% - 120px);
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-payment-btn:not(.stripe-button-el),
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el),
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-checkout-btn:not(.stripe-button-el),
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-payment-btn:not(.stripe-button-el),
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el),
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-checkout-btn:not(.stripe-button-el),
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-payment-btn:not(.stripe-button-el),
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el),
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-checkout-btn:not(.stripe-button-el) {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font-size: 15px;
-	font-weight: 600;
-	color: #fff;
-	background-color: #24b47e;
-	background-image: none;
-	display: block;
-	height: 36px;
-	line-height: 1.5;
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	border: 0;
-	border-radius: 4px;
-	outline: none;
-	text-transform: uppercase;
-	cursor: pointer;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-payment-btn:not(.stripe-button-el):hover,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el):hover,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-checkout-btn:not(.stripe-button-el):hover,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-payment-btn:not(.stripe-button-el):hover,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el):hover,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-checkout-btn:not(.stripe-button-el):hover,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-payment-btn:not(.stripe-button-el):hover,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el):hover,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-checkout-btn:not(.stripe-button-el):hover {
-	background-color: #249a65;
-	background-image: none;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-payment-btn:not(.stripe-button-el):disabled,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el):disabled,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-checkout-btn:not(.stripe-button-el):disabled,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-payment-btn:not(.stripe-button-el):disabled,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el):disabled,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-checkout-btn:not(.stripe-button-el):disabled,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-payment-btn:not(.stripe-button-el):disabled,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el):disabled,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-checkout-btn:not(.stripe-button-el):disabled {
-	pointer-events: none;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-payment-btn:not(.stripe-button-el).simpay-disabled,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el).simpay-disabled,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-checkout-btn:not(.stripe-button-el).simpay-disabled,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-payment-btn:not(.stripe-button-el).simpay-disabled,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el).simpay-disabled,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-checkout-btn:not(.stripe-button-el).simpay-disabled,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-payment-btn:not(.stripe-button-el).simpay-disabled,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el).simpay-disabled,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-checkout-btn:not(.stripe-button-el).simpay-disabled {
-	background-color: #aab7c4;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-apply-coupon,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-apply-coupon,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-apply-coupon {
-	width: 110px;
-	float: right;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el),
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el),
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el) {
-	width: 110px;
-	background-color: #aab7c4;
-	background-image: none;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el):hover,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el):hover,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el):hover {
-	background-color: #888;
-	background-image: none;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-address-container .simpay-field-wrap,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-address-container .simpay-field-wrap,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-address-container .simpay-field-wrap {
-	margin-bottom: 15px;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-address-container .simpay-address-city-container,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-address-container .simpay-address-state-container,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-address-container .simpay-address-zip-container,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-address-container .simpay-address-country-container,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-address-container .simpay-address-city-container,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-address-container .simpay-address-state-container,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-address-container .simpay-address-zip-container,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-address-container .simpay-address-country-container,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-address-container .simpay-address-city-container,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-address-container .simpay-address-state-container,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-address-container .simpay-address-zip-container,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-address-container .simpay-address-country-container {
-	float: left;
-	width: 48%;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-address-container .simpay-address-state-container,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-address-container .simpay-address-country-container,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-address-container .simpay-address-state-container,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-address-container .simpay-address-country-container,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-address-container .simpay-address-state-container,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-address-container .simpay-address-country-container {
-	float: right;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-test-mode-badge-container,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-test-mode-badge-container,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-test-mode-badge-container {
-	text-align: center;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled,
-.simpay-checkout-form.simpay-checkout-form--embedded {
-	max-width: 400px;
-}
-
-.simpay-payment-request-button-container {
-	margin: 15px 0;
-}
-
-.simpay-payment-request-button-container__or {
-	font-size: 90%;
-	text-align: center;
-	overflow: hidden;
-}
-
-.simpay-payment-request-button-container__or:before,
-.simpay-payment-request-button-container__or:after {
-	background-color: #d1d1d1;
-	content: '';
-	display: inline-block;
-	height: 1px;
-	position: relative;
-	vertical-align: middle;
-	width: 50%;
-}
-
-.simpay-payment-request-button-container__or:before {
-	right: .5em;
-	margin-left: -50%;
-}
-
-.simpay-payment-request-button-container__or:after {
-	left: .5em;
-	margin-right: -50%;
-}
-
-.simpay-payment-request-button-container__button + .simpay-payment-request-button-container__or,
-.simpay-payment-request-button-container__or + .simpay-payment-request-button-container__button {
-	margin-top: 15px;
-}
-
-.simpay-clearfix::before,
-.simpay-clearfix::after {
-	content: ' ';
-	display: table;
-}
-
-.simpay-clearfix::after {
-	clear: both;
-}
-
-.simpay-total-amount-value {
-	font-style: normal;
-}
-
-.simpay-form-control::before,
-.simpay-form-control::after {
-	content: ' ';
-	display: table;
-}
-
-.simpay-form-control::after {
-	clear: both;
-}
-
-.simpay-form-control p {
-	padding: 0;
-	margin: 0;
-}
-
-.simpay-form-control ul {
-	margin: 0 0 .5em;
-}
-
-.simpay-form-control ul li {
-	list-style-type: none;
-}
-
-.simpay-form-control ul li label {
-	display: block;
-	margin: 0 0 .5em;
-}
-
-.simpay-form-control ul li label input[type="radio"],
-.simpay-form-control ul li label input[type="checkbox"] {
-	margin-right: .5em;
-}
-
-.simpay-form-control label {
-	cursor: pointer;
-	display: block;
-}
-
-.simpay-form-control .simpay-field-wrap::before,
-.simpay-form-control .simpay-field-wrap::after {
-	content: ' ';
-	display: table;
-}
-
-.simpay-form-control .simpay-field-wrap::after {
-	clear: both;
-}
-
-.simpay-errors {
-	color: #eb1c26;
-	margin-bottom: 15px;
-}
-
-.simpay-test-mode-badge-container .simpay-test-mode-badge {
-	background-color: #f7e633;
-	color: #333;
-	border-radius: 5px;
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-weight: 700;
-	font-size: 11px;
-	text-transform: uppercase;
-	padding: 5px 9px;
-}
-
-.slick-list {
-	position: relative;
-	overflow: hidden;
-	display: block;
-	margin: 0;
-	padding: 0;
-}
-
-.slick-list:focus {
-	outline: none;
-}
-
-.slick-list.dragging {
-	cursor: hand;
-}
-
-.slick-slider .slick-track,
-.slick-slider .slick-list {
-	transform: translate3d(0, 0, 0);
-}
-
-.slick-track {
-	position: relative;
-	left: 0;
-	top: 0;
-	display: block;
-	zoom: 1;
-	z-index: 9999;
-}
-
-.slick-track:before,
-.slick-track:after {
-	content: '';
-	display: table;
-}
-
-.slick-track:after {
-	clear: both;
-}
-
-.slick-loading .slick-track {
-	visibility: hidden;
-}
-
-.slick-slide {
-	float: left;
-	height: 100%;
-	min-height: 1px;
-}
-
-.slick-slide img {
-	display: block;
-}
-
-.slick-slide.slick-loading img {
-	display: none;
-}
-
-.slick-slide.dragging img {
-	pointer-events: none;
-}
-
-.slick-initialized .slick-slide {
-	display: block;
-}
-
-.slick-loading .slick-slide {
-	visibility: hidden;
-}
-
-.slick-vertical .slick-slide {
-	display: block;
-	height: auto;
-}
-
-.slick-dots {
-	position: absolute;
-	bottom: 0;
-	list-style: none;
-	display: block;
-	text-align: center;
-	padding: 0;
-	width: 100%;
-}
-
-.slick-dots li {
-	position: relative;
-	display: inline-block;
-	height: 10px;
-	width: 10px;
-	margin: 0 5px;
-	padding: 0;
-	cursor: pointer;
-}
-
-.slick-dots li.slick-active button,
-.slick-dots li.slick-active button[type="button"],
-.slick-dots li.slick-active button:focus,
-.slick-dots li.slick-active button[type="button"]:focus {
-	opacity: 1;
-	background: #fff;
-}
-
-.slick-dots li button,
-.slick-dots li button[type="button"] {
-	text-indent: -9999px;
-	overflow: hidden;
-	text-decoration: none;
-	font-size: 0;
-	text-align: start;
-	display: inline-block;
-	width: 10px;
-	height: 10px;
-	margin: 0 4px;
-	cursor: pointer;
-	transition: background .5s, opacity .5s;
-	opacity: .4;
-	border: 2px solid #fff;
-	border-radius: 6px;
-	padding: 0;
-}
-
-.slick-dots li button:hover,
-.slick-dots li button:focus[type="button"] {
-	outline: none;
-	background: transparent;
-}
-
-.slick-dots li button:hover:before,
-.slick-dots li button:focus[type="button"]:before {
-	opacity: 1;
-}
-
-.slider {
-	position: relative;
-	display: block; /* autoprefixer: ignore next */
-	box-sizing: border-box;
-	user-select: none;
-	touch-action: pan-y;
-	clear: both;
-	overflow: hidden;
-	margin-bottom: 0;
-}
-
-.slider .slick-prev,
-.slider .slick-next {
-	position: absolute;
-	display: block;
-	height: 60px;
-	width: 60px;
-	line-height: 0;
-	font-size: 0;
-	cursor: pointer;
-	color: transparent;
-	top: 50%;
-	margin-top: -30px;
-	padding: 0;
-	border: 0;
-	outline: none;
-	z-index: 200;
-	transition: all .33s;
-	background-color: transparent;
-	opacity: .2;
-}
-
-.slider .slick-prev:hover,
-.slider .slick-next:hover {
-	outline: none;
-	color: transparent;
-	transition: all .33s;
-	background-color: transparent;
-	opacity: 1;
-}
-
-.slider .slick-prev:focus,
-.slider .slick-next:focus {
-	outline: none;
-	color: transparent;
-	transition: all .33s;
-	background-color: transparent;
-	opacity: 1;
-}
-
-.slider .slick-prev {
-	left: 0;
-	background-image: url("../svg/slider-left-arrow.svg");
-	background-color: transparent;
-}
-
-.slider .slick-prev:hover {
-	background-image: url("../svg/slider-left-arrow.svg");
-}
-
-.slider .slick-next {
-	right: 0;
-	background-image: url("../svg/slider-right-arrow.svg");
-	background-color: transparent;
-}
-
-.slider .slick-next:hover {
-	background-image: url("../svg/slider-right-arrow.svg");
-}
-
-.nav-links {
-	text-align: left;
-	display: flex;
-	align-items: flex-start;
-	justify-content: flex-start;
-	width: 100%;
-	font-size: var(--font-size-general-small);
-	margin-top: 12rem;
-}
-
-.nav-links a {
-	text-decoration: none;
-}
-
-.nav-links .page-numbers {
-	border: 1px solid #131a50;
-	width: 35px;
-	height: 35px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin-right: .5rem;
-	margin-left: .5rem;
-	color: #131a50;
-}
-
-.nav-links a.page-numbers:hover {
-	background: #131a50;
-	border-color: #131a50;
-	color: #7effe1;
-}
-
-.nav-links .page-numbers.current {
-	background: #131a50;
-	border-color: #131a50;
-	color: #7effe1;
-}
-
-.nav-links .page-numbers.next,
-.nav-links .page-numbers.prev {
-	display: none;
 }
 
 .block.block-our-services {
@@ -6237,11 +6237,11 @@ body.home .block.block-testimonials + .block.block-cta-with-phone-input {
 	max-height: 100px;
 }
 
-.block.block-our-services + .block.block-logos {
+.block-title-left-text-right + .block.block-logos {
 	padding-top: 0;
 }
 
-.block-title-left-text-right + .block.block-logos {
+.block.block-our-services + .block.block-logos {
 	padding-top: 0;
 }
 
@@ -6719,7 +6719,7 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .top-b
 	position: relative;
 	cursor: pointer;
 	transition: 150ms linear background;
-	font-family: "Circular", "Helvetica Neue", Helvetica, sans-serif;
+	font-family: "Circular", "Helvetica Neue", helvetica, sans-serif;
 }
 
 .top-button-holder .button:hover,
@@ -8785,7 +8785,7 @@ body.single.single-reference .wp-block-button a {
 	position: relative;
 	cursor: pointer;
 	transition: 150ms linear background;
-	font-family: "Circular", "Helvetica Neue", Helvetica, sans-serif;
+	font-family: "Circular", "Helvetica Neue", helvetica, sans-serif;
 	border-radius: 0;
 }
 
@@ -9202,7 +9202,7 @@ body.template-surveys-modern li {
 }
 
 body.template-surveys-modern * {
-	font-family: "Circular", "Helvetica Neue", Helvetica, sans-serif;
+	font-family: "Circular", "Helvetica Neue", helvetica, sans-serif;
 	color: #fff;
 }
 
@@ -11060,7 +11060,7 @@ table {
 
 td,
 th {
-	font-family: "Circular", "Helvetica Neue", Helvetica, sans-serif;
+	font-family: "Circular", "Helvetica Neue", helvetica, sans-serif;
 	height: 3rem;
 	padding: 1rem;
 }
@@ -15149,6 +15149,14 @@ body:not(.page-id-6357) .block.block-wide-text .site-header li {
 
 }
 
+@media all and (max-width: 1500px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 1500px) and (-ms-high-contrast: active) and (max-width: 870px) {
+
+.block.block-logos .logo-wall > div {
+	width: 100%;
+}
+
+}
+
 @media (max-width: 1500px) {
 
 .vimeo-wrapper.vimeo-wrapper-upsell-small iframe {
@@ -15185,14 +15193,6 @@ body:not(.page-id-6357) .block.block-wide-text .site-header li {
 	width: calc(20% - 50px);
 	margin-right: 50px;
 	margin-bottom: 6rem;
-}
-
-}
-
-@media all and (max-width: 1500px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 1500px) and (-ms-high-contrast: active) and (max-width: 870px) {
-
-.block.block-logos .logo-wall > div {
-	width: 100%;
 }
 
 }
@@ -15322,18 +15322,6 @@ body.single .block.block-single:not(.block-single-reference) ul.tags ul.gform_fi
 
 }
 
-@media (max-width: 1250px) {
-
-.block.block-logos .logo-wall {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr); /* autoprefixer: off */
-	grid-auto-rows: minmax(0, auto);
-	grid-column-gap: 100px;
-	grid-row-gap: 6rem;
-}
-
-}
-
 @media all and (max-width: 1250px) and (-ms-high-contrast: none), (max-width: 1250px) and (-ms-high-contrast: active) {
 
 .block.block-logos .logo-wall {
@@ -15354,6 +15342,18 @@ body.single .block.block-single:not(.block-single-reference) ul.tags ul.gform_fi
 
 .block.block-logos .logo-wall > div {
 	width: 100%;
+}
+
+}
+
+@media (max-width: 1250px) {
+
+.block.block-logos .logo-wall {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr); /* autoprefixer: off */
+	grid-auto-rows: minmax(0, auto);
+	grid-column-gap: 100px;
+	grid-row-gap: 6rem;
 }
 
 }
@@ -15498,14 +15498,6 @@ body:not(.page-id-6357) .block.block-wide-text .site-header .block.block-timelin
 
 }
 
-@media all and (max-width: 1130px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 1130px) and (-ms-high-contrast: active) and (max-width: 870px) {
-
-.block.block-values .cols > div {
-	width: 100%;
-}
-
-}
-
 @media all and (max-width: 1130px) and (-ms-high-contrast: none), (max-width: 1130px) and (-ms-high-contrast: active) {
 
 .block.block-values .cols {
@@ -15518,6 +15510,14 @@ body:not(.page-id-6357) .block.block-wide-text .site-header .block.block-timelin
 	width: calc(50% - 2.5rem);
 	margin-right: 2.5rem;
 	margin-bottom: 5rem;
+}
+
+}
+
+@media all and (max-width: 1130px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 1130px) and (-ms-high-contrast: active) and (max-width: 870px) {
+
+.block.block-values .cols > div {
+	width: 100%;
 }
 
 }
@@ -16072,62 +16072,6 @@ body:not(.page-id-6357) .block.block-wide-text .site-header .is-variable.is-8-to
 
 }
 
-@media all and (max-width: 1000px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 1000px) and (-ms-high-contrast: active) and (max-width: 870px) {
-
-.block.block-dudes .cols > div {
-	width: 100%;
-}
-
-.block.block-open-source .repos > div {
-	width: 100%;
-}
-
-.block.block-blog .cols > div {
-	width: 100%;
-}
-
-}
-
-@media all and (max-width: 1000px) and (-ms-high-contrast: none), (max-width: 1000px) and (-ms-high-contrast: active) {
-
-.block.block-dudes .cols {
-	display: flex;
-	flex-wrap: wrap;
-	overflow: hidden;
-}
-
-.block.block-dudes .cols > div {
-	width: calc(50% - 3rem);
-	margin-right: 3rem;
-	margin-bottom: 0;
-}
-
-.block.block-open-source .repos {
-	display: flex;
-	flex-wrap: wrap;
-	overflow: hidden;
-}
-
-.block.block-open-source .repos > div {
-	width: calc(50% - 1.5rem);
-	margin-right: 1.5rem;
-	margin-bottom: 3rem;
-}
-
-.block.block-blog .cols {
-	display: flex;
-	flex-wrap: wrap;
-	overflow: hidden;
-}
-
-.block.block-blog .cols > div {
-	width: calc(50% - 3rem);
-	margin-right: 3rem;
-	margin-bottom: 6rem;
-}
-
-}
-
 @media (max-width: 1000px) {
 
 .vimeo-wrapper.vimeo-wrapper-upsell-front-page iframe {
@@ -16220,6 +16164,70 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper form li.gfmc-column.gfmc
 
 }
 
+@media all and (max-width: 1000px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 1000px) and (-ms-high-contrast: active) and (max-width: 870px) {
+
+.block.block-dudes .cols > div {
+	width: 100%;
+}
+
+.block.block-open-source .repos > div {
+	width: 100%;
+}
+
+.block.block-blog .cols > div {
+	width: 100%;
+}
+
+}
+
+@media all and (max-width: 1000px) and (-ms-high-contrast: none), (max-width: 1000px) and (-ms-high-contrast: active) {
+
+.block.block-dudes .cols {
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+.block.block-dudes .cols > div {
+	width: calc(50% - 3rem);
+	margin-right: 3rem;
+	margin-bottom: 0;
+}
+
+.block.block-open-source .repos {
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+.block.block-open-source .repos > div {
+	width: calc(50% - 1.5rem);
+	margin-right: 1.5rem;
+	margin-bottom: 3rem;
+}
+
+.block.block-blog .cols {
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+.block.block-blog .cols > div {
+	width: calc(50% - 3rem);
+	margin-right: 3rem;
+	margin-bottom: 6rem;
+}
+
+}
+
+@media all and (max-width: 980px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 980px) and (-ms-high-contrast: active) and (max-width: 870px) {
+
+.block.block-mission-vision .cols.cols-two > div {
+	width: 100%;
+}
+
+}
+
 @media (max-width: 980px) {
 
 .block.block-mission-vision .cols.cols-two {
@@ -16259,9 +16267,9 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper form li.gfmc-column.gfmc
 
 }
 
-@media all and (max-width: 980px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 980px) and (-ms-high-contrast: active) and (max-width: 870px) {
+@media all and (max-width: 960px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 960px) and (-ms-high-contrast: active) and (max-width: 870px) {
 
-.block.block-mission-vision .cols.cols-two > div {
+.block.block-logos .logo-wall > div {
 	width: 100%;
 }
 
@@ -16330,14 +16338,6 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper form li.gfmc-column.gfmc
 
 }
 
-@media all and (max-width: 960px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 960px) and (-ms-high-contrast: active) and (max-width: 870px) {
-
-.block.block-logos .logo-wall > div {
-	width: 100%;
-}
-
-}
-
 @media (max-width: 910px) {
 
 .block.block-single:not(.block-single-reference) .post > .gutenberg-content ul:not(.tags):not(.blocks-gallery-grid),
@@ -16379,6 +16379,27 @@ body:not(.page-id-6357) .block.block-wide-text .site-header > * {
 
 .wp-caption {
 	width: 100% !important;
+}
+
+}
+
+@media all and (max-width: 900px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 900px) and (-ms-high-contrast: active) and (max-width: 870px) {
+
+.block.block-footer.site-footer .cols > div {
+	width: 100%;
+}
+
+.block.block-footer.site-footer .main-links ul > div {
+	width: 100%;
+}
+
+.block.block-community-photos .container > div,
+.block.block-community-photos .site-header > div {
+	width: 100%;
+}
+
+.block.block-community .item-list > div {
+	width: 100%;
 }
 
 }
@@ -16517,35 +16538,6 @@ body.template-surveys-modern .gform_wrapper ul li.field_description_above div.gi
 
 }
 
-@media all and (max-width: 900px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 900px) and (-ms-high-contrast: active) and (max-width: 870px) {
-
-.block.block-footer.site-footer .cols > div {
-	width: 100%;
-}
-
-.block.block-footer.site-footer .main-links ul > div {
-	width: 100%;
-}
-
-.block.block-community-photos .container > div,
-.block.block-community-photos .site-header > div {
-	width: 100%;
-}
-
-.block.block-community .item-list > div {
-	width: 100%;
-}
-
-}
-
-@media all and (max-width: 890px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 890px) and (-ms-high-contrast: active) and (max-width: 870px) {
-
-.block.block-latest-selected-mustread .row.row-mustread > div {
-	width: 100%;
-}
-
-}
-
 @media all and (max-width: 890px) and (-ms-high-contrast: none), (max-width: 890px) and (-ms-high-contrast: active) {
 
 .block.block-latest-selected-mustread .row.row-mustread {
@@ -16574,100 +16566,9 @@ body.template-surveys-modern .gform_wrapper ul li.field_description_above div.gi
 
 }
 
-@media all and (-ms-high-contrast: none) and (max-width: 870px), (-ms-high-contrast: active) and (max-width: 870px) {
-
-.block.block-footer.site-footer .cols > div {
-	width: 100%;
-}
-
-.block.block-footer.site-footer .main-links ul > div {
-	width: 100%;
-}
-
-.block.block-hero-person .cols > div {
-	width: 100%;
-}
-
-.col.col-services > div {
-	width: 100%;
-}
-
-.block.block-references .reference-wrapper.reference-wrapper-cols > div {
-	width: 100%;
-}
-
-.block.block-latest-selected-mustread .row.row-latest .post > div {
-	width: 100%;
-}
+@media all and (max-width: 890px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 890px) and (-ms-high-contrast: active) and (max-width: 870px) {
 
 .block.block-latest-selected-mustread .row.row-mustread > div {
-	width: 100%;
-}
-
-.block.block-process .cols > div {
-	width: 100%;
-}
-
-.block.block-values .cols > div {
-	width: 100%;
-}
-
-.block.block-dudes .cols > div {
-	width: 100%;
-}
-
-.block.block-open-position .container > div,
-.block.block-open-position .site-header > div {
-	width: 100%;
-}
-
-.block.block-logos .logo-wall > div {
-	width: 100%;
-}
-
-.block.block-cta-with-image .cols > div {
-	width: 100%;
-}
-
-.block.block-mission-vision .cols.cols-two > div {
-	width: 100%;
-}
-
-.nav-primary .cols.cols-navs > div {
-	width: 100%;
-}
-
-.nav-primary .cols.cols-contact > div {
-	width: 100%;
-}
-
-.block.block-single:not(.block-single-reference) .post > .author-card a > div,
-body.single .block.block-single:not(.block-single-reference) .post > .author-card a > div {
-	width: 100%;
-}
-
-.block.block-community-photos .container > div,
-.block.block-community-photos .site-header > div {
-	width: 100%;
-}
-
-.block.block-community .cols > div {
-	width: 100%;
-}
-
-.block.block-community .item-list > div {
-	width: 100%;
-}
-
-.block.block-open-source .repos > div {
-	width: 100%;
-}
-
-.content-area .block.block-merch .cols > div {
-	width: 100%;
-}
-
-.block.block-blog .cols > div {
 	width: 100%;
 }
 
@@ -16800,6 +16701,105 @@ body.template-surveys-modern .survey-header {
 
 }
 
+@media all and (-ms-high-contrast: none) and (max-width: 870px), (-ms-high-contrast: active) and (max-width: 870px) {
+
+.block.block-footer.site-footer .cols > div {
+	width: 100%;
+}
+
+.block.block-footer.site-footer .main-links ul > div {
+	width: 100%;
+}
+
+.block.block-hero-person .cols > div {
+	width: 100%;
+}
+
+.col.col-services > div {
+	width: 100%;
+}
+
+.block.block-references .reference-wrapper.reference-wrapper-cols > div {
+	width: 100%;
+}
+
+.block.block-latest-selected-mustread .row.row-latest .post > div {
+	width: 100%;
+}
+
+.block.block-latest-selected-mustread .row.row-mustread > div {
+	width: 100%;
+}
+
+.block.block-process .cols > div {
+	width: 100%;
+}
+
+.block.block-values .cols > div {
+	width: 100%;
+}
+
+.block.block-dudes .cols > div {
+	width: 100%;
+}
+
+.block.block-open-position .container > div,
+.block.block-open-position .site-header > div {
+	width: 100%;
+}
+
+.block.block-logos .logo-wall > div {
+	width: 100%;
+}
+
+.block.block-cta-with-image .cols > div {
+	width: 100%;
+}
+
+.block.block-mission-vision .cols.cols-two > div {
+	width: 100%;
+}
+
+.nav-primary .cols.cols-navs > div {
+	width: 100%;
+}
+
+.nav-primary .cols.cols-contact > div {
+	width: 100%;
+}
+
+.block.block-single:not(.block-single-reference) .post > .author-card a > div,
+body.single .block.block-single:not(.block-single-reference) .post > .author-card a > div {
+	width: 100%;
+}
+
+.block.block-community-photos .container > div,
+.block.block-community-photos .site-header > div {
+	width: 100%;
+}
+
+.block.block-community .cols > div {
+	width: 100%;
+}
+
+.block.block-community .item-list > div {
+	width: 100%;
+}
+
+.block.block-open-source .repos > div {
+	width: 100%;
+}
+
+.content-area .block.block-merch .cols > div {
+	width: 100%;
+}
+
+.block.block-blog .cols > div {
+	width: 100%;
+}
+
+}
+
 @media (max-width: 850px) {
 
 .block.block-single:not(.block-single-reference) > .post > .entry-author .author-info .cta-link,
@@ -16867,6 +16867,19 @@ body:not(.page-id-6357) .block.block-wide-text .container > *.wp-video,
 body:not(.page-id-6357) .block.block-wide-text .site-header > *.wp-video {
 	padding-left: 4rem !important;
 	padding-right: 4rem !important;
+}
+
+}
+
+@media (max-width: 768px) {
+
+.block.block-references-one .cols {
+	display: block;
+	max-width: 500px;
+}
+
+.block.block-references-one .reference-image-skew {
+	display: none;
 }
 
 }
@@ -17268,19 +17281,6 @@ body:not(.page-id-6357) .block.block-wide-text .site-header .is-variable.is-8-mo
 
 }
 
-@media (max-width: 768px) {
-
-.block.block-references-one .cols {
-	display: block;
-	max-width: 500px;
-}
-
-.block.block-references-one .reference-image-skew {
-	display: none;
-}
-
-}
-
 @media (max-width: 760px) and (max-width: 480px) {
 
 .block.block-hero {
@@ -17452,10 +17452,18 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .top-b
 
 }
 
-@media all and (max-width: 730px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 730px) and (-ms-high-contrast: active) and (max-width: 870px) {
+@media all and (max-width: 730px) and (-ms-high-contrast: none), (max-width: 730px) and (-ms-high-contrast: active) {
+
+.block.block-references .reference-wrapper.reference-wrapper-cols {
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
 
 .block.block-references .reference-wrapper.reference-wrapper-cols > div {
-	width: 100%;
+	width: calc(100% - 4.5rem);
+	margin-right: 4.5rem;
+	margin-bottom: 14rem;
 }
 
 }
@@ -17482,18 +17490,10 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .top-b
 
 }
 
-@media all and (max-width: 730px) and (-ms-high-contrast: none), (max-width: 730px) and (-ms-high-contrast: active) {
-
-.block.block-references .reference-wrapper.reference-wrapper-cols {
-	display: flex;
-	flex-wrap: wrap;
-	overflow: hidden;
-}
+@media all and (max-width: 730px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 730px) and (-ms-high-contrast: active) and (max-width: 870px) {
 
 .block.block-references .reference-wrapper.reference-wrapper-cols > div {
-	width: calc(100% - 4.5rem);
-	margin-right: 4.5rem;
-	margin-bottom: 14rem;
+	width: 100%;
 }
 
 }
@@ -18111,6 +18111,22 @@ body.template-surveys-modern .gform_wrapper ul li.field_description_above div.gi
 
 }
 
+@media all and (max-width: 530px) and (-ms-high-contrast: none), (max-width: 530px) and (-ms-high-contrast: active) {
+
+.block.block-hero-person .cols {
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+.block.block-hero-person .cols > div {
+	width: calc(100% - 0rem);
+	margin-right: 0rem;
+	margin-bottom: 0rem;
+}
+
+}
+
 @media all and (max-width: 530px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 530px) and (-ms-high-contrast: active) and (max-width: 870px) {
 
 .block.block-hero-person .cols > div {
@@ -18146,22 +18162,6 @@ body.template-surveys-modern .gform_wrapper ul li.field_description_above div.gi
 
 .block.block-hero-person .cols .col {
 	order: 2;
-}
-
-}
-
-@media all and (max-width: 530px) and (-ms-high-contrast: none), (max-width: 530px) and (-ms-high-contrast: active) {
-
-.block.block-hero-person .cols {
-	display: flex;
-	flex-wrap: wrap;
-	overflow: hidden;
-}
-
-.block.block-hero-person .cols > div {
-	width: calc(100% - 0rem);
-	margin-right: 0rem;
-	margin-bottom: 0rem;
 }
 
 }
@@ -18315,6 +18315,27 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper form #field_6_11 ul inpu
 
 @media (max-width: 480px) {
 
+.top svg {
+	width: 15px;
+	height: 15px;
+}
+
+.glitch::before {
+	text-shadow: 1px 0 #00ffea;
+}
+
+.glitch::after {
+	text-shadow: -1px 0 #fe3a7f;
+}
+
+.glitch-fulltilt::before {
+	left: 30px;
+}
+
+.slider {
+	max-height: 600px;
+}
+
 .block p a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail):not(.button):not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):not(.no-external-link-indicator):not(.wp-block-button__link),
 .block li a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail):not(.button):not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):not(.no-external-link-indicator):not(.wp-block-button__link):not(#spr-button),
 a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail):not(.button):not(.no-external-link-indicator):not(.wp-block-button__link):not(#spr-button) {
@@ -18417,27 +18438,6 @@ body .wp-block-media-text .wp-block-media-text__media img {
 body .wp-block-media-text .wp-block-media-text__content {
 	padding-left: 0;
 	padding-right: 0;
-}
-
-.top svg {
-	width: 15px;
-	height: 15px;
-}
-
-.glitch:before {
-	text-shadow: 1px 0 #00ffea;
-}
-
-.glitch:after {
-	text-shadow: -1px 0 #fe3a7f;
-}
-
-.glitch-fulltilt:before {
-	left: 30px;
-}
-
-.slider {
-	max-height: 600px;
 }
 
 .col.col-services {
@@ -18946,62 +18946,6 @@ body.template-surveys-modern .survey-header img {
 
 }
 
-@keyframes progressive-reveal {
-
-0% {
-	opacity: 0;
-}
-
-100% {
-	opacity: 1;
-}
-
-}
-
-@keyframes removed-item-animation-chat {
-
-from {
-	opacity: 1;
-	transform: translateX(0);
-}
-
-to {
-	opacity: 0;
-	transform: translateX(3000px);
-}
-
-}
-
-@keyframes bounceInRight {
-
-from,60%,75%,90%,to {
-	animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-}
-
-from {
-	opacity: 0;
-	transform: translate3d(3000px, 0, 0) scaleX(3);
-}
-
-60% {
-	opacity: 1;
-	transform: translate3d(-25px, 0, 0) scaleX(1);
-}
-
-75% {
-	transform: translate3d(10px, 0, 0) scaleX(0.98);
-}
-
-90% {
-	transform: translate3d(-5px, 0, 0) scaleX(0.995);
-}
-
-to {
-	transform: translate3d(0, 0, 0);
-}
-
-}
-
 @keyframes underline-idle {
 
 0% {
@@ -19146,87 +19090,87 @@ to {
 @keyframes glitch-effect {
 
 0% {
-	clip: rect(96px, 9999px, 100px, 0);
+	clip: rect(60px, 9999px, 6px, 0);
 }
 
 5% {
-	clip: rect(1px, 9999px, 81px, 0);
+	clip: rect(28px, 9999px, 74px, 0);
 }
 
 10% {
-	clip: rect(45px, 9999px, 82px, 0);
+	clip: rect(64px, 9999px, 20px, 0);
 }
 
 15% {
-	clip: rect(53px, 9999px, 62px, 0);
+	clip: rect(76px, 9999px, 51px, 0);
 }
 
 20% {
-	clip: rect(54px, 9999px, 62px, 0);
+	clip: rect(69px, 9999px, 48px, 0);
 }
 
 25% {
-	clip: rect(64px, 9999px, 71px, 0);
+	clip: rect(2px, 9999px, 1px, 0);
 }
 
 30% {
-	clip: rect(29px, 9999px, 3px, 0);
+	clip: rect(9px, 9999px, 69px, 0);
 }
 
 35% {
-	clip: rect(61px, 9999px, 70px, 0);
+	clip: rect(70px, 9999px, 25px, 0);
 }
 
 40% {
-	clip: rect(32px, 9999px, 91px, 0);
+	clip: rect(58px, 9999px, 15px, 0);
 }
 
 45% {
-	clip: rect(87px, 9999px, 56px, 0);
+	clip: rect(69px, 9999px, 24px, 0);
 }
 
 50% {
-	clip: rect(37px, 9999px, 99px, 0);
+	clip: rect(7px, 9999px, 83px, 0);
 }
 
 55% {
-	clip: rect(1px, 9999px, 85px, 0);
+	clip: rect(50px, 9999px, 4px, 0);
 }
 
 60% {
-	clip: rect(24px, 9999px, 41px, 0);
+	clip: rect(95px, 9999px, 80px, 0);
 }
 
 65% {
-	clip: rect(90px, 9999px, 56px, 0);
+	clip: rect(21px, 9999px, 60px, 0);
 }
 
 70% {
-	clip: rect(87px, 9999px, 64px, 0);
+	clip: rect(66px, 9999px, 42px, 0);
 }
 
 75% {
-	clip: rect(88px, 9999px, 38px, 0);
+	clip: rect(62px, 9999px, 61px, 0);
 }
 
 80% {
-	clip: rect(66px, 9999px, 70px, 0);
+	clip: rect(76px, 9999px, 81px, 0);
 }
 
 85% {
-	clip: rect(68px, 9999px, 38px, 0);
+	clip: rect(83px, 9999px, 43px, 0);
 }
 
 90% {
-	clip: rect(43px, 9999px, 1px, 0);
+	clip: rect(22px, 9999px, 21px, 0);
 }
 
 95% {
-	clip: rect(1px, 9999px, 78px, 0);
+	clip: rect(5px, 9999px, 52px, 0);
 }
 
 100% {
-	clip: rect(2px, 9999px, 99px, 0);
+	clip: rect(60px, 9999px, 87px, 0);
 }
 
 }
@@ -19322,43 +19266,43 @@ to {
 @keyframes noise-1 {
 
 10% {
-	clip-path: inset(31px 0 24px 0);
+	clip-path: inset(57px 0 24px 0);
 }
 
 20% {
-	clip-path: inset(83px 0 4px 0);
+	clip-path: inset(73px 0 25px 0);
 }
 
 30% {
-	clip-path: inset(15px 0 33px 0);
+	clip-path: inset(16px 0 59px 0);
 }
 
 40% {
-	clip-path: inset(38px 0 35px 0);
+	clip-path: inset(24px 0 15px 0);
 }
 
 50% {
-	clip-path: inset(80px 0 10px 0);
+	clip-path: inset(59px 0 4px 0);
 }
 
 60% {
-	clip-path: inset(23px 0 71px 0);
+	clip-path: inset(53px 0 40px 0);
 }
 
 70% {
-	clip-path: inset(10px 0 59px 0);
+	clip-path: inset(78px 0 8px 0);
 }
 
 80% {
-	clip-path: inset(67px 0 31px 0);
+	clip-path: inset(85px 0 13px 0);
 }
 
 90% {
-	clip-path: inset(5px 0 51px 0);
+	clip-path: inset(48px 0 9px 0);
 }
 
 100% {
-	clip-path: inset(72px 0 20px 0);
+	clip-path: inset(84px 0 5px 0);
 }
 
 }
@@ -19367,157 +19311,157 @@ to {
 
 0% {
 	text-shadow: 3px 0 #76ff9b;
-	clip-path: inset(85px 0 7px 0);
+	clip-path: inset(83px 0 9px 0);
 }
 
 3.33333% {
-	text-shadow: 5px 0 #76ff9b;
-	clip-path: inset(13px 0 69px 0);
+	text-shadow: 2px 0 #76ff9b;
+	clip-path: inset(91px 0 1px 0);
 }
 
 6.66667% {
 	text-shadow: 1px 0 #76ff9b;
-	clip-path: inset(91px 0 10px 0);
+	clip-path: inset(52px 0 25px 0);
 }
 
 10% {
-	text-shadow: 3px 0 #76ff9b;
-	clip-path: inset(23px 0 73px 0);
+	text-shadow: 4px 0 #76ff9b;
+	clip-path: inset(93px 0 1px 0);
 }
 
 13.33333% {
 	text-shadow: 2px 0 #76ff9b;
-	clip-path: inset(61px 0 5px 0);
+	clip-path: inset(21px 0 48px 0);
 }
 
 16.66667% {
-	text-shadow: 5px 0 #76ff9b;
-	clip-path: inset(46px 0 7px 0);
+	text-shadow: 3px 0 #76ff9b;
+	clip-path: inset(56px 0 4px 0);
 }
 
 20% {
-	text-shadow: 5px 0 #76ff9b;
-	clip-path: inset(79px 0 16px 0);
+	text-shadow: 4px 0 #76ff9b;
+	clip-path: inset(89px 0 12px 0);
 }
 
 23.33333% {
 	text-shadow: 1px 0 #76ff9b;
-	clip-path: inset(62px 0 27px 0);
+	clip-path: inset(40px 0 20px 0);
 }
 
 26.66667% {
-	text-shadow: 3px 0 #76ff9b;
-	clip-path: inset(7px 0 90px 0);
+	text-shadow: 2px 0 #76ff9b;
+	clip-path: inset(68px 0 7px 0);
 }
 
 30% {
 	text-shadow: 2px 0 #76ff9b;
-	clip-path: inset(65px 0 19px 0);
+	clip-path: inset(59px 0 22px 0);
 }
 
 33.33333% {
-	text-shadow: 2px 0 #76ff9b;
-	clip-path: inset(7px 0 60px 0);
+	text-shadow: 4px 0 #76ff9b;
+	clip-path: inset(30px 0 1px 0);
 }
 
 36.66667% {
-	text-shadow: 3px 0 #76ff9b;
-	clip-path: inset(54px 0 46px 0);
+	text-shadow: 1px 0 #76ff9b;
+	clip-path: inset(26px 0 18px 0);
 }
 
 40% {
-	text-shadow: 1px 0 #76ff9b;
-	clip-path: inset(44px 0 50px 0);
+	text-shadow: 5px 0 #76ff9b;
+	clip-path: inset(13px 0 87px 0);
 }
 
 43.33333% {
-	text-shadow: 3px 0 #76ff9b;
-	clip-path: inset(1px 0 13px 0);
+	text-shadow: 2px 0 #76ff9b;
+	clip-path: inset(59px 0 17px 0);
 }
 
 46.66667% {
-	text-shadow: 2px 0 #76ff9b;
-	clip-path: inset(78px 0 3px 0);
+	text-shadow: 4px 0 #76ff9b;
+	clip-path: inset(57px 0 40px 0);
 }
 
 50% {
-	text-shadow: 1px 0 #76ff9b;
-	clip-path: inset(93px 0 1px 0);
+	text-shadow: 5px 0 #76ff9b;
+	clip-path: inset(44px 0 39px 0);
 }
 
 53.33333% {
-	text-shadow: 2px 0 #76ff9b;
-	clip-path: inset(61px 0 18px 0);
+	text-shadow: 4px 0 #76ff9b;
+	clip-path: inset(79px 0 11px 0);
 }
 
 56.66667% {
-	text-shadow: 4px 0 #76ff9b;
-	clip-path: inset(1px 0 56px 0);
+	text-shadow: 5px 0 #76ff9b;
+	clip-path: inset(91px 0 3px 0);
 }
 
 60% {
-	text-shadow: 3px 0 #76ff9b;
-	clip-path: inset(83px 0 5px 0);
+	text-shadow: 4px 0 #76ff9b;
+	clip-path: inset(40px 0 48px 0);
 }
 
 63.33333% {
-	text-shadow: 3px 0 #76ff9b;
-	clip-path: inset(21px 0 10px 0);
+	text-shadow: 4px 0 #76ff9b;
+	clip-path: inset(25px 0 27px 0);
 }
 
 66.66667% {
-	text-shadow: 5px 0 #76ff9b;
-	clip-path: inset(63px 0 28px 0);
+	text-shadow: 1px 0 #76ff9b;
+	clip-path: inset(85px 0 4px 0);
 }
 
 70% {
-	text-shadow: 3px 0 #76ff9b;
-	clip-path: inset(42px 0 43px 0);
+	text-shadow: 4px 0 #76ff9b;
+	clip-path: inset(40px 0 60px 0);
 }
 
 73.33333% {
-	text-shadow: 2px 0 #76ff9b;
-	clip-path: inset(70px 0 3px 0);
+	text-shadow: 5px 0 #76ff9b;
+	clip-path: inset(36px 0 42px 0);
 }
 
 76.66667% {
-	text-shadow: 4px 0 #76ff9b;
-	clip-path: inset(29px 0 15px 0);
+	text-shadow: 5px 0 #76ff9b;
+	clip-path: inset(30px 0 6px 0);
 }
 
 80% {
-	text-shadow: 4px 0 #76ff9b;
-	clip-path: inset(44px 0 38px 0);
+	text-shadow: 2px 0 #76ff9b;
+	clip-path: inset(64px 0 6px 0);
 }
 
 83.33333% {
 	text-shadow: 5px 0 #76ff9b;
-	clip-path: inset(71px 0 23px 0);
+	clip-path: inset(64px 0 23px 0);
 }
 
 86.66667% {
-	text-shadow: 4px 0 #76ff9b;
-	clip-path: inset(68px 0 12px 0);
+	text-shadow: 2px 0 #76ff9b;
+	clip-path: inset(84px 0 5px 0);
 }
 
 90% {
-	text-shadow: 5px 0 #76ff9b;
-	clip-path: inset(87px 0 12px 0);
+	text-shadow: 3px 0 #76ff9b;
+	clip-path: inset(20px 0 19px 0);
 }
 
 93.33333% {
-	text-shadow: 4px 0 #76ff9b;
-	clip-path: inset(50px 0 31px 0);
+	text-shadow: 1px 0 #76ff9b;
+	clip-path: inset(53px 0 1px 0);
 }
 
 96.66667% {
-	text-shadow: 2px 0 #76ff9b;
-	clip-path: inset(59px 0 6px 0);
+	text-shadow: 1px 0 #76ff9b;
+	clip-path: inset(44px 0 14px 0);
 }
 
 100% {
 	text-shadow: 1px 0 #76ff9b;
-	clip-path: inset(31px 0 24px 0);
+	clip-path: inset(25px 0 19px 0);
 }
 
 }
@@ -19591,75 +19535,75 @@ to {
 @keyframes glitch-test {
 
 0% {
-	clip: rect(-3px, 600px, 0px, 0px);
+	clip: rect(-3px, 600px, 0, 0);
 }
 
 5.88235% {
-	clip: rect(0px, 600px, 0px, 0px);
+	clip: rect(0, 600px, 0, 0);
 }
 
 11.76471% {
-	clip: rect(-3px, 600px, 0px, 0px);
+	clip: rect(-3px, 600px, 0, 0);
 }
 
 17.64706% {
-	clip: rect(-3px, 600px, 0px, 0px);
+	clip: rect(-3px, 600px, 0, 0);
 }
 
 23.52941% {
-	clip: rect(100px, 600px, 100px, 0px);
+	clip: rect(100px, 600px, 100px, 0);
 }
 
 29.41176% {
-	clip: rect(0px, 600px, 600px, 0px);
+	clip: rect(0, 600px, 600px, 0);
 }
 
 35.29412% {
-	clip: rect(100px, 600px, 0px, 0px);
+	clip: rect(100px, 600px, 0, 0);
 }
 
 41.17647% {
-	clip: rect(0px, 600px, 600px, 0px);
+	clip: rect(0, 600px, 600px, 0);
 }
 
 47.05882% {
-	clip: rect(100px, 600px, 0px, 0px);
+	clip: rect(100px, 600px, 0, 0);
 }
 
 52.94118% {
-	clip: rect(-3px, 600px, 0px, 0px);
+	clip: rect(-3px, 600px, 0, 0);
 }
 
 58.82353% {
-	clip: rect(100px, 450px, 100px, 0px);
+	clip: rect(100px, 450px, 100px, 0);
 }
 
 64.70588% {
-	clip: rect(0px, 450px, 0px, 0px);
+	clip: rect(0, 450px, 0, 0);
 }
 
 70.58824% {
-	clip: rect(100px, 450px, 100px, 0px);
+	clip: rect(100px, 450px, 100px, 0);
 }
 
 76.47059% {
-	clip: rect(0px, 450px, 0px, 0px);
+	clip: rect(0, 450px, 0, 0);
 }
 
 82.35294% {
-	clip: rect(0px, 450px, 0px, 0px);
+	clip: rect(0, 450px, 0, 0);
 }
 
 88.23529% {
-	clip: rect(0px, 450px, 0px, 0px);
+	clip: rect(0, 450px, 0, 0);
 }
 
 94.11765% {
-	clip: rect(0px, 450px, 0px, 0px);
+	clip: rect(0, 450px, 0, 0);
 }
 
 100% {
-	clip: rect(0px, 450px, 0px, 0px);
+	clip: rect(0, 450px, 0, 0);
 }
 
 }
@@ -19797,6 +19741,62 @@ to {
 
 100% {
 	transform: translate(1px, -2px) rotate(-1deg);
+}
+
+}
+
+@keyframes progressive-reveal {
+
+0% {
+	opacity: 0;
+}
+
+100% {
+	opacity: 1;
+}
+
+}
+
+@keyframes removed-item-animation-chat {
+
+from {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+to {
+	opacity: 0;
+	transform: translateX(3000px);
+}
+
+}
+
+@keyframes bounceInRight {
+
+from,60%,75%,90%,to {
+	animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+from {
+	opacity: 0;
+	transform: translate3d(3000px, 0, 0) scaleX(3);
+}
+
+60% {
+	opacity: 1;
+	transform: translate3d(-25px, 0, 0) scaleX(1);
+}
+
+75% {
+	transform: translate3d(10px, 0, 0) scaleX(0.98);
+}
+
+90% {
+	transform: translate3d(-5px, 0, 0) scaleX(0.995);
+}
+
+to {
+	transform: translate3d(0, 0, 0);
 }
 
 }

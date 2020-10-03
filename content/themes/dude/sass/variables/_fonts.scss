@@ -1,0 +1,31 @@
+// Fonts
+$font-base: 'Circular', 'Helvetica Neue', helvetica, sans-serif;
+$font-headings: 'Circular', 'Helvetica Neue', helvetica, sans-serif;
+$font-alt: 'TT Interphases', 'Helvetica Neue', helvetica, sans-serif;
+$font-monospace: 'Menlo', 'Courier', monospace;
+
+// Font settings
+$font-size-general-small: 17px;
+$font-size-general-large: 22px;
+$font-size-general-headings-mobile: 24px;
+$font-size-general-headings-medium-ctas: 40px;
+$font-size-general-headings-desktop: 64px;
+$font-min-size: 17px;
+$font-max-size: 18px;
+$font-base-line-height: 1.5;
+$font-headings-line-height: 1.23;
+$line-height-blog: 1.75;
+$headings-weight: 600;
+
+// CSS vars
+:root {
+  --font-size-general-small: #{$font-size-general-small};
+  --font-size-github: 16px;
+}
+
+// Exceptions in font sizes
+@media (min-width: 420px) and (max-width: 600px) {
+  :root {
+    --font-size-general-small: 18px;
+  }
+}
