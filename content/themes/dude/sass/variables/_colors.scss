@@ -11,7 +11,8 @@ $color-default-background: #f0f0f0;
 $color-white-two: #f8f8f8;
 $color-button-white-hover: #f2f2f2;
 
-// Default colors
+// Base colors
+$color-pitch-black: #000;
 $color-links: $color-midnight;
 $color-hover: $color-mint;
 $color-paragraphs: #545773;
@@ -21,3 +22,6 @@ $color-headings: $color-midnight-blue;
 $color-darkgrey: #4f5964;
 $color-placeholder: #ababab;
 $color-error: #903a37;
+$color-survey-start-button-background: #232527;
+$color-survey-start-button-text: #e3e4e6;
+$color-survey-header-text: rgba(#333, .8);

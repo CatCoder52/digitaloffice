@@ -175,6 +175,21 @@ body.template-surveys {
       user-select: none;
     }
 
+    // Radio buttons
+    input[type="radio"] + label {
+      @extend %h5;
+      line-height: 1 !important;
+      margin: 0 !important;
+      font-weight: 400 !important;
+      display: block;
+      position: relative;
+      padding-left: 35px;
+      margin-bottom: 20px;
+      color: $color-black;
+      cursor: pointer;
+      user-select: none;
+    }
+
     input[type="checkbox"] + label:last-child {
       margin-bottom: 0;
     }
@@ -185,6 +200,20 @@ body.template-surveys {
       width: 20px;
       height: 20px;
       border: 1px solid $color-black;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: .6;
+      transition: all .12s, border-color .08s;
+    }
+
+    input[type="radio"] + label::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      border: 1px solid $color-black;
+      border-radius: 50%;
       position: absolute;
       left: 0;
       top: 0;
@@ -203,41 +232,12 @@ body.template-surveys {
       transform: rotate(45deg);
     }
 
-    // Radio buttons
-    input[type="radio"] + label {
-      @extend %h5;
-      line-height: 1 !important;
-      margin: 0 !important;
-      font-weight: 400 !important;
-      display: block;
-      position: relative;
-      padding-left: 35px;
-      margin-bottom: 20px;
-      color: $color-black;
-      cursor: pointer;
-      user-select: none;
-    }
-
     input[type="radio"] {
       display: none !important;
     }
 
     input[type="radio"] + label:last-child {
       margin-bottom: 0;
-    }
-
-    input[type="radio"] + label::before {
-      content: '';
-      display: block;
-      width: 20px;
-      height: 20px;
-      border: 1px solid $color-black;
-      border-radius: 50%;
-      position: absolute;
-      left: 0;
-      top: 0;
-      opacity: .6;
-      transition: all .12s, border-color .08s;
     }
 
     input[type="radio"]:checked + label::before {
@@ -344,7 +344,7 @@ body.template-surveys {
     }
 
     p {
-      color: rgba(#333, .8);
+      color: $color-survey-header-text;
       opacity: .7;
       font-weight: $headings-weight;
     }
@@ -361,8 +361,10 @@ body.template-surveys {
     bottom: 0;
     z-index: 10;
     height: 70px;
-    background-color: rgba(#000, .05);
-    box-shadow: rgba(#000, .1) 0 -1px;
+    /* stylelint-disable */
+    background-color: rgba($color-pitch-black, .05);
+    box-shadow: rgba($color-pitch-black, .1) 0 -1px;
+    /* stylelint-enable */
 
     @media (max-width: $container-mobile) {
       background: #f2f2f2;
@@ -379,8 +381,8 @@ body.template-surveys {
       white-space: nowrap;
       box-shadow: rgba(0, 0, 0, .1) 0 3px 12px 0;
       min-height: 48px;
-      background-color: rgb(35, 37, 39);
-      color: rgb(227, 228, 230);
+      background-color: $color-survey-start-button-background;
+      color: $color-survey-start-button-text;
       transition: background-color .2s ease 0s, color .2s ease 0s, border-color .2s ease 0s, opacity .2s ease 0s;
       outline: none;
       border-width: 1px;
@@ -406,8 +408,8 @@ body.template-surveys {
     white-space: nowrap !important;
     box-shadow: rgba(0, 0, 0, .1) 0 3px 12px 0 !important;
     min-height: 48px !important;
-    background-color: rgb(35, 37, 39) !important;
-    color: rgb(227, 228, 230) !important;
+    background-color: $color-survey-start-button-background !important;
+    color: $color-survey-start-button-text !important;
     transition: background-color .2s ease 0s, color .2s ease 0s, border-color .2s ease 0s, opacity .2s ease 0s !important;
     outline: none !important;
     border-width: 1px !important;
