@@ -26,6 +26,14 @@ body.template-surveys-modern {
 
   .gform_wrapper table.gsurvey-likert {
     margin-bottom: 36px;
+    width: 100%;
+    table-layout: fixed;
+    border: 0;
+    border-collapse: collapse;
+    border-style: hidden;
+    box-shadow: none;
+    border-radius: 4px;
+    overflow: hidden;
   }
 
   .gform_wrapper table.gsurvey-likert,
@@ -57,7 +65,7 @@ body.template-surveys-modern {
     padding: 0 0 30px;
     text-align: center;
     max-width: 700px;
-    margin: 0 auto;
+    margin: 1rem auto 0;
   }
 
   form li.gfield .validation_message {
@@ -107,7 +115,11 @@ body.template-surveys-modern {
     list-style: none;
   }
 
-  * {
+  h1,
+  span,
+  p,
+  li,
+  input[type="text"] {
     font-family: $font-base;
     color: $color-white;
   }
@@ -117,7 +129,7 @@ body.template-surveys-modern {
     position: static;
   }
 
-  &:after,
+  &::after,
   .chat-greeting {
     display: none;
   }
@@ -143,7 +155,7 @@ body.template-surveys-modern {
     }
 
     p {
-      color: #fff !important;
+      color: $color-white !important;
       max-width: 500px;
       margin: 5rem auto;
       font-size: 17px;
@@ -174,21 +186,6 @@ body.template-surveys-modern {
       font-weight: 300 !important;
     }
 
-    .description_above .gfield_description {
-      margin-top: 1rem;
-    }
-
-    table.gsurvey-likert {
-      width: 100%;
-      table-layout: fixed;
-      border: 0;
-      border-collapse: collapse;
-      border-style: hidden;
-      box-shadow: none;
-      border-radius: 4px;
-      overflow: hidden;
-    }
-
     table.gsurvey-likert td.gsurvey-likert-choice {
       transition: all 1s;
     }
@@ -199,7 +196,7 @@ body.template-surveys-modern {
     }
 
     table.gsurvey-likert td.gsurvey-likert-choice.gsurvey-likert-selected {
-      background-color: #263d2e;
+      background-color: $color-survey-selected-choice;
       color: $color-checked;
       font-weight: 700;
     }
@@ -215,9 +212,25 @@ body.template-surveys-modern {
           margin-left: 1rem !important;
         }
 
-        &:after {
+        &::after {
           margin-left: 3rem !important;
         }
+      }
+    }
+
+    ul.gfield_checkbox > li {
+      min-width: 33.3% !important;
+      margin-right: 0 !important;
+      margin-bottom: -1px !important;
+      overflow: hidden !important;
+      flex: 1;
+
+      @media (max-width: 710px) {
+        width: 50% !important;
+      }
+
+      @media (max-width: 550px) {
+        width: 100% !important;
       }
     }
 
@@ -239,10 +252,6 @@ body.template-surveys-modern {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-      }
-
-      > #input_5_12 li {
-        min-width: 220px !important;
       }
 
       > ul li {
@@ -268,6 +277,10 @@ body.template-surveys-modern {
       > ul li:focus {
         background: #222;
         opacity: 1;
+      }
+
+      > #input_5_12 li {
+        min-width: 220px !important;
       }
     }
 
@@ -302,8 +315,8 @@ body.template-surveys-modern {
       font-weight: 700;
     }
 
-    input[type="checkbox"] + label:before,
-    input[type="radio"] + label:before {
+    input[type="checkbox"] + label::before,
+    input[type="radio"] + label::before {
       content: '';
       display: block;
       position: absolute;
@@ -321,8 +334,8 @@ body.template-surveys-modern {
       border: 0;
     }
 
-    input[type="checkbox"]:checked + label:before,
-    input[type="radio"]:checked + label:before {
+    input[type="checkbox"]:checked + label::before,
+    input[type="radio"]:checked + label::before {
       opacity: 1;
     }
 
@@ -416,6 +429,7 @@ body.template-surveys-modern {
 
     textarea {
       height: 240px;
+      color: $color-white;
     }
   }
 
@@ -444,7 +458,7 @@ body.template-surveys-modern {
       text-align: right;
     }
 
-    &:after {
+    &::after {
       content: '';
       display: block;
       height: 1px;
@@ -558,8 +572,8 @@ body.template-surveys-modern {
     width: 100%;
     z-index: 10;
     height: 70px;
-    background-color: rgba(#000, .05);
-    box-shadow: rgba(#000, .1) 0px -1px;
+    background-color: $color-survey-wrapper-background;
+    box-shadow: rgba($color-pitch-black, .1) 0 -1px;
 
     @media (max-width: $container-mobile) {
       background: #f2f2f2;
@@ -574,10 +588,10 @@ body.template-surveys-modern {
       font-weight: 700;
       cursor: pointer;
       white-space: nowrap;
-      box-shadow: rgba(0, 0, 0, .1) 0px 3px 12px 0px;
+      box-shadow: rgba(0, 0, 0, .1) 0 3px 12px 0;
       min-height: 48px;
-      background-color: rgb(35, 37, 39);
-      color: rgb(227, 228, 230);
+      background-color: $color-survey-start-button-background;
+      color: $color-survey-start-button-text;
       transition: background-color .2s ease 0s, color .2s ease 0s, border-color .2s ease 0s, opacity .2s ease 0s;
       outline: none;
       border-width: 1px;
@@ -614,7 +628,7 @@ body.template-surveys-modern {
     border-radius: 0 !important;
   }
 
-  input[type="hidden"]+br {
+  input[type="hidden"] + br {
     display: none !important;
   }
 
@@ -636,7 +650,6 @@ body.template-surveys-modern {
       }
     }
   }
-
 
   // Multiple answers
   .gform_wrapper .ginput_container.ginput_container_checkbox,
@@ -669,22 +682,6 @@ body.template-surveys-modern {
       @media (max-width: 550px) {
         width: calc(100% + 2px) !important;
         margin-left: -2px !important;
-      }
-
-      > li {
-        min-width: 33.3% !important;
-        margin-right: 0 !important;
-        margin-bottom: -1px !important;
-        overflow: hidden !important;
-        flex: 1;
-
-        @media (max-width: 710px) {
-          width: 50% !important;
-        }
-
-        @media (max-width: 550px) {
-          width: 100% !important;
-        }
       }
 
       li label {
