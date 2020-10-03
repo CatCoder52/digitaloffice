@@ -87,7 +87,7 @@ body.page-template-template-community-code .block.block-hero.block-hero-light {
         height: auto;
         min-height: 0;
 
-        &:after {
+        &::after {
           content: '';
           display: block;
           padding-bottom: 100%;
@@ -239,7 +239,7 @@ body.page-template-template-community-code .block.block-hero.block-hero-light {
     font-size: 17px;
     padding: 16px 0 16px 55px;
     position: relative;
-    color: #444;
+    color: $color-darkgrey;
 
     &::before {
       display: none;
@@ -271,7 +271,7 @@ body.page-template-template-community-code .block.block-hero.block-hero-light {
   }
 
   .github-link {
-    color: #0366d6;
+    color: $color-github-link;
 
     &:hover,
     &:focus {
@@ -368,16 +368,15 @@ body.page-template-template-community-code .block.block-hero.block-hero-light {
     }
 
     .css {
-      background-color: #563d7c;
+      background-color: $color-github-css;
     }
 
     .shell {
-      background-color: #89e051;
+      background-color: $color-github-shell;
     }
 
     .php {
-      background-color: #4f5d95;
+      background-color: $color-github-php;
     }
   }
 }
-

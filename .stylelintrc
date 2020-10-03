@@ -3,13 +3,15 @@
   "plugins": [
     "stylelint-value-no-unknown-custom-properties",
     "stylelint-declaration-use-variable",
-    "stylelint-scss"
+    "stylelint-scss",
+    "stylelint-no-unused-selectors"
   ],
   "extends": [
     "stylelint-config-standard",
     "stylelint-config-recommended-scss"
   ],
   "rules": {
+    "plugin/no-unused-selectors": true,
     "csstools/value-no-unknown-custom-properties": [true, {
       "importFrom": [
         "content/themes/dude/css/global.css"
@@ -48,9 +50,11 @@
     "rule-empty-line-before": null,
     "string-quotes": null,
     "at-rule-empty-line-before": null,
-    "function-url-quotes": "always",
+    "function-url-quotes": null,
+    "no-descending-specificity": null,
+    "length-zero-no-unit": null,
     "declaration-property-unit-allowed-list": [{
-      "font-size": ["rem", "em", "px"],
+      "font-size": ["rem", "em", "px", "%"],
       "/^animation/": ["ms", "s"],
       "line-height": ["px", "%", ""]
     }]

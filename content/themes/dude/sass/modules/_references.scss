@@ -93,7 +93,7 @@
       margin-bottom: 12rem;
     }
 
-    .block-title:before {
+    .block-title::before {
       background: $color-white;
     }
   }
@@ -154,7 +154,7 @@
         max-width: 384px;
       }
 
-      &:after {
+      &::after {
         height: auto;
         content: '';
         display: block;
@@ -176,7 +176,7 @@
     height: 536px;
     width: 100%;
 
-    &:after {
+    &::after {
       height: auto;
       content: '';
       display: block;
@@ -196,7 +196,7 @@
     overflow: hidden;
     height: 536px;
 
-    &:after {
+    &::after {
       height: auto;
       content: '';
       display: block;

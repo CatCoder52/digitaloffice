@@ -32,7 +32,7 @@
     .image {
       margin-bottom: 4rem;
 
-      &:after {
+      &::after {
         content: '';
         display: block;
         padding-bottom: 100%;

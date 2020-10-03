@@ -21,7 +21,6 @@ $nav-open-from-right: true;
 $nav-open-from-left: false;
 $nav-open-from-bottom: false;
 $nav-open-from-top: false;
-
 @import 'hamburgers/_sass/hamburgers/hamburgers';
 
 .show-on-mobile {
@@ -179,87 +178,6 @@ body:not(.js-nav-active) .nav-primary.is-animatable {
         border-bottom: 1px solid $color-mint;
       }
     }
-
-    .disabled {
-      color: #bbb;
-    }
-
-    .highlighted .sub-arrow:before {
-      display: block;
-      content: '-';
-    }
-
-    // Dropdown toggle
-    .dropdown-toggle {
-      position: absolute;
-      top: 0;
-      margin-top: 0;
-      left: auto;
-      right: 2rem;
-      width: 3.7rem;
-      height: 3.7rem;
-      overflow: hidden;
-      font: bold 18px/37px monospace;
-      text-align: center;
-      background: #202020;
-      color: $color-white;
-      padding: 0;
-      z-index: 9999;
-      border: 0;
-    }
-
-    .dropdown-toggle:focus {
-      z-index: 10000;
-    }
-
-    .dropdown-toggle:before {
-      content: '+';
-    }
-
-    .dropdown-toggle:hover {
-      background-color: #3e4853;
-      color: $color-white;
-    }
-
-    .dropdown-toggle.toggled-on:before {
-      display: block;
-      content: '-';
-    }
-
-    // Dropdowns
-    ul {
-      background: rgba(#666, .1);
-      margin-left: 0;
-      padding: 0;
-    }
-
-    ul a {
-      font-size: 1.4rem;
-    }
-
-    // Slight margins to improve readability of sub-navs
-    // Second level
-    ul > li {
-      padding-left: 1.5rem;
-    }
-
-    // Third level
-    ul > li ul {
-      margin-left: -1.5rem;
-    }
-
-    ul > li ul li {
-      padding-left: 3rem;
-    }
-
-    // Fourth level
-    ul > li ul li ul {
-      margin-left: -3rem;
-    }
-
-    ul > li ul li ul li {
-      padding-left: 4.5rem;
-    }
   }
 }
 
@@ -283,7 +201,6 @@ body:not(.js-nav-active) .nav-primary.is-animatable {
 .nav-toggle {
   list-style: none;
   z-index: 100000;
-  -webkit-tap-highlight-color: rgba(#000, 0);
   border: 0;
   overflow: visible;
   color: $nav-toggle-color;
@@ -323,7 +240,7 @@ body:not(.js-nav-active) .nav-primary.is-animatable {
   }
 
   &.is-active .hamburger-inner::after,
-  &:hover  .hamburger-inner::after {
+  &:hover .hamburger-inner::after {
     width: $hamburger-layer-width;
   }
 
@@ -342,8 +259,8 @@ body:not(.js-nav-active) .nav-primary.is-animatable {
       background-color: $nav-toggle-color;
     }
 
-    span span:before,
-    span span:after {
+    span span::before,
+    span span::after {
       background-color: $nav-toggle-color;
     }
   }
@@ -372,7 +289,7 @@ body:not(.js-nav-active) .nav-primary.is-animatable {
       background-color: $nav-toggle-active-color;
     }
 
-    .hamburger-box .hamburger-inner:after {
+    .hamburger-box .hamburger-inner::after {
       background-color: $nav-toggle-active-color;
     }
   }
@@ -382,7 +299,7 @@ body:not(.js-nav-active) .nav-primary.is-animatable {
       background-color: $nav-toggle-active-color;
     }
 
-    .hamburger-inner:after {
+    .hamburger-inner::after {
       background-color: $nav-toggle-active-color;
     }
   }

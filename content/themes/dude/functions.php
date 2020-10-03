@@ -12,8 +12,6 @@ define( 'AIR_LIGHT_VERSION', '4.6.5' );
  */
 require get_theme_file_path( '/inc/hooks.php' );
 require get_theme_file_path( '/inc/functions.php' );
-require get_theme_file_path( '/inc/menus.php' );
-require get_theme_file_path( '/inc/nav-walker.php' );
 
 /**
  *  Content.

@@ -10,6 +10,7 @@ $focus-outline-color: #4d4aff;
 $focus-text-color: #000;
 $focus-outline-style: 2px solid;
 $focus-outline-style-large-elements: 4px solid;
+$color-focus-skip-link: #21759b;
 
 // Text meant only for screen readers.
 .screen-reader-text {
@@ -35,12 +36,12 @@ $focus-outline-style-large-elements: 4px solid;
   }
 
   &:focus {
-    background-color: #f1f1f1;
+    background-color: $color-white-two;
     border-radius: 0;
     box-shadow: 0 0 2px 2px rgba(#000, .6);
     clip: auto !important;
     clip-path: none;
-    color: #21759b;
+    color: $color-focus-skip-link;
     display: block;
     font-size: 1.7rem;
     font-weight: 700;
@@ -71,7 +72,6 @@ $focus-outline-style-large-elements: 4px solid;
   input:focus,
   button:focus,
   select:focus,
-  div[tabindex]:focus,
   nav ul li a:focus,
   div[tabindex]:focus,
   a:focus {
@@ -225,7 +225,7 @@ a[href^="mailto"]::after {
 }
 
 // Disable animations if disabled from OS or browser
-@media (print), (prefers-reduced-motion: reduce) {
+@media screen and (prefers-reduced-motion: reduce), (update: slow) {
   .glitch,
   .background-image,
   .background-image.reveal,

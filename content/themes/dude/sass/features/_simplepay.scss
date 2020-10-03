@@ -89,7 +89,7 @@ $line-height: 1.5;
   }
 
   .simpay-currency-symbol {
-    background-color: #f2f2f2;
+    background-color: $color-button-white-hover;
     line-height: 34px;
   }
 
@@ -135,13 +135,14 @@ input[type="checkbox"].simpay-modal-control {
     margin: 0;
   }
 
-  * {    pointer-events: none;
+  * {
+    pointer-events: none;
   }
 }
 
 .simpay-modal-control-close {
   @include font-system();
-  color: #a6a6a6;
+  color: $color-simplepay-modal-text;
   position: absolute;
   top: 2px;
   right: 2px;
@@ -149,7 +150,7 @@ input[type="checkbox"].simpay-modal-control {
   cursor: pointer;
 
   &:hover {
-    color: #8d8d8d;
+    color: $color-simplepay-modal-text-hover;
   }
 }
 
@@ -228,7 +229,7 @@ input[type="checkbox"].simpay-modal-control {
 
 .simpay-form-description {
   font-size: var(--font-size-general-small);
-  color: #666;
+  color: $color-simplepay-form-description;
   margin-bottom: 20px;
 }
 
@@ -282,7 +283,7 @@ input[type="checkbox"].simpay-modal-control {
       }
 
       &:focus {
-        background-color: #fff;
+        background-color: $color-white;
         border-color: $input-focus-border-color;
         color: $input-text-color;
         outline: 0;
@@ -324,7 +325,7 @@ input[type="checkbox"].simpay-modal-control {
     // Repeating focus styles for Card element.
     // Not sure how else to do this as it uses --focus instead of :focus.
     .simpay-card-wrap.StripeElement--focus {
-      background-color: #fff;
+      background-color: $color-white;
       border-color: $input-focus-border-color;
       color: $input-text-color;
       outline: 0;
@@ -388,8 +389,8 @@ input[type="checkbox"].simpay-modal-control {
       @include font-checkout();
       font-size: 15px;
       font-weight: 600;
-      color: #fff;
-      background-color: #24b47e;
+      color: $color-white;
+      background-color: $color-stripe-pay-button-background;
       background-image: none;
       display: block;
       height: $input-height;
@@ -404,7 +405,7 @@ input[type="checkbox"].simpay-modal-control {
       cursor: pointer;
 
       &:hover {
-        background-color: #249a65;
+        background-color: $color-stripe-pay-button-background-hover;
         background-image: none;
       }
 
@@ -413,7 +414,7 @@ input[type="checkbox"].simpay-modal-control {
       }
 
       &.simpay-disabled {
-        background-color: #aab7c4;
+        background-color: $input-placeholder-color;
       }
     }
 
@@ -426,11 +427,11 @@ input[type="checkbox"].simpay-modal-control {
     // Gray coupon apply button
     .simpay-apply-coupon:not(.stripe-button-el) {
       width: 110px;
-      background-color: #aab7c4;
+      background-color: $input-placeholder-color;
       background-image: none;
 
       &:hover {
-        background-color: #888;
+        background-color: $gray-coupon-apply-button-hover;
         background-image: none;
       }
     }
@@ -482,9 +483,9 @@ input[type="checkbox"].simpay-modal-control {
     text-align: center;
     overflow: hidden;
 
-    &:before,
-    &:after {
-      background-color: #d1d1d1;
+    &::before,
+    &::after {
+      background-color: $input-border-color;
       content: '';
       display: inline-block;
       height: 1px;
@@ -493,12 +494,12 @@ input[type="checkbox"].simpay-modal-control {
       width: 50%;
     }
 
-    &:before {
+    &::before {
       right: .5em;
       margin-left: -50%;
     }
 
-    &:after {
+    &::after {
       left: .5em;
       margin-right: -50%;
     }
@@ -573,13 +574,13 @@ input[type="checkbox"].simpay-modal-control {
 }
 
 .simpay-errors {
-  color: #eb1c26;
+  color: $error-text-color;
   margin-bottom: 15px;
 }
 
 .simpay-test-mode-badge-container .simpay-test-mode-badge {
-  background-color: #f7e633;
-  color: #333;
+  background-color: $color-simplepay-test-mode;
+  color: $base-text-color;
   border-radius: 5px;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;

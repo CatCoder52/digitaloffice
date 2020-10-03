@@ -1,4 +1,4 @@
-.single:after {
+.single::after {
   display: none;
 }
 
@@ -58,7 +58,7 @@ body.single .block.block-single:not(.block-single-reference) {
       height: 74px;
       border-radius: 50%;
       box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, .07);
-      background-color: #d8d8d8;
+      background-color: $color-img-background;
 
       @media (max-width: $container-mobile) {
         width: 64px;
@@ -221,7 +221,7 @@ body.single .block.block-single:not(.block-single-reference) {
         font-size: 13px;
         display: inline-block;
         border: solid rgba(6, 22, 41, .2);
-        color: rgba($color-midnight-blue, .6);
+        color: $color-tags-text;
         border-width: 1px;
         border-radius: 2px;
         padding: .2em .6em !important;
@@ -245,7 +245,7 @@ body.single .block.block-single:not(.block-single-reference) {
         }
       }
 
-      a:after {
+      a::after {
         display: none;
       }
 

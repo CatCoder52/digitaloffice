@@ -51,7 +51,7 @@
     left: -20rem;
     padding-right: 14rem;
     font-size: 31px;
-    color: #fff;
+    color: $color-white;
     font-weight: 700;
     text-align: center;
     padding-top: .5rem;
@@ -397,7 +397,7 @@ label[for="simpay-4535-text-8"],
     &:hover {
       background: $color-mint;
       color: $color-midnight;
-      border-color: 1px solid $color-mint;
+      border-color: $color-mint;
       cursor: pointer;
     }
   }

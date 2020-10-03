@@ -82,17 +82,17 @@ nav ul li button {
   }
 
   a {
-    color: #4cd9b8;
+    color: $color-mint-alternative;
     display: flex;
     align-items: center;
   }
 
   a:hover,
   a:focus {
-    color: darken(#4cd9b8, 15%);
+    color: $color-mint-alternative-hover;
 
     svg {
-      stroke: darken(#4cd9b8, 15%);
+      stroke: $color-mint-alternative-hover;
     }
   }
 }
@@ -128,7 +128,7 @@ body.page-id-5975 {
     }
   }
 
-  .nav-primary-desktop .menu-items .menu-item a:after {
+  .nav-primary-desktop .menu-items .menu-item a::after {
     background-color: $color-white;
   }
 

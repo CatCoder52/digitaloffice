@@ -86,7 +86,7 @@
       margin-bottom: 12rem;
     }
 
-    .block-title:before {
+    .block-title::before {
       background: $color-white;
     }
   }
@@ -139,9 +139,9 @@
     overflow: hidden;
 
     @media (max-width: $container-ipad) {
-      width: calc(170px/2);
-      height: calc(170px/2);
-      min-width: calc(170px/2);
+      width: calc(170px / 2);
+      height: calc(170px / 2);
+      min-width: calc(170px / 2);
       margin: 0 auto 4rem;
     }
   }

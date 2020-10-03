@@ -35,7 +35,7 @@ body.page-id-6357 .block.block-wide-text {
 
   // Gravity forms
   .gform_wrapper .gfield_required {
-    color: darken($color-mint, 35%);
+    color: $color-required-form-input;
   }
 
   .gform_wrapper ul.gform_fields li.gfield {
@@ -225,8 +225,8 @@ body.page-id-6357 .block.block-wide-text {
   }
 
   .checkbox + label,
-  .gform_wrapper ul.gfield_checkbox li input[type=checkbox]+br+label,
-  .gform_wrapper ul.gfield_radio li input[type=radio]+br+label,
+  .gform_wrapper ul.gfield_checkbox li input[type=checkbox] + br + label,
+  .gform_wrapper ul.gfield_radio li input[type=radio] + br + label,
   .radio + label {
     align-items: center;
   }
@@ -270,10 +270,10 @@ body.page-id-6357 .block.block-wide-text {
     overflow: visible;
 
     .checkbox + label::before,
-    .gform_wrapper ul.gfield_checkbox li input[type=checkbox]+br+label::before,
-    .gform_wrapper ul.gfield_radio li input[type=radio]+br+label::before,
+    .gform_wrapper ul.gfield_checkbox li input[type=checkbox] + br + label::before,
+    .gform_wrapper ul.gfield_radio li input[type=radio] + br + label::before,
     .radio + label::before,
-    input[type=radio]+label::before {
+    input[type=radio] + label::before {
       background: $color-white;
       display: block;
       margin: 0 auto 3rem;
@@ -286,9 +286,9 @@ body.page-id-6357 .block.block-wide-text {
     }
 
     // Let's not effect the radio buttons
-    .gform_wrapper ul.gfield_radio li input[type=radio]+br+label::before,
+    .gform_wrapper ul.gfield_radio li input[type=radio] + br + label::before,
     .radio + label::before,
-    input[type=radio]+label::before {
+    input[type=radio] + label::before {
       transition: none;
     }
 

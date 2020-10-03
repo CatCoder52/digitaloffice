@@ -15,7 +15,7 @@
 // Default structural element
 .block {
   @include background-cover();
-  background-color: #fff;
+  background-color: $color-white;
   position: relative;
   min-height: 100px;
   max-width: $layout-max-width;
@@ -317,17 +317,17 @@ a.global-link {
     transition: all .22s;
     display: block;
     padding: 2rem;
-    background: #fafafa;
-    color: #999;
-    border: 2px dashed #999;
+    background: $color-edit-link-background;
+    color: $color-edit-link;
+    border: 2px dashed $color-edit-link;
     margin: 0;
     text-decoration: none;
     max-width: 100%;
   }
 
   a:hover {
-    color: #999;
-    background: #efefef;
+    color: $color-edit-link;
+    background: $color-edit-link-background-hover;
   }
 }
 

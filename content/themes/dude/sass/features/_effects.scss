@@ -502,7 +502,7 @@ $glitch-blue: #3ffeff;
     -webkit-clip: rect(0, 0, 0, 0);
     clip: rect(0, 0, 0, 0);
     background: #fff;
-    color: #000;
+    color: $color-pitch-black;
   }
 
   &::before {

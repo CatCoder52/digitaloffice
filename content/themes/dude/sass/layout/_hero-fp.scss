@@ -27,35 +27,6 @@
       transform: translateY(calc(#{$nav-height} / 2));
     }
 
-    .content-non-statement {
-      margin-top: 0;
-      margin-bottom: 42px;
-      color: $color-white;
-      font-weight: 400;
-      font-style: normal;
-
-      .strike {
-        font-style: normal;
-        text-decoration: none;
-        position: relative;
-        display: inline-flex;
-        align-items: center;
-        margin: 0 auto;
-      }
-
-      .strike:after {
-        position: absolute;
-        display: inline-flex;
-        left: 0;
-        margin-top: 8px;
-        z-index: 2;
-        content: ' ';
-        background: $color-white;
-        height: 4px;
-        width: 100%;
-      }
-    }
-
     p,
     h1 {
       .capital-p-dangit {

@@ -4,13 +4,7 @@
 // The main layout for the website navigation, for a desktop
 // devices only.
 // -----------------------------------------------------------
-$color-nav-dropdown-links: $color-midnight-blue;
 $color-nav-links: $color-midnight-blue;
-$dropdown-width: 19rem;
-$icon-arrow-right: '../svg/chevron-right-dark.svg';
-$icon-arrow-down: '../svg/chevron-down.svg';
-$icon-arrow-left: '../svg/chevron-left-dark.svg';
-$hover-intent: .3s;
 
 // Let's make sure default navigation is not visible on mobile on first paint
 .nav-primary-desktop {
@@ -124,8 +118,6 @@ body {
 
     li a {
       font-size: 32px;
-
-
 
       // Regular phones
       @media (max-width: 500px) {
@@ -356,19 +348,19 @@ body {
 
 // When desktop nav open, hide links excepts More-link
 .js-nav-active .nav-primary-desktop .menu-items a,
-.js-nav-active .nav-primary-desktop .menu-items a:after,
+.js-nav-active .nav-primary-desktop .menu-items a::after,
 .js-nav-active .nav-primary-desktop .menu-items a:hover,
-.js-nav-active .nav-primary-desktop .menu-items a:hover:after,
+.js-nav-active .nav-primary-desktop .menu-items a:hover::after,
 .js-nav-active .nav-primary-desktop .menu-items button,
-.js-nav-active .nav-primary-desktop .menu-items button:after,
+.js-nav-active .nav-primary-desktop .menu-items button::after,
 .js-nav-active .nav-primary-desktop .menu-items button:hover,
-.js-nav-active .nav-primary-desktop .menu-items button:hover:after {
+.js-nav-active .nav-primary-desktop .menu-items button:hover::after {
   opacity: 0;
   visibility: hidden;
 }
 
 .js-nav-active .nav-primary-desktop .menu-items .menu-item.dude-nav-more button,
-.js-nav-active .nav-primary-desktop .menu-items .menu-item.dude-nav-more button:after {
+.js-nav-active .nav-primary-desktop .menu-items .menu-item.dude-nav-more button::after {
   opacity: 1;
   visibility: visible;
 }
@@ -427,19 +419,6 @@ body {
 
         &:hover {
           border-bottom: 1px solid $color-mint;
-        }
-
-        &.disabled {
-          color: #bbb;
-        }
-
-        // Actions in menu items
-        &:hover,
-        &:focus,
-        &:active,
-        &.highlighted,
-        &.current {
-          color: $color-nav-links;
         }
       }
     }

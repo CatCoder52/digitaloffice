@@ -4,6 +4,7 @@
 // Mixins and other essentials for global theme development.
 // ---------------------------------------------------------
 
+/* stylelint-disable declaration-property-unit-allowed-list */
 // CSS Grid mixin with flexbox fallback for IE and Edge
 @mixin grid($columns, $fr: 1, $min_height: 0, $max_height: auto, $gutter_x: 16px, $gutter_y: 16px) {
   display: grid;
@@ -97,6 +98,7 @@
 
 // Viewport sized typography with minimum and maximum values
 // Based on an example here: https://css-tricks.com/snippets/css/fluid-typography/
+
 @function strip-unit($value) {
   @return $value / ($value * 0 + 1);
 }
@@ -124,8 +126,8 @@
 // Update: http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
 html,
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   /* autoprefixer: ignore next */
   box-sizing: border-box;
 }
@@ -138,7 +140,7 @@ img {
 @mixin aspect-ratio($width, $height) {
   position: relative;
 
-  &:before {
+  &::before {
     display: block;
     content: '';
     width: 100%;
@@ -153,3 +155,4 @@ img {
     bottom: 0;
   }
 }
+/* stylelint-enable declaration-property-unit-allowed-list */

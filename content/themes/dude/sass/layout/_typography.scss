@@ -6,6 +6,7 @@
 // based responsive mixin can be found in _helpers.scss
 // -----------------------------------------------------------
 
+/* stylelint-disable declaration-property-unit-allowed-list */
 // Set up self-hosted fonts here
 @include fontFace('Circular', '../fonts/circular-400', 400);
 @include fontFace('Circular', '../fonts/circular-400-italic', 400, italic);
@@ -49,7 +50,7 @@
   font-weight: 600;
   padding-bottom: 1rem;
 
-  &:after {
+  &::after {
     width: 100%;
     height: 2px;
     background: $color-midnight-blue;
@@ -64,15 +65,15 @@
     color: $color-midnight-blue;
   }
 
-  &:hover:after {
+  &:hover::after {
     width: 50%;
     background: $color-midnight-blue;
   }
 }
 
-.cta-link-wrapper .cta-link:after,
-.link-wrapper .cta-link:after,
-.cta-link:after {
+.cta-link-wrapper .cta-link::after,
+.link-wrapper .cta-link::after,
+.cta-link::after {
   width: 100%;
   height: 2px;
   background: $color-midnight-blue;
@@ -83,16 +84,16 @@
   transition: all $transition-duration;
 }
 
-.cta-link-wrapper .cta-link:hover:after,
-.link-wrapper .cta-link:hover:after,
-.cta-link:hover:after {
+.cta-link-wrapper .cta-link:hover::after,
+.link-wrapper .cta-link:hover::after,
+.cta-link:hover::after {
   width: 50%;
 }
 
 .cta-link.cta-link-white {
   color: $color-white;
 
-  &:after {
+  &::after {
     background: $color-white;
   }
 }
@@ -370,22 +371,6 @@ samp {
   font-family: $font-monospace;
 }
 
-// Code block.
-code {
-  color: #c7254e;
-  background-color: #f9f2f4;
-  font-family: $font-monospace;
-  line-height: 1;
-  padding: .375rem .5rem;
-  border-radius: .3rem;
-  font-size: inherit; // normalize.css sets this as 1em by default
-
-  pre & {
-    display: inline-block;
-    padding: 1.15rem 1rem .85rem;
-  }
-}
-
 // Preformatted text.
 pre {
   border-radius: .3rem;
@@ -395,3 +380,4 @@ pre {
   word-wrap: break-word;
   margin-bottom: 2rem;
 }
+/* stylelint-enable declaration-property-unit-allowed-list */

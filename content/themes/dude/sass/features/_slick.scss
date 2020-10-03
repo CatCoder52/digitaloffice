@@ -18,11 +18,6 @@
     outline: none;
   }
 
-  .slick-loading & {
-    // If you want to use a loading animation, enable it here:
-    // background: #fff slick-image-url('../images/loading.gif') center center no-repeat;
-  }
-
   &.dragging {
     cursor: hand;
   }
@@ -41,13 +36,13 @@
   zoom: 1;
   z-index: 9999;
 
-  &:before,
-  &:after {
+  &::before,
+  &::after {
     content: '';
     display: table;
   }
 
-  &:after {
+  &::after {
     clear: both;
   }
 
@@ -139,8 +134,8 @@
       background: transparent;
     }
 
-    button:hover:before,
-    button:focus[type="button"]:before {
+    button:hover::before,
+    button:focus[type="button"]::before {
       opacity: 1;
     }
   }

@@ -39,7 +39,7 @@ body.error404,
 
 .block-hero.block-hero-404 {
   .dudefi {
-    background-color: #f1f1f1;
+    background-color: $color-white-two;
     color: $color-cobalt-blue;
     padding: 0 2rem;
     display: inline-block;
@@ -62,7 +62,7 @@ body.error404,
   h1,
   p {
     font-family: 'Perfect DOS', 'Circular', 'Courier', sans-serif;
-    color: #f1f1f1;
+    color: $color-white-two;
   }
 
   h1 {
