@@ -25,7 +25,9 @@
     position: relative;
 
     @media (min-width: 600px) {
+      /* stylelint-disable */
       @include grid(2, $gutter_x: 7rem, $gutter_y: 0rem);
+      /* stylelint-enable */
     }
   }
 
