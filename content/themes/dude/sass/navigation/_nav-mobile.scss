@@ -24,10 +24,10 @@ $nav-open-from-top: false;
 @import 'hamburgers/_sass/hamburgers/hamburgers';
 
 .show-on-mobile {
-  display: none;
+  display: none !important;
 
   @media (max-width: 760px) {
-    display: block;
+    display: block !important;
   }
 }
 
