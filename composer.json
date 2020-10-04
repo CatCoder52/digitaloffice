@@ -4,8 +4,7 @@
   "license": "MIT",
   "description": "A modern WordPress stack",
   "homepage": "https://github.com/digitoimistodude/dudestack",
-  "authors": [
-    {
+  "authors": [{
       "name": "Roni Laukkarinen",
       "email": "roni@dude.fi",
       "homepage": "https://github.com/ronilaukkarinen"
@@ -43,8 +42,7 @@
       "Roots\\Bedrock\\Installer::addSalts"
     ]
   },
-  "repositories": [
-    {
+  "repositories": [{
       "type": "composer",
       "url": "https://wpackagist.org",
       "minimum-stability": "dev"
@@ -123,7 +121,8 @@
     "humanmade/page-for-post-type": "dev-master",
     "wpackagist-plugin/simple-page-ordering": "*",
     "wpackagist-plugin/gf-form-multicolumn": "*",
-    "wpackagist-plugin/duplicate-post": "*"
+    "wpackagist-plugin/duplicate-post": "*",
+    "wpackagist-plugin/remove-css-link-ids": "*"
   },
   "require-dev": {
     "rarst/wps": "*",

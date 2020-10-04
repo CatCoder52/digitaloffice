@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:49:22
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-10-04 01:40:51
+ * @Last Modified time: 2020-10-04 17:13:28
  *
  * @package dude
  */
@@ -21,6 +21,7 @@ if ( empty( $image_big ) ) {
 
 <section class="block has-dark-bg block-images has-style-<?php echo $style; ?>" aria-hidden="true">
   <div class="container">
+  <h2 class="screen-reader-text">Kuvia toimistolta</h2>
     <?php if ( ! empty( $image_big ) ) : ?>
       <div class="image image-big">
         <?php image_lazyload_div( $image_big['id'] ); ?>
