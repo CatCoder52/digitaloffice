@@ -24,7 +24,7 @@
   @include grid(4, $gutter_x: $margin-between-grid-columns, $gutter_y: $margin-between-grid-columns);
 
   @media (max-width: 900px) {
-    @include grid(2, $gutter_x: 4remrem, $gutter_y: 6rem);
+    @include grid(2, $gutter_x: 4rem, $gutter_y: 6rem);
   }
 
   @media (max-width: $container-mobile) {
