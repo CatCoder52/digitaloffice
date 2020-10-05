@@ -1103,6 +1103,7 @@ $variable-columns: true !default;
     }
 
     p,
+    button.action,
     button.action:focus {
       @extend %default;
       cursor: pointer;
