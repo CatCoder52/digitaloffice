@@ -6,6 +6,7 @@
 $max-width: 100rem;
 $color-checked: $color-mint;
 $color-borders: #898888;
+$color-error-surveys: lighten($color-error, 10%);
 
 body.template-surveys-modern {
   // background-image: url('../images/survey-bg.jpg');
@@ -15,6 +16,19 @@ body.template-surveys-modern {
   background-color: $color-midnight;
   background-attachment: fixed;
   color: $color-white;
+
+  .gform_wrapper div.validation_error {
+    background: $color-error-surveys;
+    color: $color-white;
+  }
+
+  .gform_wrapper ol.validation_list li,
+  .gform_wrapper ol.validation_list li a,
+  .gform_wrapper .gfield_error .gfield_label,
+  form li.gfield.gfield_error,
+  form li.gfield.gfield_error * {
+    color: $color-error-surveys;
+  }
 
   // Better survey checkboxes
   table.gsurvey-likert td.gsurvey-likert-choice {
