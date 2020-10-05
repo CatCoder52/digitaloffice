@@ -16,6 +16,27 @@ body.template-surveys-modern {
   background-attachment: fixed;
   color: $color-white;
 
+  // Better survey checkboxes
+  table.gsurvey-likert td.gsurvey-likert-choice {
+    background-image: url('../svg/gravityformssurvey-not-active.svg');
+    background-size: 20px 20px;
+    overflow: visible;
+
+    &.gsurvey-likert-selected {
+      background-image: url('../svg/gravityformssurvey-active.svg');
+      background-size: 24px 24px;
+      overflow: visible;
+
+      @media (max-width: $container-mobile) {
+        background-size: 20px 20px;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
   .gsurvey-likert * {
     border-radius: 0 !important;
   }
@@ -187,7 +208,7 @@ body.template-surveys-modern {
     }
 
     table.gsurvey-likert td.gsurvey-likert-choice {
-      transition: all 1s;
+      transition: all .22s;
     }
 
     table.gsurvey-likert td.gsurvey-likert-choice:not(.gsurvey-likert-selected):hover,
@@ -196,7 +217,7 @@ body.template-surveys-modern {
     }
 
     table.gsurvey-likert td.gsurvey-likert-choice.gsurvey-likert-selected {
-      background-color: $color-survey-selected-choice;
+      background-color: transparent;
       color: $color-checked;
       font-weight: 700;
     }
