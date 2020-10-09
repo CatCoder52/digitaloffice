@@ -8,4 +8,10 @@
     "editor.formatOnSave": false
   },
   "git.ignoreLimitWarning": true,
+  "sync-rsync.sites": [
+    {
+      "localPath": "/Users/rolle/Projects/dude/content/themes/dude/",
+      "remotePath": "rolle@185.87.110.7:/var/www/dude.fi/public_html/content/themes/dude/"
+    },
+  ]
 }
