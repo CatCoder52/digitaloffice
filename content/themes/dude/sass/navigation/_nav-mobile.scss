@@ -67,10 +67,6 @@ $nav-open-from-top: false;
 
 // Opening animations
 .js.js-nav-active {
-  .site-title svg {
-    transform: translateX(-6px);
-  }
-
   .nav-primary {
     transform: translateX(0);
   }

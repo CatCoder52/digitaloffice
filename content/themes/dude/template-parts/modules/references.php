@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:50:23
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-10-12 20:49:15
+ * @Last Modified time: 2020-10-12 21:22:29
  *
  * @package dude
  */
@@ -74,7 +74,7 @@ if ( ! $references ) {
 
           <div class="reference-image">
             <div class="image" aria-hidden="true">
-              <div aria-hidden="true" data-defer="<?php echo esc_url( wp_get_attachment_image_url( $reference['image_id'], 'large' ) ); ?>" class="background-image"></div>
+              <?php image_lazyload_div( $feat_image ); ?>
             </div>
 
             <div class="reference-content">

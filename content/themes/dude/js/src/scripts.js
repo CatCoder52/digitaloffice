@@ -53,13 +53,6 @@ const swup = new Swup({
 // Swup starts
 swup.on("contentReplaced", function () {
 
-  // Poor man's defer
-  var imgDefer = document.querySelectorAll('div[data-defer]');
-  var style = "background-image: url({url})";
-  for (var i = 0; i < imgDefer.length; i++) {
-    imgDefer[i].setAttribute('style', style.replace("{url}", imgDefer[i].getAttribute('data-defer')));
-  }
-
     // Accessibility: Ensure back to top is right color on right background
     var stickyOffset = jQuery(".back-to-top").offset();
     var $contentDivs = jQuery(".block");
@@ -1228,15 +1221,6 @@ window.CRISP_READY_TRIGGER = function () {
 
 // Vanilla document ready
 document.addEventListener('DOMContentLoaded', function () {
-  // Poor man's defer
-  function initdefer() {
-    var imgDefer = document.querySelectorAll('div[data-defer]');
-    var style = "background-image: url({url})";
-    for (var i = 0; i < imgDefer.length; i++) {
-      imgDefer[i].setAttribute('style', style.replace("{url}", imgDefer[i].getAttribute('data-defer')));
-    }
-  }
-  window.onload = initdefer;
 
   // MoveTo triggers
   const easeFunctions = {
