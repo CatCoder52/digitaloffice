@@ -102,7 +102,7 @@ function dude_add_image_sizes() {
 }
 
 /**
- * Remove specific style sheets from certain templates.
+ * Edit delivery of specific style sheets from certain templates.
  */
 function dude_remove_styles() {
   if ( is_page_template( 'template-surveys-modern.php' ) ) {
@@ -110,5 +110,9 @@ function dude_remove_styles() {
     wp_enqueue_style( 'surveystyles', get_theme_file_uri( 'css/surveys.min.css' ), array(), filemtime( get_theme_file_path( 'css/surveys.min.css' ) ) );
   }
 
+  if ( get_post_type() === 'merch' ) {
+    wp_dequeue_style( 'styles' );
+    wp_enqueue_style( 'surveystyles', get_theme_file_uri( 'css/store.min.css' ), array(), filemtime( get_theme_file_path( 'css/store.min.css' ) ) );
+  }
 }
 add_action( 'wp_print_styles', 'dude_remove_styles', 99 );

@@ -5,5 +5,6 @@ exports.scsslint = require('./gulp/tasks/scsslint.js').scsslint;
 exports.styles = require('./gulp/tasks/styles.js').styles;
 exports.gutenbergstyles = require('./gulp/tasks/styles.js').gutenbergstyles;
 exports.surveystyles = require('./gulp/tasks/styles.js').surveystyles;
+exports.storestyles = require('./gulp/tasks/styles.js').storestyles;
 exports.watch = require('./gulp/tasks/watch.js').watch;
 exports.default = require('./gulp/tasks/watch.js').watch;

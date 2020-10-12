@@ -1,10 +1,87 @@
 @charset 'utf-8';
 
-// Store
-@import 'normalize'; // 0.65 kB
+// Reset & grid
+@import 'normalize'; // 0.041 kB
+
+// Variables
 @import '../variables/breakpoints';
 @import '../variables/colors';
 @import '../variables/fonts';
 @import '../variables/spacings';
-@import '../features/simplepay'; // 219.115 kB
-@import '../views/merch'; // 570.869 kB
+
+// Global features
+@import '../features/top'; // 1.403 kB
+@import '../features/effects'; // 8.974 kB
+@import '../features/swup'; // 9.46 kB
+@import '../features/slick'; // 12.097 kB
+@import '../features/custom-pagination'; // 12.636 kB
+
+// Helpers
+@import 'helpers'; // 12.691 kB
+@import 'accessibility'; // 23.989 kB
+
+// Structure
+@import '../layout/general'; // 28.785 kB
+@import '../layout/typography'; // 36.009 kB
+@import '../layout/site-header'; // 58.939 kB
+@import '../layout/site-footer'; // 64.054 kB
+@import '../layout/forms'; // 81.037 kB
+@import '../layout/hero'; // 85.093 kB
+@import '../layout/hero-fp'; // 86.688 kB
+@import '../layout/hero-service'; // 88.16 kB
+@import '../layout/hero-reference'; // 88.948 kB
+@import '../layout/hero-company'; // 89.82 kB
+@import '../layout/hero-person'; // 93.671 kB
+@import '../layout/hero-jobs'; // 93.825 kB
+@import '../layout/hero-single'; // 96.412 kB
+@import '../layout/hero-contact-thanks'; // 97.83 kB
+@import '../layout/lazyload'; // 98.631 kB
+@import '../layout/gutenberg'; // 99.144 kB
+@import '../layout/chat'; // 102.088 kB
+@import '../layout/vimeo'; // 103.495 kB
+
+// Modules
+@import '../modules/our-services'; // 108.312 kB
+@import '../modules/references'; // 117.787 kB
+@import '../modules/latest-selected-mustread'; // 122.611 kB
+@import '../modules/process'; // 123.789 kB
+@import '../modules/values'; // 125.847 kB
+@import '../modules/timeline'; // 153.094 kB
+@import '../modules/dudes'; // 155.564 kB
+@import '../modules/cta-text'; // 156.13 kB
+@import '../modules/wide-text'; // 159.12 kB
+@import '../modules/open-position'; // 159.984 kB
+@import '../modules/testimonials'; // 163.683 kB
+@import '../modules/images'; // 166.196 kB
+@import '../modules/title-left-text-right'; // 167.619 kB
+@import '../modules/references-one'; // 169.021 kB
+@import '../modules/cta-with-phone-input'; // 176.828 kB <--
+@import '../modules/logos'; // 181.664 kB
+@import '../modules/two-images'; // 183.535 kB
+@import '../modules/image-in-container-image-full-width'; // 184.067 kB
+@import '../modules/cta-with-image'; // 186.667 kB
+@import '../modules/mission-vision'; // 188.575 kB
+@import '../modules/jobs'; // 190.13 kB
+
+// Navigation
+@import '../navigation/nav-core'; // 191.225 kB
+@import '../navigation/nav-desktop'; // 200.762 kB
+@import '../navigation/nav-mobile'; // 227.161 kB
+
+// Views
+@import '../views/single'; // 281.104 kB <--
+@import '../views/single-reference'; // 306.493 kB <--
+@import '../views/community-code'; // 316.708 kB
+@import '../views/template-company'; // 316.784 kB
+@import '../views/template-basic'; // 317.112 kB
+@import '../views/template-faq'; // 318.987 kB
+@import '../views/contact'; // 320.245 kB
+@import '../views/start-project'; // 363.933 kB <--
+@import '../views/blog-archive'; // 365.83 kB
+@import '../views/blog'; // 367.131 kB
+@import '../views/404'; // 420.031 kB
+@import '../views/merch';
+
+// Gutenberg
+@import '../gutenberg/gutenberg-content'; // 578.231 kB <--
+@import '../gutenberg/general'; // 581.478 kB
