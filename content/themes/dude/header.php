@@ -171,7 +171,7 @@ if ( $show_chat_greeting ) {
           <span id="nav-toggle-label" class="screen-reader-text toggle-text"><?php esc_attr_e( 'Avaa valikko', 'dude' ); ?></span>
         </button>
 
-        <nav id="nav" class="nav-primary" aria-expanded="false" aria-label="Mobiilivalikko" tabindex="-1">
+        <nav id="nav" class="nav-primary" aria-expanded="false" aria-label="Alasivujen valikko" tabindex="-1" data-defer="<?php echo esc_url( get_template_directory_uri() ); ?>/images/nav-bg-desktop.jpg">
           <p class="top-button-holder">
             <a href="<?php echo esc_url( get_the_permalink( 6357 ) ); ?>" class="button button-glitch start-project">Ota yhteyttä<?php include get_theme_file_path( '/svg/arrow-right.svg' ); ?></a>
           </p>

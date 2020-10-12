@@ -90,7 +90,9 @@ body:not(.js-nav-active) .nav-primary.is-animatable {
 
 .nav-primary {
   @include background-cover();
-  background-image: url('../images/nav-bg-desktop.jpg');
+  background-color: $color-midnight;
+  // Background-image is lazy-loaded dynamically
+  // background-image: url('../images/nav-bg-desktop.jpg');
   height: 100vh;
   width: 100vw;
   position: fixed;

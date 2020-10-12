@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:48:37
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-24 11:12:35
+ * @Last Modified time: 2020-10-12 19:37:03
  *
  * @package dude
  */
@@ -63,7 +63,8 @@ if ( $query->have_posts() ) {
 
       <div class="hreview testimonial">
         <?php if ( ! empty( $reference['quote_person_image'] ) ) : ?>
-        <div class="testimonial-avatar" aria-hidden="true"><?php image_lazyload_div( $reference['quote_person_image'] ); ?></div>
+        <div class="testimonial-avatar" aria-hidden="true"><div aria-hidden="true" data-defer="<?php echo esc_url( wp_get_attachment_image_url( $reference['quote_person_image'], 'medium' ) ); ?>" class="background-image"></div></div>
+
         <?php endif; ?>
 
         <div class="testimonial-content">

@@ -52,6 +52,16 @@ const swup = new Swup({
 // Swup starts
 swup.on("contentReplaced", function () {
 
+    // Poor man's defer
+    function initdefer() {
+      var imgDefer = document.querySelectorAll('div[data-defer]');
+      var style = "background-image: url({url})";
+      for (var i = 0; i < imgDefer.length; i++) {
+        imgDefer[i].setAttribute('style', style.replace("{url}", imgDefer[i].getAttribute('data-defer')));
+      }
+    }
+    window.onload = initdefer;
+
     // Accessibility: Ensure back to top is right color on right background
     var stickyOffset = jQuery(".back-to-top").offset();
     var $contentDivs = jQuery(".block");
@@ -142,23 +152,6 @@ swup.on("contentReplaced", function () {
     })
   );
 
-  // Transition end function
-  function OnTransitionEndHero() {
-    animatedHero.classList.remove("is-animatable");
-  }
-
-  function OnTransitionEndNav() {
-    animatedNav.classList.remove("is-animatable");
-  }
-
-  if (jQuery(".block-hero-enable-transition").length) {
-    animatedHero.addEventListener("transitionend", OnTransitionEndHero, false);
-  }
-
-  if (jQuery(".nav-primary").length) {
-    animatedNav.addEventListener("transitionend", OnTransitionEndNav, false);
-  }
-
   // Toggles the menu button
   (function () {
     if (!menuToggle.length) {
@@ -170,9 +163,6 @@ swup.on("contentReplaced", function () {
 
       jQuery("body").toggleClass("js-nav-active");
 
-      // Add blur effect after one second from nav triggered open
-      jQuery(".block-hero-enable-transition").toggleClass("add-blur");
-
       // Change text to closed and vice versa
       var toggletext = jQuery(this).find(".toggle-text").text();
       if (toggletext == "Avaa valikko") {
@@ -180,11 +170,6 @@ swup.on("contentReplaced", function () {
       } else {
         jQuery(this).find(".toggle-text").text("Avaa valikko");
       }
-
-      // The 60 FPS Smooth as Butter Solution
-      // Source: https://medium.com/outsystems-experts/how-to-achieve-60-fps-animations-with-css3-db7b98610108
-      jQuery(".nav-primary").addClass("is-animatable");
-      jQuery(".block-hero-enable-transition").addClass("is-animatable");
 
       // jscs:disable
       jQuery(this)
@@ -382,6 +367,10 @@ swup.on("contentReplaced", function () {
   navOpened = false;
 
   button.onclick = function () {
+
+    // Defer nav background image
+    var navBg = "background-image: url({url})";
+    menu.setAttribute('style', navBg.replace("{url}", menu.getAttribute('data-defer')));
 
     // Toggle boolean
     navOpened ^= true;
@@ -1239,7 +1228,18 @@ window.CRISP_READY_TRIGGER = function () {
   }, 25);
 };
 
+// Vanilla document ready
 document.addEventListener('DOMContentLoaded', function () {
+  // Poor man's defer
+  function initdefer() {
+    var imgDefer = document.querySelectorAll('div[data-defer]');
+    var style = "background-image: url({url})";
+    for (var i = 0; i < imgDefer.length; i++) {
+      imgDefer[i].setAttribute('style', style.replace("{url}", imgDefer[i].getAttribute('data-defer')));
+    }
+  }
+  window.onload = initdefer;
+
   // MoveTo triggers
   const easeFunctions = {
     easeInQuad: function (t, b, c, d) {

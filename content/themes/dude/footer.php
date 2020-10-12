@@ -48,8 +48,7 @@
   <p class="back-to-top"><a href="#page" class="js-trigger top no-text-link" data-mt-duration="300"><span class="screen-reader-text"><?php echo esc_html_e( 'Takaisin ylös', 'dude' ); ?></span><?php include get_theme_file_path( '/svg/chevron-up.svg' ); ?></a></p>
 
   <div class="shade" aria-hidden="true">
-    <div aria-hidden="true" class="background-image preview lazyload" style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/footer-20.jpg');" data-src="<?php echo get_template_directory_uri(); ?>/images/footer.jpg" data-src-mobile="<?php echo get_template_directory_uri(); ?>/images/footer.jpg"></div>
-    <div aria-hidden="true" class="background-image full-image" <?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) :  // phpcs:ignore ?> style="background-image: url('<?php echo get_template_directory_uri(); ?>/images/footer.jpg');" <?php endif; ?>></div>
+    <div aria-hidden="true" data-defer="<?php echo get_template_directory_uri(); ?>/images/footer.jpg" class="background-image"></div>
   </div>
 
   <div class="container">
@@ -159,6 +158,13 @@
 <script src="https://serve.albacross.com/track.js"></script>
 
 <script data-swup-reload-script>
+  // Poor man's defer
+  var imgDefer = document.querySelectorAll('div[data-defer]');
+  var style = "background-image: url({url})";
+  for (var i = 0; i < imgDefer.length; i++) {
+    imgDefer[i].setAttribute('style', style.replace("{url}", imgDefer[i].getAttribute('data-defer')));
+  }
+
   var motionQuery = matchMedia('(prefers-reduced-motion)');
 
   function reducedMotionCheck() {

@@ -29,23 +29,6 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
     })
   );
 
-  // Transition end function
-  function OnTransitionEndHero() {
-    animatedHero.classList.remove("is-animatable");
-  }
-
-  function OnTransitionEndNav() {
-    animatedNav.classList.remove("is-animatable");
-  }
-
-  if (jQuery(".block-hero-enable-transition").length) {
-    animatedHero.addEventListener("transitionend", OnTransitionEndHero, false);
-  }
-
-  if (jQuery(".nav-primary").length) {
-    animatedNav.addEventListener("transitionend", OnTransitionEndNav, false);
-  }
-
   // Toggles the menu button
   (function () {
     if (!menuToggle.length) {
@@ -57,9 +40,6 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
 
       jQuery("body").toggleClass("js-nav-active");
 
-      // Add blur effect after one second from nav triggered open
-      jQuery(".block-hero-enable-transition").toggleClass("add-blur");
-
       // Change text to closed and vice versa
       var toggletext = jQuery(this).find(".toggle-text").text();
       if (toggletext == "Avaa valikko") {
@@ -68,10 +48,9 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
         jQuery(this).find(".toggle-text").text("Avaa valikko");
       }
 
-      // The 60 FPS Smooth as Butter Solution
-      // Source: https://medium.com/outsystems-experts/how-to-achieve-60-fps-animations-with-css3-db7b98610108
-      jQuery(".nav-primary").addClass("is-animatable");
-      jQuery(".block-hero-enable-transition").addClass("is-animatable");
+      // Defer nav background image
+      var navBg = "background-image: url({url})";
+      document.getElementById("nav").setAttribute('style', navBg.replace("{url}", document.getElementById("nav").getAttribute('data-defer')));
 
       // jscs:disable
       jQuery(this)
