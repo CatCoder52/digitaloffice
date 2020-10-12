@@ -437,10 +437,35 @@ input[type="checkbox"].simpay-modal-control {
     }
   }
 
+  .simpay-field-wrap input,
+  .simpay-field-wrap textarea {
+    border-radius: 0;
+  }
+
   // Address fields
   .simpay-address-container {
+    border: 0;
+    margin: 0;
+    padding: 0;
+
     .simpay-field-wrap {
       margin-bottom: 15px;
+    }
+
+    .simpay-form-control.simpay-address-street-container {
+      margin-bottom: 0 !important;
+      padding-bottom: 0 !important;
+    }
+
+    .simpay-form-control.simpay-address-city-container,
+    .simpay-form-control.simpay-address-zip-container {
+      margin-bottom: 0;
+      padding-bottom: 0;
+
+      .simpay-field-wrap {
+        margin-bottom: 0 !important;
+        padding-bottom: 0 !important;
+      }
     }
 
     // Half-width fields

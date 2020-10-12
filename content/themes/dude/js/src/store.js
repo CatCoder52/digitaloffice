@@ -1,8 +1,8 @@
 /*
 * @Author: Timi Wahalahti
 * @Date:   2019-06-03 22:07:25
-* @Last Modified by:   Timi Wahalahti
-* @Last Modified time: 2019-10-14 14:28:18
+* @Last Modified by:   Roni Laukkarinen
+* @Last Modified time: 2020-10-13 00:12:49
 */
 
 ( function( $ ) {
@@ -141,7 +141,9 @@
 
     // Add to cart modal input fields
     var plaintext = $('.full-cart').text();
-    document.getElementById('simpay-4535-text-8').value = plaintext;
+
+    // Input inside div class="simpay-text-wrap simpay-field-wrap"
+    document.getElementById('simpay-form-4535-field-9').value = plaintext;
     document.getElementById('simpay-custom-amount-4535').value = pricetotals;
     // document.getElementById("simpay-custom-amount-4535").focus({preventScroll: true});
     // document.getElementById("simpay-4535-customer-name-4").focus({preventScroll: true});
@@ -158,8 +160,11 @@
   // Custom Overlay forms
   $( '#buy' ).click( function( e ) {
     e.preventDefault();
+    // Input name="simpay_custom_amount"
     document.getElementById("simpay-custom-amount-4535").focus({preventScroll: true});
-    document.getElementById("simpay-4535-customer-name-4").focus({preventScroll: true});
+
+    // Input name="simpay_customer_name"
+    document.getElementById("simpay-form-4535-field-4").focus({preventScroll: true});
     simpayAppPro.toggleOverlayForm( 4535 );
   } );
 
@@ -167,6 +172,8 @@
   $( '#buy' ).click( function( e ) {
     e.preventDefault();
     $( '#simpay-form-4535' ).find( '.simpay-payment-btn' ).click();
+
+    // Input name="simpay_custom_amount"
     $( '#simpay-form-4535' ).find( '#simpay-custom-amount-4535' ).click();
   } );
 
