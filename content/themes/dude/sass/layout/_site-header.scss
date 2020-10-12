@@ -31,30 +31,24 @@
 
 .site-branding {
   position: relative;
-  overflow: hidden;
   display: block;
   z-index: 10;
 }
 
 .site-title {
   margin: 0;
-  font-weight: 700;
-  position: relative;
-  overflow: hidden;
-  display: block;
-  z-index: 10;
+
+  a {
+    color: $color-midnight-blue;
+    display: flex;
+    align-items: center;
+  }
 
   @media (max-width: 680px) {
     svg {
       width: 70px;
       height: 13.98px;
     }
-  }
-
-  a {
-    color: $color-midnight-blue;
-    display: flex;
-    align-items: center;
   }
 }
 
@@ -77,10 +71,6 @@ nav ul li button {
     margin-right: 1rem;
   }
 
-  @media (max-width: 600px) {
-    display: flex;
-  }
-
   a {
     color: $color-mint-alternative;
     display: flex;
@@ -94,6 +84,10 @@ nav ul li button {
     svg {
       stroke: $color-mint-alternative-hover;
     }
+  }
+
+  @media (max-width: 600px) {
+    display: flex;
   }
 }
 

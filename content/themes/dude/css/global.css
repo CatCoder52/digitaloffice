@@ -281,771 +281,6 @@ html.is-animating .swup-transition-fade {
 	opacity: 0;
 }
 
-.simpay-clearfix::before,
-.simpay-clearfix::after {
-	content: ' ';
-	display: table;
-}
-
-.simpay-clearfix::after {
-	clear: both;
-}
-
-.simpay-form-control {
-	margin-bottom: 15px;
-}
-
-.simpay-form-control .simpay-coupon-field {
-	display: inline-block;
-	min-width: 150px;
-	width: 150px;
-}
-
-.simpay-form-control .simpay-apply-coupon {
-	margin-left: 10px;
-}
-
-.simpay-form-control .simpay-custom-amount-input,
-.simpay-form-control .simpay-currency-symbol {
-	box-sizing: border-box;
-	border: 1px solid #d1d1d1;
-	border-radius: 0;
-	margin: 0;
-	padding: 0 10px;
-	float: left;
-}
-
-.simpay-form-control .simpay-custom-amount-input {
-	height: 36px;
-	width: 125px;
-	min-width: 125px;
-}
-
-.simpay-form-control .simpay-currency-symbol {
-	background-color: #f2f2f2;
-	line-height: 34px;
-}
-
-.simpay-form-control .simpay-currency-symbol-left {
-	border-right: 0;
-}
-
-.simpay-form-control .simpay-currency-symbol-right {
-	border-left: 0;
-}
-
-.simpay-form-control .simpay-checkbox-wrap label,
-.simpay-form-control .simpay-same-address-toggle-wrap label {
-	display: inline;
-}
-
-.simpay-form-control .simpay-field-error,
-.simpay-form-control .simpay-field-error label.error {
-	color: #eb1c26;
-	display: block;
-	font-weight: normal;
-}
-
-input[type="checkbox"].simpay-modal-control {
-	display: none;
-}
-
-.simpay-modal-control-open {
-	display: inline-block;
-	margin: 0 0 15px;
-	padding: 0;
-	position: relative;
-	cursor: pointer;
-}
-
-.simpay-modal-control-open .simpay-form-control {
-	margin: 0;
-}
-
-.simpay-modal-control-open * {
-	pointer-events: none;
-}
-
-.simpay-modal-control-close {
-	font-family: "Circular", "Helvetica Neue", helvetica, sans-serif;
-	color: #a6a6a6;
-	position: absolute;
-	top: 2px;
-	right: 2px;
-	padding: 5px 10px;
-	cursor: pointer;
-}
-
-.simpay-modal-control-close:hover {
-	color: #8d8d8d;
-}
-
-.simpay-modal-overlay-close {
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	width: 100vw;
-	height: 100vh;
-	z-index: -1;
-}
-
-.simpay-modal {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	background: rgba(0, 0, 0, 0.8);
-	z-index: 999999999;
-	overflow: hidden;
-	height: 0;
-	opacity: 0;
-	transition: opacity .3s;
-}
-
-.simpay-modal .simpay-form-title,
-.simpay-modal .simpay-form-description {
-	text-align: center;
-}
-
-.simpay-modal .simpay-form-title {
-	margin-top: 0;
-	margin-bottom: .5em;
-}
-
-.simpay-modal__body {
-	width: 100vw;
-	max-width: 440px;
-	max-height: calc(100vh - 60px);
-	overflow-y: auto;
-	z-index: 1;
-}
-
-.simpay-modal__content {
-	position: relative;
-	padding: 30px 30px 15px;
-	background: #fff;
-}
-
-.simpay-embedded-heading {
-	margin-top: 15px;
-}
-
-.simpay-form-title,
-.simpay-form-description {
-	font-weight: 600;
-	margin: 0;
-	padding: 0;
-	line-height: 1;
-}
-
-.simpay-form-title {
-	font-size: 20px;
-	color: #333;
-	margin-bottom: 10px;
-}
-
-.simpay-form-description {
-	font-size: var(--font-size-general-small);
-	color: #666;
-	margin-bottom: 20px;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled,
-.simpay-checkout-form.simpay-checkout-form--overlay,
-.simpay-checkout-form.simpay-checkout-form--embedded {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font-size: 15px;
-	font-weight: 600;
-	color: #333;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="date"],
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="time"],
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="datetime-local"],
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="week"],
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="month"],
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="text"],
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="email"],
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="url"],
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="password"],
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="search"],
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="tel"],
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="number"],
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control select,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control textarea,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-card-wrap,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="date"],
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="time"],
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="datetime-local"],
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="week"],
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="month"],
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="text"],
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="email"],
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="url"],
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="password"],
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="search"],
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="tel"],
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="number"],
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control select,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control textarea,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-card-wrap,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="date"],
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="time"],
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="datetime-local"],
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="week"],
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="month"],
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="text"],
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="email"],
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="url"],
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="password"],
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="search"],
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="tel"],
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="number"],
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control select,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control textarea,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-card-wrap {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font-size: 15px;
-	font-weight: 600;
-	color: #32325d;
-	margin-bottom: 0;
-	background: #fff;
-	box-shadow: none;
-	border: 1px solid #d1d1d1;
-	border-radius: 4px;
-	padding: 0 .4375em;
-	height: auto;
-	min-height: 36px;
-	width: 100%;
-	box-sizing: border-box;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="date"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="time"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="datetime-local"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="week"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="month"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="text"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="email"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="url"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="password"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="search"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="tel"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="number"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control select::placeholder,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control textarea::placeholder,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-card-wrap::placeholder,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="date"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="time"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="datetime-local"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="week"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="month"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="text"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="email"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="url"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="password"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="search"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="tel"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="number"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control select::placeholder,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control textarea::placeholder,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-card-wrap::placeholder,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="date"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="time"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="datetime-local"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="week"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="month"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="text"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="email"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="url"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="password"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="search"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="tel"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="number"]::placeholder,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control select::placeholder,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control textarea::placeholder,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-card-wrap::placeholder {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font-size: 15px;
-	font-weight: 600;
-	color: #aab7c4;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="date"]:focus,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="time"]:focus,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="datetime-local"]:focus,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="week"]:focus,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="month"]:focus,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="text"]:focus,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="email"]:focus,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="url"]:focus,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="password"]:focus,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="search"]:focus,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="tel"]:focus,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="number"]:focus,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control select:focus,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control textarea:focus,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-card-wrap:focus,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="date"]:focus,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="time"]:focus,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="datetime-local"]:focus,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="week"]:focus,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="month"]:focus,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="text"]:focus,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="email"]:focus,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="url"]:focus,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="password"]:focus,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="search"]:focus,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="tel"]:focus,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="number"]:focus,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control select:focus,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control textarea:focus,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-card-wrap:focus,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="date"]:focus,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="time"]:focus,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="datetime-local"]:focus,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="week"]:focus,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="month"]:focus,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="text"]:focus,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="email"]:focus,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="url"]:focus,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="password"]:focus,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="search"]:focus,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="tel"]:focus,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="number"]:focus,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control select:focus,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control textarea:focus,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-card-wrap:focus {
-	background-color: #fff;
-	border-color: #007acc;
-	color: #32325d;
-	outline: 0;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="date"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="time"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="datetime-local"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="week"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="month"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="text"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="email"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="url"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="password"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="search"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="tel"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="number"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control select.simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control textarea.simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-card-wrap.simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="date"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="time"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="datetime-local"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="week"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="month"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="text"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="email"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="url"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="password"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="search"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="tel"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="number"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control select.simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control textarea.simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-card-wrap.simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="date"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="time"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="datetime-local"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="week"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="month"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="text"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="email"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="url"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="password"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="search"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="tel"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="number"].simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control select.simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control textarea.simpay-input-error,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-card-wrap.simpay-input-error {
-	border-color: #eb1c26;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .StripeElement--webkit-autofill,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .StripeElement--webkit-autofill,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .StripeElement--webkit-autofill {
-	background: transparent !important;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control select,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control select:-webkit-autofill,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control select,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control select:-webkit-autofill,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control select,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control select:-webkit-autofill {
-	appearance: none;
-	background-position: calc(100% - 8px);
-	background-size: 10px 5px;
-	background-repeat: no-repeat;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	padding-right: 25px;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-card-wrap.StripeElement,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-card-wrap.StripeElement,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-card-wrap.StripeElement {
-	display: flex;
-	align-items: center;
-	height: 1px;
-	min-height: 36px;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-card-wrap.StripeElement > div,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-card-wrap.StripeElement > div,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-card-wrap.StripeElement > div {
-	flex: 1;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-card-wrap.StripeElement--focus,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-card-wrap.StripeElement--focus,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-card-wrap.StripeElement--focus {
-	background-color: #fff;
-	border-color: #007acc;
-	color: #32325d;
-	outline: 0;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="tel"].simpay-custom-amount-input,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="number"].simpay-custom-amount-input,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="text"].simpay-custom-amount-input,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="tel"].simpay-custom-amount-input,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="number"].simpay-custom-amount-input,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="text"].simpay-custom-amount-input,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="tel"].simpay-custom-amount-input,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="number"].simpay-custom-amount-input,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="text"].simpay-custom-amount-input {
-	width: 125px;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="tel"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-left,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="number"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-left,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="text"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-left,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="tel"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-left,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="number"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-left,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="text"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-left,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="tel"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-left,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="number"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-left,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="text"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-left {
-	border-top-left-radius: 0;
-	border-bottom-left-radius: 0;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="tel"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-right,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="number"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-right,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="text"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-right,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="tel"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-right,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="number"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-right,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="text"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-right,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="tel"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-right,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="number"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-right,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="text"] .simpay-custom-amount-input.simpay-custom-amount-input-symbol-right {
-	border-top-right-radius: 0;
-	border-bottom-right-radius: 0;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-currency-symbol,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-currency-symbol,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-currency-symbol {
-	border-radius: 4px;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-currency-symbol-left,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-currency-symbol-left,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-currency-symbol-left {
-	border-right: 0;
-	border-top-right-radius: 0;
-	border-bottom-right-radius: 0;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-currency-symbol-right,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-currency-symbol-right,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-currency-symbol-right {
-	border-left: 0;
-	border-top-left-radius: 0;
-	border-bottom-left-radius: 0;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control select,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control select,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control select {
-	width: auto;
-	max-width: 100%;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control textarea,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control textarea,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control textarea {
-	height: auto;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control input[type="text"].simpay-coupon-field,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control input[type="text"].simpay-coupon-field,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control input[type="text"].simpay-coupon-field {
-	width: calc(100% - 120px);
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-payment-btn:not(.stripe-button-el),
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el),
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-checkout-btn:not(.stripe-button-el),
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-payment-btn:not(.stripe-button-el),
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el),
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-checkout-btn:not(.stripe-button-el),
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-payment-btn:not(.stripe-button-el),
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el),
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-checkout-btn:not(.stripe-button-el) {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font-size: 15px;
-	font-weight: 600;
-	color: #fff;
-	background-color: #24b47e;
-	background-image: none;
-	display: block;
-	height: 36px;
-	line-height: 1.5;
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	border: 0;
-	border-radius: 4px;
-	outline: none;
-	text-transform: uppercase;
-	cursor: pointer;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-payment-btn:not(.stripe-button-el):hover,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el):hover,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-checkout-btn:not(.stripe-button-el):hover,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-payment-btn:not(.stripe-button-el):hover,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el):hover,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-checkout-btn:not(.stripe-button-el):hover,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-payment-btn:not(.stripe-button-el):hover,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el):hover,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-checkout-btn:not(.stripe-button-el):hover {
-	background-color: #249a65;
-	background-image: none;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-payment-btn:not(.stripe-button-el):disabled,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el):disabled,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-checkout-btn:not(.stripe-button-el):disabled,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-payment-btn:not(.stripe-button-el):disabled,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el):disabled,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-checkout-btn:not(.stripe-button-el):disabled,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-payment-btn:not(.stripe-button-el):disabled,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el):disabled,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-checkout-btn:not(.stripe-button-el):disabled {
-	pointer-events: none;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-payment-btn:not(.stripe-button-el).simpay-disabled,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el).simpay-disabled,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-checkout-btn:not(.stripe-button-el).simpay-disabled,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-payment-btn:not(.stripe-button-el).simpay-disabled,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el).simpay-disabled,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-checkout-btn:not(.stripe-button-el).simpay-disabled,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-payment-btn:not(.stripe-button-el).simpay-disabled,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el).simpay-disabled,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-checkout-btn:not(.stripe-button-el).simpay-disabled {
-	background-color: #aab7c4;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-apply-coupon,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-apply-coupon,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-apply-coupon {
-	width: 110px;
-	float: right;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el),
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el),
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el) {
-	width: 110px;
-	background-color: #aab7c4;
-	background-image: none;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el):hover,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el):hover,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-form-control .simpay-apply-coupon:not(.stripe-button-el):hover {
-	background-color: #888;
-	background-image: none;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-address-container .simpay-field-wrap,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-address-container .simpay-field-wrap,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-address-container .simpay-field-wrap {
-	margin-bottom: 15px;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-address-container .simpay-address-city-container,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-address-container .simpay-address-state-container,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-address-container .simpay-address-zip-container,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-address-container .simpay-address-country-container,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-address-container .simpay-address-city-container,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-address-container .simpay-address-state-container,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-address-container .simpay-address-zip-container,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-address-container .simpay-address-country-container,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-address-container .simpay-address-city-container,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-address-container .simpay-address-state-container,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-address-container .simpay-address-zip-container,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-address-container .simpay-address-country-container {
-	float: left;
-	width: 48%;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-address-container .simpay-address-state-container,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-address-container .simpay-address-country-container,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-address-container .simpay-address-state-container,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-address-container .simpay-address-country-container,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-address-container .simpay-address-state-container,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-address-container .simpay-address-country-container {
-	float: right;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-test-mode-badge-container,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-test-mode-badge-container,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-test-mode-badge-container {
-	text-align: center;
-}
-
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled,
-.simpay-checkout-form.simpay-checkout-form--embedded {
-	max-width: 400px;
-}
-
-.simpay-payment-request-button-container {
-	margin: 15px 0;
-}
-
-.simpay-payment-request-button-container__or {
-	font-size: 90%;
-	text-align: center;
-	overflow: hidden;
-}
-
-.simpay-payment-request-button-container__or::before,
-.simpay-payment-request-button-container__or::after {
-	background-color: #d1d1d1;
-	content: '';
-	display: inline-block;
-	height: 1px;
-	position: relative;
-	vertical-align: middle;
-	width: 50%;
-}
-
-.simpay-payment-request-button-container__or::before {
-	right: .5em;
-	margin-left: -50%;
-}
-
-.simpay-payment-request-button-container__or::after {
-	left: .5em;
-	margin-right: -50%;
-}
-
-.simpay-payment-request-button-container__button + .simpay-payment-request-button-container__or,
-.simpay-payment-request-button-container__or + .simpay-payment-request-button-container__button {
-	margin-top: 15px;
-}
-
-.simpay-clearfix::before,
-.simpay-clearfix::after {
-	content: ' ';
-	display: table;
-}
-
-.simpay-clearfix::after {
-	clear: both;
-}
-
-.simpay-total-amount-value {
-	font-style: normal;
-}
-
-.simpay-form-control::before,
-.simpay-form-control::after {
-	content: ' ';
-	display: table;
-}
-
-.simpay-form-control::after {
-	clear: both;
-}
-
-.simpay-form-control p {
-	padding: 0;
-	margin: 0;
-}
-
-.simpay-form-control ul {
-	margin: 0 0 .5em;
-}
-
-.simpay-form-control ul li {
-	list-style-type: none;
-}
-
-.simpay-form-control ul li label {
-	display: block;
-	margin: 0 0 .5em;
-}
-
-.simpay-form-control ul li label input[type="radio"],
-.simpay-form-control ul li label input[type="checkbox"] {
-	margin-right: .5em;
-}
-
-.simpay-form-control label {
-	cursor: pointer;
-	display: block;
-}
-
-.simpay-form-control .simpay-field-wrap::before,
-.simpay-form-control .simpay-field-wrap::after {
-	content: ' ';
-	display: table;
-}
-
-.simpay-form-control .simpay-field-wrap::after {
-	clear: both;
-}
-
-.simpay-errors {
-	color: #eb1c26;
-	margin-bottom: 15px;
-}
-
-.simpay-test-mode-badge-container .simpay-test-mode-badge {
-	background-color: #f7e633;
-	color: #333;
-	border-radius: 5px;
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-weight: 700;
-	font-size: 11px;
-	text-transform: uppercase;
-	padding: 5px 9px;
-}
-
 .slick-list {
 	position: relative;
 	overflow: hidden;
@@ -2047,18 +1282,12 @@ a:hover {
 }
 
 p,
-dd,
-dt,
 figcaption,
-hr,
 small,
 ol,
 ul,
 li,
 blockquote,
-kbd,
-pre,
-samp,
 code,
 th,
 td,
@@ -2075,11 +1304,6 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .conte
 .content-area input[type="reset"],
 .content-area input[type="submit"],
 .content-area input[type="button"],
-.content-area .block.block-hero.block-hero-frontpage button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset),
-.content-area .block.block-hero.block-hero-frontpage .button,
-.content-area .block.block-hero.block-hero-frontpage input[type="reset"],
-.content-area .block.block-hero.block-hero-frontpage input[type="submit"],
-.content-area .block.block-hero.block-hero-frontpage input[type="button"],
 textarea,
 select,
 input[type="text"],
@@ -2162,7 +1386,8 @@ h2 {
 	margin-bottom: 2rem;
 }
 
-h3 {
+h3,
+body.template-surveys-modern .survey-header h1 {
 	font-size: 25px;
 	margin-bottom: 2rem;
 }
@@ -2213,100 +1438,11 @@ body:not(.page-id-6357) .block.block-wide-text .site-header ul:not(.tags):not(.b
 	margin-right: 1rem;
 }
 
-ol {
-	padding-left: 1.75rem;
-}
-
-ol,
-ul {
-	padding-bottom: 1rem;
-}
-
-b,
-strong {
-	font-weight: 700;
-}
-
-em,
-i {
-	font-style: italic;
-}
-
-small {
-	line-height: 1;
-	font-size: .875em;
-}
-
 img {
 	-ms-interpolation-mode: bicubic;
 	height: auto;
 	vertical-align: middle;
 	max-width: 100%;
-}
-
-figure {
-	position: relative;
-	margin-bottom: 1rem;
-	margin-left: 0;
-	margin-right: 0;
-	margin-top: 0;
-}
-
-figure > img {
-	width: 100%;
-}
-
-figcaption {
-	margin-top: 0;
-	font-style: normal;
-	font-weight: 400;
-}
-
-blockquote {
-	clear: both;
-	border: 0 none;
-	position: relative;
-	margin: 0;
-}
-
-blockquote p:first-child {
-	margin-top: 0;
-}
-
-blockquote p:last-child {
-	margin-bottom: 0;
-}
-
-cite {
-	display: block;
-	font-style: italic;
-}
-
-hr {
-	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, #000 50%);
-	background-repeat: repeat-x;
-	background-size: 2px 2px;
-	background-position: 0 50%;
-	border: 0;
-	padding-top: 1rem;
-	padding-bottom: 1rem;
-	margin: 0;
-	height: 0;
-}
-
-kbd,
-pre,
-samp {
-	font-family: "Menlo", "Courier", monospace;
-}
-
-pre {
-	border-radius: .3rem;
-	display: block;
-	white-space: pre-wrap;
-	word-break: break-all;
-	word-wrap: break-word;
-	margin-bottom: 2rem;
 }
 
 /* stylelint-enable declaration-property-unit-allowed-list */
@@ -2326,18 +1462,12 @@ pre {
 
 .site-branding {
 	position: relative;
-	overflow: hidden;
 	display: block;
 	z-index: 10;
 }
 
 .site-title {
 	margin: 0;
-	font-weight: 700;
-	position: relative;
-	overflow: hidden;
-	display: block;
-	z-index: 10;
 }
 
 .site-title a {
@@ -2784,13 +1914,6 @@ body.page-id-5975 .nav-toggle:focus:focus .hamburger-inner:focus::after {
 	opacity: .5;
 }
 
-.button-reset {
-	background: transparent;
-	border: 0;
-	padding: 0;
-	margin: 0;
-}
-
 .content-area button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset),
 .content-area .button,
 .content-area body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input,
@@ -2799,16 +1922,7 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-a
 body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .content-area input.button.gform_button_select_files,
 .content-area input[type="reset"],
 .content-area input[type="submit"],
-.content-area input[type="button"],
-.content-area .block.block-hero.block-hero-frontpage button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset),
-.content-area .block.block-hero.block-hero-frontpage .button,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input,
-body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area .block.block-hero.block-hero-frontpage input,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files,
-body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .content-area .block.block-hero.block-hero-frontpage input.button.gform_button_select_files,
-.content-area .block.block-hero.block-hero-frontpage input[type="reset"],
-.content-area .block.block-hero.block-hero-frontpage input[type="submit"],
-.content-area .block.block-hero.block-hero-frontpage input[type="button"] {
+.content-area input[type="button"] {
 	background: #03061b;
 	color: #fff;
 	font-size: 18px;
@@ -2835,16 +1949,7 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-a
 body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .content-area input.button-mint.button.gform_button_select_files,
 .content-area input[type="reset"].button-mint,
 .content-area input[type="submit"].button-mint,
-.content-area input[type="button"].button-mint,
-.content-area .block.block-hero.block-hero-frontpage button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset).button-mint,
-.content-area .block.block-hero.block-hero-frontpage .button.button-mint,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input.button-mint,
-body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area .block.block-hero.block-hero-frontpage input.button-mint,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome input.button-mint.button.gform_button_select_files,
-body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .content-area .block.block-hero.block-hero-frontpage input.button-mint.button.gform_button_select_files,
-.content-area .block.block-hero.block-hero-frontpage input[type="reset"].button-mint,
-.content-area .block.block-hero.block-hero-frontpage input[type="submit"].button-mint,
-.content-area .block.block-hero.block-hero-frontpage input[type="button"].button-mint {
+.content-area input[type="button"].button-mint {
 	background: #7effe1;
 	color: #03061b;
 }
@@ -2866,25 +1971,7 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .conte
 .content-area input[type="submit"].button-mint:hover,
 .content-area input[type="submit"].button-mint:focus,
 .content-area input[type="button"].button-mint:hover,
-.content-area input[type="button"].button-mint:focus,
-.content-area .block.block-hero.block-hero-frontpage button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset).button-mint:hover,
-.content-area .block.block-hero.block-hero-frontpage button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset).button-mint:focus,
-.content-area .block.block-hero.block-hero-frontpage .button.button-mint:hover,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input.button-mint:hover,
-body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area .block.block-hero.block-hero-frontpage input.button-mint:hover,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome input.button-mint.button.gform_button_select_files:hover,
-body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .content-area .block.block-hero.block-hero-frontpage input.button-mint.button.gform_button_select_files:hover,
-.content-area .block.block-hero.block-hero-frontpage .button.button-mint:focus,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input.button-mint:focus,
-body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area .block.block-hero.block-hero-frontpage input.button-mint:focus,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome input.button-mint.button.gform_button_select_files:focus,
-body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .content-area .block.block-hero.block-hero-frontpage input.button-mint.button.gform_button_select_files:focus,
-.content-area .block.block-hero.block-hero-frontpage input[type="reset"].button-mint:hover,
-.content-area .block.block-hero.block-hero-frontpage input[type="reset"].button-mint:focus,
-.content-area .block.block-hero.block-hero-frontpage input[type="submit"].button-mint:hover,
-.content-area .block.block-hero.block-hero-frontpage input[type="submit"].button-mint:focus,
-.content-area .block.block-hero.block-hero-frontpage input[type="button"].button-mint:hover,
-.content-area .block.block-hero.block-hero-frontpage input[type="button"].button-mint:focus {
+.content-area input[type="button"].button-mint:focus {
 	background: #f1f1f1;
 	color: #03061b;
 }
@@ -2906,25 +1993,7 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .conte
 .content-area input[type="submit"].button-mint:hover svg,
 .content-area input[type="submit"].button-mint:focus svg,
 .content-area input[type="button"].button-mint:hover svg,
-.content-area input[type="button"].button-mint:focus svg,
-.content-area .block.block-hero.block-hero-frontpage button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset).button-mint:hover svg,
-.content-area .block.block-hero.block-hero-frontpage button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset).button-mint:focus svg,
-.content-area .block.block-hero.block-hero-frontpage .button.button-mint:hover svg,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input.button-mint:hover svg,
-body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area .block.block-hero.block-hero-frontpage input.button-mint:hover svg,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome input.button-mint.button.gform_button_select_files:hover svg,
-body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .content-area .block.block-hero.block-hero-frontpage input.button-mint.button.gform_button_select_files:hover svg,
-.content-area .block.block-hero.block-hero-frontpage .button.button-mint:focus svg,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input.button-mint:focus svg,
-body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area .block.block-hero.block-hero-frontpage input.button-mint:focus svg,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome input.button-mint.button.gform_button_select_files:focus svg,
-body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .content-area .block.block-hero.block-hero-frontpage input.button-mint.button.gform_button_select_files:focus svg,
-.content-area .block.block-hero.block-hero-frontpage input[type="reset"].button-mint:hover svg,
-.content-area .block.block-hero.block-hero-frontpage input[type="reset"].button-mint:focus svg,
-.content-area .block.block-hero.block-hero-frontpage input[type="submit"].button-mint:hover svg,
-.content-area .block.block-hero.block-hero-frontpage input[type="submit"].button-mint:focus svg,
-.content-area .block.block-hero.block-hero-frontpage input[type="button"].button-mint:hover svg,
-.content-area .block.block-hero.block-hero-frontpage input[type="button"].button-mint:focus svg {
+.content-area input[type="button"].button-mint:focus svg {
 	color: #03061b;
 }
 
@@ -2936,16 +2005,7 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-a
 body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .content-area input.button-white.button.gform_button_select_files,
 .content-area input[type="reset"].button-white,
 .content-area input[type="submit"].button-white,
-.content-area input[type="button"].button-white,
-.content-area .block.block-hero.block-hero-frontpage button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset).button-white,
-.content-area .block.block-hero.block-hero-frontpage .button.button-white,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input.button-white,
-body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area .block.block-hero.block-hero-frontpage input.button-white,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome input.button-white.button.gform_button_select_files,
-body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .content-area .block.block-hero.block-hero-frontpage input.button-white.button.gform_button_select_files,
-.content-area .block.block-hero.block-hero-frontpage input[type="reset"].button-white,
-.content-area .block.block-hero.block-hero-frontpage input[type="submit"].button-white,
-.content-area .block.block-hero.block-hero-frontpage input[type="button"].button-white {
+.content-area input[type="button"].button-white {
 	background: #f1f1f1;
 	color: #131a50;
 }
@@ -2967,25 +2027,7 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .conte
 .content-area input[type="submit"].button-white:hover,
 .content-area input[type="submit"].button-white:focus,
 .content-area input[type="button"].button-white:hover,
-.content-area input[type="button"].button-white:focus,
-.content-area .block.block-hero.block-hero-frontpage button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset).button-white:hover,
-.content-area .block.block-hero.block-hero-frontpage button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset).button-white:focus,
-.content-area .block.block-hero.block-hero-frontpage .button.button-white:hover,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input.button-white:hover,
-body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area .block.block-hero.block-hero-frontpage input.button-white:hover,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome input.button-white.button.gform_button_select_files:hover,
-body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .content-area .block.block-hero.block-hero-frontpage input.button-white.button.gform_button_select_files:hover,
-.content-area .block.block-hero.block-hero-frontpage .button.button-white:focus,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input.button-white:focus,
-body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area .block.block-hero.block-hero-frontpage input.button-white:focus,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome input.button-white.button.gform_button_select_files:focus,
-body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .content-area .block.block-hero.block-hero-frontpage input.button-white.button.gform_button_select_files:focus,
-.content-area .block.block-hero.block-hero-frontpage input[type="reset"].button-white:hover,
-.content-area .block.block-hero.block-hero-frontpage input[type="reset"].button-white:focus,
-.content-area .block.block-hero.block-hero-frontpage input[type="submit"].button-white:hover,
-.content-area .block.block-hero.block-hero-frontpage input[type="submit"].button-white:focus,
-.content-area .block.block-hero.block-hero-frontpage input[type="button"].button-white:hover,
-.content-area .block.block-hero.block-hero-frontpage input[type="button"].button-white:focus {
+.content-area input[type="button"].button-white:focus {
 	background: #f2f2f2;
 	color: #131a50;
 }
@@ -3007,25 +2049,7 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .conte
 .content-area input[type="submit"] span,
 .content-area input[type="submit"] svg,
 .content-area input[type="button"] span,
-.content-area input[type="button"] svg,
-.content-area .block.block-hero.block-hero-frontpage button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset) span,
-.content-area .block.block-hero.block-hero-frontpage button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset) svg,
-.content-area .block.block-hero.block-hero-frontpage .button span,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input span,
-body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area .block.block-hero.block-hero-frontpage input span,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files span,
-body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .content-area .block.block-hero.block-hero-frontpage input.button.gform_button_select_files span,
-.content-area .block.block-hero.block-hero-frontpage .button svg,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input svg,
-body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area .block.block-hero.block-hero-frontpage input svg,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files svg,
-body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .content-area .block.block-hero.block-hero-frontpage input.button.gform_button_select_files svg,
-.content-area .block.block-hero.block-hero-frontpage input[type="reset"] span,
-.content-area .block.block-hero.block-hero-frontpage input[type="reset"] svg,
-.content-area .block.block-hero.block-hero-frontpage input[type="submit"] span,
-.content-area .block.block-hero.block-hero-frontpage input[type="submit"] svg,
-.content-area .block.block-hero.block-hero-frontpage input[type="button"] span,
-.content-area .block.block-hero.block-hero-frontpage input[type="button"] svg {
+.content-area input[type="button"] svg {
 	position: relative;
 	transition: all 0.22s;
 	transform: translate(0, 0);
@@ -3049,25 +2073,7 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .conte
 .content-area input[type="submit"]:hover,
 .content-area input[type="submit"]:focus,
 .content-area input[type="button"]:hover,
-.content-area input[type="button"]:focus,
-.content-area .block.block-hero.block-hero-frontpage button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset):hover,
-.content-area .block.block-hero.block-hero-frontpage button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset):focus,
-.content-area .block.block-hero.block-hero-frontpage .button:hover,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input:hover,
-body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area .block.block-hero.block-hero-frontpage input:hover,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files:hover,
-body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .content-area .block.block-hero.block-hero-frontpage input.button.gform_button_select_files:hover,
-.content-area .block.block-hero.block-hero-frontpage .button:focus,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input:focus,
-body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area .block.block-hero.block-hero-frontpage input:focus,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files:focus,
-body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .content-area .block.block-hero.block-hero-frontpage input.button.gform_button_select_files:focus,
-.content-area .block.block-hero.block-hero-frontpage input[type="reset"]:hover,
-.content-area .block.block-hero.block-hero-frontpage input[type="reset"]:focus,
-.content-area .block.block-hero.block-hero-frontpage input[type="submit"]:hover,
-.content-area .block.block-hero.block-hero-frontpage input[type="submit"]:focus,
-.content-area .block.block-hero.block-hero-frontpage input[type="button"]:hover,
-.content-area .block.block-hero.block-hero-frontpage input[type="button"]:focus {
+.content-area input[type="button"]:focus {
 	color: #7effe1;
 	background: #131a50;
 }
@@ -3107,43 +2113,7 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .conte
 .content-area input[type="button"]:hover span,
 .content-area input[type="button"]:hover svg,
 .content-area input[type="button"]:focus span,
-.content-area input[type="button"]:focus svg,
-.content-area .block.block-hero.block-hero-frontpage button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset):hover span,
-.content-area .block.block-hero.block-hero-frontpage button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset):hover svg,
-.content-area .block.block-hero.block-hero-frontpage button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset):focus span,
-.content-area .block.block-hero.block-hero-frontpage button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset):focus svg,
-.content-area .block.block-hero.block-hero-frontpage .button:hover span,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input:hover span,
-body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area .block.block-hero.block-hero-frontpage input:hover span,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files:hover span,
-body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .content-area .block.block-hero.block-hero-frontpage input.button.gform_button_select_files:hover span,
-.content-area .block.block-hero.block-hero-frontpage .button:hover svg,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input:hover svg,
-body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area .block.block-hero.block-hero-frontpage input:hover svg,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files:hover svg,
-body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .content-area .block.block-hero.block-hero-frontpage input.button.gform_button_select_files:hover svg,
-.content-area .block.block-hero.block-hero-frontpage .button:focus span,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input:focus span,
-body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area .block.block-hero.block-hero-frontpage input:focus span,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files:focus span,
-body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .content-area .block.block-hero.block-hero-frontpage input.button.gform_button_select_files:focus span,
-.content-area .block.block-hero.block-hero-frontpage .button:focus svg,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input:focus svg,
-body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area .block.block-hero.block-hero-frontpage input:focus svg,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files:focus svg,
-body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .content-area .block.block-hero.block-hero-frontpage input.button.gform_button_select_files:focus svg,
-.content-area .block.block-hero.block-hero-frontpage input[type="reset"]:hover span,
-.content-area .block.block-hero.block-hero-frontpage input[type="reset"]:hover svg,
-.content-area .block.block-hero.block-hero-frontpage input[type="reset"]:focus span,
-.content-area .block.block-hero.block-hero-frontpage input[type="reset"]:focus svg,
-.content-area .block.block-hero.block-hero-frontpage input[type="submit"]:hover span,
-.content-area .block.block-hero.block-hero-frontpage input[type="submit"]:hover svg,
-.content-area .block.block-hero.block-hero-frontpage input[type="submit"]:focus span,
-.content-area .block.block-hero.block-hero-frontpage input[type="submit"]:focus svg,
-.content-area .block.block-hero.block-hero-frontpage input[type="button"]:hover span,
-.content-area .block.block-hero.block-hero-frontpage input[type="button"]:hover svg,
-.content-area .block.block-hero.block-hero-frontpage input[type="button"]:focus span,
-.content-area .block.block-hero.block-hero-frontpage input[type="button"]:focus svg {
+.content-area input[type="button"]:focus svg {
 	transform: translate(2px, 0);
 }
 
@@ -3245,32 +2215,6 @@ input[type="search"]:focus::placeholder {
 	opacity: .3;
 }
 
-select {
-	border: 0;
-	border-radius: 0;
-	background-image: url("../svg/select.svg");
-	background-repeat: no-repeat;
-	background-position: right center;
-	padding-right: 40px;
-	transition: none;
-	width: 100%;
-	max-width: 100%;
-	min-width: 0;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	text-indent: 1px;
-	text-overflow: '';
-}
-
-select::-ms-expand {
-	display: none;
-}
-
-select:hover,
-select:focus {
-	border-color: #222;
-}
-
 body .gform_wrapper li.gfield.gfield_error,
 body .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
 	background: transparent;
@@ -3352,24 +2296,6 @@ form li.gfield .validation_message {
 	margin-top: 10px;
 }
 
-form p {
-	margin-bottom: 20px;
-}
-
-form p.form-submit {
-	margin-bottom: 0;
-}
-
-form.search-form .search-field {
-	float: left;
-	margin-right: 5px;
-}
-
-form.search-form .search-submit {
-	padding: 19px 1.75em;
-	line-height: 1;
-}
-
 .arrow-right {
 	margin-left: 2.5rem;
 }
@@ -3397,9 +2323,7 @@ Usage: codyhouse.co/license
 }
 
 .gform_wrapper ul.gfield_checkbox li input[type=checkbox],
-.gform_wrapper ul.gfield_radio li input[type=radio],
-.radio,
-.checkbox {
+.gform_wrapper ul.gfield_radio li input[type=radio] {
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -3413,9 +2337,7 @@ Usage: codyhouse.co/license
 }
 
 .gform_wrapper ul.gfield_checkbox li input[type=checkbox] + br + label,
-.gform_wrapper ul.gfield_radio li input[type=radio] + br + label,
-.radio + label,
-.checkbox + label {
+.gform_wrapper ul.gfield_radio li input[type=radio] + br + label {
 	display: inline-flex;
 	align-items: baseline;
 	user-select: none;
@@ -3424,9 +2346,7 @@ Usage: codyhouse.co/license
 
 .gform_wrapper ul.gfield_checkbox li input[type=checkbox] + br + label::before,
 .gform_wrapper ul.gfield_radio li input[type=radio] + br + label::before,
-input[type=radio] + label::before,
-.radio + label::before,
-.checkbox + label::before {
+input[type=radio] + label::before {
 	content: '';
 	display: inline-block;
 	vertical-align: middle;
@@ -3442,61 +2362,46 @@ input[type=radio] + label::before,
 }
 
 .gform_wrapper ul.gfield_radio li input[type=radio] + br + label::before,
-input[type=radio] + label::before,
-.radio + label::before {
+input[type=radio] + label::before {
 	border-radius: 50%;
 }
 
-.gform_wrapper ul.gfield_radio li input[type=checkbox] + br + label::before,
-.checkbox + label::before {
+.gform_wrapper ul.gfield_radio li input[type=checkbox] + br + label::before {
 	border-radius: var(--checkbox-radius);
 }
 
 .gform_wrapper ul.gfield_checkbox li input[type=checkbox]:checked + br + label::before,
 .gform_wrapper ul.gfield_radio li input[type=radio]:checked + br + label::before,
-input[type=radio]:checked + label::before,
-.radio:checked + label::before,
-.checkbox:checked + label::before {
+input[type=radio]:checked + label::before {
 	box-shadow: none;
 	transition: transform .2s;
 }
 
 .gform_wrapper ul.gfield_checkbox li input[type=checkbox]:active + br + label::before,
 .gform_wrapper ul.gfield_radio li input[type=radio]:active + br + label::before,
-input[type=radio]:active + label::before,
-.radio:active + label::before,
-.checkbox:active + label::before {
+input[type=radio]:active + label::before {
 	transform: scale(0.8);
 	transition: transform .2s;
 }
 
 .gform_wrapper ul.gfield_checkbox li input[type=checkbox]:checked:active + br + label::before,
 .gform_wrapper ul.gfield_radio li input[type=radio]:checked:active + br + label::before,
-input[type=radio]:checked:active + label::before,
-.radio:checked:active + label::before,
-.checkbox:checked:active + label::before {
+input[type=radio]:checked:active + label::before {
 	transform: none;
 	transition: none;
 }
 
 .gform_wrapper ul.gfield_radio li input[type=radio]:checked + br + label::before,
-input[type=radio]:checked + label::before,
-.radio:checked + label::before {
+input[type=radio]:checked + label::before {
 	background-color: #131a50;
 	border-color: #131a50 !important;
 	background-size: var(--radio-marker-size);
 }
 
-input[type=checkbox]:checked + br + label::before,
-.checkbox:checked + label::before {
+input[type=checkbox]:checked + br + label::before {
 	background-image: url("../svg/checkbox.svg") !important;
 	background-color: #131a50 !important;
 	background-size: var(--checkbox-marker-size) !important;
-}
-
-.radio--bg + label,
-.checkbox--bg + label {
-	transition: background .2s;
 }
 
 .block.block-hero {
@@ -8954,6 +7859,576 @@ body.page-template-template-community-code .block.block-hero.block-hero-light .s
 	background-color: #4f5d95;
 }
 
+body.template-surveys-modern {
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: top;
+	background-color: #03061b;
+	background-attachment: fixed;
+	color: #fff;
+}
+
+body.template-surveys-modern .gform_wrapper div.validation_error {
+	background: #b54945;
+	color: #fff;
+}
+
+body.template-surveys-modern .gform_wrapper ol.validation_list li,
+body.template-surveys-modern .gform_wrapper ol.validation_list li a,
+body.template-surveys-modern .gform_wrapper .gfield_error .gfield_label,
+body.template-surveys-modern form li.gfield.gfield_error,
+body.template-surveys-modern form li.gfield.gfield_error * {
+	color: #b54945;
+}
+
+body.template-surveys-modern table.gsurvey-likert td.gsurvey-likert-choice {
+	background-image: url("../svg/gravityformssurvey-not-active.svg");
+	background-size: 20px 20px;
+	overflow: visible;
+}
+
+body.template-surveys-modern table.gsurvey-likert td.gsurvey-likert-choice.gsurvey-likert-selected {
+	background-image: url("../svg/gravityformssurvey-active.svg");
+	background-size: 24px 24px;
+	overflow: visible;
+}
+
+body.template-surveys-modern table.gsurvey-likert td.gsurvey-likert-choice:hover {
+	cursor: pointer;
+}
+
+body.template-surveys-modern .gsurvey-likert * {
+	border-radius: 0 !important;
+}
+
+body.template-surveys-modern table.gsurvey-likert th.gsurvey-likert-choice-label {
+	background-color: transparent;
+}
+
+body.template-surveys-modern .gform_wrapper table.gsurvey-likert {
+	margin-bottom: 36px;
+	width: 100%;
+	table-layout: fixed;
+	border: 0;
+	border-collapse: collapse;
+	border-style: hidden;
+	box-shadow: none;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+body.template-surveys-modern .gform_wrapper table.gsurvey-likert,
+body.template-surveys-modern table.gsurvey-likert th.gsurvey-likert-choice-label,
+body.template-surveys-modern table.gsurvey-likert tr td,
+body.template-surveys-modern table.gsurvey-likert .gsurvey-likert-choice,
+body.template-surveys-modern table.gsurvey-likert .gsurvey-likert-row-label {
+	border: 0;
+	box-shadow: none;
+}
+
+body.template-surveys-modern .gform_wrapper .gfield_checkbox li label,
+body.template-surveys-modern .gform_wrapper .gfield_radio li label {
+	max-width: 100% !important;
+	width: 100%;
+}
+
+body.template-surveys-modern .gform_wrapper ul.gfield_checkbox,
+body.template-surveys-modern .gform_wrapper ul.gfield_radio {
+	margin: 0;
+}
+
+body.template-surveys-modern .gform_wrapper .description_above .gfield_description {
+	font-size: var(--font-size-general-small);
+	padding: 0 0 30px;
+	text-align: center;
+	max-width: 700px;
+	margin: 1rem auto 0;
+}
+
+body.template-surveys-modern form li.gfield .validation_message {
+	margin-top: -1rem !important;
+	margin-bottom: 5rem !important;
+	text-align: center !important;
+	font-weight: 500 !important;
+}
+
+body.template-surveys-modern span.gfield_required {
+	display: inline !important;
+	color: #7effe1 !important;
+}
+
+body.template-surveys-modern p {
+	font-size: 17px;
+	font-weight: 400;
+}
+
+body.template-surveys-modern .container,
+body.template-surveys-modern .site-header,
+body.template-surveys-modern .survey-header,
+body.template-surveys-modern .gform_wrapper,
+body.template-surveys-modern .gform_confirmation_wrapper {
+	max-width: 100rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+body.template-surveys-modern .container > *,
+body.template-surveys-modern .site-header > *,
+body.template-surveys-modern .survey-header > *,
+body.template-surveys-modern .gform_wrapper > *,
+body.template-surveys-modern .gform_confirmation_wrapper > * {
+	margin-left: 3rem;
+	margin-right: 3rem;
+}
+
+body.template-surveys-modern ul,
+body.template-surveys-modern li {
+	padding: 0;
+	margin-left: 0;
+	list-style: none;
+}
+
+body.template-surveys-modern h1,
+body.template-surveys-modern span,
+body.template-surveys-modern p,
+body.template-surveys-modern li,
+body.template-surveys-modern input[type="text"] {
+	font-family: "Circular", "Helvetica Neue", helvetica, sans-serif;
+	color: #fff;
+}
+
+body.template-surveys-modern .site {
+	overflow: visible;
+	position: static;
+}
+
+body.template-surveys-modern::after,
+body.template-surveys-modern .chat-greeting {
+	display: none;
+}
+
+body.template-surveys-modern .gform_confirmation_wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 2rem;
+	margin-top: 4rem;
+}
+
+body.template-surveys-modern .gform_confirmation_wrapper .thanks {
+	font-weight: 700;
+	font-size: 70px;
+	line-height: 1.1;
+	max-width: 560px;
+	margin: 0 auto;
+}
+
+body.template-surveys-modern .gform_confirmation_wrapper p {
+	color: #fff !important;
+	max-width: 500px;
+	margin: 5rem auto;
+	font-size: 17px;
+	line-height: 1.5;
+}
+
+body.template-surveys-modern .gform_confirmation_wrapper br {
+	display: none !important;
+}
+
+body.template-surveys-modern .gform_confirmation_wrapper .gform_confirmation_message {
+	font-size: 18px;
+	line-height: 1.5;
+	color: #fff;
+}
+
+body.template-surveys-modern .gform_wrapper {
+	max-width: 100rem;
+	padding-top: 43px;
+}
+
+body.template-surveys-modern .gform_wrapper table.gsurvey-likert th.gsurvey-likert-choice-label {
+	font-size: 14px !important;
+	font-weight: 300 !important;
+}
+
+body.template-surveys-modern .gform_wrapper table.gsurvey-likert td.gsurvey-likert-choice {
+	transition: all .22s;
+}
+
+body.template-surveys-modern .gform_wrapper table.gsurvey-likert td.gsurvey-likert-choice:not(.gsurvey-likert-selected):hover,
+body.template-surveys-modern .gform_wrapper table.gsurvey-likert td.gsurvey-likert-choice:not(.gsurvey-likert-selected):focus {
+	background-color: transparent !important;
+}
+
+body.template-surveys-modern .gform_wrapper table.gsurvey-likert td.gsurvey-likert-choice.gsurvey-likert-selected {
+	background-color: transparent;
+	color: #7effe1;
+	font-weight: 700;
+}
+
+body.template-surveys-modern .gform_wrapper table.gsurvey-likert .gsurvey-likert-choice {
+	padding: 2rem;
+}
+
+body.template-surveys-modern .gform_wrapper ul.gfield_checkbox > li {
+	min-width: 33.3% !important;
+	margin-right: 0 !important;
+	margin-bottom: -1px !important;
+	overflow: hidden !important;
+	flex: 1;
+}
+
+body.template-surveys-modern .gform_wrapper ul li.field_description_below div.ginput_container_radio,
+body.template-surveys-modern .gform_wrapper ul li.field_description_below div.ginput_container_checkbox,
+body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_radio,
+body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_checkbox {
+	margin: 0 0 4rem;
+}
+
+body.template-surveys-modern .gform_wrapper ul li.field_description_below div.ginput_container_radio > ul,
+body.template-surveys-modern .gform_wrapper ul li.field_description_below div.ginput_container_checkbox > ul,
+body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_radio > ul,
+body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_checkbox > ul {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+body.template-surveys-modern .gform_wrapper ul li.field_description_below div.ginput_container_radio > ul li,
+body.template-surveys-modern .gform_wrapper ul li.field_description_below div.ginput_container_checkbox > ul li,
+body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_radio > ul li,
+body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_checkbox > ul li {
+	width: auto;
+	min-width: 123px;
+	margin-right: 1rem;
+	border: 1px solid #898888;
+	background: transparent;
+	border-radius: 0;
+	padding: 0 !important;
+	text-align: center;
+	margin-bottom: 1rem;
+	transition: all .6s;
+}
+
+body.template-surveys-modern .gform_wrapper ul li.field_description_below div.ginput_container_radio > ul li:hover,
+body.template-surveys-modern .gform_wrapper ul li.field_description_below div.ginput_container_radio > ul li:focus,
+body.template-surveys-modern .gform_wrapper ul li.field_description_below div.ginput_container_checkbox > ul li:hover,
+body.template-surveys-modern .gform_wrapper ul li.field_description_below div.ginput_container_checkbox > ul li:focus,
+body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_radio > ul li:hover,
+body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_radio > ul li:focus,
+body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_checkbox > ul li:hover,
+body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_checkbox > ul li:focus {
+	background: #222;
+	opacity: 1;
+}
+
+body.template-surveys-modern .gform_wrapper ul li.field_description_below div.ginput_container_radio > #input_5_12 li,
+body.template-surveys-modern .gform_wrapper ul li.field_description_below div.ginput_container_checkbox > #input_5_12 li,
+body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_radio > #input_5_12 li,
+body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_checkbox > #input_5_12 li {
+	min-width: 220px !important;
+}
+
+body.template-surveys-modern .gform_wrapper input[type="checkbox"] {
+	display: none !important;
+}
+
+body.template-surveys-modern .gform_wrapper input[type="checkbox"] + label,
+body.template-surveys-modern .gform_wrapper input[type="radio"] + label {
+	font-size: 17px;
+	line-height: 1 !important;
+	margin: 0 !important;
+	font-weight: 300;
+	display: block;
+	position: relative;
+	margin-bottom: 20px;
+	color: #fff;
+	cursor: pointer;
+	user-select: none;
+	padding: 12px !important;
+}
+
+body.template-surveys-modern .gform_wrapper input[type="checkbox"] + label:last-child {
+	margin-bottom: 0;
+}
+
+body.template-surveys-modern .gform_wrapper input[type="checkbox"]:checked + label,
+body.template-surveys-modern .gform_wrapper input[type="radio"]:checked + label {
+	color: #7effe1;
+	opacity: 1;
+	font-weight: 700;
+}
+
+body.template-surveys-modern .gform_wrapper input[type="checkbox"] + label::before,
+body.template-surveys-modern .gform_wrapper input[type="radio"] + label::before {
+	content: '';
+	display: block;
+	position: absolute;
+	z-index: 0;
+	width: calc(100% + 2px);
+	height: calc(100% + 2px);
+	background: rgba(126, 255, 225, 0.2);
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: all 1s;
+	margin: -1px;
+	border-radius: 0;
+	border: 0;
+}
+
+body.template-surveys-modern .gform_wrapper input[type="checkbox"]:checked + label::before,
+body.template-surveys-modern .gform_wrapper input[type="radio"]:checked + label::before {
+	opacity: 1;
+}
+
+body.template-surveys-modern .gform_wrapper input[type="radio"] {
+	display: none !important;
+}
+
+body.template-surveys-modern .gform_wrapper .gfield_label {
+	font-size: 18px;
+	font-weight: 700;
+	text-align: center;
+	width: 100%;
+	display: block;
+	margin-bottom: 4rem;
+	margin-top: 0;
+}
+
+body.template-surveys-modern .gform_wrapper ul.gform_fields li.gfield {
+	margin-bottom: 10rem;
+	border: 1px solid #898888;
+	padding: 4rem 5rem 0;
+	overflow: hidden;
+}
+
+body.template-surveys-modern .gform_wrapper textarea,
+body.template-surveys-modern .gform_wrapper input,
+body.template-surveys-modern .gform_wrapper input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']) {
+	font-size: 17px;
+	width: calc(100% + 10rem);
+	border: 0;
+	border-top: 1px solid #4f4e4d;
+	padding-top: 5rem !important;
+	padding-bottom: 5rem !important;
+	padding-left: 5rem !important;
+	padding-right: 5rem !important;
+	margin-left: -5rem;
+	margin-right: -5rem;
+	margin-bottom: 0 !important;
+}
+
+body.template-surveys-modern .gform_wrapper textarea::placeholder,
+body.template-surveys-modern .gform_wrapper input::placeholder,
+body.template-surveys-modern .gform_wrapper input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file'])::placeholder {
+	text-align: center;
+	line-height: 150px;
+	white-space: pre-line;
+}
+
+body.template-surveys-modern .gform_wrapper textarea {
+	height: 240px;
+	color: #fff;
+}
+
+body.template-surveys-modern .gform_wrapper li.gfield_error input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']),
+body.template-surveys-modern .gform_wrapper li.gfield_error textarea {
+	border-left: 0 !important;
+	border-right: 0 !important;
+	border-top: 0 !important;
+	border-bottom: 0 !important;
+}
+
+body.template-surveys-modern .gform_wrapper li.gfield_error textarea {
+	border-top: 1px solid #4f4e4d !important;
+}
+
+body.template-surveys-modern .survey-header {
+	padding-top: 6rem;
+	margin: 0 auto;
+	text-align: left;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+}
+
+body.template-surveys-modern .survey-header .survey-header--logo-tagline,
+body.template-surveys-modern .survey-header .survey-header--logo {
+	text-align: right;
+}
+
+body.template-surveys-modern .survey-header::after {
+	content: '';
+	display: block;
+	height: 1px;
+	width: calc(100% - 6rem);
+	border-bottom: 1px solid #303030;
+	position: absolute;
+	bottom: 3.5rem;
+	left: 3rem;
+}
+
+body.template-surveys-modern .survey-header svg {
+	fill: #fff;
+	width: 100px;
+	height: 26px;
+	margin-top: 8px;
+	margin-bottom: 1rem;
+}
+
+body.template-surveys-modern .survey-header img {
+	max-width: 189px;
+	width: 100%;
+	height: auto;
+	margin-bottom: 1rem;
+}
+
+body.template-surveys-modern .survey-header h1 {
+	font-weight: 700;
+	margin-bottom: 1rem;
+	margin-top: 0;
+}
+
+body.template-surveys-modern .survey-header p {
+	margin-top: 0;
+	padding-bottom: 4rem;
+	margin-bottom: 9rem;
+	font-size: 17px;
+}
+
+body.template-surveys-modern .survey-header .survey-header-description {
+	opacity: .7;
+}
+
+body.template-surveys-modern .survey-header a {
+	color: #fff;
+	opacity: .7;
+	transition: all .6s;
+}
+
+body.template-surveys-modern .survey-header a:hover {
+	opacity: 1;
+}
+
+body.template-surveys-modern .survey-start-wrapper {
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: 10;
+	height: 70px;
+	background-color: rgba(0, 0, 0, 0.05);
+	box-shadow: rgba(0, 0, 0, 0.1) 0 -1px;
+}
+
+body.template-surveys-modern .survey-start-wrapper button.survey-start-button {
+	font-size: 19px;
+	position: relative;
+	font-family: inherit;
+	font-weight: 700;
+	cursor: pointer;
+	white-space: nowrap;
+	box-shadow: rgba(0, 0, 0, 0.1) 0 3px 12px 0;
+	min-height: 48px;
+	background-color: #232527;
+	color: #e3e4e6;
+	transition: background-color .2s ease 0s, color .2s ease 0s, border-color .2s ease 0s, opacity .2s ease 0s;
+	outline: none;
+	border-width: 1px;
+	border-style: solid;
+	border-image: initial;
+	padding: 2px 18px;
+	border-color: transparent;
+	border-radius: 4px;
+	margin: 0;
+}
+
+body.template-surveys-modern .gform_wrapper .gform_footer input.button,
+body.template-surveys-modern body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input,
+body.page-id-6357 .block.block-wide-text body.template-surveys-modern .gform_wrapper .gform_footer input,
+body.template-surveys-modern body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .gform_footer input.button.gform_button_select_files,
+body.page-id-6357 .block.block-wide-text body.template-surveys-modern .gform_wrapper.gf_browser_chrome .gform_footer input.button.gform_button_select_files,
+body.template-surveys-modern .gform_wrapper .gform_page_footer input.button,
+body.template-surveys-modern body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_page_footer .gform_footer input,
+body.page-id-6357 .block.block-wide-text body.template-surveys-modern .gform_wrapper .gform_page_footer .gform_footer input,
+body.template-surveys-modern body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .gform_page_footer input,
+body.page-id-6357 .block.block-wide-text body.template-surveys-modern .gform_wrapper .gform_footer .gform_page_footer input,
+body.template-surveys-modern body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .gform_page_footer input.button.gform_button_select_files,
+body.page-id-6357 .block.block-wide-text body.template-surveys-modern .gform_wrapper.gf_browser_chrome .gform_page_footer input.button.gform_button_select_files,
+body.template-surveys-modern .gform_wrapper .gform_footer input[type=submit],
+body.template-surveys-modern .gform_wrapper .gform_page_footer input[type=submit] {
+	font-size: 20px;
+	position: relative !important;
+	font-family: inherit !important;
+	font-weight: 700 !important;
+	cursor: pointer !important;
+	margin: 0 !important;
+	white-space: nowrap !important;
+	min-height: 48px !important;
+	background-color: #7effe1 !important;
+	color: #fff !important;
+	transition: background-color .2s ease 0s, color .2s ease 0s, border-color .2s ease 0s, opacity .2s ease 0s !important;
+	outline: none !important;
+	border-width: 1px !important;
+	border-style: solid !important;
+	border-image: initial !important;
+	padding: 2px 18px !important;
+	border-color: transparent !important;
+	border-radius: 0 !important;
+}
+
+body.template-surveys-modern input[type="hidden"] + br {
+	display: none !important;
+}
+
+body.template-surveys-modern .gform_wrapper .gform_footer {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+body.template-surveys-modern .gform_wrapper .gform_footer > input[type="submit"] {
+	width: 100% !important;
+	margin-bottom: 12rem !important;
+	padding-top: 3rem !important;
+	padding-bottom: 3rem !important;
+	border: 0 !important;
+	background: #7effe1 !important;
+	color: #131a50 !important;
+}
+
+body.template-surveys-modern .gform_wrapper .gform_footer > input[type="submit"]:hover {
+	background: #f1f1f1 !important;
+}
+
+body.template-surveys-modern .gform_wrapper .ginput_container.ginput_container_checkbox,
+body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_checkbox {
+	margin-left: -5rem !important;
+	margin-right: -5rem !important;
+	margin-bottom: 0 !important;
+}
+
+body.template-surveys-modern .gform_wrapper .ginput_container.ginput_container_checkbox ul.gfield_checkbox,
+body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_checkbox ul.gfield_checkbox {
+	width: calc(100% + 5px) !important;
+	margin-left: -3px !important;
+}
+
+body.template-surveys-modern .gform_wrapper .ginput_container.ginput_container_checkbox ul.gfield_checkbox li label,
+body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_checkbox ul.gfield_checkbox li label {
+	padding-top: 18px !important;
+	padding-bottom: 18px !important;
+}
+
+.gform_wrapper.gform_validation_error .gform_body ul li.gfield.gfield_error:not(.gf_left_half):not(.gf_right_half) {
+	max-width: 100% !important;
+}
+
 body.page-template-template-basic:not(.page-id-6357) .block.block-wide-text .container *,
 body.page-template-template-basic:not(.page-id-6357) .block.block-wide-text .site-header * {
 	padding-left: 0;
@@ -10874,18 +10349,12 @@ body.page-template-template-faq .block-faq .cols-two h3,
 }
 
 p,
-dd,
-dt,
 figcaption,
-hr,
 small,
 ol,
 ul,
 li,
 blockquote,
-kbd,
-pre,
-samp,
 code,
 th,
 td,
@@ -10902,11 +10371,6 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .conte
 .content-area input[type="reset"],
 .content-area input[type="submit"],
 .content-area input[type="button"],
-.content-area .block.block-hero.block-hero-frontpage button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset),
-.content-area .block.block-hero.block-hero-frontpage .button,
-.content-area .block.block-hero.block-hero-frontpage input[type="reset"],
-.content-area .block.block-hero.block-hero-frontpage input[type="submit"],
-.content-area .block.block-hero.block-hero-frontpage input[type="button"],
 textarea,
 select,
 input[type="text"],
@@ -10955,7 +10419,8 @@ h2 {
 	font-size: calc(27px + 18 * ((100vw - 320px) / 1600));
 }
 
-h3 {
+h3,
+body.template-surveys-modern .survey-header h1 {
 	font-size: calc(25px + 10 * ((100vw - 320px) / 1600));
 }
 
@@ -11027,6 +10492,50 @@ body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:n
 body.single .block.block-single:not(.block-single-reference) ul.tags figure figcaption,
 body.single .block.block-single:not(.block-single-reference) ul.tags cite {
 	font-size: calc(15px + 2 * ((100vw - 320px) / 1600));
+}
+
+body.template-surveys-modern p {
+	font-size: calc(17px + 3 * ((100vw - 320px) / 1600));
+}
+
+body.template-surveys-modern .gform_confirmation_wrapper .gform_confirmation_message {
+	font-size: calc(18px + 12 * ((100vw - 320px) / 1600));
+}
+
+body.template-surveys-modern .gform_wrapper input[type="checkbox"] + label,
+body.template-surveys-modern .gform_wrapper input[type="radio"] + label {
+	font-size: calc(17px + 3 * ((100vw - 320px) / 1600));
+}
+
+body.template-surveys-modern .gform_wrapper .gfield_label {
+	font-size: calc(18px + 8 * ((100vw - 320px) / 1600));
+}
+
+body.template-surveys-modern .gform_wrapper textarea,
+body.template-surveys-modern .gform_wrapper input,
+body.template-surveys-modern .gform_wrapper input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']) {
+	font-size: calc(17px + 3 * ((100vw - 320px) / 1600));
+}
+
+body.template-surveys-modern .survey-start-wrapper button.survey-start-button {
+	font-size: calc(19px + 3 * ((100vw - 320px) / 1600));
+}
+
+body.template-surveys-modern .gform_wrapper .gform_footer input.button,
+body.template-surveys-modern body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input,
+body.page-id-6357 .block.block-wide-text body.template-surveys-modern .gform_wrapper .gform_footer input,
+body.template-surveys-modern body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .gform_footer input.button.gform_button_select_files,
+body.page-id-6357 .block.block-wide-text body.template-surveys-modern .gform_wrapper.gf_browser_chrome .gform_footer input.button.gform_button_select_files,
+body.template-surveys-modern .gform_wrapper .gform_page_footer input.button,
+body.template-surveys-modern body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_page_footer .gform_footer input,
+body.page-id-6357 .block.block-wide-text body.template-surveys-modern .gform_wrapper .gform_page_footer .gform_footer input,
+body.template-surveys-modern body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .gform_page_footer input,
+body.page-id-6357 .block.block-wide-text body.template-surveys-modern .gform_wrapper .gform_footer .gform_page_footer input,
+body.template-surveys-modern body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .gform_page_footer input.button.gform_button_select_files,
+body.page-id-6357 .block.block-wide-text body.template-surveys-modern .gform_wrapper.gf_browser_chrome .gform_page_footer input.button.gform_button_select_files,
+body.template-surveys-modern .gform_wrapper .gform_footer input[type=submit],
+body.template-surveys-modern .gform_wrapper .gform_page_footer input[type=submit] {
+	font-size: calc(20px + 6 * ((100vw - 320px) / 1600));
 }
 
 .cart p {
@@ -14074,18 +13583,12 @@ body.page-template-template-faq .block-faq .cols-two h3,
 }
 
 p,
-dd,
-dt,
 figcaption,
-hr,
 small,
 ol,
 ul,
 li,
 blockquote,
-kbd,
-pre,
-samp,
 code,
 th,
 td,
@@ -14102,11 +13605,6 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .conte
 .content-area input[type="reset"],
 .content-area input[type="submit"],
 .content-area input[type="button"],
-.content-area .block.block-hero.block-hero-frontpage button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset),
-.content-area .block.block-hero.block-hero-frontpage .button,
-.content-area .block.block-hero.block-hero-frontpage input[type="reset"],
-.content-area .block.block-hero.block-hero-frontpage input[type="submit"],
-.content-area .block.block-hero.block-hero-frontpage input[type="button"],
 textarea,
 select,
 input[type="text"],
@@ -14155,7 +13653,8 @@ h2 {
 	font-size: 45px;
 }
 
-h3 {
+h3,
+body.template-surveys-modern .survey-header h1 {
 	font-size: 35px;
 }
 
@@ -14227,6 +13726,50 @@ body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:n
 body.single .block.block-single:not(.block-single-reference) ul.tags figure figcaption,
 body.single .block.block-single:not(.block-single-reference) ul.tags cite {
 	font-size: 17px;
+}
+
+body.template-surveys-modern p {
+	font-size: 20px;
+}
+
+body.template-surveys-modern .gform_confirmation_wrapper .gform_confirmation_message {
+	font-size: 30px;
+}
+
+body.template-surveys-modern .gform_wrapper input[type="checkbox"] + label,
+body.template-surveys-modern .gform_wrapper input[type="radio"] + label {
+	font-size: 20px;
+}
+
+body.template-surveys-modern .gform_wrapper .gfield_label {
+	font-size: 26px;
+}
+
+body.template-surveys-modern .gform_wrapper textarea,
+body.template-surveys-modern .gform_wrapper input,
+body.template-surveys-modern .gform_wrapper input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']) {
+	font-size: 20px;
+}
+
+body.template-surveys-modern .survey-start-wrapper button.survey-start-button {
+	font-size: 22px;
+}
+
+body.template-surveys-modern .gform_wrapper .gform_footer input.button,
+body.template-surveys-modern body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input,
+body.page-id-6357 .block.block-wide-text body.template-surveys-modern .gform_wrapper .gform_footer input,
+body.template-surveys-modern body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .gform_footer input.button.gform_button_select_files,
+body.page-id-6357 .block.block-wide-text body.template-surveys-modern .gform_wrapper.gf_browser_chrome .gform_footer input.button.gform_button_select_files,
+body.template-surveys-modern .gform_wrapper .gform_page_footer input.button,
+body.template-surveys-modern body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_page_footer .gform_footer input,
+body.page-id-6357 .block.block-wide-text body.template-surveys-modern .gform_wrapper .gform_page_footer .gform_footer input,
+body.template-surveys-modern body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .gform_page_footer input,
+body.page-id-6357 .block.block-wide-text body.template-surveys-modern .gform_wrapper .gform_footer .gform_page_footer input,
+body.template-surveys-modern body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .gform_page_footer input.button.gform_button_select_files,
+body.page-id-6357 .block.block-wide-text body.template-surveys-modern .gform_wrapper.gf_browser_chrome .gform_page_footer input.button.gform_button_select_files,
+body.template-surveys-modern .gform_wrapper .gform_footer input[type=submit],
+body.template-surveys-modern .gform_wrapper .gform_page_footer input[type=submit] {
+	font-size: 26px;
 }
 
 .cart p {
@@ -14326,6 +13869,18 @@ body:not(.page-id-6357) .block.block-wide-text .site-header li {
 
 }
 
+@media (max-width: 1550px) {
+
+.content-area .block.block-merch .cols {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr); /* autoprefixer: off */
+	grid-auto-rows: minmax(0, auto);
+	grid-column-gap: 6rem;
+	grid-row-gap: 6rem;
+}
+
+}
+
 @media all and (max-width: 1550px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 1550px) and (-ms-high-contrast: active) and (max-width: 870px) {
 
 .content-area .block.block-merch .cols > div {
@@ -14350,14 +13905,18 @@ body:not(.page-id-6357) .block.block-wide-text .site-header li {
 
 }
 
-@media (max-width: 1550px) {
+@media all and (max-width: 1500px) and (-ms-high-contrast: none), (max-width: 1500px) and (-ms-high-contrast: active) {
 
-.content-area .block.block-merch .cols {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr); /* autoprefixer: off */
-	grid-auto-rows: minmax(0, auto);
-	grid-column-gap: 6rem;
-	grid-row-gap: 6rem;
+.block.block-logos .logo-wall {
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+.block.block-logos .logo-wall > div {
+	width: calc(20% - 50px);
+	margin-right: 50px;
+	margin-bottom: 6rem;
 }
 
 }
@@ -14390,22 +13949,6 @@ body:not(.page-id-6357) .block.block-wide-text .site-header li {
 	grid-auto-rows: minmax(0, auto);
 	grid-column-gap: 100px;
 	grid-row-gap: 6rem;
-}
-
-}
-
-@media all and (max-width: 1500px) and (-ms-high-contrast: none), (max-width: 1500px) and (-ms-high-contrast: active) {
-
-.block.block-logos .logo-wall {
-	display: flex;
-	flex-wrap: wrap;
-	overflow: hidden;
-}
-
-.block.block-logos .logo-wall > div {
-	width: calc(20% - 50px);
-	margin-right: 50px;
-	margin-bottom: 6rem;
 }
 
 }
@@ -14535,6 +14078,18 @@ body.single .block.block-single:not(.block-single-reference) ul.tags ul.gform_fi
 
 }
 
+@media (max-width: 1250px) {
+
+.block.block-logos .logo-wall {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr); /* autoprefixer: off */
+	grid-auto-rows: minmax(0, auto);
+	grid-column-gap: 100px;
+	grid-row-gap: 6rem;
+}
+
+}
+
 @media all and (max-width: 1250px) and (-ms-high-contrast: none), (max-width: 1250px) and (-ms-high-contrast: active) {
 
 .block.block-logos .logo-wall {
@@ -14555,18 +14110,6 @@ body.single .block.block-single:not(.block-single-reference) ul.tags ul.gform_fi
 
 .block.block-logos .logo-wall > div {
 	width: 100%;
-}
-
-}
-
-@media (max-width: 1250px) {
-
-.block.block-logos .logo-wall {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr); /* autoprefixer: off */
-	grid-auto-rows: minmax(0, auto);
-	grid-column-gap: 100px;
-	grid-row-gap: 6rem;
 }
 
 }
@@ -14747,6 +14290,49 @@ body:not(.page-id-6357) .block.block-wide-text .site-header .block.block-timelin
 
 }
 
+@media all and (max-width: 1100px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 1100px) and (-ms-high-contrast: active) and (max-width: 870px) {
+
+.block.block-references .reference-wrapper.reference-wrapper-cols > div {
+	width: 100%;
+}
+
+.block.block-community-photos .container > div,
+.block.block-community-photos .site-header > div {
+	width: 100%;
+}
+
+}
+
+@media all and (max-width: 1100px) and (-ms-high-contrast: none), (max-width: 1100px) and (-ms-high-contrast: active) {
+
+.block.block-references .reference-wrapper.reference-wrapper-cols {
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+.block.block-references .reference-wrapper.reference-wrapper-cols > div {
+	width: calc(50% - 4.5rem);
+	margin-right: 4.5rem;
+	margin-bottom: 14rem;
+}
+
+.block.block-community-photos .container,
+.block.block-community-photos .site-header {
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+.block.block-community-photos .container > div,
+.block.block-community-photos .site-header > div {
+	width: calc(33.33333% - 3rem);
+	margin-right: 3rem;
+	margin-bottom: 6rem;
+}
+
+}
+
 @media (max-width: 1100px) {
 
 .block.block-references .reference-wrapper.reference-wrapper-cols {
@@ -14784,47 +14370,17 @@ body:not(.page-id-6357) .block.block-wide-text .site-header .block.block-timelin
 	grid-row-gap: 6rem;
 }
 
+body.template-surveys-modern .gform_wrapper table.gsurvey-likert .gsurvey-likert-choice {
+	padding: .5rem 1rem;
+	background-position: 1rem center !important;
 }
 
-@media all and (max-width: 1100px) and (-ms-high-contrast: none), (max-width: 1100px) and (-ms-high-contrast: active) {
-
-.block.block-references .reference-wrapper.reference-wrapper-cols {
-	display: flex;
-	flex-wrap: wrap;
-	overflow: hidden;
+body.template-surveys-modern .gform_wrapper table.gsurvey-likert .gsurvey-likert-choice input {
+	margin-left: 1rem !important;
 }
 
-.block.block-references .reference-wrapper.reference-wrapper-cols > div {
-	width: calc(50% - 4.5rem);
-	margin-right: 4.5rem;
-	margin-bottom: 14rem;
-}
-
-.block.block-community-photos .container,
-.block.block-community-photos .site-header {
-	display: flex;
-	flex-wrap: wrap;
-	overflow: hidden;
-}
-
-.block.block-community-photos .container > div,
-.block.block-community-photos .site-header > div {
-	width: calc(33.33333% - 3rem);
-	margin-right: 3rem;
-	margin-bottom: 6rem;
-}
-
-}
-
-@media all and (max-width: 1100px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 1100px) and (-ms-high-contrast: active) and (max-width: 870px) {
-
-.block.block-references .reference-wrapper.reference-wrapper-cols > div {
-	width: 100%;
-}
-
-.block.block-community-photos .container > div,
-.block.block-community-photos .site-header > div {
-	width: 100%;
+body.template-surveys-modern .gform_wrapper table.gsurvey-likert .gsurvey-likert-choice::after {
+	margin-left: 3rem !important;
 }
 
 }
@@ -15272,6 +14828,46 @@ body:not(.page-id-6357) .block.block-wide-text .site-header .is-variable.is-8-to
 
 }
 
+@media all and (max-width: 1000px) and (-ms-high-contrast: none), (max-width: 1000px) and (-ms-high-contrast: active) {
+
+.block.block-dudes .cols {
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+.block.block-dudes .cols > div {
+	width: calc(50% - 3rem);
+	margin-right: 3rem;
+	margin-bottom: 0;
+}
+
+.block.block-open-source .repos {
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+.block.block-open-source .repos > div {
+	width: calc(50% - 1.5rem);
+	margin-right: 1.5rem;
+	margin-bottom: 3rem;
+}
+
+.block.block-blog .cols {
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+.block.block-blog .cols > div {
+	width: calc(50% - 3rem);
+	margin-right: 3rem;
+	margin-bottom: 6rem;
+}
+
+}
+
 @media all and (max-width: 1000px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 1000px) and (-ms-high-contrast: active) and (max-width: 870px) {
 
 .block.block-dudes .cols > div {
@@ -15342,6 +14938,17 @@ body.single .block.block-single:not(.block-single-reference) ul.tags .entry-cont
 	grid-row-gap: 3rem;
 }
 
+body.template-surveys-modern {
+	background-size: cover;
+}
+
+body.template-surveys-modern .gform_wrapper textarea::placeholder,
+body.template-surveys-modern .gform_wrapper input::placeholder,
+body.template-surveys-modern .gform_wrapper input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file'])::placeholder {
+	line-height: 1.5;
+	padding-top: 5rem;
+}
+
 body.page-id-6357 .block.block-wide-text .gform_wrapper ul.gform_fields {
 	margin-left: -2.5rem !important;
 	margin-right: -2.5rem !important;
@@ -15365,46 +14972,6 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper form li.gfmc-column.gfmc
 	grid-auto-rows: minmax(0, auto);
 	grid-column-gap: 6rem;
 	grid-row-gap: 6rem;
-}
-
-}
-
-@media all and (max-width: 1000px) and (-ms-high-contrast: none), (max-width: 1000px) and (-ms-high-contrast: active) {
-
-.block.block-dudes .cols {
-	display: flex;
-	flex-wrap: wrap;
-	overflow: hidden;
-}
-
-.block.block-dudes .cols > div {
-	width: calc(50% - 3rem);
-	margin-right: 3rem;
-	margin-bottom: 0;
-}
-
-.block.block-open-source .repos {
-	display: flex;
-	flex-wrap: wrap;
-	overflow: hidden;
-}
-
-.block.block-open-source .repos > div {
-	width: calc(50% - 1.5rem);
-	margin-right: 1.5rem;
-	margin-bottom: 3rem;
-}
-
-.block.block-blog .cols {
-	display: flex;
-	flex-wrap: wrap;
-	overflow: hidden;
-}
-
-.block.block-blog .cols > div {
-	width: calc(50% - 3rem);
-	margin-right: 3rem;
-	margin-bottom: 6rem;
 }
 
 }
@@ -15456,30 +15023,6 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper form li.gfmc-column.gfmc
 
 }
 
-@media all and (max-width: 960px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 960px) and (-ms-high-contrast: active) and (max-width: 870px) {
-
-.block.block-logos .logo-wall > div {
-	width: 100%;
-}
-
-}
-
-@media all and (max-width: 960px) and (-ms-high-contrast: none), (max-width: 960px) and (-ms-high-contrast: active) {
-
-.block.block-logos .logo-wall {
-	display: flex;
-	flex-wrap: wrap;
-	overflow: hidden;
-}
-
-.block.block-logos .logo-wall > div {
-	width: calc(33.33333% - 25px);
-	margin-right: 25px;
-	margin-bottom: 6rem;
-}
-
-}
-
 @media (max-width: 960px) {
 
 .block.block-logos .logo-wall {
@@ -15523,6 +15066,30 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper form li.gfmc-column.gfmc
 
 .cart svg {
 	margin-right: 2.5rem;
+}
+
+}
+
+@media all and (max-width: 960px) and (-ms-high-contrast: none), (max-width: 960px) and (-ms-high-contrast: active) {
+
+.block.block-logos .logo-wall {
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+.block.block-logos .logo-wall > div {
+	width: calc(33.33333% - 25px);
+	margin-right: 25px;
+	margin-bottom: 6rem;
+}
+
+}
+
+@media all and (max-width: 960px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 960px) and (-ms-high-contrast: active) and (max-width: 870px) {
+
+.block.block-logos .logo-wall > div {
+	width: 100%;
 }
 
 }
@@ -15720,12 +15287,21 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .block
 	grid-row-gap: 0rem;
 }
 
+body.template-surveys-modern .gform_wrapper .ginput_container.ginput_container_checkbox ul.gfield_checkbox li label,
+body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_checkbox ul.gfield_checkbox li label {
+	font-size: var(--font-size-general-small) !important;
 }
 
-@media all and (max-width: 890px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 890px) and (-ms-high-contrast: active) and (max-width: 870px) {
+}
 
-.block.block-latest-selected-mustread .row.row-mustread > div {
-	width: 100%;
+@media (max-width: 890px) {
+
+.block.block-latest-selected-mustread .row.row-mustread {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr); /* autoprefixer: off */
+	grid-auto-rows: minmax(0, auto);
+	grid-column-gap: 6rem;
+	grid-row-gap: 9rem;
 }
 
 }
@@ -15746,14 +15322,10 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .block
 
 }
 
-@media (max-width: 890px) {
+@media all and (max-width: 890px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 890px) and (-ms-high-contrast: active) and (max-width: 870px) {
 
-.block.block-latest-selected-mustread .row.row-mustread {
-	display: grid;
-	grid-template-columns: repeat(1, 1fr); /* autoprefixer: off */
-	grid-auto-rows: minmax(0, auto);
-	grid-column-gap: 6rem;
-	grid-row-gap: 9rem;
+.block.block-latest-selected-mustread .row.row-mustread > div {
+	width: 100%;
 }
 
 }
@@ -15867,6 +15439,14 @@ body.single.single-reference .block.block-single.block-single-reference {
 .block.block-community .cols {
 	display: flex;
 	flex-wrap: wrap;
+}
+
+body.template-surveys-modern .gform_wrapper {
+	padding-top: 3px;
+}
+
+body.template-surveys-modern .survey-header {
+	padding-top: 4rem;
 }
 
 .wp-block-columns,
@@ -16628,14 +16208,6 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .top-b
 
 }
 
-@media all and (max-width: 730px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 730px) and (-ms-high-contrast: active) and (max-width: 870px) {
-
-.block.block-references .reference-wrapper.reference-wrapper-cols > div {
-	width: 100%;
-}
-
-}
-
 @media (max-width: 730px) {
 
 .block.block-references .slick-slide {
@@ -16658,6 +16230,14 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .top-b
 
 }
 
+@media all and (max-width: 730px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 730px) and (-ms-high-contrast: active) and (max-width: 870px) {
+
+.block.block-references .reference-wrapper.reference-wrapper-cols > div {
+	width: 100%;
+}
+
+}
+
 @media all and (max-width: 730px) and (-ms-high-contrast: none), (max-width: 730px) and (-ms-high-contrast: active) {
 
 .block.block-references .reference-wrapper.reference-wrapper-cols {
@@ -16674,29 +16254,26 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .top-b
 
 }
 
-@media all and (max-width: 700px) and (-ms-high-contrast: none), (max-width: 700px) and (-ms-high-contrast: active) {
+@media (max-width: 710px) {
 
-.block.block-community-photos .container,
-.block.block-community-photos .site-header {
-	display: flex;
-	flex-wrap: wrap;
-	overflow: hidden;
+body.template-surveys-modern .gform_wrapper ul.gfield_checkbox > li {
+	min-width: 50% !important;
+	width: 50% !important;
 }
 
-.block.block-community-photos .container > div,
-.block.block-community-photos .site-header > div {
-	width: calc(50% - 2rem);
-	margin-right: 2rem;
-	margin-bottom: 4rem;
+body.template-surveys-modern .gform_wrapper ul li.field_description_below div.ginput_container_radio > ul li,
+body.template-surveys-modern .gform_wrapper ul li.field_description_below div.ginput_container_checkbox > ul li,
+body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_radio > ul li,
+body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_checkbox > ul li {
+	width: 100% !important;
+	margin-right: 0 !important;
+	margin-bottom: -1px;
 }
 
-}
-
-@media all and (max-width: 700px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 700px) and (-ms-high-contrast: active) and (max-width: 870px) {
-
-.block.block-community-photos .container > div,
-.block.block-community-photos .site-header > div {
-	width: 100%;
+body.template-surveys-modern .gform_wrapper .ginput_container.ginput_container_checkbox ul.gfield_checkbox,
+body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_checkbox ul.gfield_checkbox {
+	width: calc(100% + 3px) !important;
+	margin-left: -2px !important;
 }
 
 }
@@ -16756,6 +16333,33 @@ body.page-template-template-faq .block.block-hero.block-hero-light.block-hero-fa
 
 }
 
+@media all and (max-width: 700px) and (-ms-high-contrast: none), (max-width: 700px) and (-ms-high-contrast: active) {
+
+.block.block-community-photos .container,
+.block.block-community-photos .site-header {
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+.block.block-community-photos .container > div,
+.block.block-community-photos .site-header > div {
+	width: calc(50% - 2rem);
+	margin-right: 2rem;
+	margin-bottom: 4rem;
+}
+
+}
+
+@media all and (max-width: 700px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 700px) and (-ms-high-contrast: active) and (max-width: 870px) {
+
+.block.block-community-photos .container > div,
+.block.block-community-photos .site-header > div {
+	width: 100%;
+}
+
+}
+
 @media (max-width: 680px) {
 
 .site-title svg {
@@ -16773,30 +16377,6 @@ body.page-template-template-faq .block.block-hero.block-hero-light.block-hero-fa
 
 .block.block-dudes .col {
 	margin-bottom: 2rem;
-}
-
-}
-
-@media all and (max-width: 650px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 650px) and (-ms-high-contrast: active) and (max-width: 870px) {
-
-.block.block-logos .logo-wall > div {
-	width: 100%;
-}
-
-}
-
-@media all and (max-width: 650px) and (-ms-high-contrast: none), (max-width: 650px) and (-ms-high-contrast: active) {
-
-.block.block-logos .logo-wall {
-	display: flex;
-	flex-wrap: wrap;
-	overflow: hidden;
-}
-
-.block.block-logos .logo-wall > div {
-	width: calc(33.33333% - 10px);
-	margin-right: 10px;
-	margin-bottom: 40px;
 }
 
 }
@@ -16850,21 +16430,39 @@ body.page-template-template-faq .block.block-hero.block-hero-light.block-hero-fa
 
 }
 
+@media all and (max-width: 650px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 650px) and (-ms-high-contrast: active) and (max-width: 870px) {
+
+.block.block-logos .logo-wall > div {
+	width: 100%;
+}
+
+}
+
+@media all and (max-width: 650px) and (-ms-high-contrast: none), (max-width: 650px) and (-ms-high-contrast: active) {
+
+.block.block-logos .logo-wall {
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+.block.block-logos .logo-wall > div {
+	width: calc(33.33333% - 10px);
+	margin-right: 10px;
+	margin-bottom: 40px;
+}
+
+}
+
 @media (max-width: 600px) {
 
 p,
-dd,
-dt,
 figcaption,
-hr,
 small,
 ol,
 ul,
 li,
 blockquote,
-kbd,
-pre,
-samp,
 code,
 th,
 td,
@@ -16881,11 +16479,6 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .conte
 .content-area input[type="reset"],
 .content-area input[type="submit"],
 .content-area input[type="button"],
-.content-area .block.block-hero.block-hero-frontpage button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset),
-.content-area .block.block-hero.block-hero-frontpage .button,
-.content-area .block.block-hero.block-hero-frontpage input[type="reset"],
-.content-area .block.block-hero.block-hero-frontpage input[type="submit"],
-.content-area .block.block-hero.block-hero-frontpage input[type="button"],
 textarea,
 select,
 input[type="text"],
@@ -17099,6 +16692,30 @@ body:not(.page-id-6357) .block.block-wide-text body.single.single-reference .blo
 	margin-bottom: 0;
 }
 
+body.template-surveys-modern .gform_confirmation_wrapper .thanks {
+	font-size: 30px;
+}
+
+body.template-surveys-modern .gform_wrapper textarea::placeholder,
+body.template-surveys-modern .gform_wrapper input::placeholder,
+body.template-surveys-modern .gform_wrapper input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file'])::placeholder {
+	padding-top: 4rem;
+}
+
+body.template-surveys-modern .survey-header svg {
+	width: 70px;
+	height: 16.14px;
+}
+
+body.template-surveys-modern .survey-header h1 {
+	font-size: 20px;
+}
+
+body.template-surveys-modern .survey-header p {
+	font-size: 15px;
+	padding-bottom: 2rem;
+}
+
 .cart .buttons {
 	white-space: normal;
 }
@@ -17168,6 +16785,26 @@ th {
 
 }
 
+@media (max-width: 580px) {
+
+.block.block-values .cols {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr); /* autoprefixer: off */
+	grid-auto-rows: minmax(0, auto);
+	grid-column-gap: 6rem;
+	grid-row-gap: 6rem;
+}
+
+.block.block-blog .cols {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr); /* autoprefixer: off */
+	grid-auto-rows: minmax(0, auto);
+	grid-column-gap: 6rem;
+	grid-row-gap: 6rem;
+}
+
+}
+
 @media all and (max-width: 580px) and (-ms-high-contrast: none), (max-width: 580px) and (-ms-high-contrast: active) {
 
 .block.block-values .cols {
@@ -17196,26 +16833,6 @@ th {
 
 }
 
-@media (max-width: 580px) {
-
-.block.block-values .cols {
-	display: grid;
-	grid-template-columns: repeat(1, 1fr); /* autoprefixer: off */
-	grid-auto-rows: minmax(0, auto);
-	grid-column-gap: 6rem;
-	grid-row-gap: 6rem;
-}
-
-.block.block-blog .cols {
-	display: grid;
-	grid-template-columns: repeat(1, 1fr); /* autoprefixer: off */
-	grid-auto-rows: minmax(0, auto);
-	grid-column-gap: 6rem;
-	grid-row-gap: 6rem;
-}
-
-}
-
 @media (max-width: 570px) {
 
 .block.block-community .item-list {
@@ -17224,10 +16841,41 @@ th {
 
 }
 
+@media (max-width: 550px) {
+
+body.template-surveys-modern .gform_wrapper ul.gfield_checkbox > li {
+	min-width: 50% !important;
+	width: 100% !important;
+}
+
+body.template-surveys-modern .gform_wrapper .ginput_container.ginput_container_checkbox ul.gfield_checkbox,
+body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_checkbox ul.gfield_checkbox {
+	width: calc(100% + 2px) !important;
+	margin-left: -2px !important;
+}
+
+}
+
 @media all and (max-width: 530px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 530px) and (-ms-high-contrast: active) and (max-width: 870px) {
 
 .block.block-hero-person .cols > div {
 	width: 100%;
+}
+
+}
+
+@media all and (max-width: 530px) and (-ms-high-contrast: none), (max-width: 530px) and (-ms-high-contrast: active) {
+
+.block.block-hero-person .cols {
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+.block.block-hero-person .cols > div {
+	width: calc(100% - 0rem);
+	margin-right: 0rem;
+	margin-bottom: 0rem;
 }
 
 }
@@ -17259,22 +16907,6 @@ th {
 
 .block.block-hero-person .cols .col {
 	order: 2;
-}
-
-}
-
-@media all and (max-width: 530px) and (-ms-high-contrast: none), (max-width: 530px) and (-ms-high-contrast: active) {
-
-.block.block-hero-person .cols {
-	display: flex;
-	flex-wrap: wrap;
-	overflow: hidden;
-}
-
-.block.block-hero-person .cols > div {
-	width: calc(100% - 0rem);
-	margin-right: 0rem;
-	margin-bottom: 0rem;
 }
 
 }
@@ -17318,6 +16950,47 @@ th {
 	font-size: 18px;
 }
 
+body.template-surveys-modern .gform_wrapper .gfield_label {
+	font-size: 18px;
+	margin-bottom: 3rem;
+}
+
+body.template-surveys-modern .gform_wrapper ul.gform_fields li.gfield {
+	padding: 3rem 3rem 0;
+	margin-bottom: 5rem;
+}
+
+body.template-surveys-modern .gform_wrapper textarea,
+body.template-surveys-modern .gform_wrapper input,
+body.template-surveys-modern .gform_wrapper input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']) {
+	margin-left: -3rem;
+	margin-right: -3rem;
+	width: calc(100% + 6rem);
+}
+
+body.template-surveys-modern .gform_wrapper textarea::placeholder,
+body.template-surveys-modern .gform_wrapper input::placeholder,
+body.template-surveys-modern .gform_wrapper input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file'])::placeholder {
+	padding-top: 2rem;
+}
+
+body.template-surveys-modern .survey-header::after {
+	left: 3rem;
+	width: calc(100% - 6rem);
+	bottom: 2rem;
+}
+
+body.template-surveys-modern .survey-header p {
+	padding-bottom: 5px;
+}
+
+body.template-surveys-modern .gform_wrapper .ginput_container.ginput_container_checkbox,
+body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_checkbox {
+	margin-left: -3rem !important;
+	margin-right: -3rem !important;
+	width: calc(100% + 6rem) !important;
+}
+
 body.page-id-6357 .block.block-wide-text .gform_wrapper form #field_6_11 ul .checkbox + label::before,
 body.page-id-6357 .block.block-wide-text .gform_wrapper form #field_6_11 ul .gform_wrapper ul.gfield_checkbox li input[type=checkbox] + br + label::before,
 body.page-id-6357 .block.block-wide-text .gform_wrapper form #field_6_11 ul .gform_wrapper ul.gfield_radio li input[type=radio] + br + label::before,
@@ -17331,49 +17004,6 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper form #field_6_11 ul inpu
 body.page-id-6357 .block.block-wide-text .gform_wrapper form #field_6_11 ul .gform_wrapper ul.gfield_radio li input[type=radio]:checked + br + label::before,
 body.page-id-6357 .block.block-wide-text .gform_wrapper form #field_6_11 ul input[type=radio]:checked + label::before {
 	margin-top: -16px;
-}
-
-}
-
-@media all and (max-width: 480px) and (-ms-high-contrast: none), (max-width: 480px) and (-ms-high-contrast: active) {
-
-.col.col-services {
-	display: flex;
-	flex-wrap: wrap;
-	overflow: hidden;
-}
-
-.col.col-services > div {
-	width: calc(100% - 3rem);
-	margin-right: 3rem;
-	margin-bottom: 6rem;
-}
-
-.block.block-community-photos .container,
-.block.block-community-photos .site-header {
-	display: flex;
-	flex-wrap: wrap;
-	overflow: hidden;
-}
-
-.block.block-community-photos .container > div,
-.block.block-community-photos .site-header > div {
-	width: calc(50% - 1rem);
-	margin-right: 1rem;
-	margin-bottom: 2rem;
-}
-
-}
-
-@media all and (max-width: 480px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 480px) and (-ms-high-contrast: active) and (max-width: 870px) {
-
-.col.col-services > div {
-	width: 100%;
-}
-
-.block.block-community-photos .container > div,
-.block.block-community-photos .site-header > div {
-	width: 100%;
 }
 
 }
@@ -17580,6 +17210,25 @@ body.single .block.block-single:not(.block-single-reference) .post > .author-car
 	grid-row-gap: 2rem;
 }
 
+body.template-surveys-modern table.gsurvey-likert td.gsurvey-likert-choice.gsurvey-likert-selected {
+	background-size: 20px 20px;
+}
+
+body.template-surveys-modern .container > *,
+body.template-surveys-modern .site-header > *,
+body.template-surveys-modern .survey-header > *,
+body.template-surveys-modern .gform_wrapper > *,
+body.template-surveys-modern .gform_confirmation_wrapper > * {
+	margin-left: 2rem;
+	margin-right: 2rem;
+}
+
+body.template-surveys-modern .survey-start-wrapper {
+	background: #f2f2f2;
+	position: static;
+	margin-top: 3rem;
+}
+
 body.page-template-template-company .block.block-cta-with-image .col.col-image {
 	height: 22rem;
 }
@@ -17678,22 +17327,45 @@ body:not(.page-id-6357) .block.block-wide-text .site-header > *.wp-video {
 
 }
 
-@media (max-width: 460px) {
+@media all and (max-width: 480px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 480px) and (-ms-high-contrast: active) and (max-width: 870px) {
 
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-address-container .simpay-address-city-container,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-address-container .simpay-address-state-container,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-address-container .simpay-address-zip-container,
-.simpay-checkout-form.simpay-checkout-form--stripe_checkout-styled .simpay-address-container .simpay-address-country-container,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-address-container .simpay-address-city-container,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-address-container .simpay-address-state-container,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-address-container .simpay-address-zip-container,
-.simpay-checkout-form.simpay-checkout-form--overlay .simpay-address-container .simpay-address-country-container,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-address-container .simpay-address-city-container,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-address-container .simpay-address-state-container,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-address-container .simpay-address-zip-container,
-.simpay-checkout-form.simpay-checkout-form--embedded .simpay-address-container .simpay-address-country-container {
+.col.col-services > div {
 	width: 100%;
-	float: none;
+}
+
+.block.block-community-photos .container > div,
+.block.block-community-photos .site-header > div {
+	width: 100%;
+}
+
+}
+
+@media all and (max-width: 480px) and (-ms-high-contrast: none), (max-width: 480px) and (-ms-high-contrast: active) {
+
+.col.col-services {
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+.col.col-services > div {
+	width: calc(100% - 3rem);
+	margin-right: 3rem;
+	margin-bottom: 6rem;
+}
+
+.block.block-community-photos .container,
+.block.block-community-photos .site-header {
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+.block.block-community-photos .container > div,
+.block.block-community-photos .site-header > div {
+	width: calc(50% - 1rem);
+	margin-right: 1rem;
+	margin-bottom: 2rem;
 }
 
 }
@@ -17751,16 +17423,7 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-a
 body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .content-area input.button.gform_button_select_files,
 .content-area input[type="reset"],
 .content-area input[type="submit"],
-.content-area input[type="button"],
-.content-area .block.block-hero.block-hero-frontpage button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset),
-.content-area .block.block-hero.block-hero-frontpage .button,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input,
-body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area .block.block-hero.block-hero-frontpage input,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files,
-body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .content-area .block.block-hero.block-hero-frontpage input.button.gform_button_select_files,
-.content-area .block.block-hero.block-hero-frontpage input[type="reset"],
-.content-area .block.block-hero.block-hero-frontpage input[type="submit"],
-.content-area .block.block-hero.block-hero-frontpage input[type="button"] {
+.content-area input[type="button"] {
 	font-size: 16px;
 }
 
@@ -17772,16 +17435,7 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-a
 body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .content-area input.button.gform_button_select_files svg,
 .content-area input[type="reset"] svg,
 .content-area input[type="submit"] svg,
-.content-area input[type="button"] svg,
-.content-area .block.block-hero.block-hero-frontpage button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset) svg,
-.content-area .block.block-hero.block-hero-frontpage .button svg,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input svg,
-body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area .block.block-hero.block-hero-frontpage input svg,
-.content-area .block.block-hero.block-hero-frontpage body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files svg,
-body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .content-area .block.block-hero.block-hero-frontpage input.button.gform_button_select_files svg,
-.content-area .block.block-hero.block-hero-frontpage input[type="reset"] svg,
-.content-area .block.block-hero.block-hero-frontpage input[type="submit"] svg,
-.content-area .block.block-hero.block-hero-frontpage input[type="button"] svg {
+.content-area input[type="button"] svg {
 	width: 24px;
 	height: 24px;
 }
@@ -17803,6 +17457,15 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .conte
 .block.block-single:not(.block-single-reference) .post > .author-card p,
 body.single .block.block-single:not(.block-single-reference) .post > .author-card p {
 	font-size: var(--font-size-general-small);
+}
+
+body.template-surveys-modern .container > *,
+body.template-surveys-modern .site-header > *,
+body.template-surveys-modern .survey-header > *,
+body.template-surveys-modern .gform_wrapper > *,
+body.template-surveys-modern .gform_confirmation_wrapper > * {
+	margin-left: 1.7rem;
+	margin-right: 1.7rem;
 }
 
 }
@@ -17830,6 +17493,46 @@ body.single .block.block-single:not(.block-single-reference) .post > .author-car
 
 .nav-primary .cols.cols-contact .contact-title {
 	font-size: 14px;
+}
+
+body.template-surveys-modern .gform_wrapper ul li.field_description_below div.ginput_container_radio,
+body.template-surveys-modern .gform_wrapper ul li.field_description_below div.ginput_container_checkbox,
+body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_radio,
+body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_checkbox {
+	margin: 2rem 0;
+}
+
+body.template-surveys-modern .gform_wrapper .gfield_label {
+	font-size: var(--font-size-general-small);
+	margin-bottom: 2rem;
+}
+
+body.template-surveys-modern .gform_wrapper ul.gform_fields li.gfield {
+	padding: 2rem 2rem 0;
+}
+
+body.template-surveys-modern .gform_wrapper textarea,
+body.template-surveys-modern .gform_wrapper input,
+body.template-surveys-modern .gform_wrapper input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']) {
+	margin-left: -2rem;
+	margin-right: -2rem;
+	width: calc(100% + 4rem);
+}
+
+body.template-surveys-modern .survey-header::after {
+	left: 2rem;
+	width: calc(100% - 4rem);
+}
+
+body.template-surveys-modern .survey-header h1 {
+	font-size: 17px;
+}
+
+body.template-surveys-modern .gform_wrapper .ginput_container.ginput_container_checkbox,
+body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_checkbox {
+	margin-left: -2rem !important;
+	margin-right: -2rem !important;
+	width: calc(100% + 4rem) !important;
 }
 
 }
@@ -17880,6 +17583,30 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .block
 
 .block.block-hero.block-hero-fp .content .content-sub-statement {
 	font-size: 14px;
+}
+
+}
+
+@media (max-height: 880px) {
+
+body.template-surveys-modern .survey-header img {
+	max-width: 140px;
+}
+
+}
+
+@media (max-height: 760px) {
+
+body.template-surveys-modern .survey-header img {
+	max-width: 100px;
+}
+
+}
+
+@media (max-height: 670px) {
+
+body.template-surveys-modern .survey-header img {
+	max-width: 70px;
 }
 
 }
@@ -18028,87 +17755,87 @@ to {
 @keyframes glitch-effect {
 
 0% {
-	clip: rect(40px, 9999px, 7px, 0);
+	clip: rect(77px, 9999px, 35px, 0);
 }
 
 5% {
-	clip: rect(62px, 9999px, 74px, 0);
+	clip: rect(44px, 9999px, 14px, 0);
 }
 
 10% {
-	clip: rect(10px, 9999px, 19px, 0);
+	clip: rect(55px, 9999px, 61px, 0);
 }
 
 15% {
-	clip: rect(29px, 9999px, 47px, 0);
+	clip: rect(8px, 9999px, 12px, 0);
 }
 
 20% {
-	clip: rect(37px, 9999px, 27px, 0);
+	clip: rect(36px, 9999px, 69px, 0);
 }
 
 25% {
-	clip: rect(69px, 9999px, 3px, 0);
+	clip: rect(11px, 9999px, 59px, 0);
 }
 
 30% {
-	clip: rect(88px, 9999px, 38px, 0);
+	clip: rect(44px, 9999px, 27px, 0);
 }
 
 35% {
-	clip: rect(63px, 9999px, 37px, 0);
+	clip: rect(100px, 9999px, 80px, 0);
 }
 
 40% {
-	clip: rect(72px, 9999px, 11px, 0);
+	clip: rect(63px, 9999px, 81px, 0);
 }
 
 45% {
-	clip: rect(14px, 9999px, 85px, 0);
+	clip: rect(39px, 9999px, 96px, 0);
 }
 
 50% {
-	clip: rect(88px, 9999px, 95px, 0);
+	clip: rect(14px, 9999px, 51px, 0);
 }
 
 55% {
-	clip: rect(4px, 9999px, 1px, 0);
+	clip: rect(77px, 9999px, 86px, 0);
 }
 
 60% {
-	clip: rect(27px, 9999px, 23px, 0);
+	clip: rect(36px, 9999px, 49px, 0);
 }
 
 65% {
-	clip: rect(23px, 9999px, 21px, 0);
+	clip: rect(72px, 9999px, 70px, 0);
 }
 
 70% {
-	clip: rect(96px, 9999px, 32px, 0);
+	clip: rect(77px, 9999px, 15px, 0);
 }
 
 75% {
-	clip: rect(88px, 9999px, 83px, 0);
+	clip: rect(45px, 9999px, 75px, 0);
 }
 
 80% {
-	clip: rect(93px, 9999px, 66px, 0);
+	clip: rect(92px, 9999px, 28px, 0);
 }
 
 85% {
-	clip: rect(53px, 9999px, 61px, 0);
+	clip: rect(98px, 9999px, 5px, 0);
 }
 
 90% {
-	clip: rect(27px, 9999px, 76px, 0);
+	clip: rect(49px, 9999px, 98px, 0);
 }
 
 95% {
-	clip: rect(62px, 9999px, 88px, 0);
+	clip: rect(28px, 9999px, 67px, 0);
 }
 
 100% {
-	clip: rect(66px, 9999px, 33px, 0);
+	clip: rect(17px, 9999px, 52px, 0);
 }
 
 }
@@ -18204,43 +17931,43 @@ to {
 @keyframes noise-1 {
 
 10% {
-	clip-path: inset(14px 0 16px 0);
+	clip-path: inset(1px 0 93px 0);
 }
 
 20% {
-	clip-path: inset(33px 0 26px 0);
+	clip-path: inset(33px 0 25px 0);
 }
 
 30% {
-	clip-path: inset(64px 0 9px 0);
+	clip-path: inset(29px 0 71px 0);
 }
 
 40% {
-	clip-path: inset(27px 0 50px 0);
+	clip-path: inset(39px 0 9px 0);
 }
 
 50% {
-	clip-path: inset(4px 0 83px 0);
+	clip-path: inset(92px 0 8px 0);
 }
 
 60% {
-	clip-path: inset(13px 0 88px 0);
+	clip-path: inset(4px 0 93px 0);
 }
 
 70% {
-	clip-path: inset(86px 0 8px 0);
+	clip-path: inset(65px 0 17px 0);
 }
 
 80% {
-	clip-path: inset(76px 0 5px 0);
+	clip-path: inset(37px 0 36px 0);
 }
 
 90% {
-	clip-path: inset(85px 0 10px 0);
+	clip-path: inset(47px 0 30px 0);
 }
 
 100% {
-	clip-path: inset(14px 0 65px 0);
+	clip-path: inset(61px 0 27px 0);
 }
 
 }
@@ -18248,158 +17975,158 @@ to {
 @keyframes noise-2 {
 
 0% {
-	text-shadow: 3px 0 #76ff9b;
-	clip-path: inset(30px 0 50px 0);
+	text-shadow: 5px 0 #76ff9b;
+	clip-path: inset(72px 0 22px 0);
 }
 
 3.33333% {
 	text-shadow: 2px 0 #76ff9b;
-	clip-path: inset(45px 0 24px 0);
+	clip-path: inset(54px 0 32px 0);
 }
 
 6.66667% {
-	text-shadow: 2px 0 #76ff9b;
-	clip-path: inset(88px 0 8px 0);
+	text-shadow: 3px 0 #76ff9b;
+	clip-path: inset(13px 0 58px 0);
 }
 
 10% {
 	text-shadow: 5px 0 #76ff9b;
-	clip-path: inset(72px 0 4px 0);
+	clip-path: inset(72px 0 1px 0);
 }
 
 13.33333% {
-	text-shadow: 5px 0 #76ff9b;
-	clip-path: inset(36px 0 20px 0);
+	text-shadow: 3px 0 #76ff9b;
+	clip-path: inset(26px 0 74px 0);
 }
 
 16.66667% {
-	text-shadow: 4px 0 #76ff9b;
-	clip-path: inset(1px 0 92px 0);
+	text-shadow: 2px 0 #76ff9b;
+	clip-path: inset(10px 0 19px 0);
 }
 
 20% {
-	text-shadow: 4px 0 #76ff9b;
-	clip-path: inset(45px 0 7px 0);
+	text-shadow: 5px 0 #76ff9b;
+	clip-path: inset(77px 0 17px 0);
 }
 
 23.33333% {
-	text-shadow: 3px 0 #76ff9b;
-	clip-path: inset(48px 0 53px 0);
+	text-shadow: 4px 0 #76ff9b;
+	clip-path: inset(8px 0 2px 0);
 }
 
 26.66667% {
-	text-shadow: 4px 0 #76ff9b;
-	clip-path: inset(99px 0 1px 0);
+	text-shadow: 5px 0 #76ff9b;
+	clip-path: inset(59px 0 32px 0);
 }
 
 30% {
-	text-shadow: 5px 0 #76ff9b;
-	clip-path: inset(19px 0 47px 0);
+	text-shadow: 2px 0 #76ff9b;
+	clip-path: inset(66px 0 34px 0);
 }
 
 33.33333% {
-	text-shadow: 2px 0 #76ff9b;
-	clip-path: inset(37px 0 41px 0);
+	text-shadow: 5px 0 #76ff9b;
+	clip-path: inset(7px 0 79px 0);
 }
 
 36.66667% {
-	text-shadow: 2px 0 #76ff9b;
-	clip-path: inset(49px 0 48px 0);
+	text-shadow: 4px 0 #76ff9b;
+	clip-path: inset(6px 0 38px 0);
 }
 
 40% {
-	text-shadow: 3px 0 #76ff9b;
-	clip-path: inset(8px 0 27px 0);
+	text-shadow: 4px 0 #76ff9b;
+	clip-path: inset(4px 0 32px 0);
 }
 
 43.33333% {
-	text-shadow: 1px 0 #76ff9b;
-	clip-path: inset(48px 0 5px 0);
+	text-shadow: 5px 0 #76ff9b;
+	clip-path: inset(51px 0 46px 0);
 }
 
 46.66667% {
 	text-shadow: 2px 0 #76ff9b;
-	clip-path: inset(94px 0 2px 0);
+	clip-path: inset(72px 0 10px 0);
 }
 
 50% {
-	text-shadow: 5px 0 #76ff9b;
-	clip-path: inset(41px 0 49px 0);
+	text-shadow: 1px 0 #76ff9b;
+	clip-path: inset(73px 0 19px 0);
 }
 
 53.33333% {
-	text-shadow: 1px 0 #76ff9b;
-	clip-path: inset(80px 0 15px 0);
+	text-shadow: 4px 0 #76ff9b;
+	clip-path: inset(92px 0 6px 0);
 }
 
 56.66667% {
-	text-shadow: 5px 0 #76ff9b;
-	clip-path: inset(85px 0 5px 0);
+	text-shadow: 3px 0 #76ff9b;
+	clip-path: inset(32px 0 5px 0);
 }
 
 60% {
 	text-shadow: 1px 0 #76ff9b;
-	clip-path: inset(53px 0 45px 0);
+	clip-path: inset(4px 0 32px 0);
 }
 
 63.33333% {
-	text-shadow: 2px 0 #76ff9b;
-	clip-path: inset(27px 0 25px 0);
+	text-shadow: 1px 0 #76ff9b;
+	clip-path: inset(79px 0 6px 0);
 }
 
 66.66667% {
-	text-shadow: 1px 0 #76ff9b;
-	clip-path: inset(61px 0 31px 0);
+	text-shadow: 3px 0 #76ff9b;
+	clip-path: inset(89px 0 7px 0);
 }
 
 70% {
 	text-shadow: 4px 0 #76ff9b;
-	clip-path: inset(56px 0 13px 0);
+	clip-path: inset(45px 0 41px 0);
 }
 
 73.33333% {
 	text-shadow: 2px 0 #76ff9b;
-	clip-path: inset(57px 0 20px 0);
+	clip-path: inset(16px 0 20px 0);
 }
 
 76.66667% {
 	text-shadow: 1px 0 #76ff9b;
-	clip-path: inset(41px 0 49px 0);
+	clip-path: inset(5px 0 85px 0);
 }
 
 80% {
-	text-shadow: 1px 0 #76ff9b;
-	clip-path: inset(54px 0 3px 0);
+	text-shadow: 2px 0 #76ff9b;
+	clip-path: inset(81px 0 4px 0);
 }
 
 83.33333% {
-	text-shadow: 3px 0 #76ff9b;
-	clip-path: inset(7px 0 92px 0);
+	text-shadow: 5px 0 #76ff9b;
+	clip-path: inset(5px 0 77px 0);
 }
 
 86.66667% {
-	text-shadow: 1px 0 #76ff9b;
-	clip-path: inset(40px 0 40px 0);
+	text-shadow: 4px 0 #76ff9b;
+	clip-path: inset(69px 0 12px 0);
 }
 
 90% {
 	text-shadow: 4px 0 #76ff9b;
-	clip-path: inset(6px 0 58px 0);
+	clip-path: inset(43px 0 52px 0);
 }
 
 93.33333% {
-	text-shadow: 5px 0 #76ff9b;
-	clip-path: inset(23px 0 40px 0);
+	text-shadow: 4px 0 #76ff9b;
+	clip-path: inset(26px 0 52px 0);
 }
 
 96.66667% {
-	text-shadow: 4px 0 #76ff9b;
-	clip-path: inset(5px 0 91px 0);
+	text-shadow: 2px 0 #76ff9b;
+	clip-path: inset(33px 0 39px 0);
 }
 
 100% {
-	text-shadow: 3px 0 #76ff9b;
-	clip-path: inset(41px 0 14px 0);
+	text-shadow: 2px 0 #76ff9b;
+	clip-path: inset(48px 0 16px 0);
 }
 
 }

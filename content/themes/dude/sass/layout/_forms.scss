@@ -5,16 +5,7 @@
 // the Gravity Forms styles out of the box.
 // ------------------------------------------------------------
 
-// Buttons
-.button-reset {
-  background: transparent;
-  border: 0;
-  padding: 0;
-  margin: 0;
-}
-
-.content-area,
-.content-area .block.block-hero.block-hero-frontpage {
+.content-area {
   button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset),
   .button,
   input[type="reset"],
@@ -167,32 +158,6 @@ input[type="search"] {
   }
 }
 
-select {
-  border: 0;
-  border-radius: 0;
-  background-image: url('../svg/select.svg');
-  background-repeat: no-repeat;
-  background-position: right center;
-  padding-right: 40px;
-  transition: none;
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  text-indent: 1px;
-  text-overflow: '';
-
-  &::-ms-expand {
-    display: none;
-  }
-
-  &:hover,
-  &:focus {
-    border-color: $color-almost-black;
-  }
-}
-
 body .gform_wrapper li.gfield.gfield_error,
 body .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
   background: transparent;
@@ -280,27 +245,6 @@ form {
       margin-top: 10px;
     }
   }
-
-  p {
-    margin-bottom: 20px;
-
-    &.form-submit {
-      margin-bottom: 0;
-    }
-  }
-
-  // Search form
-  &.search-form {
-    .search-field {
-      float: left;
-      margin-right: 5px;
-    }
-
-    .search-submit {
-      padding: 19px 1.75em;
-      line-height: 1;
-    }
-  }
 }
 
 .arrow-right {
@@ -338,9 +282,7 @@ Usage: codyhouse.co/license
 }
 
 .gform_wrapper ul.gfield_checkbox li input[type=checkbox],
-.gform_wrapper ul.gfield_radio li input[type=radio],
-.radio,
-.checkbox {
+.gform_wrapper ul.gfield_radio li input[type=radio] {
   // hide native buttons
   position: absolute;
   left: 0;
@@ -355,9 +297,7 @@ Usage: codyhouse.co/license
 }
 
 .gform_wrapper ul.gfield_checkbox li input[type=checkbox] + br + label,
-.gform_wrapper ul.gfield_radio li input[type=radio] + br + label,
-.radio + label,
-.checkbox + label { // label style
+.gform_wrapper ul.gfield_radio li input[type=radio] + br + label { // label style
   display: inline-flex;
   align-items: baseline;
   user-select: none;
@@ -366,9 +306,7 @@ Usage: codyhouse.co/license
 
 .gform_wrapper ul.gfield_checkbox li input[type=checkbox] + br + label::before,
 .gform_wrapper ul.gfield_radio li input[type=radio] + br + label::before,
-input[type=radio] + label::before,
-.radio + label::before,
-.checkbox + label::before { // custom buttons - basic style
+input[type=radio] + label::before { // custom buttons - basic style
   content: '';
   display: inline-block;
   vertical-align: middle; // fallback
@@ -386,30 +324,24 @@ input[type=radio] + label::before,
 @supports (grid-area: auto) {
   .gform_wrapper ul.gfield_checkbox li input[type=checkbox] + br + label::before,
   .gform_wrapper ul.gfield_radio li input[type=radio] + br + label::before,
-  input[type=radio] + label::before,
-  .radio + label::before,
-  .checkbox + label::before {
+  input[type=radio] + label::before {
     position: relative;
     top: var(--checkbox-radio-translate-y);
   }
 }
 
 .gform_wrapper ul.gfield_radio li input[type=radio] + br + label::before,
-input[type=radio] + label::before,
-.radio + label::before {
+input[type=radio] + label::before {
   border-radius: 50%; // radio button radius
 }
 
-.gform_wrapper ul.gfield_radio li input[type=checkbox] + br + label::before,
-.checkbox + label::before {
+.gform_wrapper ul.gfield_radio li input[type=checkbox] + br + label::before {
   border-radius: var(--checkbox-radius); // checkbox button radius
 }
 
 .gform_wrapper ul.gfield_checkbox li input[type=checkbox]:checked + br + label::before,
 .gform_wrapper ul.gfield_radio li input[type=radio]:checked + br + label::before,
-input[type=radio]:checked + label::before,
-.radio:checked + label::before,
-.checkbox:checked + label::before {
+input[type=radio]:checked + label::before {
   // checked state
   box-shadow: none;
   transition: transform .2s;
@@ -417,9 +349,7 @@ input[type=radio]:checked + label::before,
 
 .gform_wrapper ul.gfield_checkbox li input[type=checkbox]:active + br + label::before,
 .gform_wrapper ul.gfield_radio li input[type=radio]:active + br + label::before,
-input[type=radio]:active + label::before,
-.radio:active + label::before,
-.checkbox:active + label::before {
+input[type=radio]:active + label::before {
   // active state
   transform: scale(.8);
   transition: transform .2s;
@@ -427,16 +357,13 @@ input[type=radio]:active + label::before,
 
 .gform_wrapper ul.gfield_checkbox li input[type=checkbox]:checked:active + br + label::before,
 .gform_wrapper ul.gfield_radio li input[type=radio]:checked:active + br + label::before,
-input[type=radio]:checked:active + label::before,
-.radio:checked:active + label::before,
-.checkbox:checked:active + label::before {
+input[type=radio]:checked:active + label::before {
   transform: none;
   transition: none;
 }
 
 .gform_wrapper ul.gfield_radio li input[type=radio]:checked + br + label::before,
-input[type=radio]:checked + label::before,
-.radio:checked + label::before {
+input[type=radio]:checked + label::before {
   // radio button icon
   // background-image: url('../svg/radio-check.svg');
   background-color: $color-midnight-blue;
@@ -444,16 +371,9 @@ input[type=radio]:checked + label::before,
   background-size: var(--radio-marker-size);
 }
 
-input[type=checkbox]:checked + br + label::before,
-.checkbox:checked + label::before {
+input[type=checkbox]:checked + br + label::before {
   // checkbox button icon
   background-image: url('../svg/checkbox.svg') !important;
   background-color: $color-midnight-blue !important;
   background-size: var(--checkbox-marker-size) !important;
-}
-
-// --radio--bg, --checkbox--bg
-.radio--bg + label,
-.checkbox--bg + label {
-  transition: background .2s;
 }

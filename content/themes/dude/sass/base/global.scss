@@ -1,7 +1,7 @@
 @charset 'utf-8';
 
 // Reset & grid
-@import 'normalize'; // 0.65 kB
+@import 'normalize'; // 0.041 kB
 
 // Variables
 @import '../variables/breakpoints';
@@ -10,23 +10,22 @@
 @import '../variables/spacings';
 
 // Global features
-@import '../features/top'; // 132.352 kB
-@import '../features/effects'; // 154.283 kB
-@import '../features/swup'; // 157.541 kB
-@import '../features/simplepay'; // 219.115 kB
-@import '../features/slick'; // 222.661 kB
-@import '../features/custom-pagination'; // 223.422 kB
+@import '../features/top'; // 1.403 kB
+@import '../features/effects'; // 8.974 kB
+@import '../features/swup'; // 9.46 kB
+@import '../features/slick'; // 12.097 kB
+@import '../features/custom-pagination'; // 12.636 kB
 
 // Helpers
-@import 'helpers'; // 35.038 kB
-@import 'accessibility'; // 35.038 kB
+@import 'helpers'; // 12.691 kB
+@import 'accessibility'; // 23.989 kB
 
 // Structure
-@import '../layout/general'; // 19.019 kB
-@import '../layout/typography'; // 35.038 kB
-@import '../layout/site-header'; // 35.038 kB
-@import '../layout/site-footer'; // 35.038 kB
-@import '../layout/forms'; // 35.038 kB
+@import '../layout/general'; // 28.785 kB
+@import '../layout/typography'; // 36.009 kB
+@import '../layout/site-header'; // 58.939 kB
+@import '../layout/site-footer'; // 64.054 kB
+@import '../layout/forms'; // 81.037 kB <--
 @import '../layout/hero'; // 105.183 kB
 @import '../layout/hero-fp'; // 107.995 kB
 @import '../layout/hero-service'; // 109.574 kB
@@ -73,6 +72,7 @@
 @import '../views/single'; // 467.952 kB
 @import '../views/single-reference'; // 494.335 kB
 @import '../views/community-code'; // 518.135 kB
+@import '../views/template-surveys-modern'; // 552.313 kB
 @import '../views/template-company'; // 552.456 kB
 @import '../views/template-basic'; // 552.823 kB
 @import '../views/template-faq'; // 554.744 kB
