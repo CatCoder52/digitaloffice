@@ -8,7 +8,8 @@ import "what-input";
 import "./slick.custom.js";
 import "./navigation.js";
 import "./lazyload.js";
-import "./svg-morpheus.js";
+import "./tweenmax.min.js";
+import "./buttons.js";
 import MoveTo from "moveto";
 import Swup from 'swup';
 import SwupScriptsPlugin from '@swup/scripts-plugin';
@@ -52,15 +53,12 @@ const swup = new Swup({
 // Swup starts
 swup.on("contentReplaced", function () {
 
-    // Poor man's defer
-    function initdefer() {
-      var imgDefer = document.querySelectorAll('div[data-defer]');
-      var style = "background-image: url({url})";
-      for (var i = 0; i < imgDefer.length; i++) {
-        imgDefer[i].setAttribute('style', style.replace("{url}", imgDefer[i].getAttribute('data-defer')));
-      }
-    }
-    window.onload = initdefer;
+  // Poor man's defer
+  var imgDefer = document.querySelectorAll('div[data-defer]');
+  var style = "background-image: url({url})";
+  for (var i = 0; i < imgDefer.length; i++) {
+    imgDefer[i].setAttribute('style', style.replace("{url}", imgDefer[i].getAttribute('data-defer')));
+  }
 
     // Accessibility: Ensure back to top is right color on right background
     var stickyOffset = jQuery(".back-to-top").offset();
@@ -170,6 +168,10 @@ swup.on("contentReplaced", function () {
       } else {
         jQuery(this).find(".toggle-text").text("Avaa valikko");
       }
+
+      // Defer nav background image
+      var navBg = "background-image: url({url})";
+      document.getElementById("nav").setAttribute('style', navBg.replace("{url}", document.getElementById("nav").getAttribute('data-defer')));
 
       // jscs:disable
       jQuery(this)
@@ -367,10 +369,6 @@ swup.on("contentReplaced", function () {
   navOpened = false;
 
   button.onclick = function () {
-
-    // Defer nav background image
-    var navBg = "background-image: url({url})";
-    menu.setAttribute('style', navBg.replace("{url}", menu.getAttribute('data-defer')));
 
     // Toggle boolean
     navOpened ^= true;
