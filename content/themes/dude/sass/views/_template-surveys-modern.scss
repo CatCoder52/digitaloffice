@@ -111,7 +111,8 @@ body.template-surveys-modern {
   }
 
   span.gfield_required {
-    display: none !important;
+    display: inline !important;
+    color: $color-mint !important;
   }
 
   p {
