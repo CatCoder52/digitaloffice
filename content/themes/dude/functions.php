@@ -100,3 +100,15 @@ add_action( 'after_setup_theme', 'dude_add_image_sizes' );
 function dude_add_image_sizes() {
   add_image_size( 'tiny-preload-thumbnail', 20, 20 );
 }
+
+/**
+ * Remove specific style sheets from certain templates.
+ */
+function dude_remove_styles() {
+  if ( is_page_template( 'template-surveys-modern.php' ) ) {
+    wp_dequeue_style( 'styles' );
+    wp_enqueue_style( 'surveystyles', get_theme_file_uri( 'css/surveys.min.css' ), array(), filemtime( get_theme_file_path( 'css/surveys.min.css' ) ) );
+  }
+
+}
+add_action( 'wp_print_styles', 'dude_remove_styles', 99 );

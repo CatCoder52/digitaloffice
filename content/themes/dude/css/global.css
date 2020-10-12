@@ -2162,8 +2162,7 @@ h2 {
 	margin-bottom: 2rem;
 }
 
-h3,
-body.template-surveys-modern .survey-header h1 {
+h3 {
 	font-size: 25px;
 	margin-bottom: 2rem;
 }
@@ -8955,572 +8954,6 @@ body.page-template-template-community-code .block.block-hero.block-hero-light .s
 	background-color: #4f5d95;
 }
 
-body.template-surveys-modern {
-	background-size: 100% auto;
-	background-repeat: no-repeat;
-	background-position: top;
-	background-color: #03061b;
-	background-attachment: fixed;
-	color: #fff;
-}
-
-body.template-surveys-modern .gform_wrapper div.validation_error {
-	background: #b54945;
-	color: #fff;
-}
-
-body.template-surveys-modern .gform_wrapper ol.validation_list li,
-body.template-surveys-modern .gform_wrapper ol.validation_list li a,
-body.template-surveys-modern .gform_wrapper .gfield_error .gfield_label,
-body.template-surveys-modern form li.gfield.gfield_error,
-body.template-surveys-modern form li.gfield.gfield_error * {
-	color: #b54945;
-}
-
-body.template-surveys-modern table.gsurvey-likert td.gsurvey-likert-choice {
-	background-image: url("../svg/gravityformssurvey-not-active.svg");
-	background-size: 20px 20px;
-	overflow: visible;
-}
-
-body.template-surveys-modern table.gsurvey-likert td.gsurvey-likert-choice.gsurvey-likert-selected {
-	background-image: url("../svg/gravityformssurvey-active.svg");
-	background-size: 24px 24px;
-	overflow: visible;
-}
-
-body.template-surveys-modern table.gsurvey-likert td.gsurvey-likert-choice:hover {
-	cursor: pointer;
-}
-
-body.template-surveys-modern .gsurvey-likert * {
-	border-radius: 0 !important;
-}
-
-body.template-surveys-modern table.gsurvey-likert th.gsurvey-likert-choice-label {
-	background-color: transparent;
-}
-
-body.template-surveys-modern .gform_wrapper table.gsurvey-likert {
-	margin-bottom: 36px;
-	width: 100%;
-	table-layout: fixed;
-	border: 0;
-	border-collapse: collapse;
-	border-style: hidden;
-	box-shadow: none;
-	border-radius: 4px;
-	overflow: hidden;
-}
-
-body.template-surveys-modern .gform_wrapper table.gsurvey-likert,
-body.template-surveys-modern table.gsurvey-likert th.gsurvey-likert-choice-label,
-body.template-surveys-modern table.gsurvey-likert tr td,
-body.template-surveys-modern table.gsurvey-likert .gsurvey-likert-choice,
-body.template-surveys-modern table.gsurvey-likert .gsurvey-likert-row-label {
-	border: 0;
-	box-shadow: none;
-}
-
-body.template-surveys-modern .gform_wrapper .gfield_checkbox li label,
-body.template-surveys-modern .gform_wrapper .gfield_radio li label {
-	max-width: 100% !important;
-	width: 100%;
-}
-
-body.template-surveys-modern .gform_wrapper ul.gfield_checkbox,
-body.template-surveys-modern .gform_wrapper ul.gfield_radio {
-	margin: 0;
-}
-
-body.template-surveys-modern .gform_wrapper .description_above .gfield_description {
-	font-size: var(--font-size-general-small);
-	padding: 0 0 30px;
-	text-align: center;
-	max-width: 700px;
-	margin: 1rem auto 0;
-}
-
-body.template-surveys-modern form li.gfield .validation_message {
-	margin-top: -1rem !important;
-	margin-bottom: 5rem !important;
-	text-align: center !important;
-	font-weight: 500 !important;
-}
-
-body.template-surveys-modern span.gfield_required {
-	display: inline !important;
-	color: #7effe1 !important;
-}
-
-body.template-surveys-modern p {
-	font-size: 17px;
-	font-weight: 400;
-}
-
-body.template-surveys-modern .container,
-body.template-surveys-modern .site-header,
-body.template-surveys-modern .survey-header,
-body.template-surveys-modern .gform_wrapper,
-body.template-surveys-modern .gform_confirmation_wrapper {
-	max-width: 100rem;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-body.template-surveys-modern .container > *,
-body.template-surveys-modern .site-header > *,
-body.template-surveys-modern .survey-header > *,
-body.template-surveys-modern .gform_wrapper > *,
-body.template-surveys-modern .gform_confirmation_wrapper > * {
-	margin-left: 3rem;
-	margin-right: 3rem;
-}
-
-body.template-surveys-modern ul,
-body.template-surveys-modern li {
-	padding: 0;
-	margin-left: 0;
-	list-style: none;
-}
-
-body.template-surveys-modern h1,
-body.template-surveys-modern span,
-body.template-surveys-modern p,
-body.template-surveys-modern li,
-body.template-surveys-modern input[type="text"] {
-	font-family: "Circular", "Helvetica Neue", helvetica, sans-serif;
-	color: #fff;
-}
-
-body.template-surveys-modern .site {
-	overflow: visible;
-	position: static;
-}
-
-body.template-surveys-modern::after,
-body.template-surveys-modern .chat-greeting {
-	display: none;
-}
-
-body.template-surveys-modern .gform_confirmation_wrapper {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	padding: 2rem;
-	margin-top: 4rem;
-}
-
-body.template-surveys-modern .gform_confirmation_wrapper .thanks {
-	font-weight: 700;
-	font-size: 70px;
-	line-height: 1.1;
-	max-width: 560px;
-	margin: 0 auto;
-}
-
-body.template-surveys-modern .gform_confirmation_wrapper p {
-	color: #fff !important;
-	max-width: 500px;
-	margin: 5rem auto;
-	font-size: 17px;
-	line-height: 1.5;
-}
-
-body.template-surveys-modern .gform_confirmation_wrapper br {
-	display: none !important;
-}
-
-body.template-surveys-modern .gform_confirmation_wrapper .gform_confirmation_message {
-	font-size: 18px;
-	line-height: 1.5;
-	color: #fff;
-}
-
-body.template-surveys-modern .gform_wrapper {
-	max-width: 100rem;
-	padding-top: 43px;
-}
-
-body.template-surveys-modern .gform_wrapper table.gsurvey-likert th.gsurvey-likert-choice-label {
-	font-size: 14px !important;
-	font-weight: 300 !important;
-}
-
-body.template-surveys-modern .gform_wrapper table.gsurvey-likert td.gsurvey-likert-choice {
-	transition: all .22s;
-}
-
-body.template-surveys-modern .gform_wrapper table.gsurvey-likert td.gsurvey-likert-choice:not(.gsurvey-likert-selected):hover,
-body.template-surveys-modern .gform_wrapper table.gsurvey-likert td.gsurvey-likert-choice:not(.gsurvey-likert-selected):focus {
-	background-color: transparent !important;
-}
-
-body.template-surveys-modern .gform_wrapper table.gsurvey-likert td.gsurvey-likert-choice.gsurvey-likert-selected {
-	background-color: transparent;
-	color: #7effe1;
-	font-weight: 700;
-}
-
-body.template-surveys-modern .gform_wrapper table.gsurvey-likert .gsurvey-likert-choice {
-	padding: 2rem;
-}
-
-body.template-surveys-modern .gform_wrapper ul.gfield_checkbox > li {
-	min-width: 33.3% !important;
-	margin-right: 0 !important;
-	margin-bottom: -1px !important;
-	overflow: hidden !important;
-	flex: 1;
-}
-
-body.template-surveys-modern .gform_wrapper ul li.field_description_below div.ginput_container_radio,
-body.template-surveys-modern .gform_wrapper ul li.field_description_below div.ginput_container_checkbox,
-body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_radio,
-body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_checkbox {
-	margin: 0 0 4rem;
-}
-
-body.template-surveys-modern .gform_wrapper ul li.field_description_below div.ginput_container_radio > ul,
-body.template-surveys-modern .gform_wrapper ul li.field_description_below div.ginput_container_checkbox > ul,
-body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_radio > ul,
-body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_checkbox > ul {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-
-body.template-surveys-modern .gform_wrapper ul li.field_description_below div.ginput_container_radio > ul li,
-body.template-surveys-modern .gform_wrapper ul li.field_description_below div.ginput_container_checkbox > ul li,
-body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_radio > ul li,
-body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_checkbox > ul li {
-	width: auto;
-	min-width: 123px;
-	margin-right: 1rem;
-	border: 1px solid #898888;
-	background: transparent;
-	border-radius: 0;
-	padding: 0 !important;
-	text-align: center;
-	margin-bottom: 1rem;
-	transition: all .6s;
-}
-
-body.template-surveys-modern .gform_wrapper ul li.field_description_below div.ginput_container_radio > ul li:hover,
-body.template-surveys-modern .gform_wrapper ul li.field_description_below div.ginput_container_radio > ul li:focus,
-body.template-surveys-modern .gform_wrapper ul li.field_description_below div.ginput_container_checkbox > ul li:hover,
-body.template-surveys-modern .gform_wrapper ul li.field_description_below div.ginput_container_checkbox > ul li:focus,
-body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_radio > ul li:hover,
-body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_radio > ul li:focus,
-body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_checkbox > ul li:hover,
-body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_checkbox > ul li:focus {
-	background: #222;
-	opacity: 1;
-}
-
-body.template-surveys-modern .gform_wrapper ul li.field_description_below div.ginput_container_radio > #input_5_12 li,
-body.template-surveys-modern .gform_wrapper ul li.field_description_below div.ginput_container_checkbox > #input_5_12 li,
-body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_radio > #input_5_12 li,
-body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_checkbox > #input_5_12 li {
-	min-width: 220px !important;
-}
-
-body.template-surveys-modern .gform_wrapper input[type="checkbox"] {
-	display: none !important;
-}
-
-body.template-surveys-modern .gform_wrapper input[type="checkbox"] + label,
-body.template-surveys-modern .gform_wrapper input[type="radio"] + label {
-	font-size: 17px;
-	line-height: 1 !important;
-	margin: 0 !important;
-	font-weight: 300;
-	display: block;
-	position: relative;
-	margin-bottom: 20px;
-	color: #fff;
-	cursor: pointer;
-	user-select: none;
-	padding: 12px !important;
-}
-
-body.template-surveys-modern .gform_wrapper input[type="checkbox"] + label:last-child {
-	margin-bottom: 0;
-}
-
-body.template-surveys-modern .gform_wrapper input[type="checkbox"]:checked + label,
-body.template-surveys-modern .gform_wrapper input[type="radio"]:checked + label {
-	color: #7effe1;
-	opacity: 1;
-	font-weight: 700;
-}
-
-body.template-surveys-modern .gform_wrapper input[type="checkbox"] + label::before,
-body.template-surveys-modern .gform_wrapper input[type="radio"] + label::before {
-	content: '';
-	display: block;
-	position: absolute;
-	z-index: 0;
-	width: calc(100% + 2px);
-	height: calc(100% + 2px);
-	background: rgba(126, 255, 225, 0.2);
-	top: 0;
-	left: 0;
-	opacity: 0;
-	transition: all 1s;
-	margin: -1px;
-	border-radius: 0;
-	border: 0;
-}
-
-body.template-surveys-modern .gform_wrapper input[type="checkbox"]:checked + label::before,
-body.template-surveys-modern .gform_wrapper input[type="radio"]:checked + label::before {
-	opacity: 1;
-}
-
-body.template-surveys-modern .gform_wrapper input[type="radio"] {
-	display: none !important;
-}
-
-body.template-surveys-modern .gform_wrapper .gfield_label {
-	font-size: 18px;
-	font-weight: 700;
-	text-align: center;
-	width: 100%;
-	display: block;
-	margin-bottom: 4rem;
-	margin-top: 0;
-}
-
-body.template-surveys-modern .gform_wrapper ul.gform_fields li.gfield {
-	margin-bottom: 10rem;
-	border: 1px solid #898888;
-	padding: 4rem 5rem 0;
-	overflow: hidden;
-}
-
-body.template-surveys-modern .gform_wrapper textarea,
-body.template-surveys-modern .gform_wrapper input,
-body.template-surveys-modern .gform_wrapper input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']) {
-	font-size: 17px;
-	width: calc(100% + 10rem);
-	border: 0;
-	border-top: 1px solid #4f4e4d;
-	padding-top: 5rem !important;
-	padding-bottom: 5rem !important;
-	padding-left: 5rem !important;
-	padding-right: 5rem !important;
-	margin-left: -5rem;
-	margin-right: -5rem;
-	margin-bottom: 0 !important;
-}
-
-body.template-surveys-modern .gform_wrapper textarea::placeholder,
-body.template-surveys-modern .gform_wrapper input::placeholder,
-body.template-surveys-modern .gform_wrapper input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file'])::placeholder {
-	text-align: center;
-	line-height: 150px;
-	white-space: pre-line;
-}
-
-body.template-surveys-modern .gform_wrapper textarea {
-	height: 240px;
-	color: #fff;
-}
-
-body.template-surveys-modern .gform_wrapper li.gfield_error input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']),
-body.template-surveys-modern .gform_wrapper li.gfield_error textarea {
-	border-left: 0 !important;
-	border-right: 0 !important;
-	border-top: 0 !important;
-	border-bottom: 0 !important;
-}
-
-body.template-surveys-modern .gform_wrapper li.gfield_error textarea {
-	border-top: 1px solid #4f4e4d !important;
-}
-
-body.template-surveys-modern .survey-header {
-	padding-top: 6rem;
-	margin: 0 auto;
-	text-align: left;
-	display: flex;
-	justify-content: space-between;
-	position: relative;
-}
-
-body.template-surveys-modern .survey-header .survey-header--logo-tagline,
-body.template-surveys-modern .survey-header .survey-header--logo {
-	text-align: right;
-}
-
-body.template-surveys-modern .survey-header::after {
-	content: '';
-	display: block;
-	height: 1px;
-	width: calc(100% - 6rem);
-	border-bottom: 1px solid #303030;
-	position: absolute;
-	bottom: 3.5rem;
-	left: 3rem;
-}
-
-body.template-surveys-modern .survey-header svg {
-	fill: #fff;
-	width: 100px;
-	height: 26px;
-	margin-top: 8px;
-	margin-bottom: 1rem;
-}
-
-body.template-surveys-modern .survey-header img {
-	max-width: 189px;
-	width: 100%;
-	height: auto;
-	margin-bottom: 1rem;
-}
-
-body.template-surveys-modern .survey-header h1 {
-	font-weight: 700;
-	margin-bottom: 1rem;
-	margin-top: 0;
-}
-
-body.template-surveys-modern .survey-header p {
-	margin-top: 0;
-	padding-bottom: 4rem;
-	margin-bottom: 9rem;
-	font-size: 17px;
-}
-
-body.template-surveys-modern .survey-header .survey-header-description {
-	opacity: .7;
-}
-
-body.template-surveys-modern .survey-header a {
-	color: #fff;
-	opacity: .7;
-	transition: all .6s;
-}
-
-body.template-surveys-modern .survey-header a:hover {
-	opacity: 1;
-}
-
-body.template-surveys-modern .survey-start-wrapper {
-	display: flex;
-	text-align: center;
-	align-items: center;
-	justify-content: center;
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	z-index: 10;
-	height: 70px;
-	background-color: rgba(0, 0, 0, 0.05);
-	box-shadow: rgba(0, 0, 0, 0.1) 0 -1px;
-}
-
-body.template-surveys-modern .survey-start-wrapper button.survey-start-button {
-	font-size: 19px;
-	position: relative;
-	font-family: inherit;
-	font-weight: 700;
-	cursor: pointer;
-	white-space: nowrap;
-	box-shadow: rgba(0, 0, 0, 0.1) 0 3px 12px 0;
-	min-height: 48px;
-	background-color: #232527;
-	color: #e3e4e6;
-	transition: background-color .2s ease 0s, color .2s ease 0s, border-color .2s ease 0s, opacity .2s ease 0s;
-	outline: none;
-	border-width: 1px;
-	border-style: solid;
-	border-image: initial;
-	padding: 2px 18px;
-	border-color: transparent;
-	border-radius: 4px;
-	margin: 0;
-}
-
-body.template-surveys-modern .gform_wrapper .gform_footer input.button,
-body.template-surveys-modern body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input,
-body.page-id-6357 .block.block-wide-text body.template-surveys-modern .gform_wrapper .gform_footer input,
-body.template-surveys-modern body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .gform_footer input.button.gform_button_select_files,
-body.page-id-6357 .block.block-wide-text body.template-surveys-modern .gform_wrapper.gf_browser_chrome .gform_footer input.button.gform_button_select_files,
-body.template-surveys-modern .gform_wrapper .gform_page_footer input.button,
-body.template-surveys-modern body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_page_footer .gform_footer input,
-body.page-id-6357 .block.block-wide-text body.template-surveys-modern .gform_wrapper .gform_page_footer .gform_footer input,
-body.template-surveys-modern body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .gform_page_footer input,
-body.page-id-6357 .block.block-wide-text body.template-surveys-modern .gform_wrapper .gform_footer .gform_page_footer input,
-body.template-surveys-modern body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .gform_page_footer input.button.gform_button_select_files,
-body.page-id-6357 .block.block-wide-text body.template-surveys-modern .gform_wrapper.gf_browser_chrome .gform_page_footer input.button.gform_button_select_files,
-body.template-surveys-modern .gform_wrapper .gform_footer input[type=submit],
-body.template-surveys-modern .gform_wrapper .gform_page_footer input[type=submit] {
-	font-size: 20px;
-	position: relative !important;
-	font-family: inherit !important;
-	font-weight: 700 !important;
-	cursor: pointer !important;
-	margin: 0 !important;
-	white-space: nowrap !important;
-	min-height: 48px !important;
-	background-color: #7effe1 !important;
-	color: #fff !important;
-	transition: background-color .2s ease 0s, color .2s ease 0s, border-color .2s ease 0s, opacity .2s ease 0s !important;
-	outline: none !important;
-	border-width: 1px !important;
-	border-style: solid !important;
-	border-image: initial !important;
-	padding: 2px 18px !important;
-	border-color: transparent !important;
-	border-radius: 0 !important;
-}
-
-body.template-surveys-modern input[type="hidden"] + br {
-	display: none !important;
-}
-
-body.template-surveys-modern .gform_wrapper .gform_footer {
-	padding: 0 !important;
-	margin: 0 !important;
-}
-
-body.template-surveys-modern .gform_wrapper .gform_footer > input[type="submit"] {
-	width: 100% !important;
-	margin-bottom: 12rem !important;
-	padding-top: 3rem !important;
-	padding-bottom: 3rem !important;
-	border: 0 !important;
-	background: #7effe1 !important;
-	color: #131a50 !important;
-}
-
-body.template-surveys-modern .gform_wrapper .gform_footer > input[type="submit"]:hover {
-	background: #f1f1f1 !important;
-}
-
-body.template-surveys-modern .gform_wrapper .ginput_container.ginput_container_checkbox,
-body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_checkbox {
-	margin-left: -5rem !important;
-	margin-right: -5rem !important;
-	margin-bottom: 0 !important;
-}
-
-body.template-surveys-modern .gform_wrapper .ginput_container.ginput_container_checkbox ul.gfield_checkbox,
-body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_checkbox ul.gfield_checkbox {
-	width: calc(100% + 5px) !important;
-	margin-left: -3px !important;
-}
-
-body.template-surveys-modern .gform_wrapper .ginput_container.ginput_container_checkbox ul.gfield_checkbox li label,
-body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_checkbox ul.gfield_checkbox li label {
-	padding-top: 18px !important;
-	padding-bottom: 18px !important;
-}
-
 body.page-template-template-basic:not(.page-id-6357) .block.block-wide-text .container *,
 body.page-template-template-basic:not(.page-id-6357) .block.block-wide-text .site-header * {
 	padding-left: 0;
@@ -11522,8 +10955,7 @@ h2 {
 	font-size: calc(27px + 18 * ((100vw - 320px) / 1600));
 }
 
-h3,
-body.template-surveys-modern .survey-header h1 {
+h3 {
 	font-size: calc(25px + 10 * ((100vw - 320px) / 1600));
 }
 
@@ -11595,50 +11027,6 @@ body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:n
 body.single .block.block-single:not(.block-single-reference) ul.tags figure figcaption,
 body.single .block.block-single:not(.block-single-reference) ul.tags cite {
 	font-size: calc(15px + 2 * ((100vw - 320px) / 1600));
-}
-
-body.template-surveys-modern p {
-	font-size: calc(17px + 3 * ((100vw - 320px) / 1600));
-}
-
-body.template-surveys-modern .gform_confirmation_wrapper .gform_confirmation_message {
-	font-size: calc(18px + 12 * ((100vw - 320px) / 1600));
-}
-
-body.template-surveys-modern .gform_wrapper input[type="checkbox"] + label,
-body.template-surveys-modern .gform_wrapper input[type="radio"] + label {
-	font-size: calc(17px + 3 * ((100vw - 320px) / 1600));
-}
-
-body.template-surveys-modern .gform_wrapper .gfield_label {
-	font-size: calc(18px + 8 * ((100vw - 320px) / 1600));
-}
-
-body.template-surveys-modern .gform_wrapper textarea,
-body.template-surveys-modern .gform_wrapper input,
-body.template-surveys-modern .gform_wrapper input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']) {
-	font-size: calc(17px + 3 * ((100vw - 320px) / 1600));
-}
-
-body.template-surveys-modern .survey-start-wrapper button.survey-start-button {
-	font-size: calc(19px + 3 * ((100vw - 320px) / 1600));
-}
-
-body.template-surveys-modern .gform_wrapper .gform_footer input.button,
-body.template-surveys-modern body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input,
-body.page-id-6357 .block.block-wide-text body.template-surveys-modern .gform_wrapper .gform_footer input,
-body.template-surveys-modern body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .gform_footer input.button.gform_button_select_files,
-body.page-id-6357 .block.block-wide-text body.template-surveys-modern .gform_wrapper.gf_browser_chrome .gform_footer input.button.gform_button_select_files,
-body.template-surveys-modern .gform_wrapper .gform_page_footer input.button,
-body.template-surveys-modern body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_page_footer .gform_footer input,
-body.page-id-6357 .block.block-wide-text body.template-surveys-modern .gform_wrapper .gform_page_footer .gform_footer input,
-body.template-surveys-modern body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .gform_page_footer input,
-body.page-id-6357 .block.block-wide-text body.template-surveys-modern .gform_wrapper .gform_footer .gform_page_footer input,
-body.template-surveys-modern body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .gform_page_footer input.button.gform_button_select_files,
-body.page-id-6357 .block.block-wide-text body.template-surveys-modern .gform_wrapper.gf_browser_chrome .gform_page_footer input.button.gform_button_select_files,
-body.template-surveys-modern .gform_wrapper .gform_footer input[type=submit],
-body.template-surveys-modern .gform_wrapper .gform_page_footer input[type=submit] {
-	font-size: calc(20px + 6 * ((100vw - 320px) / 1600));
 }
 
 .cart p {
@@ -14767,8 +14155,7 @@ h2 {
 	font-size: 45px;
 }
 
-h3,
-body.template-surveys-modern .survey-header h1 {
+h3 {
 	font-size: 35px;
 }
 
@@ -14840,50 +14227,6 @@ body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:n
 body.single .block.block-single:not(.block-single-reference) ul.tags figure figcaption,
 body.single .block.block-single:not(.block-single-reference) ul.tags cite {
 	font-size: 17px;
-}
-
-body.template-surveys-modern p {
-	font-size: 20px;
-}
-
-body.template-surveys-modern .gform_confirmation_wrapper .gform_confirmation_message {
-	font-size: 30px;
-}
-
-body.template-surveys-modern .gform_wrapper input[type="checkbox"] + label,
-body.template-surveys-modern .gform_wrapper input[type="radio"] + label {
-	font-size: 20px;
-}
-
-body.template-surveys-modern .gform_wrapper .gfield_label {
-	font-size: 26px;
-}
-
-body.template-surveys-modern .gform_wrapper textarea,
-body.template-surveys-modern .gform_wrapper input,
-body.template-surveys-modern .gform_wrapper input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']) {
-	font-size: 20px;
-}
-
-body.template-surveys-modern .survey-start-wrapper button.survey-start-button {
-	font-size: 22px;
-}
-
-body.template-surveys-modern .gform_wrapper .gform_footer input.button,
-body.template-surveys-modern body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input,
-body.page-id-6357 .block.block-wide-text body.template-surveys-modern .gform_wrapper .gform_footer input,
-body.template-surveys-modern body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .gform_footer input.button.gform_button_select_files,
-body.page-id-6357 .block.block-wide-text body.template-surveys-modern .gform_wrapper.gf_browser_chrome .gform_footer input.button.gform_button_select_files,
-body.template-surveys-modern .gform_wrapper .gform_page_footer input.button,
-body.template-surveys-modern body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_page_footer .gform_footer input,
-body.page-id-6357 .block.block-wide-text body.template-surveys-modern .gform_wrapper .gform_page_footer .gform_footer input,
-body.template-surveys-modern body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .gform_page_footer input,
-body.page-id-6357 .block.block-wide-text body.template-surveys-modern .gform_wrapper .gform_footer .gform_page_footer input,
-body.template-surveys-modern body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .gform_page_footer input.button.gform_button_select_files,
-body.page-id-6357 .block.block-wide-text body.template-surveys-modern .gform_wrapper.gf_browser_chrome .gform_page_footer input.button.gform_button_select_files,
-body.template-surveys-modern .gform_wrapper .gform_footer input[type=submit],
-body.template-surveys-modern .gform_wrapper .gform_page_footer input[type=submit] {
-	font-size: 26px;
 }
 
 .cart p {
@@ -15368,6 +14711,14 @@ body:not(.page-id-6357) .block.block-wide-text .site-header .block.block-timelin
 
 }
 
+@media all and (max-width: 1130px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 1130px) and (-ms-high-contrast: active) and (max-width: 870px) {
+
+.block.block-values .cols > div {
+	width: 100%;
+}
+
+}
+
 @media all and (max-width: 1130px) and (-ms-high-contrast: none), (max-width: 1130px) and (-ms-high-contrast: active) {
 
 .block.block-values .cols {
@@ -15380,14 +14731,6 @@ body:not(.page-id-6357) .block.block-wide-text .site-header .block.block-timelin
 	width: calc(50% - 2.5rem);
 	margin-right: 2.5rem;
 	margin-bottom: 5rem;
-}
-
-}
-
-@media all and (max-width: 1130px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 1130px) and (-ms-high-contrast: active) and (max-width: 870px) {
-
-.block.block-values .cols > div {
-	width: 100%;
 }
 
 }
@@ -15439,19 +14782,6 @@ body:not(.page-id-6357) .block.block-wide-text .site-header .block.block-timelin
 	grid-auto-rows: minmax(0, auto);
 	grid-column-gap: 6rem;
 	grid-row-gap: 6rem;
-}
-
-body.template-surveys-modern .gform_wrapper table.gsurvey-likert .gsurvey-likert-choice {
-	padding: .5rem 1rem;
-	background-position: 1rem center !important;
-}
-
-body.template-surveys-modern .gform_wrapper table.gsurvey-likert .gsurvey-likert-choice input {
-	margin-left: 1rem !important;
-}
-
-body.template-surveys-modern .gform_wrapper table.gsurvey-likert .gsurvey-likert-choice::after {
-	margin-left: 3rem !important;
 }
 
 }
@@ -15942,6 +15272,22 @@ body:not(.page-id-6357) .block.block-wide-text .site-header .is-variable.is-8-to
 
 }
 
+@media all and (max-width: 1000px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 1000px) and (-ms-high-contrast: active) and (max-width: 870px) {
+
+.block.block-dudes .cols > div {
+	width: 100%;
+}
+
+.block.block-open-source .repos > div {
+	width: 100%;
+}
+
+.block.block-blog .cols > div {
+	width: 100%;
+}
+
+}
+
 @media (max-width: 1000px) {
 
 .vimeo-wrapper.vimeo-wrapper-upsell-front-page iframe {
@@ -15996,17 +15342,6 @@ body.single .block.block-single:not(.block-single-reference) ul.tags .entry-cont
 	grid-row-gap: 3rem;
 }
 
-body.template-surveys-modern {
-	background-size: cover;
-}
-
-body.template-surveys-modern .gform_wrapper textarea::placeholder,
-body.template-surveys-modern .gform_wrapper input::placeholder,
-body.template-surveys-modern .gform_wrapper input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file'])::placeholder {
-	line-height: 1.5;
-	padding-top: 5rem;
-}
-
 body.page-id-6357 .block.block-wide-text .gform_wrapper ul.gform_fields {
 	margin-left: -2.5rem !important;
 	margin-right: -2.5rem !important;
@@ -16030,22 +15365,6 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper form li.gfmc-column.gfmc
 	grid-auto-rows: minmax(0, auto);
 	grid-column-gap: 6rem;
 	grid-row-gap: 6rem;
-}
-
-}
-
-@media all and (max-width: 1000px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 1000px) and (-ms-high-contrast: active) and (max-width: 870px) {
-
-.block.block-dudes .cols > div {
-	width: 100%;
-}
-
-.block.block-open-source .repos > div {
-	width: 100%;
-}
-
-.block.block-blog .cols > div {
-	width: 100%;
 }
 
 }
@@ -16090,14 +15409,6 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper form li.gfmc-column.gfmc
 
 }
 
-@media all and (max-width: 980px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 980px) and (-ms-high-contrast: active) and (max-width: 870px) {
-
-.block.block-mission-vision .cols.cols-two > div {
-	width: 100%;
-}
-
-}
-
 @media (max-width: 980px) {
 
 .block.block-mission-vision .cols.cols-two {
@@ -16137,10 +15448,34 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper form li.gfmc-column.gfmc
 
 }
 
+@media all and (max-width: 980px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 980px) and (-ms-high-contrast: active) and (max-width: 870px) {
+
+.block.block-mission-vision .cols.cols-two > div {
+	width: 100%;
+}
+
+}
+
 @media all and (max-width: 960px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 960px) and (-ms-high-contrast: active) and (max-width: 870px) {
 
 .block.block-logos .logo-wall > div {
 	width: 100%;
+}
+
+}
+
+@media all and (max-width: 960px) and (-ms-high-contrast: none), (max-width: 960px) and (-ms-high-contrast: active) {
+
+.block.block-logos .logo-wall {
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+.block.block-logos .logo-wall > div {
+	width: calc(33.33333% - 25px);
+	margin-right: 25px;
+	margin-bottom: 6rem;
 }
 
 }
@@ -16188,22 +15523,6 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper form li.gfmc-column.gfmc
 
 .cart svg {
 	margin-right: 2.5rem;
-}
-
-}
-
-@media all and (max-width: 960px) and (-ms-high-contrast: none), (max-width: 960px) and (-ms-high-contrast: active) {
-
-.block.block-logos .logo-wall {
-	display: flex;
-	flex-wrap: wrap;
-	overflow: hidden;
-}
-
-.block.block-logos .logo-wall > div {
-	width: calc(33.33333% - 25px);
-	margin-right: 25px;
-	margin-bottom: 6rem;
 }
 
 }
@@ -16270,6 +15589,60 @@ body:not(.page-id-6357) .block.block-wide-text .site-header > * {
 
 .block.block-community .item-list > div {
 	width: 100%;
+}
+
+}
+
+@media all and (max-width: 900px) and (-ms-high-contrast: none), (max-width: 900px) and (-ms-high-contrast: active) {
+
+.block.block-footer.site-footer .cols {
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+.block.block-footer.site-footer .cols > div {
+	width: calc(50% - 2rem);
+	margin-right: 2rem;
+	margin-bottom: 6rem;
+}
+
+.block.block-footer.site-footer .main-links ul {
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+.block.block-footer.site-footer .main-links ul > div {
+	width: calc(50% - 0rem);
+	margin-right: 0rem;
+	margin-bottom: 1rem;
+}
+
+.block.block-community-photos .container,
+.block.block-community-photos .site-header {
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+.block.block-community-photos .container > div,
+.block.block-community-photos .site-header > div {
+	width: calc(50% - 3rem);
+	margin-right: 3rem;
+	margin-bottom: 6rem;
+}
+
+.block.block-community .item-list {
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+.block.block-community .item-list > div {
+	width: calc(50% - 0rem);
+	margin-right: 0rem;
+	margin-bottom: 0rem;
 }
 
 }
@@ -16347,63 +15720,12 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .block
 	grid-row-gap: 0rem;
 }
 
-body.template-surveys-modern .gform_wrapper .ginput_container.ginput_container_checkbox ul.gfield_checkbox li label,
-body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_checkbox ul.gfield_checkbox li label {
-	font-size: var(--font-size-general-small) !important;
 }
 
-}
+@media all and (max-width: 890px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 890px) and (-ms-high-contrast: active) and (max-width: 870px) {
 
-@media all and (max-width: 900px) and (-ms-high-contrast: none), (max-width: 900px) and (-ms-high-contrast: active) {
-
-.block.block-footer.site-footer .cols {
-	display: flex;
-	flex-wrap: wrap;
-	overflow: hidden;
-}
-
-.block.block-footer.site-footer .cols > div {
-	width: calc(50% - 2rem);
-	margin-right: 2rem;
-	margin-bottom: 6rem;
-}
-
-.block.block-footer.site-footer .main-links ul {
-	display: flex;
-	flex-wrap: wrap;
-	overflow: hidden;
-}
-
-.block.block-footer.site-footer .main-links ul > div {
-	width: calc(50% - 0rem);
-	margin-right: 0rem;
-	margin-bottom: 1rem;
-}
-
-.block.block-community-photos .container,
-.block.block-community-photos .site-header {
-	display: flex;
-	flex-wrap: wrap;
-	overflow: hidden;
-}
-
-.block.block-community-photos .container > div,
-.block.block-community-photos .site-header > div {
-	width: calc(50% - 3rem);
-	margin-right: 3rem;
-	margin-bottom: 6rem;
-}
-
-.block.block-community .item-list {
-	display: flex;
-	flex-wrap: wrap;
-	overflow: hidden;
-}
-
-.block.block-community .item-list > div {
-	width: calc(50% - 0rem);
-	margin-right: 0rem;
-	margin-bottom: 0rem;
+.block.block-latest-selected-mustread .row.row-mustread > div {
+	width: 100%;
 }
 
 }
@@ -16432,14 +15754,6 @@ body.template-surveys-modern .gform_wrapper ul li.field_description_above div.gi
 	grid-auto-rows: minmax(0, auto);
 	grid-column-gap: 6rem;
 	grid-row-gap: 9rem;
-}
-
-}
-
-@media all and (max-width: 890px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 890px) and (-ms-high-contrast: active) and (max-width: 870px) {
-
-.block.block-latest-selected-mustread .row.row-mustread > div {
-	width: 100%;
 }
 
 }
@@ -16553,14 +15867,6 @@ body.single.single-reference .block.block-single.block-single-reference {
 .block.block-community .cols {
 	display: flex;
 	flex-wrap: wrap;
-}
-
-body.template-surveys-modern .gform_wrapper {
-	padding-top: 3px;
-}
-
-body.template-surveys-modern .survey-header {
-	padding-top: 4rem;
 }
 
 .wp-block-columns,
@@ -17151,15 +16457,6 @@ body:not(.page-id-6357) .block.block-wide-text .site-header .is-variable.is-8-mo
 
 }
 
-@media (max-width: 760px) and (max-width: 480px) {
-
-.block.block-hero {
-	padding-top: 12rem;
-	padding-bottom: 12rem;
-}
-
-}
-
 @media (max-width: 760px) {
 
 .site-header {
@@ -17290,6 +16587,15 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper form li.gfmc-column.gfmc
 
 }
 
+@media (max-width: 760px) and (max-width: 480px) {
+
+.block.block-hero {
+	padding-top: 12rem;
+	padding-bottom: 12rem;
+}
+
+}
+
 @media (max-width: 759px) {
 
 .top-button-holder.show-on-mobile {
@@ -17322,18 +16628,10 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .top-b
 
 }
 
-@media all and (max-width: 730px) and (-ms-high-contrast: none), (max-width: 730px) and (-ms-high-contrast: active) {
-
-.block.block-references .reference-wrapper.reference-wrapper-cols {
-	display: flex;
-	flex-wrap: wrap;
-	overflow: hidden;
-}
+@media all and (max-width: 730px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 730px) and (-ms-high-contrast: active) and (max-width: 870px) {
 
 .block.block-references .reference-wrapper.reference-wrapper-cols > div {
-	width: calc(100% - 4.5rem);
-	margin-right: 4.5rem;
-	margin-bottom: 14rem;
+	width: 100%;
 }
 
 }
@@ -17360,34 +16658,36 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .top-b
 
 }
 
-@media all and (max-width: 730px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 730px) and (-ms-high-contrast: active) and (max-width: 870px) {
+@media all and (max-width: 730px) and (-ms-high-contrast: none), (max-width: 730px) and (-ms-high-contrast: active) {
+
+.block.block-references .reference-wrapper.reference-wrapper-cols {
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
 
 .block.block-references .reference-wrapper.reference-wrapper-cols > div {
-	width: 100%;
+	width: calc(100% - 4.5rem);
+	margin-right: 4.5rem;
+	margin-bottom: 14rem;
 }
 
 }
 
-@media (max-width: 710px) {
+@media all and (max-width: 700px) and (-ms-high-contrast: none), (max-width: 700px) and (-ms-high-contrast: active) {
 
-body.template-surveys-modern .gform_wrapper ul.gfield_checkbox > li {
-	min-width: 50% !important;
-	width: 50% !important;
+.block.block-community-photos .container,
+.block.block-community-photos .site-header {
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
 }
 
-body.template-surveys-modern .gform_wrapper ul li.field_description_below div.ginput_container_radio > ul li,
-body.template-surveys-modern .gform_wrapper ul li.field_description_below div.ginput_container_checkbox > ul li,
-body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_radio > ul li,
-body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_checkbox > ul li {
-	width: 100% !important;
-	margin-right: 0 !important;
-	margin-bottom: -1px;
-}
-
-body.template-surveys-modern .gform_wrapper .ginput_container.ginput_container_checkbox ul.gfield_checkbox,
-body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_checkbox ul.gfield_checkbox {
-	width: calc(100% + 3px) !important;
-	margin-left: -2px !important;
+.block.block-community-photos .container > div,
+.block.block-community-photos .site-header > div {
+	width: calc(50% - 2rem);
+	margin-right: 2rem;
+	margin-bottom: 4rem;
 }
 
 }
@@ -17456,24 +16756,6 @@ body.page-template-template-faq .block.block-hero.block-hero-light.block-hero-fa
 
 }
 
-@media all and (max-width: 700px) and (-ms-high-contrast: none), (max-width: 700px) and (-ms-high-contrast: active) {
-
-.block.block-community-photos .container,
-.block.block-community-photos .site-header {
-	display: flex;
-	flex-wrap: wrap;
-	overflow: hidden;
-}
-
-.block.block-community-photos .container > div,
-.block.block-community-photos .site-header > div {
-	width: calc(50% - 2rem);
-	margin-right: 2rem;
-	margin-bottom: 4rem;
-}
-
-}
-
 @media (max-width: 680px) {
 
 .site-title svg {
@@ -17495,6 +16777,14 @@ body.page-template-template-faq .block.block-hero.block-hero-light.block-hero-fa
 
 }
 
+@media all and (max-width: 650px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 650px) and (-ms-high-contrast: active) and (max-width: 870px) {
+
+.block.block-logos .logo-wall > div {
+	width: 100%;
+}
+
+}
+
 @media all and (max-width: 650px) and (-ms-high-contrast: none), (max-width: 650px) and (-ms-high-contrast: active) {
 
 .block.block-logos .logo-wall {
@@ -17507,14 +16797,6 @@ body.page-template-template-faq .block.block-hero.block-hero-light.block-hero-fa
 	width: calc(33.33333% - 10px);
 	margin-right: 10px;
 	margin-bottom: 40px;
-}
-
-}
-
-@media all and (max-width: 650px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 650px) and (-ms-high-contrast: active) and (max-width: 870px) {
-
-.block.block-logos .logo-wall > div {
-	width: 100%;
 }
 
 }
@@ -17817,30 +17099,6 @@ body:not(.page-id-6357) .block.block-wide-text body.single.single-reference .blo
 	margin-bottom: 0;
 }
 
-body.template-surveys-modern .gform_confirmation_wrapper .thanks {
-	font-size: 30px;
-}
-
-body.template-surveys-modern .gform_wrapper textarea::placeholder,
-body.template-surveys-modern .gform_wrapper input::placeholder,
-body.template-surveys-modern .gform_wrapper input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file'])::placeholder {
-	padding-top: 4rem;
-}
-
-body.template-surveys-modern .survey-header svg {
-	width: 70px;
-	height: 16.14px;
-}
-
-body.template-surveys-modern .survey-header h1 {
-	font-size: 20px;
-}
-
-body.template-surveys-modern .survey-header p {
-	font-size: 15px;
-	padding-bottom: 2rem;
-}
-
 .cart .buttons {
 	white-space: normal;
 }
@@ -17898,22 +17156,14 @@ th {
 
 }
 
-@media (max-width: 580px) {
+@media all and (max-width: 580px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 580px) and (-ms-high-contrast: active) and (max-width: 870px) {
 
-.block.block-values .cols {
-	display: grid;
-	grid-template-columns: repeat(1, 1fr); /* autoprefixer: off */
-	grid-auto-rows: minmax(0, auto);
-	grid-column-gap: 6rem;
-	grid-row-gap: 6rem;
+.block.block-values .cols > div {
+	width: 100%;
 }
 
-.block.block-blog .cols {
-	display: grid;
-	grid-template-columns: repeat(1, 1fr); /* autoprefixer: off */
-	grid-auto-rows: minmax(0, auto);
-	grid-column-gap: 6rem;
-	grid-row-gap: 6rem;
+.block.block-blog .cols > div {
+	width: 100%;
 }
 
 }
@@ -17946,14 +17196,22 @@ th {
 
 }
 
-@media all and (max-width: 580px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 580px) and (-ms-high-contrast: active) and (max-width: 870px) {
+@media (max-width: 580px) {
 
-.block.block-values .cols > div {
-	width: 100%;
+.block.block-values .cols {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr); /* autoprefixer: off */
+	grid-auto-rows: minmax(0, auto);
+	grid-column-gap: 6rem;
+	grid-row-gap: 6rem;
 }
 
-.block.block-blog .cols > div {
-	width: 100%;
+.block.block-blog .cols {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr); /* autoprefixer: off */
+	grid-auto-rows: minmax(0, auto);
+	grid-column-gap: 6rem;
+	grid-row-gap: 6rem;
 }
 
 }
@@ -17962,37 +17220,6 @@ th {
 
 .block.block-community .item-list {
 	display: block;
-}
-
-}
-
-@media (max-width: 550px) {
-
-body.template-surveys-modern .gform_wrapper ul.gfield_checkbox > li {
-	min-width: 50% !important;
-	width: 100% !important;
-}
-
-body.template-surveys-modern .gform_wrapper .ginput_container.ginput_container_checkbox ul.gfield_checkbox,
-body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_checkbox ul.gfield_checkbox {
-	width: calc(100% + 2px) !important;
-	margin-left: -2px !important;
-}
-
-}
-
-@media all and (max-width: 530px) and (-ms-high-contrast: none), (max-width: 530px) and (-ms-high-contrast: active) {
-
-.block.block-hero-person .cols {
-	display: flex;
-	flex-wrap: wrap;
-	overflow: hidden;
-}
-
-.block.block-hero-person .cols > div {
-	width: calc(100% - 0rem);
-	margin-right: 0rem;
-	margin-bottom: 0rem;
 }
 
 }
@@ -18036,6 +17263,22 @@ body.template-surveys-modern .gform_wrapper ul li.field_description_above div.gi
 
 }
 
+@media all and (max-width: 530px) and (-ms-high-contrast: none), (max-width: 530px) and (-ms-high-contrast: active) {
+
+.block.block-hero-person .cols {
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+.block.block-hero-person .cols > div {
+	width: calc(100% - 0rem);
+	margin-right: 0rem;
+	margin-bottom: 0rem;
+}
+
+}
+
 @media (max-width: 500px) {
 
 .block.block-footer.site-footer .large-text {
@@ -18075,47 +17318,6 @@ body.template-surveys-modern .gform_wrapper ul li.field_description_above div.gi
 	font-size: 18px;
 }
 
-body.template-surveys-modern .gform_wrapper .gfield_label {
-	font-size: 18px;
-	margin-bottom: 3rem;
-}
-
-body.template-surveys-modern .gform_wrapper ul.gform_fields li.gfield {
-	padding: 3rem 3rem 0;
-	margin-bottom: 5rem;
-}
-
-body.template-surveys-modern .gform_wrapper textarea,
-body.template-surveys-modern .gform_wrapper input,
-body.template-surveys-modern .gform_wrapper input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']) {
-	margin-left: -3rem;
-	margin-right: -3rem;
-	width: calc(100% + 6rem);
-}
-
-body.template-surveys-modern .gform_wrapper textarea::placeholder,
-body.template-surveys-modern .gform_wrapper input::placeholder,
-body.template-surveys-modern .gform_wrapper input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file'])::placeholder {
-	padding-top: 2rem;
-}
-
-body.template-surveys-modern .survey-header::after {
-	left: 3rem;
-	width: calc(100% - 6rem);
-	bottom: 2rem;
-}
-
-body.template-surveys-modern .survey-header p {
-	padding-bottom: 5px;
-}
-
-body.template-surveys-modern .gform_wrapper .ginput_container.ginput_container_checkbox,
-body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_checkbox {
-	margin-left: -3rem !important;
-	margin-right: -3rem !important;
-	width: calc(100% + 6rem) !important;
-}
-
 body.page-id-6357 .block.block-wide-text .gform_wrapper form #field_6_11 ul .checkbox + label::before,
 body.page-id-6357 .block.block-wide-text .gform_wrapper form #field_6_11 ul .gform_wrapper ul.gfield_checkbox li input[type=checkbox] + br + label::before,
 body.page-id-6357 .block.block-wide-text .gform_wrapper form #field_6_11 ul .gform_wrapper ul.gfield_radio li input[type=radio] + br + label::before,
@@ -18129,19 +17331,6 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper form #field_6_11 ul inpu
 body.page-id-6357 .block.block-wide-text .gform_wrapper form #field_6_11 ul .gform_wrapper ul.gfield_radio li input[type=radio]:checked + br + label::before,
 body.page-id-6357 .block.block-wide-text .gform_wrapper form #field_6_11 ul input[type=radio]:checked + label::before {
 	margin-top: -16px;
-}
-
-}
-
-@media all and (max-width: 480px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 480px) and (-ms-high-contrast: active) and (max-width: 870px) {
-
-.col.col-services > div {
-	width: 100%;
-}
-
-.block.block-community-photos .container > div,
-.block.block-community-photos .site-header > div {
-	width: 100%;
 }
 
 }
@@ -18172,6 +17361,19 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper form #field_6_11 ul inpu
 	width: calc(50% - 1rem);
 	margin-right: 1rem;
 	margin-bottom: 2rem;
+}
+
+}
+
+@media all and (max-width: 480px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 480px) and (-ms-high-contrast: active) and (max-width: 870px) {
+
+.col.col-services > div {
+	width: 100%;
+}
+
+.block.block-community-photos .container > div,
+.block.block-community-photos .site-header > div {
+	width: 100%;
 }
 
 }
@@ -18376,25 +17578,6 @@ body.single .block.block-single:not(.block-single-reference) .post > .author-car
 	grid-auto-rows: minmax(0, auto);
 	grid-column-gap: 2rem;
 	grid-row-gap: 2rem;
-}
-
-body.template-surveys-modern table.gsurvey-likert td.gsurvey-likert-choice.gsurvey-likert-selected {
-	background-size: 20px 20px;
-}
-
-body.template-surveys-modern .container > *,
-body.template-surveys-modern .site-header > *,
-body.template-surveys-modern .survey-header > *,
-body.template-surveys-modern .gform_wrapper > *,
-body.template-surveys-modern .gform_confirmation_wrapper > * {
-	margin-left: 2rem;
-	margin-right: 2rem;
-}
-
-body.template-surveys-modern .survey-start-wrapper {
-	background: #f2f2f2;
-	position: static;
-	margin-top: 3rem;
 }
 
 body.page-template-template-company .block.block-cta-with-image .col.col-image {
@@ -18622,15 +17805,6 @@ body.single .block.block-single:not(.block-single-reference) .post > .author-car
 	font-size: var(--font-size-general-small);
 }
 
-body.template-surveys-modern .container > *,
-body.template-surveys-modern .site-header > *,
-body.template-surveys-modern .survey-header > *,
-body.template-surveys-modern .gform_wrapper > *,
-body.template-surveys-modern .gform_confirmation_wrapper > * {
-	margin-left: 1.7rem;
-	margin-right: 1.7rem;
-}
-
 }
 
 @media (max-width: 400px) {
@@ -18656,46 +17830,6 @@ body.template-surveys-modern .gform_confirmation_wrapper > * {
 
 .nav-primary .cols.cols-contact .contact-title {
 	font-size: 14px;
-}
-
-body.template-surveys-modern .gform_wrapper ul li.field_description_below div.ginput_container_radio,
-body.template-surveys-modern .gform_wrapper ul li.field_description_below div.ginput_container_checkbox,
-body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_radio,
-body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_checkbox {
-	margin: 2rem 0;
-}
-
-body.template-surveys-modern .gform_wrapper .gfield_label {
-	font-size: var(--font-size-general-small);
-	margin-bottom: 2rem;
-}
-
-body.template-surveys-modern .gform_wrapper ul.gform_fields li.gfield {
-	padding: 2rem 2rem 0;
-}
-
-body.template-surveys-modern .gform_wrapper textarea,
-body.template-surveys-modern .gform_wrapper input,
-body.template-surveys-modern .gform_wrapper input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']) {
-	margin-left: -2rem;
-	margin-right: -2rem;
-	width: calc(100% + 4rem);
-}
-
-body.template-surveys-modern .survey-header::after {
-	left: 2rem;
-	width: calc(100% - 4rem);
-}
-
-body.template-surveys-modern .survey-header h1 {
-	font-size: 17px;
-}
-
-body.template-surveys-modern .gform_wrapper .ginput_container.ginput_container_checkbox,
-body.template-surveys-modern .gform_wrapper ul li.field_description_above div.ginput_container_checkbox {
-	margin-left: -2rem !important;
-	margin-right: -2rem !important;
-	width: calc(100% + 4rem) !important;
 }
 
 }
@@ -18746,30 +17880,6 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .block
 
 .block.block-hero.block-hero-fp .content .content-sub-statement {
 	font-size: 14px;
-}
-
-}
-
-@media (max-height: 880px) {
-
-body.template-surveys-modern .survey-header img {
-	max-width: 140px;
-}
-
-}
-
-@media (max-height: 760px) {
-
-body.template-surveys-modern .survey-header img {
-	max-width: 100px;
-}
-
-}
-
-@media (max-height: 670px) {
-
-body.template-surveys-modern .survey-header img {
-	max-width: 70px;
 }
 
 }
@@ -18918,87 +18028,87 @@ to {
 @keyframes glitch-effect {
 
 0% {
-	clip: rect(27px, 9999px, 36px, 0);
+	clip: rect(40px, 9999px, 7px, 0);
 }
 
 5% {
-	clip: rect(28px, 9999px, 46px, 0);
+	clip: rect(62px, 9999px, 74px, 0);
 }
 
 10% {
-	clip: rect(49px, 9999px, 71px, 0);
+	clip: rect(10px, 9999px, 19px, 0);
 }
 
 15% {
-	clip: rect(65px, 9999px, 59px, 0);
+	clip: rect(29px, 9999px, 47px, 0);
 }
 
 20% {
-	clip: rect(72px, 9999px, 35px, 0);
+	clip: rect(37px, 9999px, 27px, 0);
 }
 
 25% {
-	clip: rect(95px, 9999px, 35px, 0);
+	clip: rect(69px, 9999px, 3px, 0);
 }
 
 30% {
-	clip: rect(100px, 9999px, 36px, 0);
+	clip: rect(88px, 9999px, 38px, 0);
 }
 
 35% {
-	clip: rect(24px, 9999px, 66px, 0);
+	clip: rect(63px, 9999px, 37px, 0);
 }
 
 40% {
-	clip: rect(86px, 9999px, 42px, 0);
+	clip: rect(72px, 9999px, 11px, 0);
 }
 
 45% {
-	clip: rect(26px, 9999px, 24px, 0);
+	clip: rect(14px, 9999px, 85px, 0);
 }
 
 50% {
-	clip: rect(32px, 9999px, 16px, 0);
+	clip: rect(88px, 9999px, 95px, 0);
 }
 
 55% {
-	clip: rect(93px, 9999px, 26px, 0);
+	clip: rect(4px, 9999px, 1px, 0);
 }
 
 60% {
-	clip: rect(74px, 9999px, 66px, 0);
+	clip: rect(27px, 9999px, 23px, 0);
 }
 
 65% {
-	clip: rect(6px, 9999px, 69px, 0);
+	clip: rect(23px, 9999px, 21px, 0);
 }
 
 70% {
-	clip: rect(98px, 9999px, 40px, 0);
+	clip: rect(96px, 9999px, 32px, 0);
 }
 
 75% {
-	clip: rect(8px, 9999px, 33px, 0);
+	clip: rect(88px, 9999px, 83px, 0);
 }
 
 80% {
-	clip: rect(6px, 9999px, 39px, 0);
+	clip: rect(93px, 9999px, 66px, 0);
 }
 
 85% {
-	clip: rect(47px, 9999px, 66px, 0);
+	clip: rect(53px, 9999px, 61px, 0);
 }
 
 90% {
-	clip: rect(89px, 9999px, 20px, 0);
+	clip: rect(27px, 9999px, 76px, 0);
 }
 
 95% {
-	clip: rect(44px, 9999px, 94px, 0);
+	clip: rect(62px, 9999px, 88px, 0);
 }
 
 100% {
-	clip: rect(17px, 9999px, 75px, 0);
+	clip: rect(66px, 9999px, 33px, 0);
 }
 
 }
@@ -19094,43 +18204,43 @@ to {
 @keyframes noise-1 {
 
 10% {
-	clip-path: inset(85px 0 6px 0);
+	clip-path: inset(14px 0 16px 0);
 }
 
 20% {
-	clip-path: inset(57px 0 35px 0);
+	clip-path: inset(33px 0 26px 0);
 }
 
 30% {
-	clip-path: inset(54px 0 32px 0);
+	clip-path: inset(64px 0 9px 0);
 }
 
 40% {
-	clip-path: inset(25px 0 60px 0);
+	clip-path: inset(27px 0 50px 0);
 }
 
 50% {
-	clip-path: inset(38px 0 61px 0);
+	clip-path: inset(4px 0 83px 0);
 }
 
 60% {
-	clip-path: inset(77px 0 6px 0);
+	clip-path: inset(13px 0 88px 0);
 }
 
 70% {
-	clip-path: inset(8px 0 8px 0);
+	clip-path: inset(86px 0 8px 0);
 }
 
 80% {
-	clip-path: inset(39px 0 27px 0);
+	clip-path: inset(76px 0 5px 0);
 }
 
 90% {
-	clip-path: inset(36px 0 34px 0);
+	clip-path: inset(85px 0 10px 0);
 }
 
 100% {
-	clip-path: inset(65px 0 6px 0);
+	clip-path: inset(14px 0 65px 0);
 }
 
 }
@@ -19138,158 +18248,158 @@ to {
 @keyframes noise-2 {
 
 0% {
-	text-shadow: 4px 0 #76ff9b;
-	clip-path: inset(14px 0 80px 0);
+	text-shadow: 3px 0 #76ff9b;
+	clip-path: inset(30px 0 50px 0);
 }
 
 3.33333% {
-	text-shadow: 3px 0 #76ff9b;
-	clip-path: inset(35px 0 5px 0);
+	text-shadow: 2px 0 #76ff9b;
+	clip-path: inset(45px 0 24px 0);
 }
 
 6.66667% {
 	text-shadow: 2px 0 #76ff9b;
-	clip-path: inset(73px 0 5px 0);
+	clip-path: inset(88px 0 8px 0);
 }
 
 10% {
-	text-shadow: 2px 0 #76ff9b;
-	clip-path: inset(54px 0 19px 0);
+	text-shadow: 5px 0 #76ff9b;
+	clip-path: inset(72px 0 4px 0);
 }
 
 13.33333% {
-	text-shadow: 1px 0 #76ff9b;
-	clip-path: inset(74px 0 27px 0);
+	text-shadow: 5px 0 #76ff9b;
+	clip-path: inset(36px 0 20px 0);
 }
 
 16.66667% {
-	text-shadow: 1px 0 #76ff9b;
-	clip-path: inset(39px 0 52px 0);
+	text-shadow: 4px 0 #76ff9b;
+	clip-path: inset(1px 0 92px 0);
 }
 
 20% {
-	text-shadow: 2px 0 #76ff9b;
-	clip-path: inset(8px 0 53px 0);
+	text-shadow: 4px 0 #76ff9b;
+	clip-path: inset(45px 0 7px 0);
 }
 
 23.33333% {
-	text-shadow: 5px 0 #76ff9b;
-	clip-path: inset(58px 0 35px 0);
+	text-shadow: 3px 0 #76ff9b;
+	clip-path: inset(48px 0 53px 0);
 }
 
 26.66667% {
 	text-shadow: 4px 0 #76ff9b;
-	clip-path: inset(40px 0 27px 0);
+	clip-path: inset(99px 0 1px 0);
 }
 
 30% {
 	text-shadow: 5px 0 #76ff9b;
-	clip-path: inset(47px 0 20px 0);
+	clip-path: inset(19px 0 47px 0);
 }
 
 33.33333% {
-	text-shadow: 3px 0 #76ff9b;
-	clip-path: inset(54px 0 5px 0);
+	text-shadow: 2px 0 #76ff9b;
+	clip-path: inset(37px 0 41px 0);
 }
 
 36.66667% {
 	text-shadow: 2px 0 #76ff9b;
-	clip-path: inset(36px 0 9px 0);
+	clip-path: inset(49px 0 48px 0);
 }
 
 40% {
-	text-shadow: 5px 0 #76ff9b;
-	clip-path: inset(59px 0 5px 0);
+	text-shadow: 3px 0 #76ff9b;
+	clip-path: inset(8px 0 27px 0);
 }
 
 43.33333% {
-	text-shadow: 2px 0 #76ff9b;
-	clip-path: inset(67px 0 14px 0);
+	text-shadow: 1px 0 #76ff9b;
+	clip-path: inset(48px 0 5px 0);
 }
 
 46.66667% {
-	text-shadow: 4px 0 #76ff9b;
-	clip-path: inset(43px 0 8px 0);
+	text-shadow: 2px 0 #76ff9b;
+	clip-path: inset(94px 0 2px 0);
 }
 
 50% {
-	text-shadow: 3px 0 #76ff9b;
-	clip-path: inset(50px 0 25px 0);
+	text-shadow: 5px 0 #76ff9b;
+	clip-path: inset(41px 0 49px 0);
 }
 
 53.33333% {
-	text-shadow: 2px 0 #76ff9b;
-	clip-path: inset(22px 0 60px 0);
+	text-shadow: 1px 0 #76ff9b;
+	clip-path: inset(80px 0 15px 0);
 }
 
 56.66667% {
-	text-shadow: 1px 0 #76ff9b;
-	clip-path: inset(30px 0 23px 0);
+	text-shadow: 5px 0 #76ff9b;
+	clip-path: inset(85px 0 5px 0);
 }
 
 60% {
-	text-shadow: 5px 0 #76ff9b;
-	clip-path: inset(84px 0 7px 0);
+	text-shadow: 1px 0 #76ff9b;
+	clip-path: inset(53px 0 45px 0);
 }
 
 63.33333% {
 	text-shadow: 2px 0 #76ff9b;
-	clip-path: inset(28px 0 70px 0);
+	clip-path: inset(27px 0 25px 0);
 }
 
 66.66667% {
-	text-shadow: 3px 0 #76ff9b;
-	clip-path: inset(14px 0 38px 0);
+	text-shadow: 1px 0 #76ff9b;
+	clip-path: inset(61px 0 31px 0);
 }
 
 70% {
-	text-shadow: 1px 0 #76ff9b;
-	clip-path: inset(27px 0 50px 0);
+	text-shadow: 4px 0 #76ff9b;
+	clip-path: inset(56px 0 13px 0);
 }
 
 73.33333% {
-	text-shadow: 4px 0 #76ff9b;
-	clip-path: inset(63px 0 11px 0);
+	text-shadow: 2px 0 #76ff9b;
+	clip-path: inset(57px 0 20px 0);
 }
 
 76.66667% {
-	text-shadow: 4px 0 #76ff9b;
-	clip-path: inset(23px 0 75px 0);
+	text-shadow: 1px 0 #76ff9b;
+	clip-path: inset(41px 0 49px 0);
 }
 
 80% {
-	text-shadow: 3px 0 #76ff9b;
-	clip-path: inset(100px 0 1px 0);
+	text-shadow: 1px 0 #76ff9b;
+	clip-path: inset(54px 0 3px 0);
 }
 
 83.33333% {
-	text-shadow: 1px 0 #76ff9b;
-	clip-path: inset(86px 0 1px 0);
+	text-shadow: 3px 0 #76ff9b;
+	clip-path: inset(7px 0 92px 0);
 }
 
 86.66667% {
-	text-shadow: 3px 0 #76ff9b;
-	clip-path: inset(52px 0 38px 0);
+	text-shadow: 1px 0 #76ff9b;
+	clip-path: inset(40px 0 40px 0);
 }
 
 90% {
-	text-shadow: 2px 0 #76ff9b;
-	clip-path: inset(43px 0 9px 0);
+	text-shadow: 4px 0 #76ff9b;
+	clip-path: inset(6px 0 58px 0);
 }
 
 93.33333% {
 	text-shadow: 5px 0 #76ff9b;
-	clip-path: inset(20px 0 1px 0);
+	clip-path: inset(23px 0 40px 0);
 }
 
 96.66667% {
-	text-shadow: 5px 0 #76ff9b;
-	clip-path: inset(92px 0 1px 0);
+	text-shadow: 4px 0 #76ff9b;
+	clip-path: inset(5px 0 91px 0);
 }
 
 100% {
-	text-shadow: 1px 0 #76ff9b;
-	clip-path: inset(60px 0 22px 0);
+	text-shadow: 3px 0 #76ff9b;
+	clip-path: inset(41px 0 14px 0);
 }
 
 }
