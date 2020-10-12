@@ -153,9 +153,23 @@
   })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
 </script>
 
-<!-- Albacross -->
-<script>window._nQc = "89938094";</script>
-<script src="https://serve.albacross.com/track.js"></script>
+<script>
+  (function(){
+
+    window.ldfdr = window.ldfdr || {};
+    (function(d, s, ss, fs){
+      fs = d.getElementsByTagName(s)[0];
+
+      function ce(src){
+        var cs  = d.createElement(s);
+        cs.src = src;
+        setTimeout(function(){fs.parentNode.insertBefore(cs,fs)}, 1);
+      }
+
+      ce(ss);
+    })(document, 'script', 'https://sc.lfeeder.com/lftracker_v1_lAxoEaKP9Rw8OYGd.js');
+  })();
+</script>
 
 <script data-swup-reload-script>
   // Poor man's defer
