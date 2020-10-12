@@ -261,10 +261,12 @@ body.template-surveys-modern {
       flex: 1;
 
       @media (max-width: 710px) {
+        min-width: 50% !important;
         width: 50% !important;
       }
 
       @media (max-width: 550px) {
+        min-width: 50% !important;
         width: 100% !important;
       }
     }
@@ -273,11 +275,7 @@ body.template-surveys-modern {
     ul li.field_description_below div.ginput_container_checkbox,
     ul li.field_description_above div.ginput_container_radio,
     ul li.field_description_above div.ginput_container_checkbox {
-      margin: 2rem 0 4rem;
-
-      @media (max-width: 500px) {
-        margin: 2rem 0 4rem;
-      }
+      margin: 0 0 4rem;
 
       @media (max-width: 400px) {
         margin: 2rem 0;
@@ -587,6 +585,7 @@ body.template-surveys-modern {
     }
 
     a {
+      color: $color-white;
       opacity: .7;
       transition: all .6s;
     }
