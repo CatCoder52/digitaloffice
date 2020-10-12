@@ -25,64 +25,61 @@
 @import '../layout/typography'; // 36.009 kB
 @import '../layout/site-header'; // 58.939 kB
 @import '../layout/site-footer'; // 64.054 kB
-@import '../layout/forms'; // 81.037 kB <--
-@import '../layout/hero'; // 105.183 kB
-@import '../layout/hero-fp'; // 107.995 kB
-@import '../layout/hero-service'; // 109.574 kB
-@import '../layout/hero-reference'; // 111.03 kB
-@import '../layout/hero-company'; // 112.382 kB
-@import '../layout/hero-person'; // 118.739 kB
-@import '../layout/hero-jobs'; // 118.945 kB
-@import '../layout/hero-single'; // 122.11 kB
-@import '../layout/hero-contact-thanks'; // 123.695 kB
-@import '../layout/lazyload'; // 124.771 kB
-@import '../layout/gutenberg'; // 125.438 kB
-@import '../layout/chat'; // 129.299 kB
-@import '../layout/vimeo'; // 131.21 kB
+@import '../layout/forms'; // 81.037 kB
+@import '../layout/hero'; // 85.093 kB
+@import '../layout/hero-fp'; // 86.688 kB
+@import '../layout/hero-service'; // 88.16 kB
+@import '../layout/hero-reference'; // 88.948 kB
+@import '../layout/hero-company'; // 89.82 kB
+@import '../layout/hero-person'; // 93.671 kB
+@import '../layout/hero-jobs'; // 93.825 kB
+@import '../layout/hero-single'; // 96.412 kB
+@import '../layout/hero-contact-thanks'; // 97.83 kB
+@import '../layout/lazyload'; // 98.631 kB
+@import '../layout/gutenberg'; // 99.144 kB
+@import '../layout/chat'; // 102.088 kB
+@import '../layout/vimeo'; // 103.495 kB
 
 // Modules
-@import '../modules/our-services'; // 230.895 kB
-@import '../modules/references'; // 244.807 kB
-@import '../modules/latest-selected-mustread'; // 253.634 kB
-@import '../modules/process'; // 255.997 kB
-@import '../modules/values'; // 260.675 kB
-@import '../modules/timeline'; // 298.674 kB
-@import '../modules/dudes'; // 303.336 kB
-@import '../modules/cta-text'; // 304.144 kB
-@import '../modules/wide-text'; // 307.22 kB
-@import '../modules/open-position'; // 309.438 kB
-@import '../modules/testimonials'; // 314.3 kB
-@import '../modules/images'; // 317.957 kB
-@import '../modules/title-left-text-right'; // 320.496 kB
-@import '../modules/references-one'; // 322.209 kB
-@import '../modules/cta-with-phone-input'; // 329.473 kB
-@import '../modules/logos'; // 339.961 kB
-@import '../modules/two-images'; // 343.075 kB
-@import '../modules/image-in-container-image-full-width'; // 343.656 kB
-@import '../modules/cta-with-image'; // 348.089 kB
-@import '../modules/mission-vision'; // 352.346 kB
-@import '../modules/jobs'; // 355.066 kB
+@import '../modules/our-services'; // 108.312 kB
+@import '../modules/references'; // 117.787 kB
+@import '../modules/latest-selected-mustread'; // 122.611 kB
+@import '../modules/process'; // 123.789 kB
+@import '../modules/values'; // 125.847 kB
+@import '../modules/timeline'; // 153.094 kB
+@import '../modules/dudes'; // 155.564 kB
+@import '../modules/cta-text'; // 156.13 kB
+@import '../modules/wide-text'; // 159.12 kB
+@import '../modules/open-position'; // 159.984 kB
+@import '../modules/testimonials'; // 163.683 kB
+@import '../modules/images'; // 166.196 kB
+@import '../modules/title-left-text-right'; // 167.619 kB
+@import '../modules/references-one'; // 169.021 kB
+@import '../modules/cta-with-phone-input'; // 176.828 kB <--
+@import '../modules/logos'; // 181.664 kB
+@import '../modules/two-images'; // 183.535 kB
+@import '../modules/image-in-container-image-full-width'; // 184.067 kB
+@import '../modules/cta-with-image'; // 186.667 kB
+@import '../modules/mission-vision'; // 188.575 kB
+@import '../modules/jobs'; // 190.13 kB
 
 // Navigation
-@import '../navigation/nav-core'; // 356.341 kB
-@import '../navigation/nav-desktop'; // 371.722 kB
-@import '../navigation/nav-mobile'; // 407.348 kB
+@import '../navigation/nav-core'; // 191.225 kB
+@import '../navigation/nav-desktop'; // 200.762 kB
+@import '../navigation/nav-mobile'; // 227.161 kB
 
 // Views
-@import '../views/single'; // 467.952 kB
-@import '../views/single-reference'; // 494.335 kB
-@import '../views/community-code'; // 518.135 kB
-@import '../views/template-surveys-modern'; // 552.313 kB
-@import '../views/template-company'; // 552.456 kB
-@import '../views/template-basic'; // 552.823 kB
-@import '../views/template-faq'; // 554.744 kB
-@import '../views/contact'; // 556.154 kB
-@import '../views/merch'; // 570.869 kB
-@import '../views/start-project'; // 634.276 kB
-@import '../views/blog-archive'; // 636.578 kB
-@import '../views/blog'; // 641.452 kB
-@import '../views/404'; // 694.676 kB
+@import '../views/single'; // 281.104 kB <--
+@import '../views/single-reference'; // 306.493 kB <--
+@import '../views/community-code'; // 316.708 kB
+@import '../views/template-company'; // 316.784 kB
+@import '../views/template-basic'; // 317.112 kB
+@import '../views/template-faq'; // 318.987 kB
+@import '../views/contact'; // 320.245 kB
+@import '../views/start-project'; // 363.933 kB <--
+@import '../views/blog-archive'; // 365.83 kB
+@import '../views/blog'; // 367.131 kB
 
-// Gutenberg
-@import '../gutenberg/gutenberg-content'; // 860.219 kB
-@import '../gutenberg/general'; // 863.813 kB
+// // Gutenberg
+@import '../gutenberg/gutenberg-content'; // 525.339 kB <--
+@import '../gutenberg/general'; // 528.535 kB
