@@ -2,7 +2,7 @@
 * @Author: Timi Wahalahti
 * @Date:   2019-06-03 22:07:25
 * @Last Modified by:   Roni Laukkarinen
-* @Last Modified time: 2020-10-13 00:12:49
+* @Last Modified time: 2020-10-13 09:35:19
 */
 
 ( function( $ ) {

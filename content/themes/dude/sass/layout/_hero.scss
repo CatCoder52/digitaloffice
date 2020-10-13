@@ -90,7 +90,7 @@
     // Offset nav height
     transform: translateY(65px);
 
-    @media (max-width: $container-mobile) {
+    @media (min-width: $container-mobile) {
       transform: translateY(46px);
     }
   }
@@ -137,7 +137,21 @@
 
   // Merch hero
   &.block-hero-merch {
+    min-height: 0;
+    height: auto;
+    padding-top: 0;
     padding-bottom: 0;
+
+    > .container {
+      transform: none;
+      padding-top: 20rem;
+      padding-bottom: 15rem;
+
+      @media (max-width: 760px) {
+        padding-top: 18rem;
+        padding-bottom: 0;
+      }
+    }
 
     .hero-description p {
       color: $color-paragraphs-light;
