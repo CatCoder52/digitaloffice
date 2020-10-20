@@ -2,13 +2,13 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:50:23
- * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-10-12 21:22:29
+ * @Last Modified by:   sippis
+ * @Last Modified time: 2020-10-20 18:56:25
  *
  * @package dude
  */
 
-$references = wp_cache_get( get_the_id() . '_references', 'theme' );
+$references = wp_cache_get( 'references_page_' . get_the_id(), 'theme' );
 
 if ( ! $references ) {
   $args = array(
@@ -35,18 +35,16 @@ if ( ! $references ) {
 		  $query->the_post();
 
 		  $references[] = array(
-			'id'                => get_the_id(),
-			'title'             => get_the_title(),
-      'image_id'          => get_post_thumbnail_id( get_the_id() ),
-			'excerpt'           => get_post_meta( get_the_id(), 'short_desc', true ),
-      'permalink'         => get_the_permalink(),
-      'alt_image_listings' => get_field( 'alt_image_listings', get_the_id() ),
+  			'id'                => get_the_id(),
+  			'title'             => get_the_title(),
+        'image_id'          => get_post_thumbnail_id( get_the_id() ),
+  			'excerpt'           => get_post_meta( get_the_id(), 'short_desc', true ),
+        'permalink'         => get_the_permalink(),
 		  );
-			}
-  }
-  wp_reset_postdata();
+		}
+  } wp_reset_postdata();
 
-  wp_cache_set( get_the_id() . '_references', $references, 'theme', DAY_IN_SECONDS );
+  wp_cache_set( 'references_page_' . get_the_id(), $references, 'theme', DAY_IN_SECONDS );
 } ?>
 
 <section class="block block-references has-dark-bg">
@@ -62,19 +60,13 @@ if ( ! $references ) {
 
     <div class="reference-wrapper reference-slider">
 
-      <?php foreach ( $references as $reference ) :
-          if ( ! empty( $reference['alt_image_listings'] ) ) :
-            $feat_image = $reference['alt_image_listings']['id'];
-          else :
-            $feat_image = $reference['image_id'];
-          endif;
-        ?>
+      <?php foreach ( $references as $reference ) : ?>
         <div class="reference">
           <a href="<?php echo $reference['permalink'] ?>" class="global-link"><span class="screen-reader-text"><?php echo esc_html( $reference['title'] ) ?></span></a>
 
           <div class="reference-image">
             <div class="image" aria-hidden="true">
-              <?php image_lazyload_div( $feat_image ); ?>
+              <?php image_lazyload_div( $reference['image_id'] ); ?>
             </div>
 
             <div class="reference-content">
