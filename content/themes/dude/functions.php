@@ -116,3 +116,7 @@ function dude_remove_styles() {
   }
 }
 add_action( 'wp_print_styles', 'dude_remove_styles', 99 );
+
+add_filter( 'embed_thumbnail_image_size', function() {
+  return 'default';
+} );
