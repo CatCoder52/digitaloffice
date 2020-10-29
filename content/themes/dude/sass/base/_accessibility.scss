@@ -4,6 +4,7 @@
 // A hidden screen reader for readers, focus elements for
 // vision impaired and other useful a11y CSS hacks.
 // ---------------------------------------------------------
+/* stylelint-disable selector-max-class, selector-max-specificity, no-descending-specificity, selector-max-combinators, selector-max-compound-selectors, selector-max-pseudo-class, selector-attribute-quotes, max-nesting-depth, number-max-precision, no-unknown-animations */
 
 // Variables
 $focus-outline-color: #4d4aff;

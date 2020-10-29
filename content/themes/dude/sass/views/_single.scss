@@ -1,3 +1,4 @@
+/* stylelint-disable selector-max-class, selector-max-specificity, no-descending-specificity, selector-max-combinators, selector-max-compound-selectors, selector-max-pseudo-class, selector-attribute-quotes, max-nesting-depth */
 .single::after {
   display: none;
 }
@@ -33,7 +34,7 @@ body.single .block.block-single:not(.block-single-reference) {
     }
 
     a {
-      @include grid(2, $gutter_x: 2.7rem, $gutter_y: 0rem);
+      @include grid(2, $gutter_x: 2.7rem, $gutter_y: 0);
       grid-template-columns: 74px 2fr;
       align-items: center;
       box-shadow: none;

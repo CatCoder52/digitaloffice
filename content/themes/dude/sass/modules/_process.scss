@@ -19,7 +19,7 @@
   }
 
   .cols {
-    @include grid(3, $gutter_x: $margin-between-grid-columns, $gutter_y: 0rem);
+    @include grid(3, $gutter_x: $margin-between-grid-columns, $gutter_y: 0);
 
     @media (max-width: 1100px) {
       display: flex;

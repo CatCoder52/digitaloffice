@@ -1,3 +1,4 @@
+/* stylelint-disable selector-max-class, selector-max-specificity, no-descending-specificity, selector-max-combinators, selector-max-compound-selectors, selector-max-pseudo-class, selector-attribute-quotes, max-nesting-depth */
 .block.block-footer.site-footer {
   background-color: $color-midnight;
   color: $color-white;
@@ -128,7 +129,7 @@
   border-bottom: 1px solid rgba($color-white, .2);
 
   @media (max-width: 900px) {
-    @include grid(2, $gutter_x: 0rem, $gutter_y: 1rem);
+    @include grid(2, $gutter_x: 0, $gutter_y: 1rem);
   }
 
   li,

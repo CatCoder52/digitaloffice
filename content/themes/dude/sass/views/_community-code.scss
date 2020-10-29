@@ -1,3 +1,4 @@
+/* stylelint-disable selector-max-class, selector-max-specificity, no-descending-specificity, selector-max-combinators, selector-max-compound-selectors, selector-max-pseudo-class, selector-attribute-quotes, max-nesting-depth */
 body.page-template-template-community-code .block.block-hero.block-hero-light {
   h1,
   h2,
@@ -61,7 +62,7 @@ body.page-template-template-community-code .block.block-hero.block-hero-light {
   }
 
   .cols {
-    @include grid(2, $gutter_x: 10rem, $gutter_y: 0rem);
+    @include grid(2, $gutter_x: 10rem, $gutter_y: 0);
     grid-template-columns: 6fr 4fr;
     overflow: visible;
 
@@ -214,7 +215,7 @@ body.page-template-template-community-code .block.block-hero.block-hero-light {
   }
 
   .item-list {
-    @include grid(3, $gutter_x: 0rem, $gutter_y: 0rem);
+    @include grid(3, $gutter_x: 0, $gutter_y: 0);
     list-style: none;
     margin-left: 0;
     padding: 0;
@@ -224,7 +225,7 @@ body.page-template-template-community-code .block.block-hero.block-hero-light {
     text-align: left;
 
     @media (max-width: 900px) {
-      @include grid(2, $gutter_x: 0rem, $gutter_y: 0rem);
+      @include grid(2, $gutter_x: 0, $gutter_y: 0);
     }
 
     @media (max-width: 570px) {

@@ -1,3 +1,5 @@
+/* stylelint-disable selector-max-class, selector-max-specificity, no-descending-specificity, selector-max-combinators, selector-max-compound-selectors, selector-max-pseudo-class, selector-attribute-quotes, max-nesting-depth */
+
 // Block specific
 $offset-y: 8.6rem;
 $offset-x-minus: -6.4rem;
@@ -34,7 +36,7 @@ $offset-x: 6.4rem;
   }
 
   .row.row-latest .post {
-    @include grid(2, $gutter_x: 0rem, $gutter_y: 0rem);
+    @include grid(2, $gutter_x: 0, $gutter_y: 0);
     margin-top: $margin-between-grid-columns-large;
     margin-bottom: $padding-blocks-medium;
 

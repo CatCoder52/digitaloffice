@@ -1,3 +1,5 @@
+/* stylelint-disable selector-max-specificity */
+
 .block.block-jobs {
   padding-top: 0;
   padding-bottom: 0;
@@ -7,7 +9,7 @@
     padding: 3rem;
 
     @media (min-width: 800px) {
-      @include grid(2, $gutter_x: 0rem, $gutter_y: 0rem);
+      @include grid(2, $gutter_x: 0, $gutter_y: 0);
       padding: 5rem;
     }
 

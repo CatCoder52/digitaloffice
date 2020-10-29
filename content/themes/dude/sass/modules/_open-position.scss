@@ -1,6 +1,8 @@
+/* stylelint-disable selector-max-combinators, selector-max-compound-selectors */
+
 .block.block-open-position {
   .container {
-    @include grid(2, $gutter_x: 10rem, $gutter_y: 0rem);
+    @include grid(2, $gutter_x: 10rem, $gutter_y: 0);
     grid-template-columns: 3fr 7fr;
 
     @media (max-width: $container-ipad) {

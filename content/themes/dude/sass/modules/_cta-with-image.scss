@@ -1,3 +1,4 @@
+/* stylelint-disable selector-max-class, selector-max-specificity, no-descending-specificity, selector-max-combinators, selector-max-compound-selectors, selector-max-pseudo-class, selector-attribute-quotes, max-nesting-depth */
 .block.block-cta-with-image {
   text-align: center;
 
@@ -35,7 +36,7 @@
   }
 
   .cols {
-    @include grid(2, $gutter_x: 0rem, $gutter_y: 0rem);
+    @include grid(2, $gutter_x: 0, $gutter_y: 0);
     margin-bottom: $padding-blocks-medium;
 
     @media (min-width: $container-ipad) {

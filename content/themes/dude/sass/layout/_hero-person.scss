@@ -1,3 +1,4 @@
+/* stylelint-disable selector-max-class, selector-max-specificity, no-descending-specificity */
 .block.block-hero-person {
   padding-bottom: $padding-blocks-medium;
 
@@ -84,7 +85,7 @@
   }
 
   .cols {
-    @include grid(2, $gutter_x: $margin-between-grid-columns-large, $gutter_y: 0rem);
+    @include grid(2, $gutter_x: $margin-between-grid-columns-large, $gutter_y: 0);
 
     .col:not(.col-person-image) {
       position: relative;
@@ -102,7 +103,7 @@
     }
 
     @media (max-width: 530px) {
-      @include grid(1, $gutter_x: 0rem, $gutter_y: 0rem);
+      @include grid(1, $gutter_x: 0, $gutter_y: 0);
 
       .col.col-person-image {
         // Have to use !important, because of JS height
