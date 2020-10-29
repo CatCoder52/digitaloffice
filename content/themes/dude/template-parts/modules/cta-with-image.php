@@ -20,7 +20,7 @@ if ( empty( $image ) ) {
   <div class="container">
     <div class="cols">
 
-      <div class="col col-image"><?php image_lazyload_div( $image['ID'] ); ?></div>
+      <div class="col col-image"><?php vanilla_lazyload_div( $image['ID'] ); ?></div>
       <div class="col col-content">
 
         <div class="content">

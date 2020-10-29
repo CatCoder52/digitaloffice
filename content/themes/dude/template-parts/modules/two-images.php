@@ -17,8 +17,8 @@ if ( empty( $image_left ) || empty( $image_right ) ) {
 <section class="block block-two-images has-light-bg">
   <div class="container">
     <div class="cols cols-two">
-      <div class="col"><?php image_lazyload_div( $image_left ); ?></div>
-      <div class="col"><?php image_lazyload_div( $image_right ); ?></div>
+      <div class="col"><?php vanilla_lazyload_div( $image_left ); ?></div>
+      <div class="col"><?php vanilla_lazyload_div( $image_right ); ?></div>
     </div>
   </div>
 </section>

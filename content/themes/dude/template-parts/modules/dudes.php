@@ -54,7 +54,7 @@ if ( ! $query->have_posts() ) {
         <div class="col">
           <div class="image">
             <a href="<?php the_permalink(); ?>" class="global-link"><span class="screen-reader-text">Lue lisää tyypistä</span></a>
-            <?php image_lazyload_div( $image ); ?>
+            <?php vanilla_lazyload_div( $image ); ?>
           </div>
 
           <div class="content">

@@ -89,13 +89,7 @@ module.exports = {
   js: {
     main: themeDir + '/js/src/scripts.js',
     src: themeDir + '/js/src/**/*.js',
-    dest: themeDir + '/js',
-    uglify: {
-      opts: {
-        compress: true,
-        mangle: true
-      }
-    }
+    dest: themeDir + '/js'
   },
   php: {
     src: themeDir + '/**/*.php'

@@ -35,7 +35,7 @@ if ( has_post_thumbnail() ) {
 
   <div class="shade" aria-hidden="true"></div>
   <div class="featured-image">
-    <?php image_lazyload_div( get_post_thumbnail_id( $post->ID ) ); ?>
+    <?php vanilla_lazyload_div( get_post_thumbnail_id( $post->ID ) ); ?>
     <?php if ( $video_bg ) : ?>
       <div class="vimeo-wrapper">
       <iframe src="https://player.vimeo.com/video/<?php echo str_replace( array( 'http:', 'https:', 'vimeo.com', '/' ), '', $video_bg ) ?>?background=1&autoplay=1&loop=1&byline=0&title=0"

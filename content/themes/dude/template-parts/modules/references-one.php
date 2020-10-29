@@ -45,7 +45,7 @@ $reference = array(
       <div class="col col-reference-image col-reference-image-main">
 
         <div class="reference-image-skew" aria-hidden="true">
-          <?php image_lazyload_tag( $reference['image_skew']['ID'] ); ?>
+          <?php vanilla_lazyload_tag( $reference['image_skew']['ID'] ); ?>
         </div>
 
       </div>

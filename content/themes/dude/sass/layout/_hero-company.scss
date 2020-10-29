@@ -38,7 +38,8 @@
     width: 100%;
 
     // Some browsers render incorrectly
-    .background-image.preview {
+    .background-image.preview,
+    .lazy {
       filter: none;
     }
   }

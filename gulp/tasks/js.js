@@ -1,45 +1,29 @@
+// Hide deprecation warnings
+process.env.NODE_PENDING_DEPRECATION = 0;
+
 // Dependencies
-const { dest, src } = require('gulp');
-const uglify = require('gulp-uglify-es').default;
-const concat = require('gulp-concat');
+const {
+  dest,
+  src
+} = require('gulp');
 const webpack = require('webpack-stream');
-const config = require('../config.js');
+const config = require('../config');
+const {
+  handleError
+} = require('../helpers/handle-errors.js');
+const webpackConfig = require('../webpack.config.js');
+const named = require('vinyl-named');
+const eslint = require('gulp-eslint');
 
 // Task
-function js(cb) {
+function js() {
   return src(config.js.main)
-    .pipe(
-      webpack({
-        externals: {
-          jquery: 'jQuery', // Available and loaded through WordPress.
-        },
-        mode: 'production',
-        module: {
-          rules: [
-            {
-              test: /.js$/,
-              use: [
-                {
-                  loader: 'babel-loader',
-                },
-              ],
-            },
-          ],
-        },
-        output: {
-          filename: 'all.js',
-        },
-      }),
-    )
-    .pipe(concat('all.js'))
-    .pipe(
-      uglify(config.js.uglify.opts).on('error', function (err) {
-        util.log(util.colors.red('[Error]'), err.toString());
-        this.emit('end');
-      }),
-    )
-    .pipe(dest(config.js.dest))
-  cb();
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(named())
+    .pipe(webpack(webpackConfig))
+    .on('error', handleError())
+    .pipe(dest(config.js.dest));
 }
 
 exports.js = js;

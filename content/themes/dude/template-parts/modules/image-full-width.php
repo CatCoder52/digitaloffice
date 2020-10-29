@@ -16,6 +16,6 @@ if ( empty( $image_full_width ) ) {
 
 <section class="block has-dark-bg block-image-full-width">
   <div class="container">
-      <div class="image"><?php image_lazyload_tag( $image_full_width['ID'] ); ?></div>
+      <div class="image"><?php vanilla_lazyload_tag( $image_full_width['ID'] ); ?></div>
   </div>
 </section>

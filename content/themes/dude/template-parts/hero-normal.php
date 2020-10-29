@@ -32,8 +32,7 @@ if ( has_post_thumbnail() ) {
   <?php if ( $bg_image ) { ?>
     <div class="featured-image" aria-hidden="true">
       <div class="shade" aria-hidden="true"></div>
-        <div aria-hidden="true" class="background-image preview lazyload" style="background-image: url('<?php echo $bg_image_tiny; ?>');" data-src="<?php echo esc_url( $bg_image ); ?>" data-src-mobile="<?php echo esc_url( $bg_image_mobile[0] ); ?>"></div>
-        <div aria-hidden="true" class="background-image full-image"<?php if ( preg_match( '/Windows Phone|Lumia|iPad|Safari/i', $_SERVER['HTTP_USER_AGENT'] ) ) : // phpcs:ignore ?> style="background-image: url('<?php echo esc_url( $bg_image ); ?>');"<?php endif; ?>></div>
+      <div class="lazy" data-bg="<?php echo esc_url( $bg_image ); ?>" aria-hidden="true"></div>
     </div>
   <?php } ?>
 

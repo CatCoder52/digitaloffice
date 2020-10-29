@@ -1191,7 +1191,8 @@ $variable-columns: true !default;
       height: 45rem;
     }
 
-    .background-image {
+    .background-image,
+    .lazy {
       background-position: bottom;
       max-height: 75rem;
       animation: none;

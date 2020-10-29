@@ -66,7 +66,7 @@ if ( ! $references ) {
 
           <div class="reference-image">
             <div class="image" aria-hidden="true">
-              <?php image_lazyload_div( $reference['image_id'] ); ?>
+              <?php vanilla_lazyload_div( $reference['image_id'] ); ?>
             </div>
 
             <div class="reference-content">

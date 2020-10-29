@@ -63,7 +63,7 @@ if ( $query->have_posts() ) {
 
       <div class="hreview testimonial">
         <?php if ( ! empty( $reference['quote_person_image'] ) ) : ?>
-        <div class="testimonial-avatar" aria-hidden="true"><?php image_lazyload_div( $reference['quote_person_image'] ); ?></div>
+        <div class="testimonial-avatar" aria-hidden="true"><?php vanilla_lazyload_div( $reference['quote_person_image'] ); ?></div>
         <?php endif; ?>
 
         <div class="testimonial-content">

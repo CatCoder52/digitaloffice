@@ -54,7 +54,7 @@ if ( ! empty( $social ) ) {
 
       <div class="col col-person-image">
         <div class="image has-lazyload">
-          <?php image_lazyload_tag( get_post_thumbnail_id( $post->ID ) ); ?>
+          <?php vanilla_lazyload_tag( get_post_thumbnail_id( $post->ID ) ); ?>
         </div>
       </div>
     </div>

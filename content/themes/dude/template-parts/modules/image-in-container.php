@@ -15,7 +15,7 @@ if ( empty( $image ) ) {
 
 <section class="block has-light-bg block-image-in-container">
   <div class="container">
-      <div class="image"><?php image_lazyload_tag( $image ); ?></div>
+      <div class="image"><?php vanilla_lazyload_tag( $image ); ?></div>
   </div>
 </section>
 

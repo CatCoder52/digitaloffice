@@ -41,7 +41,7 @@ get_header(); ?>
 
             <div class="cols">
               <div class="col col-image has-lazyload">
-                <?php image_lazyload_div( get_post_thumbnail_id( $post->ID ) ); ?>
+                <?php vanilla_lazyload_div( get_post_thumbnail_id( $post->ID ) ); ?>
 
 								<?php $video_bg = get_post_meta( get_the_id(), 'article_video', true );
                 if ( $video_bg ) : ?>
@@ -125,7 +125,7 @@ get_header(); ?>
                     </div>
 						      <?php endif; ?>
 
-                  <?php image_lazyload_div( get_post_thumbnail_id( $post->ID ) ); ?>
+                  <?php vanilla_lazyload_div( get_post_thumbnail_id( $post->ID ) ); ?>
                 </div>
 
               <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>

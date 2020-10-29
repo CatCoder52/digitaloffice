@@ -1,3 +1,24 @@
+// Styling lazy loading div
+// @link https://github.com/verlok/vanilla-lazyload#lazy-background-image
+div.lazy {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  min-height: 200px;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+
+// General class for any lazy load container
+.has-lazyload {
+  overflow: hidden;
+  position: relative;
+}
+
+// Legacy lazy load starts here
 .background-image {
   @include background-cover();
   position: absolute;
