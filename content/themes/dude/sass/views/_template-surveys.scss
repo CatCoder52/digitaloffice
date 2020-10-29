@@ -1,3 +1,4 @@
+/* stylelint-disable */
 body.template-surveys {
   background-image: url('../images/survey-bg.png');
   background-attachment: fixed;
@@ -361,10 +362,8 @@ body.template-surveys {
     bottom: 0;
     z-index: 10;
     height: 70px;
-    /* stylelint-disable */
     background-color: rgba($color-pitch-black, .05);
     box-shadow: rgba($color-pitch-black, .1) 0 -1px;
-    /* stylelint-enable */
 
     @media (max-width: $container-mobile) {
       background: #f2f2f2;
