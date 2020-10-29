@@ -28,6 +28,10 @@ $nav-open-from-top: false;
 
   @media (max-width: 760px) {
     display: block !important;
+
+    &.cols-contact {
+      display: grid !important;
+    }
   }
 }
 
