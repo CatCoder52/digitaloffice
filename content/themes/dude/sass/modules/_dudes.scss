@@ -79,6 +79,7 @@
   }
 }
 
+/* stylelint-disable selector-max-pseudo-class */
 .social a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]) {
   padding: 0 !important;
   background-image: none !important;
