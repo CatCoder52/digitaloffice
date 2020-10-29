@@ -59,7 +59,7 @@
         <p class="label" id="dynamiclabel"><span>Alussa meitä oli vain kaksi ja vermeetkin oli lainavehkeitä. Ensimmäinen toimisto vanhan työnantajan tiloissa.</span></p>
 
         <div class="image has-lazyload" aria-hidden="true">
-          <div class="lazy" data-bg="<?php echo get_theme_file_uri( 'images/timeline/dude-2013.jpg' ) ?>" aria-hidden="true"></div>
+          <div id="dynamicimage" class="lazy" data-bg="<?php echo get_theme_file_uri( 'images/timeline/dude-2013.jpg' ) ?>" aria-hidden="true"></div>
         </div>
       </div>
     </div>
