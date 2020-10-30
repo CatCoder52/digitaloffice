@@ -31,16 +31,6 @@
   }
 }
 
-@media (min-width: 760px) {
-  .js-nav-active .site-header {
-    max-width: calc(#{$site-header-max-width} + 15px);
-
-    .nav-toggle.nav-toggle-desktop {
-      right: 15px;
-    }
-  }
-}
-
 .site-branding {
   position: relative;
   display: block;
