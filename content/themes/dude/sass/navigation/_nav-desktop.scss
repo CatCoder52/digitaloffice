@@ -18,7 +18,12 @@ $color-nav-links: $color-midnight-blue;
 
 // Prevent scrolling when nav open
 body.js-nav-active {
-  overflow: hidden;
+  // Add scrollbars to prevent nav-toggle
+  // and logo position from jumping when overflow hidden
+  // would usually hide the scrollbars
+  overflow-y: scroll;
+  position: fixed;
+  width: 100%;
 
   .nav-toggle,
   .nav-toggle:focus {
