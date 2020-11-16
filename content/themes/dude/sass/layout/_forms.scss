@@ -386,3 +386,17 @@ input[type=checkbox]:checked + br + label::before {
   background-color: $color-midnight-blue !important;
   background-size: var(--checkbox-marker-size) !important;
 }
+
+// Force hide Gravity Forms honeypot field
+.gform_validation_container {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  word-wrap: normal !important; // Many screen reader and browser combinations announce broken words as they would appear visually.
+}
