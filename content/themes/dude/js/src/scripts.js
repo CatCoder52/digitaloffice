@@ -26,7 +26,9 @@
  );
 
  // Init lazyload
- var dude_LazyLoad = new LazyLoad();
+ var dude_LazyLoad = new LazyLoad({
+  use_native: true
+ });
  dude_LazyLoad.update();
 
  // Initiate Swup transitions

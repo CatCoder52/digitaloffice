@@ -106,7 +106,7 @@
         <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="no-text-link" href="<?php echo get_the_permalink( 9 ); ?>">Verkkosivut</a></li>
         <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="no-text-link" href="<?php echo get_the_permalink( 4485 ); ?>">Suunnittelu</a></li>
         <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="no-text-link" href="<?php echo get_post_type_archive_link( 'reference' ); ?>">Töitämme</a></li>
-        <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="no-text-link" href="<?php echo get_the_permalink( 6357 ); ?>">Ota yhteyttä</a></li>
+        <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a data-no-swup class="no-text-link" href="<?php echo get_the_permalink( 6357 ); ?>">Ota yhteyttä</a></li>
       </ul>
     </div>
 
