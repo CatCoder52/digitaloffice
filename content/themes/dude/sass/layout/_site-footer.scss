@@ -9,23 +9,47 @@
   padding-bottom: 0;
 
   .infos-and-certs {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    margin-bottom: 8rem;
+
+    @media (min-width: 950px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0;
+    }
 
     .certs {
       display: flex;
-      justify-content: space-between;
       align-items: center;
       height: 120px;
+
+      @media (min-width: 950px) {
+        justify-content: space-between;
+      }
     }
 
     svg {
       max-width: 150px;
+
+      @media (max-width: 530px) {
+        max-width: 100px;
+      }
+
+      @media (max-width: 440px) {
+        max-width: 80px;
+      }
     }
 
     a {
       margin-right: 5rem;
+
+      @media (max-width: 480px) {
+        margin-right: 4rem;
+      }
+
+      @media (max-width: 450px) {
+        margin-right: 3rem;
+      }
     }
 
     a:last-child {
@@ -34,6 +58,7 @@
 
     path:not(.hole) {
       fill: $color-white;
+      transition: all .22s;
     }
 
     .c-vierityspalkki {
@@ -46,13 +71,25 @@
     }
 
     .c-itewiki path.hole {
-      fill: #020b29;
+      fill: #303148;
+
+      @media (max-width: 950px) {
+        fill: #263745;
+      }
     }
 
     a:not(.top),
     a:not(.top):hover,
     a:not(.top):focus {
       border: 0;
+    }
+
+    a:hover {
+      color: $color-mint;
+
+      path:not(.hole) {
+        fill: $color-mint;
+      }
     }
   }
 
@@ -70,7 +107,8 @@
 }
 
 .block.block-footer.site-footer .cols {
-  @include grid(4, $gutter_x: $margin-between-grid-columns, $gutter_y: $margin-between-grid-columns);
+  display: flex;
+  justify-content: space-between;
 
   @media (max-width: 900px) {
     @include grid(2, $gutter_x: 4rem, $gutter_y: 6rem);
@@ -122,8 +160,17 @@
 
 .block.block-footer.site-footer .large-text {
   margin-bottom: 10rem;
+  margin-right: 5rem;
   margin-top: 0;
   max-width: 60rem;
+
+  @media (max-width: 1200px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 950px) {
+    margin-bottom: 0;
+  }
 
   @media (max-width: 500px) {
     margin-bottom: $margin-between-text-elements;
