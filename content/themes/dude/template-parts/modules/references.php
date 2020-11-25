@@ -47,6 +47,18 @@ if ( ! $references ) {
   wp_cache_set( 'references_page_' . get_the_id(), $references, 'theme', DAY_IN_SECONDS );
 } ?>
 
+<?php if ( is_page( '4485_disabled' ) ) : ?>
+  <section class="block block-references has-dark-bg">
+    <div class="container">
+
+      <header class="block-head">
+        <h2 class="block-title">Suunnittelemiamme logoja</h2>
+      </header>
+
+    </div>
+  </section>
+<?php endif; ?>
+
 <section class="block block-references has-dark-bg">
   <div class="container">
 
