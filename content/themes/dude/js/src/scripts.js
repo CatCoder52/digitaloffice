@@ -25,11 +25,9 @@
    Number(sessionStorage.getItem("chat_greeting_visits")) + 1
  );
 
- // Init lazyload
- var dude_LazyLoad = new LazyLoad({
-  use_native: true
- });
- dude_LazyLoad.update();
+// Init lazyload
+var dude_LazyLoad = new LazyLoad();
+dude_LazyLoad.update();
 
  // Initiate Swup transitions
  const swup = new Swup({
@@ -50,6 +48,10 @@
 
  // Swup starts
  swup.on("contentReplaced", function () {
+
+    // Init lazyload
+    var dude_LazyLoad = new LazyLoad();
+    dude_LazyLoad.update();
 
      // Accessibility: Ensure back to top is right color on right background
      var stickyOffset = jQuery(".back-to-top").offset();
