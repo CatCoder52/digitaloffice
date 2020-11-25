@@ -55,7 +55,15 @@
 
   <div class="container">
 
-    <p class="large-text">Dude, vuodesta 2013. Paljon on nähty ja tehty. Tuntuuko, että olisimme oikea tekijä sinulle ja sinä oikea asiakas meille? <a href="<?php echo get_the_permalink( 4487 ); ?>" class="no-text-link">Ota meihin yhteyttä</a>.</p>
+    <div class="infos-and-certs">
+      <p class="large-text">Dude, vuodesta 2013. Paljon on nähty ja tehty. Tuntuuko, että olisimme oikea tekijä sinulle ja sinä oikea asiakas meille? <a href="<?php echo get_the_permalink( 4487 ); ?>" class="no-text-link">Ota meihin yhteyttä</a>.</p>
+
+      <div class="certs">
+        <a aria-label="Ulkoinen sivusto: Vierityspalkki" class="no-external-link-indicator" href="https://vierityspalkki.fi/toimistot/digitoimisto-dude"><?php include get_theme_file_path( '/svg/certificate-vierityspalkki.svg' ); ?></a>
+        <a aria-label="Ulkoinen sivusto: ite wiki" class="no-external-link-indicator" href="https://www.itewiki.fi/digitoimisto-dude"><?php include get_theme_file_path( '/svg/certificate-itewiki.svg' ); ?></a>
+        <a aria-label="Ulkoinen sivusto: Koodia Suomesta" class="no-external-link-indicator" href="https://koodiasuomesta.fi/"><?php include get_theme_file_path( '/svg/certificate-koodiasuomesta.svg' ); ?></a>
+      </div>
+    </div>
 
     <div class="cols cols-four">
 

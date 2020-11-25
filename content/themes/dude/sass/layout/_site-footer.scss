@@ -8,6 +8,54 @@
   padding-top: $padding-blocks-medium;
   padding-bottom: 0;
 
+  .infos-and-certs {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .certs {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 120px;
+    }
+
+    svg {
+      max-width: 150px;
+    }
+
+    a {
+      margin-right: 5rem;
+    }
+
+    a:last-child {
+      margin-right: 0;
+    }
+
+    path:not(.hole) {
+      fill: $color-white;
+    }
+
+    .c-vierityspalkki {
+      position: relative;
+      top: 2px;
+    }
+
+    .c-vierityspalkki path.hole {
+      fill: #343649;
+    }
+
+    .c-itewiki path.hole {
+      fill: #020b29;
+    }
+
+    a:not(.top),
+    a:not(.top):hover,
+    a:not(.top):focus {
+      border: 0;
+    }
+  }
+
   .container {
     position: relative;
     z-index: 1;
@@ -29,7 +77,6 @@
   }
 
   @media (max-width: $container-mobile) {
-    // @include grid(1, $gutter_x: 0rem, $gutter_y: 6rem);
     p,
     li {
       font-size: var(--font-size-general-small);
