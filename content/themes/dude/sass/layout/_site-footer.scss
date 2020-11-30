@@ -126,7 +126,7 @@
   justify-content: space-between;
 
   @media (max-width: 900px) {
-    @include grid(2, $gutter_x: 4rem, $gutter_y: 6rem);
+    @include grid(2, $gutter_x: 0, $gutter_y: 6rem);
   }
 
   @media (max-width: $container-mobile) {
@@ -230,7 +230,8 @@
 }
 
 .block.block-footer.site-footer .main-links ul {
-  @include grid(4, $gutter_x: $margin-between-grid-columns, $gutter_y: $margin-between-grid-columns);
+  display: flex;
+  justify-content: space-between;
   margin: 0;
   padding-top: 3.2rem;
   padding-bottom: 3.2rem;
@@ -238,7 +239,11 @@
   border-bottom: 1px solid rgba($color-white, .2);
 
   @media (max-width: 900px) {
-    @include grid(2, $gutter_x: 0, $gutter_y: 1rem);
+    flex-wrap: wrap;
+
+    li {
+      width: 50%;
+    }
   }
 
   li,
