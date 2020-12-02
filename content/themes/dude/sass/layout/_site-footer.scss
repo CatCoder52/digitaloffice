@@ -179,6 +179,18 @@
   margin-top: 0;
   max-width: 60rem;
 
+  a {
+    color: $color-white;
+    border-bottom: 1px solid rgba($color-white, .3);
+    transition: border .22s;
+    overflow: hidden;
+    display: inline-flex;
+
+    &:hover {
+      border-bottom: 1px solid $color-mint;
+    }
+  }
+
   @media (max-width: 1200px) {
     font-size: 20px;
   }
