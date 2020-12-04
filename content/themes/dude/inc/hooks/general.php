@@ -115,6 +115,7 @@ function dude_get_custom_excerpt_length( $excerpt = '', $length = 3 ) {
 add_filter( 'get_the_excerpt', 'dude_get_the_excerpt', 10, 2 );
 function dude_get_the_excerpt( $excerpt, $post = null ) {
   global $blog_latest_excerpt_override;
+  $blog_latest_excerpt_override = get_the_id();
 
   if ( isset( $blog_latest_excerpt_override ) ) {
 		if ( $blog_latest_excerpt_override === $post->ID ) {
