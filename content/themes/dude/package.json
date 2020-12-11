@@ -4,6 +4,7 @@
   "description": "A minimalist WordPress starter theme.",
   "author": "Digitoimisto Dude Oy (moro@dude.fi)",
   "devDependencies": {
+    "@swup/head-plugin": "^1.1.0",
     "@wulechuan/printer-for-errors-of-gulp-plugins": "^1.0.0",
     "autoprefixer": "^10.0.1",
     "babel-eslint": "^10.1.0",
@@ -36,10 +37,10 @@
     "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.18.0",
     "stylelint-value-no-unknown-custom-properties": "^3.0.0",
-    "vinyl-named": "^1.1.0",
-    "webpack-stream": "^6.1.0",
     "uglifyjs-webpack-plugin": "^2.2.0",
-    "vanilla-lazyload": "^17.1.3"
+    "vanilla-lazyload": "^17.1.3",
+    "vinyl-named": "^1.1.0",
+    "webpack-stream": "^6.1.0"
   },
   "dependencies": {
     "@swup/body-class-plugin": "^1.0.2",

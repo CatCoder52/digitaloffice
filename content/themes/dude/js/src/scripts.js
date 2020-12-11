@@ -13,6 +13,7 @@
  import Swup from 'swup';
  import SwupScriptsPlugin from '@swup/scripts-plugin';
  import SwupBodyClassPlugin from '@swup/body-class-plugin';
+ import SwupHeadPlugin from '@swup/head-plugin';
  import LazyLoad from "vanilla-lazyload";
 
  // Define Javascript is active by changing the body class
@@ -37,6 +38,7 @@ dude_LazyLoad.update();
      '"]:not([data-no-swup]), a[href^="/"]:not([data-no-swup]), a[href^="#"]:not([data-no-swup])',
    animationSelector: '[class*="swup-transition-"]',
    plugins: [
+     new SwupHeadPlugin(),
      new SwupScriptsPlugin({
        head: true,
        body: true,
