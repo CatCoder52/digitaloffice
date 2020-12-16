@@ -1,0 +1,43 @@
+{
+    "key": "group_5fd9b54962271",
+    "title": "Google Forms",
+    "fields": [
+        {
+            "key": "field_5fd9b54d0c8d4",
+            "label": "Google Forms HTML",
+            "name": "googleform_html",
+            "type": "wysiwyg",
+            "instructions": "Kopioi koko &lt;form&gt; HTML koodi Google formin sivulta tähän.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "text",
+            "media_upload": 0,
+            "toolbar": "full",
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "template-surveys-googleforms.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1608104659
+}

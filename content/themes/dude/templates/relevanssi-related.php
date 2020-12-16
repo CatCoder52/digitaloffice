@@ -5,7 +5,7 @@
  * @Last Modified by:   Roni Laukkarinen
  * @Last Modified time: 2020-07-23 14:10:48
  *
- * @package bauermedia
+ * @package dude
  */
 
 if ( empty( $related_posts ) ) {
@@ -23,7 +23,7 @@ if ( empty( $related_posts ) ) {
       <?php foreach ( $related_posts as $related_post ) : ?>
         <div class="col post">
           <div class="content">
-            <h3><a href="<?php echo get_the_permalink( $related_post ) ?>"><?php echo get_the_title( $related_post ) ?></a></h3>
+            <h3><a href="<?php echo esc_url( get_the_permalink( $related_post ) ); ?>"><?php echo esc_html( get_the_title( $related_post ) ); ?></a></h3>
             <?php echo wpautop( get_the_excerpt( $related_post ) ); // phpcs:ignore ?>
           </div>
         </div>
