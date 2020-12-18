@@ -9,6 +9,12 @@ $color-checked: $color-mint;
 $color-borders: #898888;
 $color-error-surveys: lighten($color-error, 10%);
 
+body.template-surveys-modern .block li a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail):not(.button):not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):not(.no-external-link-indicator):not(.wp-block-button__link):not(#spr-button)::after,
+.block p a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail):not(.button):not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):not(.no-external-link-indicator):not(.wp-block-button__link)::after,
+a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail):not(.button):not(.no-external-link-indicator):not(.wp-block-button__link):not(#spr-button)::after {
+  background-image: url('../svg/external-link-mint.svg');
+}
+
 body.template-surveys-modern {
   // background-image: url('../images/survey-bg.jpg');
   background-size: 100% auto;
@@ -17,6 +23,23 @@ body.template-surveys-modern {
   background-color: $color-midnight;
   background-attachment: fixed;
   color: $color-white;
+
+  .container p,
+  .container h1,
+  .container h2,
+  .container h3 {
+    color: $color-white;
+  }
+
+  .container a {
+    color: $color-mint;
+    font-weight: 700;
+    transition: all $transition-duration;
+
+    &:hover {
+      color: $color-mint-alternative-hover;
+    }
+  }
 
   .gform_wrapper div.validation_error {
     background: $color-error-surveys;
