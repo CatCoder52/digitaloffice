@@ -181,8 +181,8 @@
   })();
 </script>
 
-<script data-swup-reload-script src="<?php echo esc_url( get_template_directory_uri() . '/js/src/tweenmax.min.js' ); ?>"></script>
-<script data-swup-reload-script src="<?php echo esc_url( get_template_directory_uri() . '/js/src/buttons.js' ); ?>"></script>
+<script data-swup-reload-script async src="<?php echo esc_url( get_template_directory_uri() . '/js/src/tweenmax.min.js' ); ?>"></script>
+<script data-swup-reload-script async src="<?php echo esc_url( get_template_directory_uri() . '/js/src/buttons.js' ); ?>"></script>
 
 </body>
 </html>
