@@ -2,51 +2,51 @@
  * Air theme JavaScript.
  */
 
- // Import modules
- import "./skip-link-focus-fix.js";
- import "what-input";
- import "./slick.custom.js";
- import "./navigation.js";
- import "./tweenmax.min.js";
- import "./buttons.js";
- import MoveTo from "moveto";
- import Swup from 'swup';
- import SwupScriptsPlugin from '@swup/scripts-plugin';
- import SwupBodyClassPlugin from '@swup/body-class-plugin';
- import SwupHeadPlugin from '@swup/head-plugin';
- import LazyLoad from "vanilla-lazyload";
+// Import modules
+import "./skip-link-focus-fix.js";
+import "what-input";
+import "./slick.custom.js";
+import "./navigation.js";
+import "./tweenmax.min.js";
+import "./buttons.js";
+import MoveTo from "moveto";
+import Swup from 'swup';
+import SwupScriptsPlugin from '@swup/scripts-plugin';
+import SwupBodyClassPlugin from '@swup/body-class-plugin';
+import SwupHeadPlugin from '@swup/head-plugin';
+import LazyLoad from "vanilla-lazyload";
 
- // Define Javascript is active by changing the body class
- document.body.classList.remove("no-js");
- document.body.classList.add("js");
+// Define Javascript is active by changing the body class
+document.body.classList.remove("no-js");
+document.body.classList.add("js");
 
- // Increase session page visits count
- sessionStorage.setItem(
-   "chat_greeting_visits",
-   Number(sessionStorage.getItem("chat_greeting_visits")) + 1
- );
+// Increase session page visits count
+sessionStorage.setItem(
+ "chat_greeting_visits",
+ Number(sessionStorage.getItem("chat_greeting_visits")) + 1
+);
 
 // Init lazyload
 var dude_LazyLoad = new LazyLoad();
 dude_LazyLoad.update();
 
- // Initiate Swup transitions
- const swup = new Swup({
-   linkSelector:
-     'a[href^="' +
-     window.location.origin +
-     '"]:not([data-no-swup]), a[href^="/"]:not([data-no-swup]), a[href^="#"]:not([data-no-swup])',
-   animationSelector: '[class*="swup-transition-"]',
-   plugins: [
-     new SwupHeadPlugin(),
-     new SwupScriptsPlugin({
-       head: true,
-       body: true,
-       optin: true,
-     }),
-     new SwupBodyClassPlugin(),
-   ],
- });
+// Initiate Swup transitions
+const swup = new Swup({
+ linkSelector:
+   'a[href^="' +
+   window.location.origin +
+   '"]:not([data-no-swup]), a[href^="/"]:not([data-no-swup]), a[href^="#"]:not([data-no-swup])',
+ animationSelector: '[class*="swup-transition-"]',
+ plugins: [
+   new SwupHeadPlugin(),
+   new SwupScriptsPlugin({
+     head: true,
+     body: true,
+     optin: true,
+   }),
+   new SwupBodyClassPlugin(),
+ ],
+});
 
  // Swup starts
  swup.on("contentReplaced", function () {
