@@ -132,14 +132,21 @@
 <script data-swup-reload-script async src="//platform.twitter.com/widgets.js"></script>
 <script data-swup-reload-script>CRISP_WEBSITE_ID = "-K90vfAnyk27kD-pZAep"</script>
 <script data-swup-reload-script async src="https://client.crisp.chat/l.js"></script>
-<script>window.CRISP_READY_TRIGGER = function () {
-  // Hide chat circle by default unless there is unread messages or session iongoing
-  if ($crisp.get("chat:unread:count") > 0 || $crisp.is("session:ongoing")) {
-    $crisp.push(["do", "chat:show"]);
-  } else {
-    $crisp.push(["do", "chat:hide"]);
-  }
-};</script>
+<link rel="stylesheet" type="text/css" href="https://client.crisp.chat/static/stylesheets/client_default.css?bd8db26">
+<script>
+  ['swup:pageView', 'swup:contentReplaced'].forEach( function(event) {
+    document.addEventListener( event, function() {
+      window.CRISP_READY_TRIGGER = function () {
+        // Hide chat circle by default unless there is unread messages or session iongoing
+        if ($crisp.get("chat:unread:count") > 0 || $crisp.is("session:ongoing")) {
+          $crisp.push(["do", "chat:show"]);
+        } else {
+          $crisp.push(["do", "chat:hide"]);
+        }
+      }
+    });
+  });
+</script>
 
 <?php wp_footer(); ?>
 
