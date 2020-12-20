@@ -6,7 +6,7 @@
 import "./skip-link-focus-fix.js";
 import "what-input";
 import "./slick.custom.js";
-// import "./navigation.js"; // Included inline at the end of initJs function
+import "./navigation.js";
 import "./tweenmax.min.js";
 import "./buttons.js";
 import MoveTo from "moveto";
@@ -34,9 +34,8 @@ const swup = new Swup({
  ],
 });
 
-['swup:contentReplaced'].forEach( function(event) {
-  document.addEventListener( event, initJs );
-});
+swup.on( 'pageView', initJs );
+swup.on( 'contentReplaced', initJs );
 
 function initJs() {
   // Define Javascript is active by changing the body class
@@ -56,10 +55,10 @@ function initJs() {
   // Glitch improvements for main title
   setInterval(function(){
     // toggle the class every X seconds
-    jQuery('.glitch').toggleClass('glitch-fulltilt');
+    $('.glitch').toggleClass('glitch-fulltilt');
     setTimeout(function(){
       // toggle back after X seconds
-      jQuery('.glitch').toggleClass('glitch-fulltilt');
+      $('.glitch').toggleClass('glitch-fulltilt');
     }, 1000);
   }, 4000);
 
@@ -80,24 +79,24 @@ function initJs() {
   // Accessibility: Ensure back to top is right color on right background
   // Detect Visible section on viewport from bottom
   // @link https://codepen.io/BoyWithSilverWings/pen/MJgQqR
-  jQuery.fn.isInViewport = function isInViewport() {
-    var elementTop = jQuery(this).offset().top;
-    var elementBottom = elementTop + jQuery(this).outerHeight();
+  $.fn.isInViewport = function () {
+    var elementTop = $(this).offset().top;
+    var elementBottom = elementTop + $(this).outerHeight();
 
-    var viewportTop = jQuery(window).scrollTop();
-    var viewportBottom = viewportTop + jQuery(window).height();
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
 
     return elementBottom > viewportTop && elementTop < viewportBottom;
   };
 
   // Accessibility: Ensure back to top is right color on right background
-  jQuery(window).on("resize scroll", function () {
-    jQuery(".block").each(function () {
-      if (jQuery(this).isInViewport()) {
-        jQuery(".back-to-top")
+  $(window).on("resize scroll", function () {
+    $(".block").each(function () {
+      if ($(this).isInViewport()) {
+        $(".back-to-top")
         .removeClass("has-light-bg has-dark-bg")
         .addClass(
-          jQuery(this).hasClass("has-light-bg") ? "has-light-bg" : "has-dark-bg"
+          $(this).hasClass("has-light-bg") ? "has-light-bg" : "has-dark-bg"
         );
       }
     });
@@ -105,13 +104,13 @@ function initJs() {
 
   // Accessibility add "External link:" aria label for external links
   var currentHost = new RegExp(location.host);
-  jQuery('a').each(function () {
-    var attr = jQuery(this).attr('aria-label');
-    if (!currentHost.test(jQuery(this).attr('href')) && !attr) {
+  $('a').each(function () {
+    var attr = $(this).attr('aria-label');
+    if (!currentHost.test($(this).attr('href')) && !attr) {
       // A link that does not contain the current host
-      var txt = jQuery(this).text();
-      jQuery(this).addClass('is-external-link');
-      jQuery(this).attr('aria-label', dude_screenReaderText.external_link + ' ' + txt);
+      var txt = $(this).text();
+      $(this).addClass('is-external-link');
+      $(this).attr('aria-label', dude_screenReaderText.external_link + ' ' + txt);
     }
   });
 
@@ -482,372 +481,4 @@ function initJs() {
     $crisp.push(["do", "chat:show"]);
     $crisp.push(["do", "chat:open"]);
   });
-
-  (function ($) {
-    // Define nav stuff
-    var menuContainer = jQuery(".nav-container");
-    var menuToggle = menuContainer.find(".nav-toggle");
-    var siteHeaderMenu = menuContainer.find("#main-navigation-wrapper");
-    var siteNavigation = menuContainer.find("#nav");
-    var menu = menuContainer.find("#nav");
-    var animatedNav = document.querySelector(".nav-primary");
-    var animatedHero = document.querySelector(".block-hero-enable-transition");
-    var dropdownToggle = jQuery("<button />", {
-      class: "dropdown-toggle",
-      "aria-expanded": false,
-    }).append(
-      jQuery("<span />", {
-        class: "screen-reader-text",
-        text: dude_screenReaderText.expand,
-      })
-    );
-
-    // Toggles the menu button
-    (function () {
-      if (!menuToggle.length) {
-        return;
-      }
-
-      menuToggle.add(siteNavigation).attr("aria-expanded", "false");
-      menuToggle.on("click", function () {
-
-        jQuery("body").toggleClass("js-nav-active");
-
-        // Change text to closed and vice versa
-        var toggletext = jQuery(this).find(".toggle-text").text();
-        if (toggletext == "Avaa valikko") {
-          jQuery(this).find(".toggle-text").text("Sulje valikko");
-        } else {
-          jQuery(this).find(".toggle-text").text("Avaa valikko");
-        }
-
-        // Defer nav background image
-        var navBg = "background-image: url({url})";
-        document.getElementById("nav").setAttribute('style', navBg.replace("{url}", document.getElementById("nav").getAttribute('data-defer')));
-
-        // jscs:disable
-        jQuery(this)
-          .add(siteNavigation)
-          .attr(
-            "aria-expanded",
-            jQuery(this).add(siteNavigation).attr("aria-expanded") === "false"
-              ? "true"
-              : "false"
-          );
-        // jscs:enable
-      });
-    })();
-
-    // Adds the dropdown toggle button
-    jQuery(".menu-item-has-children > a").after(dropdownToggle);
-
-    // Adds aria attribute
-    siteHeaderMenu.find(".menu-item-has-children").attr("aria-haspopup", "true");
-
-    // Toggles the sub-menu when dropdown toggle button clicked
-    siteHeaderMenu.find(".dropdown-toggle").click(function (e) {
-      screenReaderSpan = jQuery(this).find(".screen-reader-text");
-      dropdownMenu = jQuery(this).nextAll(".sub-menu");
-
-      e.preventDefault();
-      jQuery(this).toggleClass("toggled-on");
-      dropdownMenu.toggleClass("toggled-on");
-
-      // jscs:disable
-      jQuery(this).attr(
-        "aria-expanded",
-        jQuery(this).attr("aria-expanded") === "false" ? "true" : "false"
-      );
-      // jscs:enable
-      screenReaderSpan.text(
-        screenReaderSpan.text() === dude_screenReaderText.expand
-          ? dude_screenReaderText.collapse
-          : dude_screenReaderText.expand
-      );
-    });
-
-    // Adds a class to sub-menus for styling
-    jQuery(".sub-menu .menu-item-has-children")
-      .parent(".sub-menu")
-      .addClass("has-sub-menu");
-
-    // Keyboard navigation
-    jQuery(".menu-item a, button.dropdown-toggle").on("keydown", function (e) {
-
-      if ([37, 38, 39, 40].indexOf(e.keyCode) == -1) {
-        return;
-      }
-
-      switch (e.keyCode) {
-        case 37: // left key
-          e.preventDefault();
-          e.stopPropagation();
-
-          if (jQuery(this).hasClass("dropdown-toggle")) {
-            jQuery(this).prev("a").focus();
-          } else {
-            if (
-              jQuery(this).parent().prev().children("button.dropdown-toggle").length
-            ) {
-              jQuery(this).parent().prev().children("button.dropdown-toggle").focus();
-            } else {
-              jQuery(this).parent().prev().children("a").focus();
-            }
-          }
-
-          if (jQuery(this).is("ul ul ul.sub-menu.toggled-on li:first-child a")) {
-            jQuery(this)
-              .parents("ul.sub-menu.toggled-on li")
-              .children("button.dropdown-toggle")
-              .focus();
-          }
-
-          break;
-
-        case 39: // right key
-          e.preventDefault();
-          e.stopPropagation();
-
-          if (jQuery(this).next("button.dropdown-toggle").length) {
-            jQuery(this).next("button.dropdown-toggle").focus();
-          } else {
-            jQuery(this).parent().next().children("a").focus();
-          }
-
-          if (jQuery(this).is("ul.sub-menu .dropdown-toggle.toggled-on")) {
-            jQuery(this).parent().find("ul.sub-menu li:first-child a").focus();
-          }
-
-          break;
-
-        case 40: // down key
-          e.preventDefault();
-          e.stopPropagation();
-
-          if (jQuery(this).next().length) {
-            jQuery(this).next().find("li:first-child a").first().focus();
-          } else {
-            jQuery(this).parent().next().children("a").focus();
-          }
-
-          if (
-            jQuery(this).is("ul.sub-menu a") &&
-            jQuery(this).next("button.dropdown-toggle").length
-          ) {
-            jQuery(this).parent().next().children("a").focus();
-          }
-
-          if (
-            jQuery(this).is("ul.sub-menu .dropdown-toggle") &&
-            jQuery(this).parent().next().children(".dropdown-toggle").length
-          ) {
-            jQuery(this).parent().next().children(".dropdown-toggle").focus();
-          }
-
-          break;
-
-        case 38: // up key
-          e.preventDefault();
-          e.stopPropagation();
-
-          if (jQuery(this).parent().prev().length) {
-            jQuery(this).parent().prev().children("a").focus();
-          } else {
-            jQuery(this)
-              .parents("ul")
-              .first()
-              .prev(".dropdown-toggle.toggled-on")
-              .focus();
-          }
-
-          if (
-            jQuery(this).is("ul.sub-menu .dropdown-toggle") &&
-            jQuery(this).parent().prev().children(".dropdown-toggle").length
-          ) {
-            jQuery(this).parent().prev().children(".dropdown-toggle").focus();
-          }
-
-          break;
-      }
-    });
-
-    var html,
-      body,
-      container,
-      button,
-      menu,
-      menuWrapper,
-      links,
-      subMenus,
-      i,
-      len,
-      focusableElements,
-      firstFocusableElement,
-      lastFocusableElement;
-
-    container = document.getElementById("nav");
-    if (!container) {
-      return;
-    }
-
-    container = document.getElementById("nav");
-    if (!container) {
-      return;
-    }
-
-    button = document.getElementById("nav-toggle");
-    if ("undefined" === typeof button) {
-      return;
-    }
-
-    // Set vars.
-    html = document.getElementsByTagName("html")[0];
-    body = document.getElementsByTagName("body")[0];
-    menu = container.getElementsByTagName("ul")[0];
-    menuWrapper = document.getElementById("main-navigation-wrapper");
-
-    // Hide menu toggle button if menu is empty and return early.
-    if ("undefined" === typeof menu) {
-      button.style.display = "none";
-      return;
-    }
-
-    menu.setAttribute("aria-expanded", "false");
-    if (-1 === menu.className.indexOf("nav-menu")) {
-      menu.className += " nav-menu";
-    }
-
-    // Accessibility: Init nav opened status
-    var navOpened = false;
-
-    button.onclick = function () {
-
-      // Toggle boolean
-      navOpened ^= true;
-
-      if (-1 !== container.className.indexOf("is-active")) {
-        closeMenu(); // Close menu.
-      } else {
-        body.className += " js-nav-active";
-        container.className += " is-active";
-        button.className += " is-active";
-        button.setAttribute("aria-expanded", "true");
-        menu.setAttribute("aria-expanded", "true");
-
-        // Set focusable elements inside main navigation.
-        focusableElements = container.querySelectorAll([
-          "a[href]",
-          "area[href]",
-          "input:not([disabled])",
-          "select:not([disabled])",
-          "textarea:not([disabled])",
-          "button:not([disabled])",
-          "iframe",
-          "object",
-          "embed",
-          "[contenteditable]",
-          '[tabindex]:not([tabindex^="-"])',
-        ]);
-        //firstFocusableElement = focusableElements[0];
-        firstFocusableElement = button;
-        // lastFocusableElement = focusableElements[focusableElements.length - 1];
-        lastFocusableElement = document.getElementById("lastfocusableitem");
-
-        // Redirect last Tab to first focusable element.
-        lastFocusableElement.addEventListener("keydown", function (e) {
-          if (e.keyCode === 9 && !e.shiftKey) {
-
-            if (navOpened === 1) {
-              e.preventDefault();
-              firstFocusableElement.focus(); // Set focus on first element - that's actually close menu button.
-            }
-          }
-        });
-
-        // Redirect first Shift+Tab to toggle button element.
-        firstFocusableElement.addEventListener("keydown", function (e) {
-
-          if (navOpened === 1) {
-            if (e.keyCode === 9 && e.shiftKey) {
-
-              e.preventDefault();
-              lastFocusableElement.focus(); // Set focus on last element.
-            }
-          }
-        });
-      }
-    };
-
-    // Close menu using Esc key.
-    document.addEventListener("keyup", function (event) {
-      if (event.keyCode == 27) {
-        var toggletext = jQuery(this).find(".toggle-text").text();
-        if (toggletext == "Avaa valikko") {
-          jQuery(this).find(".toggle-text").text("Sulje valikko");
-        } else {
-          jQuery(this).find(".toggle-text").text("Avaa valikko");
-        }
-
-        jQuery("body").removeClass("js-nav-active");
-
-        if (-1 !== container.className.indexOf("is-active")) {
-          closeMenu(); // Close menu.
-        }
-      }
-    });
-
-    // Close menu clicking menu wrapper area.
-    menuWrapper.onclick = function (e) {
-      if (
-        e.target == menuWrapper &&
-        -1 !== container.className.indexOf("is-active")
-      ) {
-        closeMenu(); // Close menu.
-      }
-    };
-
-    // Close menu function.
-    function closeMenu() {
-      navOpened = 0;
-      body.className = body.className.replace(" js-nav-active", "");
-      container.className = container.className.replace(" is-active", "");
-      button.className = button.className.replace(" is-active", "");
-      button.setAttribute("aria-expanded", "false");
-      document.getElementById("nav").setAttribute("aria-expanded", "false");
-      button.focus();
-    }
-
-    // Get all the link elements within the menu.
-    links = menu.getElementsByTagName("a");
-    subMenus = menu.getElementsByTagName("ul");
-
-    // Each time a menu link is focused or blurred, toggle focus.
-    for (i = 0, len = links.length; i < len; i++) {
-      links[i].addEventListener("focus", toggleFocus, true);
-      links[i].addEventListener("blur", toggleFocus, true);
-    }
-
-    /**
-     * Sets or removes .focus class on an element.
-     */
-    function toggleFocus() {
-      var self = this;
-
-      // Move up through the ancestors of the current link until we hit .nav-menu.
-      while (-1 === self.className.indexOf("nav-menu")) {
-        // On li elements toggle the class .focus.
-        if ("li" === self.tagName.toLowerCase()) {
-          if (-1 !== self.className.indexOf("focus")) {
-            self.className = self.className.replace(" focus", "");
-          } else {
-            self.className += " focus";
-          }
-        }
-
-        self = self.parentElement;
-      }
-    }
-  })(jQuery);
 } // end initJs
-
-initJs();
