@@ -2,8 +2,8 @@
 /**
  * @Author: Timi Wahalahti
  * @Date:   2021-01-13 10:34:51
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2021-01-13 10:53:21
+ * @Last Modified by: Niku Hietanen
+ * @Last Modified time: 2021-01-13 11:25:07
  */
 
 function dude_get_ama_entry( $post_id ) {
@@ -13,7 +13,7 @@ function dude_get_ama_entry( $post_id ) {
 
   ob_start();
   ?>
-  <div class="ama-item" data-id="<?php echo esc_attr( $post_id ); ?>" data-timestamp="<?php echo esc_attr( $timestamp ); ?>">
+  <div class="inner" data-id="<?php echo esc_attr( $post_id ); ?>" data-timestamp="<?php echo esc_attr( $timestamp ); ?>">
     <h3><?php echo esc_html( $question ); ?></h3>
     <?php echo wp_kses_post( wpautop( $answer ) ); ?>
   </div>

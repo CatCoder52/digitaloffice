@@ -16,7 +16,8 @@ $questions = [];
 $questions_query = new WP_Query( [
   'post_type'       => 'ama',
   'post_status'     => 'publish',
-  'posts_per_page'  => 500,
+  'posts_per_page'  => 1,
+  'order'           => 'ASC',
 ] );
 
 if ( $questions_query->have_posts() ) {
@@ -33,7 +34,12 @@ if ( $questions_query->have_posts() ) {
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="profile" href="http://gmpg.org/xfn/11">
-  <?php wp_head(); ?>
+  <?php
+  wp_head();
+  do_action( 'dude_ama_enqueue_scripts' );
+  // Disable default scripts
+  wp_dequeue_script( 'scripts' );
+  ?>
 </head>
 
 <body class="template-surveys-modern">
@@ -78,13 +84,26 @@ if ( $questions_query->have_posts() ) {
 
         gravity_form( $id_or_title, $display_title, $display_description, $display_inactive, $field_values, $ajax, $tabindex, $echo ); ?>
 
-        <?php if ( ! empty( $questions ) ) : ?>
-          <div class="container ama">
-            <?php foreach ( $questions as $question ) {
-              echo $question;
-            } ?>
+
+        <div class="container ama">
+          <div id="dude-ama" class="ama-items post-loaded" >
+            <div class="ama-item checking-for-updates" v-if="loadingPosts">
+              Checking for updates
+            </div>
+            <div class="ama-item" :class="post.state" v-for="post in posts" v-html="post.meta.rendered_listing">
+            </div>
           </div>
-        <?php endif; ?>
+          <?php if ( ! empty( $questions ) ) : ?>
+            <div class="ama-items pre-loaded">
+              <?php foreach ( $questions as $question ) : ?>
+              <div class="ama-item">
+                <?php echo $question; ?>
+              </div>
+              <?php endforeach ?>
+            </div>
+          <?php endif; ?>
+        </div>
+
 
       </main><!-- #main -->
     </div><!-- #primary -->
@@ -102,6 +121,8 @@ if ( $questions_query->have_posts() ) {
         a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
+
+<?php wp_footer(); ?>
 
 </body>
 </html>
