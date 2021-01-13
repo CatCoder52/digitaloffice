@@ -39,6 +39,7 @@ content/mu-plugins/*
 !content/mu-plugins/bedrock-autoloader.php
 content/languages/themes
 content/languages/plugins
+!content/plugins/dude-ama
 
 # Dynamic content
 content/db.php
