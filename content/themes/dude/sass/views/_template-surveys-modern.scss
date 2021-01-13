@@ -5,18 +5,18 @@
 
 // Vars
 $max-width: 100rem;
-$color-survey-background: $color-white;
-$color-survey-body-text: $color-midnight;
+$color-survey-background: $color-midnight;
+$color-survey-body-text: $color-white;
 $color-success-box-body-text: $color-survey-body-text;
 $color-success-box-title: #7eaf56;
 $color-checked: $color-mint;
 $color-background-checked: rgba($color-checked, .2);
-$color-borders: #aaa;
-$color-border-main-header: #aaa;
+$color-borders: #898888;
+$color-border-main-header: #303030;
 $color-error-surveys: lighten($color-error, 10%);
 $color-success-box-bg: transparent;
 $color-success-box-border: transparent;
-$color-background-checkbox-hover: #ddd;
+$color-background-checkbox-hover: #222;
 $color-submit: $color-midnight-blue;
 $color-background-submit: $color-mint;
 $color-links: $color-mint;
@@ -629,9 +629,11 @@ body.template-surveys-modern {
 
   div.wpforms-container-full .wpforms-form label.wpforms-error {
     color: $color-error;
-    padding: 12px;
+    padding: 35px 12px;
     float: none;
     text-align: center;
+    font-size: 18px;
+    font-weight: 700;
   }
 
   .survey-header {
