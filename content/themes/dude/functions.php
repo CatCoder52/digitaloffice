@@ -107,7 +107,7 @@ function dude_add_image_sizes() {
  * Edit delivery of specific style sheets from certain templates.
  */
 function dude_remove_styles() {
-  if ( is_page_template( 'template-surveys-modern.php' ) ) {
+  if ( is_page_template( 'template-surveys-modern.php' ) || is_page_template( 'template-surveys-wpforms.php' ) ) {
     wp_dequeue_style( 'styles' );
     wp_enqueue_style( 'surveystyles', get_theme_file_uri( 'css/surveys.min.css' ), array(), filemtime( get_theme_file_path( 'css/surveys.min.css' ) ) );
   }
