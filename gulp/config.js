@@ -50,6 +50,7 @@ module.exports = {
   styles: {
     gutenberg: themeDir + '/sass/base/gutenberg.scss',
     surveys: themeDir + '/sass/base/surveys.scss',
+    ama: themeDir + '/sass/base/ama.scss',
     store: themeDir + '/sass/base/store.scss',
     main: themeDir + '/sass/base/global.scss',
     src: themeDir + '/sass/**/*.{sass,scss}',
