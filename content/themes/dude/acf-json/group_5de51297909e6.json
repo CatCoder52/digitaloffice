@@ -76,6 +76,13 @@
                 "operator": "==",
                 "value": "template-surveys-modern.php"
             }
+        ],
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "template-ama.php"
+            }
         ]
     ],
     "menu_order": 0,
