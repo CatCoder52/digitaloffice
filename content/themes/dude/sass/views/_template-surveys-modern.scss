@@ -8,6 +8,11 @@ $max-width: 100rem;
 $color-checked: $color-mint;
 $color-borders: #898888;
 $color-error-surveys: lighten($color-error, 10%);
+$color-success-box-bg: transparent;
+$color-success-box-border: transparent;
+$color-survey-body-text: $color-white;
+$color-success-box-body-text: $color-survey-body-text;
+$color-success-box-title: #e0ffc7;
 
 body.template-surveys-modern .block li a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail):not(.button):not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):not(.no-external-link-indicator):not(.wp-block-button__link):not(#spr-button)::after,
 .block p a[href*="//"]:not([href*="www.dude.fi"]):not([href*="dude.vaiheessa.fi"]):not([href*="dude.test"]):not([href*="localhost:3000"]):not(.contact-detail):not(.button):not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):not(.no-external-link-indicator):not(.wp-block-button__link)::after,
@@ -22,13 +27,33 @@ body.template-surveys-modern {
   background-position: top;
   background-color: $color-midnight;
   background-attachment: fixed;
-  color: $color-white;
+  color: $color-survey-body-text;
+
+  .wpforms-confirmation-container-full,
+  div[submit-success]>.wpforms-confirmation-container-full:not(.wpforms-redirection-message) {
+    background: $color-success-box-bg;
+    border: 1px solid $color-success-box-border;
+    color: $color-survey-body-text;
+    margin: 2rem;
+    max-width: $max-width;
+    margin-left: auto;
+    margin-right: auto;
+
+    h1,
+    h2 {
+      color: $color-success-box-title;
+    }
+
+    * {
+      color: $color-survey-body-text;
+    }
+  }
 
   .container p,
   .container h1,
   .container h2,
   .container h3 {
-    color: $color-white;
+    color: $color-survey-body-text;
   }
 
   .container a {
@@ -43,7 +68,7 @@ body.template-surveys-modern {
 
   .gform_wrapper div.validation_error {
     background: $color-error-surveys;
-    color: $color-white;
+    color: $color-survey-body-text;
   }
 
   .gform_wrapper ol.validation_list li,
@@ -134,6 +159,7 @@ body.template-surveys-modern {
     font-weight: 500 !important;
   }
 
+  .wpforms-required-label,
   span.gfield_required {
     display: inline !important;
     color: $color-mint !important;
@@ -144,6 +170,9 @@ body.template-surveys-modern {
     font-weight: 400;
   }
 
+  .wpforms-container,
+  div.wpforms-container-full,
+  div.wpforms-container.wpforms-container-full,
   .container,
   .survey-header,
   .gform_wrapper,
@@ -181,7 +210,7 @@ body.template-surveys-modern {
   li,
   input[type="text"] {
     font-family: $font-base;
-    color: $color-white;
+    color: $color-survey-body-text;
   }
 
   .site {
@@ -215,7 +244,7 @@ body.template-surveys-modern {
     }
 
     p {
-      color: $color-white !important;
+      color: $color-survey-body-text !important;
       max-width: 500px;
       margin: 5rem auto;
       font-size: 17px;
@@ -229,10 +258,14 @@ body.template-surveys-modern {
     .gform_confirmation_message {
       @include responsive-font(18px, 30px);
       line-height: 1.5;
-      color: $color-white;
+      color: $color-survey-body-text;
     }
   }
 
+  .wpforms-container,
+  div.wpforms-container-full,
+  div.wpforms-container.wpforms-container-full,
+  .wpforms-field-container,
   .gform_wrapper {
     max-width: $max-width;
     padding-top: 43px;
@@ -279,6 +312,68 @@ body.template-surveys-modern {
     }
 
     ul.gfield_checkbox > li {
+      min-width: 33.3% !important;
+      margin-right: 0 !important;
+      margin-bottom: -1px !important;
+      overflow: hidden !important;
+      flex: 1;
+
+      @media (max-width: 710px) {
+        min-width: 50% !important;
+        width: 50% !important;
+      }
+
+      @media (max-width: 550px) {
+        min-width: 50% !important;
+        width: 100% !important;
+      }
+    }
+
+    .wpforms-field:not(.wpforms-field-checkbox) > ul {
+      margin-bottom: 4rem !important;
+    }
+
+    .wpforms-field > ul {
+      margin: 0 0 4rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      @media (max-width: 400px) {
+        margin: 2rem 0 !important;
+      }
+
+      > li {
+        width: auto !important;
+        min-width: 123px !important;
+        margin-right: 1rem !important;
+        border: 1px solid $color-borders !important;
+        background: transparent !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        text-align: center !important;
+        margin-bottom: 1rem !important;
+        transition: all .6s !important;
+
+        @media (max-width: 710px) {
+          width: 100% !important;
+          margin-right: 0 !important;
+          margin-bottom: -1px !important;
+        }
+      }
+
+      > li:hover,
+      > li:focus {
+        background: #222 !important;
+        opacity: 1 !important;
+      }
+    }
+
+    .wpforms-field#wpforms-8060-field_11-container > ul > li {
+      min-width: 220px !important;
+    }
+
+    .wpforms-field.wpforms-field-checkbox > ul > li {
       min-width: 33.3% !important;
       margin-right: 0 !important;
       margin-bottom: -1px !important;
@@ -350,16 +445,22 @@ body.template-surveys-modern {
     input[type="checkbox"] + label,
     input[type="radio"] + label {
       @include responsive-font(17px, 20px);
-      line-height: 1 !important;
+      line-height: 1.2 !important;
       margin: 0 !important;
       font-weight: 300;
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       position: relative;
       margin-bottom: 20px;
-      color: $color-white;
+      color: $color-survey-body-text;
       cursor: pointer;
       user-select: none;
       padding: 12px !important;
+
+      @media (min-width: 500px) {
+        min-height: 55px;
+      }
     }
 
     input[type="checkbox"] + label:last-child {
@@ -402,6 +503,12 @@ body.template-surveys-modern {
       display: none !important;
     }
 
+    .wpforms-form {
+      padding-top: 2em;
+    }
+
+    .wpforms-form .wpforms-field-label,
+    .wpforms-field-label,
     .gfield_label {
       @include responsive-font(18px, 26px);
       font-weight: 700;
@@ -422,7 +529,8 @@ body.template-surveys-modern {
       }
     }
 
-    ul.gform_fields li.gfield {
+    ul.gform_fields li.gfield,
+    .wpforms-field {
       margin-bottom: 10rem;
       border: 1px solid $color-borders;
       padding: 4rem 5rem 0;
@@ -452,6 +560,7 @@ body.template-surveys-modern {
       margin-left: -5rem;
       margin-right: -5rem;
       margin-bottom: 0 !important;
+      background: transparent;
 
       @media (max-width: 500px) {
         margin-left: -3rem;
@@ -487,10 +596,12 @@ body.template-surveys-modern {
 
     textarea {
       height: 240px;
-      color: $color-white;
+      color: $color-survey-body-text;
     }
   }
 
+  div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-has-error input,
+  div.wpforms-container-full .wpforms-form .wpforms-field.wpforms-has-error .choices__inner,
   .gform_wrapper li.gfield_error input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]),
   .gform_wrapper li.gfield_error textarea {
     border-left: 0 !important;
@@ -499,8 +610,19 @@ body.template-surveys-modern {
     border-bottom: 0 !important;
   }
 
+  div.wpforms-container-full .wpforms-field.wpforms-has-error textarea,
   .gform_wrapper li.gfield_error textarea {
     border-top: 1px solid #4f4e4d !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-bottom: 0 !important;
+  }
+
+  div.wpforms-container-full .wpforms-form label.wpforms-error {
+    color: $color-error;
+    padding: 12px;
+    float: none;
+    text-align: center;
   }
 
   .survey-header {
@@ -539,7 +661,7 @@ body.template-surveys-modern {
     }
 
     svg {
-      fill: $color-white;
+      fill: $color-survey-body-text;
       width: 100px;
       height: 26px;
       margin-top: 8px;
@@ -610,7 +732,7 @@ body.template-surveys-modern {
     }
 
     a {
-      color: $color-white;
+      color: $color-survey-body-text;
       opacity: .7;
       transition: all .6s;
     }
@@ -663,6 +785,9 @@ body.template-surveys-modern {
     }
   }
 
+  div.wpforms-container-full .wpforms-submit-container button[type=submit],
+  div.wpforms-container-full .wpforms-submit-container .wpforms-page-button,
+  div.wpforms-container-full .wpforms-subimt-container button.wpforms-submit,
   .gform_wrapper .gform_footer input.button,
   .gform_wrapper .gform_page_footer input.button,
   .gform_wrapper .gform_footer input[type=submit],
@@ -676,7 +801,7 @@ body.template-surveys-modern {
     white-space: nowrap !important;
     min-height: 48px !important;
     background-color: $color-checked !important;
-    color: $color-white !important;
+    color: $color-survey-body-text !important;
     transition: background-color .2s ease 0s, color .2s ease 0s, border-color .2s ease 0s, opacity .2s ease 0s !important;
     outline: none !important;
     border-width: 1px !important;
@@ -691,10 +816,13 @@ body.template-surveys-modern {
     display: none !important;
   }
 
+  div.wpforms-container-full .wpforms-submit-container,
   .gform_wrapper .gform_footer {
     padding: 0 !important;
     margin: 0 !important;
 
+    > button.wpforms-submit,
+    > button[type="submit"],
     > input[type="submit"] {
       width: 100% !important;
       margin-bottom: 12rem !important;
@@ -711,6 +839,23 @@ body.template-surveys-modern {
   }
 
   // Multiple answers
+  .wpforms-field.wpforms-field-checkbox > ul {
+    margin-left: -5rem !important;
+    margin-right: -5rem !important;
+    margin-bottom: 0 !important;
+    max-width: auto !important;
+
+    @media (max-width: 500px) {
+      margin-left: -3rem !important;
+      margin-right: -3rem !important;
+    }
+
+    @media (max-width: 400px) {
+      margin-left: -2rem !important;
+      margin-right: -2rem !important;
+    }
+  }
+
   .gform_wrapper .ginput_container.ginput_container_checkbox,
   .gform_wrapper ul li.field_description_above div.ginput_container_checkbox {
     margin-left: -5rem !important;
