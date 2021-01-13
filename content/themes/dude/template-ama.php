@@ -43,7 +43,7 @@ if ( $questions_query->have_posts() ) {
   ?>
 </head>
 
-<body class="template-surveys-modern">
+<body class="template-ama">
 
   <div id="page" class="site">
    <div class="site-content">
