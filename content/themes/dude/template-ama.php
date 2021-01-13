@@ -92,8 +92,8 @@ if ( $questions_query->have_posts() ) {
         <?php endif; ?>
         <div class="container ama">
           <div id="dude-ama" class="ama-items post-loaded" >
-            <div class="ama-item checking-for-updates" v-if="loadingPosts">
-              Checking for updates
+            <div class="checking-for-updates" v-if="loadingPosts">
+              Tarkistellaa joko ne vastas prkl
             </div>
             <div class="ama-item" :class="post.state" v-for="post in posts" v-html="post.meta.rendered_listing">
             </div>
