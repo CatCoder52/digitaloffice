@@ -3,7 +3,7 @@
  * @Author: Timi Wahalahti
  * @Date:   2021-01-13 10:34:51
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2021-01-13 11:12:27
+ * @Last Modified time: 2021-01-13 11:21:14
  */
 
 add_action( 'rest_api_init', function () {
@@ -13,7 +13,7 @@ add_action( 'rest_api_init', function () {
   ) );
 } );
 
-function dude_get_ama_drafts( $data ) {
+function dude_get_ama_drafts() {
   $count = wp_cache_get( 'ama-drafts', 'theme' );
   if ( ! $count ) {
     $count = wp_count_posts( 'ama' )->draft;
