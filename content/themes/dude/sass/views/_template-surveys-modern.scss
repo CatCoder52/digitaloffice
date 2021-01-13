@@ -39,7 +39,41 @@ body.template-surveys-modern {
   background-attachment: fixed;
   color: $color-survey-body-text;
 
-  form.wpforms-form .wpforms-field-likert_scale table {
+  form.wpforms-form .wpforms-field-net_promoter_score table.modern tbody tr td {
+    background: transparent;
+  }
+
+  form.wpforms-form .wpforms-field-net_promoter_score table.modern tbody tr td:first-of-type,
+  form.wpforms-form .wpforms-field-net_promoter_score table.modern tbody tr td {
+    border-radius: 0;
+    border-color: $color-borders;
+    color: $color-survey-body-text;
+  }
+
+  form.wpforms-form .wpforms-field-net_promoter_score table.modern tbody tr td label {
+    transition: all $transition-duration;
+    border: 0;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+
+    &:hover,
+    &:focus {
+      background-color: $color-background-checked;
+    }
+  }
+
+  form.wpforms-form .wpforms-field-net_promoter_score table.modern tbody tr td label:hover:after {
+    border: 0;
+  }
+
+  form.wpforms-form .wpforms-field-net_promoter_score table.modern tbody tr td input[type=radio]:checked+label {
+    background-color: $color-checked;
+    color: $color-survey-background;
+  }
+
+  form.wpforms-form .wpforms-field-likert_scale table,
+  form.wpforms-form .wpforms-field-net_promoter_score table {
     margin-bottom: 43px;
 
     @media (max-width: 500px) {
@@ -70,7 +104,7 @@ body.template-surveys-modern {
     height: 26px !important;
     background-color: transparent !important;
     padding: 0 !important;
-    transition: all .44s;
+    transition: all $transition-duration;
     display: inline-flex !important;
 
     @media (min-width: 500px) {
@@ -90,9 +124,14 @@ body.template-surveys-modern {
     height: 26px !important;
     background-color: transparent !important;
     padding: 0 !important;
-    transition: all .44s;
+    transition: all $transition-duration;
     background-size: 25px;
     background-position: 4px 4px;
+  }
+
+  form.wpforms-form .wpforms-field-likert_scale table.modern tbody tr td label:hover:after {
+    border: 2px solid $color-survey-body-text !important;
+    transition: border-width .2s linear !important;
   }
 
   form.wpforms-form .wpforms-field-likert_scale table.modern tbody tr td label:after {
