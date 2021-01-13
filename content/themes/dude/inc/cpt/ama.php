@@ -2,8 +2,8 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:33:00
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2021-01-13 10:27:30
+ * @Last Modified by: Niku Hietanen
+ * @Last Modified time: 2021-01-13 11:11:03
  *
  * @package dude
  */
@@ -36,6 +36,7 @@ function dude_register_cpt_ama() {
     'has_archive'        => false,
     'hierarchical'       => false,
     'menu_position'      => null,
+    'show_in_rest'       => true,
     'menu_icon'          => 'dashicons-editor-help',
     'supports'           => array(
       'title',
