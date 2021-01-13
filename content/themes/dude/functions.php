@@ -12,6 +12,7 @@ define( 'AIR_LIGHT_VERSION', '4.6.5' );
  */
 require get_theme_file_path( '/inc/hooks.php' );
 require get_theme_file_path( '/inc/functions.php' );
+require get_theme_file_path( '/inc/ama.php' );
 
 /**
  *  Content.
@@ -20,6 +21,7 @@ require get_theme_file_path( '/inc/cpt/reference.php' );
 require get_theme_file_path( '/inc/cpt/person.php' );
 require get_theme_file_path( '/inc/cpt/merch.php' );
 require get_theme_file_path( '/inc/cpt/order.php' );
+require get_theme_file_path( '/inc/cpt/ama.php' );
 
 /**
  * Enable theme support for essential features.

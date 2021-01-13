@@ -13,5 +13,15 @@
       "localPath": "/Users/rolle/Projects/dude/content/themes/dude/",
       "remotePath": "rolle@185.87.110.7:/var/www/dude.fi/public_html/content/themes/dude/"
     },
-  ]
+  ],
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#3633b0",
+    "activityBar.activeBorder": "#92eebc",
+    "activityBar.background": "#4e4aff",
+    "activityBar.foreground": "#fff",
+    "activityBar.inactiveForeground": "#92eebc",
+    "activityBarBadge.background": "#aa75e9",
+    "activityBarBadge.foreground": "#15202b"
+  },
+  "peacock.color": "#66e7a1"
 }

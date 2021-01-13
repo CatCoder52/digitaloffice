@@ -81,7 +81,11 @@
             {
                 "param": "post_template",
                 "operator": "==",
+<<<<<<< HEAD
                 "value": "template-surveys-wpforms.php"
+=======
+                "value": "template-ama.php"
+>>>>>>> ama-niku
             }
         ]
     ],
@@ -105,5 +109,10 @@
     ],
     "active": true,
     "description": "",
+<<<<<<< HEAD
     "modified": 1610527855
 }
+=======
+    "modified": 1575446162
+}
+>>>>>>> ama-niku
