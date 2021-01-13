@@ -12,6 +12,7 @@ $form_title = get_field( 'form_title' );
 $form_description = get_field( 'form_description' );
 $hero_content = get_field( 'hero_content' );
 
+$drafts = dude_get_ama_drafts();
 $questions = [];
 $questions_query = new WP_Query( [
   'post_type'       => 'ama',
@@ -84,7 +85,11 @@ if ( $questions_query->have_posts() ) {
 
         gravity_form( $id_or_title, $display_title, $display_description, $display_inactive, $field_values, $ajax, $tabindex, $echo ); ?>
 
-
+        <?php if ( $drafts ) : ?>
+          <p>Vastaamatta <span class="drafts-count"><?php echo esc_html( $drafts ); ?></span> kysymystä. Piä maitolasista kiinni ja odota uusia vastauksia!</p>
+        <?php else: ?>
+          <p>Oltiin nohevia ja vastattiin kaikkiin kysymyksiin!</p>
+        <?php endif; ?>
         <div class="container ama">
           <div id="dude-ama" class="ama-items post-loaded" >
             <div class="ama-item checking-for-updates" v-if="loadingPosts">

@@ -3,8 +3,25 @@
  * @Author: Timi Wahalahti
  * @Date:   2021-01-13 10:34:51
  * @Last Modified by: Niku Hietanen
- * @Last Modified time: 2021-01-13 11:25:07
+ * @Last Modified time: 2021-01-13 12:53:04
  */
+
+add_action( 'rest_api_init', function () {
+  register_rest_route( 'ama/v1', '/drafts', array(
+    'methods'   => 'GET',
+    'callback'  => 'dude_get_ama_drafts',
+  ) );
+} );
+
+function dude_get_ama_drafts() {
+  $count = wp_cache_get( 'ama-drafts', 'theme' );
+  if ( ! $count ) {
+    $count = wp_count_posts( 'ama' )->draft;
+    wp_cache_set( 'ama-drafts', 'theme', $count, MINUTE_IN_SECONDS / 4 );
+  }
+
+  return $count;
+} // end dude_get_ama_drafts
 
 function dude_get_ama_entry( $post_id ) {
   $question = get_the_title( $post_id );
@@ -18,4 +35,4 @@ function dude_get_ama_entry( $post_id ) {
     <?php echo wp_kses_post( wpautop( $answer ) ); ?>
   </div>
   <?php return ob_get_clean();
-}
+} // end dude_get_ama_entry
