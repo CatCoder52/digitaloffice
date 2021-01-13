@@ -114,6 +114,11 @@ function dude_remove_styles() {
     wp_enqueue_style( 'surveystyles', get_theme_file_uri( 'css/surveys.min.css' ), array(), filemtime( get_theme_file_path( 'css/surveys.min.css' ) ) );
   }
 
+  if ( is_page_template( 'template-ama.php' ) ) {
+    wp_dequeue_style( 'styles' );
+    wp_enqueue_style( 'amastyles', get_theme_file_uri( 'css/ama.min.css' ), array(), filemtime( get_theme_file_path( 'css/ama.min.css' ) ) );
+  }
+
   if ( get_post_type() === 'merch' ) {
     wp_dequeue_style( 'styles' );
     wp_enqueue_style( 'surveystyles', get_theme_file_uri( 'css/store.min.css' ), array(), filemtime( get_theme_file_path( 'css/store.min.css' ) ) );
