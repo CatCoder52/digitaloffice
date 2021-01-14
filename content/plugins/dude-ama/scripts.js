@@ -50,7 +50,7 @@ const Ama = {
               // eslint-disable-next-line no-param-reassign
               data.state = 'loaded';
               // eslint-disable-next-line no-return-assign, no-param-reassign
-              setTimeout(() => data.state = 'show', 200);
+              setTimeout(() => data.state = 'show', 2000);
 
               this.posts.unshift(data);
             });
