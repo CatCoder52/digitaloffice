@@ -8,6 +8,13 @@ body {
   color: $color-survey-body-text;
 }
 
+// Hide vue stuff
+/* stylelint-disable selector-max-specificity */
+#dude-ama:not([data-v-app]) .hide-until-vue-loaded {
+  display: none;
+}
+
+// Start styles
 .survey-header,
 .container {
   max-width: $max-width;
