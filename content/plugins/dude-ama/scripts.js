@@ -29,23 +29,22 @@ const Ama = {
     }, 5000);
   },
   methods: {
-    getPosts() {
+    getPosts(perPage) {
       // Throttle requests
       if (this.loadingPosts) {
         return;
       }
       this.loadingPosts = true;
-      const queryString = this.timeStamp ? `?after=${this.timeStamp}&per_page=1&order=asc` : '';
+      const queryString = this.timeStamp ? `?after=${this.timeStamp}&per_page=${perPage}&order=asc` : '';
       // Get questions
       api
         .get(`/wp-json/wp/v2/ama/${queryString}`)
         .then((response) => {
           if (response.data.length) {
-            this.timeStamp = response.data[0].date;
             // Extract data and reverse;
             const newPosts = [...response.data];
             newPosts.reverse();
-
+            this.timeStamp = newPosts[0].date;
             newPosts.forEach((data) => {
               // Add to start of array
               // eslint-disable-next-line no-param-reassign
@@ -68,10 +67,7 @@ const Ama = {
       api
         .get('/wp-json/ama/v1/drafts')
         .then((response) => {
-          if (response.data !== this.drafts) {
-            this.getPosts();
-          }
-          this.drafts = response.data;
+          this.drafts = parseInt(response.data, 10);
           this.loadingDrafts = false;
         })
         .catch((error) => {
@@ -83,7 +79,7 @@ const Ama = {
     startAutoRefresh(rate) {
       const parsedRate = parseInt(rate, 10);
       this.postIntervalRunner = setInterval(() => {
-        this.getPosts();
+        this.getPosts(1);
       }, parsedRate);
     },
     stopAutoRefresh() {
