@@ -59,6 +59,44 @@ body {
   }
 }
 
+// Select drop downs
+select {
+  border-radius: 0;
+  background-image: url('../svg/select.svg');
+  background-repeat: no-repeat;
+  background-position: right 0 center;
+  background-size: 40px auto;
+  transition: none;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  border: 2px solid $color-midnight;
+  color: $color-midnight;
+  padding: 10px 15px;
+  line-height: 24px;
+  font-size: 16px;
+  max-width: 140px;
+
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+.ama-updating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  border-bottom: 1px solid $color-borders;
+  padding-bottom: 3rem;
+
+  label {
+    font-weight: 500;
+  }
+}
+
 .infobox {
   padding: 3rem;
   background: rgba(#eee, .5);
