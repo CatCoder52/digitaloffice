@@ -3,7 +3,7 @@
  * @Author: Timi Wahalahti
  * @Date:   2021-01-13 10:34:51
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2021-01-14 12:05:20
+ * @Last Modified time: 2021-01-14 12:09:29
  */
 
 add_action( 'rest_api_init', function () {
