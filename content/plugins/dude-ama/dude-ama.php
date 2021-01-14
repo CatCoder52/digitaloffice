@@ -29,9 +29,9 @@ add_action( 'dude_ama_enqueue_scripts', __NAMESPACE__ . '\enqueue_scripts' );
 function register_scripts() {
   wp_register_script(
     'vue',
-    'https://unpkg.com/vue@3',
+    'https://unpkg.com/vue@3.0.5/dist/vue.global.prod.js',
     [],
-    '3.0.0',
+    '3.0.5',
     true
   );
   wp_register_script(

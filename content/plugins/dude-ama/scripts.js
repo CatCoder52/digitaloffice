@@ -3,6 +3,11 @@ const api = axios.create({
   baseURL: `${window.dudeAmaApiURL}`,
 });
 
+// Erase previous form submit to prevent duplicate submits on refresh
+if (window.history.replaceState) {
+  window.history.replaceState(null, null, window.location.href);
+}
+
 const preLoaded = document.querySelectorAll('.pre-loaded .ama-item');
 const lastItem = preLoaded.length ? preLoaded[0].querySelector('.inner') : false;
 const timeStamp = lastItem ? lastItem.dataset.timestamp : false;
