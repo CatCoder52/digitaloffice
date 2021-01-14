@@ -30,6 +30,10 @@ const Ama = {
   },
   methods: {
     getPosts() {
+      // Throttle requests
+      if (this.loadingPosts) {
+        return;
+      }
       this.loadingPosts = true;
       const queryString = this.timeStamp ? `?after=${this.timeStamp}&per_page=1&order=asc` : '';
       // Get questions
@@ -79,9 +83,7 @@ const Ama = {
     startAutoRefresh(rate) {
       const parsedRate = parseInt(rate, 10);
       this.postIntervalRunner = setInterval(() => {
-        if (!this.loadingPosts) {
-          this.getPosts();
-        }
+        this.getPosts();
       }, parsedRate);
     },
     stopAutoRefresh() {
