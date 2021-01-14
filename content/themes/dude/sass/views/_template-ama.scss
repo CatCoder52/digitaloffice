@@ -9,20 +9,103 @@ body {
 }
 
 // Hide vue stuff
-/* stylelint-disable selector-max-specificity */
+/* stylelint-disable selector-max-specificity, selector-max-pseudo-class, no-descending-specificity */
 #dude-ama:not([data-v-app]) .hide-until-vue-loaded {
   display: none;
 }
 
 // Header
-.survey-header,
 .container {
   max-width: $max-width;
   margin-left: auto;
   margin-right: auto;
 
-  > *,
-  .gform_wrapper form {
+  button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset),
+  .button,
+  input[type="reset"],
+  input[type="submit"],
+  input[type="button"] {
+    @extend %default;
+    background: $color-midnight;
+    color: $color-white;
+    font-size: 18px;
+    font-weight: 700;
+    border: 0;
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    padding: 1.4rem 2.8rem;
+    margin-bottom: 0;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    transition: 150ms linear background;
+    font-family: $font-base;
+    white-space: nowrap;
+
+    &.button-mint {
+      background: $color-mint;
+      color: $color-midnight;
+
+      &:hover,
+      &:focus {
+        background: $color-white-two;
+        color: $color-midnight;
+      }
+
+      &:hover svg,
+      &:focus svg {
+        color: $color-midnight;
+      }
+    }
+
+    &.button-white {
+      background: $color-white-two;
+      color: $color-midnight-blue;
+
+      &:hover,
+      &:focus {
+        background: $color-button-white-hover;
+        color: $color-midnight-blue;
+      }
+    }
+
+    span,
+    svg {
+      position: relative;
+      transition: all $transition-duration;
+      transform: translate(0, 0);
+      display: inline-block;
+    }
+
+    @media (max-width: 420px) {
+      font-size: 16px;
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-mint;
+      background: $color-midnight-blue;
+
+      span,
+      svg {
+        transform: translate(2px, 0);
+      }
+    }
+  }
+
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+  }
+
+  > * {
     margin-left: 3rem;
     margin-right: 3rem;
 
@@ -40,10 +123,22 @@ body {
 
 // Form
 .form {
+  margin-bottom: 6rem;
+  margin-top: 6rem;
+
+  label {
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
   textarea {
-    border: 1px solid $color-midnight;
-    padding: 3rem;
+    font-size: 18px;
+    border: 2px solid $color-midnight;
+    padding: 1.8rem;
     color: $color-midnight;
+    width: 100%;
+    height: 150px;
   }
 }
 
@@ -56,119 +151,6 @@ h4 {
   }
 }
 
-.survey-header {
-  padding-top: 6rem;
-  margin: 0 auto;
-  text-align: left;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-
-  .survey-header--logo-tagline,
-  .survey-header--logo {
-    text-align: right;
-  }
-
-  &::after {
-    content: '';
-    display: block;
-    height: 1px;
-    width: calc(100% - 6rem);
-    border-bottom: 1px solid $color-border-main-header;
-    position: absolute;
-    bottom: 3.5rem;
-    left: 3rem;
-
-    @media (max-width: 500px) {
-      left: 3rem;
-      width: calc(100% - 6rem);
-      bottom: 2rem;
-    }
-
-    @media (max-width: 400px) {
-      left: 2rem;
-      width: calc(100% - 4rem);
-    }
-  }
-
-  svg {
-    fill: $color-survey-body-text;
-    width: 100px;
-    height: 26px;
-    margin-top: 8px;
-    margin-bottom: 1rem;
-
-    @media (max-width: 600px) {
-      width: 70px;
-      height: 16.14px;
-    }
-  }
-
-  @media (max-width: $container-ipad) {
-    padding-top: 4rem;
-  }
-
-  img {
-    max-width: 189px;
-    width: 100%;
-    height: auto;
-    margin-bottom: 1rem;
-
-    @media (max-height: 880px) {
-      max-width: 140px;
-    }
-
-    @media (max-height: 760px) {
-      max-width: 100px;
-    }
-
-    @media (max-height: 670px) {
-      max-width: 70px;
-    }
-  }
-
-  h1 {
-    @extend %h3;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    margin-top: 0;
-
-    @media (max-width: 600px) {
-      font-size: 20px;
-    }
-
-    @media (max-width: 400px) {
-      font-size: 17px;
-    }
-  }
-
-  p {
-    margin-top: 0;
-    padding-bottom: 4rem;
-    margin-bottom: 9rem;
-    font-size: 17px;
-
-    @media (max-width: 600px) {
-      font-size: 15px;
-      padding-bottom: 2rem;
-    }
-
-    @media (max-width: 500px) {
-      padding-bottom: 5px;
-    }
-  }
-
-  .survey-header-description {
-    opacity: .7;
-  }
-
-  a {
-    color: $color-survey-body-text;
-    opacity: .7;
-    transition: all .6s;
-  }
-
-  a:hover {
-    opacity: 1;
-  }
+.ama-header {
+  background-image: url('../images/ama-desktop-hero.jpg');
 }

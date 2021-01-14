@@ -53,36 +53,39 @@ if ( $questions_query->have_posts() ) {
 
       <main id="main" class="site-main">
 
-        <header class="survey-header">
-          <div class="survey-header--text">
-            <?php if ( ! empty( $form_title ) ) : ?>
-              <h1 id="content"><?php echo $form_title; ?></h1>
-            <?php endif; ?>
+        <header class="ama-header">
+          <div class="container">
+            <div class="ama-header-text">
+              <?php if ( ! empty( $form_title ) ) : ?>
+                <h1 id="content"><?php echo $form_title; ?></h1>
+              <?php endif; ?>
 
-            <?php if ( ! empty( $hero_content ) ) : ?>
-              <p class="survey-header-description"><?php echo $hero_content; ?></p>
-            <?php endif; ?>
-          </div>
+              <?php if ( ! empty( $hero_content ) ) : ?>
+                <p class="ama-header-description"><?php echo $hero_content; ?></p>
+              <?php endif; ?>
+            </div>
 
-          <div class="survey-header--logo">
-            <?php include get_theme_file_path( '/svg/logo.svg' ); ?>
-            <p class="survey-header--logo-tagline"><a href="https://www.dude.fi">www.dude.fi</a></p>
+            <div class="ama-header-logo">
+              <?php include get_theme_file_path( '/svg/ama-logo.svg' ); ?>
+            </div>
           </div>
         </header>
 
-        <div class="form container">
-          <?php
-            $id_or_title = $form_id;
-            $display_title = false;
-            $display_description = false;
-            $display_inactive = false;
-            $field_values = null;
-            $ajax = false;
-            $tabindex = 1;
-            $echo = true;
+        <div class="form">
+          <div class="container">
+            <?php
+              $id_or_title = $form_id;
+              $display_title = false;
+              $display_description = false;
+              $display_inactive = false;
+              $field_values = null;
+              $ajax = false;
+              $tabindex = 1;
+              $echo = true;
 
-            gravity_form( $id_or_title, $display_title, $display_description, $display_inactive, $field_values, $ajax, $tabindex, $echo );
-          ?>
+              gravity_form( $id_or_title, $display_title, $display_description, $display_inactive, $field_values, $ajax, $tabindex, $echo );
+            ?>
+          </div>
         </div>
 
         <?php if ( ! empty( $form_description ) ) : ?>
@@ -117,18 +120,6 @@ if ( $questions_query->have_posts() ) {
     </div><!-- #primary -->
 
   </div><!-- #page -->
-
-<!-- Hotjar Tracking Code for www.dude.fi -->
-<script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:8741,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
 
 <?php wp_footer(); ?>
 
