@@ -330,7 +330,7 @@ select {
   margin-top: 6rem;
   padding-bottom: 0;
 
-  @media (max-width: 500px) {
+  @media (max-width: 550px) {
     .container .gform_footer .button {
       width: 100%;
       display: block;
@@ -342,10 +342,10 @@ select {
     font-size: 15px;
     color: $color-faded;
 
-    @media (min-width: 500px) {
+    @media (min-width: 550px) {
       position: absolute;
       margin-top: -37px;
-      margin-left: 170px;
+      margin-left: 250px;
     }
   }
 
