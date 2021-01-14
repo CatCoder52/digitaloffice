@@ -43,14 +43,16 @@ const Ama = {
           if (response.data.length) {
             // Extract data and reverse;
             const newPosts = [...response.data];
-            newPosts.reverse();
-            this.timeStamp = newPosts[0].date;
+            this.timeStamp = newPosts[newPosts.length - 1].date;
             newPosts.forEach((data) => {
               // Add to start of array
               // eslint-disable-next-line no-param-reassign
               data.state = 'loaded';
-              // eslint-disable-next-line no-return-assign, no-param-reassign
-              setTimeout(() => data.state = 'show', 2000);
+
+              setTimeout((id) => {
+                const currentPost = this.posts.find((post) => post.id === id);
+                currentPost.state = 'show';
+              }, 2000, data.id);
 
               this.posts.unshift(data);
             });
