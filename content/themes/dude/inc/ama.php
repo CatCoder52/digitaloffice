@@ -8,6 +8,15 @@
  * @package dude
  */
 
+add_filter( 'autoptimize_filter_noptimize', 'ama_noptimize', 10, 0 );
+function ama_noptimize() {
+  if ( strpos( $_SERVER['REQUEST_URI'], 'ama' ) !== false ) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 add_action( 'rest_api_init', function () {
   register_rest_route( 'ama/v1', '/drafts', array(
     'methods'   => 'GET',

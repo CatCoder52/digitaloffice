@@ -10,6 +10,12 @@ body {
   color: $color-ama-body-text;
 }
 
+.gform_confirmation_wrapper {
+  background: $color-white !important;
+  position: relative !important;
+  z-index: 22 !important;
+}
+
 /* stylelint-disable selector-max-specificity, selector-max-pseudo-class, no-descending-specificity */
 .screen-reader-text {
   border: 0;
@@ -324,15 +330,22 @@ select {
   margin-top: 6rem;
   padding-bottom: 0;
 
+  @media (max-width: 550px) {
+    .container .gform_footer .button {
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
+  }
+
   .disclaimer {
     font-size: 15px;
     color: $color-faded;
-    position: absolute;
-    margin-top: -37px;
-    margin-left: 170px;
 
-    @media (max-width: 500px) {
-      margin-top: -45px;
+    @media (min-width: 550px) {
+      position: absolute;
+      margin-top: -37px;
+      margin-left: 250px;
     }
   }
 
@@ -365,6 +378,8 @@ select {
 
   @media (max-width: 720px) {
     background-image: url('../images/ama-mobile-hero.jpg');
+    background-size: cover;
+    background-position: bottom;
   }
 }
 
