@@ -87,12 +87,6 @@ if ( $questions_query->have_posts() ) {
         $echo = true;
 
         gravity_form( $id_or_title, $display_title, $display_description, $display_inactive, $field_values, $ajax, $tabindex, $echo ); ?>
-
-        <style>
-          #dude-ama:not([data-v-app]) .hide-until-vue-loaded {
-            display: none;
-          }
-        </style>
         <div id="dude-ama" class="container ama">
           <div class="ama-drafts hide-until-vue-loaded">
             <p v-if="drafts !== 0">Vastaamatta <span class="drafts-count hide-until-vue-loaded">{{drafts}}</span> kysymystä. Piä maitolasista kiinni ja odota uusia vastauksia!</p>
