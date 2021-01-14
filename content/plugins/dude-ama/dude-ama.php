@@ -79,6 +79,27 @@ function register_question_api() {
      'schema'       => null,
     ]
   );
+
+  register_rest_route( 'dude-ama/v1', 'create-question/', array(
+    'methods' => 'post',
+    'callback' => __NAMESPACE__ . '\save_question',
+    'permission_callback' => '__return_true',
+  ) );
+}
+
+function save_question( $request ) {
+  $question = $request->get_param( 'question' );
+
+  if ( ! empty( $question ) ) {
+    $new_post = [
+      'post_title'    => wp_strip_all_tags( $question ),
+      'post_content'  => '',
+      'post_status'   => 'draft',
+      'post_author'   => 1,
+      'post_type'     => 'ama',
+    ];
+    wp_insert_post( $new_post );
+  }
 }
 
 /**
