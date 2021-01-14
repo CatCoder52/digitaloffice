@@ -17,7 +17,7 @@ $questions = [];
 $questions_query = new WP_Query( [
   'post_type'       => 'ama',
   'post_status'     => 'publish',
-  'posts_per_page'  => 1,
+  'posts_per_page'  => 3, // TODO: Make this bigger so initial loads all posts
   'order'           => 'ASC',
 ] );
 
@@ -27,7 +27,8 @@ if ( $questions_query->have_posts() ) {
     $questions[] = dude_get_ama_entry( get_the_id() );
   }
 } wp_reset_postdata();
-
+// We load the questions in ASC order to get the oldest first, but we then have to reverse the array so the newest post is at top;
+$questions = array_reverse( $questions );
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -115,7 +116,7 @@ if ( $questions_query->have_posts() ) {
               <option value="60000">1 minuutti</option>
               <option value="0">Pois käytöstä</option>
             </select>
-            <button type="button" v-if="parseInt(updateRate, 10) === 0" v-on:click="getPosts" :disabled="loadingPosts">Hae uudet vastaukset</button>
+            <button type="button" v-if="parseInt(updateRate, 10) === 0" v-on:click="getPosts(10)" :disabled="loadingPosts">Hae uudet vastaukset</button>
           </div>
 
           <div class="checking-for-updates hide-until-vue-loaded" v-if="loadingPosts">
