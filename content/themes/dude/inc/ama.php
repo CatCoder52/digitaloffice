@@ -4,6 +4,8 @@
  * @Date:   2021-01-13 10:34:51
  * @Last Modified by: Niku Hietanen
  * @Last Modified time: 2021-01-13 12:53:04
+ *
+ * @package dude
  */
 
 add_action( 'rest_api_init', function () {
