@@ -3,6 +3,11 @@ const api = axios.create({
   baseURL: `${window.dudeAmaApiURL}`,
 });
 
+// Erase previous form submit to prevent duplicate submits on refresh
+if (window.history.replaceState) {
+  window.history.replaceState(null, null, window.location.href);
+}
+
 const preLoaded = document.querySelectorAll('.pre-loaded .ama-item');
 const lastItem = preLoaded.length ? preLoaded[0].querySelector('.inner') : false;
 const timeStamp = lastItem ? lastItem.dataset.timestamp : false;
@@ -16,16 +21,18 @@ const Ama = {
       timeStamp,
       loadingPosts: false,
       loadingDrafts: false,
+      sendingQuestion: false,
       updateRate: 20000,
       postIntervalRunner: null,
+      question: '',
+      questionSent: false,
+      error: false,
     };
   },
   mounted() {
     this.startAutoRefresh(this.updateRate);
     setInterval(() => {
-      if (!this.loadingDrafts) {
-        this.getDrafts();
-      }
+      this.getDrafts();
     }, 5000);
   },
   methods: {
@@ -66,6 +73,9 @@ const Ama = {
         });
     },
     getDrafts() {
+      if (this.loadingDrafts) {
+        return;
+      }
       this.loadingDrafts = true;
       api
         .get('/wp-json/ama/v1/drafts')
@@ -96,6 +106,34 @@ const Ama = {
       }
       this.updateRate = parsedRate;
       this.startAutoRefresh(parsedRate);
+    },
+    submitQuestion(event) {
+      event.preventDefault();
+      if (this.sendingQuestion) {
+        return;
+      }
+      this.sendingQuestion = true;
+      const formData = {
+        question: this.question,
+      };
+      api.post('wp-json/dude-ama/v1/create-question', formData)
+        .then((response) => {
+          this.error = false;
+          this.questionSent = true;
+          this.sendingQuestion = false;
+          this.getDrafts();
+        })
+        .catch((error) => {
+          // eslint-disable-next-line no-console
+          console.log(error);
+          this.error = true;
+          this.questionSent = true;
+          this.sendingQuestion = false;
+        });
+    },
+    resetForm() {
+      this.question = '';
+      this.questionSent = false;
     },
   },
 };
