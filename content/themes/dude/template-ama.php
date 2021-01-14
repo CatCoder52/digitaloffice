@@ -106,8 +106,8 @@ $questions = array_reverse( $questions );
         <div id="dude-ama" class="container ama">
 
           <div class="ama-drafts hide-until-vue-loaded">
-            <p v-if="drafts !== 0">Vastaamatta <span class="drafts-count hide-until-vue-loaded">{{drafts}}</span> kysymystä. Piä maitolasista kiinni ja odota uusia vastauksia!</p>
-            <p v-else class="hide-until-vue-loaded">Oltiin nohevia ja vastattiin kaikkiin kysymyksiin!</p>
+            <p v-if="drafts !== 0">Vastaamatta <span class="drafts-count hide-until-vue-loaded">{{drafts}}</span> kysymystä. Seuraa tätä sivua vastauksien varalta!</p>
+            <p v-else class="hide-until-vue-loaded">Kaikkiin kysymyksiin on vastattu. Lähetä omasi!</p>
           </div>
           <div class="ama-updating hide-until-vue-loaded">
             <label for="update-rate">Automaattinen päivitys</label>

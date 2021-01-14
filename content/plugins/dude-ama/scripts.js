@@ -51,7 +51,7 @@ const Ama = {
               data.state = 'loaded';
               this.posts.unshift(data);
               // eslint-disable-next-line no-return-assign
-              setTimeout(() => this.posts[0].state = 'show', 200);
+              setTimeout(() => this.posts[0].state = 'show', 2000);
             });
           }
           this.loadingPosts = false;
