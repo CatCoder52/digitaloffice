@@ -117,6 +117,7 @@ function dude_remove_styles() {
   if ( is_page_template( 'template-ama.php' ) ) {
     wp_dequeue_style( 'styles' );
     wp_enqueue_style( 'amastyles', get_theme_file_uri( 'css/ama.min.css' ), array(), filemtime( get_theme_file_path( 'css/ama.min.css' ) ) );
+    add_filter( 'pre_option_rg_gforms_disable_css', '__return_true' );
   }
 
   if ( get_post_type() === 'merch' ) {

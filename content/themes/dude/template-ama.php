@@ -70,30 +70,33 @@ if ( $questions_query->have_posts() ) {
           </div>
         </header>
 
+        <div class="form container">
+          <?php
+            $id_or_title = $form_id;
+            $display_title = false;
+            $display_description = false;
+            $display_inactive = false;
+            $field_values = null;
+            $ajax = false;
+            $tabindex = 1;
+            $echo = true;
+
+            gravity_form( $id_or_title, $display_title, $display_description, $display_inactive, $field_values, $ajax, $tabindex, $echo );
+          ?>
+        </div>
+
         <?php if ( ! empty( $form_description ) ) : ?>
           <div class="container">
             <?php echo wpautop( $form_description ); // phpcs:ignore ?>
           </div>
         <?php endif; ?>
-
-        <?php
-        $id_or_title = $form_id;
-        $display_title = false;
-        $display_description = false;
-        $display_inactive = false;
-        $field_values = null;
-        $ajax = false;
-        $tabindex = 1;
-        $echo = true;
-
-        gravity_form( $id_or_title, $display_title, $display_description, $display_inactive, $field_values, $ajax, $tabindex, $echo ); ?>
         <div id="dude-ama" class="container ama">
           <div class="ama-drafts hide-until-vue-loaded">
             <p v-if="drafts !== 0">Vastaamatta <span class="drafts-count hide-until-vue-loaded">{{drafts}}</span> kysymystä. Piä maitolasista kiinni ja odota uusia vastauksia!</p>
             <p v-else class="hide-until-vue-loaded">Oltiin nohevia ja vastattiin kaikkiin kysymyksiin!</p>
           </div>
           <div class="checking-for-updates" v-if="loadingPosts">
-            Tarkistellaa joko ne vastas prkl
+            TODO: Tähän joku latausanimaatio
           </div>
           <div class="ama-items post-loaded" >
             <div class="ama-item" :class="post.state" v-for="post in posts" v-html="post.meta.rendered_listing">
@@ -109,7 +112,6 @@ if ( $questions_query->have_posts() ) {
             </div>
           <?php endif; ?>
         </div>
-
 
       </main><!-- #main -->
     </div><!-- #primary -->

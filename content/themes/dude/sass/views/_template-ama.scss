@@ -14,14 +14,15 @@ body {
   display: none;
 }
 
-// Start styles
+// Header
 .survey-header,
 .container {
   max-width: $max-width;
   margin-left: auto;
   margin-right: auto;
 
-  > * {
+  > *,
+  .gform_wrapper form {
     margin-left: 3rem;
     margin-right: 3rem;
 
@@ -34,6 +35,15 @@ body {
       margin-left: 1.7rem;
       margin-right: 1.7rem;
     }
+  }
+}
+
+// Form
+.form {
+  textarea {
+    border: 1px solid $color-midnight;
+    padding: 3rem;
+    color: $color-midnight;
   }
 }
 
