@@ -133,7 +133,7 @@ $questions = array_reverse( $questions );
             </div>
           </div>
 
-            <button type="button" v-if="parseInt(updateRate, 10) === 0" v-on:click="getPosts" :disabled="loadingPosts">Hae uudet vastaukset</button>
+            <button type="button" v-if="parseInt(updateRate, 10) === 0" v-on:click="getPosts(10)" :disabled="loadingPosts">Hae uudet vastaukset</button>
           </div>
 
           <div class="ama-items post-loaded">
