@@ -120,6 +120,18 @@ if ( $questions_query->have_posts() ) {
               </div>
             </div>
 
+            <p v-else class="hide-until-vue-loaded">Oltiin nohevia ja vastattiin kaikkiin kysymyksiin!</p>
+          </div>
+          <div class="ama-updating hide-until-vue-loaded">
+            <label for="update-rate">Automaattinen päivitys</label>
+            <select name="update-rate" id="update-rate" v-model="updateRate" v-on:input="changeUpdateRate($event.target.value)">
+              <option value="10000">10 sekuntia</option>
+              <option selected value="20000">20 sekuntia</option>
+              <option value="30000">30 sekuntia</option>
+              <option value="60000">1 minuutti</option>
+              <option value="0">Pois käytöstä</option>
+            </select>
+            <button type="button" v-if="parseInt(updateRate, 10) === 0" v-on:click="getPosts" :disabled="loadingPosts">Hae uudet vastaukset</button>
           </div>
 
           <div class="ama-items post-loaded">
