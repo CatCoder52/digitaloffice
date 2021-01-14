@@ -7,6 +7,7 @@
 
 the_post();
 
+$test_mode = isset( $_GET['pieritysvalkki'] ) ? true : false;
 $form_id = get_field( 'form_id' );
 $form_title = get_field( 'form_title' );
 $form_description = get_field( 'form_description' );
@@ -17,7 +18,7 @@ $questions = [];
 $questions_query = new WP_Query( [
   'post_type'       => 'ama',
   'post_status'     => 'publish',
-  'posts_per_page'  => 500,
+  'posts_per_page'  => $test_mode ? 2 : 500,
   'order'           => 'ASC',
 ] );
 
