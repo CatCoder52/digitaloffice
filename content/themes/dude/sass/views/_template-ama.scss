@@ -4,15 +4,24 @@ $color-ama-background: $color-white;
 $color-ama-body-text: $color-midnight;
 $color-borders: #e8e8e8;
 $color-faded: rgba($color-midnight, .5);
+$color-amount: #68d4ab;
 
 body {
   color: $color-ama-body-text;
 }
 
-// Hide vue stuff
 /* stylelint-disable selector-max-specificity, selector-max-pseudo-class, no-descending-specificity */
-#dude-ama:not([data-v-app]) .hide-until-vue-loaded {
-  display: none;
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
+  word-wrap: normal !important; // Many screen reader and browser combinations announce broken words as they would appear visually.
 }
 
 // Header
@@ -52,7 +61,7 @@ body {
 
 .infobox {
   padding: 3rem;
-  background: #eee;
+  background: rgba(#eee, .5);
 
   .info-content {
     display: none;
@@ -61,6 +70,11 @@ body {
     &.toggled {
       display: block;
     }
+  }
+
+  a:hover,
+  a:focus {
+    color: $color-cobalt-blue;
   }
 
   button {
@@ -75,8 +89,13 @@ body {
     font-size: 20px;
     font-weight: 500;
 
+    &:focus {
+      outline: 0;
+    }
+
     &:hover {
       cursor: pointer;
+      color: $color-cobalt-blue;
     }
 
     svg {
@@ -88,14 +107,14 @@ body {
 
   p {
     font-size: 15px;
-    color: $color-midnight;
+    color: $color-paragraphs;
   }
 
   h1,
   h2,
   h3 {
     font-size: 20px;
-    color: $color-midnight;
+    color: $color-headings;
     margin: 0;
   }
 }
@@ -221,7 +240,8 @@ body {
   }
 
   label {
-    font-weight: 700;
+    @extend .screen-reader-text;
+    font-weight: 500;
     margin-bottom: 1rem;
     display: block;
   }
@@ -229,11 +249,17 @@ body {
   textarea {
     font-size: 18px;
     border: 2px solid $color-midnight;
-    padding: 1.8rem;
+    padding: 1.8rem 2rem;
     color: $color-midnight;
     width: 100%;
     height: 150px;
     margin-bottom: 1rem;
+
+    &::placeholder {
+      opacity: 1;
+      color: $color-midnight;
+      font-weight: 500;
+    }
   }
 }
 
@@ -246,6 +272,10 @@ body {
   margin-top: 6rem;
   border-bottom: 1px solid $color-borders;
   padding-bottom: 6rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
 
   p {
     margin: 0;
@@ -253,20 +283,57 @@ body {
   }
 
   .drafts-count {
+    background: $color-mint;
     font-weight: 700;
+    width: 52px;
+    min-width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    box-shadow: 0 0 1px 1px $color-mint;
+    animation: pulse-animation 2s infinite;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
-.pulse {
-  animation: pulse-animation 2s infinite;
+.ama-item {
+  border-bottom: 1px solid $color-borders;
+  padding-bottom: 4rem;
+  margin-bottom: 4rem;
+
+  h3 {
+    font-size: 26px;
+    margin: 0 4rem 0 0;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
 }
 
+// Animations
 @keyframes pulse-animation {
   0% {
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, .2);
+    box-shadow: 0 0 0 0 rgba(3, 6, 28, .2);
   }
 
   100% {
-    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 20px rgba(3, 6, 28, 0);
   }
+}
+
+#dude-ama:not([data-v-app]) .hide-until-vue-loaded {
+  display: none;
+}
+
+// Spinner
+.spinner {
+  position: absolute;
+  right: 2rem;
+}
+
+.spinner svg {
+  width: 50px;
+  height: 50px;
 }
