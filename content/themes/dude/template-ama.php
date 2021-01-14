@@ -41,6 +41,9 @@ if ( $questions_query->have_posts() ) {
   // Disable default scripts
   wp_dequeue_script( 'scripts' );
   ?>
+  <script>
+    amaDrafts = <?php echo esc_attr( $drafts ); ?>;
+  </script>
 </head>
 
 <body class="template-ama">
@@ -85,16 +88,20 @@ if ( $questions_query->have_posts() ) {
 
         gravity_form( $id_or_title, $display_title, $display_description, $display_inactive, $field_values, $ajax, $tabindex, $echo ); ?>
 
-        <?php if ( $drafts ) : ?>
-          <p>Vastaamatta <span class="drafts-count"><?php echo esc_html( $drafts ); ?></span> kysymystä. Piä maitolasista kiinni ja odota uusia vastauksia!</p>
-        <?php else: ?>
-          <p>Oltiin nohevia ja vastattiin kaikkiin kysymyksiin!</p>
-        <?php endif; ?>
-        <div class="container ama">
-          <div id="dude-ama" class="ama-items post-loaded" >
-            <div class="checking-for-updates" v-if="loadingPosts">
-              Tarkistellaa joko ne vastas prkl
-            </div>
+        <style>
+          #dude-ama:not([data-v-app]) .hide-until-vue-loaded {
+            display: none;
+          }
+        </style>
+        <div id="dude-ama" class="container ama">
+          <div class="ama-drafts hide-until-vue-loaded">
+            <p v-if="drafts !== 0">Vastaamatta <span class="drafts-count hide-until-vue-loaded">{{drafts}}</span> kysymystä. Piä maitolasista kiinni ja odota uusia vastauksia!</p>
+            <p v-else class="hide-until-vue-loaded">Oltiin nohevia ja vastattiin kaikkiin kysymyksiin!</p>
+          </div>
+          <div class="checking-for-updates" v-if="loadingPosts">
+            Tarkistellaa joko ne vastas prkl
+          </div>
+          <div class="ama-items post-loaded" >
             <div class="ama-item" :class="post.state" v-for="post in posts" v-html="post.meta.rendered_listing">
             </div>
           </div>
