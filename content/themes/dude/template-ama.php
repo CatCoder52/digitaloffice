@@ -104,22 +104,6 @@ if ( $questions_query->have_posts() ) {
 
           <div class="ama-drafts hide-until-vue-loaded">
             <p v-if="drafts !== 0">Vastaamatta <span class="drafts-count hide-until-vue-loaded">{{drafts}}</span> kysymystä. Piä maitolasista kiinni ja odota uusia vastauksia!</p>
-            <p v-else class="hide-until-vue-loaded">Kaikkiin kysymyksiin on vastattu. Laita omasi tulemaan!</p>
-
-            <div class="checking-for-updates" v-if="loadingPosts">
-              <div class="spinner">
-              <svg version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="25 25 50 50">
-                <circle cx="50" cy="50" r="20" fill="none" stroke-width="5" stroke="#7effe1" stroke-linecap="round" stroke-dashoffset="0" stroke-dasharray="100, 200">
-                  <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 50 50" to="360 50 50" dur="2.5s" repeatCount="indefinite"/>
-                  <animate attributeName="stroke-dashoffset" values="0;-30;-124" dur="1.25s" repeatCount="indefinite"/>
-                  <animate attributeName="stroke-dasharray" values="0,200;110,200;110,200" dur="1.25s" repeatCount="indefinite"/>
-                </circle>
-                </svg>
-              </div>
-            </div>
-
             <p v-else class="hide-until-vue-loaded">Oltiin nohevia ja vastattiin kaikkiin kysymyksiin!</p>
           </div>
           <div class="ama-updating hide-until-vue-loaded">
@@ -132,6 +116,20 @@ if ( $questions_query->have_posts() ) {
               <option value="0">Pois käytöstä</option>
             </select>
             <button type="button" v-if="parseInt(updateRate, 10) === 0" v-on:click="getPosts" :disabled="loadingPosts">Hae uudet vastaukset</button>
+          </div>
+
+          <div class="checking-for-updates hide-until-vue-loaded" v-if="loadingPosts">
+            <div class="spinner">
+            <svg version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="25 25 50 50">
+              <circle cx="50" cy="50" r="20" fill="none" stroke-width="5" stroke="#7effe1" stroke-linecap="round" stroke-dashoffset="0" stroke-dasharray="100, 200">
+                <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 50 50" to="360 50 50" dur="2.5s" repeatCount="indefinite"/>
+                <animate attributeName="stroke-dashoffset" values="0;-30;-124" dur="1.25s" repeatCount="indefinite"/>
+                <animate attributeName="stroke-dasharray" values="0,200;110,200;110,200" dur="1.25s" repeatCount="indefinite"/>
+              </circle>
+              </svg>
+            </div>
           </div>
 
           <div class="ama-items post-loaded">
