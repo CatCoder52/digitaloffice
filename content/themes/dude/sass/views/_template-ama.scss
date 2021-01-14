@@ -394,6 +394,12 @@ select {
   border-bottom: 1px solid $color-borders;
   padding-bottom: 4rem;
   margin-bottom: 4rem;
+  box-shadow: 0 0 1px 1px transparent;
+
+  &.loaded {
+    animation: pulse-animation 1s infinite;
+    padding: 2rem;
+  }
 
   &:last-child {
     border-bottom: 0;
