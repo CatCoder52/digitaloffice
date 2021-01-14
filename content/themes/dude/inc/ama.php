@@ -3,7 +3,7 @@
  * @Author: Timi Wahalahti
  * @Date:   2021-01-13 10:34:51
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2021-01-14 12:09:29
+ * @Last Modified time: 2021-01-14 12:09:47
  */
 
 add_action( 'rest_api_init', function () {
@@ -31,7 +31,7 @@ function dude_get_ama_entry( $post_id ) {
   $output = wp_cache_get( "ama-question-{$post_id}", 'theme' );
   if ( ! $output ) :
     ob_start(); ?>
-    <div class="inner" data-id="<?php echo esc_attr( $post_id ); ?>" data-timestamp="<?php echo esc_attr( $timestamp ); ?>">
+    <div id="<?php echo esc_attr( $post_id ); ?>" class="inner" data-id="<?php echo esc_attr( $post_id ); ?>" data-timestamp="<?php echo esc_attr( $timestamp ); ?>">
       <h3><?php echo esc_html( $question ); ?></h3>
       <?php echo wp_kses_post( wpautop( $answer ) ); ?>
     </div>
