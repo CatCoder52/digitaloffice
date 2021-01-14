@@ -3,7 +3,7 @@
  * @Author: Timi Wahalahti
  * @Date:   2021-01-13 10:34:51
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2021-01-14 11:57:33
+ * @Last Modified time: 2021-01-14 12:05:20
  */
 
 add_action( 'rest_api_init', function () {
@@ -41,3 +41,28 @@ function dude_get_ama_entry( $post_id ) {
 
   return $output;
 } // end dude_get_ama_entry
+
+add_action( 'gform_after_submission', 'dude_ama_questions_to_cpt', 10, 2 );
+function dude_ama_questions_to_cpt( $entry, $form ) {
+  $form_id = 8;
+  if ( 'production' === getenv( 'WP_ENV' ) ) {
+    $form_id = 9;
+  }
+
+  if ( $form['id'] !== $form_id ) {
+    return;
+  }
+
+  if ( empty( $entry[1] ) ) {
+    return;
+  }
+
+  wp_insert_post( [
+    'ID'          => 0,
+    'post_type'   => 'ama',
+    'post_status' => 'draft',
+    'post_title'  => $entry[1],
+  ] );
+
+  return $entry;
+}
