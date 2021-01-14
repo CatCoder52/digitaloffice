@@ -117,10 +117,8 @@ if ( $questions_query->have_posts() ) {
               <option value="60000">1 minuutti</option>
               <option value="0">Pois käytöstä</option>
             </select>
-            <button type="button" v-if="parseInt(updateRate, 10) === 0" v-on:click="getPosts" :disabled="loadingPosts">Hae uudet vastaukset</button>
-          </div>
 
-          <div class="checking-for-updates hide-until-vue-loaded" v-if="loadingPosts">
+            <div class="checking-for-updates hide-until-vue-loaded" v-if="loadingPosts">
             <div class="spinner">
             <svg version="1.1"
               xmlns="http://www.w3.org/2000/svg"
@@ -132,6 +130,9 @@ if ( $questions_query->have_posts() ) {
               </circle>
               </svg>
             </div>
+          </div>
+
+            <button type="button" v-if="parseInt(updateRate, 10) === 0" v-on:click="getPosts" :disabled="loadingPosts">Hae uudet vastaukset</button>
           </div>
 
           <div class="ama-items post-loaded">

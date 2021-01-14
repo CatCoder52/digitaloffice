@@ -104,6 +104,14 @@ select {
   font-size: 16px;
   max-width: 140px;
 
+  &:focus {
+    border-radius: 0;
+    background-image: url('../svg/select.svg');
+    background-repeat: no-repeat;
+    background-position: right 0 center;
+    background-size: 40px auto;
+  }
+
   &::-ms-expand {
     display: none;
   }
@@ -418,9 +426,9 @@ select {
 }
 
 // Spinner
-.spinner {
+.checking-for-updates {
   position: absolute;
-  right: 2rem;
+  right: 160px;
 }
 
 .spinner svg {
