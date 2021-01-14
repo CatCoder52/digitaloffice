@@ -16,14 +16,12 @@ const Ama = {
       timeStamp,
       loadingPosts: false,
       loadingDrafts: false,
+      updateRate: 20000,
+      postIntervalRunner: null,
     };
   },
   mounted() {
-    setInterval(() => {
-      if (!this.loadingPosts) {
-        this.getPosts();
-      }
-    }, 15000);
+    this.startAutoRefresh(this.updateRate);
     setInterval(() => {
       if (!this.loadingDrafts) {
         this.getDrafts();
@@ -77,6 +75,26 @@ const Ama = {
           console.log(error);
           this.loadingDrafts = false;
         });
+    },
+    startAutoRefresh(rate) {
+      const parsedRate = parseInt(rate, 10);
+      this.postIntervalRunner = setInterval(() => {
+        if (!this.loadingPosts) {
+          this.getPosts();
+        }
+      }, parsedRate);
+    },
+    stopAutoRefresh() {
+      clearInterval(this.postIntervalRunner);
+    },
+    changeUpdateRate(rate) {
+      const parsedRate = parseInt(rate, 10);
+      this.stopAutoRefresh();
+      if (parsedRate === 0) {
+        return;
+      }
+      this.updateRate = parsedRate;
+      this.startAutoRefresh(parsedRate);
     },
   },
 };
