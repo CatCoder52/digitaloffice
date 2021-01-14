@@ -34,7 +34,7 @@ function dude_get_ama_entry( $post_id ) {
   if ( ! $output ) :
     ob_start(); ?>
     <div id="<?php echo esc_attr( $post_id ); ?>" class="inner" data-id="<?php echo esc_attr( $post_id ); ?>" data-timestamp="<?php echo esc_attr( $timestamp ); ?>">
-      <h3><?php echo esc_html( $question ); ?></h3>
+      <h2><?php echo esc_html( $question ); ?></h2>
       <?php echo wp_kses_post( wpautop( $answer ) ); ?>
     </div>
     <?php $output = ob_get_clean();

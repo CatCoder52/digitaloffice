@@ -26,9 +26,12 @@ body {
 
 // Header
 .ama-header .container {
-  @include grid(2, $gutter_x: 50px, $gutter_y: 50px);
   padding-top: 6rem;
   padding-bottom: 6rem;
+
+  @media (min-width: 720px) {
+    @include grid(2, $gutter_x: 50px, $gutter_y: 50px);
+  }
 
   .ama-header-logo {
     display: flex;
@@ -42,11 +45,19 @@ body {
       color: $color-white;
       margin-top: 0;
       margin-bottom: 1.5rem;
+
+      @media (max-width: 500px) {
+        text-align: center;
+      }
     }
 
     p {
       color: $color-white;
       margin: 0;
+
+      @media (max-width: 500px) {
+        text-align: center;
+      }
     }
   }
 
@@ -54,9 +65,84 @@ body {
     width: 300px;
     height: auto;
 
+    @media (max-width: 500px) {
+      max-width: 200px;
+      width: 100%;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (max-width: 720px) {
+      margin-bottom: 2rem;
+    }
+
     // Offset for "Ama" word in logo so it would appear more centered
-    margin-bottom: -45px;
+
+    @media (min-width: 720px) {
+      margin-bottom: -45px;
+    }
   }
+}
+
+// Select drop downs
+select {
+  border-radius: 0;
+  background-image: url('../svg/select.svg');
+  background-repeat: no-repeat;
+  background-position: right 0 center;
+  background-size: 40px auto;
+  transition: none;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  border: 2px solid $color-paragraphs;
+  color: $color-paragraphs;
+  padding: 10px 15px;
+  line-height: 24px;
+  font-size: 16px;
+  max-width: 140px;
+
+  &:focus {
+    border-radius: 0;
+    background-image: url('../svg/select.svg');
+    background-repeat: no-repeat;
+    background-position: right 0 center;
+    background-size: 40px auto;
+  }
+
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+.ama-updating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  padding-bottom: 3rem;
+  transition: all .22s;
+  opacity: .6;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  label {
+    font-weight: 500;
+    font-size: 18px;
+    color: $color-paragraphs;
+  }
+}
+
+.info-area {
+  border-bottom: 1px solid $color-borders;
+  margin-bottom: 3rem;
+  margin-top: 6rem;
+  padding-bottom: 6rem;
 }
 
 .infobox {
@@ -226,10 +312,9 @@ body {
 
 // Form
 .form {
-  margin-bottom: 6rem;
+  margin-bottom: 0;
   margin-top: 6rem;
-  border-bottom: 1px solid $color-borders;
-  padding-bottom: 6rem;
+  padding-bottom: 0;
 
   .disclaimer {
     font-size: 15px;
@@ -237,6 +322,10 @@ body {
     position: absolute;
     margin-top: -37px;
     margin-left: 170px;
+
+    @media (max-width: 500px) {
+      margin-top: -45px;
+    }
   }
 
   label {
@@ -265,13 +354,17 @@ body {
 
 .ama-header {
   background-image: url('../images/ama-desktop-hero.jpg');
+
+  @media (max-width: 720px) {
+    background-image: url('../images/ama-mobile-hero.jpg');
+  }
 }
 
 .ama-drafts {
-  margin-bottom: 6rem;
-  margin-top: 6rem;
-  border-bottom: 1px solid $color-borders;
-  padding-bottom: 6rem;
+  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+  margin-top: 0;
+  border-bottom: 1px solid rgba($color-borders, .7);
   font-weight: 500;
   display: flex;
   justify-content: space-between;
@@ -302,6 +395,11 @@ body {
   padding-bottom: 4rem;
   margin-bottom: 4rem;
 
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  h2,
   h3 {
     font-size: 26px;
     margin: 0 4rem 0 0;
@@ -328,12 +426,18 @@ body {
 }
 
 // Spinner
-.spinner {
+.checking-for-updates {
   position: absolute;
-  right: 2rem;
+  right: 160px;
 }
 
 .spinner svg {
   width: 50px;
   height: 50px;
+}
+
+.container.ama {
+  padding-top: 0;
+  margin-bottom: 6rem;
+  overflow: visible;
 }
