@@ -1,0 +1,40 @@
+{
+    "key": "group_600017db712c8",
+    "title": "AMA",
+    "fields": [
+        {
+            "key": "field_600017e541bd6",
+            "label": "Sosiaalisen median linkki",
+            "name": "social_media_link",
+            "type": "url",
+            "instructions": "Jos kysymys on esitetty sosiaalisessa mediassa, lisää tähän linkki alkuperäiseen kysymykseen. Kun olet vastannut täällä, käy laittamassa vastaus myös alkuperäiseen kysymykseen sosiaalisessa mediassa.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "ama"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1610618924
+}
