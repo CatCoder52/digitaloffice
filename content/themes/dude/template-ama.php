@@ -17,7 +17,7 @@ $questions = [];
 $questions_query = new WP_Query( [
   'post_type'       => 'ama',
   'post_status'     => 'publish',
-  'posts_per_page'  => 2, // TODO: Make this bigger so initial loads all posts
+  'posts_per_page'  => 500,
   'order'           => 'ASC',
 ] );
 
@@ -133,7 +133,7 @@ $questions = array_reverse( $questions );
             </div>
           </div>
 
-            <button type="button" v-if="parseInt(updateRate, 10) === 0" v-on:click="getPosts(2)" :disabled="loadingPosts">Hae uudet vastaukset</button>
+            <button type="button" v-if="parseInt(updateRate, 10) === 0" v-on:click="getPosts(10)" :disabled="loadingPosts">Hae uudet vastaukset</button>
           </div>
 
           <div class="ama-items post-loaded">
