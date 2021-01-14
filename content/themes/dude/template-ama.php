@@ -80,7 +80,7 @@ $questions = array_reverse( $questions );
               $display_description = false;
               $display_inactive = false;
               $field_values = null;
-              $ajax = false;
+              $ajax = true;
               $tabindex = 1;
               $echo = true;
 
