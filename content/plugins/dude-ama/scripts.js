@@ -49,9 +49,10 @@ const Ama = {
               // Add to start of array
               // eslint-disable-next-line no-param-reassign
               data.state = 'loaded';
+              // eslint-disable-next-line no-return-assign, no-param-reassign
+              setTimeout(() => data.state = 'show', 200);
+
               this.posts.unshift(data);
-              // eslint-disable-next-line no-return-assign
-              setTimeout(() => this.posts[0].state = 'show', 200);
             });
           }
           this.loadingPosts = false;
