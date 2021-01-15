@@ -6,6 +6,7 @@ $color-borders: #e8e8e8;
 $color-faded: rgba($color-midnight, .5);
 $color-amount: #68d4ab;
 $color-liked: #e2264d;
+$color-notliked: #aab8c2;
 
 body {
   color: $color-ama-body-text;
@@ -529,6 +530,10 @@ select {
     margin-right: -20px;
     margin-top: -36px;
     margin-bottom: -36px;
+
+    + span {
+      color: $color-notliked;
+    }
 
     &:focus {
       outline: 0;
