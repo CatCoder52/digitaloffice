@@ -150,7 +150,7 @@ $questions = array_reverse( $questions );
           <?php else : ?>
 
           <div class="form">
-            <p><b>AMA on päättynyt!</b> Kiitos kysymyksistänne.</p>
+            <p><b>AMA on päättynyt!</b> Kiitos kysymyksistä, niitä tuli enemmän kuin odotimme!</p>
           </div>
 
           <?php endif; ?>
