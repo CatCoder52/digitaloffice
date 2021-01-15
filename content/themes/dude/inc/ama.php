@@ -3,7 +3,7 @@
  * @Author: Timi Wahalahti
  * @Date:   2021-01-13 10:34:51
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2021-01-15 17:54:24
+ * @Last Modified time: 2021-01-15 18:18:38
  *
  * @package dude
  */
@@ -52,7 +52,7 @@ function dude_get_ama_entry( $post_id, $wrap = true ) {
         <likes :id="<?php echo esc_attr( $post_id ); ?>" :count="<?php echo esc_attr( $likes ); ?>"></likes>
       </div>
       <?php $output = ob_get_clean();
-      wp_cache_set( "ama-question-{$post_id}", $output, 'theme', HOUR_IN_SECONDS );
+      wp_cache_set( "ama-question-{$post_id}", $output, 'theme', MINUTE_IN_SECONDS / 4 );
     endif;
 
     return $output;
