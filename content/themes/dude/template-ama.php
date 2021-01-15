@@ -35,10 +35,9 @@ if ( $stop_the_madness ) {
         'compare' => 'NOT EXISTS',
     ],
   ];
-  $questions_args['orderby'] = [
-    'custom_field_value' => 'DESC',
-    'custom_field' => 'DESC',
-  ];
+
+  $questions_args['order'] = 'ASC';
+  $questions_args['orderby'] = 'meta_value_num';
 }
 
 $questions_query = new WP_Query( $questions_args );
