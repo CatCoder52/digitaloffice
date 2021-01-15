@@ -28,16 +28,20 @@ if ( $stop_the_madness ) {
   $questions_args['meta_query'] = [
     'relation' => 'OR',
     'custom_field_value' => [
-        'key' => '_ama-likes',
+      'key'   => '_ama-likes',
+      'type'  => 'NUMERIC',
     ],
     'custom_field' => [
-        'key' => '_ama-likes',
-        'compare' => 'NOT EXISTS',
+      'key'     => '_ama-likes',
+      'compare' => 'NOT EXISTS',
     ],
   ];
 
-  $questions_args['order'] = 'ASC';
-  $questions_args['orderby'] = 'meta_value_num';
+  $questions_args['orderby'] = [
+    'custom_field'        => 'ASC',
+    'custom_field_value'  => 'ASC',
+    'date'                => 'ASC'
+  ];
 }
 
 $questions_query = new WP_Query( $questions_args );
