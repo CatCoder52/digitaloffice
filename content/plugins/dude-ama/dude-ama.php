@@ -88,11 +88,11 @@ function register_question_api() {
 }
 
 function save_question( $request ) {
-  $question = $request->get_param( 'question' );
+  $question = sanitize_text_field( $request->get_param( 'question' ) );
 
   if ( ! empty( $question ) ) {
     $new_post = [
-      'post_title'    => wp_strip_all_tags( $question ),
+      'post_title'    => $question,
       'post_content'  => '',
       'post_status'   => 'draft',
       'post_author'   => 1,
