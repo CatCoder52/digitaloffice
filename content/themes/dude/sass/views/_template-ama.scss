@@ -382,10 +382,10 @@ select {
 
 .ama-header {
   background-image: url('../images/ama-desktop-hero.jpg');
+  background-size: cover;
 
   @media (max-width: 720px) {
     background-image: url('../images/ama-mobile-hero.jpg');
-    background-size: cover;
     background-position: bottom;
   }
 }
