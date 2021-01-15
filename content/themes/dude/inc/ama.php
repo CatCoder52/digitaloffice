@@ -44,7 +44,7 @@ function dude_get_ama_entry( $post_id ) {
     ob_start(); ?>
     <div id="<?php echo esc_attr( $post_id ); ?>" class="inner" data-id="<?php echo esc_attr( $post_id ); ?>" data-timestamp="<?php echo esc_attr( $timestamp ); ?>">
       <h2><?php echo esc_html( $question ); ?></h2>
-      <?php echo wp_kses_post( wpautop( $answer ) ); ?>
+      <?php echo wp_kses_post( $answer ); ?>
     </div>
     <?php $output = ob_get_clean();
     wp_cache_set( "ama-question-{$post_id}", $output, MINUTE_IN_SECONDS * 15 );
