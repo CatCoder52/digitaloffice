@@ -3,7 +3,7 @@
  * @Author: Timi Wahalahti
  * @Date:   2021-01-13 10:34:51
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2021-01-14 12:09:47
+ * @Last Modified time: 2021-01-15 14:54:21
  *
  * @package dude
  */
@@ -41,13 +41,13 @@ function dude_get_ama_entry( $post_id ) {
 
   $output = wp_cache_get( "ama-question-{$post_id}", 'theme' );
   if ( ! $output ) :
-    ob_start(); ?>
+    ob_start(); var_dump( 'no cache' ); ?>
     <div id="<?php echo esc_attr( $post_id ); ?>" class="inner" data-id="<?php echo esc_attr( $post_id ); ?>" data-timestamp="<?php echo esc_attr( $timestamp ); ?>">
       <h2><?php echo esc_html( $question ); ?></h2>
       <?php echo wp_kses_post( $answer ); ?>
     </div>
     <?php $output = ob_get_clean();
-    wp_cache_set( "ama-question-{$post_id}", $output, MINUTE_IN_SECONDS * 15 );
+    wp_cache_set( "ama-question-{$post_id}", $output, 'theme', MINUTE_IN_SECONDS * 15 );
   endif;
 
   return $output;
