@@ -103,6 +103,7 @@ $questions = array_reverse( $questions );
           </div>
 
           <div class="form hide-until-vue-loaded" v-else>
+            <label for="question" class="screen-reader-text">Kysymyksesi</label>
             <textarea name="question" id="question" class="textarea medium" v-model="question" aria-required="true" aria-invalid="false" rows="10" cols="50" minlength="5" maxlength="1000" placeholder="Kirjoita tähän kysymyksesi..."></textarea>
             <input type="submit" v-on:click="submitQuestion" value="Lähetä kysymys" :disabled="sendingQuestion"/>
             <div class="sending-question hide-until-vue-loaded" v-if="sendingQuestion" style="position: absolute; margin-top: -52px; margin-left: 195px;">
