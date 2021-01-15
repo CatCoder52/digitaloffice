@@ -128,6 +128,10 @@ select {
   }
 }
 
+.template-ama .wp-block-image {
+  overflow: hidden;
+}
+
 .template-ama .container .ama-updating {
   margin-bottom: 3rem;
   margin-top: 3rem;
@@ -345,7 +349,7 @@ select {
     @media (min-width: 550px) {
       position: absolute;
       margin-top: -37px;
-      margin-left: 250px;
+      margin-left: 240px;
     }
   }
 
@@ -429,6 +433,10 @@ select {
   margin-bottom: 4rem;
   box-shadow: 0 0 1px 1px transparent;
   transition: all .22s;
+
+  a {
+    text-decoration: underline;
+  }
 
   &.loaded {
     animation: pulse-animation 1s infinite;
