@@ -12,7 +12,7 @@ $form_id = get_field( 'form_id' );
 $form_title = get_field( 'form_title' );
 $form_description = get_field( 'form_description' );
 $hero_content = get_field( 'hero_content' );
-$stop_the_madness = false; // Stop auto updating answers
+$stop_the_madness = true; // Stop auto updating answers
 $hide_form = true;
 
 $drafts = dude_get_ama_drafts();
