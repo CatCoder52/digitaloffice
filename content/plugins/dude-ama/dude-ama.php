@@ -31,7 +31,7 @@ function register_scripts() {
     'vue',
     'https://unpkg.com/vue@3.0.5/dist/vue.global.prod.js',
     [],
-    '3.0.0',
+    '3.0.5',
     true
   );
   wp_register_script(
