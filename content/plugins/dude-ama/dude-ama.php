@@ -128,8 +128,7 @@ function save_like( $request ) {
  */
 function get_rendered_ama( $ama ) {
   $rendered_listing = dude_get_ama_entry( $ama['id'], false );
-  $all_likes = get_option( 'ama-likes', [] );
-  $likes = isset( $all_likes[ $ama['id'] ] ) ? $all_likes[ $ama['id'] ] : 0;
+  $likes = get_post_meta( $ama['id'], '_ama-likes', true );
   return [
     'rendered_listing' => $rendered_listing,
     'likes' => $likes,
