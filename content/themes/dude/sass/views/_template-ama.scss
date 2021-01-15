@@ -1,3 +1,5 @@
+/* stylelint-disable selector-max-class, selector-max-specificity, no-descending-specificity, selector-max-combinators, selector-max-compound-selectors, selector-max-pseudo-class, selector-attribute-quotes, max-nesting-depth, number-max-precision, no-unknown-animations, no-duplicate-selectors */
+
 // Vars
 $max-width: 100rem;
 $color-ama-background: $color-white;
@@ -18,7 +20,6 @@ body {
   z-index: 22 !important;
 }
 
-/* stylelint-disable selector-max-specificity, selector-max-pseudo-class, no-descending-specificity */
 .screen-reader-text {
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
@@ -519,20 +520,15 @@ select {
     border: 0;
     padding: 0;
     font-weight: 700;
-    background-image: url('../images/heart-sprite.png');
-    background-position: 0 0;
     cursor: pointer;
-    transition: background-position 1s steps(28);
-    transition-duration: 0s;
-    width: 100px;
-    height: 100px;
-    margin-left: -36px;
-    margin-right: -20px;
-    margin-top: -36px;
-    margin-bottom: -36px;
+    width: 60px;
 
     + span {
       color: $color-notliked;
+      margin-left: -9px;
+      position: relative;
+      top: 2px;
+      z-index: 4;
     }
 
     &:focus {
@@ -544,47 +540,269 @@ select {
     }
 
     &[disabled] {
-      transition-duration: 1s;
-      background-position: -2800px 0;
+      #heart {
+        transform: scale(.2);
+        fill: #e2264d;
+        animation: animateHeart .3s linear forwards .25s;
+      }
+
+      #main-circ {
+        transition: all 2s;
+        animation: animateCircle .3s linear forwards;
+        opacity: 1;
+      }
+
+      #grp1 {
+        opacity: 1;
+        transition: .1s all .3s;
+
+        #oval1 {
+          transform: scale(0) translate(0, -30px);
+          transform-origin: 0 0 0;
+          transition: .5s transform .3s;
+        }
+
+        #oval2 {
+          transform: scale(0) translate(10px, -50px);
+          transform-origin: 0 0 0;
+          transition: 1.5s transform .3s;
+        }
+      }
+
+      #grp2 {
+        opacity: 1;
+        transition: .1s all .3s;
+
+        #oval1 {
+          transform: scale(0) translate(30px, -15px);
+          transform-origin: 0 0 0;
+          transition: .5s transform .3s;
+        }
+
+        #oval2 {
+          transform: scale(0) translate(60px, -15px);
+          transform-origin: 0 0 0;
+          transition: 1.5s transform .3s;
+        }
+      }
+
+      #grp3 {
+        opacity: 1;
+        transition: .1s all .3s;
+
+        #oval1 {
+          transform: scale(0) translate(30px, 0);
+          transform-origin: 0 0 0;
+          transition: .5s transform .3s;
+        }
+
+        #oval2 {
+          transform: scale(0) translate(60px, 10px);
+          transform-origin: 0 0 0;
+          transition: 1.5s transform .3s;
+        }
+      }
+
+      #grp4 {
+        opacity: 1;
+        transition: .1s all .3s;
+
+        #oval1 {
+          transform: scale(0) translate(30px, 15px);
+          transform-origin: 0 0 0;
+          transition: .5s transform .3s;
+        }
+
+        #oval2 {
+          transform: scale(0) translate(40px, 50px);
+          transform-origin: 0 0 0;
+          transition: 1.5s transform .3s;
+        }
+      }
+
+      #grp5 {
+        opacity: 1;
+        transition: .1s all .3s;
+
+        #oval1 {
+          transform: scale(0) translate(-10px, 20px);
+          transform-origin: 0 0 0;
+          transition: .5s transform .3s;
+        }
+
+        #oval2 {
+          transform: scale(0) translate(-60px, 30px);
+          transform-origin: 0 0 0;
+          transition: 1.5s transform .3s;
+        }
+      }
+
+      #grp6 {
+        opacity: 1;
+        transition: .1s all .3s;
+
+        #oval1 {
+          transform: scale(0) translate(-30px, 0);
+          transform-origin: 0 0 0;
+          transition: .5s transform .3s;
+        }
+
+        #oval2 {
+          transform: scale(0) translate(-60px, -5px);
+          transform-origin: 0 0 0;
+          transition: 1.5s transform .3s;
+        }
+      }
+
+      #grp7 {
+        opacity: 1;
+        transition: .1s all .3s;
+
+        #oval1 {
+          transform: scale(0) translate(-30px, -15px);
+          transform-origin: 0 0 0;
+          transition: .5s transform .3s;
+        }
+
+        #oval2 {
+          transform: scale(0) translate(-55px, -30px);
+          transform-origin: 0 0 0;
+          transition: 1.5s transform .3s;
+        }
+      }
+
+      #grp2 {
+        opacity: 1;
+        transition: .1s opacity .3s;
+      }
+
+      #grp3 {
+        opacity: 1;
+        transition: .1s opacity .3s;
+      }
+
+      #grp4 {
+        opacity: 1;
+        transition: .1s opacity .3s;
+      }
+
+      #grp5 {
+        opacity: 1;
+        transition: .1s opacity .3s;
+      }
+
+      #grp6 {
+        opacity: 1;
+        transition: .1s opacity .3s;
+      }
+
+      #grp7 {
+        opacity: 1;
+        transition: .1s opacity .3s;
+      }
 
       + span {
         color: $color-liked;
       }
     }
-
-    &:hover,
-    &[disabled] {
-      svg path.outside {
-        fill: $color-paragraphs;
-      }
-
-      svg path.inside {
-        fill: $color-paragraphs;
-      }
-    }
   }
 
   svg {
-    width: 22px;
-    height: 22px;
-    margin-right: 10px;
-    display: none;
-  }
+    overflow: visible;
+    width: 60px;
+    margin-right: 0;
+    margin-left: -24px;
+    margin-top: -24px;
+    margin-bottom: -24px;
 
-  svg path {
-    fill: $color-paragraphs;
-
-    &.outside {
-      fill: $color-paragraphs;
+    #heart {
+      transform-origin: center;
+      animation: animateHeartOut .3s linear forwards;
     }
 
-    &.inside {
-      fill: transparent;
+    #main-circ {
+      transform-origin: 29.5px 29.5px;
     }
   }
 
   .countlabel,
   .label {
     @extend .screen-reader-text;
+  }
+}
+
+@keyframes animateCircle {
+  40% {
+    transform: scale(10);
+    opacity: 1;
+    fill: #dd4688;
+  }
+
+  55% {
+    transform: scale(11);
+    opacity: 1;
+    fill: #d46abf;
+  }
+
+  65% {
+    transform: scale(12);
+    opacity: 1;
+    fill: #cc8ef5;
+  }
+
+  75% {
+    transform: scale(13);
+    opacity: 1;
+    fill: transparent;
+    stroke: #cc8ef5;
+    stroke-width: .5;
+  }
+
+  85% {
+    transform: scale(17);
+    opacity: 1;
+    fill: transparent;
+    stroke: #cc8ef5;
+    stroke-width: .2;
+  }
+
+  95% {
+    transform: scale(18);
+    opacity: 1;
+    fill: transparent;
+    stroke: #cc8ef5;
+    stroke-width: .1;
+  }
+
+  100% {
+    transform: scale(19);
+    opacity: 1;
+    fill: transparent;
+    stroke: #cc8ef5;
+    stroke-width: 0;
+  }
+}
+
+@keyframes animateHeart {
+  0% {
+    transform: scale(.2);
+  }
+
+  40% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes animateHeartOut {
+  0% {
+    transform: scale(1.4);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }
