@@ -3,7 +3,7 @@
  * @Author: Timi Wahalahti
  * @Date:   2021-01-13 10:34:51
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2021-01-15 17:39:38
+ * @Last Modified time: 2021-01-15 17:51:32
  *
  * @package dude
  */
@@ -35,7 +35,7 @@ function dude_get_ama_drafts() {
   $count = wp_cache_get( 'ama-drafts', 'theme' );
   if ( ! $count ) {
     $count = wp_count_posts( 'ama' )->draft;
-    wp_cache_set( 'ama-drafts', 'theme', $count, MINUTE_IN_SECONDS / 4 );
+    wp_cache_set( 'ama-drafts', $count, 'theme', MINUTE_IN_SECONDS / 4 );
   }
 
   return $count;
@@ -45,7 +45,7 @@ function dude_get_ama_likes() {
   $likes = wp_cache_get( 'ama-likes', 'theme' );
   if ( ! $likes ) {
     $likes = get_option( 'ama-likes', [] );
-    wp_cache_set( 'ama-likes', 'theme', $likes, MINUTE_IN_SECONDS / 4 );
+    wp_cache_set( 'ama-likes', $likes, 'theme', MINUTE_IN_SECONDS / 4 );
   }
 
   return $likes;
