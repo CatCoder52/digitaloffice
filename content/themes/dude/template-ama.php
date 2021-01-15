@@ -34,13 +34,14 @@ if ( $stop_the_madness ) {
     'custom_field' => [
       'key'     => '_ama-likes',
       'compare' => 'NOT EXISTS',
+      'type'    => 'NUMERIC',
     ],
   ];
 
   $questions_args['orderby'] = [
     'custom_field'        => 'ASC',
     'custom_field_value'  => 'ASC',
-    'date'                => 'ASC'
+    'date'                => 'ASC',
   ];
 }
 
