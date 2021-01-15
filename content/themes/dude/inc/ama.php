@@ -3,7 +3,7 @@
  * @Author: Timi Wahalahti
  * @Date:   2021-01-13 10:34:51
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2021-01-15 17:51:32
+ * @Last Modified time: 2021-01-15 17:54:24
  *
  * @package dude
  */
@@ -24,13 +24,6 @@ add_action( 'rest_api_init', function () {
   ) );
 } );
 
-add_action( 'rest_api_init', function () {
-  register_rest_route( 'ama/v1', '/likes', array(
-    'methods'   => 'GET',
-    'callback'  => 'dude_get_ama_likes',
-  ) );
-} );
-
 function dude_get_ama_drafts() {
   $count = wp_cache_get( 'ama-drafts', 'theme' );
   if ( ! $count ) {
@@ -39,16 +32,6 @@ function dude_get_ama_drafts() {
   }
 
   return $count;
-} // end dude_get_ama_drafts
-
-function dude_get_ama_likes() {
-  $likes = wp_cache_get( 'ama-likes', 'theme' );
-  if ( ! $likes ) {
-    $likes = get_option( 'ama-likes', [] );
-    wp_cache_set( 'ama-likes', $likes, 'theme', MINUTE_IN_SECONDS / 4 );
-  }
-
-  return $likes;
 } // end dude_get_ama_drafts
 
 function dude_get_ama_entry( $post_id, $wrap = true ) {
