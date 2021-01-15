@@ -1,10 +1,11 @@
 // Vars
 $max-width: 100rem;
 $color-ama-background: $color-white;
-$color-ama-body-text: $color-midnight;
+$color-ama-body-text: $color-paragraphs;
 $color-borders: #e8e8e8;
 $color-faded: rgba($color-midnight, .5);
 $color-amount: #68d4ab;
+$color-liked: #e2264d;
 
 body {
   color: $color-ama-body-text;
@@ -501,4 +502,83 @@ select {
   margin-bottom: 6rem;
   overflow: visible;
   position: relative;
+}
+
+.likes {
+  display: inline-flex;
+  align-items: center;
+
+  span {
+    font-weight: 700;
+  }
+
+  button {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    font-weight: 700;
+    background-image: url('../images/heart-sprite.png');
+    background-position: 0 0;
+    cursor: pointer;
+    transition: background-position 1s steps(28);
+    transition-duration: 0s;
+    width: 100px;
+    height: 100px;
+    margin-left: -36px;
+    margin-right: -20px;
+    margin-top: -36px;
+    margin-bottom: -36px;
+
+    &:focus {
+      outline: 0;
+    }
+
+    &:hover:not([disabled]) {
+      cursor: pointer;
+    }
+
+    &[disabled] {
+      transition-duration: 1s;
+      background-position: -2800px 0;
+
+      + span {
+        color: $color-liked;
+      }
+    }
+
+    &:hover,
+    &[disabled] {
+      svg path.outside {
+        fill: $color-paragraphs;
+      }
+
+      svg path.inside {
+        fill: $color-paragraphs;
+      }
+    }
+  }
+
+  svg {
+    width: 22px;
+    height: 22px;
+    margin-right: 10px;
+    display: none;
+  }
+
+  svg path {
+    fill: $color-paragraphs;
+
+    &.outside {
+      fill: $color-paragraphs;
+    }
+
+    &.inside {
+      fill: transparent;
+    }
+  }
+
+  .countlabel,
+  .label {
+    @extend .screen-reader-text;
+  }
 }
