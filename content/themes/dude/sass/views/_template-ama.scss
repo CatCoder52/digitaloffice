@@ -430,6 +430,10 @@ select {
   box-shadow: 0 0 1px 1px transparent;
   transition: all .22s;
 
+  a {
+    text-decoration: underline;
+  }
+
   &.loaded {
     animation: pulse-animation 1s infinite;
     padding: 2rem;
