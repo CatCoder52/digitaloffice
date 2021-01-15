@@ -85,6 +85,12 @@ function register_question_api() {
     'callback' => __NAMESPACE__ . '\save_question',
     'permission_callback' => '__return_true',
   ) );
+
+  register_rest_route( 'dude-ama/v1', 'add-like/', array(
+    'methods' => 'post',
+    'callback' => __NAMESPACE__ . '\save_like',
+    'permission_callback' => '__return_true',
+  ) );
 }
 
 function save_question( $request ) {
@@ -102,12 +108,30 @@ function save_question( $request ) {
   }
 }
 
+function save_like( $request ) {
+  if ( empty( $request->get_param( 'id' ) ) || ! intval( $request->get_param( 'id' ) ) ) {
+    return;
+  }
+  $id = intval( $request->get_param( 'id' ) );
+
+  // Check if actually a post and check the post type at the same time
+  if ( 'ama' !== get_post_type( $id ) ) {
+    return;
+  }
+  $likes = intval( get_post_meta( $id, '_ama-likes', true ) );
+  $likes++;
+  update_post_meta( $id, '_ama-likes', $likes );
+}
+
 /**
  * Get rendered html
  */
 function get_rendered_ama( $ama ) {
-  $rendered_listing = dude_get_ama_entry( $ama['id'] );
+  $rendered_listing = dude_get_ama_entry( $ama['id'], false );
+  $all_likes = get_option( 'ama-likes', [] );
+  $likes = isset( $all_likes[ $ama['id'] ] ) ? $all_likes[ $ama['id'] ] : 0;
   return [
     'rendered_listing' => $rendered_listing,
+    'likes' => $likes,
   ];
 }

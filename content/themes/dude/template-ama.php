@@ -12,15 +12,36 @@ $form_id = get_field( 'form_id' );
 $form_title = get_field( 'form_title' );
 $form_description = get_field( 'form_description' );
 $hero_content = get_field( 'hero_content' );
+$stop_the_madness = false; // Stop auto updating answers
+$hide_form = true;
 
 $drafts = dude_get_ama_drafts();
 $questions = [];
-$questions_query = new WP_Query( [
+$questions_args = [
   'post_type'       => 'ama',
   'post_status'     => 'publish',
   'posts_per_page'  => $test_mode ? 2 : 500,
   'order'           => 'ASC',
-] );
+];
+
+if ( $stop_the_madness ) {
+  $questions_args['meta_query'] = [
+    'relation' => 'OR',
+    'custom_field_value' => [
+        'key' => '_ama-likes',
+    ],
+    'custom_field' => [
+        'key' => '_ama-likes',
+        'compare' => 'NOT EXISTS',
+    ],
+  ];
+  $questions_args['orderby'] = [
+    'custom_field_value' => 'DESC',
+    'custom_field' => 'DESC',
+  ];
+}
+
+$questions_query = new WP_Query( $questions_args );
 
 if ( $questions_query->have_posts() ) {
   while ( $questions_query->have_posts() ) {
@@ -45,6 +66,7 @@ $questions = array_reverse( $questions );
   ?>
   <script>
     amaDrafts = <?php echo esc_attr( $drafts ); ?>;
+    stopTheMadness = <?php echo $stop_the_madness ? 'true' : 'false' ?>
   </script>
 </head>
 
@@ -95,6 +117,7 @@ $questions = array_reverse( $questions );
 
 
         <div id="dude-ama" class="container ama">
+          <?php if ( ! $hide_form ) : ?>
 
           <div class="thank-you form hide-until-vue-loaded" v-if="questionSent">
             <p v-if="error">Error flynn! Joku ihme kämmi kävi kun koitettiin laittaa kysymystä faksiin. Pistä vaikka meiliin <a href="mailto:moro@dude.fi">moro@dude.fi</a></p>
@@ -121,6 +144,13 @@ $questions = array_reverse( $questions );
             </div>
             <p class="disclaimer">Emme julkaise asiattomia kysymyksiä.</p>
           </div>
+          <?php else : ?>
+
+          <div class="form">
+            <p>AMA on päättynyt! Kiitos kysymyksistänne</p>
+          </div>
+
+          <?php endif; ?>
 
           <?php if ( ! empty( $form_description ) ) : ?>
           <div class="info-area">
@@ -132,7 +162,7 @@ $questions = array_reverse( $questions );
             </div>
           </div>
           <?php endif; ?>
-
+          <?php if ( ! $stop_the_madness ) : ?>
           <div class="ama-drafts hide-until-vue-loaded">
             <p v-if="drafts !== 0">Vastaamatta <span class="drafts-count hide-until-vue-loaded">{{drafts}}</span> kysymystä. Seuraa tätä sivua vastauksien varalta!</p>
             <p v-else class="hide-until-vue-loaded">Kaikkiin kysymyksiin on vastattu. Lähetä omasi!</p>
@@ -163,9 +193,12 @@ $questions = array_reverse( $questions );
 
             <button type="button" v-if="parseInt(updateRate, 10) === 0" v-on:click="getPosts(10)" :disabled="loadingPosts">Hae uudet vastaukset</button>
           </div>
+          <?php endif; ?>
 
           <div class="ama-items post-loaded">
-            <div class="ama-item" :class="post.state" v-for="post in posts" v-html="post.meta.rendered_listing">
+            <div class="ama-item" :class="post.state" v-for="post in posts">
+              <div class="content" v-html="post.meta.rendered_listing"></div>
+              <likes :id="post.id" :count="post.meta.likes"></likes>
             </div>
           </div>
           <?php if ( ! empty( $questions ) ) : ?>

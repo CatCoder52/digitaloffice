@@ -2,8 +2,8 @@
 /**
  * @Author: Timi Wahalahti
  * @Date:   2021-01-13 10:34:51
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2021-01-14 12:09:47
+ * @Last Modified by: Niku Hietanen
+ * @Last Modified time: 2021-01-15 17:14:26
  *
  * @package dude
  */
@@ -24,6 +24,13 @@ add_action( 'rest_api_init', function () {
   ) );
 } );
 
+add_action( 'rest_api_init', function () {
+  register_rest_route( 'ama/v1', '/likes', array(
+    'methods'   => 'GET',
+    'callback'  => 'dude_get_ama_likes',
+  ) );
+} );
+
 function dude_get_ama_drafts() {
   $count = wp_cache_get( 'ama-drafts', 'theme' );
   if ( ! $count ) {
@@ -34,23 +41,45 @@ function dude_get_ama_drafts() {
   return $count;
 } // end dude_get_ama_drafts
 
-function dude_get_ama_entry( $post_id ) {
+function dude_get_ama_likes() {
+  $likes = wp_cache_get( 'ama-likes', 'theme' );
+  if ( ! $likes ) {
+    $likes = get_option( 'ama-likes', [] );
+    wp_cache_set( 'ama-likes', 'theme', $likes, MINUTE_IN_SECONDS / 4 );
+  }
+
+  return $likes;
+} // end dude_get_ama_drafts
+
+function dude_get_ama_entry( $post_id, $wrap = true ) {
   $question = get_the_title( $post_id );
   $answer = get_the_content( $post_id );
   $timestamp = get_the_date( 'Y-m-d H:i:s', $post_id );
+  $likes = get_post_meta( $post_id, '_ama-likes', true );
 
-  $output = wp_cache_get( "ama-question-{$post_id}", 'theme' );
-  if ( ! $output ) :
+  if ( $wrap ) {
+    $output = wp_cache_get( "ama-question-{$post_id}", 'theme' );
+    if ( ! $output ) :
+      ob_start(); ?>
+      <div id="<?php echo esc_attr( $post_id ); ?>" class="inner" data-id="<?php echo esc_attr( $post_id ); ?>" data-timestamp="<?php echo esc_attr( $timestamp ); ?>">
+        <div class="content">
+          <h2><?php echo esc_html( $question ); ?></h2>
+          <?php echo wp_kses_post( wpautop( $answer ) ); ?>
+        </div>
+        <likes :id="<?php echo esc_attr( $post_id ); ?>" :count="<?php echo esc_attr( $likes ); ?>"></likes>
+      </div>
+      <?php $output = ob_get_clean();
+      wp_cache_set( "ama-question-{$post_id}", $output, MINUTE_IN_SECONDS * 15 );
+    endif;
+
+    return $output;
+  } else {
     ob_start(); ?>
-    <div id="<?php echo esc_attr( $post_id ); ?>" class="inner" data-id="<?php echo esc_attr( $post_id ); ?>" data-timestamp="<?php echo esc_attr( $timestamp ); ?>">
-      <h2><?php echo esc_html( $question ); ?></h2>
-      <?php echo wp_kses_post( wpautop( $answer ) ); ?>
-    </div>
-    <?php $output = ob_get_clean();
-    wp_cache_set( "ama-question-{$post_id}", $output, MINUTE_IN_SECONDS * 15 );
-  endif;
-
-  return $output;
+    <h2><?php echo esc_html( $question ); ?></h2>
+    <?php echo wp_kses_post( wpautop( $answer ) ); ?>
+    <?php
+    return ob_get_clean();
+  }
 } // end dude_get_ama_entry
 
 add_action( 'gform_after_submission', 'dude_ama_questions_to_cpt', 10, 2 );
