@@ -3,7 +3,7 @@
  * @Author: Timi Wahalahti
  * @Date:   2021-01-13 10:34:51
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2021-01-15 14:54:21
+ * @Last Modified time: 2021-01-15 17:32:28
  *
  * @package dude
  */
@@ -47,7 +47,7 @@ function dude_get_ama_entry( $post_id ) {
       <?php echo wp_kses_post( $answer ); ?>
     </div>
     <?php $output = ob_get_clean();
-    wp_cache_set( "ama-question-{$post_id}", $output, 'theme', MINUTE_IN_SECONDS * 15 );
+    wp_cache_set( "ama-question-{$post_id}", $output, 'theme', MINUTE_IN_HOURS );
   endif;
 
   return $output;
