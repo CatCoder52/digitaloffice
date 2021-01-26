@@ -151,7 +151,29 @@ body.template-surveys-modern {
     background-color: $color-background-checked;
   }
 
-  div.wpforms-container-full .wpforms-form .wpforms-field-description,
+  div.wpforms-container-full .wpforms-form .wpforms-field-description {
+    font-size: 16px;
+    color: $color-white;
+    padding-bottom: 43px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    padding-top: 0;
+    color: $color-white;
+    width: 100%;
+    text-align: center;
+    line-height: 1.5;
+
+    @media (max-width: 500px) {
+      padding-bottom: 33px;
+    }
+
+    @media (max-width: 460px) {
+      padding-bottom: 20px;
+    }
+  }
+
   div.wpforms-container-full .wpforms-form .wpforms-field-limit-text {
     font-size: 18px;
     padding-top: 30px;
@@ -408,6 +430,42 @@ body.template-surveys-modern {
     }
   }
 
+  .wpforms-field-container > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    > label {
+      order: 1;
+      width: 100%;
+    }
+
+    > table,
+    > .wpforms-field-required,
+    > ul,
+    > textarea,
+    > input,
+    > div:not(.wpforms-field-description) {
+      order: 3;
+    }
+
+    > ul {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    > .wpforms-field-description {
+      order: 2;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 0;
+      padding-top: 0;
+      color: $color-white;
+      width: 100%;
+    }
+  }
+
   .wpforms-container,
   div.wpforms-container-full,
   div.wpforms-container.wpforms-container-full,
@@ -659,7 +717,34 @@ body.template-surveys-modern {
 
       .wpforms-field-rating-items {
         text-align: center;
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
+        margin-left: auto;
+        margin-right: auto;
+
+        svg {
+          transition: all .18s;
+        }
+
+        @media (min-width: 600px) {
+          .wpforms-field-rating-item {
+            padding-right: 10px;
+
+            &:last-child {
+              padding-right: 0;
+            }
+          }
+
+          .wpforms-field-rating-item:not(.hover) svg {
+            height: 42px !important;
+            width: 42px !important;
+          }
+
+          .wpforms-field-rating-item.hover svg {
+            transform: scale(1.2);
+            height: 42px !important;
+            width: 42px !important;
+          }
+        }
       }
     }
 
