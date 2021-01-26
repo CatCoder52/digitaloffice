@@ -165,11 +165,11 @@ body.template-surveys-modern {
     text-align: center;
     line-height: 1.5;
 
-    @media (max-width: 500px) {
-      padding-bottom: 33px;
+    @media (max-width: 480px) {
+      padding-bottom: 30px;
     }
 
-    @media (max-width: 460px) {
+    @media (max-width: 400px) {
       padding-bottom: 20px;
     }
   }
@@ -182,7 +182,7 @@ body.template-surveys-modern {
     text-align: center;
 
     @media (max-width: 500px) {
-      padding-bottom: 33px;
+      padding-bottom: 30px;
     }
 
     @media (max-width: 460px) {
