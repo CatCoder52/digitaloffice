@@ -57,11 +57,12 @@ function initJs() {
 
   // Glitch improvements for main title
   setInterval(function(){
-    // toggle the class every X seconds
-    jQuery('.glitch').toggleClass('glitch-fulltilt');
+    // Toggle the class every X seconds
+    const glitchItem = document.querySelector('.glitch');
+    glitchItem.classList.toggle('glitch-fulltilt');
     setTimeout(function(){
-      // toggle back after X seconds
-      jQuery('.glitch').toggleClass('glitch-fulltilt');
+      // Toggle back after X seconds
+      glitchItem.classList.toggle('glitch-fulltilt');
     }, 1000);
   }, 4000);
 
