@@ -34,11 +34,13 @@ const swup = new Swup({
  ],
 });
 
-['swup:contentReplaced'].forEach( function(event) {
-  document.addEventListener( event, initJs );
+
+swup.on('contentReplaced', function() {
+  initJs();
 });
 
 function initJs() {
+
   // Define Javascript is active by changing the body class
   document.body.classList.remove("no-js");
   document.body.classList.add("js");
@@ -53,19 +55,15 @@ function initJs() {
   var dude_LazyLoad = new LazyLoad();
   dude_LazyLoad.update();
 
-  // Will execute full glitch every 5 seconds
-  var intervalID = window.setInterval(fullGlitchAdd, 3000);
-  var intervalID2 = window.setInterval(fullGlitchRemove, 4000);
-
-  function fullGlitchAdd() {
-    const glitchItem = document.querySelector(".glitch");
-    glitchItem.classList.add("glitch-fulltilt");
-  }
-
-  function fullGlitchRemove() {
-    const glitchItem = document.querySelector(".glitch");
-    glitchItem.classList.remove("glitch-fulltilt");
-  }
+  // Glitch improvements for main title
+  setInterval(function(){
+    // toggle the class every X seconds
+    jQuery('.glitch').toggleClass('glitch-fulltilt');
+    setTimeout(function(){
+      // toggle back after X seconds
+      jQuery('.glitch').toggleClass('glitch-fulltilt');
+    }, 1000);
+  }, 4000);
 
   // Accessibility: Ensure back to top is right color on right background
   var stickyOffset = jQuery(".back-to-top").offset();
