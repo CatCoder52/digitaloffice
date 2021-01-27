@@ -34,7 +34,7 @@ const swup = new Swup({
  ],
 });
 
-swup.on('contentReplaced', function () {
+['swup:contentReplaced'].forEach( function(event) {
   document.addEventListener( event, initJs );
 });
 
@@ -56,13 +56,14 @@ function initJs() {
   // Will execute full glitch every 5 seconds
   var intervalID = window.setInterval(fullGlitchAdd, 3000);
   var intervalID2 = window.setInterval(fullGlitchRemove, 4000);
-  const glitchItem = document.querySelector(".glitch");
 
   function fullGlitchAdd() {
+    const glitchItem = document.querySelector(".glitch");
     glitchItem.classList.add("glitch-fulltilt");
   }
 
   function fullGlitchRemove() {
+    const glitchItem = document.querySelector(".glitch");
     glitchItem.classList.remove("glitch-fulltilt");
   }
 
