@@ -56,15 +56,17 @@ function initJs() {
   dude_LazyLoad.update();
 
   // Glitch improvements for main title
-  setInterval(function(){
-    // Toggle the class every X seconds
-    const glitchItem = document.querySelector('.glitch');
-    glitchItem.classList.toggle('glitch-fulltilt');
-    setTimeout(function(){
-      // Toggle back after X seconds
-      glitchItem.classList.toggle('glitch-fulltilt');
-    }, 1000);
-  }, 4000);
+
+  // Disabled 27.1.2021. Crashes Chrome on macOS and Android .____.
+  // setInterval(function(){
+  //   // Toggle the class every X seconds
+  //   const glitchItem = document.querySelector('.glitch');
+  //   glitchItem.classList.toggle('glitch-fulltilt');
+  //   setTimeout(function(){
+  //     // Toggle back after X seconds
+  //     glitchItem.classList.toggle('glitch-fulltilt');
+  //   }, 1000);
+  // }, 4000);
 
   // Accessibility: Ensure back to top is right color on right background
   var stickyOffset = jQuery(".back-to-top").offset();
