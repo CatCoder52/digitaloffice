@@ -34,7 +34,7 @@ const swup = new Swup({
  ],
 });
 
-['swup:contentReplaced'].forEach( function(event) {
+swup.on('contentReplaced', function () {
   document.addEventListener( event, initJs );
 });
 
