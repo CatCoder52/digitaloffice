@@ -7,6 +7,4 @@
 require_once('vendor/autoload.php');
 require_once('config/application.php');
 
-define( 'WPCACHEHOME', ABSPATH . '/content/plugins/wp-super-cache/' );
-
 require_once(ABSPATH . 'wp-settings.php');

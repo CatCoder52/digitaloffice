@@ -53,16 +53,6 @@ function initJs() {
   var dude_LazyLoad = new LazyLoad();
   dude_LazyLoad.update();
 
-  // Glitch improvements for main title
-  setInterval(function(){
-    // toggle the class every X seconds
-    jQuery('.glitch').toggleClass('glitch-fulltilt');
-    setTimeout(function(){
-      // toggle back after X seconds
-      jQuery('.glitch').toggleClass('glitch-fulltilt');
-    }, 1000);
-  }, 4000);
-
   // Accessibility: Ensure back to top is right color on right background
   var stickyOffset = jQuery(".back-to-top").offset();
   var $contentDivs = jQuery(".block");
