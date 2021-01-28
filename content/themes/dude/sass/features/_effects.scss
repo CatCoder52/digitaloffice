@@ -1,51 +1,6 @@
 // Transition duration and animations
 $transition-duration: .22s;
 
-// Glitch
-$color-glitch-primary: $color-midnight-blue;
-$color-glitch-secondary: $color-white;
-$glitch-steps: 20;
-
-.has-glitch {
-  position: relative;
-  margin: 0 auto;
-  color: $color-glitch-primary;
-  transform: scale3d(1, 1, 1);
-
-  &::before,
-  &::after {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-    background: $color-glitch-secondary;
-    color: $color-glitch-primary;
-    clip: rect(0, 900px, 0, 0);
-  }
-
-  &::before {
-    left: 7px;
-    text-shadow: 1px 0 $color-white;
-    animation: glitch-effect 3s infinite linear alternate-reverse;
-  }
-
-  &::after {
-    left: 3px;
-    text-shadow: -1px 0 $color-mint;
-    animation: glitch-effect 2s infinite linear alternate-reverse;
-  }
-}
-
-@keyframes glitch-effect {
-  @for $i from 0 through $glitch-steps {
-    #{percentage($i*(1/$glitch-steps))} {
-      clip: rect(random(100) +px, 9999px, random(100) +px, 0);
-    }
-  }
-}
-
 .glitch {
   position: relative;
   top: 0;
@@ -189,16 +144,6 @@ $glitch-steps: 20;
 @keyframes glitch {
   1% {
     transform: rotateX(10deg) skewX(90deg);
-  }
-
-  2% {
-    transform: rotateX(0deg) skewX(0deg);
-  }
-}
-
-@keyframes glitch-2 {
-  1% {
-    transform: rotateX(10deg) skewX(70deg);
   }
 
   2% {
