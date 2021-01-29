@@ -151,7 +151,7 @@ button:-moz-focusring,
 .glitch::before {
 	left: 4px;
 	text-shadow: 2px 0 #00ffea;
-	animation: effect 2s infinite linear, 5s 5.05s infinite glitch;
+	animation: effect 2s infinite linear;
 	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
 }
