@@ -56,9 +56,7 @@ function initJs() {
   dude_LazyLoad.update();
 
   // Glitch improvements for main title
-
-  // TODO: Improve this. Crashes randomly on Chrome on macOS and Android .____.
-  setInterval(function(){
+  setInterval(function() {
     const glitchItem = document.querySelector('.glitch');
     glitchItem.classList.toggle('glitch-fulltilt');
 
