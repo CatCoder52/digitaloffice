@@ -32,7 +32,7 @@ $transition-duration: .22s;
 .glitch::before {
   left: 4px;
   text-shadow: 2px 0 #00ffea;
-  animation: effect 2s infinite linear;
+  animation: effect 2s infinite linear, 5s 5.05s infinite glitch;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 
