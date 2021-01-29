@@ -11,6 +11,8 @@ $transition-duration: .22s;
   text-align: center;
   display: block;
   overflow: visible;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .glitch::before,
@@ -23,12 +25,16 @@ $transition-duration: .22s;
   overflow: visible;
   background-color: $color-white;
   color: $color-midnight-blue;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .glitch::before {
   left: 4px;
   text-shadow: 2px 0 #00ffea;
-  animation: effect 2s infinite linear, 5s 5.05s infinite glitch;
+  animation: effect 2s infinite linear;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 
   @media (max-width: $container-mobile) {
     text-shadow: 1px 0 #00ffea;
@@ -39,6 +45,8 @@ $transition-duration: .22s;
   left: 4px;
   text-shadow: -2px 0 #fe3a7f;
   animation: effect 2s infinite linear, 5s 5.05s infinite glitch;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 
   @media (max-width: $container-mobile) {
     text-shadow: -1px 0 #fe3a7f;
@@ -49,6 +57,8 @@ $transition-duration: .22s;
   left: 90px;
   text-shadow: 2px 0 #00ffea;
   animation: effect 3s infinite linear;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 
   @media (max-width: $container-mobile) {
     left: 30px;

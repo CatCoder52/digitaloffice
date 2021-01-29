@@ -130,6 +130,8 @@ button:-moz-focusring,
 	text-align: center;
 	display: block;
 	overflow: visible;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
 }
 
 .glitch::before,
@@ -142,24 +144,32 @@ button:-moz-focusring,
 	overflow: visible;
 	background-color: #fff;
 	color: #131a50;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
 }
 
 .glitch::before {
 	left: 4px;
 	text-shadow: 2px 0 #00ffea;
-	animation: effect 2s infinite linear, 5s 5.05s infinite glitch;
+	animation: effect 2s infinite linear;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
 }
 
 .glitch::after {
 	left: 4px;
 	text-shadow: -2px 0 #fe3a7f;
 	animation: effect 2s infinite linear, 5s 5.05s infinite glitch;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
 }
 
 .glitch-fulltilt::before {
 	left: 90px;
 	text-shadow: 2px 0 #00ffea;
 	animation: effect 3s infinite linear;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
 }
 
 .button-glitch {

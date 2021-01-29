@@ -57,11 +57,16 @@ function initJs() {
 
   // Glitch improvements for main title
 
-  // Disabled 27.1.2021. Crashes randomly on Chrome on macOS and Android .____.
+  // TODO: Improve this. Crashes randomly on Chrome on macOS and Android .____.
   setInterval(function(){
     const glitchItem = document.querySelector('.glitch');
     glitchItem.classList.toggle('glitch-fulltilt');
-  }, 4000);
+
+    // Run only one second
+    setTimeout(function() {
+      glitchItem.classList.toggle('glitch-fulltilt');
+    }, 1000);
+  }, 5000);
 
   // Accessibility: Ensure back to top is right color on right background
   var stickyOffset = jQuery(".back-to-top").offset();
