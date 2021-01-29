@@ -55,6 +55,17 @@ function initJs() {
   var dude_LazyLoad = new LazyLoad();
   dude_LazyLoad.update();
 
+  // Glitch improvements for main title
+  setInterval(function() {
+    const glitchItem = document.querySelector('.glitch');
+    glitchItem.classList.toggle('glitch-fulltilt');
+
+    // Run only one second
+    setTimeout(function() {
+      glitchItem.classList.toggle('glitch-fulltilt');
+    }, 1000);
+  }, 5000);
+
   // Accessibility: Ensure back to top is right color on right background
   var stickyOffset = jQuery(".back-to-top").offset();
   var $contentDivs = jQuery(".block");
