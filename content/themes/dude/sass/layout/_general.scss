@@ -360,3 +360,14 @@ a.global-link {
   position: relative;
   top: 4px;
 }
+
+// Block title exception
+.archive-head .block-title.block-title.block-title-archive {
+  @extend %h2;
+}
+
+@media (min-width: 1300px) {
+  .archive-head .block-title.block-title.block-title-archive {
+    font-size: 54px;
+  }
+}

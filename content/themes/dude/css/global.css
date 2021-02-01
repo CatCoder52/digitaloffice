@@ -1304,7 +1304,8 @@ h1,
 	font-size: 32px;
 }
 
-h2 {
+h2,
+.archive-head .block-title.block-title-archive {
 	font-size: 27px;
 	margin-bottom: 2rem;
 }
@@ -9590,7 +9591,8 @@ h1,
 	font-size: calc(32px + 23 * ((100vw - 320px) / 1600));
 }
 
-h2 {
+h2,
+.archive-head .block-title.block-title-archive {
 	font-size: calc(27px + 18 * ((100vw - 320px) / 1600));
 }
 
@@ -12157,6 +12159,10 @@ body:not(.page-id-6357) .block.block-wide-text body.single.single-reference .blo
 	font-size: 54px;
 }
 
+.archive-head .block-title.block-title.block-title-archive {
+	font-size: 54px;
+}
+
 .block.block-title-left-text-right .col.col-title {
 	padding-right: 7.5rem;
 }
@@ -12775,7 +12781,8 @@ h1,
 	font-size: 55px;
 }
 
-h2 {
+h2,
+.archive-head .block-title.block-title-archive {
 	font-size: 45px;
 }
 

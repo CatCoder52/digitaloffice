@@ -95,6 +95,8 @@ get_header(); ?>
             <h1 class="block-title block-title-archive" id="block-title-block-blog"><?php $cat = get_the_category(); $cat = $cat[0]; echo $cat->category_count; ?> löytyi</h2>
           <?php elseif ( is_author() ) : ?>
             <h1 class="block-title block-title-archive" id="block-title-block-blog"><?php echo get_the_author(); ?></h1>
+          <?php elseif ( is_paged() ) : ?>
+            <h1 class="block-title block-title-archive">Uusimmat kirjoitukset</h1>
           <?php else : ?>
             <h2 class="block-title block-title-archive">Uusimmat kirjoitukset</h2>
           <?php endif; ?>
