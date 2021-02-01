@@ -1,12 +1,4 @@
 /* stylelint-disable selector-max-class, selector-max-specificity, no-descending-specificity, selector-max-combinators, selector-max-compound-selectors, selector-max-pseudo-class, selector-attribute-quotes */
-.block-hero.block-hero-light.block-hero-start-project {
-  h1,
-  h2,
-  p {
-    color: $color-white;
-  }
-}
-
 body.page-id-6357 .block.block-wide-text {
   padding-top: 20rem;
   padding-bottom: 2rem;
@@ -20,6 +12,8 @@ body.page-id-6357 .block.block-wide-text {
     max-width: $grid-base-size;
     overflow: visible;
 
+    .block-title,
+    h1,
     h2 {
       @extend %general-heading-large;
       font-weight: $headings-weight;
@@ -327,6 +321,6 @@ body.page-id-6357 .block.block-wide-text {
   }
 }
 
-body.page-id-6357 .block.block.block-wide-text h2 {
+body.page-id-6357 .block.block-wide-text .container .block-title {
   margin-bottom: $padding-blocks-medium;
 }

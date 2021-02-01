@@ -884,6 +884,10 @@ body:not(.page-id-6357) .block.block-wide-text body.single.single-reference .blo
 .single .block.block-hero.block-hero-single h1,
 .block.block-our-services .col-title,
 .block.block-references-one .block-title,
+body.page-id-6357 .block.block-wide-text .container .block-title,
+body.page-id-6357 .block.block-wide-text .site-header .block-title,
+body.page-id-6357 .block.block-wide-text .container h1,
+body.page-id-6357 .block.block-wide-text .site-header h1,
 body.page-id-6357 .block.block-wide-text .container h2,
 body.page-id-6357 .block.block-wide-text .site-header h2 {
 	font-size: 36px;
@@ -8114,12 +8118,6 @@ body.page-id-4487 .block.block-cta-with-image .col-content {
 
 /* stylelint-disable selector-max-class, selector-max-specificity, no-descending-specificity, selector-max-combinators, selector-max-compound-selectors, selector-max-pseudo-class, selector-attribute-quotes */
 
-.block-hero.block-hero-light.block-hero-start-project h1,
-.block-hero.block-hero-light.block-hero-start-project h2,
-.block-hero.block-hero-light.block-hero-start-project p {
-	color: #fff;
-}
-
 body.page-id-6357 .block.block-wide-text {
 	padding-top: 20rem;
 	padding-bottom: 2rem;
@@ -8136,6 +8134,10 @@ body.page-id-6357 .block.block-wide-text .site-header {
 	overflow: visible;
 }
 
+body.page-id-6357 .block.block-wide-text .container .block-title,
+body.page-id-6357 .block.block-wide-text .site-header .block-title,
+body.page-id-6357 .block.block-wide-text .container h1,
+body.page-id-6357 .block.block-wide-text .site-header h1,
 body.page-id-6357 .block.block-wide-text .container h2,
 body.page-id-6357 .block.block-wide-text .site-header h2 {
 	font-weight: 600;
@@ -8365,7 +8367,8 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper form #field_6_11 ul > li
 	text-align: center;
 }
 
-body.page-id-6357 .block.block.block-wide-text h2 {
+body.page-id-6357 .block.block-wide-text .container .block-title,
+body.page-id-6357 .block.block-wide-text .site-header .block-title {
 	margin-bottom: 12rem;
 }
 
@@ -9478,6 +9481,10 @@ body:not(.page-id-6357) .block.block-wide-text body.single.single-reference .blo
 .single .block.block-hero.block-hero-single h1,
 .block.block-our-services .col-title,
 .block.block-references-one .block-title,
+body.page-id-6357 .block.block-wide-text .container .block-title,
+body.page-id-6357 .block.block-wide-text .site-header .block-title,
+body.page-id-6357 .block.block-wide-text .container h1,
+body.page-id-6357 .block.block-wide-text .site-header h1,
 body.page-id-6357 .block.block-wide-text .container h2,
 body.page-id-6357 .block.block-wide-text .site-header h2 {
 	font-size: calc(36px + 28 * ((100vw - 320px) / 1600));
@@ -11665,6 +11672,10 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper .gfield_checkbox li labe
 .single .block.block-hero.block-hero-single h1,
 .block.block-our-services .col-title,
 .block.block-references-one .block-title,
+body.page-id-6357 .block.block-wide-text .container .block-title,
+body.page-id-6357 .block.block-wide-text .site-header .block-title,
+body.page-id-6357 .block.block-wide-text .container h1,
+body.page-id-6357 .block.block-wide-text .site-header h1,
 body.page-id-6357 .block.block-wide-text .container h2,
 body.page-id-6357 .block.block-wide-text .site-header h2 {
 	font-size: 64px;
@@ -12668,6 +12679,10 @@ body:not(.page-id-6357) .block.block-wide-text body.single.single-reference .blo
 .single .block.block-hero.block-hero-single h1,
 .block.block-our-services .col-title,
 .block.block-references-one .block-title,
+body.page-id-6357 .block.block-wide-text .container .block-title,
+body.page-id-6357 .block.block-wide-text .site-header .block-title,
+body.page-id-6357 .block.block-wide-text .container h1,
+body.page-id-6357 .block.block-wide-text .site-header h1,
 body.page-id-6357 .block.block-wide-text .container h2,
 body.page-id-6357 .block.block-wide-text .site-header h2 {
 	font-size: 64px;
@@ -15053,6 +15068,10 @@ body.page-template-template-basic:not(.page-id-6357) .block.has-light-bg.block-w
 	padding-top: 0;
 }
 
+body.page-id-6357 .block.block-wide-text .container .block-title,
+body.page-id-6357 .block.block-wide-text .site-header .block-title,
+body.page-id-6357 .block.block-wide-text .container h1,
+body.page-id-6357 .block.block-wide-text .site-header h1,
 body.page-id-6357 .block.block-wide-text .container h2,
 body.page-id-6357 .block.block-wide-text .site-header h2 {
 	margin-bottom: 12rem;
@@ -15880,6 +15899,10 @@ body:not(.page-id-6357) .block.block-wide-text body.single.single-reference .blo
 .single .block.block-hero.block-hero-single h1,
 .block.block-our-services .col-title,
 .block.block-references-one .block-title,
+body.page-id-6357 .block.block-wide-text .container .block-title,
+body.page-id-6357 .block.block-wide-text .site-header .block-title,
+body.page-id-6357 .block.block-wide-text .container h1,
+body.page-id-6357 .block.block-wide-text .site-header h1,
 body.page-id-6357 .block.block-wide-text .container h2,
 body.page-id-6357 .block.block-wide-text .site-header h2 {
 	font-size: 36px;
@@ -16015,6 +16038,10 @@ body.page-template-template-company .block.block-cta-with-image .col.col-image {
 	height: 22rem;
 }
 
+body.page-id-6357 .block.block-wide-text .container .block-title,
+body.page-id-6357 .block.block-wide-text .site-header .block-title,
+body.page-id-6357 .block.block-wide-text .container h1,
+body.page-id-6357 .block.block-wide-text .site-header h1,
 body.page-id-6357 .block.block-wide-text .container h2,
 body.page-id-6357 .block.block-wide-text .site-header h2 {
 	margin-bottom: 6rem;
