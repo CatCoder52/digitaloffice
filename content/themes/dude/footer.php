@@ -128,6 +128,55 @@
 
 </div><!-- #page -->
 
+<script data-swup-reload-script async src="//www.instagram.com/embed.js"></script>
+<script data-swup-reload-script async src="//platform.twitter.com/widgets.js"></script>
+<script data-swup-reload-script>CRISP_WEBSITE_ID = "-K90vfAnyk27kD-pZAep"</script>
+<script data-swup-reload-script async src="https://client.crisp.chat/l.js"></script>
+<script data-swup-reload-script>window.CRISP_READY_TRIGGER = function () {
+  // Hide chat circle by default unless there is unread messages or session iongoing
+  if ($crisp.get("chat:unread:count") > 0 || $crisp.is("session:ongoing")) {
+    $crisp.push(["do", "chat:show"]);
+  } else {
+    $crisp.push(["do", "chat:hide"]);
+  }
+};</script>
+
+<!-- Hotjar Tracking Code for www.dude.fi -->
+<script data-swup-reload-script>
+  (function (h, o, t, j, a, r) {
+    h.hj = h.hj || function () {
+      (h.hj.q = h.hj.q || []).push(arguments)
+    };
+    h._hjSettings = {
+      hjid: 8741,
+      hjsv: 6
+    };
+    a = o.getElementsByTagName('head')[0];
+    r = o.createElement('script');
+    r.async = 1;
+    r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+    a.appendChild(r);
+  })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+</script>
+
+<script data-swup-reload-script>
+  (function(){
+
+    window.ldfdr = window.ldfdr || {};
+    (function(d, s, ss, fs){
+      fs = d.getElementsByTagName(s)[0];
+
+      function ce(src){
+        var cs  = d.createElement(s);
+        cs.src = src;
+        setTimeout(function(){fs.parentNode.insertBefore(cs,fs)}, 1);
+      }
+
+      ce(ss);
+    })(document, 'script', 'https://sc.lfeeder.com/lftracker_v1_lAxoEaKP9Rw8OYGd.js');
+  })();
+</script>
+
 <?php wp_footer(); ?>
 
 </div><!-- .site -->
