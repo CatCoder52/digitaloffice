@@ -130,8 +130,9 @@
 
 <script data-swup-reload-script async src="//www.instagram.com/embed.js"></script>
 <script data-swup-reload-script async src="//platform.twitter.com/widgets.js"></script>
-<script data-swup-reload-script>CRISP_WEBSITE_ID = "-K90vfAnyk27kD-pZAep"</script>
-<script data-swup-reload-script async src="https://client.crisp.chat/l.js"></script>
+
+<script>window.$crisp=[];window.CRISP_WEBSITE_ID="-K90vfAnyk27kD-pZAep";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+
 <script data-swup-reload-script>window.CRISP_READY_TRIGGER = function () {
   // Hide chat circle by default unless there is unread messages or session iongoing
   if ($crisp.get("chat:unread:count") > 0 || $crisp.is("session:ongoing")) {
@@ -142,7 +143,7 @@
 };</script>
 
 <!-- Hotjar Tracking Code for www.dude.fi -->
-<script data-swup-reload-script>
+<script data-swup-ignore-script>
   (function (h, o, t, j, a, r) {
     h.hj = h.hj || function () {
       (h.hj.q = h.hj.q || []).push(arguments)
@@ -159,7 +160,7 @@
   })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
 </script>
 
-<script data-swup-reload-script>
+<script data-swup-ignore-script>
   (function(){
 
     window.ldfdr = window.ldfdr || {};

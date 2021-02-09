@@ -256,22 +256,22 @@ function initJs() {
     });
   }
 
+  // Prevent Swup from resetting social media embeds
+  if (typeof window.instgrm !== "undefined") {
+    window.instgrm.Embeds.process();
+  }
+
+  if (typeof twttr !== "undefined") {
+    twttr.widgets.load();
+  }
+
   // Chat
   // Crisp:start
-   // Prevent Swup from resetting social media embeds
-   if (typeof window.instgrm !== "undefined") {
-     window.instgrm.Embeds.process();
-   }
-
-   if (typeof twttr !== "undefined") {
-     twttr.widgets.load();
-   }
-
-   if (typeof Storage !== "undefined" && typeof $crisp !== "undefined") {
-     setTimeout(function () {
-       maybeSendChatGreeting();
-     }, 5000);
-   }
+  if (typeof Storage !== "undefined" && typeof $crisp !== "undefined") {
+    setTimeout(function () {
+      maybeSendChatGreeting();
+    }, 5000);
+  }
 
    function maybeSendChatGreeting() {
      // Don't show greeting on contact page
@@ -428,14 +428,15 @@ function initJs() {
              ]);
 
            } else {
+            console.log('Greeting not sent for some other reason.');
+
              if (typeof dateClosed === "undefined") {
                console.log('Greeting not sent, because now is ' + Date() + ' and next greeting sending time is at ' + dateWillSend + ' and chat was never closed.');
              } else {
                console.log('Greeting not sent, because now is ' + Date() + ' and next greeting sending time is at ' + dateWillSend + ' and chat was closed at ' + dateClosed);
            }
-       }
-
-         }
+          }
+        }
      }
    }
 
@@ -478,12 +479,6 @@ function initJs() {
   // Open chat if element is clicked
   jQuery("body").on("click", ".open-chat", function (event) {
     event.preventDefault();
-
-    // Ensure styles are always loading up
-    var styles = document.createElement('link');
-    styles.setAttribute('rel', 'stylesheet');
-    styles.setAttribute('href', 'https://client.crisp.chat/static/stylesheets/client_default.css?207c042');
-    document.head.appendChild(styles);
 
     jQuery(".chat-greeting")
       .addClass("removed-item-chat")
