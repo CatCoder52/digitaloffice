@@ -428,8 +428,6 @@ function initJs() {
              ]);
 
            } else {
-            console.log('Greeting not sent for some other reason.');
-
              if (typeof dateClosed === "undefined") {
                console.log('Greeting not sent, because now is ' + Date() + ' and next greeting sending time is at ' + dateWillSend + ' and chat was never closed.');
              } else {
