@@ -479,6 +479,12 @@ function initJs() {
   jQuery("body").on("click", ".open-chat", function (event) {
     event.preventDefault();
 
+    // Ensure styles are always loading up
+    var styles = document.createElement('link');
+    styles.setAttribute('rel', 'stylesheet');
+    styles.setAttribute('href', 'https://client.crisp.chat/static/stylesheets/client_default.css?207c042');
+    document.head.appendChild(styles);
+
     jQuery(".chat-greeting")
       .addClass("removed-item-chat")
       .one( "webkitAnimationEnd oanimationend msAnimationEnd animationend", function (e) {
