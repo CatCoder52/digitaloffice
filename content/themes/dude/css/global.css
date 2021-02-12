@@ -213,7 +213,7 @@ html.is-animating .swup-transition-fade {
 }
 
 .slick-list.dragging {
-	cursor: hand;
+	cursor: grabbing;
 }
 
 .slick-slider .slick-track,
