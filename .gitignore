@@ -1,3 +1,5 @@
+content/languages/
+content/languages/*
 # Dotfiles and directories
 media-backup-before-optimage
 content/cache
