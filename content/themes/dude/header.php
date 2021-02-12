@@ -28,7 +28,9 @@ if ( $show_chat_greeting ) {
 <html <?php language_attributes(); ?>>
 <head>
 <!-- Global site tag (gtag.js) - Google Ads: 746677006 --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-746677006"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-746677006'); </script>
+<?php if ( is_page( 4737 ) ) : ?>
 <!-- Event snippet for Pyydä tarjous conversion page --> <script> gtag('event', 'conversion', {'send_to': 'AW-746677006/LP2iCKHFuPUBEI7GheQC'}); </script>
+<?php endif; ?>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="google-site-verification" content="XF8_bRTu-S4gCsZgA0J78vtv0S5dfIjIFa0Lfm7kO_Y" />
