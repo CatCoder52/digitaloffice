@@ -108,7 +108,7 @@
     "wpackagist-plugin/redis-cache": "*",
     "wpackagist-plugin/wordpress-seo": "*",
     "wpackagist-plugin/so-clean-up-wp-seo": "*",
-    "advanced-custom-fields/advanced-custom-fields-pro": "*",
+    "advanced-custom-fields/advanced-custom-fields-pro": "^5.9",
     "relevanssi/relevanssi-premium": "*",
     "rocketgenius/gravity-forms": "*",
     "humanmade/page-for-post-type": "dev-master",
