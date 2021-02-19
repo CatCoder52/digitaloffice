@@ -91,7 +91,7 @@ Config::define('NONCE_SALT', env('NONCE_SALT'));
 /**
  * Custom Settings
  */
-Config::define('AUTOMATIC_UPDATER_DISABLED', true);
+Config::define('AUTOMATIC_UPDATER_DISABLED', false);
 Config::define('DISABLE_WP_CRON', env('DISABLE_WP_CRON') ?: false);
 // Disable the plugin and theme file editor in the admin
 Config::define('DISALLOW_FILE_EDIT', true);
@@ -129,4 +129,16 @@ Config::apply();
  */
 if (!defined('ABSPATH')) {
     define('ABSPATH', $webroot_dir . '/wp/');
+}
+
+/**
+ *  Redis object cache settings for
+ *  https://wordpress.org/plugins/redis-cache/
+ */
+Config::define( 'WP_REDIS_PREFIX', getenv( 'DB_NAME' ) );
+Config::define( 'WP_REDIS_SELECTIVE_FLUSH', true );
+Config::define( 'WP_REDIS_MAXTTL', 43200 ); // max cache half day
+
+if ( 'development' !== WP_ENV ) {
+  Config::define( 'WP_REDIS_PASSWORD', getenv( 'REDIS_PASSWORD' ) );
 }

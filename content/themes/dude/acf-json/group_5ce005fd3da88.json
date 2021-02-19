@@ -114,6 +114,25 @@
             "new_lines": ""
         },
         {
+            "key": "field_5f199147c21f0",
+            "label": "Lyhyt lainaus sliderissa",
+            "name": "quote_short",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": 4,
+            "new_lines": ""
+        },
+        {
             "key": "field_5ce0062067e24",
             "label": "Henkilö",
             "name": "quote_person",
@@ -210,7 +229,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1559571728
+    "modified": 1613738564
 }
