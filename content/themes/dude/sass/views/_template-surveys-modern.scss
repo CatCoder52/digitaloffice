@@ -595,6 +595,21 @@ body.template-surveys-modern {
       }
     }
 
+    .wpforms-field.wpforms-field-checkbox > ul#wpforms-8060-field_24 > li {
+      min-width: 50% !important;
+      width: 50% !important;
+
+      @media (max-width: 710px) {
+        min-width: 50% !important;
+        width: 50% !important;
+      }
+
+      @media (max-width: 550px) {
+        min-width: 50% !important;
+        width: 100% !important;
+      }
+    }
+
     ul li.field_description_below div.ginput_container_radio,
     ul li.field_description_below div.ginput_container_checkbox,
     ul li.field_description_above div.ginput_container_radio,
@@ -1090,6 +1105,7 @@ body.template-surveys-modern {
     margin-right: -5rem !important;
     margin-bottom: 0 !important;
     max-width: 200% !important;
+    width: 200%;
 
     @media (max-width: 500px) {
       margin-left: -3rem !important;
