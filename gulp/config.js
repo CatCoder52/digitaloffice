@@ -37,10 +37,15 @@ module.exports = {
     opts: {
       logLevel: 'debug',
       injectChanges: true,
-      proxy: 'dude.test',
+      proxy: 'https://dude.test',
       browser: 'Google Chrome',
       open: false,
-      notify: true
+      notify: true,
+      // Generate with: mkdir -p /var/www/certs && cd /var/www/certs && mkcert localhost 192.168.x.xxx ::1
+      https: {
+        key: "/var/www/certs/localhost-key.pem",
+        cert: "/var/www/certs/localhost.pem",
+      }
     },
     watch: [
       themeDir + '/**/*.php',
