@@ -9,8 +9,9 @@ $color-survey-background: $color-midnight;
 $color-survey-body-text: $color-white;
 $color-success-box-body-text: $color-survey-body-text;
 $color-success-box-title: #7eaf56;
-$color-checked: $color-midnight;
-$color-background-checked: $color-mint;
+$color-checked: $color-mint;
+$color-background-checked: rgba($color-mint, .2);
+$color-background-checked-checkbox: $color-mint;
 $color-borders: #898888;
 $color-faded: #bbb;
 $color-border-main-header: #303030;
@@ -150,8 +151,7 @@ body.template-surveys-modern {
 
   form.wpforms-form .wpforms-field-likert_scale table.modern tbody tr td input[type=radio]:checked+label:after,
   form.wpforms-form .wpforms-field-likert_scale table.modern tbody tr td input[type=checkbox]:checked+label:after {
-    color: $color-checked;
-    background-color: $color-background-checked;
+    background-color: $color-background-checked-checkbox;
   }
 
   div.wpforms-container-full .wpforms-form .wpforms-field-description {
