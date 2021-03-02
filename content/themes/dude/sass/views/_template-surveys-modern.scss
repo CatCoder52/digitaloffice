@@ -15,7 +15,7 @@ $color-background-checked-checkbox: $color-mint;
 $color-borders: #898888;
 $color-faded: #bbb;
 $color-border-main-header: #303030;
-$color-error-surveys: lighten($color-error, 10%);
+$color-error-surveys: lighten($color-error, 20%);
 $color-success-box-bg: transparent;
 $color-success-box-border: transparent;
 $color-background-checkbox-hover: #222;
@@ -78,6 +78,11 @@ body.template-surveys-modern {
   form.wpforms-form .wpforms-field-likert_scale table,
   form.wpforms-form .wpforms-field-net_promoter_score table {
     margin-bottom: 43px;
+
+    // No space to display error here
+    .wpforms-error {
+      display: none !important;
+    }
 
     @media (max-width: 500px) {
       margin-bottom: 33px;
@@ -906,13 +911,20 @@ body.template-surveys-modern {
     border-bottom: 0 !important;
   }
 
+  div.wpforms-container-full .wpforms-form .wpforms-error-container,
+  div.wpforms-container-full .wpforms-form noscript.wpforms-error-noscript,
   div.wpforms-container-full .wpforms-form label.wpforms-error {
-    color: $color-error;
+    color: $color-error-surveys;
     padding: 35px 12px;
     float: none;
     text-align: center;
     font-size: 18px;
     font-weight: 700;
+  }
+
+  form.wpforms-form .wpforms-field-likert_scale table.modern tbody tr td input[type=radio].wpforms-error+label:after,
+  form.wpforms-form .wpforms-field-likert_scale table.modern tbody tr td input[type=checkbox].wpforms-error+label:after {
+    border-color: $color-error-surveys;
   }
 
   .survey-header {
