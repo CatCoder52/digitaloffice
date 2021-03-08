@@ -3,7 +3,7 @@
  * @Author:             Roni Laukkarinen, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2020-07-15 18:34:29
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-10-02 16:48:49
+ * @Last Modified time: 2021-03-08 12:20:30
  *
  * @package dude
  */
@@ -29,7 +29,7 @@
       <div><?php include get_theme_file_path( '/svg/logos/hotellialba.svg' ); ?></div>
       <div class="logo-mediashake"><?php include get_theme_file_path( '/svg/logos/mediashake.svg' ); ?></div>
       <div><?php include get_theme_file_path( '/svg/logos/crmservice.svg' ); ?></div>
-      <div class="logo-elonen"><?php include get_theme_file_path( '/svg/logos/elonen.svg' ); ?></div>
+      <div class="logo-kktavastia"><?php include get_theme_file_path( '/svg/logos/kktavastia.svg' ); ?></div>
       <div><?php include get_theme_file_path( '/svg/logos/liiga.svg' ); ?></div>
       <div><?php include get_theme_file_path( '/svg/logos/teeleidi.svg' ); ?></div>
       <div class="logo-blackbruin"><?php include get_theme_file_path( '/svg/logos/blackbruin.svg' ); ?></div>

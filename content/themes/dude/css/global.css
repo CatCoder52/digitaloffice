@@ -5144,6 +5144,7 @@ body.home .block.block-testimonials + .block.block-cta-with-phone-input {
 	max-width: 150px;
 }
 
+.block.block-logos .logo-wall .logo-kktavastia svg,
 .block.block-logos .logo-wall .logo-mediashake svg {
 	max-width: 170px;
 	max-height: 150px;
@@ -15349,6 +15350,7 @@ body.page-template-template-faq .block.block-hero.block-hero-light.block-hero-fa
 	width: 100%;
 }
 
+.block.block-logos .logo-wall .logo-kktavastia svg,
 .block.block-logos .logo-wall .logo-mediashake svg {
 	max-height: 60px;
 	max-width: 80px;
@@ -16219,6 +16221,7 @@ body:not(.page-id-6357) .block.block-wide-text .site-header > *.wp-video {
 	width: 100%;
 }
 
+.block.block-logos .logo-wall .logo-kktavastia svg,
 .block.block-logos .logo-wall .logo-mediashake svg {
 	max-height: 50px;
 	max-width: 70px;
