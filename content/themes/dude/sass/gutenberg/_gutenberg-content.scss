@@ -14,6 +14,7 @@
   padding-bottom: 0;
 
   // Loops to enumerate the classes for columns.
+
   .blocks-gallery-grid {
     display: grid;
 
@@ -23,6 +24,10 @@
   }
 
   @for $i from 2 through 9 {
+    .columns-#{$i} {
+      display: block;
+    }
+
     .columns-#{$i} .blocks-gallery-grid {
       grid-template-columns: repeat($i, 1fr);
       grid-column-gap: 1.5rem;
@@ -52,7 +57,6 @@
   }
 
   .wp-block-gallery {
-    @extend .columns;
     width: 100%;
     max-width: 100%;
     padding-left: 15px;
