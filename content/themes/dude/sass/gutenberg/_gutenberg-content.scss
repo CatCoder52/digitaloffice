@@ -20,6 +20,12 @@
 
     .blocks-gallery-item {
       width: 100%;
+
+      @media (min-width: $container-mobile) {
+        img {
+          border-radius: 4px !important;
+        }
+      }
     }
   }
 

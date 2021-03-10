@@ -9663,6 +9663,12 @@ body.page-template-template-faq .block-faq .cols-two {
 	grid-row-gap: 6rem;
 }
 
+.gutenberg-content .blocks-gallery-grid .blocks-gallery-item img,
+body:not(.page-id-6357) .block.block-wide-text .container .blocks-gallery-grid .blocks-gallery-item img,
+body:not(.page-id-6357) .block.block-wide-text .site-header .blocks-gallery-grid .blocks-gallery-item img {
+	border-radius: 4px !important;
+}
+
 }
 
 @media all and (min-width: 480px) and (-ms-high-contrast: none), (min-width: 480px) and (-ms-high-contrast: active) {
