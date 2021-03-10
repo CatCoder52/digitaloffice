@@ -8631,6 +8631,9 @@ body:not(.page-id-6357) .block.block-wide-text .site-header .wp-block-image.is-r
 	display: block;
 }
 
+.gutenberg-content .blocks-gallery-grid + figcaption.blocks-gallery-caption,
+body:not(.page-id-6357) .block.block-wide-text .container .blocks-gallery-grid + figcaption.blocks-gallery-caption,
+body:not(.page-id-6357) .block.block-wide-text .site-header .blocks-gallery-grid + figcaption.blocks-gallery-caption,
 .gutenberg-content figcaption,
 body:not(.page-id-6357) .block.block-wide-text .container figcaption,
 body:not(.page-id-6357) .block.block-wide-text .site-header figcaption,
@@ -8652,6 +8655,13 @@ body:not(.page-id-6357) .block.block-wide-text .site-header small {
 	margin-top: 3rem;
 	margin-bottom: 6rem;
 	width: 100%;
+}
+
+.gutenberg-content .blocks-gallery-grid + figcaption.blocks-gallery-caption,
+body:not(.page-id-6357) .block.block-wide-text .container .blocks-gallery-grid + figcaption.blocks-gallery-caption,
+body:not(.page-id-6357) .block.block-wide-text .site-header .blocks-gallery-grid + figcaption.blocks-gallery-caption {
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 .gutenberg-content a:hover,
@@ -15668,6 +15678,9 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper .gfield_radio li label {
 	padding-top: 12rem;
 }
 
+.gutenberg-content .blocks-gallery-grid + figcaption.blocks-gallery-caption,
+body:not(.page-id-6357) .block.block-wide-text .container .blocks-gallery-grid + figcaption.blocks-gallery-caption,
+body:not(.page-id-6357) .block.block-wide-text .site-header .blocks-gallery-grid + figcaption.blocks-gallery-caption,
 .gutenberg-content figcaption,
 body:not(.page-id-6357) .block.block-wide-text .container figcaption,
 body:not(.page-id-6357) .block.block-wide-text .site-header figcaption,
