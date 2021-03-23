@@ -1,7 +1,20 @@
 /* stylelint-disable selector-max-class, selector-max-specificity, no-descending-specificity, selector-max-pseudo-class */
-.block.block-hero-reference {
+.block.block-hero.block-hero-reference {
   background: $color-midnight;
   color: $color-white;
+  padding-top: 18rem;
+  padding-bottom: 8rem;
+  height: auto;
+  min-height: 0;
+
+  @media (max-width: 800px) {
+    padding-bottom: 8rem;
+    padding-top: 12rem;
+  }
+
+  @media (max-width: 600px) {
+    padding-bottom: 4rem;
+  }
 
   .hero-description a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail) {
     color: $color-white;

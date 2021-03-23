@@ -59,6 +59,27 @@ body.single.single-reference {
         max-width: 900px;
       }
 
+      @media (max-width: 600px) {
+        .wp-block-columns .wp-block-column {
+          margin-bottom: 6rem;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        .wp-block-columns.title-only-block,
+        .wp-block-columns.title-only-block .wp-block-column {
+          margin-bottom: 0;
+          padding-bottom: 0;
+
+          h2 {
+            margin-bottom: 0;
+            padding-bottom: 0;
+          }
+        }
+      }
+
       .wp-block-column h2 {
         @extend %general-heading-cta;
         font-weight: $headings-weight;
