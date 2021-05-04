@@ -1094,6 +1094,7 @@ body.page-id-4487 .block.block-hero {
 }
 
 .block p a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
+.text-link,
 .block.block-title-left-text-right li a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
 .block.block-hero .hero-description button,
 .block.block-hero .hero-description button.open-chat,
@@ -1112,11 +1113,13 @@ body.page-id-4487 .block.block-hero {
 }
 
 .block p a:hover:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
+.text-link:hover,
 .block.block-title-left-text-right li a:hover:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
 .block.block-hero .hero-description button:hover,
 .block.block-timeline .col a:hover:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link),
 .block.block-timeline .active a:hover:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link),
 .block p a:focus:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
+.text-link:focus,
 .block.block-title-left-text-right li a:focus:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
 .block.block-hero .hero-description button:focus,
 .block.block-timeline .col a:focus:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link),
