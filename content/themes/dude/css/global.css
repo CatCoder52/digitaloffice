@@ -6830,9 +6830,8 @@ body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:n
 	border-top: 1px solid #cdd0d4;
 	padding-top: 4rem;
 	margin-top: 4rem;
-	margin-bottom: 4rem;
-	padding-bottom: 4rem;
-	border-bottom: 1px solid #cdd0d4;
+	margin-bottom: 2rem;
+	padding-bottom: 0;
 	align-items: center;
 }
 
