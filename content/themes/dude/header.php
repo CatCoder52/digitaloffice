@@ -27,23 +27,12 @@ if ( $show_chat_greeting ) {
 ?><!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
-<!-- Global site tag (gtag.js) - Google Ads: 746677006 --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-746677006"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-746677006'); </script>
+<!-- Global site tag (gtag.js) - Google Ads: 746677006 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-746677006"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-746677006'); </script>
 <?php if ( is_page( 4737 ) ) : ?>
-<!-- Event snippet for Pyydä tarjous conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<!-- Event snippet for Pyydä tarjous conversion page -->
 <script>
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-746677006/LP2iCKHFuPUBEI7GheQC',
-      'event_callback': callback
-  });
-  return false;
-}
+  gtag('event', 'conversion', {'send_to': 'AW-746677006/LP2iCKHFuPUBEI7GheQC'});
 </script>
 <?php endif; ?>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
