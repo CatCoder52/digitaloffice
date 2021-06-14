@@ -9,6 +9,9 @@
  * @package dude
  */
 
+// Sales phone
+$sales_phone = '0408351033';
+
 $show_chat_greeting = true;
 if ( is_singular( 'post' ) ) {
   $show_chat_greeting = get_post_meta( get_the_id(), 'show_chat_greeting', true );
@@ -159,7 +162,29 @@ if ( $show_chat_greeting ) {
         <?php endif; ?>
       </div><!-- .site-branding -->
 
-      <p class="call-me-maybe"><a href="tel:0408351033"><?php include get_theme_file_path( '/svg/phone.svg' ); ?> <span>Kilauta</span></a></p>
+      <!-- Event snippet for Pyydä tarjous conversion page
+      In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+      <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-746677006/LP2iCKHFuPUBEI7GheQC',
+            'event_callback': callback
+        });
+        return false;
+      }
+      </script>
+
+      <p class="call-me-maybe">
+        <a onclick="return gtag_report_conversion('tel:<?php echo esc_html( $sales_phone ); ?>');" href="tel:<?php echo esc_html( $sales_phone ); ?>">
+          <?php include get_theme_file_path( '/svg/phone.svg' ); ?>
+          <span>Kilauta</span>
+        </a>
+      </p>
 
       <div class="main-navigation-wrapper" id="main-navigation-wrapper">
 
