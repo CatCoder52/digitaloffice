@@ -1,6 +1,6 @@
 {
     "key": "group_5cedc4581bd2e",
-    "title": "Artikkeli",
+    "title": "Artikkelin asetukset",
     "fields": [
         {
             "key": "field_5cf2744fa1faa",
@@ -152,7 +152,7 @@
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 2,
     "position": "side",
     "style": "default",
     "label_placement": "top",
@@ -160,5 +160,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1623666831
+    "modified": 1623667044
 }
