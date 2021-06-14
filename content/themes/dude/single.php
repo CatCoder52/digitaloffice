@@ -9,6 +9,12 @@
 
 the_post();
 
+// Fields
+$guest_post = get_field( 'guest_post' );
+$guest_post_author = get_field( 'guest_post_author' );
+$guest_post_author_description = get_field( 'guest_post_author_description' );
+$guest_post_author_avatar = get_field( 'guest_post_author_avatar' );
+
 get_header(); ?>
 
 <div class="content-area">
@@ -38,7 +44,7 @@ get_header(); ?>
           </footer><!-- .entry-footer -->
         </div>
 
-        <?php if ( 5635 !== get_the_id() ) : ?>
+        <?php if ( 5635 !== get_the_id() && false === $guest_post ) : ?>
           <div class="entry-author">
             <?php
             // Get big author image
