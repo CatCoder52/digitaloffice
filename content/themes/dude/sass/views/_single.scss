@@ -12,6 +12,56 @@ body.single .block.block-single:not(.block-single-reference) {
   z-index: 2;
   background: transparent;
 
+  // Guest post author info
+  .post > .gutenberg-content > .guest-post-author-card {
+    display: flex;
+    border-top: 1px solid #cdd0d4;
+    padding-top: 4rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid #cdd0d4;
+    align-items: center;
+
+    @media (max-width: 700px) {
+      align-items: flex-start;
+    }
+
+    .guest-post-author-card-content > p {
+      color: $color-darkgrey;
+      font-size: 16px;
+      margin: 0;
+
+      @media (max-width: 500px) {
+        font-size: 15px;
+      }
+    }
+
+    .guest-post-author-card-content > h3 {
+      color: $color-darkgrey;
+      margin: 0 0 1rem;
+      font-size: 20px;
+    }
+
+    .avatar {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      min-width: 120px;
+      margin-right: 4rem;
+
+      @media (max-width: 700px) {
+        margin-right: 3rem;
+      }
+
+      @media (max-width: 500px) {
+        width: 80px;
+        height: 80px;
+        min-width: 80px;
+      }
+    }
+  }
+
   .post > .author-card {
     margin-left: auto;
     margin-right: auto;

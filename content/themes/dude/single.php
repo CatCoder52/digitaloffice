@@ -45,6 +45,17 @@ get_header(); ?>
         <div class="gutenberg-content">
           <?php the_content(); ?>
 
+          <?php if ( true === $guest_post ) : ?>
+            <div class="guest-post-author-card">
+              <img src="<?php echo esc_url( $guest_post_author_avatar['sizes']['thumbnail'] ); ?>" class="avatar avatar-100" alt="<?php echo esc_html( $guest_post_author ); ?>">
+
+              <div class="guest-post-author-card-content">
+                <h3><?php echo esc_html( $guest_post_author ); ?></h3>
+                <?php echo wp_kses_post( wpautop( $guest_post_author_description ) ); ?>
+              </div>
+            </div>
+          <?php endif; ?>
+
           <footer class="entry-footer">
             <?php dude_entry_footer(); ?>
           </footer><!-- .entry-footer -->

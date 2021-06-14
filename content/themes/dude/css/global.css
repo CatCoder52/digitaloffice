@@ -6816,6 +6816,73 @@ body.single .block.block-single:not(.block-single-reference) {
 	background: transparent;
 }
 
+.block.block-single:not(.block-single-reference) .post > .gutenberg-content > .guest-post-author-card,
+.block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container > .guest-post-author-card,
+body:not(.page-id-6357) .block.block-wide-text .block.block-single:not(.block-single-reference) .post > .container > .guest-post-author-card,
+.block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header > .guest-post-author-card,
+body:not(.page-id-6357) .block.block-wide-text .block.block-single:not(.block-single-reference) .post > .site-header > .guest-post-author-card,
+body.single .block.block-single:not(.block-single-reference) .post > .gutenberg-content > .guest-post-author-card,
+body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container > .guest-post-author-card,
+body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:not(.block-single-reference) .post > .container > .guest-post-author-card,
+body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header > .guest-post-author-card,
+body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:not(.block-single-reference) .post > .site-header > .guest-post-author-card {
+	display: flex;
+	border-top: 1px solid #cdd0d4;
+	padding-top: 4rem;
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+	padding-bottom: 4rem;
+	border-bottom: 1px solid #cdd0d4;
+	align-items: center;
+}
+
+.block.block-single:not(.block-single-reference) .post > .gutenberg-content > .guest-post-author-card .guest-post-author-card-content > p,
+.block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container > .guest-post-author-card .guest-post-author-card-content > p,
+body:not(.page-id-6357) .block.block-wide-text .block.block-single:not(.block-single-reference) .post > .container > .guest-post-author-card .guest-post-author-card-content > p,
+.block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header > .guest-post-author-card .guest-post-author-card-content > p,
+body:not(.page-id-6357) .block.block-wide-text .block.block-single:not(.block-single-reference) .post > .site-header > .guest-post-author-card .guest-post-author-card-content > p,
+body.single .block.block-single:not(.block-single-reference) .post > .gutenberg-content > .guest-post-author-card .guest-post-author-card-content > p,
+body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container > .guest-post-author-card .guest-post-author-card-content > p,
+body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:not(.block-single-reference) .post > .container > .guest-post-author-card .guest-post-author-card-content > p,
+body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header > .guest-post-author-card .guest-post-author-card-content > p,
+body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:not(.block-single-reference) .post > .site-header > .guest-post-author-card .guest-post-author-card-content > p {
+	color: #444;
+	font-size: 16px;
+	margin: 0;
+}
+
+.block.block-single:not(.block-single-reference) .post > .gutenberg-content > .guest-post-author-card .guest-post-author-card-content > h3,
+.block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container > .guest-post-author-card .guest-post-author-card-content > h3,
+body:not(.page-id-6357) .block.block-wide-text .block.block-single:not(.block-single-reference) .post > .container > .guest-post-author-card .guest-post-author-card-content > h3,
+.block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header > .guest-post-author-card .guest-post-author-card-content > h3,
+body:not(.page-id-6357) .block.block-wide-text .block.block-single:not(.block-single-reference) .post > .site-header > .guest-post-author-card .guest-post-author-card-content > h3,
+body.single .block.block-single:not(.block-single-reference) .post > .gutenberg-content > .guest-post-author-card .guest-post-author-card-content > h3,
+body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container > .guest-post-author-card .guest-post-author-card-content > h3,
+body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:not(.block-single-reference) .post > .container > .guest-post-author-card .guest-post-author-card-content > h3,
+body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header > .guest-post-author-card .guest-post-author-card-content > h3,
+body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:not(.block-single-reference) .post > .site-header > .guest-post-author-card .guest-post-author-card-content > h3 {
+	color: #444;
+	margin: 0 0 1rem;
+	font-size: 20px;
+}
+
+.block.block-single:not(.block-single-reference) .post > .gutenberg-content > .guest-post-author-card .avatar,
+.block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container > .guest-post-author-card .avatar,
+body:not(.page-id-6357) .block.block-wide-text .block.block-single:not(.block-single-reference) .post > .container > .guest-post-author-card .avatar,
+.block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header > .guest-post-author-card .avatar,
+body:not(.page-id-6357) .block.block-wide-text .block.block-single:not(.block-single-reference) .post > .site-header > .guest-post-author-card .avatar,
+body.single .block.block-single:not(.block-single-reference) .post > .gutenberg-content > .guest-post-author-card .avatar,
+body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container > .guest-post-author-card .avatar,
+body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:not(.block-single-reference) .post > .container > .guest-post-author-card .avatar,
+body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header > .guest-post-author-card .avatar,
+body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:not(.block-single-reference) .post > .site-header > .guest-post-author-card .avatar {
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	min-width: 120px;
+	margin-right: 4rem;
+}
+
 .block.block-single:not(.block-single-reference) .post > .author-card,
 body.single .block.block-single:not(.block-single-reference) .post > .author-card {
 	margin-left: auto;
@@ -14852,6 +14919,32 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .top-b
 	font-size: 62px;
 }
 
+.block.block-single:not(.block-single-reference) .post > .gutenberg-content > .guest-post-author-card,
+.block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container > .guest-post-author-card,
+body:not(.page-id-6357) .block.block-wide-text .block.block-single:not(.block-single-reference) .post > .container > .guest-post-author-card,
+.block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header > .guest-post-author-card,
+body:not(.page-id-6357) .block.block-wide-text .block.block-single:not(.block-single-reference) .post > .site-header > .guest-post-author-card,
+body.single .block.block-single:not(.block-single-reference) .post > .gutenberg-content > .guest-post-author-card,
+body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container > .guest-post-author-card,
+body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:not(.block-single-reference) .post > .container > .guest-post-author-card,
+body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header > .guest-post-author-card,
+body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:not(.block-single-reference) .post > .site-header > .guest-post-author-card {
+	align-items: flex-start;
+}
+
+.block.block-single:not(.block-single-reference) .post > .gutenberg-content > .guest-post-author-card .avatar,
+.block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container > .guest-post-author-card .avatar,
+body:not(.page-id-6357) .block.block-wide-text .block.block-single:not(.block-single-reference) .post > .container > .guest-post-author-card .avatar,
+.block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header > .guest-post-author-card .avatar,
+body:not(.page-id-6357) .block.block-wide-text .block.block-single:not(.block-single-reference) .post > .site-header > .guest-post-author-card .avatar,
+body.single .block.block-single:not(.block-single-reference) .post > .gutenberg-content > .guest-post-author-card .avatar,
+body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container > .guest-post-author-card .avatar,
+body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:not(.block-single-reference) .post > .container > .guest-post-author-card .avatar,
+body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header > .guest-post-author-card .avatar,
+body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:not(.block-single-reference) .post > .site-header > .guest-post-author-card .avatar {
+	margin-right: 3rem;
+}
+
 .block.block-single:not(.block-single-reference) iframe[width="1140"],
 body.single .block.block-single:not(.block-single-reference) iframe[width="1140"] {
 	max-height: 450px !important;
@@ -15496,6 +15589,34 @@ th {
 
 .nav-primary .cols.cols-navs li a {
 	font-size: 18px;
+}
+
+.block.block-single:not(.block-single-reference) .post > .gutenberg-content > .guest-post-author-card .guest-post-author-card-content > p,
+.block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container > .guest-post-author-card .guest-post-author-card-content > p,
+body:not(.page-id-6357) .block.block-wide-text .block.block-single:not(.block-single-reference) .post > .container > .guest-post-author-card .guest-post-author-card-content > p,
+.block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header > .guest-post-author-card .guest-post-author-card-content > p,
+body:not(.page-id-6357) .block.block-wide-text .block.block-single:not(.block-single-reference) .post > .site-header > .guest-post-author-card .guest-post-author-card-content > p,
+body.single .block.block-single:not(.block-single-reference) .post > .gutenberg-content > .guest-post-author-card .guest-post-author-card-content > p,
+body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container > .guest-post-author-card .guest-post-author-card-content > p,
+body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:not(.block-single-reference) .post > .container > .guest-post-author-card .guest-post-author-card-content > p,
+body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header > .guest-post-author-card .guest-post-author-card-content > p,
+body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:not(.block-single-reference) .post > .site-header > .guest-post-author-card .guest-post-author-card-content > p {
+	font-size: 15px;
+}
+
+.block.block-single:not(.block-single-reference) .post > .gutenberg-content > .guest-post-author-card .avatar,
+.block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container > .guest-post-author-card .avatar,
+body:not(.page-id-6357) .block.block-wide-text .block.block-single:not(.block-single-reference) .post > .container > .guest-post-author-card .avatar,
+.block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header > .guest-post-author-card .avatar,
+body:not(.page-id-6357) .block.block-wide-text .block.block-single:not(.block-single-reference) .post > .site-header > .guest-post-author-card .avatar,
+body.single .block.block-single:not(.block-single-reference) .post > .gutenberg-content > .guest-post-author-card .avatar,
+body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container > .guest-post-author-card .avatar,
+body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:not(.block-single-reference) .post > .container > .guest-post-author-card .avatar,
+body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header > .guest-post-author-card .avatar,
+body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:not(.block-single-reference) .post > .site-header > .guest-post-author-card .avatar {
+	width: 80px;
+	height: 80px;
+	min-width: 80px;
 }
 
 body.page-id-6357 .block.block-wide-text .gform_wrapper form #field_6_11 ul .checkbox + label::before,
