@@ -32,9 +32,15 @@ get_header(); ?>
     <section class="block has-light-bg block-single<?php if ( $post_year <= $now_year - 2 ) : ?> is-old<?php endif; ?>">
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-        <div class="author-card">
-          <p><a class="no-text-link author" href="<?php echo get_author_posts_url( $user_id ) ?>" rel="author"><?php echo get_avatar( $user_id, '100' ); ?><span><span class="writtenby">Kirjoittanut</span> <?php echo get_the_author_meta( 'display_name' ); ?></a></span></p>
-        </div>
+        <?php if ( true === $guest_post ) : ?>
+          <div class="author-card">
+            <p><span class="author"><img src="<?php echo esc_url( $guest_post_author_avatar['sizes']['thumbnail'] ); ?>" class="avatar avatar-100" alt="<?php echo esc_html( $guest_post_author ); ?>"><span><span class="writtenby">Vieraskynän kirjoittanut</span> <?php echo esc_html( $guest_post_author ); ?></span></span></p>
+          </div>
+        <?php else : ?>
+          <div class="author-card">
+            <p><a class="no-text-link author" href="<?php echo get_author_posts_url( $user_id ) ?>" rel="author"><?php echo get_avatar( $user_id, '100' ); ?><span><span class="writtenby">Kirjoittanut</span> <?php echo get_the_author_meta( 'display_name' ); ?></a></span></p>
+          </div>
+        <?php endif; ?>
 
         <div class="gutenberg-content">
           <?php the_content(); ?>

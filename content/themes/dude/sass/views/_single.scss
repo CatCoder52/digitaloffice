@@ -33,7 +33,7 @@ body.single .block.block-single:not(.block-single-reference) {
       }
     }
 
-    a {
+    .author {
       @include grid(2, $gutter_x: 2.7rem, $gutter_y: 0);
       grid-template-columns: 74px 2fr;
       align-items: center;
@@ -48,8 +48,9 @@ body.single .block.block-single:not(.block-single-reference) {
       align-items: center;
     }
 
-    a .writtenby {
-      opacity: .4;
+    .author .writtenby {
+      /* stylelint-disable-next-line */
+      color: #8a8ca2;
       font-weight: 400;
       margin-right: 1rem;
     }

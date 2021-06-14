@@ -6831,8 +6831,8 @@ body.single .block.block-single:not(.block-single-reference) .post > .author-car
 	font-size: 18px;
 }
 
-.block.block-single:not(.block-single-reference) .post > .author-card a,
-body.single .block.block-single:not(.block-single-reference) .post > .author-card a {
+.block.block-single:not(.block-single-reference) .post > .author-card .author,
+body.single .block.block-single:not(.block-single-reference) .post > .author-card .author {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr); /* autoprefixer: off */
 	grid-auto-rows: minmax(0, auto);
@@ -6852,9 +6852,9 @@ body.single .block.block-single:not(.block-single-reference) .post > .author-car
 	align-items: center;
 }
 
-.block.block-single:not(.block-single-reference) .post > .author-card a .writtenby,
-body.single .block.block-single:not(.block-single-reference) .post > .author-card a .writtenby {
-	opacity: .4;
+.block.block-single:not(.block-single-reference) .post > .author-card .author .writtenby,
+body.single .block.block-single:not(.block-single-reference) .post > .author-card .author .writtenby { /* stylelint-disable-next-line */
+	color: #8a8ca2;
 	font-weight: 400;
 	margin-right: 1rem;
 }
@@ -9250,15 +9250,15 @@ pre code {
 	margin-bottom: 0;
 }
 
-.block.block-single:not(.block-single-reference) .post > .author-card a,
-body.single .block.block-single:not(.block-single-reference) .post > .author-card a {
+.block.block-single:not(.block-single-reference) .post > .author-card .author,
+body.single .block.block-single:not(.block-single-reference) .post > .author-card .author {
 	display: flex;
 	flex-wrap: wrap;
 	overflow: hidden;
 }
 
-.block.block-single:not(.block-single-reference) .post > .author-card a > div,
-body.single .block.block-single:not(.block-single-reference) .post > .author-card a > div {
+.block.block-single:not(.block-single-reference) .post > .author-card .author > div,
+body.single .block.block-single:not(.block-single-reference) .post > .author-card .author > div {
 	width: calc(50% - 1.35rem);
 	margin-right: 1.35rem;
 	margin-bottom: 0;
@@ -14023,8 +14023,8 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .block
 	width: 100%;
 }
 
-.block.block-single:not(.block-single-reference) .post > .author-card a > div,
-body.single .block.block-single:not(.block-single-reference) .post > .author-card a > div {
+.block.block-single:not(.block-single-reference) .post > .author-card .author > div,
+body.single .block.block-single:not(.block-single-reference) .post > .author-card .author > div {
 	width: 100%;
 }
 
