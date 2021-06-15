@@ -180,6 +180,10 @@ body.page-id-9 {
   overflow: hidden;
   clear: both;
   display: block;
+
+  &.entry-footer-guest-post {
+    margin-bottom: 5rem;
+  }
 }
 
 // Global link helper

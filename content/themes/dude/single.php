@@ -56,7 +56,7 @@ get_header(); ?>
             </div>
           <?php endif; ?>
 
-          <footer class="entry-footer">
+          <footer class="entry-footer<?php if ( true === $guest_post ) : ?> entry-footer-guest-post<?php endif; ?>">
             <?php dude_entry_footer(); ?>
           </footer><!-- .entry-footer -->
         </div>

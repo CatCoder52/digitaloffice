@@ -820,6 +820,10 @@ body.page-id-9 .block.block-cta-with-phone-input {
 	display: block;
 }
 
+.entry-footer.entry-footer-guest-post {
+	margin-bottom: 5rem;
+}
+
 a.global-link {
 	width: 100%;
 	height: 100%;
