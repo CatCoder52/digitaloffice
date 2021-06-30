@@ -226,9 +226,9 @@ if ( $show_chat_greeting ) {
                 <div class="cols cols-contact">
                   <div class="col">
                     <h3 class="contact-title">Asiakkuudet</h3>
-                    <p>Kristian Hohkavaara<br/>
-                      <a href="tel:0408351033">040 835 1033</a><br/>
-                      <a href="mailto:kristian@dude.fi">kristian@dude.fi</a>
+                    <p>Juha Laitinen<br/>
+                      <a href="tel:0400443221">0400 443 221</a><br/>
+                      <a href="mailto:juha@dude.fi">juha@dude.fi</a>
                     </p>
                   </div>
 
@@ -236,7 +236,7 @@ if ( $show_chat_greeting ) {
                     <h3 class="contact-title">Yhteystiedot</h3>
                     <p>
                       <a href="mailto:moro@dude.fi">moro@dude.fi</a><br/>
-                      <button class="chat open-chat open-chat-contact" aria-label="Avaa chat" tabindex="0">Avaa chat!</button>
+                      <?php /* <button class="chat open-chat open-chat-contact" aria-label="Avaa chat" tabindex="0">Avaa chat!</button> */ ?>
                     </p>
                   </div>
                 </div>
@@ -261,9 +261,9 @@ if ( $show_chat_greeting ) {
             <div class="cols cols-contact show-on-mobile">
               <div class="col">
                 <h3 class="contact-title contact-title-mobile">Asiakkuudet</h3>
-                <p>Kristian Hohkavaara<br/>
-                  <a href="tel:0408351033">040 835 1033</a><br/>
-                  <a href="mailto:kristian@dude.fi">kristian@dude.fi</a>
+                <p>Juha Laitinen<br/>
+                  <a href="tel:0400443221">0400 443 221</a><br/>
+                  <a href="mailto:juha@dude.fi">juha@dude.fi</a>
                 </p>
               </div>
 
@@ -271,7 +271,7 @@ if ( $show_chat_greeting ) {
                 <h3 class="contact-title contact-contact-mobile">Yhteystiedot</h3>
                 <p>
                   <a href="mailto:moro@dude.fi">moro@dude.fi</a><br/>
-                  <button class="chat open-chat open-chat-contact" aria-label="Avaa chat" tabindex="0">Avaa chat!</button>
+                  <?php /* <button class="chat open-chat open-chat-contact" aria-label="Avaa chat" tabindex="0">Avaa chat!</button> */ ?>
                 </p>
               </div>
             </div>

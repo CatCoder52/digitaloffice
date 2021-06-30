@@ -72,15 +72,15 @@
         <p>Kauppakatu 14<br />
           40100 Jyväskylä<br />
           <a class="no-text-link" href="mailto:moro@dude.fi">moro@dude.fi</a><br />
-          <button class="chat open-chat open-chat-contact" aria-label="Avaa chat" tabindex="0">Avaa chat!</button>
+          <?php /* <button class="chat open-chat open-chat-contact" aria-label="Avaa chat" tabindex="0">Avaa chat!</button> */ ?>
         </p>
       </div>
 
       <div class="col">
         <h3>Asiakkuudet</h3>
-        <p>Kristian Hohkavaara<br />
-          <a class="no-text-link" href="tel:0408351033">040 835 1033</a><br />
-          <a class="no-text-link" href="mailto:kristian@dude.fi">kristian@dude.fi</a>
+        <p>Juha Laitinen<br />
+          <a class="no-text-link" href="tel:0400443221">0400 443 221</a><br />
+          <a class="no-text-link" href="mailto:juha@dude.fi">juha@dude.fi</a>
         </p>
       </div>
 
