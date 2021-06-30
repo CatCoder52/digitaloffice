@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 19:18:00
  * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2021-06-30 18:36:03
+ * @Last Modified time: 2021-06-30 18:45:42
  *
  * @package dude
  */
@@ -26,8 +26,8 @@ $query = new WP_Query( array(
 ) );
 
 $show_tel_for = [
-  4469  => true, // Kristian
-  4468  => true, // Juha
+  '4469'  => false, // Kristian
+  '4468'  => true, // Juha
 ];
 
 if ( ! $query->have_posts() ) {
@@ -62,12 +62,12 @@ if ( ! $query->have_posts() ) {
             <?php vanilla_lazyload_div( $image ); ?>
           </div>
 
-          <div class="content">
+          <div class="content" data-id="<?php echo get_the_id(); ?>">
             <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
             <?php if ( ! empty( $title ) ) : ?>
               <p class="person-title"><?php echo esc_html( $title ); ?><br />
               <a class="no-text-link" href="mailto:<?php echo esc_html( $email ); ?>"><?php echo esc_html( $email ); ?></a><br />
-              <?php if ( array_key_exists( get_the_id(), $show_tel_for ) ) : ?><a class="no-text-link" href="tel:<?php echo esc_attr( str_replace( ' ', '', $tel ) ) ?>"><?php echo esc_html( $tel ); ?></a><?php endif; ?>
+              <?php if ( array_key_exists( get_the_id(), $show_tel_for ) && $show_tel_for[ get_the_id() ] ) : ?><a class="no-text-link" href="tel:<?php echo esc_attr( str_replace( ' ', '', $tel ) ) ?>"><?php echo esc_html( $tel ); ?></a><?php endif; ?>
               </p>
             <?php endif; ?>
 
