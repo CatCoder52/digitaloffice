@@ -2,8 +2,8 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-18 19:18:00
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2021-06-30 18:45:42
+ * @Last Modified by:   sippis
+ * @Last Modified time: 2021-07-19 14:59:26
  *
  * @package dude
  */
@@ -26,8 +26,8 @@ $query = new WP_Query( array(
 ) );
 
 $show_tel_for = [
-  '4469'  => false, // Kristian
-  '4468'  => true, // Juha
+  '4469'  => true, // Kristian
+  '4468'  => false, // Juha
 ];
 
 if ( ! $query->have_posts() ) {

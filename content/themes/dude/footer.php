@@ -78,9 +78,9 @@
 
       <div class="col">
         <h3>Asiakkuudet</h3>
-        <p>Juha Laitinen<br />
-          <a class="no-text-link" href="tel:0400443221">0400 443 221</a><br />
-          <a class="no-text-link" href="mailto:juha@dude.fi">juha@dude.fi</a>
+          <p>Kristian Hohkavaara<br />
+            <a class="no-text-link" href="tel:0408351033">040 835 1033</a><br />
+            <a class="no-text-link" href="mailto:kristian@dude.fi">kristian@dude.fi</a>
         </p>
       </div>
 

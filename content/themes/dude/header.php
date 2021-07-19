@@ -226,9 +226,9 @@ if ( $show_chat_greeting ) {
                 <div class="cols cols-contact">
                   <div class="col">
                     <h3 class="contact-title">Asiakkuudet</h3>
-                    <p>Juha Laitinen<br/>
-                      <a href="tel:0400443221">0400 443 221</a><br/>
-                      <a href="mailto:juha@dude.fi">juha@dude.fi</a>
+                    <p>Kristian Hohkavaara<br />
+                      <a class="no-text-link" href="tel:0408351033">040 835 1033</a><br />
+                      <a class="no-text-link" href="mailto:kristian@dude.fi">kristian@dude.fi</a>
                     </p>
                   </div>
 
@@ -261,9 +261,9 @@ if ( $show_chat_greeting ) {
             <div class="cols cols-contact show-on-mobile">
               <div class="col">
                 <h3 class="contact-title contact-title-mobile">Asiakkuudet</h3>
-                <p>Juha Laitinen<br/>
-                  <a href="tel:0400443221">0400 443 221</a><br/>
-                  <a href="mailto:juha@dude.fi">juha@dude.fi</a>
+                <p>Kristian Hohkavaara<br />
+                  <a class="no-text-link" href="tel:0408351033">040 835 1033</a><br />
+                  <a class="no-text-link" href="mailto:kristian@dude.fi">kristian@dude.fi</a>
                 </p>
               </div>
 
