@@ -72,7 +72,7 @@
         <p>Kauppakatu 14<br />
           40100 Jyväskylä<br />
           <a class="no-text-link" href="mailto:moro@dude.fi">moro@dude.fi</a><br />
-          <?php /* <button class="chat open-chat open-chat-contact" aria-label="Avaa chat" tabindex="0">Avaa chat!</button> */ ?>
+          <button class="chat open-chat open-chat-contact" aria-label="Avaa chat" tabindex="0">Avaa chat!</button>
         </p>
       </div>
 
