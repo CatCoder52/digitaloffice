@@ -1359,6 +1359,13 @@ body:not(.page-id-6357) .block.block-wide-text .site-header ul:not(.tags):not(.b
 	list-style: none;
 }
 
+.gutenberg-content ul:not(.tags):not(.blocks-gallery-grid) a,
+body:not(.page-id-6357) .block.block-wide-text .container ul:not(.tags):not(.blocks-gallery-grid) a,
+body:not(.page-id-6357) .block.block-wide-text .site-header ul:not(.tags):not(.blocks-gallery-grid) a,
+.block.block-title-left-text-right ul:not(.tags):not(.blocks-gallery-grid) a {
+	font-weight: 500;
+}
+
 .gutenberg-content ul:not(.tags):not(.blocks-gallery-grid) li::before,
 body:not(.page-id-6357) .block.block-wide-text .container ul:not(.tags):not(.blocks-gallery-grid) li::before,
 body:not(.page-id-6357) .block.block-wide-text .site-header ul:not(.tags):not(.blocks-gallery-grid) li::before,

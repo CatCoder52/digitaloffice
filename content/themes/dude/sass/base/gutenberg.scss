@@ -225,9 +225,15 @@ body {
     }
   }
 
-  .gutenberg-content ul:not(.tags):not(.blocks-gallery-grid),
-  .block.block-title-left-text-right ul:not(.tags):not(.blocks-gallery-grid) {
+  ul:not(.tags):not(.blocks-gallery-grid) {
     list-style: none;
+
+    li a {
+      font-weight: 500 !important;
+      text-shadow: none;
+      box-shadow: none !important;
+      border: 0 !important;
+    }
 
     li::before {
       content: '\2022'; // \2022 is the CSS Code/unicode for a bullet
@@ -235,10 +241,13 @@ body {
       font-weight: 700;
       display: inline-block;
       width: 1rem;
-      margin-left: -2rem;
-      margin-right: 1rem;
+      margin-left: -20px;
+      margin-right: 0;
+      font-size: 19px;
     }
   }
+
+
 
   // images
   img {

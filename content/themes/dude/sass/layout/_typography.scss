@@ -252,6 +252,10 @@ ul {
 .block.block-title-left-text-right ul:not(.tags):not(.blocks-gallery-grid) {
   list-style: none;
 
+  a {
+    font-weight: 500;
+  }
+
   li::before {
     content: '\2022'; // \2022 is the CSS Code/unicode for a bullet
     color: $color-mint;
