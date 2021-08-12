@@ -55,6 +55,18 @@ function _dude_widgets_init() {
 add_action( 'widgets_init', '_dude_widgets_init' );
 
 /**
+ * Returns the built asset filename and path depending on
+ * current environment.
+ *
+ * @param string $filename File name with the extension
+ * @return string file and path of the asset file
+ */
+function get_asset_file( $filename ) {
+  $filetype = pathinfo( $filename )['extension'];
+  return "${filetype}/${filename}";
+} // end get_asset_file
+
+/**
  * Enqueue scripts and styles.
  */
 function dude_scripts() {
@@ -89,7 +101,62 @@ function dude_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'dude_scripts' );
 
+/**
+ * Enqueue block editor JavaScript and CSS
+ */
+function register_block_editor_assets() {
+
+  // Dependencies
+  $dependencies = [
+    'wp-blocks',    // Provides useful functions and components for extending the editor
+    'wp-i18n',      // Provides localization functions
+    'wp-element',   // Provides React.Component
+    'wp-components', // Provides many prebuilt components and controls
+  ];
+
+  // Enqueue the bundled block JS file
+  // wp_enqueue_script(
+  //   'block-editor-js',
+  //   get_theme_file_uri( get_asset_file( 'gutenberg-editor.js' ) ),
+  //   $dependencies,
+  //   filemtime( get_theme_file_path( get_asset_file( 'gutenberg-editor.js' ) ) ),
+  //   'all'
+  // );
+
+  // Enqueue optional editor only styles
+  wp_enqueue_style(
+    'block-editor-styles',
+    get_theme_file_uri( get_asset_file( 'gutenberg.min.css' ) ),
+    [],
+    filemtime( get_theme_file_path( get_asset_file( 'gutenberg.min.css' ) ) ),
+    'all',
+    true
+  );
+} // end register_block_editor_assets
+add_action( 'enqueue_block_editor_assets', 'register_block_editor_assets' );
+
 add_filter( 'script_loader_tag', 'dude_script_loader_tag', 10, 2 );
+
+// Remove Gutenberg inline "Normalization styles" like .editor-styles-wrapper h1
+// color: inherit;
+// @source https://github.com/WordPress/gutenberg/issues/18595#issuecomment-599588153
+function remove_gutenberg_inline_styles( $editor_settings, $post ) {
+  unset( $editor_settings['styles'][0] );
+  return $editor_settings;
+} // end remove_gutenberg_inline_styles
+add_filter( 'block_editor_settings', 'remove_gutenberg_inline_styles', 10, 2 );
+
+/**
+ * Make sure Gutenberg wp-admin editor styles are loaded
+ */
+function setup_editor_styles() {
+  // Add support for editor styles.
+  add_theme_support( 'editor-styles' );
+
+  // Enqueue editor styles.
+  add_editor_style( get_theme_file_uri( get_asset_file( 'gutenberg.min.css' ) ) );
+}
+add_action( 'after_setup_theme', 'setup_editor_styles' );
 
 function dude_script_loader_tag( $tag, $handle ) {
   if ( 'store' === $handle ) {
@@ -98,7 +165,6 @@ function dude_script_loader_tag( $tag, $handle ) {
 
   return $tag;
 }
-
 add_action( 'after_setup_theme', 'dude_add_image_sizes' );
 
 function dude_add_image_sizes() {

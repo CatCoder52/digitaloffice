@@ -103,6 +103,7 @@
         <exclude name="WordPress.Security.EscapeOutput.OutputNotEscaped" />
         <exclude name="PSR2.ControlStructures.ElseIfDeclaration.NotAllowed" />
         <exclude name="Squiz.PHP.CommentedOutCode.Found" />
+        <exclude name="Squiz.Commenting.InlineComment" />
     </rule>
 
     <!-- Verify that the text_domain is set to the desired text-domain.

@@ -1,155 +1,366 @@
-/* stylelint-disable selector-max-specificity */
+/* stylelint-disable */
+// Variables
+@import '../variables/breakpoints';
+@import '../variables/colors';
+@import '../variables/fonts';
+@import '../variables/spacings';
+
+// Helpers
+@import 'helpers'; // 12.691 kB
+@import 'accessibility'; // 23.989 kB
+
+// Global features
+@import '../features/effects'; // 8.974 kB
+
+@include fontFace('Circular', '../../../../content/themes/dude/fonts/circular-400', 400);
+@include fontFace('Circular', '../../../../content/themes/dude/circular-400-italic', 400, italic);
+@include fontFace('Circular', '../../../../content/themes/dude/circular-500', 500);
+@include fontFace('Circular', '../../../../content/themes/dude/circular-500-italic', 500, italic);
+@include fontFace('Circular', '../../../../content/themes/dude/circular-600', 600);
+@include fontFace('Circular', '../../../../content/themes/dude/circular-600-italic', 600, italic);
+@include fontFace('Circular', '../../../../content/themes/dude/circular-700', 700);
+@include fontFace('Circular', '../../../../content/themes/dude/circular-900', 900);
+
+body {
+  // Font smoothing options
+  text-size-adjust: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 #beacon-container {
   display: none !important;
 }
 
-// @charset 'utf-8';
+.edit-post-visual-editor {
+  padding-top: 0 !important;
+}
 
-// // Theme options
-// @import 'config';
+.components-editor-notices__dismissible,
+.components-notice-list {
+  top: 0 !important;
+}
 
-// .edit-post-visual-editor {
-//   padding-top: 0 !important;
-// }
+.components-editor-notices__dismissible .components-notice,
+.components-editor-notices__pinned .components-notice {
+  margin-bottom: 0 !important;
+}
 
-// .components-editor-notices__dismissible,
-// .components-notice-list {
-//   top: 0 !important;
-// }
+.editor-post-title .editor-post-title__input {
+  color: #000 !important;
+  font-weight: 500 !important;
+}
 
-// .components-editor-notices__dismissible .components-notice,
-// .components-editor-notices__pinned .components-notice {
-//   margin-bottom: 0 !important;
-// }
+@media (max-width: 782px) {
+  body.wp-admin {
+    overflow-x: hidden !important;
+  }
+}
 
-// @media (max-width: 782px) {
-//   body.wp-admin {
-//     overflow-x: hidden !important;
-//   }
-// }
+// Disable focus for us only
+.editor-styles-wrapper :focus {
+  outline: 0 !important;
+  border: 0 !important;
+}
 
-// // Disable focus for us only
-// .editor-styles-wrapper :focus {
-//   outline: 0 !important;
-//   border: 0 !important;
-// }
+.editor-styles-wrapper {
 
-// .editor-styles-wrapper {
-//   // Helpers
-//   @import 'helpers';
-//   @import 'accessibility';
+  // layout/_typography.scss starts
+  %textlink {
+    position: relative;
+    overflow: visible;
+    font-weight: 700;
+    z-index: 1;
+    text-decoration: none;
+    transition: all .18s ease-in-out;
+    display: inline-flex;
+    color: $color-midnight;
+    border-bottom: 1px solid $color-mint;
+    box-shadow: inset 0 -.1rem 0 $color-mint;
 
-//   // Structure
-//   @import '../layout/typography';
+    &:hover,
+    &:focus {
+      box-shadow: inset 0 -3.3rem 0 $color-mint;
+      color: $color-midnight;
+    }
+  }
 
-//   // Disable focus for us only
-//   &:focus {
-//     outline: 0 !important;
-//     border: 0 !important;
-//   }
+  // Special links
+  .cta-link,
+  %cta-link {
+    color: $color-midnight-blue;
+    font-size: 18px;
+    display: inline-block;
+    font-weight: 600;
+    padding-bottom: 1rem;
 
-//   // Editor styles
-//   color: $color-paragraphs;
+    &::after {
+      width: 100%;
+      height: 2px;
+      background: $color-midnight-blue;
+      position: relative;
+      content: '';
+      display: block;
+      transform: translateY(1rem);
+      transition: all $transition-duration;
+    }
 
-//   // No drop cap
-//   .has-drop-cap:not(:focus):first-letter {
-//     text-transform: uppercase;
-//     font-style: normal;
-//     font-size: inherit;
-//     float: none;
-//   }
+    &:hover {
+      color: $color-midnight-blue;
+    }
 
-//   // Make editor same width than on site
-//   .wp-block:not([data-align="full"]):not([data-align="wide"]) {
-//     max-width: $article-max-width !important;
-//     width: 100%;
-//   }
+    &:hover::after {
+      width: 50%;
+      background: $color-midnight-blue;
+    }
+  }
 
-//   .wp-block-button a {
-//     @extend %default;
-//     background: $color-mint;
-//     color: $color-links;
-//     font-size: 18px;
-//     font-weight: 700;
-//     border: 0;
-//     width: auto;
-//     display: inline-block;
-//     padding: 1.4rem 2.8rem;
-//     margin-bottom: 0;
-//     text-decoration: none;
-//     position: relative;
-//     cursor: pointer;
-//     transition: 150ms linear background;
-//     font-family: $font-base;
-//     border-radius: 0;
+  p a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
+  .text-link {
+    @extend %textlink;
+  }
 
-//     span,
-//     svg {
-//       position: relative;
-//       transition: all $transition-duration;
-//       transform: translate(0, 0);
-//       display: inline-block;
-//     }
+  li a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail) {
+    @extend %textlink;
+  }
 
-//     &:hover,
-//     &:focus {
-//       background: $color-white-two;
-//       color: $color-midnight;
+  // Links
+  a {
+    color: $color-links;
+    text-decoration: none;
+    transition: all $transition-duration;
 
-//       span,
-//       svg {
-//         transform: translate(2px, 0);
-//       }
-//     }
+    &:hover {
+      color: $color-hover;
+    }
+  }
 
-//     .arrow-right {
-//       margin-left: 2.5rem;
-//     }
-//   }
+  // Defaults
+  .wp-block-paragraph,
+  p,
+  figcaption,
+  small,
+  ol,
+  ul,
+  li,
+  blockquote,
+  code,
+  th,
+  td,
+  table,
+  tr,
+  %default {
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.75;
+    text-size-adjust: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-//   .block-editor-block-list__block[data-type="core/paragraph"] p,
-//   .block-editor-block-list__block p,
-//   p {
-//     font-size: 19px !important;
-//     font-family: $font-base !important;
-//     color: $color-body;
 
-//     @media (max-width: 600px) {
-//       font-size: var(--font-size-general-small);
-//     }
+  // Heading defaults
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $color-headings;
+    font-family: $font-headings;
+    font-weight: $headings-weight;
+    line-height: 1.5;
+  }
 
-//     > a:not(.button):not(.post-edit-link):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link) {
-//       @extend %textlink;
-//       position: relative;
-//       text-decoration: none;
-//     }
-//   }
+  h1,
+  h2 {
+    line-height: $font-headings-line-height;
+  }
 
-//   * a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link) {
-//     @extend %textlink;
-//     position: relative;
-//     text-decoration: none;
-//   }
+  // Based on type-scale with 14.255 base size where h1 is max 60px.
+  // See model that these are based on: https://www.dude.fi/type-scale.png
+  // And Versett.com: https://versett.com/
+  // Define your type scale here: https://type-scale.com/
+  h1,
+  %h1 {
+    font-size: 45px;
+    font-weight: 500;
+  }
 
-//   b,
-//   strong {
-//     @include responsive-font($font-min-size, $font-max-size);
-//     font-family: $font-base !important;
+  h2,
+  %h2 {
+    font-size: 35px;
+    font-weight: 500;
+  }
 
-//     @media (max-width: 600px) {
-//       font-size: var(--font-size-general-small);
-//     }
-//   }
+  h3 {
+    font-size: 24px;
+    font-weight: 500;
+  }
 
-//   h1,
-//   h2,
-//   h3,
-//   h4,
-//   h5,
-//   h6,
-//   p,
-//   li,
-//   * {
-//     font-family: $font-base !important;
-//   }
-// }
+  h4 {
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  h5 {
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  h6 {
+    @include responsive-font($font-size-general-small, 18px);
+    font-weight: 500;
+  }
+
+  // Lists
+  ul {
+    list-style: none;
+    padding-left: 2.7rem;
+
+    li {
+      padding: 0;
+    }
+  }
+
+  .gutenberg-content ul:not(.tags):not(.blocks-gallery-grid),
+  .block.block-title-left-text-right ul:not(.tags):not(.blocks-gallery-grid) {
+    list-style: none;
+
+    li::before {
+      content: '\2022'; // \2022 is the CSS Code/unicode for a bullet
+      color: $color-mint;
+      font-weight: 700;
+      display: inline-block;
+      width: 1rem;
+      margin-left: -2rem;
+      margin-right: 1rem;
+    }
+  }
+
+  // images
+  img {
+    -ms-interpolation-mode: bicubic;
+    height: auto;
+    vertical-align: middle;
+    max-width: 100%;
+  }
+  /* stylelint-enable declaration-property-unit-allowed-list */
+
+  // layout/_typography.scss ends
+
+  // Disable focus for us only
+  &:focus {
+    outline: 0 !important;
+    border: 0 !important;
+  }
+
+  // Editor styles
+  color: $color-paragraphs;
+
+  // No drop cap
+  .has-drop-cap:not(:focus)::first-letter {
+    text-transform: uppercase;
+    font-style: normal;
+    font-size: inherit;
+    float: none;
+  }
+
+  // Make editor same width than on site
+  .wp-block:not([data-align="full"]):not([data-align="wide"]) {
+    max-width: $article-max-width !important;
+    width: 100%;
+  }
+
+  .wp-block-button a {
+    @extend %default;
+    background: $color-mint;
+    color: $color-links;
+    font-size: 18px;
+    font-weight: 700;
+    border: 0;
+    width: auto;
+    display: inline-block;
+    padding: 1.4rem 2.8rem;
+    margin-bottom: 0;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    transition: 150ms linear background;
+    font-family: $font-base;
+    border-radius: 0;
+
+    span,
+    svg {
+      position: relative;
+      transition: all $transition-duration;
+      transform: translate(0, 0);
+      display: inline-block;
+    }
+
+    &:hover,
+    &:focus {
+      background: $color-white-two;
+      color: $color-midnight;
+
+      span,
+      svg {
+        transform: translate(2px, 0);
+      }
+    }
+
+    .arrow-right {
+      margin-left: 2.5rem;
+    }
+  }
+
+  .block-editor-block-list__block[data-type="core/paragraph"] p,
+  .block-editor-block-list__block p,
+  p {
+    font-size: 19px !important;
+    font-family: $font-base !important;
+    color: $color-paragraphs !important;
+    font-weight: 400 !important;
+    line-height: 1.75;
+
+    @media (max-width: 600px) {
+      font-size: var(--font-size-general-small);
+    }
+
+    > a:not(.button):not(.post-edit-link):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link) {
+      @extend %textlink;
+      position: relative;
+      text-decoration: none;
+    }
+  }
+
+  * a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link) {
+    @extend %textlink;
+    position: relative;
+    text-decoration: none;
+  }
+
+  b,
+  strong {
+    @include responsive-font($font-min-size, $font-max-size);
+    font-family: $font-base !important;
+
+    @media (max-width: 600px) {
+      font-size: var(--font-size-general-small);
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  li,
+  * {
+    font-family: $font-base !important;
+  }
+}
