@@ -7022,6 +7022,53 @@ body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:n
 	line-height: 1.75;
 }
 
+.block.block-single:not(.block-single-reference) .post > .gutenberg-content ul:not(.tags):not(.blocks-gallery-grid) li a,
+.block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container ul:not(.tags):not(.blocks-gallery-grid) li a,
+body:not(.page-id-6357) .block.block-wide-text .block.block-single:not(.block-single-reference) .post > .container ul:not(.tags):not(.blocks-gallery-grid) li a,
+.block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header ul:not(.tags):not(.blocks-gallery-grid) li a,
+body:not(.page-id-6357) .block.block-wide-text .block.block-single:not(.block-single-reference) .post > .site-header ul:not(.tags):not(.blocks-gallery-grid) li a,
+.block.block-single:not(.block-single-reference) .post > .gutenberg-content ol li a,
+.block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container ol li a,
+body:not(.page-id-6357) .block.block-wide-text .block.block-single:not(.block-single-reference) .post > .container ol li a,
+.block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header ol li a,
+body:not(.page-id-6357) .block.block-wide-text .block.block-single:not(.block-single-reference) .post > .site-header ol li a,
+body.single .block.block-single:not(.block-single-reference) .post > .gutenberg-content ul:not(.tags):not(.blocks-gallery-grid) li a,
+body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container ul:not(.tags):not(.blocks-gallery-grid) li a,
+body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:not(.block-single-reference) .post > .container ul:not(.tags):not(.blocks-gallery-grid) li a,
+body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header ul:not(.tags):not(.blocks-gallery-grid) li a,
+body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:not(.block-single-reference) .post > .site-header ul:not(.tags):not(.blocks-gallery-grid) li a,
+body.single .block.block-single:not(.block-single-reference) .post > .gutenberg-content ol li a,
+body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container ol li a,
+body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:not(.block-single-reference) .post > .container ol li a,
+body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header ol li a,
+body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:not(.block-single-reference) .post > .site-header ol li a {
+	font-weight: 700;
+	border-bottom: 2px solid #7effe1;
+}
+
+.block.block-single:not(.block-single-reference) .post > .gutenberg-content ul:not(.tags):not(.blocks-gallery-grid) li a:hover,
+.block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container ul:not(.tags):not(.blocks-gallery-grid) li a:hover,
+body:not(.page-id-6357) .block.block-wide-text .block.block-single:not(.block-single-reference) .post > .container ul:not(.tags):not(.blocks-gallery-grid) li a:hover,
+.block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header ul:not(.tags):not(.blocks-gallery-grid) li a:hover,
+body:not(.page-id-6357) .block.block-wide-text .block.block-single:not(.block-single-reference) .post > .site-header ul:not(.tags):not(.blocks-gallery-grid) li a:hover,
+.block.block-single:not(.block-single-reference) .post > .gutenberg-content ol li a:hover,
+.block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container ol li a:hover,
+body:not(.page-id-6357) .block.block-wide-text .block.block-single:not(.block-single-reference) .post > .container ol li a:hover,
+.block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header ol li a:hover,
+body:not(.page-id-6357) .block.block-wide-text .block.block-single:not(.block-single-reference) .post > .site-header ol li a:hover,
+body.single .block.block-single:not(.block-single-reference) .post > .gutenberg-content ul:not(.tags):not(.blocks-gallery-grid) li a:hover,
+body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container ul:not(.tags):not(.blocks-gallery-grid) li a:hover,
+body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:not(.block-single-reference) .post > .container ul:not(.tags):not(.blocks-gallery-grid) li a:hover,
+body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header ul:not(.tags):not(.blocks-gallery-grid) li a:hover,
+body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:not(.block-single-reference) .post > .site-header ul:not(.tags):not(.blocks-gallery-grid) li a:hover,
+body.single .block.block-single:not(.block-single-reference) .post > .gutenberg-content ol li a:hover,
+body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container ol li a:hover,
+body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:not(.block-single-reference) .post > .container ol li a:hover,
+body.single .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .site-header ol li a:hover,
+body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:not(.block-single-reference) .post > .site-header ol li a:hover {
+	background-color: #7effe1;
+}
+
 .block.block-single:not(.block-single-reference) .post > .gutenberg-content blockquote p,
 .block.block-single:not(.block-single-reference) body:not(.page-id-6357) .block.block-wide-text .post > .container blockquote p,
 body:not(.page-id-6357) .block.block-wide-text .block.block-single:not(.block-single-reference) .post > .container blockquote p,
