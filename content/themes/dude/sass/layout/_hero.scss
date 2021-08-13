@@ -137,27 +137,28 @@
   }
 
   // Merch hero
+  &.block-hero-reference.block-hero-merch,
   &.block-hero-merch {
     min-height: 0;
     height: auto;
-    padding-top: 0;
-    padding-bottom: 0;
+
+    @media (max-width: 900px) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
 
     > .container {
       transform: none;
       padding-top: 10rem;
       padding-bottom: 10rem;
 
-      @media (max-width: $responsivenav) {
-        padding-bottom: 2rem;
+      @media (max-width: 900px) {
+        padding-bottom: 5rem;
+        padding-top: 15rem;
 
         .hero-description {
           margin-bottom: 0;
         }
-      }
-
-      @media (max-width: $container-mobile) {
-        padding-top: 0;
       }
     }
 
