@@ -2535,8 +2535,8 @@ input[type=checkbox]:checked + br + label::before {
 .block.block-hero.block-hero-merch > .container,
 .block.block-hero.block-hero-merch > .site-header {
 	transform: none;
-	padding-top: 20rem;
-	padding-bottom: 15rem;
+	padding-top: 10rem;
+	padding-bottom: 10rem;
 }
 
 .block.block-hero.block-hero-merch .hero-description p {
@@ -14764,12 +14764,6 @@ body:not(.page-id-6357) .block.block-wide-text .site-header .wp-block-gallery > 
 
 .block.block-hero .shade {
 	background-color: rgba(3, 6, 27, 0.45);
-}
-
-.block.block-hero.block-hero-merch > .container,
-.block.block-hero.block-hero-merch > .site-header {
-	padding-top: 18rem;
-	padding-bottom: 0;
 }
 
 .block.block-hero.block-company {

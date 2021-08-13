@@ -145,12 +145,19 @@
 
     > .container {
       transform: none;
-      padding-top: 20rem;
-      padding-bottom: 15rem;
+      padding-top: 10rem;
+      padding-bottom: 10rem;
 
-      @media (max-width: 760px) {
-        padding-top: 18rem;
-        padding-bottom: 0;
+      @media (max-width: $responsivenav) {
+        padding-bottom: 2rem;
+
+        .hero-description {
+          margin-bottom: 0;
+        }
+      }
+
+      @media (max-width: $container-mobile) {
+        padding-top: 0;
       }
     }
 
