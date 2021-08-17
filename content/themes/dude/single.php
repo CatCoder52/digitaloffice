@@ -61,7 +61,8 @@ get_header(); ?>
           </footer><!-- .entry-footer -->
         </div>
 
-        <?php if ( 5635 !== get_the_id() && false === $guest_post ) : ?>
+        <?php if ( false === $guest_post || ! isset( $guest_post ) ) : ?>
+        <?php if ( 5635 !== get_the_id() ) : ?>
           <div class="entry-author">
             <?php
             // Get big author image
@@ -103,6 +104,7 @@ get_header(); ?>
             <?php endif; ?>
 
             </div>
+        <?php endif; ?>
         <?php endif; ?>
 
       </article><!-- #post-## -->
