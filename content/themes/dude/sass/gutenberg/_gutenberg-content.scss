@@ -72,16 +72,12 @@
       padding-left: 2rem;
     }
 
-    @media (max-width: 600px) {
-      display: block;
-    }
-
     .blocks-gallery-item:last-child {
       margin-right: 0 !important;
     }
 
     > * {
-      @extend .column;
+      // @extend .column;
 
       @media (max-width: 600px) {
         display: block;
