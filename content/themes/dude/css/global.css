@@ -2525,13 +2525,14 @@ input[type=checkbox]:checked + br + label::before {
 	z-index: 3;
 }
 
+.block.block-hero.block-hero-reference.block-hero-merch,
 .block.block-hero.block-hero-merch {
 	min-height: 0;
 	height: auto;
-	padding-top: 0;
-	padding-bottom: 0;
 }
 
+.block.block-hero.block-hero-reference.block-hero-merch > .container,
+.block.block-hero.block-hero-reference.block-hero-merch > .site-header,
 .block.block-hero.block-hero-merch > .container,
 .block.block-hero.block-hero-merch > .site-header {
 	transform: none;
@@ -2539,10 +2540,12 @@ input[type=checkbox]:checked + br + label::before {
 	padding-bottom: 10rem;
 }
 
+.block.block-hero.block-hero-reference.block-hero-merch .hero-description p,
 .block.block-hero.block-hero-merch .hero-description p {
 	color: #e3e5ec;
 }
 
+.block.block-hero.block-hero-reference.block-hero-merch .details,
 .block.block-hero.block-hero-merch .details {
 	opacity: .7;
 	line-height: 1.5;
@@ -2550,14 +2553,17 @@ input[type=checkbox]:checked + br + label::before {
 	margin-bottom: 12rem;
 }
 
+.block.block-hero.block-hero-reference.block-hero-merch .details a,
 .block.block-hero.block-hero-merch .details a {
 	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
+.block.block-hero.block-hero-reference.block-hero-merch .details a:hover,
 .block.block-hero.block-hero-merch .details a:hover {
 	border-color: #7effe1;
 }
 
+.block.block-hero.block-hero-reference.block-hero-merch .details:hover,
 .block.block-hero.block-hero-merch .details:hover {
 	opacity: 1;
 }
@@ -8535,122 +8541,6 @@ body:not(.page-id-6357) .block.block-wide-text .site-header {
 	padding-bottom: 0;
 }
 
-.gutenberg-content .blocks-gallery-grid,
-body:not(.page-id-6357) .block.block-wide-text .container .blocks-gallery-grid,
-body:not(.page-id-6357) .block.block-wide-text .site-header .blocks-gallery-grid {
-	display: grid;
-}
-
-.gutenberg-content .blocks-gallery-grid .blocks-gallery-item,
-body:not(.page-id-6357) .block.block-wide-text .container .blocks-gallery-grid .blocks-gallery-item,
-body:not(.page-id-6357) .block.block-wide-text .site-header .blocks-gallery-grid .blocks-gallery-item {
-	width: 100%;
-}
-
-.gutenberg-content .columns-2,
-body:not(.page-id-6357) .block.block-wide-text .container .columns-2,
-body:not(.page-id-6357) .block.block-wide-text .site-header .columns-2 {
-	display: block;
-}
-
-.gutenberg-content .columns-2 .blocks-gallery-grid,
-body:not(.page-id-6357) .block.block-wide-text .container .columns-2 .blocks-gallery-grid,
-body:not(.page-id-6357) .block.block-wide-text .site-header .columns-2 .blocks-gallery-grid {
-	grid-template-columns: repeat(2, 1fr);
-	grid-column-gap: 1.5rem;
-}
-
-.gutenberg-content .columns-3,
-body:not(.page-id-6357) .block.block-wide-text .container .columns-3,
-body:not(.page-id-6357) .block.block-wide-text .site-header .columns-3 {
-	display: block;
-}
-
-.gutenberg-content .columns-3 .blocks-gallery-grid,
-body:not(.page-id-6357) .block.block-wide-text .container .columns-3 .blocks-gallery-grid,
-body:not(.page-id-6357) .block.block-wide-text .site-header .columns-3 .blocks-gallery-grid {
-	grid-template-columns: repeat(3, 1fr);
-	grid-column-gap: 1.5rem;
-}
-
-.gutenberg-content .columns-4,
-body:not(.page-id-6357) .block.block-wide-text .container .columns-4,
-body:not(.page-id-6357) .block.block-wide-text .site-header .columns-4 {
-	display: block;
-}
-
-.gutenberg-content .columns-4 .blocks-gallery-grid,
-body:not(.page-id-6357) .block.block-wide-text .container .columns-4 .blocks-gallery-grid,
-body:not(.page-id-6357) .block.block-wide-text .site-header .columns-4 .blocks-gallery-grid {
-	grid-template-columns: repeat(4, 1fr);
-	grid-column-gap: 1.5rem;
-}
-
-.gutenberg-content .columns-5,
-body:not(.page-id-6357) .block.block-wide-text .container .columns-5,
-body:not(.page-id-6357) .block.block-wide-text .site-header .columns-5 {
-	display: block;
-}
-
-.gutenberg-content .columns-5 .blocks-gallery-grid,
-body:not(.page-id-6357) .block.block-wide-text .container .columns-5 .blocks-gallery-grid,
-body:not(.page-id-6357) .block.block-wide-text .site-header .columns-5 .blocks-gallery-grid {
-	grid-template-columns: repeat(5, 1fr);
-	grid-column-gap: 1.5rem;
-}
-
-.gutenberg-content .columns-6,
-body:not(.page-id-6357) .block.block-wide-text .container .columns-6,
-body:not(.page-id-6357) .block.block-wide-text .site-header .columns-6 {
-	display: block;
-}
-
-.gutenberg-content .columns-6 .blocks-gallery-grid,
-body:not(.page-id-6357) .block.block-wide-text .container .columns-6 .blocks-gallery-grid,
-body:not(.page-id-6357) .block.block-wide-text .site-header .columns-6 .blocks-gallery-grid {
-	grid-template-columns: repeat(6, 1fr);
-	grid-column-gap: 1.5rem;
-}
-
-.gutenberg-content .columns-7,
-body:not(.page-id-6357) .block.block-wide-text .container .columns-7,
-body:not(.page-id-6357) .block.block-wide-text .site-header .columns-7 {
-	display: block;
-}
-
-.gutenberg-content .columns-7 .blocks-gallery-grid,
-body:not(.page-id-6357) .block.block-wide-text .container .columns-7 .blocks-gallery-grid,
-body:not(.page-id-6357) .block.block-wide-text .site-header .columns-7 .blocks-gallery-grid {
-	grid-template-columns: repeat(7, 1fr);
-	grid-column-gap: 1.5rem;
-}
-
-.gutenberg-content .columns-8,
-body:not(.page-id-6357) .block.block-wide-text .container .columns-8,
-body:not(.page-id-6357) .block.block-wide-text .site-header .columns-8 {
-	display: block;
-}
-
-.gutenberg-content .columns-8 .blocks-gallery-grid,
-body:not(.page-id-6357) .block.block-wide-text .container .columns-8 .blocks-gallery-grid,
-body:not(.page-id-6357) .block.block-wide-text .site-header .columns-8 .blocks-gallery-grid {
-	grid-template-columns: repeat(8, 1fr);
-	grid-column-gap: 1.5rem;
-}
-
-.gutenberg-content .columns-9,
-body:not(.page-id-6357) .block.block-wide-text .container .columns-9,
-body:not(.page-id-6357) .block.block-wide-text .site-header .columns-9 {
-	display: block;
-}
-
-.gutenberg-content .columns-9 .blocks-gallery-grid,
-body:not(.page-id-6357) .block.block-wide-text .container .columns-9 .blocks-gallery-grid,
-body:not(.page-id-6357) .block.block-wide-text .site-header .columns-9 .blocks-gallery-grid {
-	grid-template-columns: repeat(9, 1fr);
-	grid-column-gap: 1.5rem;
-}
-
 .gutenberg-content .cat-links,
 body:not(.page-id-6357) .block.block-wide-text .container .cat-links,
 body:not(.page-id-6357) .block.block-wide-text .site-header .cat-links,
@@ -13934,6 +13824,27 @@ body:not(.page-id-6357) .block.block-wide-text .site-header > * {
 
 .block.block-footer.site-footer .main-links ul li {
 	width: 50%;
+}
+
+.block.block-hero.block-hero-reference.block-hero-merch,
+.block.block-hero.block-hero-merch {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.block.block-hero.block-hero-reference.block-hero-merch > .container,
+.block.block-hero.block-hero-reference.block-hero-merch > .site-header,
+.block.block-hero.block-hero-merch > .container,
+.block.block-hero.block-hero-merch > .site-header {
+	padding-bottom: 5rem;
+	padding-top: 15rem;
+}
+
+.block.block-hero.block-hero-reference.block-hero-merch > .container .hero-description,
+.block.block-hero.block-hero-reference.block-hero-merch > .site-header .hero-description,
+.block.block-hero.block-hero-merch > .container .hero-description,
+.block.block-hero.block-hero-merch > .site-header .hero-description {
+	margin-bottom: 0;
 }
 
 .block.block-references-one .reference-image-skew img {

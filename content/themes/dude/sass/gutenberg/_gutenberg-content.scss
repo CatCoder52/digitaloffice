@@ -16,10 +16,10 @@
   // Loops to enumerate the classes for columns.
 
   .blocks-gallery-grid {
-    display: grid;
+    // display: grid;
 
     .blocks-gallery-item {
-      width: 100%;
+      // width: 100%;
 
       @media (min-width: $container-mobile) {
         img {
@@ -29,16 +29,16 @@
     }
   }
 
-  @for $i from 2 through 9 {
-    .columns-#{$i} {
-      display: block;
-    }
+  // @for $i from 2 through 9 {
+  //   .columns-#{$i} {
+  //     display: block;
+  //   }
 
-    .columns-#{$i} .blocks-gallery-grid {
-      grid-template-columns: repeat($i, 1fr);
-      grid-column-gap: 1.5rem;
-    }
-  }
+  //   .columns-#{$i} .blocks-gallery-grid {
+  //     grid-template-columns: repeat($i, 1fr);
+  //     grid-column-gap: 1.5rem;
+  //   }
+  // }
 
   // WordPress alignments
   .cat-links,
