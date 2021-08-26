@@ -89,6 +89,11 @@ Config::define('LOGGED_IN_SALT', env('LOGGED_IN_SALT'));
 Config::define('NONCE_SALT', env('NONCE_SALT'));
 
 /**
+ * Mailgun email delivery
+ */
+Config::define( 'MAILGUN_USEAPI', true );
+
+/**
  * Custom Settings
  */
 Config::define('AUTOMATIC_UPDATER_DISABLED', false);
