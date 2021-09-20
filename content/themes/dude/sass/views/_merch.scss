@@ -230,6 +230,26 @@
   }
 }
 
+body.post-type-archive-merch {
+
+  // Merch hero
+  .block.block-hero.block-hero-merch {
+    h1 {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      text-align: center;
+      letter-spacing: 18px;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: var(--font-size-18);
+    }
+  }
+}
+
 // Simple pay stuff
 // Test badge position fix
 .simpay-test-mode-badge-container {
