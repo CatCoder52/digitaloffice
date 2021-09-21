@@ -43,7 +43,6 @@ button:-moz-focusring,
 :root {
 	--font-size-general-small: 17px;
 	--font-size-github: 16px;
-	--font-size-18: 18px;
 }
 
 /* stylelint-disable no-descending-specificity */

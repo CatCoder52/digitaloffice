@@ -43,11 +43,13 @@ include get_theme_file_path( '/svg/ouroboros.svg' ); ?>
             <div class="content">
 
               <header class="product-header">
-                <h2><?php the_title() ?></h2>
-                <p class="price"><?php echo get_post_meta( get_the_id(), 'price', true ) ?> &euro;</p>
+                <h2 class="product-title"><?php the_title() ?></h2>
+                <p class="product-price price"><?php echo get_post_meta( get_the_id(), 'price', true ) ?> &euro;</p>
               </header>
 
-              <?php echo wpautop( get_post_meta( get_the_id(), 'description', true ) ) ?>
+              <div class="product-description">
+                <?php echo wpautop( get_post_meta( get_the_id(), 'description', true ) ) ?>
+              </div>
 
                 <?php $models = get_field( 'models' );
                 if ( ! empty( $models ) ) :

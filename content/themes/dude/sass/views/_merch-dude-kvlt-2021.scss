@@ -3,8 +3,16 @@
   --color-black: #161616;
   --color-white: #fff;
   --color-mint: #7effe1;
+  --color-product-title: var(--color-white);
+  --color-price: var(--color-white);
+  --font-size-15: 15px;
+  --font-size-19: 19px;
+  --font-size-18: 18px;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
 }
 
+// Styles for merch 2021
 body.post-type-archive-merch {
   .ouroboros {
     top: -77px;
@@ -32,6 +40,9 @@ body.post-type-archive-merch {
 
   // Merch hero
   .block.block-hero.block-hero-merch {
+    padding: 0;
+    margin-top: 18rem;
+
     > .container {
       padding-top: 0;
       max-width: 850px;
@@ -95,6 +106,52 @@ body.post-type-archive-merch {
       .is-external-link::after {
         background-image: url('../svg/external-link-white.svg') !important;
       }
+    }
+  }
+
+  // Products area
+  .content-area .block.block-merch {
+    margin-top: 1.8rem;
+
+    .product-header {
+      margin-bottom: 1.3rem;
+      margin-top: 0;
+    }
+
+    // Product title
+    .product-header > .product-title {
+      font-size: $font-size-general-large;
+      line-height: 1;
+      color: var(--color-product-title);
+      font-weight: var(--font-weight-regular);
+    }
+
+    // Price
+    .product-header > .product-price {
+      color: var(--color-price);
+      font-size: var(--font-size-19);
+      line-height: 1;
+      font-weight: var(--font-weight-bold);
+      margin: 0;
+    }
+
+    // Product description
+    .product-description > p {
+      font-size: var(--font-size-15);
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    .product-description {
+      margin-bottom: 3.2rem;
+    }
+
+    .image {
+      height: unset;
+    }
+
+    .image .lazy {
+      @include aspect-ratio(385, 537);
     }
   }
 }
