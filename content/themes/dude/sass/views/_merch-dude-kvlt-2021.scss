@@ -5,16 +5,27 @@
   --color-mint: #7effe1;
   --color-product-title: var(--color-white);
   --color-price: var(--color-white);
+  --font-size-14: 14px;
   --font-size-15: 15px;
   --font-size-16: 16px;
-  --font-size-19: 19px;
   --font-size-18: 18px;
+  --font-size-19: 19px;
   --font-weight-regular: 400;
   --font-weight-bold: 700;
+  --height-selection-buttons: 3.5rem;
 }
 
 // Styles for merch 2021
 body.post-type-archive-merch {
+  // Button transitions
+  .content-area button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset),
+  .button,
+  input[type="reset"],
+  input[type="submit"],
+  input[type="button"] {
+    transition: all .18s cubic-bezier(.19, 1, .22, 1);
+  }
+
   .ouroboros {
     top: -77px;
     position: absolute;
@@ -157,19 +168,78 @@ body.post-type-archive-merch {
       @include aspect-ratio(385, 537);
     }
 
-    // Selection buttons
+    // Model selection buttons
+    .models {
+      margin-bottom: 2.2rem;
+    }
+
     .models button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button) {
       letter-spacing: 3px;
       font-size: var(--font-size-16);
       border-color: var(--color-white);
       text-transform: uppercase;
       color: var(--color-white);
+      font-weight: var(--font-weight-bold);
+    }
+
+    // Size selection buttons
+    .choices {
+      align-items: center;
+    }
+
+    .sizes,
+    .models {
+      button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):focus,
+      button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):hover {
+        background-color: transparent;
+        color: var(--color-white);
+      }
 
       // Selected button
-      &.active {
+      button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button).active {
         background-color: var(--color-white);
         color: var(--color-black);
       }
+    }
+
+    .sizes.visible {
+      display: flex;
+      gap: 1rem;
+    }
+
+    // Size selection buttons
+    .sizes button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button) {
+      border-radius: 0;
+      font-size: var(--font-size-14);
+      width: var(--height-selection-buttons);
+      height: var(--height-selection-buttons);
+      min-height: var(--height-selection-buttons);
+      max-height: var(--height-selection-buttons);
+      min-width: var(--height-selection-buttons);
+      max-width: var(--height-selection-buttons);
+      margin: 0;
+      padding: 0;
+      align-items: center;
+      justify-content: center;
+      border-color: var(--color-white);
+      color: var(--color-white);
+      font-weight: var(--font-weight-bold);
+    }
+
+    .add-to-cart-wrapper > button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button) {
+      border-radius: 0;
+      font-size: var(--font-size-15);
+      font-weight: var(--font-weight-bold);
+      height: var(--height-selection-buttons);
+      margin: 0;
+      padding: 0 18px;
+      align-items: center;
+      justify-content: center;
+      display: inline-flex;
+      background-color: var(--color-white);
+      border-color: var(--color-white);
+      line-height: 1;
+      color: var(--color-black);
     }
   }
 }

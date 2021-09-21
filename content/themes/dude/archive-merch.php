@@ -74,7 +74,9 @@ include get_theme_file_path( '/svg/ouroboros.svg' ); ?>
                 <?php $x++; endforeach; ?>
               <?php endif; ?>
 
-              <div class="add-to-cart"><button class="add-to-cart"">Koriin +</button></div>
+              <div class="add-to-cart-wrapper add-to-cart">
+                <button class="add-to-cart">Lisää koriin</button>
+              </div>
 
             </div><!-- .choices -->
           </div><!-- .content -->
