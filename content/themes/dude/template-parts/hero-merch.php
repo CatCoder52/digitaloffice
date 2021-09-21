@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-09-20 16:05:33
+ * @Last Modified time: 2021-09-21 11:19:06
  *
  * @package dude
  */
@@ -22,7 +22,10 @@ $content = '<p>Uudet mystisen tyylikkäät rievut ovat saapuneet. Koska luonto o
   <div class="container">
 
     <div class="content">
-      <h1 id="content"><?php echo $title; ?></h1>
+      <h1 id="content">
+        <span><?php echo $title; ?></span>
+        <?php include get_theme_file_path( '/svg/logo-merch-2021.svg' ); ?>
+      </h1>
 
       <?php if ( ! empty( $content ) ) { ?>
         <div class="hero-description swup-transition-fade">
