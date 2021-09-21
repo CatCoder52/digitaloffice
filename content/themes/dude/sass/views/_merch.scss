@@ -246,6 +246,11 @@ body.post-type-archive-merch {
 
     p {
       font-size: var(--font-size-18);
+      line-height: 27px;
+
+      .is-external-link::after {
+        background-image: url('../svg/external-link-white.svg') !important;
+      }
     }
   }
 }
