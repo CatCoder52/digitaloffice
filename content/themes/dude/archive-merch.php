@@ -12,12 +12,14 @@
  * @package dude
  */
 
-// Notes
+// MERCHTHINGS enable/disable
+//
 // To disable shop:
 // 1) add this right after <div class="product-image">:
 // <h2 class="sold-out">Loppuunmyyty</h2>
 // 2) Add disabled attritubes and class to button:
 // <button class="add-to-cart disabled" disabled="disabled">
+// 3) Deactivate Simple Pay plugin from wp-admin
 get_header();
 include get_theme_file_path( '/svg/ouroboros.svg' ); ?>
 

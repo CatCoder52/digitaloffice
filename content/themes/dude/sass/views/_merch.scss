@@ -266,15 +266,38 @@ body .simpay-modal .simpay-card-wrap {
 }
 
 // Hide Simple pay form inputs that are not needed on the front-end
+// MERCHTHINGS enable/disable
+// Check that this is ok and hidden. Will be visible when going to pay (the modal)
 .simpay-form-control.simpay-same-address-toggle-container,
 .simpay-custom-amount-wrap.simpay-field-wrap,
 .simpay-address-state-container,
 .simpay-address-country-container,
 .simpay-address-billing-container-label,
-label[for="simpay-form-4535-field-9"],
+label[for="simpay-form-4535-field-8"],
 #simpay-4535-text-8 {
-  position: absolute;
-  left: -999999px;
+  position: absolute !important;
+  left: -999999px !important;
+}
+
+.simpay-form-control {
+  /* stylelint-disable-next-line */
+  border: 1px solid #fff !important;
+}
+
+// "Products" textarea that is not editable
+textarea#simpay-form-4535-field-8 {
+  border: 0 !important;
+  padding: 0 !important;
+  cursor: unset;
+  /* stylelint-disable-next-line */
+  color: #161616 !important;
+}
+
+.simpay-checkout-btn-container .simpay-btn {
+  background-color: $color-mint !important;
+  border-radius: 0 !important;
+  /* stylelint-disable-next-line */
+  color: #161616 !important;
 }
 
 .simpay-form-control.simpay-form-control--card.simpay-card-container {

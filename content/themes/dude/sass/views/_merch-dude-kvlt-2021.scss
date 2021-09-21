@@ -399,4 +399,60 @@ body.post-type-archive-merch {
       grid-row: auto/span 2;
     }
   }
+
+  .cart {
+    background-color: var(--color-white);
+    color: var(--color-black);
+
+    .cart-text,
+    b,
+    span,
+    p {
+      font-size: var(--font-size-15);
+      color: var(--color-black);
+    }
+
+    svg {
+      stroke: var(--color-black);
+      width: 24px;
+      height: 24px;
+      stroke-width: 1.2;
+      margin-right: 2rem;
+    }
+
+    button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button) {
+      font-size: var(--font-size-16);
+      color: var(--color-black);
+      border-color: var(--color-black);
+
+      &:hover,
+      &:focus {
+        background-color: var(--color-black);
+        border-color: var(--color-black);
+        color: var(--color-white);
+      }
+
+      &.buy {
+        background-color: var(--color-mint);
+        color: var(--color-black);
+        border-color: var(--color-mint);
+
+        &:hover,
+        &:focus {
+          background-color: var(--color-black);
+          border-color: var(--color-black);
+          color: var(--color-white);
+        }
+      }
+    }
+
+    .cart-text:nth-child(1),
+    .cart-text:nth-child(2),
+    .cart-text:nth-child(3),
+    .cart-text:nth-child(4),
+    .cart-text:nth-child(5),
+    .cart-text:nth-child(6) {
+      font-weight: var(--font-weight-bold);
+    }
+  }
 }

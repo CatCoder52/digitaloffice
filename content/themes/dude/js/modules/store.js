@@ -3,7 +3,7 @@
 * @Author: Timi Wahalahti
 * @Date:   2019-06-03 22:07:25
 * @Last Modified by:   Roni Laukkarinen
-* @Last Modified time: 2021-09-21 14:43:55
+* @Last Modified time: 2021-09-21 16:23:29
 */
 
 // jQuery start
@@ -144,11 +144,22 @@
       $('.empty-cart-text').hide();
       $('.full-cart').show();
 
+      // Hide textual brackets
+      // $("span.cart-text:contains('(')").hide();
+      // $("span.cart-text:contains(')')").hide();
+
       // Add to cart modal input fields
       const plaintext = $('.full-cart').text();
 
       // Input inside div class="simpay-text-wrap simpay-field-wrap"
-      document.getElementById('simpay-form-4535-field-9').value = plaintext;
+      // MERCHTHINGS enable/disable
+      // THIS SHOULD BE THE SAME AS "Tuotteet", make sure of it
+      const productsTextareaField = document.getElementById('simpay-form-4535-field-8');
+      productsTextareaField.value = plaintext;
+
+      // Make element read only (not editable)
+      productsTextareaField.readOnly = true;
+
       document.getElementById('simpay-custom-amount-4535').value = pricetotals;
       // document.getElementById("simpay-custom-amount-4535").focus({preventScroll: true});
       // document.getElementById("simpay-4535-customer-name-4").focus({preventScroll: true});
