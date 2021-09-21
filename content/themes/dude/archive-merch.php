@@ -18,7 +18,8 @@
 // <h2 class="sold-out">Loppuunmyyty</h2>
 // 2) Add disabled attritubes and class to button:
 // <button class="add-to-cart disabled" disabled="disabled">
-get_header(); ?>
+get_header();
+include get_theme_file_path( '/svg/ouroboros.svg' ); ?>
 
 <div class="content-area">
 	<main id="main" class="site-main">

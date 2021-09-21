@@ -12897,7 +12897,7 @@ body:not(.page-id-6357) .block.block-wide-text .site-header > * {
 .block.block-hero.block-hero-merch > .container,
 .block.block-hero.block-hero-merch > .site-header {
 	padding-bottom: 5rem;
-	padding-top: 15rem;
+	padding-top: 15rem; /* stylelint-disable-next-line */
 }
 
 .block.block-hero.block-hero-reference.block-hero-merch > .container .hero-description,
