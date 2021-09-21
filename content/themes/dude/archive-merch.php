@@ -12,6 +12,12 @@
  * @package dude
  */
 
+// Notes
+// To disable shop:
+// 1) add this right after <div class="product-image">:
+// <h2 class="sold-out">Loppuunmyyty</h2>
+// 2) Add disabled attritubes and class to button:
+// <button class="add-to-cart disabled" disabled="disabled">
 get_header(); ?>
 
 <div class="content-area">
@@ -27,7 +33,6 @@ get_header(); ?>
           <div class="col col-product" data-price="<?php echo get_post_meta( get_the_id(), 'price', true ); ?>" data-product="<?php echo get_the_id() ?>" data-product-name="<?php echo get_the_title() ?>">
 
             <div class="product-image">
-              <h2 class="sold-out">Loppuunmyyty</h2>
 
               <div class="image has-lazyload" aria-hidden="true">
                 <div class="lazy" data-bg="<?php echo the_post_thumbnail_url( 'large' ); ?>" aria-hidden="true"></div>
@@ -60,13 +65,13 @@ get_header(); ?>
                   <div class="sizes<?php if ( 0 === $x ) { echo ' visible'; } ?>" data-price="<?php echo get_post_meta( get_the_id(), 'price', true ); ?>" data-model-slug="<?php echo esc_attr( sanitize_title( $model['name'] ) ) ?>" data-model-name="<?php echo $model['name']; ?>">
 
                     <?php foreach ( $models[0]['stock'] as $stock ) : ?>
-                      <button data-size="<?php echo mb_strtolower( $stock['size'] ) ?>" data-instock="<?php echo (int) $stock['stock_amount'] ?>"<?php if ( empty( (int) $stock['stock_amount'] ) ) { echo ' style="disabled" disabled="disabled"'; } ?>><?php echo esc_html( $stock['size'] ) ?></button>
+                      <button data-size="<?php echo mb_strtolower( $stock['size'] ) ?>" data-instock="<?php echo (int) $stock['stock_amount'] ?>"<?php if ( empty( (int) $stock['stock_amount'] ) ) { echo ' disabled="disabled"'; } ?>><?php echo esc_html( $stock['size'] ) ?></button>
                     <?php endforeach; ?>
                   </div>
                 <?php $x++; endforeach; ?>
               <?php endif; ?>
 
-              <div class="add-to-cart"><button class="add-to-cart disabled" disabled="disabled">Koriin +</button></div>
+              <div class="add-to-cart"><button class="add-to-cart"">Koriin +</button></div>
 
             </div><!-- .choices -->
           </div><!-- .content -->
