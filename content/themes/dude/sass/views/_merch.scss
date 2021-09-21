@@ -230,55 +230,6 @@
   }
 }
 
-body.post-type-archive-merch {
-
-  // Merch hero
-  .block.block-hero.block-hero-merch {
-    > .container {
-      padding-top: 0;
-    }
-
-    h1 {
-      margin: 0 auto;
-      font-size: 12px;
-      line-height: 18px;
-      text-align: center;
-      display: inline-flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-    }
-
-    h1 span {
-      font-style: normal;
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 18px;
-      text-align: center;
-      letter-spacing: 18px;
-      text-transform: uppercase;
-      width: 100%;
-    }
-
-    svg {
-      display: block;
-      margin-top: 55px;
-    }
-
-    p {
-      font-size: var(--font-size-18);
-      line-height: 27px;
-      margin-top: 7rem;
-      margin-bottom: 7rem;
-      color: $color-white;
-
-      .is-external-link::after {
-        background-image: url('../svg/external-link-white.svg') !important;
-      }
-    }
-  }
-}
-
 // Simple pay stuff
 // Test badge position fix
 .simpay-test-mode-badge-container {
@@ -524,7 +475,6 @@ label[for="simpay-form-4535-field-9"],
 
 // Credit to Sara Soueidan
 // @link https://github.com/SaraSoueidan/creative-list-effects/blob/master/css/styles-4.css
-
 .removed-item {
   animation: removed-item-animation .4s cubic-bezier(.55, -.04, .91, .94) forwards;
 }
