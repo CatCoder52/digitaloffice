@@ -5,6 +5,7 @@
   --color-mint: #7effe1;
   --color-product-title: var(--color-white);
   --color-price: var(--color-white);
+  --font-size-13: 13px;
   --font-size-14: 14px;
   --font-size-15: 15px;
   --font-size-16: 16px;
@@ -17,6 +18,23 @@
 
 // Styles for merch 2021
 body.post-type-archive-merch {
+  // New sold out styles
+  .content-area .block.block-merch .sold-out {
+    transform: none;
+    transition: none;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-mint);
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--color-black);
+    font-size: var(--font-size-13);
+    padding: 1.2rem 0;
+    font-weight: var(--font-weight-bold);
+  }
+
   // Button transitions
   .content-area button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset),
   .button,

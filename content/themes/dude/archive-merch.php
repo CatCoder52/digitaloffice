@@ -34,7 +34,7 @@ include get_theme_file_path( '/svg/ouroboros.svg' ); ?>
           <div class="col col-product" data-price="<?php echo get_post_meta( get_the_id(), 'price', true ); ?>" data-product="<?php echo get_the_id() ?>" data-product-name="<?php echo get_the_title() ?>">
 
             <div class="product-image">
-
+              <h2 class="sold-out">Loppuunmyyty</h2>
               <div class="image has-lazyload" aria-hidden="true">
                 <div class="lazy" data-bg="<?php echo the_post_thumbnail_url( 'large' ); ?>" aria-hidden="true"></div>
               </div>
