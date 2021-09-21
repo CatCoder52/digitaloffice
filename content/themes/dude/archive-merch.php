@@ -79,6 +79,14 @@ include get_theme_file_path( '/svg/ouroboros.svg' ); ?>
               </div>
 
             </div><!-- .choices -->
+
+            <p class="size-guide">
+              <?php if ( sanitize_title( get_the_title() ) === 'kangaskassi' ) : ?>
+                Pussin koko 41 x 45 cm. Pitkä kantokahva.
+              <?php else : ?>
+                <a href="https://www.purewaste.com/men-s-t-shirt?childSku=TSMB-XXL54">Koko-ohje & valmistusmateriaali</a>
+              <?php endif; ?>
+            </p>
           </div><!-- .content -->
         </div><!-- .col -->
 

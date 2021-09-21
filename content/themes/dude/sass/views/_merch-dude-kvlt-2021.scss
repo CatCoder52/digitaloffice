@@ -1,6 +1,7 @@
 /* stylelint-disable selector-max-class, selector-max-specificity, no-descending-specificity, selector-max-combinators, selector-max-compound-selectors, selector-max-pseudo-class, selector-attribute-quotes, max-nesting-depth */
 :root {
   --color-black: #161616;
+  --color-muted: #b9b9b9;
   --color-white: #fff;
   --color-mint: #7effe1;
   --color-product-title: var(--color-white);
@@ -184,6 +185,7 @@ body.post-type-archive-merch {
 
     .image .lazy {
       @include aspect-ratio(385, 537);
+      transition: all .18s cubic-bezier(.19, 1, .22, 1);
     }
 
     // Model selection buttons
@@ -244,6 +246,7 @@ body.post-type-archive-merch {
       font-weight: var(--font-weight-bold);
     }
 
+    // Add to cart button
     .add-to-cart-wrapper > button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button) {
       border-radius: 0;
       font-size: var(--font-size-15);
@@ -258,6 +261,52 @@ body.post-type-archive-merch {
       border-color: var(--color-white);
       line-height: 1;
       color: var(--color-black);
+    }
+
+    // Size guide link or description
+    .content p.size-guide {
+      margin-top: 3rem;
+      border: 0;
+    }
+
+    .content .size-guide a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
+    .text-link,
+    .content .size-guide {
+      font-size: var(--font-size-14);
+      font-weight: var(--font-weight-regular);
+      color: var(--color-muted);
+      margin: 0;
+      text-shadow: none;
+      box-shadow: none;
+      border-bottom: 1px solid rgba(#919191, .7);
+      transition: all .18s cubic-bezier(.19, 1, .22, 1);
+      overflow: hidden;
+      background: 0 0;
+      display: inline-block;
+      width: unset;
+      /* stylelint-disable-next-line */
+      letter-spacing: .000372645px;
+      line-height: 23px;
+
+      &.is-external-link::after {
+        background-size: 10px 10px !important;
+        width: 10px !important;
+        height: 10px !important;
+        background-image: url('../svg/external-link-muted.svg') !important;
+      }
+
+      &:hover,
+      &:focus {
+        border-color: var(--color-mint);
+        background: 0 0;
+        color: var(--color-white);
+      }
+
+      &:hover {
+        color: var(--color-white);
+        text-shadow: none;
+        box-shadow: none;
+      }
     }
   }
 }
