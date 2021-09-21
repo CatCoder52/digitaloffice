@@ -108,6 +108,14 @@ include get_theme_file_path( '/svg/ouroboros.svg' ); ?>
       </div><!-- .container -->
     </section>
 
+    <section class="merch-gallery">
+      <img src="<?php echo esc_url( get_template_directory_uri() . '/images/dudekult-merch-vaatteet-1.jpg' ); ?>" alt="Valkoinen pellavapaita, jossa punainen Ouroboros-käärmekuvitus ja DUDE-teksti">
+      <img src="<?php echo esc_url( get_template_directory_uri() . '/images/dudekult-merch-vaatteet-2.jpg' ); ?>" alt="Musta huppari, jossa valkoinen Ouroboros-käärmekuvitus ja DUDE-teksti">
+      <img class="bigger" src="<?php echo esc_url( get_template_directory_uri() . '/images/dudekult-merch-vaatteet-5.jpg' ); ?>" alt="Musta huppari, jossa valkoinen Ouroboros-käärmekuvitus ja DUDE-teksti">
+      <img src="<?php echo esc_url( get_template_directory_uri() . '/images/dudekult-merch-vaatteet-3.jpg' ); ?>" alt="Nainen seisoo edustalla kainalossaan DUDE-kangaskassi, jossa musta Ouroboros-kuvitus ja DUDE-logo, taustalla sumeana kaksi miestä nojaamassa seinään">
+      <img src="<?php echo esc_url( get_template_directory_uri() . '/images/dudekult-merch-vaatteet-4.jpg' ); ?>" alt="Musta huppari, jossa valkoinen Ouroboros-käärmekuvitus ja DUDE-teksti">
+    </section>
+
 	</main><!-- #main -->
 </div><!-- #primary -->
 

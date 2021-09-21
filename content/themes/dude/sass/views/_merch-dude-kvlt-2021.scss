@@ -357,4 +357,23 @@ body.post-type-archive-merch {
       }
     }
   }
+
+  // Additional images in gallery grid
+  .merch-gallery {
+    display: grid;
+    grid-auto-rows: minmax(0, 100%);
+    grid-gap: 0;
+    grid-row-gap: 0;
+    grid-template-columns: 25% 25% 25% 25%;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .bigger {
+      grid-column: auto/span 2;
+      grid-row: auto/span 2;
+    }
+  }
 }
