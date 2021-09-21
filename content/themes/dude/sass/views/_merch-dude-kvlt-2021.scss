@@ -6,6 +6,7 @@
   --color-product-title: var(--color-white);
   --color-price: var(--color-white);
   --font-size-15: 15px;
+  --font-size-16: 16px;
   --font-size-19: 19px;
   --font-size-18: 18px;
   --font-weight-regular: 400;
@@ -144,15 +145,31 @@ body.post-type-archive-merch {
     }
 
     .product-description {
-      margin-bottom: 3.2rem;
+      margin-bottom: 3rem;
     }
 
+    // Product image
     .image {
       height: unset;
     }
 
     .image .lazy {
       @include aspect-ratio(385, 537);
+    }
+
+    // Selection buttons
+    .models button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button) {
+      letter-spacing: 3px;
+      font-size: var(--font-size-16);
+      border-color: var(--color-white);
+      text-transform: uppercase;
+      color: var(--color-white);
+
+      // Selected button
+      &.active {
+        background-color: var(--color-white);
+        color: var(--color-black);
+      }
     }
   }
 }
