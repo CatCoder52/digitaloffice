@@ -6,6 +6,7 @@
   --color-mint: #7effe1;
   --color-product-title: var(--color-white);
   --color-price: var(--color-white);
+  --font-size-12: 12px;
   --font-size-13: 13px;
   --font-size-14: 14px;
   --font-size-15: 15px;
@@ -15,6 +16,29 @@
   --font-weight-regular: 400;
   --font-weight-bold: 700;
   --height-selection-buttons: 3.5rem;
+}
+
+// Components for store
+@mixin store-link {
+  color: var(--color-white);
+  box-shadow: none;
+  border-bottom: 1px solid rgba(255, 255, 255, .5);
+  transition: border .22s;
+  overflow: hidden;
+  background-color: transparent;
+  padding: 0;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  line-height: unset;
+
+  &:hover,
+  &:focus {
+    border-color: var(--color-mint);
+    background: 0 0;
+    color: var(--color-white);
+    cursor: pointer;
+  }
 }
 
 // Styles for merch 2021
@@ -120,19 +144,7 @@ body.post-type-archive-merch {
       a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
       .block.block-title-left-text-right li a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
       .text-link {
-        color: var(--color-white);
-        box-shadow: none;
-        border-bottom: 1px solid rgba(255, 255, 255, .5);
-        transition: border .22s;
-        overflow: hidden;
-        background: 0 0;
-
-        &:hover,
-        &:focus {
-          border-color: var(--color-mint);
-          background: 0 0;
-          color: var(--color-white);
-        }
+        @include store-link();
       }
 
       .is-external-link::after {
@@ -306,6 +318,42 @@ body.post-type-archive-merch {
         color: var(--color-white);
         text-shadow: none;
         box-shadow: none;
+      }
+    }
+  }
+
+  .about-shipping {
+    margin-top: 17rem;
+    display: grid;
+    grid-template-columns: 168px minmax(0, 1fr);
+
+    .col-title {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .col-title > h2 {
+      font-size: var(--font-size-12);
+      line-height: 150%;
+      letter-spacing: 18px;
+      text-transform: uppercase;
+      font-weight: var(--font-weight-regular);
+      margin-top: 0;
+      margin-bottom: 2.7rem;
+    }
+
+    .col > p {
+      color: var(--color-muted);
+      font-size: var(--font-size-16);
+      line-height: 150%;
+      /* stylelint-disable-next-line */
+      letter-spacing: .000372645px;
+      transform: translateY(-5px);
+
+      button,
+      a,
+      a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail) {
+        @include store-link();
       }
     }
   }

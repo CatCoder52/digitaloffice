@@ -93,6 +93,18 @@ include get_theme_file_path( '/svg/ouroboros.svg' ); ?>
         <?php endwhile; ?>
         </div><!-- .cols -->
 
+        <div class="about-shipping">
+          <div class="col col-title">
+            <h2>Huom</h2>
+          </div>
+
+          <div class="col col-text">
+            <p>Dude maksaa postikulut, jos lähetellään Suomen sisällä. Toimitusajat riippuu ihan siitä miten me ehditään näitä pakkailla ja postitella. Nämä ovat sen verran tyylikästä, että palautella ei tartte. Eikä tuotteilla ole myöskään palautusoikeutta. Jos epäröit, kysy ensin. Ota yhteyttä <button class="chat open-chat open-chat-contact" aria-label="Avaa chat" tabindex="0">chatin</button> avulla tai sähköpostilla <a href="mailto:moro@dude.fi">moro@dude.fi</a>.</p>
+
+            <p>Muistahan pestä tuotteet nurinpäin 40 asteessa, niin printti ei kulahda ja materiaali ei kutistu.</p>
+          </div>
+        </div>
+
       </div><!-- .container -->
     </section>
 
