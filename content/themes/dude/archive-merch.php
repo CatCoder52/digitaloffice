@@ -27,9 +27,22 @@ while ( have_posts() ) {
     'in_stock'    => false,
   ];
 
+  /**
+   * MERCHTHINGS enable/disable
+   *
+   * To disable shop for all products:
+   * 1) Comment the few lines marked below
+   * 2) Deactivate Simple Pay plugin from wp-admin
+   */
   if ( ! empty( $product['models'] ) ) {
-    foreach ( $product['models'] as $model ) {
-      foreach ( $model['stock'] as $stock ) {
+    foreach ( $product['models'] as $model_key => $model ) {
+      foreach ( $model['stock'] as $stock_key => $stock ) {
+
+        // To disable; uncomment the following two lines
+        // $product['models'][ $model_key ]['stock'][ $stock_key ]['stock_amount'] = null;
+        // $stock['stock_amount'] = null;
+
+        // Make the main product in stock if any model has size
         if ( ! empty( (int) $stock['stock_amount'] ) ) {
           $product['in_stock'] = true;
         }
@@ -40,15 +53,8 @@ while ( have_posts() ) {
   $products[] = $product;
 }
 
-// MERCHTHINGS enable/disable
-//
-// To disable shop:
-// 1) add this right after <div class="product-image">:
-// <h2 class="sold-out">Loppuunmyyty</h2>
-// 2) Add disabled attritubes and class to button:
-// <button class="add-to-cart disabled" disabled="disabled">
-// 3) Deactivate Simple Pay plugin from wp-admin
 get_header();
+
 include get_theme_file_path( '/svg/ouroboros.svg' ); ?>
 
 <div class="content-area">
