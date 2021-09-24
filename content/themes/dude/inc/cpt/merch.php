@@ -2,11 +2,13 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:33:00
- * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-02-12 17:43:35
+ * @Last Modified by:   Timi Wahalahti
+ * @Last Modified time: 2021-09-24 14:45:16
  *
  * @package dude
  */
+
+add_action( 'init', 'dude_register_cpt_merch' );
 function dude_register_cpt_merch() {
   $labels = array(
     'name'               => _x( 'Merchit', 'post type general name', 'dude' ),
@@ -48,4 +50,58 @@ function dude_register_cpt_merch() {
   register_post_type( 'merch', $args );
 }
 
-add_action( 'init', 'dude_register_cpt_merch' );
+add_filter( 'simpay_form_4535_payment_success_page', function( $url ) {
+  $url = add_query_arg( 'rs', 'y', $url );
+  return $url;
+} );
+
+add_filter( 'simpay_payment_confirmation_content', function( $content, $payment_data ) {
+  if ( ! isset( $_GET['rs'] ) ) {
+    return $content;
+  }
+
+  if ( 'y' !== $_GET['rs'] ) {
+    return $content;
+  }
+
+  if ( ! isset( $payment_data['paymentintents'][0]->metadata->products_json ) ) {
+    return $content;
+  }
+
+  $products = json_decode( $payment_data['paymentintents'][0]->metadata->products_json, true );
+
+  if ( ! is_array( $products ) ) {
+    return $content;
+  }
+
+  foreach ( $products as $product ) {
+    $models = get_post_meta( absint( $product['product'] ), '_stock', true );
+    if ( ! is_array( $models ) ) {
+      continue;
+    }
+
+    foreach ( $models as $model_key => $model_stock ) {
+      if ( sanitize_title( $product['modelname'] ) !== $model_key ) {
+        continue;
+      }
+
+      foreach ( $model_stock as $stock_key => $stock ) {
+        if ( mb_strtoupper( $product['size'] ) !== $stock_key ) {
+          continue;
+        }
+
+        $new_stock = absint( $stock ) - absint( $product['qty'] );
+
+        $models[ $model_key ][ $stock_key ] = $new_stock;
+      }
+    }
+  }
+
+  update_post_meta( absint( $product['product'] ), '_stock', $models );
+
+  $new_url = remove_query_arg( 'rs', "//{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}" );
+
+  $content .= '<meta http-equiv="refresh" content="0;url=' . $new_url . '" />';
+
+  return $content;
+}, 10, 2 );

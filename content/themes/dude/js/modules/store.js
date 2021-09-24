@@ -3,7 +3,7 @@
 * @Author: Timi Wahalahti
 * @Date:   2019-06-03 22:07:25
 * @Last Modified by:   Timi Wahalahti
-* @Last Modified time: 2021-09-24 10:42:55
+* @Last Modified time: 2021-09-24 14:34:11
 */
 
 // jQuery start
@@ -152,13 +152,30 @@
       const plaintext = $('.full-cart').text();
 
       // Input inside div class="simpay-text-wrap simpay-field-wrap"
-      // MERCHTHINGS enable/disable
       // THIS SHOULD BE THE SAME AS "Tuotteet", make sure of it
       const productsTextareaField = document.getElementById('simpay-form-4535-field-8');
       productsTextareaField.value = plaintext;
 
       // Make element read only (not editable)
       productsTextareaField.readOnly = true;
+
+      const cartJson = [];
+      _.forEach( cart, function(value, key) {
+        cartJson.push({
+          product: value.product,
+          modelname: value.modelname,
+          size: value.size,
+          qty: value.qty
+        });
+      });
+
+      // Input inside div class="simpay-text-wrap simpay-field-wrap"
+      // THIS SHOULD BE THE SAME AS "Tuotteet koneluettava", make sure of it
+      const productsJsonTextareaField = document.getElementById('simpay-form-4535-field-10');
+      productsJsonTextareaField.value = JSON.stringify( cartJson );
+
+      // Make element read only (not editable)
+      productsJsonTextareaField.readOnly = true;
 
       document.getElementsByName('simpay_custom_price_amount')[0].value = pricetotals;
       // document.getElementById("simpay-custom-amount-4535").focus({preventScroll: true});
