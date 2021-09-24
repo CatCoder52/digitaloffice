@@ -2,8 +2,8 @@
 /*
 * @Author: Timi Wahalahti
 * @Date:   2019-06-03 22:07:25
-* @Last Modified by:   Roni Laukkarinen
-* @Last Modified time: 2021-09-21 16:23:29
+* @Last Modified by:   Timi Wahalahti
+* @Last Modified time: 2021-09-24 10:42:55
 */
 
 // jQuery start
@@ -160,10 +160,10 @@
       // Make element read only (not editable)
       productsTextareaField.readOnly = true;
 
-      document.getElementById('simpay-custom-amount-4535').value = pricetotals;
+      document.getElementsByName('simpay_custom_price_amount')[0].value = pricetotals;
       // document.getElementById("simpay-custom-amount-4535").focus({preventScroll: true});
       // document.getElementById("simpay-4535-customer-name-4").focus({preventScroll: true});
-      $('#simpay-form-4535').find('#simpay-custom-amount-4535').click();
+      $('#simpay-form-4535').find('[name="simpay_custom_price_amount"]').click();
     }
 
     // Launch Overlay from Other Buttons or Links
@@ -173,7 +173,7 @@
     $('#buy').click((e) => {
       e.preventDefault();
       // Input name="simpay_custom_amount"
-      document.getElementById('simpay-custom-amount-4535').focus({ preventScroll: true });
+      document.getElementsByName('simpay_custom_price_amount')[0].focus({ preventScroll: true });
 
       // Input name="simpay_customer_name"
       document.getElementById('simpay-form-4535-field-4').focus({ preventScroll: true });
@@ -186,7 +186,7 @@
       $('#simpay-form-4535').find('.simpay-payment-btn').click();
 
       // Input name="simpay_custom_amount"
-      $('#simpay-form-4535').find('#simpay-custom-amount-4535').click();
+      $('#simpay-form-4535').find('[name="simpay_custom_price_amount"]').click();
     });
   });
 }(jQuery));
