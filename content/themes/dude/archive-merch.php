@@ -140,10 +140,7 @@ include get_theme_file_path( '/svg/ouroboros.svg' ); ?>
                     <?php endif; ?>
 
                     <div class="add-to-cart-wrapper add-to-cart">
-                      <button
-                        class="add-to-cart <?php if ( ! $product['in_stock'] ) { echo ' disabled'; } ?>"
-                        <?php if ( ! $product['in_stock'] ) { echo ' disabled="disabled"'; } ?>
-                        >
+                      <button class="add-to-cart disabled" disabled="disabled">
                         Lisää koriin
                       </button>
                     </div>
