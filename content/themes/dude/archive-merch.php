@@ -12,6 +12,34 @@
  * @package dude
  */
 
+$products = [];
+
+while ( have_posts() ) {
+  the_post();
+
+  $product = [
+    'id'          => get_the_id(),
+    'title'       => get_the_title(),
+    'thumbnail'   => get_the_post_thumbnail_url( get_the_id(), 'large' ),
+    'price'       => get_post_meta( get_the_id(), 'price', true ),
+    'description' => get_post_meta( get_the_id(), 'description', true ),
+    'models'      => get_field( 'models' ),
+    'in_stock'    => false,
+  ];
+
+  if ( ! empty( $product['models'] ) ) {
+    foreach ( $product['models'] as $model ) {
+      foreach ( $model['stock'] as $stock ) {
+        if ( ! empty( (int) $stock['stock_amount'] ) ) {
+          $product['in_stock'] = true;
+        }
+      }
+    }
+  }
+
+  $products[] = $product;
+}
+
 // MERCHTHINGS enable/disable
 //
 // To disable shop:
@@ -32,67 +60,100 @@ include get_theme_file_path( '/svg/ouroboros.svg' ); ?>
       <div class="container">
 
         <div class="cols">
-        <?php while ( have_posts() ) : the_post(); ?>
-          <div class="col col-product" data-price="<?php echo get_post_meta( get_the_id(), 'price', true ); ?>" data-product="<?php echo get_the_id() ?>" data-product-name="<?php echo get_the_title() ?>">
+          <?php foreach ( $products as $product ) : ?>
+            <div class="col col-product" data-price="<?php echo esc_html( $product['price'] ); ?>" data-product="<?php echo esc_html( $product['id'] ); ?>" data-product-name="<?php echo esc_html( $product['title'] ); ?>">
 
-            <div class="product-image">
-              <h2 class="sold-out">Loppuunmyyty</h2>
-              <div class="image has-lazyload" aria-hidden="true">
-                <div class="lazy" data-bg="<?php echo the_post_thumbnail_url( 'large' ); ?>" aria-hidden="true"></div>
-              </div>
-            </div>
+              <div class="product-image">
 
-            <div class="content">
-
-              <header class="product-header">
-                <h2 class="product-title"><?php the_title() ?></h2>
-                <p class="product-price price"><?php echo get_post_meta( get_the_id(), 'price', true ) ?> &euro;</p>
-              </header>
-
-              <div class="product-description">
-                <?php echo wpautop( get_post_meta( get_the_id(), 'description', true ) ) ?>
-              </div>
-
-                <?php $models = get_field( 'models' );
-                if ( ! empty( $models ) ) :
-                  if ( count( $models ) > 0 ) : ?>
-                    <div class="models models-<?php echo count( $models ); ?>">
-												<?php $y = 0; foreach ( $models as $model ) : ?>
-                      <button<?php if ( 0 === $y ) { echo ' class="active"'; } ?> data-price="<?php echo get_post_meta( get_the_id(), 'price', true ); ?>" data-image="<?php echo wp_get_attachment_url( $model['image'] ); ?>" data-model-slug="<?php echo esc_attr( sanitize_title( $model['name'] ) ) ?>" data-model-name="<?php echo $model['name']; ?>"><?php echo esc_html( $model['name'] ) ?></button>
-                      <?php $y++; endforeach; ?>
-                    </div>
-												<?php endif; ?>
+                <?php if ( ! $product['in_stock'] ) : ?>
+                  <h2 class="sold-out">Loppuunmyyty</h2>
                 <?php endif; ?>
 
-              <div class="choices">
-                <?php if ( ! empty( $models ) ) : $x = 0; ?>
-                  <?php foreach ( $models as $model ) : ?>
-                  <div class="sizes<?php if ( 0 === $x ) { echo ' visible'; } ?>" data-price="<?php echo get_post_meta( get_the_id(), 'price', true ); ?>" data-model-slug="<?php echo esc_attr( sanitize_title( $model['name'] ) ) ?>" data-model-name="<?php echo $model['name']; ?>">
-
-                    <?php foreach ( $models[0]['stock'] as $stock ) : ?>
-                      <button data-size="<?php echo mb_strtolower( $stock['size'] ) ?>" data-instock="<?php echo (int) $stock['stock_amount'] ?>"<?php if ( empty( (int) $stock['stock_amount'] ) ) { echo ' disabled="disabled"'; } ?>><?php echo esc_html( $stock['size'] ) ?></button>
-                    <?php endforeach; ?>
-                  </div>
-                <?php $x++; endforeach; ?>
-              <?php endif; ?>
-
-              <div class="add-to-cart-wrapper add-to-cart">
-                <button class="add-to-cart">Lisää koriin</button>
+                <div class="image has-lazyload" aria-hidden="true">
+                  <div class="lazy" data-bg="<?php echo esc_url( $product['thumbnail'] ); ?>" aria-hidden="true"></div>
+                </div>
               </div>
 
-            </div><!-- .choices -->
+              <div class="content">
 
-            <p class="size-guide">
-              <?php if ( sanitize_title( get_the_title() ) === 'kangaskassi' ) : ?>
-                Pussin koko 41 x 45 cm. Pitkä kantokahva.
-              <?php else : ?>
-                <a href="https://www.purewaste.com/men-s-t-shirt?childSku=TSMB-XXL54">Koko-ohje & valmistusmateriaali</a>
-              <?php endif; ?>
-            </p>
-          </div><!-- .content -->
-        </div><!-- .col -->
+                <header class="product-header">
+                  <h2 class="product-title">
+                    <?php echo esc_html( $product['title'] ); ?>
+                  </h2>
 
-        <?php endwhile; ?>
+                  <p class="product-price price">
+                    <?php echo esc_html( $product['price'] ); ?> &euro;
+                  </p>
+                </header>
+
+                <div class="product-description">
+                  <?php echo wpautop( $product['´description'] ); ?>
+                </div>
+
+                  <?php if ( ! empty( $product['models'] ) && count( $product['models'] ) > 0 ) : ?>
+                    <div class="models models-<?php echo count( $models ); ?>">
+                      <?php $y = 0; foreach ( $product['models'] as $model ) : ?>
+                        <button
+                          <?php if ( 0 === $y ) {
+                            echo ' class="active"';
+                          } ?>
+                          data-price="<?php echo esc_html( $product['price'] ); ?>"
+                          data-image="<?php echo esc_url( wp_get_attachment_url( $model['image'] ) ); ?>"
+                          data-model-slug="<?php echo esc_attr( sanitize_title( $model['name'] ) ) ?>"
+                          data-model-name="<?php echo esc_html( $model['name'] ); ?>"
+                        >
+                          <?php echo esc_html( $model['name'] ) ?>
+                        </button>
+                      <?php $y++; endforeach; ?>
+                    </div>
+                  <?php endif; ?>
+
+                  <div class="choices">
+                    <?php if ( ! empty( $product['models'] ) ) :
+                      $x = 0; foreach ( $product['models'] as $model ) : ?>
+                        <div
+                          class="sizes <?php if ( 0 === $x ) { echo 'visible'; } ?>"
+                          data-price="<?php echo esc_html( $product['price'] ); ?>"
+                          data-model-slug="<?php echo esc_attr( sanitize_title( $model['name'] ) ) ?>"
+                          data-model-name="<?php echo esc_html( $model['name'] ); ?>"
+                        >
+
+                          <?php foreach ( $model['stock'] as $stock ) : ?>
+                            <button
+                              data-size="<?php echo mb_strtolower( $stock['size'] ) ?>"
+                              data-instock="<?php echo (int) $stock['stock_amount'] ?>"
+                              <?php if ( empty( (int) $stock['stock_amount'] ) ) {
+                                echo ' disabled="disabled"';
+                              } ?>
+                            >
+                              <?php echo esc_html( $stock['size'] ) ?>
+                            </button>
+                          <?php endforeach; ?>
+                        </div>
+                      <?php $x++; endforeach; ?>
+                    <?php endif; ?>
+
+                    <div class="add-to-cart-wrapper add-to-cart">
+                      <button
+                        class="add-to-cart <?php if ( ! $product['in_stock'] ) { echo ' disabled'; } ?>"
+                        <?php if ( ! $product['in_stock'] ) { echo ' disabled="disabled"'; } ?>
+                        >
+                        Lisää koriin
+                      </button>
+                    </div>
+                  </div><!-- .choices -->
+
+              <p class="size-guide">
+                <?php if ( sanitize_title( $product['title'] ) === 'kangaskassi' ) : ?>
+                  Pussin koko 41 x 45 cm. Pitkä kantokahva.
+                <?php else : ?>
+                  <a href="https://www.purewaste.com/men-s-t-shirt?childSku=TSMB-XXL54">Koko-ohje & valmistusmateriaali</a>
+                <?php endif; ?>
+              </p>
+            </div><!-- .content -->
+          </div><!-- .col -->
+
+          <?php endforeach; ?>
         </div><!-- .cols -->
 
         <div class="about-shipping">
