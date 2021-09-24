@@ -93,7 +93,7 @@ function dude_scripts() {
   ) );
 
   if ( is_post_type_archive( 'merch' ) ) {
-		wp_enqueue_script( 'store', get_theme_file_uri( 'js/modules/store.js' ), array(), filemtime( get_theme_file_path( 'js/modules/store.js' ) ), true );
+		wp_enqueue_script( 'store', get_theme_file_uri( 'js/store.js' ), array(), filemtime( get_theme_file_path( 'js/store.js' ) ), true );
   }
 
   // Disable air-helper stuff
