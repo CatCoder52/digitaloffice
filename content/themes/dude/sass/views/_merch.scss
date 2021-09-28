@@ -274,7 +274,9 @@ body .simpay-modal .simpay-card-wrap {
 .simpay-address-country-container,
 .simpay-address-billing-container-label,
 label[for="simpay-form-4535-field-8"],
-#simpay-4535-text-8 {
+#simpay-4535-text-8,
+.grecaptcha-badge,
+iframe[title="reCAPTCHA"] {
   position: absolute !important;
   left: -999999px !important;
 }
