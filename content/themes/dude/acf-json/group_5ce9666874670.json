@@ -3,6 +3,25 @@
     "title": "Merch",
     "fields": [
         {
+            "key": "field_61531d4de28a6",
+            "label": "Näytä \"tulossa pian\" \"loppuunmyyty\" -tilalla",
+            "name": "coming_soon",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_5ce9678a1705e",
             "label": "Kuvaus",
             "name": "description",
@@ -202,7 +221,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1558800680
+    "modified": 1632836970
 }

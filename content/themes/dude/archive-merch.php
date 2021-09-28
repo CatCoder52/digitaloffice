@@ -23,6 +23,7 @@ while ( have_posts() ) {
     'thumbnail'   => get_the_post_thumbnail_url( get_the_id(), 'large' ),
     'price'       => get_post_meta( get_the_id(), 'price', true ),
     'description' => get_post_meta( get_the_id(), 'description', true ),
+    'coming_soon' => get_post_meta( get_the_id(), 'coming_soon', true ),
     'models'      => get_field( 'models' ),
     'in_stock'    => false,
   ];
@@ -71,8 +72,15 @@ include get_theme_file_path( '/svg/ouroboros.svg' ); ?>
 
               <div class="product-image">
 
-                <?php if ( ! $product['in_stock'] ) : ?>
-                  <h2 class="sold-out">Loppuunmyyty</h2>
+                <?php if ( $product['coming_soon'] ) : ?>
+                  <h2 class="sold-out">Tulossa pian!</h2>
+
+                <?php else : ?>
+
+                  <?php if ( ! $product['in_stock'] ) : ?>
+                    <h2 class="sold-out">Loppuunmyyty</h2>
+                  <?php endif; ?>
+
                 <?php endif; ?>
 
                 <div class="image has-lazyload" aria-hidden="true">
