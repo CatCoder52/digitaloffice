@@ -101,7 +101,7 @@ include get_theme_file_path( '/svg/ouroboros.svg' ); ?>
                 </header>
 
                 <div class="product-description">
-                  <?php echo wpautop( $product['´description'] ); ?>
+                  <?php echo wpautop( $product['description'] ); ?>
                 </div>
 
                   <?php if ( ! empty( $product['models'] ) && count( $product['models'] ) > 0 ) : ?>
