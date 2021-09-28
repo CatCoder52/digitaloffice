@@ -2,8 +2,8 @@
 /**
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:33:00
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2021-09-24 14:45:16
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2021-09-28 17:08:00
  *
  * @package dude
  */
@@ -99,8 +99,7 @@ add_filter( 'simpay_payment_confirmation_content', function( $content, $payment_
 
   update_post_meta( absint( $product['product'] ), '_stock', $models );
 
-  $new_url = remove_query_arg( 'rs', "//{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}" );
-
+  $new_url = remove_query_arg( 'rs', "//{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}" ); // phpcs:ignore
   $content .= '<meta http-equiv="refresh" content="0;url=' . $new_url . '" />';
 
   return $content;
