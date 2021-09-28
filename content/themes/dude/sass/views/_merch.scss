@@ -276,7 +276,10 @@ body .simpay-modal .simpay-card-wrap {
 label[for="simpay-form-4535-field-8"],
 #simpay-4535-text-8,
 .grecaptcha-badge,
-iframe[title="reCAPTCHA"] {
+iframe[title="reCAPTCHA"],
+label[for="simpay-form-4535-field-10"],
+textarea[name="simpay_field[products_json]"],
+textarea#simpay-form-4535-field-10 {
   position: absolute !important;
   left: -999999px !important;
 }
