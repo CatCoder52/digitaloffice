@@ -524,3 +524,7 @@ textarea#simpay-form-4535-field-8 {
     display: none;
   }
 }
+
+button[disabled] {
+  pointer-events: none;
+}
