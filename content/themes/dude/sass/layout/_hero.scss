@@ -243,3 +243,29 @@ body.page-id-6117 .block-hero.block-hero-light {
     color: $color-white;
   }
 }
+
+// New 2021 thanks page
+/* stylelint-disable-next-line */
+body.page-id-5973 .block.block-hero-merch-thanks {
+  background-color: transparent !important;
+}
+
+body.page-id-5973 {
+  .content-area {
+    /* stylelint-disable-next-line */
+    background-color: #161616;
+  }
+}
+
+.ouroboros {
+  top: -77px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1680px;
+  height: auto;
+
+  path {
+    fill: #1b1b1b;
+  }
+}
