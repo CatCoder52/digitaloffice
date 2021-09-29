@@ -41,7 +41,6 @@ echo do_shortcode( '[simpay id="4535"]' ); ?>
   function emptyCart() {
     window.location.reload();
   }
-
 </script>
 <?php endif; ?>
 
