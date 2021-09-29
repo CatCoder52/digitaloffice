@@ -2615,6 +2615,29 @@ body.page-id-6117 .block-hero.block-hero-light p {
 	color: #fff;
 }
 
+/* stylelint-disable-next-line */
+
+body.page-id-5973 .block.block-hero-merch-thanks {
+	background-color: transparent !important;
+}
+
+body.page-id-5973 .content-area { /* stylelint-disable-next-line */
+	background-color: #161616;
+}
+
+.ouroboros {
+	top: -77px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 1680px;
+	height: auto;
+}
+
+.ouroboros path {
+	fill: #1b1b1b;
+}
+
 /* stylelint-disable selector-max-class, selector-max-specificity, no-descending-specificity */
 
 .block.block-hero.block-hero-fp {
@@ -12896,7 +12919,7 @@ body:not(.page-id-6357) .block.block-wide-text .site-header > * {
 .block.block-hero.block-hero-merch > .container,
 .block.block-hero.block-hero-merch > .site-header {
 	padding-bottom: 5rem;
-	padding-top: 15rem;
+	padding-top: 15rem; /* stylelint-disable-next-line */
 }
 
 .block.block-hero.block-hero-reference.block-hero-merch > .container .hero-description,

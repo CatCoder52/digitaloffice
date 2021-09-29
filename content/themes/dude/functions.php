@@ -186,7 +186,7 @@ function dude_remove_styles() {
     add_filter( 'pre_option_rg_gforms_disable_css', '__return_true' );
   }
 
-  if ( get_post_type() === 'merch' ) {
+  if ( is_post_type_archive( 'merch' ) || get_post_type() === 'merch' ) {
     wp_dequeue_style( 'styles' );
     wp_enqueue_style( 'surveystyles', get_theme_file_uri( 'css/store.min.css' ), array(), filemtime( get_theme_file_path( 'css/store.min.css' ) ) );
   }
