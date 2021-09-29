@@ -155,8 +155,10 @@ include get_theme_file_path( '/svg/ouroboros.svg' ); ?>
                   </div><!-- .choices -->
 
               <p class="size-guide">
-                <?php if ( sanitize_title( $product['title'] ) === 'kangaskassi' ) : ?>
+                <?php if ( 'kangaskassi' === sanitize_title( $product['title'] ) ) : ?>
                   Pussin koko 41 x 45 cm. Pitkä kantokahva.
+                <?php elseif ( 'huppari' === sanitize_title( $product['title'] ) ) : ?>
+                  <a href="https://www.purewaste.com/hoodie?childSku=HDUB99-XXS">Koko-ohje & valmistusmateriaali</a>
                 <?php else : ?>
                   <a href="https://www.purewaste.com/men-s-t-shirt?childSku=TSMB-XXL54">Koko-ohje & valmistusmateriaali</a>
                 <?php endif; ?>
