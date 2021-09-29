@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:33:00
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-09-29 09:52:13
+ * @Last Modified time: 2021-09-29 09:59:44
  *
  * @package dude
  */
@@ -49,6 +49,15 @@ function dude_register_cpt_merch() {
 
   register_post_type( 'merch', $args );
 }
+
+add_action( 'template_redirect', function() {
+  if ( ! is_singular( 'merch' ) ) {
+    return;
+  }
+
+  wp_safe_redirect( get_post_type_archive_link( 'merch' ) );
+  exit;
+} );
 
 add_filter( 'simpay_form_4535_payment_success_page', function( $url ) {
   $url = add_query_arg( 'rs', 'y', $url );
