@@ -29,7 +29,7 @@
     }
 
     .col-product {
-      overflow: hidden;
+      overflow: visible;
 
       @media (max-width: 760px) {
         display: block;

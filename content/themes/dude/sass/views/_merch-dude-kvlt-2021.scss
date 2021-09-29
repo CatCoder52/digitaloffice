@@ -216,6 +216,7 @@ body.post-type-archive-merch {
     // Model selection buttons
     .models {
       margin-bottom: 2.2rem;
+      gap: 1rem;
     }
 
     .models button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button) {
@@ -225,6 +226,10 @@ body.post-type-archive-merch {
       text-transform: uppercase;
       color: var(--color-white);
       font-weight: var(--font-weight-bold);
+      width: unset;
+      margin-right: 0;
+      margin-left: 0;
+      flex: 1;
     }
 
     // Size selection buttons
