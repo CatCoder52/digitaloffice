@@ -8454,15 +8454,23 @@ body:not(.page-id-6357) .block.block-wide-text .site-header .aligncenter {
 .gutenberg-content .wp-block-gallery,
 body:not(.page-id-6357) .block.block-wide-text .container .wp-block-gallery,
 body:not(.page-id-6357) .block.block-wide-text .site-header .wp-block-gallery {
-	width: 100%;
-	max-width: 100%;
-	padding-left: 15px;
+	width: unset;
+	max-width: unset;
+	padding: 1.5rem;
+	gap: 1.5rem;
 }
 
-.gutenberg-content .wp-block-gallery .blocks-gallery-item:last-child,
-body:not(.page-id-6357) .block.block-wide-text .container .wp-block-gallery .blocks-gallery-item:last-child,
-body:not(.page-id-6357) .block.block-wide-text .site-header .wp-block-gallery .blocks-gallery-item:last-child {
-	margin-right: 0 !important;
+.gutenberg-content .wp-block-gallery .blocks-gallery-grid,
+body:not(.page-id-6357) .block.block-wide-text .container .wp-block-gallery .blocks-gallery-grid,
+body:not(.page-id-6357) .block.block-wide-text .site-header .wp-block-gallery .blocks-gallery-grid {
+	gap: 1.5rem;
+}
+
+.gutenberg-content .wp-block-gallery .blocks-gallery-item,
+body:not(.page-id-6357) .block.block-wide-text .container .wp-block-gallery .blocks-gallery-item,
+body:not(.page-id-6357) .block.block-wide-text .site-header .wp-block-gallery .blocks-gallery-item {
+	margin: 0;
+	padding: 0;
 }
 
 .gutenberg-content p,
@@ -8560,7 +8568,6 @@ body:not(.page-id-6357) .block.block-wide-text .site-header small {
 .gutenberg-content .blocks-gallery-grid + figcaption.blocks-gallery-caption,
 body:not(.page-id-6357) .block.block-wide-text .container .blocks-gallery-grid + figcaption.blocks-gallery-caption,
 body:not(.page-id-6357) .block.block-wide-text .site-header .blocks-gallery-grid + figcaption.blocks-gallery-caption {
-	margin-top: 0;
 	margin-bottom: 0;
 }
 
@@ -12870,13 +12877,6 @@ body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:n
 	padding-left: 4.2rem;
 }
 
-.gutenberg-content .wp-block-gallery,
-body:not(.page-id-6357) .block.block-wide-text .container .wp-block-gallery,
-body:not(.page-id-6357) .block.block-wide-text .site-header .wp-block-gallery {
-	padding-right: .5rem !important;
-	padding-left: 2rem;
-}
-
 .gutenberg-content > *,
 body:not(.page-id-6357) .block.block-wide-text .container > *,
 body:not(.page-id-6357) .block.block-wide-text .site-header > * {
@@ -14299,13 +14299,6 @@ body:not(.page-id-6357) .block.block-wide-text body.single.single-reference .blo
 .block.block-blog-archive .filters li a {
 	padding: 6px 8px;
 	font-size: 14px;
-}
-
-.gutenberg-content .wp-block-gallery > *,
-body:not(.page-id-6357) .block.block-wide-text .container .wp-block-gallery > *,
-body:not(.page-id-6357) .block.block-wide-text .site-header .wp-block-gallery > * {
-	display: block;
-	width: 100%;
 }
 
 .gutenberg-content > *.wp-block-gallery figcaption,

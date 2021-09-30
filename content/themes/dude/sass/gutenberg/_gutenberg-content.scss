@@ -63,26 +63,18 @@
   }
 
   .wp-block-gallery {
-    width: 100%;
-    max-width: 100%;
-    padding-left: 15px;
+    width: unset;
+    max-width: unset;
+    padding: 1.5rem;
+    gap: 1.5rem;
 
-    @media (max-width: 910px) {
-      padding-right: .5rem !important;
-      padding-left: 2rem;
+    .blocks-gallery-grid {
+      gap: 1.5rem;
     }
 
-    .blocks-gallery-item:last-child {
-      margin-right: 0 !important;
-    }
-
-    > * {
-      // @extend .column;
-
-      @media (max-width: 600px) {
-        display: block;
-        width: 100%;
-      }
+    .blocks-gallery-item {
+      margin: 0;
+      padding: 0;
     }
   }
 
@@ -147,7 +139,6 @@
   }
 
   .blocks-gallery-grid + figcaption.blocks-gallery-caption {
-    margin-top: 0;
     margin-bottom: 0;
   }
 
