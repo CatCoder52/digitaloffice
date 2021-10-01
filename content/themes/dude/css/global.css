@@ -1770,6 +1770,8 @@ body.page-id-5975 .nav-toggle:focus:focus .hamburger-inner:focus::after {
 
 .block.block-footer.site-footer .infos-and-certs svg {
 	max-width: 150px;
+	height: auto;
+	width: 100%;
 }
 
 .block.block-footer.site-footer .infos-and-certs a {
@@ -1792,10 +1794,9 @@ body.page-id-5975 .nav-toggle:focus:focus .hamburger-inner:focus::after {
 
 .block.block-footer.site-footer .infos-and-certs .c-vierityspalkki {
 	position: relative;
-	top: 2px;
 }
 
-.block.block-footer.site-footer .infos-and-certs .c-vierityspalkki path.hole {
+.block.block-footer.site-footer .infos-and-certs path.hole {
 	fill: #343649;
 }
 
