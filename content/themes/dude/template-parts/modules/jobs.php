@@ -3,13 +3,78 @@
  * @Author: 						Roni Laukkarinen
  * @Date:   						2020-07-18 19:03:51
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-10-08 11:31:41
+ * @Last Modified time: 2021-10-08 17:13:15
  *
  * @package dude
  */
 ?>
 <section class="block block-open-positions" id="avoimet-paikat">
   <div class="container">
-    Jobs
+    <div class="head">
+      <h2>Avoimet työpaikat</h2>
+      <p class="open-positions-description">
+        Oletko sinä seuraava dude? Kiinnostaako työ, joka parhaimmillaan ei tunnu hiki hatussa paiskomiselta? Tsekkaa avoimet paikkamme:
+      </p>
+    </div>
+
+    <ul class="jobs">
+      <li class="job">
+        <a class="job-link" href="#">
+          <span class="job-title">
+            WordPress back-end/JS-kehittäjä
+            <?php include get_theme_file_path( '/svg/arrow-right-short.svg' ); ?>
+          </span>
+          <span class="job-location">Jyväskylä, etätoimipiste</span>
+        </a>
+      </li>
+      <li class="job">
+        <a class="job-link" href="#">
+          <span class="job-title">
+            Junior-kehittäjä / Harjoittelija
+            <?php include get_theme_file_path( '/svg/arrow-right-short.svg' ); ?>
+          </span>
+          <span class="job-location">Jyväskylä, etätoimipiste</span>
+        </a>
+      </li>
+      <li class="job">
+        <a class="job-link" href="#">
+          <span class="job-title">
+            Jätä avoin hakemus!
+            <?php include get_theme_file_path( '/svg/arrow-right-short.svg' ); ?>
+          </span>
+          <span class="job-location">Jyväskylä, etätoimipiste</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="block block-jobs-upsells">
+  <div class="container">
+
+    <div class="box">
+      <p>Dudella työskennellään rennosti, mutta tosissaan. Pääasia on, että aamulla ei v*tuta lähteä töihin.</p>
+
+      <p class="link-wrapper">
+        <a class="no-text-link no-external-link-indicator" href="https://handbook.dude.fi/tyoskenteleminen-dudella">Lue lisää työntekijän handbookista</a>
+      </p>
+    </div>
+
+    <div class="box">
+      <p>Toimintaamme ohjaavat arvot ovat Läpinäkyvyys, laatu, vastuullisuus, rohkeus, kehitys ja välittäminen.</p>
+
+      <p class="link-wrapper">
+        <a class="no-text-link no-external-link-indicator" href="https://www.dude.fi/yritys">Lue lisää Dudesta yrityksenä</a>
+      </p>
+    </div>
+
+    <div class="box">
+      <p>Aidosti avointa on keskustelukulttuurin lisäksi myös koodi niin GitHubissa kuin WordPress-yhteisössäkin.</p>
+
+      <p class="link-wrapper">
+        <a class="no-text-link no-external-link-indicator" href="https://www.dude.fi/yhteiso-ja-koodi">Lue lisää yhteisöstä ja koodista</a>
+      </p>
+    </div>
+
   </div>
 </section>

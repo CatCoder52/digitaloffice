@@ -1,3 +1,4 @@
+/* stylelint-disable selector-max-specificity */
 // Recruiting 2021 vars
 :root {
   --height-visual-site-header: 82px;
@@ -41,6 +42,14 @@
   .logo-big-white {
     width: calc(100vw + 140px);
     margin-bottom: -115px;
+
+    @media (max-width: 820px) {
+      margin-bottom: -57.5px;
+    }
+
+    @media (max-width: $container-mobile) {
+      margin-bottom: -3rem;
+    }
   }
 
   .content {

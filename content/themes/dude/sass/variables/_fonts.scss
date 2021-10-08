@@ -22,8 +22,10 @@ $headings-weight: 600;
 :root {
   --font-size-general-small: #{$font-size-general-small};
   --font-size-16: 16px;
-  --font-size-github: var(--font-size-16);
+  --font-size-18: 18px;
+  --font-size-20: 20px;
   --font-size-24: 24px;
+  --font-size-github: var(--font-size-16);
 
   // Font weights
   --font-weight-regular: 400;
