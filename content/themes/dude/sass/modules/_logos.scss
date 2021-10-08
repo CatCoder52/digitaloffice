@@ -14,6 +14,12 @@
   }
 }
 
+.block.block-logos ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .block.block-logos .logo-wall {
   @include grid(6, $gutter_x: 100px, $gutter_y: 7rem);
 
@@ -33,6 +39,7 @@
     @include grid(3, $gutter_x: 20px, $gutter_y: 40px);
   }
 
+  > li,
   > div {
     display: flex;
     align-items: center;

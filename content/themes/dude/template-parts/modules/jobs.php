@@ -3,12 +3,12 @@
  * @Author: 						Roni Laukkarinen
  * @Date:   						2020-07-18 19:03:51
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-10-08 17:13:15
+ * @Last Modified time: 2021-10-08 17:47:18
  *
  * @package dude
  */
 ?>
-<section class="block block-open-positions" id="avoimet-paikat">
+<section class="block block-open-positions has-light-bg" id="avoimet-paikat">
   <div class="container">
     <div class="head">
       <h2>Avoimet työpaikat</h2>
@@ -19,7 +19,7 @@
 
     <ul class="jobs">
       <li class="job">
-        <a class="job-link" href="#">
+        <a class="job-link" href="<?php echo esc_url( get_page_link( 9515 ) ); ?>">
           <span class="job-title">
             WordPress back-end/JS-kehittäjä
             <?php include get_theme_file_path( '/svg/arrow-right-short.svg' ); ?>
@@ -28,7 +28,7 @@
         </a>
       </li>
       <li class="job">
-        <a class="job-link" href="#">
+        <a class="job-link" href="<?php echo esc_url( get_page_link( 9515 ) ); ?>">
           <span class="job-title">
             Junior-kehittäjä / Harjoittelija
             <?php include get_theme_file_path( '/svg/arrow-right-short.svg' ); ?>
@@ -37,7 +37,7 @@
         </a>
       </li>
       <li class="job">
-        <a class="job-link" href="#">
+        <a class="job-link" href="<?php echo esc_url( get_page_link( 9515 ) ); ?>">
           <span class="job-title">
             Jätä avoin hakemus!
             <?php include get_theme_file_path( '/svg/arrow-right-short.svg' ); ?>
@@ -49,7 +49,7 @@
   </div>
 </section>
 
-<section class="block block-jobs-upsells">
+<section class="block block-jobs-upsells has-light-bg">
   <div class="container">
 
     <div class="box">
@@ -77,4 +77,12 @@
     </div>
 
   </div>
+</section>
+
+<section class="block-general-gallery has-dark-bg">
+  <img src="<?php echo esc_url( get_template_directory_uri() . '/images/dudekult-merch-vaatteet-1-2.jpg' ); ?>" alt="Valkoinen pellavapaita, jossa punainen Ouroboros-käärmekuvitus ja DUDE-teksti">
+  <img src="<?php echo esc_url( get_template_directory_uri() . '/images/dudekult-merch-vaatteet-2-2.jpg' ); ?>" alt="Musta huppari, jossa valkoinen Ouroboros-käärmekuvitus ja DUDE-teksti">
+  <img class="bigger" src="<?php echo esc_url( get_template_directory_uri() . '/images/dudekult-merch-vaatteet-5-2.jpg' ); ?>" alt="Musta huppari, jossa valkoinen Ouroboros-käärmekuvitus ja DUDE-teksti">
+  <img src="<?php echo esc_url( get_template_directory_uri() . '/images/dudekult-merch-vaatteet-3-2.jpg' ); ?>" alt="Nainen seisoo edustalla kainalossaan DUDE-kangaskassi, jossa musta Ouroboros-kuvitus ja DUDE-logo, taustalla sumeana kaksi miestä nojaamassa seinään">
+  <img src="<?php echo esc_url( get_template_directory_uri() . '/images/dudekult-merch-vaatteet-4-2.jpg' ); ?>" alt="Musta huppari, jossa valkoinen Ouroboros-käärmekuvitus ja DUDE-teksti">
 </section>
