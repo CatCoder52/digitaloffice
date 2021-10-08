@@ -1,13 +1,56 @@
-.block-hero.block-hero-jobs {
+// Recruiting 2021 vars
+:root {
+  --height-visual-site-header: 82px;
+
+  @media (max-width: $responsivenav) {
+    --height-visual-site-header: 34px;
+  }
+}
+
+.block.block-hero.block-hero-jobs {
+  height: unset;
+  padding: 0;
+  min-height: unset;
+  max-height: unset;
+  overflow: hidden;
+
   .shade {
-    display: none;
+    background: var(--color-midnight);
+    opacity: .6;
+  }
+
+  .container,
+  .content {
+    transform: none;
+    height: unset;
+    padding: 0;
+    min-height: unset;
+    max-height: unset;
+  }
+
+  .container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 0;
+    width: 100%;
+  }
+
+  .logo-big-white {
+    width: calc(100vw + 140px);
+    margin-bottom: -115px;
   }
 
   .content {
-    margin-bottom: 16rem;
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
     gap: 4rem;
+    width: calc(100vw + 140px);
+    padding-top: calc(14.8rem + var(--height-visual-site-header));
+    padding-bottom: 12.4rem;
 
     > * {
       width: 100%;
@@ -15,7 +58,11 @@
   }
 
   .featured-image > div {
-    background-position: top;
+    background-position: bottom;
+
+    @media (max-width: 1800px) {
+      background-position: center;
+    }
   }
 
   h1,

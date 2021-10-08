@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-10-08 14:53:29
+ * @Last Modified time: 2021-10-08 15:48:37
  *
  * @package dude
  */
@@ -49,15 +49,17 @@ if ( has_post_thumbnail() ) {
 
       <?php if ( ! empty( $button['url'] ) || ! empty( $button['title'] ) ) : ?>
         <p class="button-wrapper">
-          <a class="no-text-link no-external-link-indicator" href="<?php echo esc_url( $button['url'] ); ?>" class="
+          <a href="<?php echo esc_url( $button['url'] ); ?>" class="no-text-link no-external-link-indicator
           <?php if ( str_contains( $button['url'], '#' ) ) : ?>
-            <?php echo 'js-trigger'; ?>
+            <?php echo ' js-trigger'; ?>
           <?php endif; ?>">
-          <?php echo wp_kses_post( $button['title'] ); ?>
+            <?php echo wp_kses_post( $button['title'] ); ?>
+            <span class="screen-reader-text">Katso avoimet työpaikat</span>
           </a>
         </p>
       <?php endif; ?>
     </div>
 
+    <?php include get_theme_file_path( '/svg/logo-big-white.svg' ); ?>
   </div>
 </section>
