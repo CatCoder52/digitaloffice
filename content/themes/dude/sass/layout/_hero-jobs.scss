@@ -5,9 +5,23 @@
 
   .content {
     margin-bottom: 16rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+
+    > * {
+      width: 100%;
+    }
   }
 
   .featured-image > div {
     background-position: top;
+  }
+
+  h1,
+  .hero-description,
+  .button-wrapper {
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }

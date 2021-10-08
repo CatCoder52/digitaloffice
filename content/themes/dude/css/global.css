@@ -2917,10 +2917,24 @@ body.page-id-5973 .content-area { /* stylelint-disable-next-line */
 
 .block-hero.block-hero-jobs .content {
 	margin-bottom: 16rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4rem;
+}
+
+.block-hero.block-hero-jobs .content > * {
+	width: 100%;
 }
 
 .block-hero.block-hero-jobs .featured-image > div {
 	background-position: top;
+}
+
+.block-hero.block-hero-jobs h1,
+.block-hero.block-hero-jobs .hero-description,
+.block-hero.block-hero-jobs .button-wrapper {
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 /* stylelint-disable selector-max-class, selector-max-specificity, no-descending-specificity */
