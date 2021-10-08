@@ -24,4 +24,56 @@
     margin-top: 0;
     margin-bottom: 0;
   }
+
+  .hero-description > p {
+    font-size: var(--font-size-24);
+  }
+
+  // Anchor link
+  .button-wrapper > a {
+    color: var(--color-mint);
+    border-radius: 22px;
+    border: 1px solid var(--color-mint);
+    padding: 6px 25px 8px 16px;
+    font-size: var(--font-size-16);
+    box-shadow: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    font-weight: var(--font-weight-bold);
+    transition: all .18s cubic-bezier(.19, 1, .22, 1);
+
+    &::before {
+      transition: all .18s cubic-bezier(.19, 1, .22, 1);
+      animation: 1s cubic-bezier(.5, 0, 1, 1) infinite alternate blinker;
+      content: '';
+      background-color: var(--color-mint);
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      display: block;
+    }
+
+    &:focus,
+    &:hover {
+      box-shadow: none;
+      background-color: var(--color-mint);
+      color: var(--color-midnight);
+
+      &::before {
+        background-color: var(--color-midnight);
+      }
+    }
+  }
+}
+
+@keyframes blinker {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: .1;
+  }
 }

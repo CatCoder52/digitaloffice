@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-08-14 22:44:18
+ * @Last Modified time: 2021-10-08 14:53:29
  *
  * @package dude
  */
@@ -47,8 +47,15 @@ if ( has_post_thumbnail() ) {
         </div>
       <?php } ?>
 
-      <?php if ( ! empty( $button ) ) : ?>
-        <p class="button-wrapper"><a class="button button-glitch button-mint" href="<?php echo esc_url( $button['url'] ); ?>"<?php if ( ! empty( $button['target'] ) ) : ?> target="<?php echo esc_html( $button['target'] ); ?>"<?php endif; ?>><?php echo esc_html( $button['title'] ); ?><?php include get_theme_file_path( '/svg/arrow-right.svg' ); ?></a></p>
+      <?php if ( ! empty( $button['url'] ) || ! empty( $button['title'] ) ) : ?>
+        <p class="button-wrapper">
+          <a class="no-text-link no-external-link-indicator" href="<?php echo esc_url( $button['url'] ); ?>" class="
+          <?php if ( str_contains( $button['url'], '#' ) ) : ?>
+            <?php echo 'js-trigger'; ?>
+          <?php endif; ?>">
+          <?php echo wp_kses_post( $button['title'] ); ?>
+          </a>
+        </p>
       <?php endif; ?>
     </div>
 

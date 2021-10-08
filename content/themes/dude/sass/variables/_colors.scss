@@ -58,3 +58,33 @@ $color-stripe-pay-button-background: #24b47e;
 $color-stripe-pay-button-background-hover: #249a65;
 $gray-coupon-apply-button-hover: #888;
 $color-simplepay-test-mode: #f7e633;
+
+// CSS vars (2021)
+:root {
+  // Brand colors
+  --color-cobalt-blue: #{$color-cobalt-blue};
+  --color-midnight-blue: #{$color-midnight-blue};
+  --color-midnight: #{$color-midnight};
+  --color-mint: #{$color-mint};
+  --color-mint-alternative: #{$color-mint-alternative};
+  --color-mint-alternative-hover: #{$color-mint-alternative-hover};
+
+  // Brand colors
+  --color-black: #{$color-black};
+  --color-white: #{$color-white};
+  --color-default-background: #{$color-default-background};
+  --color-white-two: #{$color-white-two};
+  --color-button-white-hover: #{$color-button-white-hover};
+
+  // Base colors
+  --color-pitch-black: #{$color-pitch-black};
+  --color-links: #{$color-links};
+  --color-hover: #{$color-hover};
+  --color-paragraph: #{$color-paragraphs};
+  --color-paragraph-light: #{$color-paragraphs-light};
+  --color-body: #{$color-body};
+  --color-heading: #{$color-headings};
+  --color-darkgrey: #{$color-darkgrey};
+  --color-placeholder: #{$color-placeholder};
+  --color-error: #{$color-error};
+}
