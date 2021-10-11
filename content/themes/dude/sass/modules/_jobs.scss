@@ -4,6 +4,7 @@
 .block.block-expectations,
 .block.block-open-position,
 .block.block-open-positions,
+.block.block-upsells-mint,
 .block.block-jobs-upsells {
   padding-top: 0;
   padding-bottom: 0;
@@ -108,6 +109,49 @@
   }
 }
 
+// Techniques wall
+.block.block-logos-techniques.block-logos .logo-wall {
+  @include grid(9, $gutter_x: 4rem, $gutter_y: 4rem);
+
+  @media (max-width: 1250px) {
+    @include grid(7, $gutter_x: 5rem, $gutter_y: 5rem);
+
+    svg {
+      max-height: 62px;
+      max-width: 62px;
+    }
+  }
+
+  @media (max-width: 760px) {
+    @include grid(6, $gutter_x: 2rem, $gutter_y: 2rem);
+  }
+
+  @media (max-width: 650px) {
+    @include grid(4, $gutter_x: 2rem, $gutter_y: 2rem);
+
+    svg {
+      max-height: 42px;
+      max-width: 42px;
+    }
+  }
+
+  > li,
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    max-width: 100px;
+    margin: 0 auto;
+  }
+
+  svg {
+    max-height: 62px;
+    max-width: 62px;
+  }
+}
+
+.block.block-logos-techniques.block-logos + .block.block-upsells-mint > .container,
 .block.block-open-position + .block.block-expectations > .container,
 .block.block-open-position + .block.block-logos.block-logos-techniques > .container,
 .block.block-expectations + .block.block-logos.block-logos-techniques > .container,
@@ -116,36 +160,34 @@
   padding-top: 0;
 }
 
-.block.block-jobs-upsells {
-  .container {
-    @include grid(3, $gutter_x: 30px, $gutter_y: 30px);
+.box-mint {
+  background-color: var(--color-mint-light);
+  padding: 45px 35px;
 
-    @media (max-width: 1000px) {
-      @include grid(1, $gutter_x: 30px, $gutter_y: 30px);
-    }
+  p {
+    color: var(--color-midnight-blue);
+    margin-top: 0;
+    margin-bottom: 2rem;
 
-    @media (max-width: $responsivenav) {
-      @include grid(1, $gutter_x: 20px, $gutter_y: 20px);
+    @media (max-width: 1160px) {
+      font-size: 16px;
     }
   }
 
-  .box {
-    background-color: var(--color-mint-light);
-    padding: 45px 35px;
+  p:last-child {
+    margin: 0;
+  }
+}
 
-    p {
-      color: var(--color-midnight-blue);
-      margin-top: 0;
-      margin-bottom: 2rem;
+.block.block-jobs-upsells > .container {
+  @include grid(3, $gutter_x: 30px, $gutter_y: 30px);
 
-      @media (max-width: 1160px) {
-        font-size: 16px;
-      }
-    }
+  @media (max-width: 1000px) {
+    @include grid(1, $gutter_x: 30px, $gutter_y: 30px);
+  }
 
-    p:last-child {
-      margin: 0;
-    }
+  @media (max-width: $responsivenav) {
+    @include grid(1, $gutter_x: 20px, $gutter_y: 20px);
   }
 }
 

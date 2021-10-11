@@ -3,7 +3,7 @@
  * @Author: 						Roni Laukkarinen
  * @Date:   						2020-07-18 19:03:51
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-10-08 17:47:18
+ * @Last Modified time: 2021-10-11 16:12:46
  *
  * @package dude
  */
@@ -52,7 +52,7 @@
 <section class="block block-jobs-upsells has-light-bg">
   <div class="container">
 
-    <div class="box">
+    <div class="box-mint">
       <p>Dudella työskennellään rennosti, mutta tosissaan. Pääasia on, että aamulla ei v*tuta lähteä töihin.</p>
 
       <p class="link-wrapper">
@@ -60,7 +60,7 @@
       </p>
     </div>
 
-    <div class="box">
+    <div class="box-mint">
       <p>Toimintaamme ohjaavat arvot ovat Läpinäkyvyys, laatu, vastuullisuus, rohkeus, kehitys ja välittäminen.</p>
 
       <p class="link-wrapper">
@@ -68,7 +68,7 @@
       </p>
     </div>
 
-    <div class="box">
+    <div class="box-mint">
       <p>Aidosti avointa on keskustelukulttuurin lisäksi myös koodi niin GitHubissa kuin WordPress-yhteisössäkin.</p>
 
       <p class="link-wrapper">
