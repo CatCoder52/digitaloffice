@@ -68,7 +68,8 @@
   // Gravity forms minimal default styles
   .gform_wrapper > form {
     display: grid;
-    grid-gap: var(--form-gap);
+    grid-column-gap: var(--form-gap);
+    grid-row-gap: 3rem;
   }
 
   .gform-body {

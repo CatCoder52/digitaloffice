@@ -5,6 +5,7 @@
 .block.block-open-position,
 .block.block-open-positions,
 .block.block-upsells-mint,
+.block.block-form-job,
 .block.block-jobs-upsells {
   padding-top: 0;
   padding-bottom: 0;
@@ -156,7 +157,8 @@
 .block.block-open-position + .block.block-logos.block-logos-techniques > .container,
 .block.block-expectations + .block.block-logos.block-logos-techniques > .container,
 .block.block-logos.block-logos-techniques + .block.block-expectations > .container,
-.block.block-open-positions + .block.block.block-jobs-upsells > .container {
+.block.block-open-positions + .block.block.block-jobs-upsells > .container,
+.block.block-upsells-mint + .block.block-form-job > .container {
   padding-top: 0;
 }
 

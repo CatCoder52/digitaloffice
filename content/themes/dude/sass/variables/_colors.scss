@@ -89,5 +89,9 @@ $color-simplepay-test-mode: #f7e633;
   --color-heading: #{$color-headings};
   --color-darkgrey: #{$color-darkgrey};
   --color-placeholder: #{$color-placeholder};
-  --color-error: #{$color-error};
+
+  // Element states
+  --color-error: #cc2e2e;
+  --color-success: #21aa14;
+  --color-warning: #cc752e;
 }

@@ -62,12 +62,16 @@ button:-moz-focusring,
 	--color-heading: #131a50;
 	--color-darkgrey: #444;
 	--color-placeholder: #ababab;
-	--color-error: #903a37;
+	--color-error: #cc2e2e;
+	--color-success: #21aa14;
+	--color-warning: #cc752e;
 }
 
 :root {
 	--font-paragraph: Circular, Helvetica Neue, helvetica, sans-serif;
 	--font-size-general-small: 17px;
+	--font-size-14: 14px;
+	--font-size-15: 15px;
 	--font-size-16: 16px;
 	--font-size-17: 17px;
 	--font-size-18: 18px;
@@ -82,12 +86,12 @@ button:-moz-focusring,
 }
 
 :root {
-	--color-background-input-field: var(--color-white);
+	--color-background-input-field: #f9f9f9;
 	--color-form-text: var(--color-paragraph);
 	--color-form-label-text: var(--color-form-text);
 	--color-required-label-text: var(--color-form-text);
-	--color-border-forms: var(--color-paragraph);
-	--color-border-forms-focus: var(--color-paragraph);
+	--color-border-forms: #cbcbcb;
+	--color-border-forms-focus: #131a50;
 	--color-button: var(--color-white);
 	--color-button-hover: var(--color-white);
 	--color-button-background: #161826;
@@ -103,12 +107,12 @@ button:-moz-focusring,
 	--border-radius-input-field: 0;
 	--border-radius-select: 3px;
 	--border-width-checkbox: 2px;
-	--border-width-input-field: 2px;
-	--font-size-input-fields: var(--font-size-22);
-	--font-size-input-labels: var(--font-size-input-fields);
+	--border-width-input-field: 1px;
+	--font-size-input-fields: var(--font-size-18);
+	--font-size-input-labels: var(--font-size-18);
 	--font-size-required-text-label: var(--font-size-input-fields);
 	--font-size-required-asterisk-label: 22px;
-	--form-gap: 10rem;
+	--form-gap: 5rem;
 	--form-required-gap: .5rem;
 	--form-line-height: 24px;
 	--form-padding-vertical: 1rem;
@@ -539,6 +543,7 @@ img { /* autoprefixer: ignore next */
 
 /* stylelint-disable selector-max-class, selector-max-specificity, no-descending-specificity, selector-max-combinators, selector-max-compound-selectors, selector-max-pseudo-class, selector-attribute-quotes, max-nesting-depth, number-max-precision, no-unknown-animations */
 
+.block.block-form-job .gform_fileupload_rules,
 .block.block-form-job .gform_required_legend,
 .block.block-form-job .sr-only,
 body.page-id-6357 .block.block-wide-text .gform_required_legend,
@@ -558,6 +563,7 @@ body:not(.page-id-9):not(.page-id-4485) .block.block-references .block-head .blo
 	word-wrap: normal !important;
 }
 
+.block.block-form-job .skip-link.gform_fileupload_rules,
 .block.block-form-job .skip-link.gform_required_legend,
 .block.block-form-job .skip-link.sr-only,
 body.page-id-6357 .block.block-wide-text .skip-link.gform_required_legend,
@@ -568,6 +574,7 @@ body:not(.page-id-9):not(.page-id-4485) .block.block-references .block-head .ski
 	margin: 5px;
 }
 
+.block.block-form-job .skip-link.gform_fileupload_rules:focus,
 .block.block-form-job .skip-link.gform_required_legend:focus,
 .block.block-form-job .skip-link.sr-only:focus,
 body.page-id-6357 .block.block-wide-text .skip-link.gform_required_legend:focus,
@@ -580,6 +587,7 @@ body:not(.page-id-9):not(.page-id-4485) .block.block-references .block-head .ski
 	outline: 2px solid #4d4aff;
 }
 
+.block.block-form-job .gform_fileupload_rules:focus,
 .block.block-form-job .gform_required_legend:focus,
 .block.block-form-job .sr-only:focus,
 body.page-id-6357 .block.block-wide-text .gform_required_legend:focus,
@@ -1002,6 +1010,10 @@ body.page-id-6357 .block.block-wide-text .site-header h2 {
 .block.block-footer.site-footer .main-links ul a,
 .block.block-hero.block-hero-light p,
 .block.block-hero.block-hero-light .button,
+.block.block-hero.block-hero-light .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files,
+.block.block-form-job .gform_wrapper .gform_drop_area .block.block-hero.block-hero-light .button.gform_button_select_files,
+.block.block-hero.block-hero-light .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .block.block-hero.block-hero-light input.button.gform_button_select_files,
 .block.block-hero.block-hero-light body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .block.block-hero.block-hero-light input,
 .block.block-hero.block-hero-light body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8,
@@ -1329,6 +1341,10 @@ tr,
 .block.block-footer.site-footer button.chat,
 .content-area button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset),
 .content-area .button,
+.content-area .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files,
+.block.block-form-job .gform_wrapper .gform_drop_area .content-area .button.gform_button_select_files,
+.content-area .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .content-area input.button.gform_button_select_files,
 .content-area body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area input,
 .content-area body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8,
@@ -1371,6 +1387,10 @@ body .gform_confirmation_wrapper .gform_confirmation_message,
 .nav-primary .cols.cols-contact a,
 .nav-primary .cols.cols-contact button.chat,
 .top-button-holder .button,
+.top-button-holder .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files,
+.block.block-form-job .gform_wrapper .gform_drop_area .top-button-holder .button.gform_button_select_files,
+.top-button-holder .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .top-button-holder input.button.gform_button_select_files,
 .top-button-holder body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .top-button-holder input,
 .top-button-holder body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8,
@@ -2083,6 +2103,10 @@ body.page-id-5975 .nav-toggle:focus:focus .hamburger-inner:focus::after {
 
 .content-area button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset),
 .content-area .button,
+.content-area .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files,
+.block.block-form-job .gform_wrapper .gform_drop_area .content-area .button.gform_button_select_files,
+.content-area .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .content-area input.button.gform_button_select_files,
 .content-area body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area input,
 .content-area body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8,
@@ -2114,6 +2138,10 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .conte
 
 .content-area button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset).button-mint,
 .content-area .button.button-mint,
+.content-area .block.block-form-job .gform_wrapper .gform_drop_area .button-mint.button.gform_button_select_files,
+.block.block-form-job .gform_wrapper .gform_drop_area .content-area .button-mint.button.gform_button_select_files,
+.content-area .block.block-form-job .gform_wrapper.gf_browser_chrome input.button-mint.button.gform_button_select_files,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .content-area input.button-mint.button.gform_button_select_files,
 .content-area body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input.button-mint,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area input.button-mint,
 .content-area body.page-id-6357 .block.block-wide-text .button-mint#gform_browse_button_6_8,
@@ -2132,6 +2160,10 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .conte
 .content-area button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset).button-mint:hover,
 .content-area button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset).button-mint:focus,
 .content-area .button.button-mint:hover,
+.content-area .block.block-form-job .gform_wrapper .gform_drop_area .button-mint.button.gform_button_select_files:hover,
+.block.block-form-job .gform_wrapper .gform_drop_area .content-area .button-mint.button.gform_button_select_files:hover,
+.content-area .block.block-form-job .gform_wrapper.gf_browser_chrome input.button-mint.button.gform_button_select_files:hover,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .content-area input.button-mint.button.gform_button_select_files:hover,
 .content-area body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input.button-mint:hover,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area input.button-mint:hover,
 .content-area body.page-id-6357 .block.block-wide-text .button-mint#gform_browse_button_6_8:hover,
@@ -2139,6 +2171,10 @@ body.page-id-6357 .block.block-wide-text .content-area .button-mint#gform_browse
 .content-area body.page-id-6357 .block.block-wide-text .gform_wrapper .button-mint.gform_button_select_files:hover,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .content-area .button-mint.gform_button_select_files:hover,
 .content-area .button.button-mint:focus,
+.content-area .block.block-form-job .gform_wrapper .gform_drop_area .button-mint.button.gform_button_select_files:focus,
+.block.block-form-job .gform_wrapper .gform_drop_area .content-area .button-mint.button.gform_button_select_files:focus,
+.content-area .block.block-form-job .gform_wrapper.gf_browser_chrome input.button-mint.button.gform_button_select_files:focus,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .content-area input.button-mint.button.gform_button_select_files:focus,
 .content-area body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input.button-mint:focus,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area input.button-mint:focus,
 .content-area body.page-id-6357 .block.block-wide-text .button-mint#gform_browse_button_6_8:focus,
@@ -2158,6 +2194,10 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper .content-area .button-mi
 .content-area button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset).button-mint:hover svg,
 .content-area button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset).button-mint:focus svg,
 .content-area .button.button-mint:hover svg,
+.content-area .block.block-form-job .gform_wrapper .gform_drop_area .button-mint.button.gform_button_select_files:hover svg,
+.block.block-form-job .gform_wrapper .gform_drop_area .content-area .button-mint.button.gform_button_select_files:hover svg,
+.content-area .block.block-form-job .gform_wrapper.gf_browser_chrome input.button-mint.button.gform_button_select_files:hover svg,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .content-area input.button-mint.button.gform_button_select_files:hover svg,
 .content-area body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input.button-mint:hover svg,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area input.button-mint:hover svg,
 .content-area body.page-id-6357 .block.block-wide-text .button-mint#gform_browse_button_6_8:hover svg,
@@ -2165,6 +2205,10 @@ body.page-id-6357 .block.block-wide-text .content-area .button-mint#gform_browse
 .content-area body.page-id-6357 .block.block-wide-text .gform_wrapper .button-mint.gform_button_select_files:hover svg,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .content-area .button-mint.gform_button_select_files:hover svg,
 .content-area .button.button-mint:focus svg,
+.content-area .block.block-form-job .gform_wrapper .gform_drop_area .button-mint.button.gform_button_select_files:focus svg,
+.block.block-form-job .gform_wrapper .gform_drop_area .content-area .button-mint.button.gform_button_select_files:focus svg,
+.content-area .block.block-form-job .gform_wrapper.gf_browser_chrome input.button-mint.button.gform_button_select_files:focus svg,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .content-area input.button-mint.button.gform_button_select_files:focus svg,
 .content-area body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input.button-mint:focus svg,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area input.button-mint:focus svg,
 .content-area body.page-id-6357 .block.block-wide-text .button-mint#gform_browse_button_6_8:focus svg,
@@ -2182,6 +2226,10 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper .content-area .button-mi
 
 .content-area button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset).button-white,
 .content-area .button.button-white,
+.content-area .block.block-form-job .gform_wrapper .gform_drop_area .button-white.button.gform_button_select_files,
+.block.block-form-job .gform_wrapper .gform_drop_area .content-area .button-white.button.gform_button_select_files,
+.content-area .block.block-form-job .gform_wrapper.gf_browser_chrome input.button-white.button.gform_button_select_files,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .content-area input.button-white.button.gform_button_select_files,
 .content-area body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input.button-white,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area input.button-white,
 .content-area body.page-id-6357 .block.block-wide-text .button-white#gform_browse_button_6_8,
@@ -2200,6 +2248,10 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .conte
 .content-area button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset).button-white:hover,
 .content-area button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset).button-white:focus,
 .content-area .button.button-white:hover,
+.content-area .block.block-form-job .gform_wrapper .gform_drop_area .button-white.button.gform_button_select_files:hover,
+.block.block-form-job .gform_wrapper .gform_drop_area .content-area .button-white.button.gform_button_select_files:hover,
+.content-area .block.block-form-job .gform_wrapper.gf_browser_chrome input.button-white.button.gform_button_select_files:hover,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .content-area input.button-white.button.gform_button_select_files:hover,
 .content-area body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input.button-white:hover,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area input.button-white:hover,
 .content-area body.page-id-6357 .block.block-wide-text .button-white#gform_browse_button_6_8:hover,
@@ -2207,6 +2259,10 @@ body.page-id-6357 .block.block-wide-text .content-area .button-white#gform_brows
 .content-area body.page-id-6357 .block.block-wide-text .gform_wrapper .button-white.gform_button_select_files:hover,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .content-area .button-white.gform_button_select_files:hover,
 .content-area .button.button-white:focus,
+.content-area .block.block-form-job .gform_wrapper .gform_drop_area .button-white.button.gform_button_select_files:focus,
+.block.block-form-job .gform_wrapper .gform_drop_area .content-area .button-white.button.gform_button_select_files:focus,
+.content-area .block.block-form-job .gform_wrapper.gf_browser_chrome input.button-white.button.gform_button_select_files:focus,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .content-area input.button-white.button.gform_button_select_files:focus,
 .content-area body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input.button-white:focus,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area input.button-white:focus,
 .content-area body.page-id-6357 .block.block-wide-text .button-white#gform_browse_button_6_8:focus,
@@ -2226,6 +2282,10 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper .content-area .button-wh
 .content-area button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset) span,
 .content-area button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset) svg,
 .content-area .button span,
+.content-area .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files span,
+.block.block-form-job .gform_wrapper .gform_drop_area .content-area .button.gform_button_select_files span,
+.content-area .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files span,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .content-area input.button.gform_button_select_files span,
 .content-area body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input span,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area input span,
 .content-area body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8 span,
@@ -2235,6 +2295,10 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper .content-area .gform_but
 .content-area body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files span,
 body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .content-area input.button.gform_button_select_files span,
 .content-area .button svg,
+.content-area .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files svg,
+.block.block-form-job .gform_wrapper .gform_drop_area .content-area .button.gform_button_select_files svg,
+.content-area .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files svg,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .content-area input.button.gform_button_select_files svg,
 .content-area body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input svg,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area input svg,
 .content-area body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8 svg,
@@ -2258,6 +2322,10 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .conte
 .content-area button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset):hover,
 .content-area button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset):focus,
 .content-area .button:hover,
+.content-area .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files:hover,
+.block.block-form-job .gform_wrapper .gform_drop_area .content-area .button.gform_button_select_files:hover,
+.content-area .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files:hover,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .content-area input.button.gform_button_select_files:hover,
 .content-area body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input:hover,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area input:hover,
 .content-area body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8:hover,
@@ -2267,6 +2335,10 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper .content-area .gform_but
 .content-area body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files:hover,
 body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .content-area input.button.gform_button_select_files:hover,
 .content-area .button:focus,
+.content-area .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files:focus,
+.block.block-form-job .gform_wrapper .gform_drop_area .content-area .button.gform_button_select_files:focus,
+.content-area .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files:focus,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .content-area input.button.gform_button_select_files:focus,
 .content-area body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input:focus,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area input:focus,
 .content-area body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8:focus,
@@ -2290,6 +2362,10 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .conte
 .content-area button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset):focus span,
 .content-area button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset):focus svg,
 .content-area .button:hover span,
+.content-area .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files:hover span,
+.block.block-form-job .gform_wrapper .gform_drop_area .content-area .button.gform_button_select_files:hover span,
+.content-area .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files:hover span,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .content-area input.button.gform_button_select_files:hover span,
 .content-area body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input:hover span,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area input:hover span,
 .content-area body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8:hover span,
@@ -2297,6 +2373,10 @@ body.page-id-6357 .block.block-wide-text .content-area #gform_browse_button_6_8:
 .content-area body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_button_select_files:hover span,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .content-area .gform_button_select_files:hover span,
 .content-area .button:hover svg,
+.content-area .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files:hover svg,
+.block.block-form-job .gform_wrapper .gform_drop_area .content-area .button.gform_button_select_files:hover svg,
+.content-area .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files:hover svg,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .content-area input.button.gform_button_select_files:hover svg,
 .content-area body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input:hover svg,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area input:hover svg,
 .content-area body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8:hover svg,
@@ -2304,6 +2384,10 @@ body.page-id-6357 .block.block-wide-text .content-area #gform_browse_button_6_8:
 .content-area body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_button_select_files:hover svg,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .content-area .gform_button_select_files:hover svg,
 .content-area .button:focus span,
+.content-area .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files:focus span,
+.block.block-form-job .gform_wrapper .gform_drop_area .content-area .button.gform_button_select_files:focus span,
+.content-area .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files:focus span,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .content-area input.button.gform_button_select_files:focus span,
 .content-area body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input:focus span,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area input:focus span,
 .content-area body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8:focus span,
@@ -2311,6 +2395,10 @@ body.page-id-6357 .block.block-wide-text .content-area #gform_browse_button_6_8:
 .content-area body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_button_select_files:focus span,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .content-area .gform_button_select_files:focus span,
 .content-area .button:focus svg,
+.content-area .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files:focus svg,
+.block.block-form-job .gform_wrapper .gform_drop_area .content-area .button.gform_button_select_files:focus svg,
+.content-area .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files:focus svg,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .content-area input.button.gform_button_select_files:focus svg,
 .content-area body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input:focus svg,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area input:focus svg,
 .content-area body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8:focus svg,
@@ -4947,11 +5035,19 @@ body:not(.page-id-6357) .block.block-wide-text .site-header {
 }
 
 .block.block-cta-with-phone-input.block-recruiting .cols .gform_wrapper .gform_footer input.button,
+.block.block-cta-with-phone-input.block-recruiting .cols .block.block-form-job .gform_wrapper .gform_footer .gform_drop_area input.button.gform_button_select_files,
+.block.block-form-job .block.block-cta-with-phone-input.block-recruiting .cols .gform_wrapper .gform_footer .gform_drop_area input.button.gform_button_select_files,
+.block.block-cta-with-phone-input.block-recruiting .cols .block.block-form-job .gform_wrapper .gform_drop_area .gform_footer input.button.gform_button_select_files,
+.block.block-form-job .block.block-cta-with-phone-input.block-recruiting .cols .gform_wrapper .gform_drop_area .gform_footer input.button.gform_button_select_files,
 .block.block-cta-with-phone-input.block-recruiting .cols body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input,
 body.page-id-6357 .block.block-wide-text .block.block-cta-with-phone-input.block-recruiting .cols .gform_wrapper .gform_footer input,
 .block.block-cta-with-phone-input.block-recruiting .cols .gform_wrapper .gform_footer body.page-id-6357 .block.block-wide-text input#gform_browse_button_6_8,
 body.page-id-6357 .block.block-wide-text .block.block-cta-with-phone-input.block-recruiting .cols .gform_wrapper .gform_footer input#gform_browse_button_6_8,
 .block.block-cta-with-phone-input.block-recruiting .cols .gform_wrapper .gform_page_footer input.button,
+.block.block-cta-with-phone-input.block-recruiting .cols .block.block-form-job .gform_wrapper .gform_page_footer .gform_drop_area input.button.gform_button_select_files,
+.block.block-form-job .block.block-cta-with-phone-input.block-recruiting .cols .gform_wrapper .gform_page_footer .gform_drop_area input.button.gform_button_select_files,
+.block.block-cta-with-phone-input.block-recruiting .cols .block.block-form-job .gform_wrapper .gform_drop_area .gform_page_footer input.button.gform_button_select_files,
+.block.block-form-job .block.block-cta-with-phone-input.block-recruiting .cols .gform_wrapper .gform_drop_area .gform_page_footer input.button.gform_button_select_files,
 .block.block-cta-with-phone-input.block-recruiting .cols body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_page_footer .gform_footer input,
 body.page-id-6357 .block.block-wide-text .block.block-cta-with-phone-input.block-recruiting .cols .gform_wrapper .gform_page_footer .gform_footer input,
 .block.block-cta-with-phone-input.block-recruiting .cols body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .gform_page_footer input,
@@ -5375,6 +5471,7 @@ body.page-id-4487 .block.block-cta-with-image + .block.block-title-left-text-rig
 .block.block-open-position,
 .block.block-open-positions,
 .block.block-upsells-mint,
+.block.block-form-job,
 .block.block-jobs-upsells {
 	padding-top: 0;
 	padding-bottom: 0;
@@ -5390,6 +5487,8 @@ body.page-id-4487 .block.block-cta-with-image + .block.block-title-left-text-rig
 .block.block-open-positions .site-header,
 .block.block-upsells-mint .container,
 .block.block-upsells-mint .site-header,
+.block.block-form-job .container,
+.block.block-form-job .site-header,
 .block.block-jobs-upsells .container,
 .block.block-jobs-upsells .site-header {
 	padding-top: 13.5rem;
@@ -5496,7 +5595,9 @@ body.page-id-4487 .block.block-cta-with-image + .block.block-title-left-text-rig
 .block.block-logos.block-logos-techniques + .block.block-expectations > .container,
 .block.block-logos.block-logos-techniques + .block.block-expectations > .site-header,
 .block.block-open-positions + .block.block.block-jobs-upsells > .container,
-.block.block-open-positions + .block.block.block-jobs-upsells > .site-header {
+.block.block-open-positions + .block.block.block-jobs-upsells > .site-header,
+.block.block-upsells-mint + .block.block-form-job > .container,
+.block.block-upsells-mint + .block.block-form-job > .site-header {
 	padding-top: 0;
 }
 
@@ -5575,6 +5676,96 @@ body.page-id-4487 .block.block-cta-with-image + .block.block-title-left-text-rig
 .block.block-form-job { /* stylelint-disable selector-max-pseudo-class */ /* stylelint-enable selector-max-pseudo-class */ /* stylelint-disable selector-class-pattern */ /* stylelint-disable-next-line */
 }
 
+.block.block-form-job .gform_wrapper .gform_fileupload_multifile .gform_drop_area {
+	background: transparent;
+	border-radius: 0;
+	text-align: left;
+	color: #131a50;
+	margin-top: 0;
+	display: inline-flex;
+	gap: 2rem;
+	align-items: center;
+	justify-content: center;
+	border: 2px dashed #cbcbcb;
+	padding: 2rem;
+	width: auto;
+}
+
+.block.block-form-job .gform_delete_file {
+	background-color: transparent !important;
+	border: 0 !important;
+	padding: 0 !important;
+	color: var(--color-error) !important;
+	min-width: 30px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.block.block-form-job .ginput_container_fileupload + div {
+	margin-top: 2rem;
+}
+
+.block.block-form-job .ginput_container_fileupload + div > .ginput_preview {
+	display: flex;
+	align-items: center;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.block.block-form-job .ginput_container_fileupload + div > .ginput_preview strong {
+	font-weight: var(--font-weight-regular) !important;
+}
+
+.block.block-form-job .gform_wrapper span.gform_drop_instructions {
+	font-size: var(--font-size-15);
+	opacity: .6;
+	margin-bottom: 0;
+	width: 100%;
+}
+
+.block.block-form-job .gform_wrapper .gform_drop_area .gform_button_select_files.button,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .gform_drop_area input.gform_button_select_files.button,
+.block.block-form-job .gform_wrapper .gform_drop_area body.page-id-6357 .block.block-wide-text .gform_button_select_files#gform_browse_button_6_8,
+body.page-id-6357 .block.block-wide-text .block.block-form-job .gform_wrapper .gform_drop_area .gform_button_select_files#gform_browse_button_6_8,
+.block.block-form-job body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_drop_area .gform_button_select_files,
+body.page-id-6357 .block.block-wide-text .block.block-form-job .gform_wrapper .gform_drop_area .gform_button_select_files,
+.block.block-form-job .gform_wrapper.gf_browser_chrome input.gform_button_select_files.button,
+.block.block-form-job .gform_wrapper.gf_browser_chrome body.page-id-6357 .block.block-wide-text input.gform_button_select_files#gform_browse_button_6_8,
+body.page-id-6357 .block.block-wide-text .block.block-form-job .gform_wrapper.gf_browser_chrome input.gform_button_select_files#gform_browse_button_6_8,
+.block.block-form-job body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome input.gform_button_select_files,
+body.page-id-6357 .block.block-wide-text .block.block-form-job .gform_wrapper.gf_browser_chrome input.gform_button_select_files {
+	border-radius: 0;
+	padding: 1.2rem 2.6rem !important;
+	background-color: transparent !important;
+	border: 2px solid #131a50 !important;
+	color: #131a50 !important; /* stylelint-disable-next-line */
+}
+
+.block.block-form-job .gform_wrapper .gform_drop_area .gform_button_select_files.button:hover,
+.block.block-form-job .gform_wrapper .gform_drop_area body.page-id-6357 .block.block-wide-text .gform_button_select_files#gform_browse_button_6_8:hover,
+body.page-id-6357 .block.block-wide-text .block.block-form-job .gform_wrapper .gform_drop_area .gform_button_select_files#gform_browse_button_6_8:hover,
+.block.block-form-job body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_drop_area .gform_button_select_files:hover,
+body.page-id-6357 .block.block-wide-text .block.block-form-job .gform_wrapper .gform_drop_area .gform_button_select_files:hover,
+.block.block-form-job .gform_wrapper .gform_drop_area .gform_button_select_files.button:focus,
+.block.block-form-job .gform_wrapper .gform_drop_area body.page-id-6357 .block.block-wide-text .gform_button_select_files#gform_browse_button_6_8:focus,
+body.page-id-6357 .block.block-wide-text .block.block-form-job .gform_wrapper .gform_drop_area .gform_button_select_files#gform_browse_button_6_8:focus,
+.block.block-form-job body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_drop_area .gform_button_select_files:focus,
+body.page-id-6357 .block.block-wide-text .block.block-form-job .gform_wrapper .gform_drop_area .gform_button_select_files:focus,
+.block.block-form-job .gform_wrapper.gf_browser_chrome input.gform_button_select_files.button:hover,
+.block.block-form-job .gform_wrapper.gf_browser_chrome body.page-id-6357 .block.block-wide-text input.gform_button_select_files#gform_browse_button_6_8:hover,
+body.page-id-6357 .block.block-wide-text .block.block-form-job .gform_wrapper.gf_browser_chrome input.gform_button_select_files#gform_browse_button_6_8:hover,
+.block.block-form-job body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome input.gform_button_select_files:hover,
+body.page-id-6357 .block.block-wide-text .block.block-form-job .gform_wrapper.gf_browser_chrome input.gform_button_select_files:hover,
+.block.block-form-job .gform_wrapper.gf_browser_chrome input.gform_button_select_files.button:focus,
+.block.block-form-job .gform_wrapper.gf_browser_chrome body.page-id-6357 .block.block-wide-text input.gform_button_select_files#gform_browse_button_6_8:focus,
+body.page-id-6357 .block.block-wide-text .block.block-form-job .gform_wrapper.gf_browser_chrome input.gform_button_select_files#gform_browse_button_6_8:focus,
+.block.block-form-job body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome input.gform_button_select_files:focus,
+body.page-id-6357 .block.block-wide-text .block.block-form-job .gform_wrapper.gf_browser_chrome input.gform_button_select_files:focus {
+	background-color: #131a50 !important;
+	color: #7effe1 !important;
+}
+
 .block.block-form-job select {
 	appearance: none;
 	background-image: url("../../svg/select.svg");
@@ -5632,8 +5823,6 @@ body.page-id-4487 .block.block-cta-with-image + .block.block-title-left-text-rig
 	position: relative;
 	text-decoration: none;
 	transition: background .55s;
-	border-left: 2px solid transparent;
-	border-top: 2px solid transparent;
 }
 
 .block.block-form-job textarea::placeholder,
@@ -5660,6 +5849,7 @@ body.page-id-4487 .block.block-cta-with-image + .block.block-title-left-text-rig
 .block.block-form-job input[type="week"]:focus,
 .block.block-form-job input[type="email"]:focus,
 .block.block-form-job input[type="search"]:focus {
+	border-color: var(--color-border-forms-focus);
 	background-color: var(--color-background-input-field);
 	color: var(--color-form-text);
 }
@@ -5825,7 +6015,8 @@ body.page-id-4487 .block.block-cta-with-image + .block.block-title-left-text-rig
 
 .block.block-form-job .gform_wrapper > form {
 	display: grid;
-	grid-gap: var(--form-gap);
+	grid-column-gap: var(--form-gap);
+	grid-row-gap: 3rem;
 }
 
 .block.block-form-job .gform-body ul {
@@ -5913,7 +6104,8 @@ body.page-id-4487 .block.block-cta-with-image + .block.block-title-left-text-rig
 
 .block.block-form-job .gform_wrapper .gfield_label,
 .block.block-form-job .gform_wrapper.gravity-theme .gfield_label {
-	font-size: var(--font-size-22);
+	font-size: var(--font-size-input-labels);
+	margin-bottom: 2rem;
 }
 
 .block.block-form-job .gform_wrapper input[type="text"],
@@ -5933,6 +6125,159 @@ body.page-id-4487 .block.block-cta-with-image + .block.block-title-left-text-rig
 .block.block-form-job .gform_wrapper textarea,
 .block.block-form-job .gform_wrapper select {
 	font-size: var(--font-size-input-fields);
+}
+
+/* stylelint-disable */
+
+.ui-datepicker.ui-widget {
+	border-radius: 0 !important;
+	border: 0 !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	background-image: none !important;
+	background-color: #fefefe !important;
+	width: 338.63px !important;
+	z-index: 99 !important;
+}
+
+.ui-datepicker.ui-widget * {
+	border-radius: 0 !important;
+	border: 0 !important;
+	font-size: var(--font-size-14) !important;
+	background-image: none !important;
+	background-color: transparent !important;
+}
+
+.ui-datepicker.ui-widget select,
+.ui-datepicker.ui-widget button,
+.ui-datepicker.ui-widget input {
+	padding: 0 !important;
+}
+
+.ui-datepicker.ui-widget .ui-datepicker select.ui-datepicker-month,
+.ui-datepicker.ui-widget .ui-datepicker select.ui-datepicker-year {
+	width: auto !important;
+}
+
+.ui-datepicker.ui-widget .ui-datepicker-header {
+	height: 50px;
+	line-height: 50px;
+	color: #b0aead;
+	background: #e9e5e3;
+	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+	border: 0;
+}
+
+.ui-datepicker.ui-widget .ui-datepicker-prev,
+.ui-datepicker.ui-widget .ui-datepicker-next {
+	width: 20px;
+	height: 20px;
+	text-indent: 9999px;
+	border: 1px solid var(--color-midnight);
+	border-radius: 100%;
+	cursor: pointer;
+	overflow: hidden;
+	margin-top: 12px;
+	background: none !important;
+}
+
+.ui-datepicker.ui-widget .ui-datepicker-prev {
+	float: left;
+	margin-left: 12px;
+}
+
+.ui-datepicker.ui-widget .ui-datepicker-prev::after {
+	transform: rotate(45deg) scale(1.3);
+	margin: 6px 0 0 6px;
+}
+
+.ui-datepicker.ui-widget .ui-datepicker-next {
+	float: right;
+	margin-right: 12px;
+}
+
+.ui-datepicker.ui-widget .ui-datepicker-next::after {
+	transform: rotate(-135deg) scale(1.3);
+	margin: 6px 0 0 6px;
+}
+
+.ui-datepicker.ui-widget .ui-datepicker-prev::after,
+.ui-datepicker.ui-widget .ui-datepicker-next::after {
+	content: '';
+	position: absolute;
+	display: block;
+	width: 4px;
+	height: 4px;
+	border-left: 2px solid #b0aead;
+	border-bottom: 2px solid #b0aead;
+}
+
+.ui-datepicker.ui-widget .ui-datepicker-prev:hover,
+.ui-datepicker.ui-widget .ui-datepicker-next:hover,
+.ui-datepicker.ui-widget .ui-datepicker-prev:hover::after,
+.ui-datepicker.ui-widget .ui-datepicker-next:hover::after {
+	border-color: #5ed1cc;
+}
+
+.ui-datepicker.ui-widget .ui-datepicker-title {
+	text-align: center;
+}
+
+.ui-datepicker.ui-widget .ui-datepicker-calendar {
+	width: 100%;
+	text-align: center;
+}
+
+.ui-datepicker.ui-widget .ui-datepicker-calendar thead tr th span {
+	display: block;
+	width: 40px;
+	color: var(--color-midnight);
+	margin-bottom: 5px;
+	font-size: 13px;
+	background: none !important;
+}
+
+.ui-datepicker.ui-widget .ui-datepicker-calendar td > a {
+	font-weight: var(--font-weight-regular) !important;
+	padding-right: 5px !important;
+}
+
+.ui-datepicker.ui-widget .ui-state-default {
+	background-color: rgba(0, 0, 0, 0.08) !important;
+	display: block;
+	text-decoration: none;
+	color: var(--color-midnight);
+	line-height: 40px;
+	font-size: 12px;
+}
+
+.ui-datepicker.ui-widget .ui-state-default:hover {
+	background: rgba(0, 0, 0, 0.02) !important;
+}
+
+.ui-datepicker.ui-widget .ui-state-highlight {
+	background-color: var(--color-white) !important;
+	color: #cc2e2e !important;
+	outline: 2px solid #cc2e2e !important;
+	outline-offset: -2px;
+}
+
+.ui-datepicker.ui-widget .ui-state-active {
+	background-color: var(--color-mint) !important;
+	color: var(--color-midnight-blue) !important;
+}
+
+.ui-datepicker.ui-widget .ui-state-active {
+	color: #5ed1cc;
+}
+
+.ui-datepicker.ui-widget .ui-datepicker-unselectable .ui-state-default {
+	color: #eee;
+	border: 2px solid transparent;
 }
 
 .nav-primary .menu-items,
@@ -6167,6 +6512,10 @@ body .nav-toggle:focus .hamburger-inner:focus::before {
 }
 
 .top-button-holder .button,
+.top-button-holder .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files,
+.block.block-form-job .gform_wrapper .gform_drop_area .top-button-holder .button.gform_button_select_files,
+.top-button-holder .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .top-button-holder input.button.gform_button_select_files,
 .top-button-holder body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .top-button-holder input,
 .top-button-holder body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8,
@@ -6192,6 +6541,10 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .top-b
 }
 
 .top-button-holder .button:hover,
+.top-button-holder .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files:hover,
+.block.block-form-job .gform_wrapper .gform_drop_area .top-button-holder .button.gform_button_select_files:hover,
+.top-button-holder .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files:hover,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .top-button-holder input.button.gform_button_select_files:hover,
 .top-button-holder body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input:hover,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .top-button-holder input:hover,
 .top-button-holder body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8:hover,
@@ -6204,6 +6557,10 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .top-b
 }
 
 .top-button-holder .button svg,
+.top-button-holder .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files svg,
+.block.block-form-job .gform_wrapper .gform_drop_area .top-button-holder .button.gform_button_select_files svg,
+.top-button-holder .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files svg,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .top-button-holder input.button.gform_button_select_files svg,
 .top-button-holder body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input svg,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .top-button-holder input svg,
 .top-button-holder body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8 svg,
@@ -8702,6 +9059,10 @@ body.page-id-4487 .block.block-hero {
 }
 
 body.page-id-4487 .block.block-hero .button,
+body.page-id-4487 .block.block-hero .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files,
+.block.block-form-job .gform_wrapper .gform_drop_area body.page-id-4487 .block.block-hero .button.gform_button_select_files,
+body.page-id-4487 .block.block-hero .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files,
+.block.block-form-job .gform_wrapper.gf_browser_chrome body.page-id-4487 .block.block-hero input.button.gform_button_select_files,
 body.page-id-4487 .block.block-hero body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer body.page-id-4487 .block.block-hero input,
 body.page-id-4487 .block.block-hero body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8,
@@ -8713,6 +9074,10 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper body.page-id-4487 .block
 }
 
 body.page-id-4487 .block.block-hero .button:hover,
+body.page-id-4487 .block.block-hero .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files:hover,
+.block.block-form-job .gform_wrapper .gform_drop_area body.page-id-4487 .block.block-hero .button.gform_button_select_files:hover,
+body.page-id-4487 .block.block-hero .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files:hover,
+.block.block-form-job .gform_wrapper.gf_browser_chrome body.page-id-4487 .block.block-hero input.button.gform_button_select_files:hover,
 body.page-id-4487 .block.block-hero body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input:hover,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer body.page-id-4487 .block.block-hero input:hover,
 body.page-id-4487 .block.block-hero body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8:hover,
@@ -8720,6 +9085,10 @@ body.page-id-6357 .block.block-wide-text body.page-id-4487 .block.block-hero #gf
 body.page-id-4487 .block.block-hero body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_button_select_files:hover,
 body.page-id-6357 .block.block-wide-text .gform_wrapper body.page-id-4487 .block.block-hero .gform_button_select_files:hover,
 body.page-id-4487 .block.block-hero .button:focus,
+body.page-id-4487 .block.block-hero .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files:focus,
+.block.block-form-job .gform_wrapper .gform_drop_area body.page-id-4487 .block.block-hero .button.gform_button_select_files:focus,
+body.page-id-4487 .block.block-hero .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files:focus,
+.block.block-form-job .gform_wrapper.gf_browser_chrome body.page-id-4487 .block.block-hero input.button.gform_button_select_files:focus,
 body.page-id-4487 .block.block-hero body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input:focus,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer body.page-id-4487 .block.block-hero input:focus,
 body.page-id-4487 .block.block-hero body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8:focus,
@@ -8731,6 +9100,10 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper body.page-id-4487 .block
 }
 
 body.page-id-4487 .block.block-hero .button:hover svg path,
+body.page-id-4487 .block.block-hero .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files:hover svg path,
+.block.block-form-job .gform_wrapper .gform_drop_area body.page-id-4487 .block.block-hero .button.gform_button_select_files:hover svg path,
+body.page-id-4487 .block.block-hero .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files:hover svg path,
+.block.block-form-job .gform_wrapper.gf_browser_chrome body.page-id-4487 .block.block-hero input.button.gform_button_select_files:hover svg path,
 body.page-id-4487 .block.block-hero body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input:hover svg path,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer body.page-id-4487 .block.block-hero input:hover svg path,
 body.page-id-4487 .block.block-hero body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8:hover svg path,
@@ -8738,6 +9111,10 @@ body.page-id-6357 .block.block-wide-text body.page-id-4487 .block.block-hero #gf
 body.page-id-4487 .block.block-hero body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_button_select_files:hover svg path,
 body.page-id-6357 .block.block-wide-text .gform_wrapper body.page-id-4487 .block.block-hero .gform_button_select_files:hover svg path,
 body.page-id-4487 .block.block-hero .button:focus svg path,
+body.page-id-4487 .block.block-hero .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files:focus svg path,
+.block.block-form-job .gform_wrapper .gform_drop_area body.page-id-4487 .block.block-hero .button.gform_button_select_files:focus svg path,
+body.page-id-4487 .block.block-hero .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files:focus svg path,
+.block.block-form-job .gform_wrapper.gf_browser_chrome body.page-id-4487 .block.block-hero input.button.gform_button_select_files:focus svg path,
 body.page-id-4487 .block.block-hero body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input:focus svg path,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer body.page-id-4487 .block.block-hero input:focus svg path,
 body.page-id-4487 .block.block-hero body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8:focus svg path,
@@ -8748,6 +9125,10 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper body.page-id-4487 .block
 }
 
 body.page-id-4487 .block.block-hero .button:hover span,
+body.page-id-4487 .block.block-hero .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files:hover span,
+.block.block-form-job .gform_wrapper .gform_drop_area body.page-id-4487 .block.block-hero .button.gform_button_select_files:hover span,
+body.page-id-4487 .block.block-hero .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files:hover span,
+.block.block-form-job .gform_wrapper.gf_browser_chrome body.page-id-4487 .block.block-hero input.button.gform_button_select_files:hover span,
 body.page-id-4487 .block.block-hero body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input:hover span,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer body.page-id-4487 .block.block-hero input:hover span,
 body.page-id-4487 .block.block-hero body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8:hover span,
@@ -8755,6 +9136,10 @@ body.page-id-6357 .block.block-wide-text body.page-id-4487 .block.block-hero #gf
 body.page-id-4487 .block.block-hero body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_button_select_files:hover span,
 body.page-id-6357 .block.block-wide-text .gform_wrapper body.page-id-4487 .block.block-hero .gform_button_select_files:hover span,
 body.page-id-4487 .block.block-hero .button:hover svg,
+body.page-id-4487 .block.block-hero .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files:hover svg,
+.block.block-form-job .gform_wrapper .gform_drop_area body.page-id-4487 .block.block-hero .button.gform_button_select_files:hover svg,
+body.page-id-4487 .block.block-hero .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files:hover svg,
+.block.block-form-job .gform_wrapper.gf_browser_chrome body.page-id-4487 .block.block-hero input.button.gform_button_select_files:hover svg,
 body.page-id-4487 .block.block-hero body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input:hover svg,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer body.page-id-4487 .block.block-hero input:hover svg,
 body.page-id-4487 .block.block-hero body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8:hover svg,
@@ -8762,6 +9147,10 @@ body.page-id-6357 .block.block-wide-text body.page-id-4487 .block.block-hero #gf
 body.page-id-4487 .block.block-hero body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_button_select_files:hover svg,
 body.page-id-6357 .block.block-wide-text .gform_wrapper body.page-id-4487 .block.block-hero .gform_button_select_files:hover svg,
 body.page-id-4487 .block.block-hero .button:focus span,
+body.page-id-4487 .block.block-hero .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files:focus span,
+.block.block-form-job .gform_wrapper .gform_drop_area body.page-id-4487 .block.block-hero .button.gform_button_select_files:focus span,
+body.page-id-4487 .block.block-hero .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files:focus span,
+.block.block-form-job .gform_wrapper.gf_browser_chrome body.page-id-4487 .block.block-hero input.button.gform_button_select_files:focus span,
 body.page-id-4487 .block.block-hero body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input:focus span,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer body.page-id-4487 .block.block-hero input:focus span,
 body.page-id-4487 .block.block-hero body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8:focus span,
@@ -8769,6 +9158,10 @@ body.page-id-6357 .block.block-wide-text body.page-id-4487 .block.block-hero #gf
 body.page-id-4487 .block.block-hero body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_button_select_files:focus span,
 body.page-id-6357 .block.block-wide-text .gform_wrapper body.page-id-4487 .block.block-hero .gform_button_select_files:focus span,
 body.page-id-4487 .block.block-hero .button:focus svg,
+body.page-id-4487 .block.block-hero .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files:focus svg,
+.block.block-form-job .gform_wrapper .gform_drop_area body.page-id-4487 .block.block-hero .button.gform_button_select_files:focus svg,
+body.page-id-4487 .block.block-hero .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files:focus svg,
+.block.block-form-job .gform_wrapper.gf_browser_chrome body.page-id-4487 .block.block-hero input.button.gform_button_select_files:focus svg,
 body.page-id-4487 .block.block-hero body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input:focus svg,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer body.page-id-4487 .block.block-hero input:focus svg,
 body.page-id-4487 .block.block-hero body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8:focus svg,
@@ -10304,6 +10697,10 @@ body.page-id-6357 .block.block-wide-text .site-header h2 {
 .block.block-footer.site-footer .main-links ul a,
 .block.block-hero.block-hero-light p,
 .block.block-hero.block-hero-light .button,
+.block.block-hero.block-hero-light .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files,
+.block.block-form-job .gform_wrapper .gform_drop_area .block.block-hero.block-hero-light .button.gform_button_select_files,
+.block.block-hero.block-hero-light .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .block.block-hero.block-hero-light input.button.gform_button_select_files,
 .block.block-hero.block-hero-light body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .block.block-hero.block-hero-light input,
 .block.block-hero.block-hero-light body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8,
@@ -10358,6 +10755,10 @@ tr,
 .block.block-footer.site-footer button.chat,
 .content-area button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset),
 .content-area .button,
+.content-area .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files,
+.block.block-form-job .gform_wrapper .gform_drop_area .content-area .button.gform_button_select_files,
+.content-area .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .content-area input.button.gform_button_select_files,
 .content-area body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area input,
 .content-area body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8,
@@ -10400,6 +10801,10 @@ body .gform_confirmation_wrapper .gform_confirmation_message,
 .nav-primary .cols.cols-contact a,
 .nav-primary .cols.cols-contact button.chat,
 .top-button-holder .button,
+.top-button-holder .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files,
+.block.block-form-job .gform_wrapper .gform_drop_area .top-button-holder .button.gform_button_select_files,
+.top-button-holder .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .top-button-holder input.button.gform_button_select_files,
 .top-button-holder body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .top-button-holder input,
 .top-button-holder body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8,
@@ -11461,6 +11866,10 @@ body:not(.page-id-6357) .block.block-wide-text body.single.single-reference .blo
 .block.block-footer.site-footer .main-links ul a,
 .block.block-hero.block-hero-light p,
 .block.block-hero.block-hero-light .button,
+.block.block-hero.block-hero-light .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files,
+.block.block-form-job .gform_wrapper .gform_drop_area .block.block-hero.block-hero-light .button.gform_button_select_files,
+.block.block-hero.block-hero-light .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .block.block-hero.block-hero-light input.button.gform_button_select_files,
 .block.block-hero.block-hero-light body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .block.block-hero.block-hero-light input,
 .block.block-hero.block-hero-light body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8,
@@ -12612,6 +13021,10 @@ body.page-id-6357 .block.block-wide-text .site-header h2 {
 .block.block-footer.site-footer .main-links ul a,
 .block.block-hero.block-hero-light p,
 .block.block-hero.block-hero-light .button,
+.block.block-hero.block-hero-light .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files,
+.block.block-form-job .gform_wrapper .gform_drop_area .block.block-hero.block-hero-light .button.gform_button_select_files,
+.block.block-hero.block-hero-light .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .block.block-hero.block-hero-light input.button.gform_button_select_files,
 .block.block-hero.block-hero-light body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .block.block-hero.block-hero-light input,
 .block.block-hero.block-hero-light body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8,
@@ -12666,6 +13079,10 @@ tr,
 .block.block-footer.site-footer button.chat,
 .content-area button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset),
 .content-area .button,
+.content-area .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files,
+.block.block-form-job .gform_wrapper .gform_drop_area .content-area .button.gform_button_select_files,
+.content-area .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .content-area input.button.gform_button_select_files,
 .content-area body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area input,
 .content-area body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8,
@@ -12708,6 +13125,10 @@ body .gform_confirmation_wrapper .gform_confirmation_message,
 .nav-primary .cols.cols-contact a,
 .nav-primary .cols.cols-contact button.chat,
 .top-button-holder .button,
+.top-button-holder .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files,
+.block.block-form-job .gform_wrapper .gform_drop_area .top-button-holder .button.gform_button_select_files,
+.top-button-holder .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .top-button-holder input.button.gform_button_select_files,
 .top-button-holder body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .top-button-holder input,
 .top-button-holder body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8,
@@ -14477,6 +14898,8 @@ body.single.single-reference .block.block-single.block-single-reference {
 .block.block-open-positions .site-header,
 .block.block-upsells-mint .container,
 .block.block-upsells-mint .site-header,
+.block.block-form-job .container,
+.block.block-form-job .site-header,
 .block.block-jobs-upsells .container,
 .block.block-jobs-upsells .site-header {
 	padding-top: calc(13.5rem / 2);
@@ -14993,6 +15416,10 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper ul.gform_fields {
 }
 
 .top-button-holder.show-on-mobile .button,
+.top-button-holder.show-on-mobile .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files,
+.block.block-form-job .gform_wrapper .gform_drop_area .top-button-holder.show-on-mobile .button.gform_button_select_files,
+.top-button-holder.show-on-mobile .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .top-button-holder.show-on-mobile input.button.gform_button_select_files,
 .top-button-holder.show-on-mobile body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .top-button-holder.show-on-mobile input,
 .top-button-holder.show-on-mobile body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8,
@@ -15354,6 +15781,10 @@ tr,
 .block.block-footer.site-footer button.chat,
 .content-area button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset),
 .content-area .button,
+.content-area .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files,
+.block.block-form-job .gform_wrapper .gform_drop_area .content-area .button.gform_button_select_files,
+.content-area .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .content-area input.button.gform_button_select_files,
 .content-area body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area input,
 .content-area body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8,
@@ -15396,6 +15827,10 @@ body .gform_confirmation_wrapper .gform_confirmation_message,
 .nav-primary .cols.cols-contact a,
 .nav-primary .cols.cols-contact button.chat,
 .top-button-holder .button,
+.top-button-holder .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files,
+.block.block-form-job .gform_wrapper .gform_drop_area .top-button-holder .button.gform_button_select_files,
+.top-button-holder .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .top-button-holder input.button.gform_button_select_files,
 .top-button-holder body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .top-button-holder input,
 .top-button-holder body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8,
@@ -15433,6 +15868,10 @@ body.single.single-reference .wp-block-button a {
 }
 
 .block.block-hero .button-wrapper .button,
+.block.block-hero .button-wrapper .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files,
+.block.block-form-job .gform_wrapper .gform_drop_area .block.block-hero .button-wrapper .button.gform_button_select_files,
+.block.block-hero .button-wrapper .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .block.block-hero .button-wrapper input.button.gform_button_select_files,
 .block.block-hero .button-wrapper body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .block.block-hero .button-wrapper input,
 .block.block-hero .button-wrapper body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8,
@@ -16331,6 +16770,10 @@ body:not(.page-id-6357) .block.block-wide-text .site-header > *.wp-video {
 
 .content-area button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset),
 .content-area .button,
+.content-area .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files,
+.block.block-form-job .gform_wrapper .gform_drop_area .content-area .button.gform_button_select_files,
+.content-area .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .content-area input.button.gform_button_select_files,
 .content-area body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area input,
 .content-area body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8,
@@ -16347,6 +16790,10 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper.gf_browser_chrome .conte
 
 .content-area button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset) svg,
 .content-area .button svg,
+.content-area .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files svg,
+.block.block-form-job .gform_wrapper .gform_drop_area .content-area .button.gform_button_select_files svg,
+.content-area .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files svg,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .content-area input.button.gform_button_select_files svg,
 .content-area body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input svg,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .content-area input svg,
 .content-area body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8 svg,
@@ -16446,6 +16893,10 @@ body.single .block.block-single:not(.block-single-reference) .post > .author-car
 }
 
 .block.block-cta-with-phone-input .button,
+.block.block-cta-with-phone-input .block.block-form-job .gform_wrapper .gform_drop_area .button.gform_button_select_files,
+.block.block-form-job .gform_wrapper .gform_drop_area .block.block-cta-with-phone-input .button.gform_button_select_files,
+.block.block-cta-with-phone-input .block.block-form-job .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files,
+.block.block-form-job .gform_wrapper.gf_browser_chrome .block.block-cta-with-phone-input input.button.gform_button_select_files,
 .block.block-cta-with-phone-input body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer input,
 body.page-id-6357 .block.block-wide-text .gform_wrapper .gform_footer .block.block-cta-with-phone-input input,
 .block.block-cta-with-phone-input body.page-id-6357 .block.block-wide-text #gform_browse_button_6_8,

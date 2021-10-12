@@ -1,4 +1,74 @@
-@mixin form() {
+@mixin form-job() {
+
+  // File upload
+  .gform_wrapper .gform_fileupload_multifile .gform_drop_area {
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+    color: $color-midnight-blue;
+    margin-top: 0;
+    display: inline-flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #cbcbcb;
+    padding: 2rem;
+    width: auto;
+  }
+
+  .gform_delete_file {
+    background-color: transparent !important;
+    border: 0 !important;
+    padding: 0 !important;
+    color: var(--color-error) !important;
+    min-width: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ginput_container_fileupload + div {
+    margin-top: 2rem;
+  }
+
+  .ginput_container_fileupload + div > .ginput_preview {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    strong {
+      font-weight: var(--font-weight-regular) !important;
+    }
+  }
+
+  .gform_fileupload_rules {
+    @extend %screen-reader-text;
+  }
+
+  .gform_wrapper span.gform_drop_instructions {
+    font-size: var(--font-size-15);
+    opacity: .6;
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  .gform_wrapper .gform_drop_area .button.gform_button_select_files,
+  .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files {
+    @extend .button;
+    border-radius: 0;
+    padding: 1.2rem 2.6rem !important;
+    background-color: transparent !important;
+    border: 2px solid $color-midnight-blue !important;
+    color: $color-midnight-blue !important;
+
+    /* stylelint-disable-next-line */
+    &:hover,
+    &:focus {
+      background-color: $color-midnight-blue !important;
+      color: $color-mint !important;
+    }
+  }
 
   // Select drop downs
   select {
@@ -61,8 +131,6 @@
     position: relative;
     text-decoration: none;
     transition: background .55s;
-    border-left: 2px solid transparent;
-    border-top: 2px solid transparent;
 
     &::placeholder {
       color: var(--color-placeholder);
@@ -70,6 +138,7 @@
     }
 
     &:focus {
+      border-color: var(--color-border-forms-focus);
       background-color: var(--color-background-input-field);
       color: var(--color-form-text);
 
