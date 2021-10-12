@@ -3,7 +3,7 @@
  * @Author: 						Roni Laukkarinen
  * @Date:   						2020-07-18 19:03:51
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-10-12 15:34:34
+ * @Last Modified time: 2021-10-12 15:46:50
  *
  * @package dude
  */
@@ -61,7 +61,7 @@
     </div>
 
     <div class="box-mint">
-      <p>Toimintaamme ohjaavat arvot ovat Läpinäkyvyys, laatu, vastuullisuus, rohkeus, kehitys ja välittäminen.</p>
+      <p>Toimintaamme ohjaavat arvot ovat läpinäkyvyys, laatu, vastuullisuus, rohkeus, kehitys ja välittäminen.</p>
 
       <p class="link-wrapper">
         <a class="no-text-link no-external-link-indicator" href="https://www.dude.fi/yritys">Lue lisää Dudesta yrityksenä</a>
