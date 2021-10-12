@@ -6102,6 +6102,11 @@ body.page-id-6357 .block.block-wide-text .block.block-form-job .gform_wrapper.gf
 	display: none;
 }
 
+.block.block-form-job .description {
+	max-width: 80rem;
+	margin-bottom: 4rem;
+}
+
 .block.block-form-job .gform_wrapper .gfield_label,
 .block.block-form-job .gform_wrapper.gravity-theme .gfield_label {
 	font-size: var(--font-size-input-labels);
