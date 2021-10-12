@@ -196,3 +196,12 @@ add_action( 'wp_print_styles', 'dude_remove_styles', 99 );
 add_filter( 'embed_thumbnail_image_size', function() {
   return 'default';
 } );
+
+/**
+ * PHP 8 function support for PHP 7.4
+ */
+if ( ! function_exists( 'str_contains' ) ) {
+  function str_contains( string $haystack, string $needle ) : bool { // phpcs:ignore
+      return '' === $needle || false !== strpos( $haystack, $needle );
+  }
+}

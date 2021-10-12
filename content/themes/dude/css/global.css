@@ -89,7 +89,7 @@ button:-moz-focusring,
 	--color-background-input-field: #f9f9f9;
 	--color-form-text: var(--color-paragraph);
 	--color-form-label-text: var(--color-form-text);
-	--color-required-label-text: var(--color-form-text);
+	--color-required-label-text: var(--color-mint);
 	--color-border-forms: #cbcbcb;
 	--color-border-forms-focus: #131a50;
 	--color-button: var(--color-white);
@@ -6174,6 +6174,11 @@ body.page-id-6357 .block.block-wide-text .block.block-form-job .gform_wrapper.gf
 }
 
 /* stylelint-disable */
+
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
+	width: unset;
+}
 
 .ui-datepicker.ui-widget {
 	border-radius: 0 !important;

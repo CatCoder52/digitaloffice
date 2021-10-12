@@ -3,7 +3,7 @@
  * @Author: 						Roni Laukkarinen
  * @Date:   						2020-07-18 19:03:51
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-10-12 14:24:10
+ * @Last Modified time: 2021-10-12 15:34:34
  *
  * @package dude
  */
@@ -28,7 +28,7 @@
         </a>
       </li>
       <li class="job">
-        <a data-no-swup class="job-link" href="<?php echo esc_url( get_page_link( 9515 ) ); ?>">
+        <a data-no-swup class="job-link" href="<?php echo esc_url( get_page_link( 10156 ) ); ?>">
           <span class="job-title">
             Junior-kehittäjä / Harjoittelija
             <?php include get_theme_file_path( '/svg/arrow-right-short.svg' ); ?>
@@ -37,7 +37,7 @@
         </a>
       </li>
       <li class="job">
-        <a data-no-swup class="job-link" href="<?php echo esc_url( get_page_link( 9515 ) ); ?>">
+        <a data-no-swup class="job-link" href="<?php echo esc_url( get_page_link( 10160 ) ); ?>">
           <span class="job-title">
             Jätä avoin hakemus!
             <?php include get_theme_file_path( '/svg/arrow-right-short.svg' ); ?>
@@ -53,7 +53,7 @@
   <div class="container">
 
     <div class="box-mint">
-      <p>Dudella työskennellään rennosti, mutta tosissaan. Pääasia on, että aamulla ei v*tuta lähteä töihin.</p>
+      <p>Dudella työskennellään rennosti, mutta tosissaan. Pääasia on, että aamulla ei potuta lähteä töihin.</p>
 
       <p class="link-wrapper">
         <a class="no-text-link no-external-link-indicator" href="https://handbook.dude.fi/tyoskenteleminen-dudella">Lue lisää työntekijän handbookista</a>

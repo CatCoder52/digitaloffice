@@ -41,6 +41,11 @@
 
 // jQuery UI Datepicker (yuck)
 /* stylelint-disable */
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
+  width: unset;
+}
+
 .ui-datepicker.ui-widget {
   border-radius: 0 !important;
   border: 0 !important;

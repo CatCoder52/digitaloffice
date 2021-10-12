@@ -24,6 +24,9 @@ get_header(); ?>
 
     <?php include get_theme_file_path( 'template-parts/hero-jobs.php' ); ?>
 
+    <?php
+    // Do not show these if open application page
+    if ( ! is_page( 10160 ) ) : ?>
     <section class="block block-open-position has-light-bg">
       <div class="container">
         <div class="open-positions-description">
@@ -154,6 +157,7 @@ get_header(); ?>
           </li>
         </div>
     </section>
+    <?php endif; ?>
 
     <?php include get_theme_file_path( 'template-parts/content-modular.php' ); ?>
 
