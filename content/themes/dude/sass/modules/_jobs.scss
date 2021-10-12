@@ -1,4 +1,37 @@
 /* stylelint-disable selector-max-specificity, selector-max-class, no-descending-specificity */
+// Open positions in navigation
+span.open-positions-count {
+  width: 14px;
+  height: 14px;
+  background: var(--color-mint);
+  color: var(--color-midnight);
+  border-radius: 50%;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: -12px;
+  top: -8px;
+  position: absolute;
+  font-weight: var(--font-weight-bold);
+
+  &.is-bigger {
+    width: 15px;
+    height: 15px;
+    font-size: 11px;
+    top: 4px;
+    right: -16px;
+
+    @media (max-width: 600px) {
+      right: -18px;
+    }
+  }
+}
+
+.nav-primary .menu-items a.has-jobs {
+  overflow: visible;
+}
+
 // Blocks with lesser padding
 .block.block-logos.block-logos-techniques,
 .block.block-expectations,

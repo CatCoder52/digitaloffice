@@ -371,6 +371,12 @@ body {
   visibility: visible;
 }
 
+@media (min-width: 870px) and (max-width: 1510px) {
+  .nav-toggle.nav-toggle-desktop {
+    right: 5rem;
+  }
+}
+
 @media only screen and (min-width: $responsivenav) {
   .main-navigation-wrapper {
     text-align: center;
@@ -417,7 +423,7 @@ body {
       button:not(.nav-toggle-desktop) {
         font-size: 18px;
         color: $color-nav-links;
-        padding: 2rem 0 .1rem;
+        padding: 0 0 .1rem;
         font-weight: 400;
         transition: border .22s;
         overflow: hidden;
