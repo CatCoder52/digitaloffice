@@ -205,3 +205,24 @@ if ( ! function_exists( 'str_contains' ) ) {
       return '' === $needle || false !== strpos( $haystack, $needle );
   }
 }
+
+/**
+ * Add required attributes to Gravity Forms fields to enable native validation
+ */
+add_filter( 'gform_field_content', __NAMESPACE__ . '\add_custom_attr', 10, 5 );
+function add_custom_attr( $field_content, $field, $value, $form_id ) {
+
+  if ( true === $field->isRequired ) { // phpcs:ignore
+      $field_content = str_replace( 'type=', 'required type=', $field_content );
+  }
+
+  return $field_content;
+ }
+
+/**
+ * Change gravity forms input to button that validates natively (remove onclick and onkeypress events)
+ */
+add_filter( 'gform_submit_button', __NAMESPACE__ . '\form_submit_button', 10, 2 );
+function form_submit_button( $button, $form ) {
+  return "<input type='submit' class='button gform_button' id='gform_submit_button_{$form['id']}' Value='Lähetä' />";
+}
