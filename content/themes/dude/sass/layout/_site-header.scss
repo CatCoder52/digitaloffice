@@ -12,8 +12,10 @@
   justify-content: space-between;
   padding-left: 0;
   padding-right: 0;
-  padding-top: 62px;
-  padding-bottom: 62px;
+  margin-top: 62px;
+  margin-bottom: 62px;
+  padding-top: 0;
+  padding-bottom: 0;
 
   @media (max-width: $grid-base-size + 150px) {
     padding-left: $padding-default-cols-ipad;
@@ -26,8 +28,8 @@
   }
 
   @media (max-width: 760px) {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 }
 

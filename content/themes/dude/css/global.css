@@ -1543,8 +1543,10 @@ img {
 	justify-content: space-between;
 	padding-left: 0;
 	padding-right: 0;
-	padding-top: 62px;
-	padding-bottom: 62px;
+	margin-top: 62px;
+	margin-bottom: 62px;
+	padding-top: 0;
+	padding-bottom: 0;
 }
 
 .site-branding {
@@ -11966,10 +11968,9 @@ body.page-template-template-faq .block-faq .cols-two h3,
 @media only screen and (min-width: 1024px) {
 
 .main-navigation-wrapper {
-	width: 100%;
-	position: relative;
 	text-align: center;
 	z-index: 0;
+	width: 100%;
 }
 
 .nav-toggle-mobile {
@@ -11979,7 +11980,10 @@ body.page-template-template-faq .block-faq .cols-two h3,
 .nav-primary-desktop {
 	padding-top: 0;
 	padding-bottom: 0;
-	width: calc(100% - 30px);
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
 }
 
 .nav-primary-desktop .menu-items {
@@ -15318,8 +15322,8 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper ul.gform_fields > div {
 @media (max-width: 760px) {
 
 .site-header {
-	padding-top: 2rem;
-	padding-bottom: 2rem;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
 }
 
 .block.block-hero {

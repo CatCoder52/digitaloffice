@@ -373,10 +373,9 @@ body {
 
 @media only screen and (min-width: $responsivenav) {
   .main-navigation-wrapper {
-    width: 100%;
-    position: relative;
     text-align: center;
     z-index: 0;
+    width: 100%;
   }
 
   // Make sure mobile nav-toggle is hidden on desktop
@@ -388,9 +387,10 @@ body {
   .nav-primary-desktop {
     padding-top: 0;
     padding-bottom: 0;
-
-    // Offset of nav-toggle width
-    width: calc(100% - 30px);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
 
     .menu-items {
       margin: 0;
