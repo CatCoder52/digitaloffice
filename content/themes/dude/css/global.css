@@ -1135,6 +1135,10 @@ body.page-id-4487 .block.block-hero {
 	top: 4px;
 }
 
+.grecaptcha-badge { /* stylelint-disable-next-line */
+	display: none !important;
+}
+
 /* stylelint-disable selector-max-class, selector-max-specificity, no-descending-specificity, selector-max-combinators, selector-max-compound-selectors, selector-max-pseudo-class, selector-attribute-quotes, max-nesting-depth */
 
 /* stylelint-disable declaration-property-unit-allowed-list */

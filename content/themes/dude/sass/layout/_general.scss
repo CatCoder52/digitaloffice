@@ -375,3 +375,9 @@ a.global-link {
     font-size: 54px;
   }
 }
+
+// Ensure Stripe/WP Simple Pay recatpcha is always hidden
+.grecaptcha-badge {
+  /* stylelint-disable-next-line */
+  display: none !important;
+}
