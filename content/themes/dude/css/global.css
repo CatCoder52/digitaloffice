@@ -4832,17 +4832,6 @@ body:not(.page-id-6357) .block.block-wide-text .site-header {
 	padding-bottom: 0;
 }
 
-.block.block-images.has-style-1::before {
-	content: '';
-	position: absolute;
-	background-color: var(--color-midnight);
-	height: 400px;
-	width: 100%;
-	top: 0;
-	z-index: -1;
-	left: 0;
-}
-
 .block.block-images.has-style-2 {
 	background: transparent;
 	padding-bottom: 0;
