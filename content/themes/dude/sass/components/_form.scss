@@ -61,6 +61,8 @@
     position: relative;
     text-decoration: none;
     transition: background .55s;
+    border-left: 2px solid transparent;
+    border-top: 2px solid transparent;
 
     &::placeholder {
       color: var(--color-placeholder);
@@ -69,7 +71,6 @@
 
     &:focus {
       background-color: var(--color-background-input-field);
-      border-color: var(--color-border-forms-focus);
       color: var(--color-form-text);
 
       &::placeholder {

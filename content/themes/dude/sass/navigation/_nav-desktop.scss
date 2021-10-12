@@ -190,7 +190,7 @@ body {
 
     .contact-title {
       color: $color-white;
-      font-size: 22px;
+      font-size: var(--font-size-22);
       text-align: left;
       margin-top: 0;
       margin-bottom: 2.2rem;
@@ -314,7 +314,7 @@ body {
     @extend %default;
     background: $color-white;
     color: $color-midnight;
-    font-size: 22px;
+    font-size: var(--font-size-22);
     font-weight: 400;
     border: 0;
     width: auto;

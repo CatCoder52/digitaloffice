@@ -35,71 +35,53 @@ body.page-id-6357 .block.block-wide-text {
 
   .gform_wrapper ul.gform_fields li.gfield {
     padding: 0;
-    margin: 0 0 $margin-between-grid-columns !important;
+    margin: 0;
     color: $color-midnight-blue;
   }
 
-  .gform_wrapper ul.gform_fields {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -5rem !important;
-    margin-right: -5rem !important;
-    overflow: hidden;
-
-    @media (max-width: 1000px) {
-      margin-left: -2.5rem !important;
-      margin-right: -2.5rem !important;
-    }
-
-    @media (max-width: 760px) {
-      margin: 0 !important;
-    }
+  // Form screen reader texts
+  .gform_required_legend,
+  .sr-only {
+    @extend %screen-reader-text;
   }
 
-  .gform_wrapper form li.gfmc-column {
-    width: 50%;
+  .gform_wrapper ul.gform_fields {
+    @include grid(2, $gutter_x: 10rem, $gutter_y: 10rem);
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+
+    .validation_message--hidden-on-empty {
+      display: none;
+    }
+
+    @media (max-width: 1000px) {
+      @include grid(2, $gutter_x: 5rem, $gutter_y: 5rem);
+    }
 
     @media (max-width: 760px) {
-      width: 100%;
+      @include grid(1, $gutter_x: 2.5rem, $gutter_y: .5rem);
     }
 
-    &.gfmc-row-1-column,
-    &.gfmc-row-2-column {
-      width: calc(50% - 10rem) !important;
-      margin-left: 5rem !important;
-      margin-right: 5rem !important;
-
-      @media (max-width: 1000px) {
-        width: calc(50% - 5rem) !important;
-        margin-left: 2.5rem !important;
-        margin-right: 2.5rem !important;
-      }
-
-      @media (max-width: 760px) {
-        margin: 0 !important;
-        width: 100% !important;
-      }
+    .gfmc-row-3-column {
+      grid-column: 1 / -1;
     }
 
-    &.gfmc-row-3-column {
-      width: 100% !important;
-      margin-left: 5rem !important;
-      margin-right: 5rem !important;
+    .gfmc-column > ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6rem;
+      align-content: space-between;
 
-      @media (max-width: 1000px) {
-        margin-left: 2.5rem !important;
-        margin-right: 2.5rem !important;
-      }
-
-      @media (max-width: 760px) {
-        margin: 0 !important;
+      > * {
+        width: 100%;
       }
     }
   }
 
   .gform_wrapper legend.gfield_label,
   .gform_wrapper .top_label .gfield_label {
-    font-size: 22px;
+    font-size: var(--font-size-22);
     font-weight: $headings-weight;
     margin-bottom: 1rem;
   }
@@ -168,30 +150,40 @@ body.page-id-6357 .block.block-wide-text {
     color: $color-midnight-blue;
     margin-top: 2rem;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .gform_fileupload_rules {
+    @extend %screen-reader-text;
   }
 
   .gform_wrapper span.gform_drop_instructions {
     font-size: 14px;
     opacity: .6;
-    margin-bottom: 2rem;
+    margin-bottom: 0;
+    width: 100%;
   }
 
   .gform_wrapper .field_description_below .gfield_description {
     padding-top: 0;
   }
 
+  #gform_browse_button_6_8,
+  .gform_wrapper .gform_button_select_files,
   .gform_wrapper.gf_browser_chrome input.button.gform_button_select_files {
     @extend .button;
     border-radius: 0;
     padding: 1.2rem 2.6rem !important;
-    background: transparent;
+    background-color: transparent !important;
     border: 2px solid $color-midnight-blue !important;
     color: $color-midnight-blue !important;
 
     &:hover,
     &:focus {
-      background: $color-midnight-blue;
-      color: $color-white !important;
+      background-color: $color-midnight-blue !important;
+      color: $color-mint !important;
     }
   }
 
@@ -199,6 +191,8 @@ body.page-id-6357 .block.block-wide-text {
   .gform_wrapper ul li.field_description_below div.ginput_container_checkbox ul {
     display: flex;
     flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
 
     li {
       width: 50%;
@@ -234,8 +228,22 @@ body.page-id-6357 .block.block-wide-text {
     overflow: visible;
   }
 
+  // Gform < 2.6 styles
+  .gform_wrapper .top_label div.ginput_container {
+    margin-top: 8px;
+  }
+
+  .gform_wrapper ul li.field_description_below div.ginput_container_checkbox,
+  .gform_wrapper ul li.field_description_below div.ginput_container_radio {
+    margin-top: 16px;
+    margin-bottom: 0;
+  }
+
   .gform_wrapper form #field_6_11 .gfield_label {
     margin-bottom: $margin-between-text-elements;
+    display: inline-block;
+    width: 100%;
+    line-height: 32px;
   }
 
   .gform_wrapper .gfield_radio li label {
@@ -280,6 +288,8 @@ body.page-id-6357 .block.block-wide-text {
     background-position: center;
     transition: none;
     border-radius: 50%;
+    z-index: 5;
+    position: relative;
   }
 
   .gform_wrapper ul.gfield_radio li input[type=radio]:checked + br + label::before,
@@ -309,7 +319,7 @@ body.page-id-6357 .block.block-wide-text {
     .gform_wrapper ul.gfield_radio li input[type=radio] + br + label::before,
     .radio + label::before,
     input[type=radio] + label::before {
-      background: $color-white;
+      background-color: $color-white;
       display: block;
       margin: 0 auto 3rem;
 

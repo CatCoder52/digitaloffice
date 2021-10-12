@@ -1,8 +1,34 @@
-.block.block-job-form .container > h2 {
+/* stylelint-disable selector-max-class, selector-max-specificity */
+.block.block-form-job .container > h2 {
   margin-bottom: 4rem;
   margin-top: 0;
 }
 
-.block.block-job-form {
+.block.block-form-job {
   @include form();
+  @include gravity-form();
+
+  .gform_wrapper .gfield_label,
+  .gform_wrapper.gravity-theme .gfield_label {
+    font-size: var(--font-size-22);
+  }
+
+  .gform_wrapper input[type="text"],
+  .gform_wrapper input[type="password"],
+  .gform_wrapper input[type="email"],
+  .gform_wrapper input[type="url"],
+  .gform_wrapper input[type="date"],
+  .gform_wrapper input[type="month"],
+  .gform_wrapper input[type="time"],
+  .gform_wrapper input[type="datetime"],
+  .gform_wrapper input[type="datetime-local"],
+  .gform_wrapper input[type="week"],
+  .gform_wrapper input[type="number"],
+  .gform_wrapper input[type="search"],
+  .gform_wrapper input[type="tel"],
+  .gform_wrapper input[type="color"],
+  .gform_wrapper textarea,
+  .gform_wrapper select {
+    font-size: var(--font-size-input-fields);
+  }
 }

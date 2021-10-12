@@ -26,6 +26,7 @@ $headings-weight: 600;
   --font-size-17: 17px;
   --font-size-18: 18px;
   --font-size-20: 20px;
+  --font-size-22: 22px;
   --font-size-24: 24px;
   --font-size-github: var(--font-size-16);
   --line-height-paragraphs: 1.7;
@@ -37,6 +38,7 @@ $headings-weight: 600;
 
   @media (max-width: 600px) {
     --font-size-24: 18px;
+    --font-size-22: 18px;
   }
 }
 
