@@ -3,7 +3,7 @@
  * @Author: 						Roni Laukkarinen
  * @Date:   						2020-07-18 19:03:51
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-10-12 15:46:50
+ * @Last Modified time: 2021-10-12 15:53:01
  *
  * @package dude
  */
@@ -69,7 +69,7 @@
     </div>
 
     <div class="box-mint">
-      <p>Aidosti avointa on keskustelukulttuurin lisäksi myös koodi niin GitHubissa kuin WordPress-yhteisössäkin.</p>
+      <p>Olemme aidosti avoimia osallistumalla avoimen lähdekoodin projekteihin ja WordPress-yhteisön toimintaan.</p>
 
       <p class="link-wrapper">
         <a class="no-text-link no-external-link-indicator" href="https://www.dude.fi/yhteiso-ja-koodi">Lue lisää yhteisöstä ja koodista</a>
