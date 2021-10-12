@@ -3,7 +3,7 @@
  * @Author: 						Roni Laukkarinen
  * @Date:   						2020-07-18 19:03:51
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-10-11 16:50:10
+ * @Last Modified time: 2021-10-12 14:24:10
  *
  * @package dude
  */
@@ -80,9 +80,9 @@
 </section>
 
 <section class="block-general-gallery has-dark-bg">
-  <img src="<?php echo esc_url( get_template_directory_uri() . '/images/dudekult-merch-vaatteet-1-2.jpg' ); ?>" alt="Valkoinen pellavapaita, jossa punainen Ouroboros-käärmekuvitus ja DUDE-teksti">
-  <img src="<?php echo esc_url( get_template_directory_uri() . '/images/dudekult-merch-vaatteet-2-2.jpg' ); ?>" alt="Musta huppari, jossa valkoinen Ouroboros-käärmekuvitus ja DUDE-teksti">
-  <img class="bigger" src="<?php echo esc_url( get_template_directory_uri() . '/images/dudekult-merch-vaatteet-5-2.jpg' ); ?>" alt="Musta huppari, jossa valkoinen Ouroboros-käärmekuvitus ja DUDE-teksti">
-  <img src="<?php echo esc_url( get_template_directory_uri() . '/images/dudekult-merch-vaatteet-3-2.jpg' ); ?>" alt="Nainen seisoo edustalla kainalossaan DUDE-kangaskassi, jossa musta Ouroboros-kuvitus ja DUDE-logo, taustalla sumeana kaksi miestä nojaamassa seinään">
-  <img src="<?php echo esc_url( get_template_directory_uri() . '/images/dudekult-merch-vaatteet-4-2.jpg' ); ?>" alt="Musta huppari, jossa valkoinen Ouroboros-käärmekuvitus ja DUDE-teksti">
+  <img src="<?php echo esc_url( get_template_directory_uri() . '/images/rekry-2021-1.jpg' ); ?>" alt="">
+  <img src="<?php echo esc_url( get_template_directory_uri() . '/images/rekry-2021-2.jpg' ); ?>" alt="">
+  <img class="bigger" src="<?php echo esc_url( get_template_directory_uri() . '/images/rekry-2021-3.jpg' ); ?>" alt="">
+  <img src="<?php echo esc_url( get_template_directory_uri() . '/images/rekry-2021-4.jpg' ); ?>" alt="">
+  <img src="<?php echo esc_url( get_template_directory_uri() . '/images/rekry-2021-5.jpg' ); ?>" alt="">
 </section>
