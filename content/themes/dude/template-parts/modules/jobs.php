@@ -3,7 +3,7 @@
  * @Author: 						Roni Laukkarinen
  * @Date:   						2020-07-18 19:03:51
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-10-11 16:12:46
+ * @Last Modified time: 2021-10-11 16:50:10
  *
  * @package dude
  */
@@ -19,7 +19,7 @@
 
     <ul class="jobs">
       <li class="job">
-        <a class="job-link" href="<?php echo esc_url( get_page_link( 9515 ) ); ?>">
+        <a data-no-swup class="job-link" href="<?php echo esc_url( get_page_link( 9515 ) ); ?>">
           <span class="job-title">
             WordPress back-end/JS-kehittäjä
             <?php include get_theme_file_path( '/svg/arrow-right-short.svg' ); ?>
@@ -28,7 +28,7 @@
         </a>
       </li>
       <li class="job">
-        <a class="job-link" href="<?php echo esc_url( get_page_link( 9515 ) ); ?>">
+        <a data-no-swup class="job-link" href="<?php echo esc_url( get_page_link( 9515 ) ); ?>">
           <span class="job-title">
             Junior-kehittäjä / Harjoittelija
             <?php include get_theme_file_path( '/svg/arrow-right-short.svg' ); ?>
@@ -37,7 +37,7 @@
         </a>
       </li>
       <li class="job">
-        <a class="job-link" href="<?php echo esc_url( get_page_link( 9515 ) ); ?>">
+        <a data-no-swup class="job-link" href="<?php echo esc_url( get_page_link( 9515 ) ); ?>">
           <span class="job-title">
             Jätä avoin hakemus!
             <?php include get_theme_file_path( '/svg/arrow-right-short.svg' ); ?>

@@ -5404,7 +5404,8 @@ body.page-id-4487 .block.block-cta-with-image + .block.block-title-left-text-rig
 	grid-row: auto/span 2;
 }
 
-.block.block-upsells-mint > h2 {
+.block.block-upsells-mint .container > h2,
+.block.block-upsells-mint .site-header > h2 {
 	margin-bottom: 4rem;
 	margin-top: 0;
 }
