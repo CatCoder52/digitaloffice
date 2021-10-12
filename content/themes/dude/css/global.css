@@ -5505,6 +5505,9 @@ span.open-positions-count.is-bigger {
 
 .nav-primary .menu-items a.has-jobs {
 	overflow: visible;
+	height: 37px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 .block.block-logos.block-logos-techniques,
@@ -11255,6 +11258,10 @@ body.page-id-9 .block.block-two-images .cols .col:nth-child(2) {
 	margin-bottom: 20rem;
 }
 
+.nav-primary .menu-items a.has-jobs {
+	height: 50px;
+}
+
 .nav-primary .cols.cols-navs {
 	padding-top: 54px;
 	margin-top: 54px;
@@ -16216,26 +16223,6 @@ th {
 
 }
 
-@media (max-width: 580px) {
-
-.block.block-values .cols {
-	display: grid;
-	grid-template-columns: repeat(1, 1fr); /* autoprefixer: off */
-	grid-auto-rows: minmax(0, auto);
-	grid-column-gap: 6rem;
-	grid-row-gap: 6rem;
-}
-
-.block.block-blog .cols {
-	display: grid;
-	grid-template-columns: repeat(1, 1fr); /* autoprefixer: off */
-	grid-auto-rows: minmax(0, auto);
-	grid-column-gap: 6rem;
-	grid-row-gap: 6rem;
-}
-
-}
-
 @media all and (max-width: 580px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 580px) and (-ms-high-contrast: active) and (max-width: 870px) {
 
 .block.block-values .cols > div {
@@ -16276,10 +16263,46 @@ th {
 
 }
 
+@media (max-width: 580px) {
+
+.block.block-values .cols {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr); /* autoprefixer: off */
+	grid-auto-rows: minmax(0, auto);
+	grid-column-gap: 6rem;
+	grid-row-gap: 6rem;
+}
+
+.block.block-blog .cols {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr); /* autoprefixer: off */
+	grid-auto-rows: minmax(0, auto);
+	grid-column-gap: 6rem;
+	grid-row-gap: 6rem;
+}
+
+}
+
 @media (max-width: 570px) {
 
 .block.block-community .item-list {
 	display: block;
+}
+
+}
+
+@media all and (max-width: 530px) and (-ms-high-contrast: none), (max-width: 530px) and (-ms-high-contrast: active) {
+
+.block.block-hero-person .cols {
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+
+.block.block-hero-person .cols > div {
+	width: calc(100% - 0);
+	margin-right: 0;
+	margin-bottom: 0;
 }
 
 }
@@ -16332,22 +16355,6 @@ th {
 
 }
 
-@media all and (max-width: 530px) and (-ms-high-contrast: none), (max-width: 530px) and (-ms-high-contrast: active) {
-
-.block.block-hero-person .cols {
-	display: flex;
-	flex-wrap: wrap;
-	overflow: hidden;
-}
-
-.block.block-hero-person .cols > div {
-	width: calc(100% - 0);
-	margin-right: 0;
-	margin-bottom: 0;
-}
-
-}
-
 @media (max-width: 500px) {
 
 .block.block-footer.site-footer .infos-and-certs .large-text {
@@ -16373,6 +16380,10 @@ th {
 
 .block.block-cta-with-image .col.col-content {
 	padding: 4rem;
+}
+
+.nav-primary .menu-items a.has-jobs {
+	height: 32px;
 }
 
 .nav-primary .cols.cols-navs .col.col-secondary-nav li a {
@@ -16470,23 +16481,6 @@ body.page-id-6357 .block.block-wide-text .gform_wrapper form #field_6_11 ul inpu
 	width: calc(50% - 1rem);
 	margin-right: 1rem;
 	margin-bottom: 2rem;
-}
-
-}
-
-@media all and (max-width: 480px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 480px) and (-ms-high-contrast: active) and (max-width: 870px) {
-
-.col.col-services > div {
-	width: 100%;
-}
-
-.block.block-upsells-mint .boxes > div {
-	width: 100%;
-}
-
-.block.block-community-photos .container > div,
-.block.block-community-photos .site-header > div {
-	width: 100%;
 }
 
 }
@@ -16823,6 +16817,23 @@ body:not(.page-id-6357) .block.block-wide-text .site-header > *.wp-video {
 
 }
 
+@media all and (max-width: 480px) and (-ms-high-contrast: none) and (max-width: 870px), (max-width: 480px) and (-ms-high-contrast: active) and (max-width: 870px) {
+
+.col.col-services > div {
+	width: 100%;
+}
+
+.block.block-upsells-mint .boxes > div {
+	width: 100%;
+}
+
+.block.block-community-photos .container > div,
+.block.block-community-photos .site-header > div {
+	width: 100%;
+}
+
+}
+
 @media (max-width: 450px) {
 
 .block.block-footer.site-footer .infos-and-certs a {
@@ -16955,6 +16966,10 @@ body.single .block.block-single:not(.block-single-reference) .post > .author-car
 }
 
 @media (max-width: 400px) {
+
+.nav-primary .menu-items a.has-jobs {
+	height: 28px;
+}
 
 .nav-primary .cols.cols-navs .col.col-secondary-nav li a {
 	font-size: 18px;
