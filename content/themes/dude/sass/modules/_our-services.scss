@@ -22,6 +22,30 @@
   }
 }
 
+// body.home .block.block-our-services {
+//   background: var(--color-midnight);
+//   color: var(--color-white);
+//   overflow: visible;
+
+//   h1,
+//   h2,
+//   h3,
+//   .block .link-wrapper a,
+//   .cta-link {
+//     color: var(--color-white);
+//     border-color: var(--color-white);
+
+//     &:hover,
+//     &:focus {
+//       color: var(--color-white);
+
+//       &::after {
+//         background-color: var(--color-white);
+//       }
+//     }
+//   }
+// }
+
 .cols.cols-services {
   display: grid;
   grid-template-columns: 3fr 6fr;
