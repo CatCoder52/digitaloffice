@@ -259,6 +259,45 @@ body.page-id-6357 .block.block-wide-text {
     }
   }
 
+  .gform_wrapper ul.gfield_radio li input[type=radio] + br + label,
+  input[type=radio] + label {
+    display: inline-block;
+  }
+
+  .gform_wrapper ul.gfield_radio li input[type=radio] + br + label::before,
+  input[type=radio] + label::before {
+    background: #fff;
+    display: block;
+    margin: 0 auto 3rem;
+    content: '';
+    vertical-align: middle;
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    border-width: var(--checkbox-radio-border-width);
+    border-style: solid;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: none;
+    border-radius: 50%;
+  }
+
+  .gform_wrapper ul.gfield_radio li input[type=radio]:checked + br + label::before,
+  input[type=radio]:checked + label::before {
+    background-image: url('../svg/budget-check.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $color-midnight-blue;
+    width: 4rem;
+    height: 4rem;
+    margin-top: -10px;
+    transform: translateY(8px);
+
+    @media (max-width: 500px) {
+      margin-top: -16px;
+    }
+  }
+
   .gform_wrapper form #field_6_11 ul {
     display: flex;
     width: 100%;
@@ -282,26 +321,10 @@ body.page-id-6357 .block.block-wide-text {
     }
 
     // Let's not effect the radio buttons
-    .gform_wrapper ul.gfield_radio li input[type=radio] + br + label::before,
+    ul.gfield_radio li input[type=radio] + br + label::before,
     .radio + label::before,
     input[type=radio] + label::before {
       transition: none;
-    }
-
-    .gform_wrapper ul.gfield_radio li input[type=radio]:checked + br + label::before,
-    input[type=radio]:checked + label::before {
-      background-image: url('../svg/budget-check.svg');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-color: $color-midnight-blue;
-      width: 4rem;
-      height: 4rem;
-      margin-top: -10px;
-      transform: translateY(8px);
-
-      @media (max-width: 500px) {
-        margin-top: -16px;
-      }
     }
 
     &::before {

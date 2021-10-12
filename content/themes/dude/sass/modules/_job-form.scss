@@ -1,0 +1,8 @@
+.block.block-job-form .container > h2 {
+  margin-bottom: 4rem;
+  margin-top: 0;
+}
+
+.block.block-job-form {
+  @include form();
+}
