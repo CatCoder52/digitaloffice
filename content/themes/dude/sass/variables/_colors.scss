@@ -1,7 +1,7 @@
 // Brand 2020
 $color-cobalt-blue: #4d4aff;
 $color-midnight-blue: #131a50;
-$color-midnight: #03061b;
+$color-midnight: #161826;
 $color-mint: #7effe1;
 $color-mint-alternative: #4cd9b8;
 $color-mint-alternative-hover: darken(#4cd9b8, 15%);
@@ -17,7 +17,9 @@ $color-button-white-hover: #f2f2f2;
 $color-pitch-black: #000;
 $color-links: $color-midnight;
 $color-hover: $color-mint;
-$color-paragraphs: #545773;
+$color-paragraphs-greyish-blue: #545773;
+$color-greyish-blue: #363957;
+$color-paragraphs: $color-paragraphs-greyish-blue;
 $color-paragraphs-light: #e3e5ec;
 $color-body: $color-midnight-blue;
 $color-headings: $color-midnight-blue;
