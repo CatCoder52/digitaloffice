@@ -36,6 +36,9 @@
 
   ul {
     list-style: none;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
   }
 
   li {
@@ -43,15 +46,32 @@
     align-items: center;
     gap: 1.8rem;
     color: var(--color-midnight-blue);
+    width: 100%;
+
+    @media (max-width: 480px) {
+      font-size: 16px;
+      align-items: flex-start;
+    }
 
     svg {
-      width: 3rem;
-      height: 3rem;
-      min-width: 3rem;
+      --icon-size: 3rem;
+      width: var(--icon-size);
+      height: var(--icon-size);
+      min-width: var(--icon-size);
+
+      @media (max-width: 480px) {
+        --icon-size: 2rem;
+        position: relative;
+        top: .4rem;
+      }
     }
   }
 
   .container {
-    @include grid(2, $gutter_x: 50px, $gutter_y: 50px);
+    @include grid(2, $gutter_x: 5rem, $gutter_y: 5rem);
+
+    @media (max-width: 760px) {
+      @include grid(1, $gutter_x: 5rem, $gutter_y: 5rem);
+    }
   }
 }
