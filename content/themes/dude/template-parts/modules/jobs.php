@@ -3,7 +3,7 @@
  * @Author: 						Roni Laukkarinen
  * @Date:   						2020-07-18 19:03:51
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-10-12 16:22:27
+ * @Last Modified time: 2021-10-18 12:47:31
  *
  * @package dude
  */
@@ -79,10 +79,13 @@
   </div>
 </section>
 
-<section class="block-general-gallery has-dark-bg">
-  <img src="<?php echo esc_url( get_template_directory_uri() . '/images/rekry-2021-1.jpg' ); ?>" alt="">
-  <img src="<?php echo esc_url( get_template_directory_uri() . '/images/rekry-2021-2.jpg' ); ?>" alt="">
-  <img class="bigger" src="<?php echo esc_url( get_template_directory_uri() . '/images/rekry-2021-3.jpg' ); ?>" alt="">
-  <img src="<?php echo esc_url( get_template_directory_uri() . '/images/rekry-2021-4.jpg' ); ?>" alt="">
-  <img src="<?php echo esc_url( get_template_directory_uri() . '/images/rekry-2021-5.jpg' ); ?>" alt="">
+<section class="block block-modern-gallery has-light-bg block-no-padding">
+  <div class="container">
+    <img class="image-1" src="<?php echo esc_url( get_template_directory_uri() . '/images/rekry-2021-1.jpg' ); ?>" alt="">
+    <img class="image-2" src="<?php echo esc_url( get_template_directory_uri() . '/images/rekry-2021-2.jpg' ); ?>" alt="">
+    <img class="image-3" src="<?php echo esc_url( get_template_directory_uri() . '/images/rekry-2021-3.jpg' ); ?>" alt="">
+    <img class="image-4" src="<?php echo esc_url( get_template_directory_uri() . '/images/rekry-2021-6.jpg' ); ?>" alt="">
+    <img class="image-5" src="<?php echo esc_url( get_template_directory_uri() . '/images/rekry-2021-5.jpg' ); ?>" alt="">
+    <img class="image-6" src="<?php echo esc_url( get_template_directory_uri() . '/images/rekry-2021-7.jpg' ); ?>" alt="">
+  </div>
 </section>

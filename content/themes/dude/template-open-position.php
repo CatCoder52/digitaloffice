@@ -35,8 +35,18 @@ get_header(); ?>
           </div>
 
           <div class="img">
-            <img src="https://www.dude.fi/media/3158628.jpg" alt="Maaantaisin on hauskaa palaverissa">
-            <figcaption>Toimistolla kuulee aina hauskoja juttuja</figcaption>
+            <?php
+              // Junior application
+              if ( is_page( 10156 ) ) : ?>
+              <img src="<?php echo esc_url( get_template_directory_uri() . '/images/rekry-alasivu-juniori.jpg' ); ?>" alt="Roni ja Tuomas">
+              <figcaption>Tärkeintä on, että töissä viihtyy.</figcaption>
+            <?php elseif ( is_page( 9515 ) ) : ?>
+              <img src="<?php echo esc_url( get_template_directory_uri() . '/images/rekry-alasivu-backend.jpg' ); ?>" alt="Kari ja Timi">
+              <figcaption>Ajatustenvaihtoa työkaverin kanssa.</figcaption>
+            <?php else : ?>
+              <img src="<?php echo esc_url( get_template_directory_uri() . '/images/rekry-kristian.jpg' ); ?>" alt="Kristian sohvalla läppärin kanssa">
+              <figcaption>Toimitusjohtaja Kristian odottaa työhakemuksia.</figcaption>
+            <?php endif; ?>
           </div>
         </div>
       </div>
