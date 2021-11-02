@@ -212,8 +212,14 @@ if ( ! function_exists( 'str_contains' ) ) {
 add_filter( 'gform_field_content', __NAMESPACE__ . '\add_custom_attr', 10, 5 );
 function add_custom_attr( $field_content, $field, $value, $form_id ) {
 
+  // Add type attribute to file upload button, otherwise it tries to send
+  if ( 'fileupload' === $field->type ) {
+    $field_content = str_replace( '<button', '<button type="button"', $field_content );
+  }
+
+  // Add required to get native HTML validation instead of GF jQuery version
   if ( true === $field->isRequired ) { // phpcs:ignore
-      $field_content = str_replace( 'type=', 'required type=', $field_content );
+    $field_content = str_replace( 'type=', 'required type=', $field_content );
   }
 
   return $field_content;
