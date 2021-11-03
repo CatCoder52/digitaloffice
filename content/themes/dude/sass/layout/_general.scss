@@ -383,12 +383,12 @@ a.global-link {
 }
 
 // GitHub link
-body a.github-link,
-body a:active.github-link,
-body a:link.github-link,
-body a:hover.github-link,
-body a:focus.github-link,
-body a:visited.github-link {
+body .gutenberg-content a.github-link,
+body .gutenberg-content a:active.github-link,
+body .gutenberg-content a:link.github-link,
+body .gutenberg-content a:hover.github-link,
+body .gutenberg-content a:focus.github-link,
+body .gutenberg-content a:visited.github-link {
   background-image: url('../svg/github-link.svg');
   background-position: 0 center;
   background-repeat: no-repeat;

@@ -1141,12 +1141,24 @@ body.page-id-4487 .block.block-hero {
 	display: none !important;
 }
 
-body a.github-link,
-body a:active.github-link,
-body a:link.github-link,
-body a:hover.github-link,
-body a:focus.github-link,
-body a:visited.github-link {
+body .gutenberg-content a.github-link,
+body:not(.page-id-6357) .block.block-wide-text .container a.github-link,
+body:not(.page-id-6357) .block.block-wide-text .site-header a.github-link,
+body .gutenberg-content a:active.github-link,
+body:not(.page-id-6357) .block.block-wide-text .container a:active.github-link,
+body:not(.page-id-6357) .block.block-wide-text .site-header a:active.github-link,
+body .gutenberg-content a:link.github-link,
+body:not(.page-id-6357) .block.block-wide-text .container a:link.github-link,
+body:not(.page-id-6357) .block.block-wide-text .site-header a:link.github-link,
+body .gutenberg-content a:hover.github-link,
+body:not(.page-id-6357) .block.block-wide-text .container a:hover.github-link,
+body:not(.page-id-6357) .block.block-wide-text .site-header a:hover.github-link,
+body .gutenberg-content a:focus.github-link,
+body:not(.page-id-6357) .block.block-wide-text .container a:focus.github-link,
+body:not(.page-id-6357) .block.block-wide-text .site-header a:focus.github-link,
+body .gutenberg-content a:visited.github-link,
+body:not(.page-id-6357) .block.block-wide-text .container a:visited.github-link,
+body:not(.page-id-6357) .block.block-wide-text .site-header a:visited.github-link {
 	background-image: url("../svg/github-link.svg");
 	background-position: 0 center;
 	background-repeat: no-repeat;
