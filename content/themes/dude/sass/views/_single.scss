@@ -145,12 +145,7 @@ body.single .block.block-single:not(.block-single-reference) {
       line-height: $line-height-blog;
 
       a {
-        font-weight: 700;
-        border-bottom: 2px solid $color-mint;
-      }
-
-      a:hover {
-        background-color: $color-mint;
+        @include link();
       }
     }
 
