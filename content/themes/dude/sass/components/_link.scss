@@ -6,7 +6,7 @@
   text-decoration: underline;
   text-decoration-color: var(--color-midnight-blue);
   transition: all .18s ease-in-out;
-  display: inline-flex;
+  display: inline !important;
   color: var(--color-midnight-blue);
   text-underline-offset: 6px;
 

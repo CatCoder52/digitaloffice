@@ -1313,7 +1313,7 @@ body:not(.page-id-6357) .block.block-wide-text .site-header a:visited.github-lin
 	text-decoration: underline;
 	text-decoration-color: var(--color-midnight-blue);
 	transition: all .18s ease-in-out;
-	display: inline-flex;
+	display: inline !important;
 	color: var(--color-midnight-blue);
 	text-underline-offset: 6px;
 }
@@ -1334,7 +1334,7 @@ body:not(.page-id-6357) .block.block-wide-text .site-header a:visited.github-lin
 	text-decoration: underline;
 	text-decoration-color: var(--color-midnight-blue);
 	transition: all .18s ease-in-out;
-	display: inline-flex;
+	display: inline !important;
 	color: var(--color-midnight-blue);
 	text-underline-offset: 6px;
 }
@@ -2831,7 +2831,7 @@ input[type=checkbox]:checked + br + label::before {
 	text-decoration: underline;
 	text-decoration-color: var(--color-midnight-blue);
 	transition: all .18s ease-in-out;
-	display: inline-flex;
+	display: inline !important;
 	color: var(--color-midnight-blue);
 	text-underline-offset: 6px;
 	font-weight: 700;
@@ -4498,7 +4498,7 @@ body.page-id-4487 .columns.block.block-hero {
 	text-decoration: underline;
 	text-decoration-color: var(--color-midnight-blue);
 	transition: all .18s ease-in-out;
-	display: inline-flex;
+	display: inline !important;
 	color: var(--color-midnight-blue);
 	text-underline-offset: 6px;
 }
@@ -8292,7 +8292,7 @@ body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:n
 	text-decoration: underline;
 	text-decoration-color: var(--color-midnight-blue);
 	transition: all .18s ease-in-out;
-	display: inline-flex;
+	display: inline !important;
 	color: var(--color-midnight-blue);
 	text-underline-offset: 6px;
 }
