@@ -394,7 +394,8 @@ body a:visited.github-link {
   background-repeat: no-repeat;
   background-size: 22px 22px;
   border: 0;
-  color: var(--color-pitch-black);
+  // stylelint-disable-next-line
+  color: var(--color-pitch-black) !important;
   font-weight: 600;
   padding-left: 28px;
   text-decoration: none;
