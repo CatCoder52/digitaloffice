@@ -1,0 +1,18 @@
+@mixin link() {
+  position: relative;
+  overflow: visible;
+  font-weight: var(--font-weight-medium);
+  z-index: 1;
+  text-decoration: underline;
+  text-decoration-color: var(--color-midnight-blue);
+  transition: all .18s ease-in-out;
+  display: inline-flex;
+  color: var(--color-midnight-blue);
+  text-underline-offset: 6px;
+
+  &:hover,
+  &:focus {
+    color: var(--color-cobalt-blue);
+    text-decoration-color: var(--color-cobalt-blue);
+  }
+}

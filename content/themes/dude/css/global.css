@@ -82,6 +82,8 @@ button:-moz-focusring,
 	--line-height-paragraphs: 1.7;
 	--line-height-paragraphs-blog: 1.77;
 	--font-weight-regular: 400;
+	--font-weight-medium: 500;
+	--font-weight-semibold: 600;
 	--font-weight-bold: 700;
 }
 
@@ -1231,41 +1233,6 @@ body a:visited.github-link {
 	font-size: 62.5%;
 }
 
-.block p a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
-.text-link,
-.block.block-title-left-text-right li a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
-.block.block-hero .hero-description button,
-.block.block-hero .hero-description button.open-chat,
-.block.block-timeline .col a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link),
-.block.block-timeline .active a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link) {
-	position: relative;
-	overflow: visible;
-	font-weight: 700;
-	z-index: 1;
-	text-decoration: none;
-	transition: all .18s ease-in-out;
-	display: inline-flex;
-	color: #161826;
-	border-bottom: 1px solid #7effe1;
-	box-shadow: inset 0 -0.1rem 0 #7effe1;
-}
-
-.block p a:hover:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
-.text-link:hover,
-.block.block-title-left-text-right li a:hover:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
-.block.block-hero .hero-description button:hover,
-.block.block-timeline .col a:hover:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link),
-.block.block-timeline .active a:hover:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link),
-.block p a:focus:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
-.text-link:focus,
-.block.block-title-left-text-right li a:focus:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
-.block.block-hero .hero-description button:focus,
-.block.block-timeline .col a:focus:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link),
-.block.block-timeline .active a:focus:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link) {
-	box-shadow: inset 0 -3.3rem 0 #7effe1;
-	color: #161826;
-}
-
 .cta-link,
 .block .link-wrapper a {
 	color: #131a50;
@@ -1323,6 +1290,47 @@ body a:visited.github-link {
 
 .cta-link.cta-link-white::after {
 	background: #fff;
+}
+
+.block p a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
+.text-link {
+	position: relative;
+	overflow: visible;
+	font-weight: var(--font-weight-medium);
+	z-index: 1;
+	text-decoration: underline;
+	text-decoration-color: var(--color-midnight-blue);
+	transition: all .18s ease-in-out;
+	display: inline-flex;
+	color: var(--color-midnight-blue);
+	text-underline-offset: 6px;
+}
+
+.block p a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):hover,
+.block p a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):focus,
+.text-link:hover,
+.text-link:focus {
+	color: var(--color-cobalt-blue);
+	text-decoration-color: var(--color-cobalt-blue);
+}
+
+.block.block-title-left-text-right li a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail) {
+	position: relative;
+	overflow: visible;
+	font-weight: var(--font-weight-medium);
+	z-index: 1;
+	text-decoration: underline;
+	text-decoration-color: var(--color-midnight-blue);
+	transition: all .18s ease-in-out;
+	display: inline-flex;
+	color: var(--color-midnight-blue);
+	text-underline-offset: 6px;
+}
+
+.block.block-title-left-text-right li a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):hover,
+.block.block-title-left-text-right li a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):focus {
+	color: var(--color-cobalt-blue);
+	text-decoration-color: var(--color-cobalt-blue);
 }
 
 .block .link-wrapper {
@@ -2804,11 +2812,29 @@ input[type=checkbox]:checked + br + label::before {
 
 .block.block-hero .hero-description button,
 .block.block-hero .hero-description button.open-chat {
+	position: relative;
+	overflow: visible;
+	font-weight: var(--font-weight-medium);
+	z-index: 1;
+	text-decoration: underline;
+	text-decoration-color: var(--color-midnight-blue);
+	transition: all .18s ease-in-out;
+	display: inline-flex;
+	color: var(--color-midnight-blue);
+	text-underline-offset: 6px;
 	font-weight: 700;
 	background: transparent;
 	border-radius: 0;
 	padding: 0;
 	border: 0;
+}
+
+.block.block-hero .hero-description button:hover,
+.block.block-hero .hero-description button:focus,
+.block.block-hero .hero-description button.open-chat:hover,
+.block.block-hero .hero-description button.open-chat:focus {
+	color: var(--color-cobalt-blue);
+	text-decoration-color: var(--color-cobalt-blue);
 }
 
 .block.block-hero .hero-description button:hover,
@@ -4449,6 +4475,28 @@ body.page-id-4487 .columns.block.block-hero {
 .block.block-timeline {
 	padding-top: 0;
 	padding-bottom: 0;
+}
+
+.block.block-timeline .col a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link),
+.block.block-timeline .active a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link) {
+	position: relative;
+	overflow: visible;
+	font-weight: var(--font-weight-medium);
+	z-index: 1;
+	text-decoration: underline;
+	text-decoration-color: var(--color-midnight-blue);
+	transition: all .18s ease-in-out;
+	display: inline-flex;
+	color: var(--color-midnight-blue);
+	text-underline-offset: 6px;
+}
+
+.block.block-timeline .col a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):hover,
+.block.block-timeline .col a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):focus,
+.block.block-timeline .active a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):hover,
+.block.block-timeline .active a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):focus {
+	color: var(--color-cobalt-blue);
+	text-decoration-color: var(--color-cobalt-blue);
 }
 
 .block.block-timeline .block-title {

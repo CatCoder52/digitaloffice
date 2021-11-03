@@ -102,7 +102,7 @@
 
     button,
     button.open-chat {
-      @extend %textlink;
+      @include link();
       font-weight: 700;
       background: transparent;
       border-radius: 0;

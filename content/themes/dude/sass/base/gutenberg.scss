@@ -5,6 +5,9 @@
 @import '../variables/fonts';
 @import '../variables/spacings';
 
+// Components (2021)
+@import '../components/link';
+
 // Helpers
 @import 'helpers'; // 12.691 kB
 @import 'accessibility'; // 23.989 kB
@@ -74,25 +77,6 @@ body {
   }
 
   // layout/_typography.scss starts
-  %textlink {
-    position: relative;
-    overflow: visible;
-    font-weight: 700;
-    z-index: 1;
-    text-decoration: none;
-    transition: all .18s ease-in-out;
-    display: inline-flex;
-    color: $color-midnight;
-    border-bottom: 1px solid $color-mint;
-    box-shadow: inset 0 -.1rem 0 $color-mint;
-
-    &:hover,
-    &:focus {
-      box-shadow: inset 0 -3.3rem 0 $color-mint;
-      color: $color-midnight;
-    }
-  }
-
   // Special links
   .cta-link,
   %cta-link {
@@ -125,11 +109,11 @@ body {
 
   p a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
   .text-link {
-    @extend %textlink;
+    @include link();
   }
 
   li a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail) {
-    @extend %textlink;
+    @include link();
   }
 
   // Links
@@ -346,14 +330,14 @@ body {
     }
 
     > a:not(.button):not(.post-edit-link):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link) {
-      @extend %textlink;
+      @include link();
       position: relative;
       text-decoration: none;
     }
   }
 
   * a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link) {
-    @extend %textlink;
+    @include link();
     position: relative;
     text-decoration: none;
   }
