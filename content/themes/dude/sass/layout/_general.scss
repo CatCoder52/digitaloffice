@@ -381,3 +381,24 @@ a.global-link {
   /* stylelint-disable-next-line */
   display: none !important;
 }
+
+// GitHub link
+body a.github-link,
+body a:active.github-link,
+body a:link.github-link,
+body a:hover.github-link,
+body a:focus.github-link,
+body a:visited.github-link {
+  background-image: url('../svg/github-link.svg');
+  background-position: 0 center;
+  background-repeat: no-repeat;
+  background-size: 22px 22px;
+  border: 0;
+  color: var(--color-pitch-black);
+  font-weight: 600;
+  padding-left: 28px;
+  text-decoration: none;
+  text-shadow: unset;
+  transition: .3s;
+  box-shadow: unset;
+}
