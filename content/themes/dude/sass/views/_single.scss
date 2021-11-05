@@ -181,13 +181,14 @@ body.single .block.block-single:not(.block-single-reference) {
     margin: 0 13px 13px 0;
     font-size: var(--font-size-general-small);
     border: 1px solid $color-midnight-blue;
+    display: inline-flex !important;
     padding: 7px 17px !important;
     line-height: 1;
     color: $color-midnight-blue;
     text-decoration: none;
     box-shadow: none;
     font-weight: 400;
-    display: inline-flex;
+    // stylelint-disable-next-line
     align-items: center;
     justify-content: center;
     background-image: none !important;
