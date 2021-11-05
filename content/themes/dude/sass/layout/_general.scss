@@ -180,6 +180,10 @@ body.page-id-9 {
   overflow: hidden;
   clear: both;
   display: block;
+
+  &.entry-footer-guest-post {
+    margin-bottom: 5rem;
+  }
 }
 
 // Global link helper
@@ -359,4 +363,43 @@ a.global-link {
   display: inline-flex;
   position: relative;
   top: 4px;
+}
+
+// Block title exception
+.archive-head .block-title.block-title.block-title-archive {
+  @extend %h2;
+}
+
+@media (min-width: 1300px) {
+  .archive-head .block-title.block-title.block-title-archive {
+    font-size: 54px;
+  }
+}
+
+// Ensure Stripe/WP Simple Pay recatpcha is always hidden
+.grecaptcha-badge {
+  /* stylelint-disable-next-line */
+  display: none !important;
+}
+
+// GitHub link
+body .gutenberg-content a.github-link,
+body .gutenberg-content a:active.github-link,
+body .gutenberg-content a:link.github-link,
+body .gutenberg-content a:hover.github-link,
+body .gutenberg-content a:focus.github-link,
+body .gutenberg-content a:visited.github-link {
+  background-image: url('../svg/github-link.svg');
+  background-position: 0 center;
+  background-repeat: no-repeat;
+  background-size: 22px 22px;
+  border: 0;
+  // stylelint-disable-next-line
+  color: var(--color-pitch-black) !important;
+  font-weight: 600;
+  padding-left: 28px;
+  text-decoration: none;
+  text-shadow: unset;
+  transition: .3s;
+  box-shadow: unset;
 }

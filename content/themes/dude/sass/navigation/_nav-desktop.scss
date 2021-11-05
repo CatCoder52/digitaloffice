@@ -190,7 +190,7 @@ body {
 
     .contact-title {
       color: $color-white;
-      font-size: 22px;
+      font-size: var(--font-size-22);
       text-align: left;
       margin-top: 0;
       margin-bottom: 2.2rem;
@@ -234,14 +234,9 @@ body {
 
     a,
     button.chat {
-      color: $color-white;
-      border-bottom: 1px solid rgba($color-white, .3);
-      transition: border .22s;
+      @include link($color: var(--color-white), $color-hover: var(--color-white), $color-underline: rgba(255, 255, 255, .3), $color-underline-hover: var(--color-mint));
+      transition: all .22s;
       overflow: hidden;
-
-      &:hover {
-        border-bottom: 1px solid $color-mint;
-      }
     }
   }
 }
@@ -314,7 +309,7 @@ body {
     @extend %default;
     background: $color-white;
     color: $color-midnight;
-    font-size: 22px;
+    font-size: var(--font-size-22);
     font-weight: 400;
     border: 0;
     width: auto;
@@ -371,12 +366,17 @@ body {
   visibility: visible;
 }
 
+@media (min-width: 870px) and (max-width: 1510px) {
+  .nav-toggle.nav-toggle-desktop {
+    right: 5rem;
+  }
+}
+
 @media only screen and (min-width: $responsivenav) {
   .main-navigation-wrapper {
-    width: 100%;
-    position: relative;
     text-align: center;
     z-index: 0;
+    width: 100%;
   }
 
   // Make sure mobile nav-toggle is hidden on desktop
@@ -388,9 +388,10 @@ body {
   .nav-primary-desktop {
     padding-top: 0;
     padding-bottom: 0;
-
-    // Offset of nav-toggle width
-    width: calc(100% - 30px);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
 
     .menu-items {
       margin: 0;
@@ -417,7 +418,7 @@ body {
       button:not(.nav-toggle-desktop) {
         font-size: 18px;
         color: $color-nav-links;
-        padding: 2rem 0 .1rem;
+        padding: 0 0 .1rem;
         font-weight: 400;
         transition: border .22s;
         overflow: hidden;

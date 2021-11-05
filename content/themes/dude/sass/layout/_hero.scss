@@ -102,7 +102,7 @@
 
     button,
     button.open-chat {
-      @extend %textlink;
+      @include link();
       font-weight: 700;
       background: transparent;
       border-radius: 0;
@@ -137,20 +137,29 @@
   }
 
   // Merch hero
+  &.block-hero-reference.block-hero-merch,
   &.block-hero-merch {
     min-height: 0;
     height: auto;
-    padding-top: 0;
-    padding-bottom: 0;
+
+    @media (max-width: 900px) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
 
     > .container {
       transform: none;
-      padding-top: 20rem;
-      padding-bottom: 15rem;
+      padding-top: 10rem;
+      padding-bottom: 10rem;
 
-      @media (max-width: 760px) {
-        padding-top: 18rem;
-        padding-bottom: 0;
+      @media (max-width: 900px) {
+        padding-bottom: 5rem;
+        padding-top: 15rem;
+
+        /* stylelint-disable-next-line */
+        .hero-description {
+          margin-bottom: 0;
+        }
       }
     }
 
@@ -165,7 +174,7 @@
       margin-bottom: $padding-blocks-medium;
 
       a {
-        border-bottom: 1px solid rgba($color-white, .5);
+        @include link($color: var(--color-white), $color-hover: var(--color-white), $color-underline: rgba(255, 255, 255, .3), $color-underline-hover: var(--color-mint));
       }
 
       a:hover {
@@ -232,5 +241,31 @@ body.page-id-6117 .block-hero.block-hero-light {
   h2,
   p {
     color: $color-white;
+  }
+}
+
+// New 2021 thanks page
+/* stylelint-disable-next-line */
+body.page-id-5973 .block.block-hero-merch-thanks {
+  background-color: transparent !important;
+}
+
+body.page-id-5973 {
+  .content-area {
+    /* stylelint-disable-next-line */
+    background-color: #161616;
+  }
+}
+
+.ouroboros {
+  top: -77px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1680px;
+  height: auto;
+
+  path {
+    fill: #1b1b1b;
   }
 }

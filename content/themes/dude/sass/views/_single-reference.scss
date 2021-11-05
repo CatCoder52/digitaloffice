@@ -59,6 +59,27 @@ body.single.single-reference {
         max-width: 900px;
       }
 
+      @media (max-width: 600px) {
+        .wp-block-columns .wp-block-column {
+          margin-bottom: 6rem;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+
+        .wp-block-columns.title-only-block,
+        .wp-block-columns.title-only-block .wp-block-column {
+          margin-bottom: 0;
+          padding-bottom: 0;
+
+          h2 {
+            margin-bottom: 0;
+            padding-bottom: 0;
+          }
+        }
+      }
+
       .wp-block-column h2 {
         @extend %general-heading-cta;
         font-weight: $headings-weight;
@@ -121,14 +142,13 @@ body.single.single-reference {
 
       // Reset refrence links on dark background
       a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail) {
-        color: $color-white;
-        border-bottom: 1px solid rgba($color-white, .3);
-        transition: border .22s;
+        @include link($color: var(--color-white), $color-hover: var(--color-white), $color-underline: rgba(255, 255, 255, .3), $color-underline-hover: var(--color-mint));
+        text-underline-offset: 4px;
+        transition: all .22s;
         overflow: hidden;
         box-shadow: none;
 
         &:hover {
-          border-bottom: 1px solid $color-mint;
           background: none;
         }
       }

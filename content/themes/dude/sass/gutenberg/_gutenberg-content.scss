@@ -14,20 +14,31 @@
   padding-bottom: 0;
 
   // Loops to enumerate the classes for columns.
+
   .blocks-gallery-grid {
-    display: grid;
+    // display: grid;
 
     .blocks-gallery-item {
-      width: 100%;
+      // width: 100%;
+
+      @media (min-width: $container-mobile) {
+        img {
+          border-radius: 4px !important;
+        }
+      }
     }
   }
 
-  @for $i from 2 through 9 {
-    .columns-#{$i} .blocks-gallery-grid {
-      grid-template-columns: repeat($i, 1fr);
-      grid-column-gap: 1.5rem;
-    }
-  }
+  // @for $i from 2 through 9 {
+  //   .columns-#{$i} {
+  //     display: block;
+  //   }
+
+  //   .columns-#{$i} .blocks-gallery-grid {
+  //     grid-template-columns: repeat($i, 1fr);
+  //     grid-column-gap: 1.5rem;
+  //   }
+  // }
 
   // WordPress alignments
   .cat-links,
@@ -52,31 +63,18 @@
   }
 
   .wp-block-gallery {
-    @extend .columns;
-    width: 100%;
-    max-width: 100%;
-    padding-left: 15px;
+    width: unset;
+    max-width: unset;
+    padding: 1.5rem;
+    gap: 1.5rem;
 
-    @media (max-width: 910px) {
-      padding-right: .5rem !important;
-      padding-left: 2rem;
+    .blocks-gallery-grid {
+      gap: 1.5rem;
     }
 
-    @media (max-width: 600px) {
-      display: block;
-    }
-
-    .blocks-gallery-item:last-child {
-      margin-right: 0 !important;
-    }
-
-    > * {
-      @extend .column;
-
-      @media (max-width: 600px) {
-        display: block;
-        width: 100%;
-      }
+    .blocks-gallery-item {
+      margin: 0;
+      padding: 0;
     }
   }
 
@@ -118,6 +116,7 @@
     display: block;
   }
 
+  .blocks-gallery-grid + figcaption.blocks-gallery-caption,
   figcaption,
   cite,
   small {
@@ -137,6 +136,10 @@
     @media (max-width: $container-mobile) {
       margin-top: 2rem;
     }
+  }
+
+  .blocks-gallery-grid + figcaption.blocks-gallery-caption {
+    margin-bottom: 0;
   }
 
   a:hover {
@@ -254,6 +257,7 @@
       margin-bottom: 4rem;
 
       img {
+        border-radius: 4px;
         max-width: 100%;
         width: 100%;
         height: auto;

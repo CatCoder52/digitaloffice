@@ -9,6 +9,9 @@
  * @package dude
  */
 
+// Sales phone
+$sales_phone = '0408351033';
+
 $show_chat_greeting = true;
 if ( is_singular( 'post' ) ) {
   $show_chat_greeting = get_post_meta( get_the_id(), 'show_chat_greeting', true );
@@ -27,6 +30,14 @@ if ( $show_chat_greeting ) {
 ?><!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
+<!-- Global site tag (gtag.js) - Google Ads: 746677006 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-746677006"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-746677006'); </script>
+<?php if ( is_page( 4737 ) ) : ?>
+<!-- Event snippet for Pyydä tarjous conversion page -->
+<script>
+  gtag('event', 'conversion', {'send_to': 'AW-746677006/LP2iCKHFuPUBEI7GheQC'});
+</script>
+<?php endif; ?>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="google-site-verification" content="XF8_bRTu-S4gCsZgA0J78vtv0S5dfIjIFa0Lfm7kO_Y" />
@@ -151,7 +162,29 @@ if ( $show_chat_greeting ) {
         <?php endif; ?>
       </div><!-- .site-branding -->
 
-      <p class="call-me-maybe"><a href="tel:0408351033"><?php include get_theme_file_path( '/svg/phone.svg' ); ?> <span>Kilauta</span></a></p>
+      <!-- Event snippet for Pyydä tarjous conversion page
+      In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+      <script>
+      function gtag_report_conversion(url) {
+        var callback = function () {
+          if (typeof(url) != 'undefined') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'conversion', {
+            'send_to': 'AW-746677006/LP2iCKHFuPUBEI7GheQC',
+            'event_callback': callback
+        });
+        return false;
+      }
+      </script>
+
+      <p class="call-me-maybe">
+        <a onclick="return gtag_report_conversion('tel:<?php echo esc_html( $sales_phone ); ?>');" href="tel:<?php echo esc_html( $sales_phone ); ?>">
+          <?php include get_theme_file_path( '/svg/phone.svg' ); ?>
+          <span>Kilauta</span>
+        </a>
+      </p>
 
       <div class="main-navigation-wrapper" id="main-navigation-wrapper">
 
@@ -160,7 +193,8 @@ if ( $show_chat_greeting ) {
             <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-18"><a href="<?php echo get_the_permalink( 9 ); ?>" data-text="Verkkosivut">Verkkosivut</a></li>
             <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-19"><a href="<?php echo get_the_permalink( 4485 ); ?>" data-text="Suunnittelu">Suunnittelu</a></li>
             <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4482"><a href="<?php echo get_the_permalink( 4493 ); ?>" data-text="Töitämme">Töitämme</a></li>
-            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-22"><a data-no-swup href="<?php echo get_the_permalink( 6357 ); ?>" data-text=">Ota yhteyttä">Ota yhteyttä</a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4491"><a href="<?php echo get_the_permalink( 4491 ); ?>" data-text="Työpaikat">Työpaikat<span class="open-positions-count"><span class="screen-reader-text">, </span>3<span class="screen-reader-text">työpaikkaa avoinna</span></span></a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-22"><a href="<?php echo get_the_permalink( 4487 ); ?>" data-text=">Yhteystiedot">Yhteystiedot</a></li>
           </ul>
         </nav><!-- #nav -->
 
@@ -184,7 +218,7 @@ if ( $show_chat_greeting ) {
                   <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo esc_url( get_post_type_archive_link( 'post' ) ); ?>">Blogi</a></li>
                   <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo esc_url( get_the_permalink( 4489 ) ); ?>">Koodi & yhteisö</a></li>
                   <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo esc_url( get_the_permalink( 4449 ) ); ?>">Yritys & kulttuuri</a></li>
-                  <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo esc_url( get_the_permalink( 4491 ) ); ?>">Työpaikat</a></li>
+                  <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="has-jobs" href="<?php echo esc_url( get_the_permalink( 4491 ) ); ?>">Työpaikat<span class="open-positions-count is-bigger"><span class="screen-reader-text">, </span>3<span class="screen-reader-text">työpaikkaa avoinna</span></span></a></li>
                   <li style="display: none" class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo esc_url( get_the_permalink( 6704 ) ); ?>">UKK</a></li>
                   <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a data-no-swup href="<?php echo get_post_type_archive_link( 'merch' ); ?>">Merch</a></li>
                   <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="https://handbook.dude.fi">Handbook</a></li>
@@ -193,9 +227,9 @@ if ( $show_chat_greeting ) {
                 <div class="cols cols-contact">
                   <div class="col">
                     <h3 class="contact-title">Asiakkuudet</h3>
-                    <p>Kristian Hohkavaara<br/>
-                      <a href="tel:0408351033">040 835 1033</a><br/>
-                      <a href="mailto:kristian@dude.fi">kristian@dude.fi</a>
+                    <p>Kristian Hohkavaara<br />
+                      <a class="no-text-link" href="tel:0408351033">040 835 1033</a><br />
+                      <a class="no-text-link" href="mailto:kristian@dude.fi">kristian@dude.fi</a>
                     </p>
                   </div>
 
@@ -228,9 +262,9 @@ if ( $show_chat_greeting ) {
             <div class="cols cols-contact show-on-mobile">
               <div class="col">
                 <h3 class="contact-title contact-title-mobile">Asiakkuudet</h3>
-                <p>Kristian Hohkavaara<br/>
-                  <a href="tel:0408351033">040 835 1033</a><br/>
-                  <a href="mailto:kristian@dude.fi">kristian@dude.fi</a>
+                <p>Kristian Hohkavaara<br />
+                  <a class="no-text-link" href="tel:0408351033">040 835 1033</a><br />
+                  <a class="no-text-link" href="mailto:kristian@dude.fi">kristian@dude.fi</a>
                 </p>
               </div>
 

@@ -15,11 +15,11 @@
 
 <?php if ( 'merch' === get_post_type() ) : ?>
 <?php
-// Enable when payments active and not sold out
-// echo do_shortcode( '[simpay id="4535"]' ); ?>
+// MERCHTHINGS enable/disable: Next line should be only uncommented when payments active and not sold out, comment it out when sold out!
+echo do_shortcode( '[simpay id="4535"]' ); ?>
 
 <div class="cart" id="cart" data-product-id="null">
-  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart">
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart">
     <circle cx="9" cy="21" r="1" />
     <circle cx="20" cy="21" r="1" />
     <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
@@ -41,7 +41,6 @@
   function emptyCart() {
     window.location.reload();
   }
-
 </script>
 <?php endif; ?>
 
@@ -62,6 +61,7 @@
         <a aria-label="Ulkoinen sivusto: Vierityspalkki" class="no-external-link-indicator" href="https://vierityspalkki.fi/toimistot/digitoimisto-dude"><?php include get_theme_file_path( '/svg/certificate-vierityspalkki.svg' ); ?></a>
         <a aria-label="Ulkoinen sivusto: ite wiki" class="no-external-link-indicator" href="https://www.itewiki.fi/digitoimisto-dude"><?php include get_theme_file_path( '/svg/certificate-itewiki.svg' ); ?></a>
         <a aria-label="Ulkoinen sivusto: Koodia Suomesta" class="no-external-link-indicator" href="https://koodiasuomesta.fi/"><?php include get_theme_file_path( '/svg/certificate-koodiasuomesta.svg' ); ?></a>
+        <a aria-label="Ulkoinen sivusto: AAA-luottoluokitus" class="no-external-link-indicator" href="https://www.yritystele.fi/yrityksen-tiedot/digitoimisto-dude-oy/yhteystiedot/911341"><?php include get_theme_file_path( '/svg/certificate-aaa.svg' ); ?></a>
       </div>
     </div>
 
@@ -78,9 +78,9 @@
 
       <div class="col">
         <h3>Asiakkuudet</h3>
-        <p>Kristian Hohkavaara<br />
-          <a class="no-text-link" href="tel:0408351033">040 835 1033</a><br />
-          <a class="no-text-link" href="mailto:kristian@dude.fi">kristian@dude.fi</a>
+          <p>Kristian Hohkavaara<br />
+            <a class="no-text-link" href="tel:0408351033">040 835 1033</a><br />
+            <a class="no-text-link" href="mailto:kristian@dude.fi">kristian@dude.fi</a>
         </p>
       </div>
 
@@ -103,7 +103,7 @@
           <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="no-text-link" href="https://www.linkedin.com/company/digitoimisto-dude-oy" target="_blank">LinkedIn</a></li>
           <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="no-text-link" href="https://www.instagram.com/digitoimistodude/" target="_blank">Instagram</a></li>
           <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="no-text-link" href="https://github.com/digitoimistodude" target="_blank">Github</a></li>
-          <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="no-text-link" href="https://www.itewiki.fi/digitoimisto-dude" target="_blank">IteWiki</a></li>
+          <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="no-text-link" href="https://www.itewiki.fi/digitoimisto-dude" target="_blank">ite wiki</a></li>
         </ul>
       </div>
 
@@ -130,8 +130,9 @@
 
 <script data-swup-reload-script async src="//www.instagram.com/embed.js"></script>
 <script data-swup-reload-script async src="//platform.twitter.com/widgets.js"></script>
-<script data-swup-reload-script>CRISP_WEBSITE_ID = "-K90vfAnyk27kD-pZAep"</script>
-<script data-swup-reload-script async src="https://client.crisp.chat/l.js"></script>
+
+<script data-swup-reload-script>window.$crisp=[];window.CRISP_WEBSITE_ID="-K90vfAnyk27kD-pZAep";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+
 <script data-swup-reload-script>window.CRISP_READY_TRIGGER = function () {
   // Hide chat circle by default unless there is unread messages or session iongoing
   if ($crisp.get("chat:unread:count") > 0 || $crisp.is("session:ongoing")) {
@@ -141,12 +142,8 @@
   }
 };</script>
 
-<?php wp_footer(); ?>
-
-</div><!-- .site -->
-
 <!-- Hotjar Tracking Code for www.dude.fi -->
-<script data-swup-reload-script>
+<script data-swup-ignore-script>
   (function (h, o, t, j, a, r) {
     h.hj = h.hj || function () {
       (h.hj.q = h.hj.q || []).push(arguments)
@@ -163,7 +160,7 @@
   })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
 </script>
 
-<script data-swup-reload-script>
+<script data-swup-ignore-script>
   (function(){
 
     window.ldfdr = window.ldfdr || {};
@@ -180,6 +177,10 @@
     })(document, 'script', 'https://sc.lfeeder.com/lftracker_v1_lAxoEaKP9Rw8OYGd.js');
   })();
 </script>
+
+<?php wp_footer(); ?>
+
+</div><!-- .site -->
 
 </body>
 </html>

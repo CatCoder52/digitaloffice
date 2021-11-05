@@ -34,11 +34,13 @@ const swup = new Swup({
  ],
 });
 
-['swup:contentReplaced'].forEach( function(event) {
-  document.addEventListener( event, initJs );
+
+swup.on('contentReplaced', function() {
+  initJs();
 });
 
 function initJs() {
+
   // Define Javascript is active by changing the body class
   document.body.classList.remove("no-js");
   document.body.classList.add("js");
@@ -54,14 +56,18 @@ function initJs() {
   dude_LazyLoad.update();
 
   // Glitch improvements for main title
-  setInterval(function(){
-    // toggle the class every X seconds
-    jQuery('.glitch').toggleClass('glitch-fulltilt');
-    setTimeout(function(){
-      // toggle back after X seconds
-      jQuery('.glitch').toggleClass('glitch-fulltilt');
-    }, 1000);
-  }, 4000);
+  const glitchItem = document.querySelector('.glitch');
+
+  if ( null !== glitchItem ) {
+    setInterval(function() {
+      glitchItem.classList.toggle('glitch-fulltilt');
+
+      // Run only one second
+      setTimeout(function() {
+        glitchItem.classList.toggle('glitch-fulltilt');
+      }, 1000);
+    }, 5000);
+  }
 
   // Accessibility: Ensure back to top is right color on right background
   var stickyOffset = jQuery(".back-to-top").offset();
@@ -250,22 +256,22 @@ function initJs() {
     });
   }
 
+  // Prevent Swup from resetting social media embeds
+  if (typeof window.instgrm !== "undefined") {
+    window.instgrm.Embeds.process();
+  }
+
+  if (typeof twttr !== "undefined") {
+    twttr.widgets.load();
+  }
+
   // Chat
   // Crisp:start
-   // Prevent Swup from resetting social media embeds
-   if (typeof window.instgrm !== "undefined") {
-     window.instgrm.Embeds.process();
-   }
-
-   if (typeof twttr !== "undefined") {
-     twttr.widgets.load();
-   }
-
-   if (typeof Storage !== "undefined" && typeof $crisp !== "undefined") {
-     setTimeout(function () {
-       maybeSendChatGreeting();
-     }, 5000);
-   }
+  if (typeof Storage !== "undefined" && typeof $crisp !== "undefined") {
+    setTimeout(function () {
+      maybeSendChatGreeting();
+    }, 5000);
+  }
 
    function maybeSendChatGreeting() {
      // Don't show greeting on contact page
@@ -427,9 +433,8 @@ function initJs() {
              } else {
                console.log('Greeting not sent, because now is ' + Date() + ' and next greeting sending time is at ' + dateWillSend + ' and chat was closed at ' + dateClosed);
            }
-       }
-
-         }
+          }
+        }
      }
    }
 

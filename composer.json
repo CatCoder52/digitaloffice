@@ -4,7 +4,8 @@
   "license": "MIT",
   "description": "A modern WordPress stack",
   "homepage": "https://github.com/digitoimistodude/dudestack",
-  "authors": [{
+  "authors": [
+    {
       "name": "Roni Laukkarinen",
       "email": "roni@dude.fi",
       "homepage": "https://github.com/ronilaukkarinen"
@@ -42,7 +43,8 @@
       "Roots\\Bedrock\\Installer::addSalts"
     ]
   },
-  "repositories": [{
+  "repositories": [
+    {
       "type": "composer",
       "url": "https://wpackagist.org",
       "minimum-stability": "dev"
@@ -56,20 +58,12 @@
       "url": "https://github.com/digitoimistodude/gulp-sitemap-generator"
     },
     {
-      "type": "package",
-      "package": {
-        "name": "advanced-custom-fields/advanced-custom-fields-pro",
-        "version": "5.8.9",
-        "type": "wordpress-plugin",
-        "dist": {
-          "type": "zip",
-          "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download"
-        },
-        "require": {
-          "philippbaschke/acf-pro-installer": "^1.0",
-          "composer/installers": "^1.0"
-        }
-      }
+      "type": "composer",
+      "url": "https://pivvenit.github.io/acf-composer-bridge/composer/v3/wordpress-plugin/"
+    },
+    {
+      "type": "composer",
+      "url": "https://pivvenit.github.io/acf-composer-bridge/composer/v3/wordpress-plugin/"
     },
     {
       "type": "package",
@@ -79,50 +73,56 @@
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
-          "url": "https://www.relevanssi.com/update/get_version.php?api_key=11879452&version=2.9.0"
+          "url": "https://www.relevanssi.com/update/get_version.php?api_key={%RELEVANSSI_API_KEY}&version=2.9.0"
         }
       }
     },
     {
       "type": "package",
       "package": {
-        "name": "rocketgenius/gravity-forms",
+        "name": "gravityforms/gravityforms",
+        "version": "2.5.9.3",
         "type": "wordpress-plugin",
-        "version": "2.4.18.10",
         "dist": {
           "type": "zip",
-          "url": "https://dudedev:Y4ktW427dBzH^n(dqn>LKTRq7@plugins.dude.fi/gravityforms_2.4.18.10.zip"
+          "url": "https://www.gravityhelp.com/wp-content/plugins/gravitymanager/api.php?op=get_plugin&slug=gravityforms&key={%WP_PLUGIN_GF_KEY}"
+        },
+        "require": {
+          "composer/installers": "^1.4",
+          "gotoandplay/gravityforms-composer-installer": "^2.3"
         }
       }
-    }
+    }    
   ],
   "require": {
     "koodimonni/composer-dropin-installer": "dev-master",
     "php": ">=5.6",
     "koodimonni-language/fi": "*",
     "koodimonni-language/en_gb": "*",
-    "composer/installers": "~1.2.0",
+    "composer/installers": "^1.10.0",
     "wp-cli/wp-cli-bundle": "*",
-    "vlucas/phpdotenv": "^2.0.1",
-    "johnpbloch/wordpress": "5.3",
+    "vlucas/phpdotenv": "^5.3",
+    "roots/wp-config": "^1.0",
+    "johnpbloch/wordpress": "5.6.1",
     "digitoimistodude/air-helper": "*",
     "wpackagist-plugin/ga-in": "*",
     "wpackagist-plugin/imagify": "*",
     "wpackagist-plugin/simple-history": "*",
-    "wpackagist-plugin/sendgrid-email-delivery-simplified": "*",
+    "wpackagist-plugin/mailgun": "*",
     "wpackagist-plugin/wp-sanitize-accented-uploads": "*",
     "wpackagist-plugin/worker": "*",
     "wpackagist-plugin/redis-cache": "*",
     "wpackagist-plugin/wordpress-seo": "*",
     "wpackagist-plugin/so-clean-up-wp-seo": "*",
-    "advanced-custom-fields/advanced-custom-fields-pro": "*",
+    "advanced-custom-fields/advanced-custom-fields-pro": "^5.9",
     "relevanssi/relevanssi-premium": "*",
     "rocketgenius/gravity-forms": "*",
     "humanmade/page-for-post-type": "dev-master",
     "wpackagist-plugin/simple-page-ordering": "*",
     "wpackagist-plugin/gf-form-multicolumn": "*",
     "wpackagist-plugin/duplicate-post": "*",
-    "wpackagist-plugin/remove-css-link-ids": "*"
+    "wpackagist-plugin/remove-css-link-ids": "*",
+    "oscarotero/env": "^2.1"
   },
   "require-dev": {
     "rarst/wps": "*",

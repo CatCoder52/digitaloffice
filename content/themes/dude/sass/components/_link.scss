@@ -1,0 +1,19 @@
+@mixin link($color: var(--color-midnight-blue), $color-hover: var(--color-cobalt-blue), $color-underline: var(--color-midnight-blue), $color-underline-hover: var(--color-cobalt-blue)) {
+  position: relative;
+  overflow: visible;
+  font-weight: var(--font-weight-medium);
+  z-index: 1;
+  text-decoration: underline;
+  text-decoration-color: $color-underline;
+  transition: all .18s ease-in-out;
+  display: inline !important;
+  color: $color;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 1px;
+
+  &:hover,
+  &:focus {
+    color: $color-hover;
+    text-decoration-color: $color-underline-hover;
+  }
+}

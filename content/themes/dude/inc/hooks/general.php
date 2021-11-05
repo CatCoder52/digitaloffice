@@ -5,8 +5,8 @@
  * @package dude
  * @Author: Roni Laukkarinen
  * @Date: 2020-02-20 13:46:50
- * @Last Modified by: Roni Laukkarinen
- * @Last Modified time: 2020-07-03 15:48:50
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2021-01-27 17:59:31
  */
 
 /**
@@ -142,6 +142,7 @@ function dude_shortcode_checkmark() {
 
 // Swup reload gravity forms for ajax send to work
 add_filter( 'gform_init_scripts_footer', '__return_false' );
+
 add_filter( 'gform_get_form_filter', function( $form_string, $form ) {
   return $form_string = str_replace( '<script', '<script data-swup-reload-script data-swup-ignore-script', $form_string );
 }, 10, 2);

@@ -7,7 +7,7 @@
 
 the_post();
 
-$test_mode = isset( $_GET['pieritysvalkki'] ) ? true : false;
+$test_mode = isset( $_GET['pieritysvalkki'] ) ? true : false; // phpcs:ignore
 $form_id = get_field( 'form_id' );
 $form_title = get_field( 'form_title' );
 $form_description = get_field( 'form_description' );
@@ -25,7 +25,7 @@ $questions_args = [
 ];
 
 if ( $stop_the_madness ) {
-  $questions_args['meta_query'] = [
+  $questions_args['meta_query'] = [ // phpcs:ignore
     'relation' => 'OR',
     'custom_field_value' => [
       'key'   => '_ama-likes',

@@ -8,6 +8,7 @@
 @import '../variables/colors';
 @import '../variables/fonts';
 @import '../variables/spacings';
+@import '../variables/form';
 
 // Global features
 @import '../features/top'; // 1.403 kB
@@ -19,6 +20,11 @@
 // Helpers
 @import 'helpers'; // 12.691 kB
 @import 'accessibility'; // 23.989 kB
+
+// Components (2021)
+@import '../components/form-job';
+@import '../components/gravity-form';
+@import '../components/link';
 
 // Structure
 @import '../layout/general'; // 28.785 kB
@@ -50,7 +56,6 @@
 @import '../modules/dudes'; // 155.564 kB
 @import '../modules/cta-text'; // 156.13 kB
 @import '../modules/wide-text'; // 159.12 kB
-@import '../modules/open-position'; // 159.984 kB
 @import '../modules/testimonials'; // 163.683 kB
 @import '../modules/images'; // 166.196 kB
 @import '../modules/title-left-text-right'; // 167.619 kB
@@ -62,6 +67,8 @@
 @import '../modules/cta-with-image'; // 186.667 kB
 @import '../modules/mission-vision'; // 188.575 kB
 @import '../modules/jobs'; // 190.13 kB
+@import '../modules/upsells-mint';
+@import '../modules/job-form';
 
 // Navigation
 @import '../navigation/nav-core'; // 191.225 kB
@@ -80,6 +87,7 @@
 @import '../views/blog-archive'; // 365.83 kB
 @import '../views/blog'; // 367.131 kB
 @import '../views/404'; // 420.031 kB
+@import '../views/template-open-position';
 
 // Gutenberg
 @import '../gutenberg/gutenberg-content'; // 578.231 kB <--

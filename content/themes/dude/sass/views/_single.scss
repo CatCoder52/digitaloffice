@@ -12,6 +12,55 @@ body.single .block.block-single:not(.block-single-reference) {
   z-index: 2;
   background: transparent;
 
+  // Guest post author info
+  .post > .gutenberg-content > .guest-post-author-card {
+    display: flex;
+    border-top: 1px solid #cdd0d4;
+    padding-top: 4rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    padding-bottom: 0;
+    align-items: center;
+
+    @media (max-width: 700px) {
+      align-items: flex-start;
+    }
+
+    .guest-post-author-card-content > p {
+      color: $color-darkgrey;
+      font-size: 16px;
+      margin: 0;
+
+      @media (max-width: 500px) {
+        font-size: 15px;
+      }
+    }
+
+    .guest-post-author-card-content > h3 {
+      color: $color-darkgrey;
+      margin: 0 0 1rem;
+      font-size: 20px;
+    }
+
+    .avatar {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      min-width: 120px;
+      margin-right: 4rem;
+
+      @media (max-width: 700px) {
+        margin-right: 3rem;
+      }
+
+      @media (max-width: 500px) {
+        width: 80px;
+        height: 80px;
+        min-width: 80px;
+      }
+    }
+  }
+
   .post > .author-card {
     margin-left: auto;
     margin-right: auto;
@@ -33,7 +82,7 @@ body.single .block.block-single:not(.block-single-reference) {
       }
     }
 
-    a {
+    .author {
       @include grid(2, $gutter_x: 2.7rem, $gutter_y: 0);
       grid-template-columns: 74px 2fr;
       align-items: center;
@@ -48,8 +97,9 @@ body.single .block.block-single:not(.block-single-reference) {
       align-items: center;
     }
 
-    a .writtenby {
-      opacity: .4;
+    .author .writtenby {
+      /* stylelint-disable-next-line */
+      color: #8a8ca2;
       font-weight: 400;
       margin-right: 1rem;
     }
@@ -93,6 +143,10 @@ body.single .block.block-single:not(.block-single-reference) {
 
     li {
       line-height: $line-height-blog;
+
+      a {
+        @include link();
+      }
     }
 
     @media (max-width: $article-max-width + 40px) {

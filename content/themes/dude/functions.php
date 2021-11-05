@@ -55,6 +55,18 @@ function _dude_widgets_init() {
 add_action( 'widgets_init', '_dude_widgets_init' );
 
 /**
+ * Returns the built asset filename and path depending on
+ * current environment.
+ *
+ * @param string $filename File name with the extension
+ * @return string file and path of the asset file
+ */
+function get_asset_file( $filename ) {
+  $filetype = pathinfo( $filename )['extension'];
+  return "${filetype}/${filename}";
+} // end get_asset_file
+
+/**
  * Enqueue scripts and styles.
  */
 function dude_scripts() {
@@ -89,7 +101,62 @@ function dude_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'dude_scripts' );
 
+/**
+ * Enqueue block editor JavaScript and CSS
+ */
+function register_block_editor_assets() {
+
+  // Dependencies
+  $dependencies = [
+    'wp-blocks',    // Provides useful functions and components for extending the editor
+    'wp-i18n',      // Provides localization functions
+    'wp-element',   // Provides React.Component
+    'wp-components', // Provides many prebuilt components and controls
+  ];
+
+  // Enqueue the bundled block JS file
+  // wp_enqueue_script(
+  //   'block-editor-js',
+  //   get_theme_file_uri( get_asset_file( 'gutenberg-editor.js' ) ),
+  //   $dependencies,
+  //   filemtime( get_theme_file_path( get_asset_file( 'gutenberg-editor.js' ) ) ),
+  //   'all'
+  // );
+
+  // Enqueue optional editor only styles
+  wp_enqueue_style(
+    'block-editor-styles',
+    get_theme_file_uri( get_asset_file( 'gutenberg.min.css' ) ),
+    [],
+    filemtime( get_theme_file_path( get_asset_file( 'gutenberg.min.css' ) ) ),
+    'all',
+    true
+  );
+} // end register_block_editor_assets
+add_action( 'enqueue_block_editor_assets', 'register_block_editor_assets' );
+
 add_filter( 'script_loader_tag', 'dude_script_loader_tag', 10, 2 );
+
+// Remove Gutenberg inline "Normalization styles" like .editor-styles-wrapper h1
+// color: inherit;
+// @source https://github.com/WordPress/gutenberg/issues/18595#issuecomment-599588153
+function remove_gutenberg_inline_styles( $editor_settings, $post ) {
+  unset( $editor_settings['styles'][0] );
+  return $editor_settings;
+} // end remove_gutenberg_inline_styles
+add_filter( 'block_editor_settings', 'remove_gutenberg_inline_styles', 10, 2 );
+
+/**
+ * Make sure Gutenberg wp-admin editor styles are loaded
+ */
+function setup_editor_styles() {
+  // Add support for editor styles.
+  add_theme_support( 'editor-styles' );
+
+  // Enqueue editor styles.
+  add_editor_style( get_theme_file_uri( get_asset_file( 'gutenberg.min.css' ) ) );
+}
+add_action( 'after_setup_theme', 'setup_editor_styles' );
 
 function dude_script_loader_tag( $tag, $handle ) {
   if ( 'store' === $handle ) {
@@ -98,7 +165,6 @@ function dude_script_loader_tag( $tag, $handle ) {
 
   return $tag;
 }
-
 add_action( 'after_setup_theme', 'dude_add_image_sizes' );
 
 function dude_add_image_sizes() {
@@ -120,7 +186,7 @@ function dude_remove_styles() {
     add_filter( 'pre_option_rg_gforms_disable_css', '__return_true' );
   }
 
-  if ( get_post_type() === 'merch' ) {
+  if ( is_post_type_archive( 'merch' ) || get_post_type() === 'merch' ) {
     wp_dequeue_style( 'styles' );
     wp_enqueue_style( 'surveystyles', get_theme_file_uri( 'css/store.min.css' ), array(), filemtime( get_theme_file_path( 'css/store.min.css' ) ) );
   }
@@ -130,3 +196,39 @@ add_action( 'wp_print_styles', 'dude_remove_styles', 99 );
 add_filter( 'embed_thumbnail_image_size', function() {
   return 'default';
 } );
+
+/**
+ * PHP 8 function support for PHP 7.4
+ */
+if ( ! function_exists( 'str_contains' ) ) {
+  function str_contains( string $haystack, string $needle ) : bool { // phpcs:ignore
+      return '' === $needle || false !== strpos( $haystack, $needle );
+  }
+}
+
+/**
+ * Add required attributes to Gravity Forms fields to enable native validation
+ */
+add_filter( 'gform_field_content', __NAMESPACE__ . '\add_custom_attr', 10, 5 );
+function add_custom_attr( $field_content, $field, $value, $form_id ) {
+
+  // Add type attribute to file upload button, otherwise it tries to send
+  if ( 'fileupload' === $field->type ) {
+    $field_content = str_replace( '<button', '<button type="button"', $field_content );
+  }
+
+  // Add required to get native HTML validation instead of GF jQuery version
+  if ( true === $field->isRequired ) { // phpcs:ignore
+    $field_content = str_replace( 'type=', 'required type=', $field_content );
+  }
+
+  return $field_content;
+ }
+
+/**
+ * Change gravity forms input to button that validates natively (remove onclick and onkeypress events)
+ */
+add_filter( 'gform_submit_button', __NAMESPACE__ . '\form_submit_button', 10, 2 );
+function form_submit_button( $button, $form ) {
+  return "<input type='submit' class='button gform_button' id='gform_submit_button_{$form['id']}' Value='Lähetä' />";
+}

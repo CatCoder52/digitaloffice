@@ -9,6 +9,12 @@
 
 the_post();
 
+// Fields
+$guest_post = get_field( 'guest_post' );
+$guest_post_author = get_field( 'guest_post_author' );
+$guest_post_author_description = get_field( 'guest_post_author_description' );
+$guest_post_author_avatar = get_field( 'guest_post_author_avatar' );
+
 get_header(); ?>
 
 <div class="content-area">
@@ -26,18 +32,36 @@ get_header(); ?>
     <section class="block has-light-bg block-single<?php if ( $post_year <= $now_year - 2 ) : ?> is-old<?php endif; ?>">
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-        <div class="author-card">
-          <p><a class="no-text-link author" href="<?php echo get_author_posts_url( $user_id ) ?>" rel="author"><?php echo get_avatar( $user_id, '100' ); ?><span><span class="writtenby">Kirjoittanut</span> <?php echo get_the_author_meta( 'display_name' ); ?></a></span></p>
-        </div>
+        <?php if ( true === $guest_post ) : ?>
+          <div class="author-card">
+            <p><span class="author"><img src="<?php echo esc_url( $guest_post_author_avatar['sizes']['thumbnail'] ); ?>" class="avatar avatar-100" alt="<?php echo esc_html( $guest_post_author ); ?>"><span><span class="writtenby">Vieraskynän kirjoittanut</span> <?php echo esc_html( $guest_post_author ); ?></span></span></p>
+          </div>
+        <?php else : ?>
+          <div class="author-card">
+            <p><a class="no-text-link author" href="<?php echo get_author_posts_url( $user_id ) ?>" rel="author"><?php echo get_avatar( $user_id, '100' ); ?><span><span class="writtenby">Kirjoittanut</span> <?php echo get_the_author_meta( 'display_name' ); ?></a></span></p>
+          </div>
+        <?php endif; ?>
 
         <div class="gutenberg-content">
           <?php the_content(); ?>
 
-          <footer class="entry-footer">
+          <?php if ( true === $guest_post ) : ?>
+            <div class="guest-post-author-card">
+              <img src="<?php echo esc_url( $guest_post_author_avatar['sizes']['thumbnail'] ); ?>" class="avatar avatar-100" alt="<?php echo esc_html( $guest_post_author ); ?>">
+
+              <div class="guest-post-author-card-content">
+                <h3><?php echo esc_html( $guest_post_author ); ?></h3>
+                <?php echo wp_kses_post( wpautop( $guest_post_author_description ) ); ?>
+              </div>
+            </div>
+          <?php endif; ?>
+
+          <footer class="entry-footer<?php if ( true === $guest_post ) : ?> entry-footer-guest-post<?php endif; ?>">
             <?php dude_entry_footer(); ?>
           </footer><!-- .entry-footer -->
         </div>
 
+        <?php if ( false === $guest_post || ! isset( $guest_post ) ) : ?>
         <?php if ( 5635 !== get_the_id() ) : ?>
           <div class="entry-author">
             <?php
@@ -80,6 +104,7 @@ get_header(); ?>
             <?php endif; ?>
 
             </div>
+        <?php endif; ?>
         <?php endif; ?>
 
       </article><!-- #post-## -->
