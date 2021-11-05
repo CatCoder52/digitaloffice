@@ -174,7 +174,7 @@
       margin-bottom: $padding-blocks-medium;
 
       a {
-        border-bottom: 1px solid rgba($color-white, .5);
+        @include link($color: var(--color-white), $color-hover: var(--color-white), $color-underline: rgba(255, 255, 255, .3), $color-underline-hover: var(--color-mint));
       }
 
       a:hover {

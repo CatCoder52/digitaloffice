@@ -20,10 +20,9 @@
 
 // Components for store
 @mixin store-link {
-  color: var(--color-white);
+  @include link($color: var(--color-white), $color-hover: var(--color-white), $color-underline: rgba(255, 255, 255, .5), $color-underline-hover: var(--color-white));
   box-shadow: none;
-  border-bottom: 1px solid rgba(255, 255, 255, .5);
-  transition: border .22s;
+  transition: all .22s;
   overflow: hidden;
   background-color: transparent;
   padding: 0;
@@ -34,9 +33,7 @@
 
   &:hover,
   &:focus {
-    border-color: var(--color-mint);
     background: 0 0;
-    color: var(--color-white);
     cursor: pointer;
   }
 }

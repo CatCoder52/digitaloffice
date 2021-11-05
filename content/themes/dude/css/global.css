@@ -1959,15 +1959,26 @@ body.page-id-5975 .nav-toggle:focus:focus .hamburger-inner:focus::after {
 }
 
 .block.block-footer.site-footer .infos-and-certs .large-text a:not(.top) {
-	color: #fff;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+	position: relative;
+	overflow: visible;
+	font-weight: var(--font-weight-medium);
+	z-index: 1;
+	text-decoration: underline;
+	text-decoration-color: rgba(255, 255, 255, 0.3);
+	transition: all .18s ease-in-out;
+	display: inline !important;
+	color: var(--color-white);
+	text-underline-offset: 6px;
+	text-decoration-thickness: 1px;
 	transition: border .22s;
 	overflow: hidden;
 	display: inline-flex;
 }
 
-.block.block-footer.site-footer .infos-and-certs .large-text a:not(.top):hover {
-	border-bottom: 1px solid #7effe1;
+.block.block-footer.site-footer .infos-and-certs .large-text a:not(.top):hover,
+.block.block-footer.site-footer .infos-and-certs .large-text a:not(.top):focus {
+	color: var(--color-white);
+	text-decoration-color: var(--color-mint);
 }
 
 .block.block-footer.site-footer .infos-and-certs .certs {
@@ -2083,16 +2094,28 @@ body.page-id-5975 .nav-toggle:focus:focus .hamburger-inner:focus::after {
 
 .block.block-footer.site-footer a:not(.top),
 .block.block-footer.site-footer button.chat {
-	color: #fff;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-	transition: border .22s;
+	position: relative;
+	overflow: visible;
+	font-weight: var(--font-weight-medium);
+	z-index: 1;
+	text-decoration: underline;
+	text-decoration-color: rgba(255, 255, 255, 0.3);
+	transition: all .18s ease-in-out;
+	display: inline !important;
+	color: var(--color-white);
+	text-underline-offset: 6px;
+	text-decoration-thickness: 1px;
+	transition: all .22s;
 	overflow: hidden;
 	display: inline-flex;
 }
 
 .block.block-footer.site-footer a:not(.top):hover,
-.block.block-footer.site-footer button.chat:hover {
-	border-bottom: 1px solid #7effe1;
+.block.block-footer.site-footer a:not(.top):focus,
+.block.block-footer.site-footer button.chat:hover,
+.block.block-footer.site-footer button.chat:focus {
+	color: var(--color-white);
+	text-decoration-color: var(--color-mint);
 }
 
 .block.block-footer.site-footer a,
@@ -2103,6 +2126,16 @@ body.page-id-5975 .nav-toggle:focus:focus .hamburger-inner:focus::after {
 
 .block.block-footer.site-footer .main-links {
 	margin-top: 10rem;
+}
+
+.block.block-footer.site-footer .main-links .no-text-link {
+	text-decoration: none;
+	border-bottom: 1px solid transparent;
+	transition: all .22s;
+}
+
+.block.block-footer.site-footer .main-links .no-text-link:hover {
+	border-color: var(--color-mint);
 }
 
 .block.block-footer.site-footer .main-links ul {
@@ -2899,7 +2932,25 @@ input[type=checkbox]:checked + br + label::before {
 
 .block.block-hero.block-hero-reference.block-hero-merch .details a,
 .block.block-hero.block-hero-merch .details a {
-	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+	position: relative;
+	overflow: visible;
+	font-weight: var(--font-weight-medium);
+	z-index: 1;
+	text-decoration: underline;
+	text-decoration-color: rgba(255, 255, 255, 0.3);
+	transition: all .18s ease-in-out;
+	display: inline !important;
+	color: var(--color-white);
+	text-underline-offset: 6px;
+	text-decoration-thickness: 1px;
+}
+
+.block.block-hero.block-hero-reference.block-hero-merch .details a:hover,
+.block.block-hero.block-hero-reference.block-hero-merch .details a:focus,
+.block.block-hero.block-hero-merch .details a:hover,
+.block.block-hero.block-hero-merch .details a:focus {
+	color: var(--color-white);
+	text-decoration-color: var(--color-mint);
 }
 
 .block.block-hero.block-hero-reference.block-hero-merch .details a:hover,
@@ -6681,15 +6732,27 @@ body .nav-toggle:focus .hamburger-inner:focus::before {
 
 .nav-primary .cols.cols-contact a,
 .nav-primary .cols.cols-contact button.chat {
-	color: #fff;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-	transition: border .22s;
+	position: relative;
+	overflow: visible;
+	font-weight: var(--font-weight-medium);
+	z-index: 1;
+	text-decoration: underline;
+	text-decoration-color: rgba(255, 255, 255, 0.3);
+	transition: all .18s ease-in-out;
+	display: inline !important;
+	color: var(--color-white);
+	text-underline-offset: 6px;
+	text-decoration-thickness: 1px;
+	transition: all .22s;
 	overflow: hidden;
 }
 
 .nav-primary .cols.cols-contact a:hover,
-.nav-primary .cols.cols-contact button.chat:hover {
-	border-bottom: 1px solid #7effe1;
+.nav-primary .cols.cols-contact a:focus,
+.nav-primary .cols.cols-contact button.chat:hover,
+.nav-primary .cols.cols-contact button.chat:focus {
+	color: var(--color-white);
+	text-decoration-color: var(--color-mint);
 }
 
 .nav-container {
@@ -8872,9 +8935,19 @@ body.single.single-reference .block.block-single.block-single-reference body:not
 body:not(.page-id-6357) .block.block-wide-text body.single.single-reference .block.block-single.block-single-reference .container a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
 body.single.single-reference .block.block-single.block-single-reference body:not(.page-id-6357) .block.block-wide-text .site-header a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
 body:not(.page-id-6357) .block.block-wide-text body.single.single-reference .block.block-single.block-single-reference .site-header a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail) {
-	color: #fff;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-	transition: border .22s;
+	position: relative;
+	overflow: visible;
+	font-weight: var(--font-weight-medium);
+	z-index: 1;
+	text-decoration: underline;
+	text-decoration-color: rgba(255, 255, 255, 0.3);
+	transition: all .18s ease-in-out;
+	display: inline !important;
+	color: var(--color-white);
+	text-underline-offset: 6px;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 4px;
+	transition: all .22s;
 	overflow: hidden;
 	box-shadow: none;
 }
@@ -8883,8 +8956,21 @@ body.single.single-reference .block.block-single.block-single-reference .gutenbe
 body.single.single-reference .block.block-single.block-single-reference body:not(.page-id-6357) .block.block-wide-text .container a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):hover,
 body:not(.page-id-6357) .block.block-wide-text body.single.single-reference .block.block-single.block-single-reference .container a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):hover,
 body.single.single-reference .block.block-single.block-single-reference body:not(.page-id-6357) .block.block-wide-text .site-header a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):hover,
+body:not(.page-id-6357) .block.block-wide-text body.single.single-reference .block.block-single.block-single-reference .site-header a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):hover,
+body.single.single-reference .block.block-single.block-single-reference .gutenberg-content a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):focus,
+body.single.single-reference .block.block-single.block-single-reference body:not(.page-id-6357) .block.block-wide-text .container a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):focus,
+body:not(.page-id-6357) .block.block-wide-text body.single.single-reference .block.block-single.block-single-reference .container a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):focus,
+body.single.single-reference .block.block-single.block-single-reference body:not(.page-id-6357) .block.block-wide-text .site-header a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):focus,
+body:not(.page-id-6357) .block.block-wide-text body.single.single-reference .block.block-single.block-single-reference .site-header a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):focus {
+	color: var(--color-white);
+	text-decoration-color: var(--color-mint);
+}
+
+body.single.single-reference .block.block-single.block-single-reference .gutenberg-content a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):hover,
+body.single.single-reference .block.block-single.block-single-reference body:not(.page-id-6357) .block.block-wide-text .container a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):hover,
+body:not(.page-id-6357) .block.block-wide-text body.single.single-reference .block.block-single.block-single-reference .container a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):hover,
+body.single.single-reference .block.block-single.block-single-reference body:not(.page-id-6357) .block.block-wide-text .site-header a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):hover,
 body:not(.page-id-6357) .block.block-wide-text body.single.single-reference .block.block-single.block-single-reference .site-header a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):hover {
-	border-bottom: 1px solid #7effe1;
 	background: none;
 }
 

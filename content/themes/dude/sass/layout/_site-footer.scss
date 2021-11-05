@@ -18,15 +18,10 @@
       max-width: 60rem;
 
       a:not(.top) {
-        color: $color-white;
-        border-bottom: 1px solid rgba($color-white, .3);
+        @include link($color: var(--color-white), $color-hover: var(--color-white), $color-underline: rgba(255, 255, 255, .3), $color-underline-hover: var(--color-mint));
         transition: border .22s;
         overflow: hidden;
         display: inline-flex;
-
-        &:hover {
-          border-bottom: 1px solid $color-mint;
-        }
       }
 
       @media (max-width: 1200px) {
@@ -221,15 +216,10 @@
 
 .block.block-footer.site-footer a:not(.top),
 .block.block-footer.site-footer button.chat {
-  color: $color-white;
-  border-bottom: 1px solid rgba($color-white, .3);
-  transition: border .22s;
+  @include link($color: var(--color-white), $color-hover: var(--color-white), $color-underline: rgba(255, 255, 255, .3), $color-underline-hover: var(--color-mint));
+  transition: all .22s;
   overflow: hidden;
   display: inline-flex;
-
-  &:hover {
-    border-bottom: 1px solid $color-mint;
-  }
 }
 
 .block.block-footer.site-footer a,
@@ -240,6 +230,16 @@
 
 .block.block-footer.site-footer .main-links {
   margin-top: 10rem;
+
+  .no-text-link {
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all .22s;
+
+    &:hover {
+      border-color: var(--color-mint);
+    }
+  }
 }
 
 .block.block-footer.site-footer .main-links ul {
