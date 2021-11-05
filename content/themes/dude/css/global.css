@@ -1316,6 +1316,7 @@ body:not(.page-id-6357) .block.block-wide-text .site-header a:visited.github-lin
 	display: inline !important;
 	color: var(--color-midnight-blue);
 	text-underline-offset: 6px;
+	text-decoration-thickness: 1px;
 }
 
 .block p a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):hover,
@@ -1337,6 +1338,7 @@ body:not(.page-id-6357) .block.block-wide-text .site-header a:visited.github-lin
 	display: inline !important;
 	color: var(--color-midnight-blue);
 	text-underline-offset: 6px;
+	text-decoration-thickness: 1px;
 }
 
 .block.block-title-left-text-right li a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):hover,
@@ -2834,6 +2836,7 @@ input[type=checkbox]:checked + br + label::before {
 	display: inline !important;
 	color: var(--color-midnight-blue);
 	text-underline-offset: 6px;
+	text-decoration-thickness: 1px;
 	font-weight: 700;
 	background: transparent;
 	border-radius: 0;
@@ -3085,6 +3088,7 @@ body.page-id-5973 .content-area { /* stylelint-disable-next-line */
 	display: inline !important;
 	color: var(--color-white);
 	text-underline-offset: 6px;
+	text-decoration-thickness: 1px;
 	box-shadow: none;
 	transition: all .22s;
 	overflow: hidden;
@@ -3493,6 +3497,7 @@ body.page-id-5973 .content-area { /* stylelint-disable-next-line */
 	display: inline !important;
 	color: var(--color-white);
 	text-underline-offset: 6px;
+	text-decoration-thickness: 1px;
 }
 
 .block.block-hero.block-hero-contact-thanks .hero-description a:hover,
@@ -4522,6 +4527,7 @@ body.page-id-4487 .columns.block.block-hero {
 	display: inline !important;
 	color: var(--color-midnight-blue);
 	text-underline-offset: 6px;
+	text-decoration-thickness: 1px;
 }
 
 .block.block-timeline .col a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):hover,
@@ -8316,6 +8322,7 @@ body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:n
 	display: inline !important;
 	color: var(--color-midnight-blue);
 	text-underline-offset: 6px;
+	text-decoration-thickness: 1px;
 }
 
 .block.block-single:not(.block-single-reference) .post > .gutenberg-content ul:not(.tags):not(.blocks-gallery-grid) li a:hover,

@@ -9,6 +9,7 @@
   display: inline !important;
   color: $color;
   text-underline-offset: 6px;
+  text-decoration-thickness: 1px;
 
   &:hover,
   &:focus {
