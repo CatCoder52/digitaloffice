@@ -3075,18 +3075,30 @@ body.page-id-5973 .content-area { /* stylelint-disable-next-line */
 }
 
 .block.block-hero.block-hero-reference .hero-description a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail) {
-	color: #fff;
+	position: relative;
+	overflow: visible;
+	font-weight: var(--font-weight-medium);
+	z-index: 1;
+	text-decoration: underline;
+	text-decoration-color: rgba(255, 255, 255, 0.3);
+	transition: all .18s ease-in-out;
+	display: inline !important;
+	color: var(--color-white);
+	text-underline-offset: 6px;
 	box-shadow: none;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-	transition: border .22s;
+	transition: all .22s;
 	overflow: hidden;
 	background: none;
 }
 
+.block.block-hero.block-hero-reference .hero-description a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):hover,
+.block.block-hero.block-hero-reference .hero-description a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):focus {
+	color: var(--color-white);
+	text-decoration-color: var(--color-mint);
+}
+
 .block.block-hero.block-hero-reference .hero-description a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):hover {
-	border-bottom: 1px solid #7effe1;
 	background: none;
-	color: #fff;
 }
 
 .block.block-hero.block-hero-reference h2,
@@ -3471,13 +3483,22 @@ body.page-id-5973 .content-area { /* stylelint-disable-next-line */
 }
 
 .block.block-hero.block-hero-contact-thanks .hero-description a {
-	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-	transition: border .22s;
-	color: #fff;
+	position: relative;
+	overflow: visible;
+	font-weight: var(--font-weight-medium);
+	z-index: 1;
+	text-decoration: underline;
+	text-decoration-color: rgba(255, 255, 255, 0.3);
+	transition: all .18s ease-in-out;
+	display: inline !important;
+	color: var(--color-white);
+	text-underline-offset: 6px;
 }
 
-.block.block-hero.block-hero-contact-thanks .hero-description a:hover {
-	border-bottom: 1px solid #7effe1;
+.block.block-hero.block-hero-contact-thanks .hero-description a:hover,
+.block.block-hero.block-hero-contact-thanks .hero-description a:focus {
+	color: var(--color-white);
+	text-decoration-color: var(--color-mint);
 }
 
 .block.block-hero.block-hero-contact-thanks .content {
