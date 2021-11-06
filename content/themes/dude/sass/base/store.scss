@@ -20,6 +20,9 @@
 @import 'helpers';
 @import 'accessibility';
 
+// Components (2021)
+@import '../components/link';
+
 // Structure
 @import '../layout/general';
 @import '../layout/typography';
@@ -38,3 +41,6 @@
 // Merch views
 @import '../views/merch';
 @import '../views/merch-dude-kvlt-2021';
+
+// Jobs in menu
+@import '../modules/jobs';
