@@ -8543,13 +8543,13 @@ body.single .block.block-single:not(.block-single-reference) .cat a:not(.button)
 	margin: 0 13px 13px 0;
 	font-size: var(--font-size-general-small);
 	border: 1px solid #131a50;
-	display: inline-flex !important;
 	padding: 7px 17px !important;
 	line-height: 1;
 	color: #131a50;
 	text-decoration: none;
 	box-shadow: none;
 	font-weight: 400;
+	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 	background-image: none !important;
