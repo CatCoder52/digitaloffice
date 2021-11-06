@@ -1316,7 +1316,7 @@ body:not(.page-id-6357) .block.block-wide-text .site-header a:visited.github-lin
 	display: inline !important;
 	color: var(--color-midnight-blue);
 	text-underline-offset: 6px;
-	text-decoration-thickness: 1px;
+	text-decoration-thickness: 1px !important;
 }
 
 .block p a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):hover,
@@ -1338,7 +1338,7 @@ body:not(.page-id-6357) .block.block-wide-text .site-header a:visited.github-lin
 	display: inline !important;
 	color: var(--color-midnight-blue);
 	text-underline-offset: 6px;
-	text-decoration-thickness: 1px;
+	text-decoration-thickness: 1px !important;
 }
 
 .block.block-title-left-text-right li a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail):hover,
@@ -1969,7 +1969,7 @@ body.page-id-5975 .nav-toggle:focus:focus .hamburger-inner:focus::after {
 	display: inline !important;
 	color: var(--color-white);
 	text-underline-offset: 6px;
-	text-decoration-thickness: 1px;
+	text-decoration-thickness: 1px !important;
 	transition: border .22s;
 	overflow: hidden;
 	display: inline-flex;
@@ -2104,7 +2104,7 @@ body.page-id-5975 .nav-toggle:focus:focus .hamburger-inner:focus::after {
 	display: inline !important;
 	color: var(--color-white);
 	text-underline-offset: 6px;
-	text-decoration-thickness: 1px;
+	text-decoration-thickness: 1px !important;
 	transition: all .22s;
 	overflow: hidden;
 	display: inline-flex;
@@ -2869,7 +2869,7 @@ input[type=checkbox]:checked + br + label::before {
 	display: inline !important;
 	color: var(--color-midnight-blue);
 	text-underline-offset: 6px;
-	text-decoration-thickness: 1px;
+	text-decoration-thickness: 1px !important;
 	font-weight: 700;
 	background: transparent;
 	border-radius: 0;
@@ -2942,7 +2942,7 @@ input[type=checkbox]:checked + br + label::before {
 	display: inline !important;
 	color: var(--color-white);
 	text-underline-offset: 6px;
-	text-decoration-thickness: 1px;
+	text-decoration-thickness: 1px !important;
 }
 
 .block.block-hero.block-hero-reference.block-hero-merch .details a:hover,
@@ -3139,7 +3139,7 @@ body.page-id-5973 .content-area { /* stylelint-disable-next-line */
 	display: inline !important;
 	color: var(--color-white);
 	text-underline-offset: 6px;
-	text-decoration-thickness: 1px;
+	text-decoration-thickness: 1px !important;
 	box-shadow: none;
 	transition: all .22s;
 	overflow: hidden;
@@ -3548,7 +3548,7 @@ body.page-id-5973 .content-area { /* stylelint-disable-next-line */
 	display: inline !important;
 	color: var(--color-white);
 	text-underline-offset: 6px;
-	text-decoration-thickness: 1px;
+	text-decoration-thickness: 1px !important;
 }
 
 .block.block-hero.block-hero-contact-thanks .hero-description a:hover,
@@ -4578,7 +4578,7 @@ body.page-id-4487 .columns.block.block-hero {
 	display: inline !important;
 	color: var(--color-midnight-blue);
 	text-underline-offset: 6px;
-	text-decoration-thickness: 1px;
+	text-decoration-thickness: 1px !important;
 }
 
 .block.block-timeline .col a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):hover,
@@ -6742,7 +6742,7 @@ body .nav-toggle:focus .hamburger-inner:focus::before {
 	display: inline !important;
 	color: var(--color-white);
 	text-underline-offset: 6px;
-	text-decoration-thickness: 1px;
+	text-decoration-thickness: 1px !important;
 	transition: all .22s;
 	overflow: hidden;
 }
@@ -8385,7 +8385,7 @@ body:not(.page-id-6357) .block.block-wide-text body.single .block.block-single:n
 	display: inline !important;
 	color: var(--color-midnight-blue);
 	text-underline-offset: 6px;
-	text-decoration-thickness: 1px;
+	text-decoration-thickness: 1px !important;
 }
 
 .block.block-single:not(.block-single-reference) .post > .gutenberg-content ul:not(.tags):not(.blocks-gallery-grid) li a:hover,
@@ -8540,19 +8540,19 @@ body.single .block.block-single:not(.block-single-reference) .wp-block-image {
 
 .block.block-single:not(.block-single-reference) .cat a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link),
 body.single .block.block-single:not(.block-single-reference) .cat a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link) {
+	background-image: none !important;
 	margin: 0 13px 13px 0;
 	font-size: var(--font-size-general-small);
 	border: 1px solid #131a50;
+	display: inline-flex !important;
 	padding: 7px 17px !important;
 	line-height: 1;
 	color: #131a50;
 	text-decoration: none;
 	box-shadow: none;
 	font-weight: 400;
-	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	background-image: none !important;
 }
 
 .block.block-single:not(.block-single-reference) .cat a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):hover,
@@ -8945,7 +8945,7 @@ body:not(.page-id-6357) .block.block-wide-text body.single.single-reference .blo
 	display: inline !important;
 	color: var(--color-white);
 	text-underline-offset: 6px;
-	text-decoration-thickness: 1px;
+	text-decoration-thickness: 1px !important;
 	text-underline-offset: 4px;
 	transition: all .22s;
 	overflow: hidden;
