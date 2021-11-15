@@ -10088,6 +10088,45 @@ body.error404,
 	grid-row-gap: 5rem;
 }
 
+.filled-position .block-open-position,
+.filled-position .block-expectations,
+.filled-position .block-logos-techniques,
+.filled-position .block-upsells-mint {
+	position: relative;
+}
+
+.filled-position .block-open-position .container,
+.filled-position .block-open-position .site-header,
+.filled-position .block-expectations .container,
+.filled-position .block-expectations .site-header,
+.filled-position .block-logos-techniques .container,
+.filled-position .block-logos-techniques .site-header,
+.filled-position .block-upsells-mint .container,
+.filled-position .block-upsells-mint .site-header {
+	opacity: .2;
+}
+
+.filled-position .block-open-position::after,
+.filled-position .block-expectations::after,
+.filled-position .block-logos-techniques::after,
+.filled-position .block-upsells-mint::after {
+	font-size: 24px;
+	content: 'Paikka on täytetty';
+	color: var(--color-midnight-blue);
+	justify-self: center;
+	align-self: center;
+	display: flex;
+	position: absolute;
+	text-align: center;
+	width: unset;
+	height: unset;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-weight: var(--font-weight-semibold);
+	font-family: var(--font-paragraph);
+}
+
 /* stylelint-disable selector-max-class, selector-max-specificity, no-descending-specificity, selector-max-combinators, selector-max-compound-selectors, selector-max-pseudo-class, selector-attribute-quotes, max-nesting-depth, font-family-name-quotes, font-weight-notation */
 
 .gutenberg-content,
@@ -11252,6 +11291,13 @@ body.single .block.block-single:not(.block-single-reference) ul.tags cite {
 
 .block-hero.block-hero-404 h1 {
 	font-size: calc(70px + 180 * ((100vw - 320px) / 1600));
+}
+
+.filled-position .block-open-position::after,
+.filled-position .block-expectations::after,
+.filled-position .block-logos-techniques::after,
+.filled-position .block-upsells-mint::after {
+	font-size: calc(24px + 76 * ((100vw - 320px) / 1600));
 }
 
 .gutenberg-content ol,
@@ -13614,6 +13660,13 @@ body.single .block.block-single:not(.block-single-reference) ul.tags cite {
 
 .block-hero.block-hero-404 h1 {
 	font-size: 250px;
+}
+
+.filled-position .block-open-position::after,
+.filled-position .block-expectations::after,
+.filled-position .block-logos-techniques::after,
+.filled-position .block-upsells-mint::after {
+	font-size: 100px;
 }
 
 .gutenberg-content ol,

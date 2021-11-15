@@ -3,6 +3,25 @@
     "title": "Työpaikka",
     "fields": [
         {
+            "key": "field_6192715dbc5f1",
+            "label": "Onko paikka täytetty",
+            "name": "filled_position",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_5cf0fc8256e06",
             "label": "Mitä odotamme sinulta",
             "name": "expectations",
@@ -105,5 +124,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1633705261
+    "show_in_rest": 0,
+    "modified": 1636987269
 }

@@ -75,3 +75,34 @@
     }
   }
 }
+
+.filled-position {
+  .block-open-position,
+  .block-expectations,
+  .block-logos-techniques,
+  .block-upsells-mint {
+    position: relative;
+
+    .container {
+      opacity: .2;
+    }
+
+    &::after {
+      @include responsive-font(24px, 100px);
+      content: 'Paikka on täytetty';
+      color: var(--color-midnight-blue);
+      justify-self: center;
+      align-self: center;
+      display: flex;
+      position: absolute;
+      text-align: center;
+      width: unset;
+      height: unset;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: var(--font-weight-semibold);
+      font-family: var(--font-paragraph);
+    }
+  }
+}

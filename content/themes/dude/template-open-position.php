@@ -1,5 +1,20 @@
 <?php
 /**
+ * TODO: Add here the name and meaning of this file, template-open-position.php
+ *
+ * TODO: Add description here for this filefile called template-open-position.
+ *
+ * @Author:		Roni Laukkarinen
+ * @Date:   		2021-10-12 15:47:41
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2021-11-15 17:09:32
+ *
+ * @package dude
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ */
+
+
+/**
  * Template Name: Työpaikka
  *
  * This is the template that displays all pages by default.
@@ -16,10 +31,11 @@ the_post();
 
 $expectations = get_field( 'expectations' );
 $bonuses = get_field( 'bonuses' );
+$filled_position = get_field( 'filled_position' );
 
 get_header(); ?>
 
-<div class="content-area">
+<div class="content-area<?php if ( true === $filled_position ) : ?> filled-position<?php endif; ?>">
   <main id="main" class="site-main">
 
     <?php include get_theme_file_path( 'template-parts/hero-jobs.php' ); ?>
@@ -167,9 +183,9 @@ get_header(); ?>
           </li>
         </div>
     </section>
-    <?php endif; ?>
 
     <?php include get_theme_file_path( 'template-parts/content-modular.php' ); ?>
+    <?php endif; ?>
 
   </main><!-- #main -->
 </div><!-- #primary -->
