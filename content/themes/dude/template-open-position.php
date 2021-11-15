@@ -7,7 +7,7 @@
  * @Author:		Roni Laukkarinen
  * @Date:   		2021-10-12 15:47:41
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-11-15 17:09:32
+ * @Last Modified time: 2021-11-15 17:51:46
  *
  * @package dude
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
@@ -40,9 +40,6 @@ get_header(); ?>
 
     <?php include get_theme_file_path( 'template-parts/hero-jobs.php' ); ?>
 
-    <?php
-    // Do not show these if open application page
-    if ( ! is_page( 10160 ) ) : ?>
     <section class="block block-open-position has-light-bg">
       <div class="container">
         <div class="open-positions-description">
@@ -68,6 +65,9 @@ get_header(); ?>
       </div>
     </section>
 
+    <?php
+    // Do not show these if open application page
+    if ( ! is_page( 10160 ) ) : ?>
     <section class="block block-expectations has-light-bg">
 
       <div class="container">
@@ -183,9 +183,9 @@ get_header(); ?>
           </li>
         </div>
     </section>
+    <?php endif; ?>
 
     <?php include get_theme_file_path( 'template-parts/content-modular.php' ); ?>
-    <?php endif; ?>
 
   </main><!-- #main -->
 </div><!-- #primary -->

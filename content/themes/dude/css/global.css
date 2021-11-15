@@ -6500,6 +6500,7 @@ body.page-id-6357 .block.block-wide-text .block.block-form-job .gform_wrapper.gf
 .ui-datepicker.ui-widget .ui-datepicker-calendar {
 	width: 100%;
 	text-align: center;
+	background-color: var(--color-white) !important;
 }
 
 .ui-datepicker.ui-widget .ui-datepicker-calendar thead tr th span {
