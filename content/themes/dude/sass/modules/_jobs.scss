@@ -94,6 +94,10 @@ span.open-positions-count {
     padding: 0;
     border-top: 1px solid #50525c;
     overflow: visible;
+
+    .job.filled {
+      display: none;
+    }
   }
 
   .job-location {

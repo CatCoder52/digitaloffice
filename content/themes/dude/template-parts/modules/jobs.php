@@ -3,7 +3,7 @@
  * @Author: 						Roni Laukkarinen
  * @Date:   						2020-07-18 19:03:51
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-10-18 12:47:31
+ * @Last Modified time: 2021-11-15 17:13:03
  *
  * @package dude
  */
@@ -27,7 +27,7 @@
           <span class="job-location">Jyväskylä, etätoimipiste</span>
         </a>
       </li>
-      <li class="job">
+      <li class="job filled">
         <a data-no-swup class="job-link" href="<?php echo esc_url( get_page_link( 10156 ) ); ?>">
           <span class="job-title">
             Junior-kehittäjä / Harjoittelija

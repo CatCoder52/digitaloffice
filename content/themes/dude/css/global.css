@@ -5718,6 +5718,10 @@ span.open-positions-count.is-bigger {
 	overflow: visible;
 }
 
+.block.block-open-positions .jobs .job.filled {
+	display: none;
+}
+
 .block.block-open-positions .job-location {
 	opacity: .72;
 	text-align: right;
@@ -10103,7 +10107,7 @@ body.error404,
 .filled-position .block-logos-techniques .site-header,
 .filled-position .block-upsells-mint .container,
 .filled-position .block-upsells-mint .site-header {
-	opacity: .2;
+	opacity: .18;
 }
 
 .filled-position .block-open-position::after,
@@ -11297,7 +11301,7 @@ body.single .block.block-single:not(.block-single-reference) ul.tags cite {
 .filled-position .block-expectations::after,
 .filled-position .block-logos-techniques::after,
 .filled-position .block-upsells-mint::after {
-	font-size: calc(24px + 76 * ((100vw - 320px) / 1600));
+	font-size: calc(24px + 40 * ((100vw - 320px) / 1600));
 }
 
 .gutenberg-content ol,
@@ -13666,7 +13670,7 @@ body.single .block.block-single:not(.block-single-reference) ul.tags cite {
 .filled-position .block-expectations::after,
 .filled-position .block-logos-techniques::after,
 .filled-position .block-upsells-mint::after {
-	font-size: 100px;
+	font-size: 64px;
 }
 
 .gutenberg-content ol,

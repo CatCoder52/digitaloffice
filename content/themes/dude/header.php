@@ -4,10 +4,17 @@
  *
  * This is the template that displays all of the <head> section and everything up until <div id="content">
  *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ * @Author:		Roni Laukkarinen
+ * @Date:   		2021-10-12 15:47:41
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2021-11-15 17:16:17
  *
  * @package dude
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
+
+// Jobs
+$open_positions_count = '2';
 
 // Sales phone
 $sales_phone = '0408351033';
@@ -193,7 +200,7 @@ if ( $show_chat_greeting ) {
             <li class="menu-item menu-item-type-post_type menu-item-object-page dude-menu-item menu-item-18"><a href="<?php echo get_the_permalink( 9 ); ?>" data-text="Verkkosivut">Verkkosivut</a></li>
             <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-19"><a href="<?php echo get_the_permalink( 4485 ); ?>" data-text="Suunnittelu">Suunnittelu</a></li>
             <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4482"><a href="<?php echo get_the_permalink( 4493 ); ?>" data-text="Töitämme">Töitämme</a></li>
-            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4491"><a href="<?php echo get_the_permalink( 4491 ); ?>" data-text="Työpaikat">Työpaikat<span class="open-positions-count"><span class="screen-reader-text">, </span>3<span class="screen-reader-text">työpaikkaa avoinna</span></span></a></li>
+            <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-4491"><a href="<?php echo get_the_permalink( 4491 ); ?>" data-text="Työpaikat">Työpaikat<span class="open-positions-count"><span class="screen-reader-text">, </span><?php echo esc_html( $open_positions_count ); ?><span class="screen-reader-text">työpaikkaa avoinna</span></span></a></li>
             <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item menu-item-22"><a href="<?php echo get_the_permalink( 4487 ); ?>" data-text=">Yhteystiedot">Yhteystiedot</a></li>
           </ul>
         </nav><!-- #nav -->
@@ -218,7 +225,7 @@ if ( $show_chat_greeting ) {
                   <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo esc_url( get_post_type_archive_link( 'post' ) ); ?>">Blogi</a></li>
                   <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo esc_url( get_the_permalink( 4489 ) ); ?>">Koodi & yhteisö</a></li>
                   <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo esc_url( get_the_permalink( 4449 ) ); ?>">Yritys & kulttuuri</a></li>
-                  <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="has-jobs" href="<?php echo esc_url( get_the_permalink( 4491 ) ); ?>">Työpaikat<span class="open-positions-count is-bigger"><span class="screen-reader-text">, </span>3<span class="screen-reader-text">työpaikkaa avoinna</span></span></a></li>
+                  <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="has-jobs" href="<?php echo esc_url( get_the_permalink( 4491 ) ); ?>">Työpaikat<span class="open-positions-count is-bigger"><span class="screen-reader-text">, </span><?php echo esc_html( $open_positions_count ); ?><span class="screen-reader-text">työpaikkaa avoinna</span></span></a></li>
                   <li style="display: none" class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="<?php echo esc_url( get_the_permalink( 6704 ) ); ?>">UKK</a></li>
                   <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a data-no-swup href="<?php echo get_post_type_archive_link( 'merch' ); ?>">Merch</a></li>
                   <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a href="https://handbook.dude.fi">Handbook</a></li>

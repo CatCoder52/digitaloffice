@@ -84,11 +84,11 @@
     position: relative;
 
     .container {
-      opacity: .2;
+      opacity: .18;
     }
 
     &::after {
-      @include responsive-font(24px, 100px);
+      @include responsive-font(24px, 64px);
       content: 'Paikka on täytetty';
       color: var(--color-midnight-blue);
       justify-self: center;
