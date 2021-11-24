@@ -100,6 +100,8 @@ get_header(); ?>
       </div>
     </section>
     <?php endif; ?>
+    
+    <?php include get_theme_file_path( 'template-parts/modules/cta-with-phone-input.php' ); ?>
 
     <?php if ( ! empty( $small_references ) ) : ?>
     <section class="block block-references block-references-archive block-references-related has-dark-bg">
@@ -130,8 +132,6 @@ get_header(); ?>
       </div>
     </section>
     <?php endif; ?>
-
-    <?php include get_theme_file_path( 'template-parts/modules/cta-with-phone-input.php' ); ?>
 
   </main><!-- #main -->
 </div><!-- #primary -->
