@@ -139,3 +139,63 @@
 body.page-id-4487 .block.block-cta-with-image + .block.block-title-left-text-right {
   padding-top: 0;
 }
+
+// Single reference eceptions
+body.single-reference {
+  .block.block-cta-with-image {
+    padding-top: 0;
+
+    @media (min-width: $container-mobile) {
+      .gform_wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      form {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    // Because of Gravity Forms
+    // stylelint-disable-next-line
+    ul {
+      margin-left: 0 !important;
+      padding-left: 0 !important;
+    }
+  }
+
+  // Forced to override here
+  // stylelint-disable-next-line
+  .block.block-cta-with-image p,
+  .block.block-cta-with-image h2 {
+    color: $color-midnight-blue !important;
+  }
+
+  // stylelint-disable-next-line
+  .block.block-cta-with-image #gform_wrapper_11 label.gfield_label {
+    @extend %screen-reader-text;
+  }
+
+  .block.block-cta-with-image #gform_wrapper_11 .ginput_container_text input {
+    width: 100%;
+    text-align: center;
+    border-bottom: 2px solid $color-midnight-blue;
+    max-width: 250px;
+    padding-left: 0;
+    padding-right: 0;
+
+    @media (min-width: $container-mobile) {
+      min-width: 300px;
+    }
+  }
+
+  .block.block-cta-with-image .col.col-content {
+    background-color: $color-white;
+
+    @media (min-width: $container-ipad) {
+      padding: 7.5rem 7.25rem;
+    }
+  }
+}

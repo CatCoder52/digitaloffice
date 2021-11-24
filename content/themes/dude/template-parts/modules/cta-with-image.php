@@ -2,8 +2,8 @@
 /**
  * @Author: Roni Laukkarinen
  * @Date:   2020-07-16 17:32:53
- * @Last Modified by:   sippis
- * @Last Modified time: 2021-11-24 18:56:45
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2021-11-24 20:22:53
  * @package dude
  */
 
@@ -22,36 +22,7 @@ if ( empty( $image ) && is_singular( 'reference' ) ) {
 if ( empty( $image ) ) {
   return;
 }
-
-if ( is_singular( 'reference' ) ) { ?>
-  <style type="text/css">
-    .block.block-cta-with-image {
-      padding-top: 0 !important;
-    }
-
-    .block.block-cta-with-image h2 {
-      color: #131a50 !important;
-    }
-
-    .block.block-cta-with-image p {
-      color: #131a50 !important;
-    }
-
-    .block-cta-with-image #gform_wrapper_11 label.gfield_label {
-      display: none !important;
-    }
-
-    .block-cta-with-image #gform_wrapper_11 .ginput_container_text input {
-      width: 100% !important;
-      border-bottom: 2px solid #131a50 !important;
-    }
-
-    .block-cta-with-image .col-content {
-      background-color: #fff !important;
-      padding: 7.5rem 7.25rem !important;
-    }
-  </style>
-<?php } ?>
+?>
 
 <section class="block block-cta-with-image">
   <div class="container">
