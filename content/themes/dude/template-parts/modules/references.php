@@ -14,10 +14,7 @@ if ( ! $references ) {
   $args = array(
     'post_type'               => 'reference',
     'post_status'             => 'publish',
-    'orderby'                 => 'rand',
     'posts_per_page'          => 8,
-    'meta_key'                => 'reference_is_timang', // phpcs:ignore
-    'meta_value'              => true,
     'no_found_rows'           => true,
     'cache_results'           => true,
     'update_post_term_cache'  => false,
