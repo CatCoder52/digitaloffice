@@ -38,7 +38,7 @@
       }
     }
 
-    @media (min-width: 950px) {
+    @media (min-width: 1260px) {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
@@ -49,8 +49,22 @@
       display: flex;
       align-items: center;
       height: 120px;
+      gap: 5rem;
 
-      @media (min-width: 950px) {
+      > a:not(.top) {
+        overflow: visible;
+      }
+
+      @media (max-width: 480px) {
+        gap: 4rem;
+      }
+
+      @media (max-width: 500px) {
+        gap: 3rem;
+        flex-wrap: wrap;
+      }
+
+      @media (min-width: 1260px) {
         justify-content: space-between;
       }
     }
@@ -60,34 +74,29 @@
       height: auto;
       width: 100%;
 
+      @media (max-width: 1500px) {
+        width: 100%;
+        height: auto;
+      }
+
       @media (max-width: 530px) {
         max-width: 100px;
       }
 
-      @media (max-width: 440px) {
+      @media (max-width: 500px) {
         max-width: 80px;
       }
-    }
-
-    a {
-      margin-right: 5rem;
-
-      @media (max-width: 480px) {
-        margin-right: 4rem;
-      }
-
-      @media (max-width: 450px) {
-        margin-right: 3rem;
-      }
-    }
-
-    a:last-child {
-      margin-right: 0;
     }
 
     path:not(.hole) {
       fill: $color-white;
       transition: all .22s;
+    }
+
+    .c-coss {
+      @media (min-width: 1260px) {
+        transform: translateX(8px);
+      }
     }
 
     .c-koodiasuomesta {
@@ -110,7 +119,7 @@
 
     .c-itewiki {
       max-height: 35px;
-      width: auto;
+      width: 100%;
     }
 
     .c-itewiki path.hole {
