@@ -1,5 +1,20 @@
 <?php
 /**
+ * TODO: Add here the name and meaning of this file, footer.php
+ *
+ * TODO: Add description here for this filefile called footer.
+ *
+ * @Author:		Roni Laukkarinen
+ * @Date:   		2021-09-29 10:11:50
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2021-12-15 10:59:00
+ *
+ * @package dude
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ */
+
+
+/**
  * The template for displaying the footer
  *
  * Contains the closing of the #content div and all content after.
@@ -61,7 +76,7 @@ echo do_shortcode( '[simpay id="4535"]' ); ?>
         <a aria-label="Ulkoinen sivusto: Vierityspalkki" class="no-external-link-indicator" href="https://vierityspalkki.fi/toimistot/digitoimisto-dude"><?php include get_theme_file_path( '/svg/certificate-vierityspalkki.svg' ); ?></a>
         <a aria-label="Ulkoinen sivusto: ite wiki" class="no-external-link-indicator" href="https://www.itewiki.fi/digitoimisto-dude"><?php include get_theme_file_path( '/svg/certificate-itewiki.svg' ); ?></a>
         <a aria-label="Ulkoinen sivusto: Koodia Suomesta" class="no-external-link-indicator" href="https://koodiasuomesta.fi/"><?php include get_theme_file_path( '/svg/certificate-koodiasuomesta.svg' ); ?></a>
-        <a aria-label="Ulkoinen sivusto: AAA-luottoluokitus" class="no-external-link-indicator" href="https://www.yritystele.fi/yrityksen-tiedot/digitoimisto-dude-oy/yhteystiedot/911341"><?php include get_theme_file_path( '/svg/certificate-aaa.svg' ); ?></a>
+        <a aria-label="Ulkoinen sivusto: AAA-luottoluokitus" class="no-external-link-indicator" href="https://www.asiakastieto.fi/yritykset/fi/digitoimisto-dude-oy/25480215/taloustiedot"><?php include get_theme_file_path( '/svg/certificate-aaa.svg' ); ?></a>
       </div>
     </div>
 
