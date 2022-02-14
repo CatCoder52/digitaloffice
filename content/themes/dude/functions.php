@@ -1,8 +1,16 @@
 <?php
 /**
- * The current version of the theme.
+ * Functions
+ *
+ * Theme functions.
+ *
+ * @Author:		Roni Laukkarinen
+ * @Date:   		2021-10-12 15:47:41
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2022-02-14 13:47:10
  *
  * @package dude
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
 
 define( 'AIR_LIGHT_VERSION', '4.6.5' );
@@ -140,11 +148,14 @@ add_filter( 'script_loader_tag', 'dude_script_loader_tag', 10, 2 );
 // Remove Gutenberg inline "Normalization styles" like .editor-styles-wrapper h1
 // color: inherit;
 // @source https://github.com/WordPress/gutenberg/issues/18595#issuecomment-599588153
-function remove_gutenberg_inline_styles( $editor_settings, $post ) {
-  unset( $editor_settings['styles'][0] );
+// @ref https://gist.github.com/gziolo/a947dc52eb2604c77a0a5b0797b2e781#block_editor_settings_all
+function remove_gutenberg_inline_styles( $editor_settings, $editor_context ) {
+  if ( ! empty( $editor_context->post ) ) {
+    unset( $editor_settings['styles'][0]['css'] );
+  }
+
   return $editor_settings;
-} // end remove_gutenberg_inline_styles
-add_filter( 'block_editor_settings', 'remove_gutenberg_inline_styles', 10, 2 );
+}
 
 /**
  * Make sure Gutenberg wp-admin editor styles are loaded

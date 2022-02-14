@@ -7,7 +7,7 @@
  * @Author:		Roni Laukkarinen
  * @Date:   		2021-10-12 15:47:41
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2021-11-15 17:16:17
+ * @Last Modified time: 2022-02-02 17:50:10
  *
  * @package dude
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
@@ -49,6 +49,7 @@ if ( $show_chat_greeting ) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="google-site-verification" content="XF8_bRTu-S4gCsZgA0J78vtv0S5dfIjIFa0Lfm7kO_Y" />
 <link rel="profile" href="http://gmpg.org/xfn/11">
+<script data-swup-ignore-script defer data-domain="dude.fi" src="https://analytics.dude.fi/js/plausible.js"></script>
 <script>
 /**
  *
