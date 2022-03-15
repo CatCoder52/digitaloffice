@@ -22,6 +22,10 @@ body.single.single-reference {
       background: $color-midnight;
     }
 
+    figcaption {
+      color: $color-paragraphs-light;
+    }
+
     .block:not(.block-cta-with-phone-input) {
       background: $color-midnight;
       color: $color-white;

@@ -8870,6 +8870,10 @@ body.single.single-reference .site-content .block {
 	background: #161826;
 }
 
+body.single.single-reference .site-content figcaption {
+	color: #e3e5ec;
+}
+
 body.single.single-reference .site-content .block:not(.block-cta-with-phone-input) {
 	background: #161826;
 	color: #fff;
