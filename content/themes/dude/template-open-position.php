@@ -98,91 +98,95 @@ get_header(); ?>
 
     </section>
 
-    <section class="block has-light-bg block-logos block-logos-techniques">
-      <div class="container">
+    <?php
+    // Do not show if designer position
+    if ( 10510 !== get_the_ID() ) : ?>
+      <section class="block has-light-bg block-logos block-logos-techniques">
+        <div class="container">
 
-        <header class="block-head block-head-small">
-          <h2 class="block-title">Näitä käytämme päivittäin</h2>
-        </header>
+          <header class="block-head block-head-small">
+            <h2 class="block-title">Näitä käytämme päivittäin</h2>
+          </header>
 
-        <ul class="logo-wall">
-        <li>
-            <a href="https://www.apple.com/fi/macbook-pro-16/" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-apple.svg' ); ?></a>
-          </li>
-
+          <ul class="logo-wall">
           <li>
-            <a href="https://gulpjs.com/" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-gulp.svg' ); ?></a>
-          </li>
+              <a href="https://www.apple.com/fi/macbook-pro-16/" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-apple.svg' ); ?></a>
+            </li>
 
-          <li>
-            <a href="https://webpack.js.org/" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-webpack.svg' ); ?></a>
-          </li>
+            <li>
+              <a href="https://gulpjs.com/" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-gulp.svg' ); ?></a>
+            </li>
 
-          <li>
-            <a href="https://codex.wordpress.org/Main_Page" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-wordpress.svg' ); ?></a>
-          </li>
+            <li>
+              <a href="https://webpack.js.org/" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-webpack.svg' ); ?></a>
+            </li>
 
-          <li>
-            <a href="https://vuejs.org/" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-vuejs.svg' ); ?></a>
-          </li>
+            <li>
+              <a href="https://codex.wordpress.org/Main_Page" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-wordpress.svg' ); ?></a>
+            </li>
 
-          <li>
-            <a href="https://redis.io/" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-redis.svg' ); ?></a>
-          </li>
+            <li>
+              <a href="https://vuejs.org/" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-vuejs.svg' ); ?></a>
+            </li>
 
-          <li>
-            <a href="https://www.php.net/" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-php.svg' ); ?></a>
-          </li>
+            <li>
+              <a href="https://redis.io/" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-redis.svg' ); ?></a>
+            </li>
 
-          <li>
-            <a href="https://www.javascript.com/" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-js.svg' ); ?></a>
-          </li>
+            <li>
+              <a href="https://www.php.net/" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-php.svg' ); ?></a>
+            </li>
 
-          <li>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-html.svg' ); ?></a>
-          </li>
+            <li>
+              <a href="https://www.javascript.com/" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-js.svg' ); ?></a>
+            </li>
 
-          <li>
-            <a href="https://github.com/digitoimistodude/awesome-frontend" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-css.svg' ); ?></a>
-          </li>
+            <li>
+              <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-html.svg' ); ?></a>
+            </li>
 
-          <li>
-            <a href="https://babeljs.io/" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-babel.svg' ); ?></a>
-          </li>
+            <li>
+              <a href="https://github.com/digitoimistodude/awesome-frontend" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-css.svg' ); ?></a>
+            </li>
 
-          <li>
-            <a href="https://sass-lang.com/documentation/syntax#scss" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-sass.svg' ); ?></a>
-          </li>
+            <li>
+              <a href="https://babeljs.io/" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-babel.svg' ); ?></a>
+            </li>
 
-          <li>
-            <a href="https://www.w3schools.com/js/js_es6.asp" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-es6.svg' ); ?></a>
-          </li>
+            <li>
+              <a href="https://sass-lang.com/documentation/syntax#scss" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-sass.svg' ); ?></a>
+            </li>
 
-          <li>
-            <a href="https://github.com/digitoimistodude" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-github.svg' ); ?></a>
-          </li>
+            <li>
+              <a href="https://www.w3schools.com/js/js_es6.asp" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-es6.svg' ); ?></a>
+            </li>
 
-          <!-- <li>
-            <a href="https://github.com/ronilaukkarinen/vscode-settings" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-vscode.svg' ); ?></a>
-          </li> -->
+            <li>
+              <a href="https://github.com/digitoimistodude" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-github.svg' ); ?></a>
+            </li>
 
-          <li>
-            <a href="https://www.nginx.com/" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-nginx.svg' ); ?></a>
-          </li>
+            <!-- <li>
+              <a href="https://github.com/ronilaukkarinen/vscode-settings" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-vscode.svg' ); ?></a>
+            </li> -->
 
-          <li>
-            <a href="https://www.gnu.org/software/bash/" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-bash.svg' ); ?></a>
-          </li>
+            <li>
+              <a href="https://www.nginx.com/" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-nginx.svg' ); ?></a>
+            </li>
 
-          <li>
-            <a href="https://getcomposer.org/" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-composer.svg' ); ?></a>
-          </li>
+            <li>
+              <a href="https://www.gnu.org/software/bash/" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-bash.svg' ); ?></a>
+            </li>
 
-          <li>
-            <a href="https://www.npmjs.com/" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-npm.svg' ); ?></a>
-          </li>
-        </div>
-    </section>
+            <li>
+              <a href="https://getcomposer.org/" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-composer.svg' ); ?></a>
+            </li>
+
+            <li>
+              <a href="https://www.npmjs.com/" class="no-external-link-indicator no-text-link"><?php include get_theme_file_path( '/svg/stack-npm.svg' ); ?></a>
+            </li>
+          </div>
+      </section>
+    <?php endif; ?>
     <?php endif; ?>
 
     <?php include get_theme_file_path( 'template-parts/content-modular.php' ); ?>

@@ -18,6 +18,15 @@
     </div>
 
     <ul class="jobs">
+      <li class="job">
+        <a data-no-swup class="job-link" href="<?php echo esc_url( get_page_link( 10510 ) ); ?>">
+          <span class="job-title">
+            Suunnittelija
+            <?php include get_theme_file_path( '/svg/arrow-right-short.svg' ); ?>
+          </span>
+          <span class="job-location">Jyväskylä</span>
+        </a>
+      </li>
       <li class="job filled">
         <a data-no-swup class="job-link" href="<?php echo esc_url( get_page_link( 9515 ) ); ?>">
           <span class="job-title">

@@ -7,14 +7,14 @@
  * @Author:		Roni Laukkarinen
  * @Date:   		2021-10-12 15:47:41
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-02-02 17:50:10
+ * @Last Modified time: 2022-04-14 13:39:53
  *
  * @package dude
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
 
 // Jobs
-$open_positions_count = '2';
+$open_positions_count = '3';
 
 // Sales phone
 $sales_phone = '0408351033';
