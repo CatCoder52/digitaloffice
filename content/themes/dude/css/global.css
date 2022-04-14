@@ -10074,14 +10074,10 @@ body.error404,
 	max-width: 100%;
 }
 
-.block.block-open-position .open-positions-description .img {
-	display: grid;
-	grid-gap: 2rem;
-}
-
 .block.block-open-position .open-positions-description figcaption {
 	font-size: 16px;
 	opacity: .7;
+	margin-top: 2rem;
 }
 
 .block.block-expectations h2 {
