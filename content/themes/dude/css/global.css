@@ -6058,12 +6058,13 @@ body.page-id-6357 .block.block-wide-text .block.block-form-job .gform_wrapper.gf
 
 .block.block-form-job select {
 	appearance: none;
+	background-color: var(--color-background-input-field);
 	background-image: url("../../svg/select.svg");
 	background-position: right var(--gap-select-icon) center;
 	background-repeat: no-repeat;
 	background-size: 11px auto;
 	border-color: var(--color-border-forms);
-	border-radius: var(--border-radius-select);
+	border-radius: 0;
 	border-style: solid;
 	border-width: var(--border-width-input-field);
 	color: var(--color-form-text);
