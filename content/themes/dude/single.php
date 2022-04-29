@@ -1,10 +1,16 @@
 <?php
 /**
+ * Single
+ *
  * The template for displaying all single posts
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ * @Author:		Roni Laukkarinen
+ * @Date:   		2020-08-14 16:37:35
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2022-04-29 10:16:01
  *
- * @package dude
+ * @package dude-2020
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
 
 the_post();
@@ -96,7 +102,12 @@ get_header(); ?>
 
                   if ( ! empty( $desc ) ) : ?>
                     <p class="person-description"><?php echo esc_html( $desc ) ?></p>
-                    <p class="cta-link-wrapper"><a class="cta-link" href="<?php echo esc_url( get_home_url() ); ?>/dudet/<?php echo strtolower( get_the_author_meta( 'first_name' ) ); ?>">Lue lisää</a></p>
+
+                    <?php if ( 'Kaponen' !== get_the_author_meta( 'last_name' ) ) : ?>
+                      <p class="cta-link-wrapper">
+                        <a class="cta-link" href="<?php echo esc_url( get_home_url() ); ?>/dudet/<?php echo strtolower( get_the_author_meta( 'first_name' ) ); ?>">Lue lisää</a>
+                      </p>
+                    <?php endif; ?>
                   <?php endif; ?>
                 </div>
               </div>
