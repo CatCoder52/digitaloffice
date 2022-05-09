@@ -7,7 +7,7 @@
  * @Author:		Roni Laukkarinen
  * @Date:   		2021-10-12 15:47:41
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-05-09 14:58:56
+ * @Last Modified time: 2022-05-09 15:05:32
  *
  * @package dude
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
@@ -100,7 +100,7 @@ get_header(); ?>
 
     <?php
     // Do not show if designer position
-    if ( 10510 !== get_the_ID() || 10687 !== get_the_ID() ) : ?>
+    if ( 10510 !== get_the_ID() && 10687 !== get_the_ID() ) : ?>
       <section class="block has-light-bg block-logos block-logos-techniques">
         <div class="container">
 

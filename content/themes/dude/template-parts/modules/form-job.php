@@ -3,7 +3,7 @@
  * @Author:             Roni Laukkarinen
  * @Date:               2021-10-11 16:08:55
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-04-14 13:07:58
+ * @Last Modified time: 2022-05-09 15:02:57
  *
  * @package dude
  */
@@ -23,7 +23,7 @@ $filled_position = get_field( 'filled_position' );
       <div class="description">
         <?php
         // If designer position
-        if ( 10510 === get_the_ID() ) { ?>
+        if ( 10510 === get_the_ID() || 10687 === get_the_ID() ) { ?>
           <p>Voit lähettää hakemuksesi myös suoraan sähköpostitse <a href="https://www.dude.fi/dudet/kristian">Kristianille</a> osoitteeseen <a href="mailto:kristian@dude.fi">kristian@dude.fi</a> tai soitella paikasta puhelimitse numeroon <a href="tel:0408351033">040 835 1033</a>.</p>
 
           <p>Huomaathan, että kokemus + referenssit ovat tärkeässä roolissa hakemuksessasi, joten laitathan tekemiäsi töitä meille näytille samalla.
@@ -34,7 +34,7 @@ $filled_position = get_field( 'filled_position' );
 
       <?php
       // If designer position, show different form
-      if ( 10510 === get_the_ID() ) {
+      if ( 10510 === get_the_ID() || 10687 === get_the_ID() ) {
         $form_id = 12;
       } else {
         $form_id = 10;
