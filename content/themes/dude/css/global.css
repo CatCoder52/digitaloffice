@@ -10124,6 +10124,7 @@ body.error404,
 	grid-row-gap: 5rem;
 }
 
+.filled-position .block-image-full-width,
 .filled-position .block-open-position,
 .filled-position .block-expectations,
 .filled-position .block-logos-techniques,
@@ -10131,6 +10132,8 @@ body.error404,
 	position: relative;
 }
 
+.filled-position .block-image-full-width .container,
+.filled-position .block-image-full-width .site-header,
 .filled-position .block-open-position .container,
 .filled-position .block-open-position .site-header,
 .filled-position .block-expectations .container,
@@ -10142,6 +10145,7 @@ body.error404,
 	opacity: .18;
 }
 
+.filled-position .block-image-full-width::after,
 .filled-position .block-open-position::after,
 .filled-position .block-expectations::after,
 .filled-position .block-logos-techniques::after,
@@ -11329,6 +11333,7 @@ body.single .block.block-single:not(.block-single-reference) ul.tags cite {
 	font-size: calc(70px + 180 * ((100vw - 320px) / 1600));
 }
 
+.filled-position .block-image-full-width::after,
 .filled-position .block-open-position::after,
 .filled-position .block-expectations::after,
 .filled-position .block-logos-techniques::after,
@@ -13721,6 +13726,7 @@ body.single .block.block-single:not(.block-single-reference) ul.tags cite {
 	font-size: 250px;
 }
 
+.filled-position .block-image-full-width::after,
 .filled-position .block-open-position::after,
 .filled-position .block-expectations::after,
 .filled-position .block-logos-techniques::after,

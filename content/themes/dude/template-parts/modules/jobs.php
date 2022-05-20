@@ -3,7 +3,7 @@
  * @Author: 						Roni Laukkarinen
  * @Date:   						2020-07-18 19:03:51
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2022-04-12 11:49:45
+ * @Last Modified time: 2022-05-20 15:34:52
  *
  * @package dude
  */
@@ -18,7 +18,7 @@
     </div>
 
     <ul class="jobs">
-      <li class="job">
+      <li class="job filled">
         <a data-no-swup class="job-link" href="<?php echo esc_url( get_page_link( 10510 ) ); ?>">
           <span class="job-title">
             Suunnittelija
@@ -27,6 +27,7 @@
           <span class="job-location">Jyväskylä</span>
         </a>
       </li>
+      <li class="job filled">
       <a data-no-swup class="job-link" href="<?php echo esc_url( get_page_link( 10687 ) ); ?>">
           <span class="job-title">
             Suunnittelija-harjoittelija

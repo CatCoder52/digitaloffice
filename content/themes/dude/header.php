@@ -14,7 +14,7 @@
  */
 
 // Jobs
-$open_positions_count = '4';
+$open_positions_count = '2';
 
 // Sales phone
 $sales_phone = '0408351033';
