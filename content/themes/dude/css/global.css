@@ -3642,6 +3642,10 @@ div.lazy {
 
 /* stylelint-disable no-descending-specificity */
 
+#crisp-chatbox[data-hidden="true"] {
+	display: none !important;
+}
+
 .chat-greeting {
 	position: fixed;
 	z-index: 9;
