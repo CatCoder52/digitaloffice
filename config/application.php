@@ -94,6 +94,31 @@ Config::define('NONCE_SALT', env('NONCE_SALT'));
 Config::define( 'MAILGUN_USEAPI', true );
 
 /**
+ *  Redis object cache settings for
+ *  https://objectcache.pro/docs/configuration-options/
+ */
+define( 'WP_REDIS_CONFIG', [
+  'token'             => getenv( 'REDIS_TOKEN' ),
+  'host'              => '127.0.0.1',
+  'port'              => 6379,
+  'password'          => getenv( 'REDIS_PASSWORD' ),
+  'prefix'            => getenv( 'DB_NAME' ),
+  'database'          => getenv( 'REDIS_DATABASE' ) ?: 0,
+  'maxttl'            => 43200, // max cache half day
+  'timeout'           => 1.0,
+  'read_timeout'      => 1.0,
+  'split_alloptions'  => true,
+  'async_flush'       => true,
+  'debug'             => false,
+] );
+
+if ( 'production' === getenv( 'WP_ENV' ) ) {
+  define( 'WP_REDIS_DISABLED', false );
+} else {
+  define( 'WP_REDIS_DISABLED', true );
+}
+
+/**
  * Custom Settings
  */
 Config::define('AUTOMATIC_UPDATER_DISABLED', false);
