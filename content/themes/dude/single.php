@@ -21,7 +21,29 @@ $guest_post_author = get_field( 'guest_post_author' );
 $guest_post_author_description = get_field( 'guest_post_author_description' );
 $guest_post_author_avatar = get_field( 'guest_post_author_avatar' );
 
-get_header(); ?>
+get_header();
+
+if ( 10845 === get_the_id() ) { ?>
+  <style type="text/css">
+    .gutenberg-content > .wp-block-gallery figcaption {
+      font-size: 15px;
+      font-style: normal;
+      color: rgba(75,75,90,.9);
+      border: 0;
+      text-align: center;
+      max-width: 870px;
+      padding-bottom: 0;
+      margin-bottom: 0;
+      width: 100%;
+    }
+
+    figure.wp-block-gallery.has-nested-images {
+      margin-top: 6rem;
+      margin-bottom: 6rem;
+    }
+  </style>
+<?php } ?>
+
 
 <div class="content-area">
 	<main id="main" class="site-main">
