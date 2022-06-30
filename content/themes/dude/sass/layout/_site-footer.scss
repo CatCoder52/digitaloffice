@@ -18,15 +18,10 @@
       max-width: 60rem;
 
       a:not(.top) {
-        color: $color-white;
-        border-bottom: 1px solid rgba($color-white, .3);
+        @include link($color: var(--color-white), $color-hover: var(--color-white), $color-underline: rgba(255, 255, 255, .3), $color-underline-hover: var(--color-mint));
         transition: border .22s;
         overflow: hidden;
         display: inline-flex;
-
-        &:hover {
-          border-bottom: 1px solid $color-mint;
-        }
       }
 
       @media (max-width: 1200px) {
@@ -43,7 +38,7 @@
       }
     }
 
-    @media (min-width: 950px) {
+    @media (min-width: 1260px) {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
@@ -54,43 +49,54 @@
       display: flex;
       align-items: center;
       height: 120px;
+      gap: 5rem;
 
-      @media (min-width: 950px) {
+      > a:not(.top) {
+        overflow: visible;
+      }
+
+      @media (max-width: 480px) {
+        gap: 4rem;
+      }
+
+      @media (max-width: 500px) {
+        gap: 3rem;
+        flex-wrap: wrap;
+      }
+
+      @media (min-width: 1260px) {
         justify-content: space-between;
       }
     }
 
     svg {
       max-width: 150px;
+      height: auto;
+      width: 100%;
+
+      @media (max-width: 1500px) {
+        width: 100%;
+        height: auto;
+      }
 
       @media (max-width: 530px) {
         max-width: 100px;
       }
 
-      @media (max-width: 440px) {
+      @media (max-width: 500px) {
         max-width: 80px;
       }
-    }
-
-    a {
-      margin-right: 5rem;
-
-      @media (max-width: 480px) {
-        margin-right: 4rem;
-      }
-
-      @media (max-width: 450px) {
-        margin-right: 3rem;
-      }
-    }
-
-    a:last-child {
-      margin-right: 0;
     }
 
     path:not(.hole) {
       fill: $color-white;
       transition: all .22s;
+    }
+
+    .c-coss {
+      @media (min-width: 1260px) {
+        transform: translateX(8px);
+      }
     }
 
     .c-koodiasuomesta {
@@ -105,16 +111,15 @@
 
     .c-vierityspalkki {
       position: relative;
-      top: 2px;
     }
 
-    .c-vierityspalkki path.hole {
+    path.hole {
       fill: #343649;
     }
 
     .c-itewiki {
       max-height: 35px;
-      width: auto;
+      width: 100%;
     }
 
     .c-itewiki path.hole {
@@ -220,15 +225,10 @@
 
 .block.block-footer.site-footer a:not(.top),
 .block.block-footer.site-footer button.chat {
-  color: $color-white;
-  border-bottom: 1px solid rgba($color-white, .3);
-  transition: border .22s;
+  @include link($color: var(--color-white), $color-hover: var(--color-white), $color-underline: rgba(255, 255, 255, .3), $color-underline-hover: var(--color-mint));
+  transition: all .22s;
   overflow: hidden;
   display: inline-flex;
-
-  &:hover {
-    border-bottom: 1px solid $color-mint;
-  }
 }
 
 .block.block-footer.site-footer a,
@@ -239,6 +239,16 @@
 
 .block.block-footer.site-footer .main-links {
   margin-top: 10rem;
+
+  .no-text-link {
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all .22s;
+
+    &:hover {
+      border-color: var(--color-mint);
+    }
+  }
 }
 
 .block.block-footer.site-footer .main-links ul {

@@ -1,4 +1,10 @@
 /* stylelint-disable no-descending-specificity */
+// Fallback
+// stylelint-disable-next-line
+#crisp-chatbox[data-hidden="true"] {
+  display: none !important;
+}
+
 .chat-greeting {
   position: fixed;
   z-index: 9;

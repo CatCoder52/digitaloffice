@@ -3,7 +3,7 @@
  * @Author: Roni Laukkarinen
  * @Date:   2020-07-16 17:32:53
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-08-14 12:59:24
+ * @Last Modified time: 2021-11-24 20:22:53
  * @package dude
  */
 
@@ -12,9 +12,17 @@ $title = get_sub_field( 'title' );
 $centered_text = get_sub_field( 'centered_text' );
 $button = get_sub_field( 'link' );
 
+if ( empty( $image ) && is_singular( 'reference' ) ) {
+  $image = [ 'ID' => 10274 ];
+  $title = 'Soitteleeko?';
+  $centered_text = 'Jos työnäyte puhutteli ja haluaisitte vähintäänkin yhtä hienon sivuston, jätäthän yhteystietosi ja Kristian on teihin pikimmiten yhteydessä.';
+  $button = null;
+}
+
 if ( empty( $image ) ) {
   return;
-} ?>
+}
+?>
 
 <section class="block block-cta-with-image">
   <div class="container">
@@ -31,6 +39,12 @@ if ( empty( $image ) ) {
           <?php if ( ! empty( $centered_text ) ) : ?>
             <div class="text-content">
               <?php echo wpautop( $centered_text ); // phpcs:ignore ?>
+
+              <?php if ( is_singular( 'reference' ) ) {
+                if ( function_exists( 'gravity_form' ) ) {
+                  gravity_form( 11, $display_title = false, $display_description = false, $display_inactive = false, $field_values = null, $ajax = true, $echo = true );
+                }
+              } ?>
             </div>
           <?php endif; ?>
 

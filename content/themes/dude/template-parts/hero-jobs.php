@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:14:20
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-08-14 22:44:18
+ * @Last Modified time: 2021-10-08 15:48:37
  *
  * @package dude
  */
@@ -47,10 +47,19 @@ if ( has_post_thumbnail() ) {
         </div>
       <?php } ?>
 
-      <?php if ( ! empty( $button ) ) : ?>
-        <p class="button-wrapper"><a class="button button-glitch button-mint" href="<?php echo esc_url( $button['url'] ); ?>"<?php if ( ! empty( $button['target'] ) ) : ?> target="<?php echo esc_html( $button['target'] ); ?>"<?php endif; ?>><?php echo esc_html( $button['title'] ); ?><?php include get_theme_file_path( '/svg/arrow-right.svg' ); ?></a></p>
+      <?php if ( ! empty( $button['url'] ) || ! empty( $button['title'] ) ) : ?>
+        <p class="button-wrapper">
+          <a href="<?php echo esc_url( $button['url'] ); ?>" class="no-text-link no-external-link-indicator
+          <?php if ( str_contains( $button['url'], '#' ) ) : ?>
+            <?php echo ' js-trigger'; ?>
+          <?php endif; ?>">
+            <?php echo wp_kses_post( $button['title'] ); ?>
+            <span class="screen-reader-text">Katso avoimet työpaikat</span>
+          </a>
+        </p>
       <?php endif; ?>
     </div>
 
+    <?php include get_theme_file_path( '/svg/logo-big-white.svg' ); ?>
   </div>
 </section>

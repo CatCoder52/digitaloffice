@@ -1,5 +1,20 @@
 <?php
 /**
+ * TODO: Add here the name and meaning of this file, footer.php
+ *
+ * TODO: Add description here for this filefile called footer.
+ *
+ * @Author:		Roni Laukkarinen
+ * @Date:   		2021-09-29 10:11:50
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2021-12-20 11:21:07
+ *
+ * @package dude
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ */
+
+
+/**
  * The template for displaying the footer
  *
  * Contains the closing of the #content div and all content after.
@@ -17,11 +32,11 @@ $sales = get_sales_person();
 
 <?php if ( 'merch' === get_post_type() ) : ?>
 <?php
-// Enable when payments active and not sold out
-// echo do_shortcode( '[simpay id="4535"]' ); ?>
+// MERCHTHINGS enable/disable: Next line should be only uncommented when payments active and not sold out, comment it out when sold out!
+echo do_shortcode( '[simpay id="4535"]' ); ?>
 
 <div class="cart" id="cart" data-product-id="null">
-  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart">
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart">
     <circle cx="9" cy="21" r="1" />
     <circle cx="20" cy="21" r="1" />
     <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
@@ -43,7 +58,6 @@ $sales = get_sales_person();
   function emptyCart() {
     window.location.reload();
   }
-
 </script>
 <?php endif; ?>
 
@@ -64,6 +78,8 @@ $sales = get_sales_person();
         <a aria-label="Ulkoinen sivusto: Vierityspalkki" class="no-external-link-indicator" href="https://vierityspalkki.fi/toimistot/digitoimisto-dude"><?php include get_theme_file_path( '/svg/certificate-vierityspalkki.svg' ); ?></a>
         <a aria-label="Ulkoinen sivusto: ite wiki" class="no-external-link-indicator" href="https://www.itewiki.fi/digitoimisto-dude"><?php include get_theme_file_path( '/svg/certificate-itewiki.svg' ); ?></a>
         <a aria-label="Ulkoinen sivusto: Koodia Suomesta" class="no-external-link-indicator" href="https://koodiasuomesta.fi/"><?php include get_theme_file_path( '/svg/certificate-koodiasuomesta.svg' ); ?></a>
+        <a aria-label="Ulkoinen sivusto: Suomen avoimien tietojärjestelmien keskus-COSS ry" class="no-external-link-indicator" href="https://coss.fi/blogi/dudella-avoin-lahdekoodi-ja-aktiivinen-osallistuminen-yhteison-toimintaan-ovat-osa-menestysta/"><?php include get_theme_file_path( '/svg/certificate-coss.svg' ); ?></a>
+        <a aria-label="Ulkoinen sivusto: AAA-luottoluokitus" class="no-external-link-indicator" href="https://www.asiakastieto.fi/yritykset/fi/digitoimisto-dude-oy/25480215/taloustiedot"><?php include get_theme_file_path( '/svg/certificate-aaa.svg' ); ?></a>
       </div>
     </div>
 
@@ -105,7 +121,7 @@ $sales = get_sales_person();
           <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="no-text-link" href="https://www.linkedin.com/company/digitoimisto-dude-oy" target="_blank">LinkedIn</a></li>
           <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="no-text-link" href="https://www.instagram.com/digitoimistodude/" target="_blank">Instagram</a></li>
           <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="no-text-link" href="https://github.com/digitoimistodude" target="_blank">Github</a></li>
-          <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="no-text-link" href="https://www.itewiki.fi/digitoimisto-dude" target="_blank">IteWiki</a></li>
+          <li class="menu-item menu-item-type-custom menu-item-object-custom dude-menu-item"><a class="no-text-link" href="https://www.itewiki.fi/digitoimisto-dude" target="_blank">ite wiki</a></li>
         </ul>
       </div>
 

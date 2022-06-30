@@ -4,7 +4,8 @@
   "license": "MIT",
   "description": "A modern WordPress stack",
   "homepage": "https://github.com/digitoimistodude/dudestack",
-  "authors": [{
+  "authors": [
+    {
       "name": "Roni Laukkarinen",
       "email": "roni@dude.fi",
       "homepage": "https://github.com/ronilaukkarinen"
@@ -42,7 +43,8 @@
       "Roots\\Bedrock\\Installer::addSalts"
     ]
   },
-  "repositories": [{
+  "repositories": [
+    {
       "type": "composer",
       "url": "https://wpackagist.org",
       "minimum-stability": "dev"
@@ -71,22 +73,26 @@
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
-          "url": "https://www.relevanssi.com/update/get_version.php?api_key=11879452&version=2.9.0"
+          "url": "https://www.relevanssi.com/update/get_version.php?api_key={%RELEVANSSI_API_KEY}&version=2.9.0"
         }
       }
     },
     {
       "type": "package",
       "package": {
-        "name": "rocketgenius/gravity-forms",
+        "name": "gravityforms/gravityforms",
+        "version": "2.5.9.3",
         "type": "wordpress-plugin",
-        "version": "2.4.18.10",
         "dist": {
           "type": "zip",
-          "url": "https://dudedev:Y4ktW427dBzH^n(dqn>LKTRq7@plugins.dude.fi/gravityforms_2.4.18.10.zip"
+          "url": "https://www.gravityhelp.com/wp-content/plugins/gravitymanager/api.php?op=get_plugin&slug=gravityforms&key={%WP_PLUGIN_GF_KEY}"
+        },
+        "require": {
+          "composer/installers": "^1.4",
+          "gotoandplay/gravityforms-composer-installer": "^2.3"
         }
       }
-    }
+    }    
   ],
   "require": {
     "koodimonni/composer-dropin-installer": "dev-master",
@@ -102,7 +108,7 @@
     "wpackagist-plugin/ga-in": "*",
     "wpackagist-plugin/imagify": "*",
     "wpackagist-plugin/simple-history": "*",
-    "wpackagist-plugin/sendgrid-email-delivery-simplified": "*",
+    "wpackagist-plugin/mailgun": "*",
     "wpackagist-plugin/wp-sanitize-accented-uploads": "*",
     "wpackagist-plugin/worker": "*",
     "wpackagist-plugin/redis-cache": "*",

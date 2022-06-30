@@ -3,7 +3,7 @@
  * @Author:             Timi Wahalahti, Digitoimisto Dude Oy (https://dude.fi)
  * @Date:               2019-05-10 16:05:23
  * @Last Modified by:   Roni Laukkarinen
- * @Last Modified time: 2020-07-23 13:37:19
+ * @Last Modified time: 2022-05-12 13:38:52
  *
  * @package dude
  */
@@ -14,6 +14,7 @@ $exclude_template_part_from_cache = array(
   'wide-text'             => true,
   'cta-with-phone-input'  => true,
   'cta-references'        => true,
+  'form-job'              => true,
 );
 
 // normally we want to use current page id

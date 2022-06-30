@@ -94,7 +94,9 @@ module.exports = {
   },
   js: {
     main: themeDir + '/js/src/scripts.js',
+    store: themeDir + '/js/modules/store.js',
     src: themeDir + '/js/src/**/*.js',
+    src_store: themeDir + '/js/modules/store.js',
     dest: themeDir + '/js'
   },
   php: {

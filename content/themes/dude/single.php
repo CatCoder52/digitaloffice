@@ -1,10 +1,16 @@
 <?php
 /**
+ * Single
+ *
  * The template for displaying all single posts
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ * @Author:		Roni Laukkarinen
+ * @Date:   		2020-08-14 16:37:35
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2022-04-29 10:16:01
  *
- * @package dude
+ * @package dude-2020
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
 
 the_post();
@@ -15,7 +21,29 @@ $guest_post_author = get_field( 'guest_post_author' );
 $guest_post_author_description = get_field( 'guest_post_author_description' );
 $guest_post_author_avatar = get_field( 'guest_post_author_avatar' );
 
-get_header(); ?>
+get_header();
+
+if ( 10845 === get_the_id() ) { ?>
+  <style type="text/css">
+    .gutenberg-content > .wp-block-gallery figcaption {
+      font-size: 15px;
+      font-style: normal;
+      color: rgba(75,75,90,.9);
+      border: 0;
+      text-align: center;
+      max-width: 870px;
+      padding-bottom: 0;
+      margin-bottom: 0;
+      width: 100%;
+    }
+
+    figure.wp-block-gallery.has-nested-images {
+      margin-top: 6rem;
+      margin-bottom: 6rem;
+    }
+  </style>
+<?php } ?>
+
 
 <div class="content-area">
 	<main id="main" class="site-main">
@@ -61,7 +89,8 @@ get_header(); ?>
           </footer><!-- .entry-footer -->
         </div>
 
-        <?php if ( 5635 !== get_the_id() && false === $guest_post ) : ?>
+        <?php if ( false === $guest_post || ! isset( $guest_post ) ) : ?>
+        <?php if ( 5635 !== get_the_id() ) : ?>
           <div class="entry-author">
             <?php
             // Get big author image
@@ -95,7 +124,12 @@ get_header(); ?>
 
                   if ( ! empty( $desc ) ) : ?>
                     <p class="person-description"><?php echo esc_html( $desc ) ?></p>
-                    <p class="cta-link-wrapper"><a class="cta-link" href="<?php echo esc_url( get_home_url() ); ?>/dudet/<?php echo strtolower( get_the_author_meta( 'first_name' ) ); ?>">Lue lisää</a></p>
+
+                    <?php if ( 'Kaponen' !== get_the_author_meta( 'last_name' ) ) : ?>
+                      <p class="cta-link-wrapper">
+                        <a class="cta-link" href="<?php echo esc_url( get_home_url() ); ?>/dudet/<?php echo strtolower( get_the_author_meta( 'first_name' ) ); ?>">Lue lisää</a>
+                      </p>
+                    <?php endif; ?>
                   <?php endif; ?>
                 </div>
               </div>
@@ -103,6 +137,7 @@ get_header(); ?>
             <?php endif; ?>
 
             </div>
+        <?php endif; ?>
         <?php endif; ?>
 
       </article><!-- #post-## -->

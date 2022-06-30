@@ -2,15 +2,15 @@
 /**
  * @Author: Timi Wahalahti
  * @Date:   2021-01-13 10:34:51
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2021-01-15 18:18:38
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2021-09-21 11:14:29
  *
  * @package dude
  */
 
 add_filter( 'autoptimize_filter_noptimize', 'ama_noptimize', 10, 0 );
 function ama_noptimize() {
-  if ( strpos( $_SERVER['REQUEST_URI'], 'ama' ) !== false ) {
+  if ( strpos( $_SERVER['REQUEST_URI'], 'ama' ) !== false ) { // phpcs:ignore
     return true;
   } else {
     return false;

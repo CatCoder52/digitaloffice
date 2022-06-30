@@ -22,6 +22,10 @@ body.single.single-reference {
       background: $color-midnight;
     }
 
+    figcaption {
+      color: $color-paragraphs-light;
+    }
+
     .block:not(.block-cta-with-phone-input) {
       background: $color-midnight;
       color: $color-white;
@@ -142,14 +146,13 @@ body.single.single-reference {
 
       // Reset refrence links on dark background
       a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail) {
-        color: $color-white;
-        border-bottom: 1px solid rgba($color-white, .3);
-        transition: border .22s;
+        @include link($color: var(--color-white), $color-hover: var(--color-white), $color-underline: rgba(255, 255, 255, .3), $color-underline-hover: var(--color-mint));
+        text-underline-offset: 4px;
+        transition: all .22s;
         overflow: hidden;
         box-shadow: none;
 
         &:hover {
-          border-bottom: 1px solid $color-mint;
           background: none;
         }
       }

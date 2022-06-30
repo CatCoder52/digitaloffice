@@ -1,0 +1,460 @@
+/* stylelint-disable selector-max-class, selector-max-specificity, no-descending-specificity, selector-max-combinators, selector-max-compound-selectors, selector-max-pseudo-class, selector-attribute-quotes, max-nesting-depth */
+:root {
+  --color-black: #161616;
+  --color-muted: #b9b9b9;
+  --color-white: #fff;
+  --color-mint: #7effe1;
+  --color-product-title: var(--color-white);
+  --color-price: var(--color-white);
+  --font-size-12: 12px;
+  --font-size-13: 13px;
+  --font-size-14: 14px;
+  --font-size-15: 15px;
+  --font-size-16: 16px;
+  --font-size-18: 18px;
+  --font-size-19: 19px;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --height-selection-buttons: 3.5rem;
+}
+
+// Components for store
+@mixin store-link {
+  @include link($color: var(--color-white), $color-hover: var(--color-white), $color-underline: rgba(255, 255, 255, .5), $color-underline-hover: var(--color-white));
+  box-shadow: none;
+  transition: all .22s;
+  overflow: hidden;
+  background-color: transparent;
+  padding: 0;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  line-height: unset;
+
+  &:hover,
+  &:focus {
+    background: 0 0;
+    cursor: pointer;
+  }
+}
+
+// Styles for merch 2021
+body.post-type-archive-merch {
+  // New sold out styles
+  .content-area .block.block-merch .sold-out {
+    transform: none;
+    transition: none;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-mint);
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--color-black);
+    font-size: var(--font-size-13);
+    padding: 1.2rem 0;
+    font-weight: var(--font-weight-bold);
+  }
+
+  // Button transitions
+  .content-area button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):not(.slick-arrow):not(.button-reset),
+  .button,
+  input[type="reset"],
+  input[type="submit"],
+  input[type="button"] {
+    transition: all .18s cubic-bezier(.19, 1, .22, 1);
+  }
+
+  .ouroboros {
+    top: -77px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1680px;
+    height: auto;
+
+    path {
+      fill: #1b1b1b;
+    }
+  }
+
+  .site {
+    background-color: var(--color-black);
+  }
+
+  .container,
+  .block.block-merch.has-dark-bg,
+  .block,
+  .content-area {
+    background-color: transparent;
+  }
+
+  // Merch hero
+  .block.block-hero.block-hero-merch {
+    padding: 0;
+    margin-top: 18rem;
+
+    @media (max-width: 600px) {
+      margin-top: 12rem;
+    }
+
+    > .container {
+      padding-top: 0;
+      max-width: 870px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+
+    h1 {
+      margin: 0 auto;
+      font-size: 12px;
+      line-height: 18px;
+      text-align: center;
+      display: inline-flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 span {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      text-align: center;
+      letter-spacing: 18px;
+      text-transform: uppercase;
+      width: 100%;
+      color: var(--color-white);
+      transform: translate(15px, 4px);
+    }
+
+    h1 > svg {
+      display: block;
+      margin-top: 55px;
+
+      @media (max-width: 820px) {
+        width: 80%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    p {
+      font-size: var(--font-size-18);
+      line-height: 27px;
+      margin-top: 6.2rem;
+      margin-bottom: 6.2rem;
+      color: var(--color-white);
+
+      a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
+      .block.block-title-left-text-right li a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
+      .text-link {
+        @include store-link();
+      }
+
+      .is-external-link::after {
+        background-image: url('../svg/external-link-white.svg') !important;
+      }
+    }
+  }
+
+  // Products area
+  .content-area .block.block-merch {
+    margin-top: 1.8rem;
+
+    .product-header {
+      margin-bottom: 1.3rem;
+      margin-top: 0;
+    }
+
+    // Product title
+    .product-header > .product-title {
+      font-size: $font-size-general-large;
+      line-height: 1;
+      color: var(--color-product-title);
+      font-weight: var(--font-weight-regular);
+    }
+
+    // Price
+    .product-header > .product-price {
+      color: var(--color-price);
+      font-size: var(--font-size-19);
+      line-height: 1;
+      font-weight: var(--font-weight-bold);
+      margin: 0;
+    }
+
+    // Product description
+    .product-description > p {
+      font-size: var(--font-size-15);
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    .product-description {
+      margin-bottom: 3rem;
+    }
+
+    // Product image
+    .image {
+      height: unset;
+    }
+
+    .image .lazy {
+      @include aspect-ratio(385, 537);
+      transition: all .18s cubic-bezier(.19, 1, .22, 1);
+    }
+
+    // Model selection buttons
+    .models {
+      margin-bottom: 2.2rem;
+      gap: 1rem;
+    }
+
+    .models button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button) {
+      letter-spacing: 3px;
+      font-size: var(--font-size-16);
+      border-color: var(--color-white);
+      text-transform: uppercase;
+      color: var(--color-white);
+      font-weight: var(--font-weight-bold);
+      width: unset;
+      margin-right: 0;
+      margin-left: 0;
+      flex: 1;
+    }
+
+    // Size selection buttons
+    .choices {
+      align-items: center;
+    }
+
+    .sizes,
+    .models {
+      button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):focus,
+      button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button):hover {
+        background-color: transparent;
+        color: var(--color-white);
+      }
+
+      // Selected button
+      button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button).active {
+        background-color: var(--color-white);
+        color: var(--color-black);
+      }
+    }
+
+    .sizes.visible {
+      display: flex;
+      gap: 1rem;
+    }
+
+    // Size selection buttons
+    .sizes button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button) {
+      border-radius: 0;
+      font-size: var(--font-size-14);
+      width: var(--height-selection-buttons);
+      height: var(--height-selection-buttons);
+      min-height: var(--height-selection-buttons);
+      max-height: var(--height-selection-buttons);
+      min-width: var(--height-selection-buttons);
+      max-width: var(--height-selection-buttons);
+      margin: 0;
+      padding: 0;
+      align-items: center;
+      justify-content: center;
+      border-color: var(--color-white);
+      color: var(--color-white);
+      font-weight: var(--font-weight-bold);
+    }
+
+    // Add to cart button
+    .add-to-cart-wrapper > button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button) {
+      border-radius: 0;
+      font-size: var(--font-size-15);
+      font-weight: var(--font-weight-bold);
+      height: var(--height-selection-buttons);
+      margin: 0;
+      padding: 0 18px;
+      align-items: center;
+      justify-content: center;
+      display: inline-flex;
+      background-color: var(--color-white);
+      border-color: var(--color-white);
+      line-height: 1;
+      color: var(--color-black);
+    }
+
+    // Size guide link or description
+    .content p.size-guide {
+      margin-top: 3rem;
+      border: 0;
+    }
+
+    .content .size-guide a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail),
+    .text-link,
+    .content .size-guide {
+      font-size: var(--font-size-14);
+      font-weight: var(--font-weight-regular);
+      color: var(--color-muted);
+      margin: 0;
+      text-shadow: none;
+      box-shadow: none;
+      border-bottom: 1px solid rgba(#919191, .7);
+      transition: all .18s cubic-bezier(.19, 1, .22, 1);
+      overflow: hidden;
+      background: 0 0;
+      display: inline-block;
+      width: unset;
+      /* stylelint-disable-next-line */
+      letter-spacing: .000372645px;
+      line-height: 23px;
+
+      &.is-external-link::after {
+        background-size: 10px 10px !important;
+        width: 10px !important;
+        height: 10px !important;
+        background-image: url('../svg/external-link-muted.svg') !important;
+      }
+
+      &:hover,
+      &:focus {
+        border-color: var(--color-mint);
+        background: 0 0;
+        color: var(--color-white);
+      }
+
+      &:hover {
+        color: var(--color-white);
+        text-shadow: none;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .about-shipping {
+    margin-top: 10rem;
+    display: block;
+
+    @media (min-width: 480px) {
+      margin-top: 17rem;
+      display: grid;
+      grid-template-columns: 168px minmax(0, 1fr);
+
+      .col-title {
+        display: flex;
+        align-items: flex-start;
+      }
+
+      @media (max-width: 550px) {
+        grid-template-columns: 90px minmax(0, 1fr);
+        grid-gap: 4rem;
+      }
+    }
+
+    .col-title > h2 {
+      font-size: var(--font-size-12);
+      line-height: 150%;
+      letter-spacing: 18px;
+      text-transform: uppercase;
+      font-weight: var(--font-weight-regular);
+      margin-top: 0;
+      margin-bottom: 2.7rem;
+    }
+
+    .col > p {
+      color: var(--color-muted);
+      font-size: var(--font-size-16);
+      line-height: 150%;
+      /* stylelint-disable-next-line */
+      letter-spacing: .000372645px;
+      transform: translateY(-5px);
+
+      button,
+      a,
+      a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link):not(.post-edit-link):not(.contact-detail) {
+        @include store-link();
+      }
+    }
+  }
+
+  // Additional images in gallery grid
+  .merch-gallery {
+    display: grid;
+    grid-auto-rows: minmax(0, 100%);
+    grid-gap: 0;
+    grid-row-gap: 0;
+    grid-template-columns: 25% 25% 25% 25%;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .bigger {
+      grid-column: auto/span 2;
+      grid-row: auto/span 2;
+    }
+  }
+
+  .cart {
+    background-color: var(--color-white);
+    color: var(--color-black);
+
+    .cart-text,
+    b,
+    span,
+    p {
+      font-size: var(--font-size-15);
+      color: var(--color-black);
+    }
+
+    svg {
+      stroke: var(--color-black);
+      width: 24px;
+      height: 24px;
+      stroke-width: 1.2;
+      margin-right: 2rem;
+    }
+
+    button:not(.accordion):not(.action):not(.arrow-link-wrapper):not(.open-chat-contact):not(.service-switcher-button) {
+      font-size: var(--font-size-16);
+      color: var(--color-black);
+      border-color: var(--color-black);
+
+      &:hover,
+      &:focus {
+        background-color: var(--color-black);
+        border-color: var(--color-black);
+        color: var(--color-white);
+      }
+
+      &.buy {
+        background-color: var(--color-mint);
+        color: var(--color-black);
+        border-color: var(--color-mint);
+
+        &:hover,
+        &:focus {
+          background-color: var(--color-black);
+          border-color: var(--color-black);
+          color: var(--color-white);
+        }
+      }
+    }
+
+    .cart-text:nth-child(1),
+    .cart-text:nth-child(2),
+    .cart-text:nth-child(3),
+    .cart-text:nth-child(4),
+    .cart-text:nth-child(5),
+    .cart-text:nth-child(6) {
+      font-weight: var(--font-weight-bold);
+    }
+  }
+}

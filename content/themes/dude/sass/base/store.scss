@@ -1,7 +1,7 @@
 @charset 'utf-8';
 
 // Reset & grid
-@import 'normalize'; // 0.65 kB
+@import 'normalize';
 
 // Variables
 @import '../variables/breakpoints';
@@ -10,80 +10,37 @@
 @import '../variables/spacings';
 
 // Global features
-@import '../features/top'; // 132.352 kB
-@import '../features/effects'; // 154.283 kB
-@import '../features/swup'; // 157.541 kB
-@import '../features/simplepay'; // 219.115 kB
-@import '../features/slick'; // 222.661 kB
-@import '../features/custom-pagination'; // 223.422 kB
+@import '../features/top';
+@import '../features/effects';
+@import '../features/swup';
+@import '../features/simplepay';
 
 // Helpers
-@import 'helpers'; // 35.038 kB
-@import 'accessibility'; // 35.038 kB
+@import '../helpers/aspect-ratio';
+@import 'helpers';
+@import 'accessibility';
+
+// Components (2021)
+@import '../components/link';
 
 // Structure
-@import '../layout/general'; // 19.019 kB
-@import '../layout/typography'; // 35.038 kB
-@import '../layout/site-header'; // 35.038 kB
-@import '../layout/site-footer'; // 35.038 kB
-@import '../layout/forms'; // 35.038 kB
-@import '../layout/hero'; // 105.183 kB
-@import '../layout/hero-fp'; // 107.995 kB
-@import '../layout/hero-service'; // 109.574 kB
-@import '../layout/hero-reference'; // 111.03 kB
-@import '../layout/hero-company'; // 112.382 kB
-@import '../layout/hero-person'; // 118.739 kB
-@import '../layout/hero-jobs'; // 118.945 kB
-@import '../layout/hero-single'; // 122.11 kB
-@import '../layout/hero-contact-thanks'; // 123.695 kB
-@import '../layout/lazyload'; // 124.771 kB
-@import '../layout/gutenberg'; // 125.438 kB
-@import '../layout/chat'; // 129.299 kB
-@import '../layout/vimeo'; // 131.21 kB
-
-// Modules
-@import '../modules/our-services'; // 230.895 kB
-@import '../modules/references'; // 244.807 kB
-@import '../modules/latest-selected-mustread'; // 253.634 kB
-@import '../modules/process'; // 255.997 kB
-@import '../modules/values'; // 260.675 kB
-@import '../modules/timeline'; // 298.674 kB
-@import '../modules/dudes'; // 303.336 kB
-@import '../modules/cta-text'; // 304.144 kB
-@import '../modules/wide-text'; // 307.22 kB
-@import '../modules/open-position'; // 309.438 kB
-@import '../modules/testimonials'; // 314.3 kB
-@import '../modules/images'; // 317.957 kB
-@import '../modules/title-left-text-right'; // 320.496 kB
-@import '../modules/references-one'; // 322.209 kB
-@import '../modules/cta-with-phone-input'; // 329.473 kB
-@import '../modules/logos'; // 339.961 kB
-@import '../modules/two-images'; // 343.075 kB
-@import '../modules/image-in-container-image-full-width'; // 343.656 kB
-@import '../modules/cta-with-image'; // 348.089 kB
-@import '../modules/mission-vision'; // 352.346 kB
-@import '../modules/jobs'; // 355.066 kB
+@import '../layout/general';
+@import '../layout/typography';
+@import '../layout/site-header';
+@import '../layout/site-footer';
+@import '../layout/forms';
+@import '../layout/hero-contact-thanks';
+@import '../layout/lazyload';
+@import '../layout/chat';
 
 // Navigation
-@import '../navigation/nav-core'; // 356.341 kB
-@import '../navigation/nav-desktop'; // 371.722 kB
-@import '../navigation/nav-mobile'; // 407.348 kB
+@import '../navigation/nav-core';
+@import '../navigation/nav-desktop';
+@import '../navigation/nav-mobile';
 
-// Views
-@import '../views/single'; // 467.952 kB
-@import '../views/single-reference'; // 494.335 kB
-@import '../views/community-code'; // 518.135 kB
-@import '../views/template-surveys-modern'; // 552.313 kB
-@import '../views/template-company'; // 552.456 kB
-@import '../views/template-basic'; // 552.823 kB
-@import '../views/template-faq'; // 554.744 kB
-@import '../views/contact'; // 556.154 kB
-@import '../views/merch'; // 570.869 kB
-@import '../views/start-project'; // 634.276 kB
-@import '../views/blog-archive'; // 636.578 kB
-@import '../views/blog'; // 641.452 kB
-@import '../views/404'; // 694.676 kB
+// Merch views
+@import '../views/merch';
+@import '../views/merch-dude-kvlt-2021';
 
-// Gutenberg
-@import '../gutenberg/gutenberg-content'; // 860.219 kB
-@import '../gutenberg/general'; // 863.813 kB
+// Jobs in menu
+@import '../modules/jobs';

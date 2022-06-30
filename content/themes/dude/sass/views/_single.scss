@@ -143,6 +143,10 @@ body.single .block.block-single:not(.block-single-reference) {
 
     li {
       line-height: $line-height-blog;
+
+      a {
+        @include link();
+      }
     }
 
     @media (max-width: $article-max-width + 40px) {
@@ -228,19 +232,20 @@ body.single .block.block-single:not(.block-single-reference) {
   }
 
   .cat a:not(.button):not(.url):not(.no-text-link):not(.cta-link):not(.wp-block-button__link) {
+    background-image: none !important;
     margin: 0 13px 13px 0;
     font-size: var(--font-size-general-small);
     border: 1px solid $color-midnight-blue;
+    // stylelint-disable-next-line
+    display: inline-flex !important;
     padding: 7px 17px !important;
     line-height: 1;
     color: $color-midnight-blue;
     text-decoration: none;
     box-shadow: none;
     font-weight: 400;
-    display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-image: none !important;
 
     &:hover {
       border-color: $color-midnight-blue;
