@@ -68,3 +68,22 @@ if ( ! function_exists( 'dude_comments' ) ) {
 		</li>
 	<?php }
 }
+
+function get_sales_person() {
+  $week = wp_date( 'W' );
+  $person = '4469'; // Kristian
+
+  if ( '26' === $week || '27' === $week || '30' === $week ) {
+    $person = '4468'; // Juha
+  }
+
+  return [
+    'id'    => $person,
+    'name'  => get_the_title( $person ),
+    'tel'   => [
+      'display' => get_post_meta( $person, 'tel', true ),
+      'url'     => str_replace( ' ', '', get_post_meta( $person, 'tel', true ) ),
+    ],
+    'email' => get_post_meta( $person, 'email', true ),
+  ];
+} // end get_sales_person

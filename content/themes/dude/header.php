@@ -9,8 +9,10 @@
  * @package dude
  */
 
+$sales = get_sales_person();
+
 // Sales phone
-$sales_phone = '0408351033';
+$sales_phone = $sales['tel']['url'];
 
 $show_chat_greeting = true;
 if ( is_singular( 'post' ) ) {
@@ -20,6 +22,8 @@ if ( is_singular( 'post' ) ) {
 if ( 'merch' === get_post_type() ) {
   $show_chat_greeting = false;
 }
+
+$show_chat_greeting = true;
 
 $body_class = 'no-js';
 
@@ -226,9 +230,9 @@ if ( $show_chat_greeting ) {
                 <div class="cols cols-contact">
                   <div class="col">
                     <h3 class="contact-title">Asiakkuudet</h3>
-                    <p>Kristian Hohkavaara<br />
-                      <a class="no-text-link" href="tel:0408351033">040 835 1033</a><br />
-                      <a class="no-text-link" href="mailto:kristian@dude.fi">kristian@dude.fi</a>
+                    <p><?php echo esc_html( $sales['name'] ); ?><br />
+                      <a class="no-text-link" href="tel:<?php echo esc_html( $sales['tel']['url'] ); ?>"><?php echo esc_html( $sales['tel']['display'] ); ?></a><br />
+                      <a class="no-text-link" href="mailto:<?php echo esc_html( $sales['email'] ); ?>"><?php echo esc_html( $sales['email'] ); ?></a>
                     </p>
                   </div>
 
@@ -261,9 +265,9 @@ if ( $show_chat_greeting ) {
             <div class="cols cols-contact show-on-mobile">
               <div class="col">
                 <h3 class="contact-title contact-title-mobile">Asiakkuudet</h3>
-                <p>Kristian Hohkavaara<br />
-                  <a class="no-text-link" href="tel:0408351033">040 835 1033</a><br />
-                  <a class="no-text-link" href="mailto:kristian@dude.fi">kristian@dude.fi</a>
+                <p><?php echo esc_html( $sales['name'] ); ?><br />
+                  <a class="no-text-link" href="tel:<?php echo esc_html( $sales['tel']['url'] ); ?>"><?php echo esc_html( $sales['tel']['display'] ); ?></a><br />
+                  <a class="no-text-link" href="mailto:<?php echo esc_html( $sales['email'] ); ?>"><?php echo esc_html( $sales['email'] ); ?></a>
                 </p>
               </div>
 

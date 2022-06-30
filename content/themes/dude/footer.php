@@ -9,6 +9,8 @@
  * @package dude
  */
 
+$sales = get_sales_person();
+
 ?>
 
 </div><!-- #content -->
@@ -78,9 +80,9 @@
 
       <div class="col">
         <h3>Asiakkuudet</h3>
-          <p>Kristian Hohkavaara<br />
-            <a class="no-text-link" href="tel:0408351033">040 835 1033</a><br />
-            <a class="no-text-link" href="mailto:kristian@dude.fi">kristian@dude.fi</a>
+          <p><?php echo esc_html( $sales['name'] ); ?><br />
+            <a class="no-text-link" href="tel:<?php echo esc_html( $sales['tel']['url'] ); ?>"><?php echo esc_html( $sales['tel']['display'] ); ?></a><br />
+            <a class="no-text-link" href="mailto:<?php echo esc_html( $sales['email'] ); ?>"><?php echo esc_html( $sales['email'] ); ?></a>
         </p>
       </div>
 
