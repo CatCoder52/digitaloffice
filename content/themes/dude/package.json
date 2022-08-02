@@ -43,8 +43,8 @@
     "webpack-stream": "^6.1.2"
   },
   "dependencies": {
-    "@swup/head-plugin": "^1.1.0",
     "@swup/body-class-plugin": "^1.0.2",
+    "@swup/head-plugin": "^1.1.0",
     "@swup/scripts-plugin": "^1.1.0",
     "blueimp-gallery": "^3.3.0",
     "hamburgers": "^1.1.3",

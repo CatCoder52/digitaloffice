@@ -8558,11 +8558,6 @@ body.single .block.block-single:not(.block-single-reference):not(.block-single-r
 	color: #fff;
 }
 
-.block.block-single:not(.block-single-reference):not(.block-single-reference) .wp-block-gallery,
-body.single .block.block-single:not(.block-single-reference):not(.block-single-reference) .wp-block-gallery {
-	margin-top: 5rem;
-}
-
 .block.block-single:not(.block-single-reference) .container,
 .block.block-single:not(.block-single-reference) .site-header,
 body.single .block.block-single:not(.block-single-reference) .container,
@@ -10212,28 +10207,6 @@ body:not(.page-id-6357) .block.block-wide-text .site-header .aligncenter {
 	clear: both;
 	display: block;
 	margin: 0 auto;
-}
-
-.gutenberg-content .wp-block-gallery,
-body:not(.page-id-6357) .block.block-wide-text .container .wp-block-gallery,
-body:not(.page-id-6357) .block.block-wide-text .site-header .wp-block-gallery {
-	width: unset;
-	max-width: unset;
-	padding: 1.5rem;
-	gap: 1.5rem;
-}
-
-.gutenberg-content .wp-block-gallery .blocks-gallery-grid,
-body:not(.page-id-6357) .block.block-wide-text .container .wp-block-gallery .blocks-gallery-grid,
-body:not(.page-id-6357) .block.block-wide-text .site-header .wp-block-gallery .blocks-gallery-grid {
-	gap: 1.5rem;
-}
-
-.gutenberg-content .wp-block-gallery .blocks-gallery-item,
-body:not(.page-id-6357) .block.block-wide-text .container .wp-block-gallery .blocks-gallery-item,
-body:not(.page-id-6357) .block.block-wide-text .site-header .wp-block-gallery .blocks-gallery-item {
-	margin: 0;
-	padding: 0;
 }
 
 .gutenberg-content p,

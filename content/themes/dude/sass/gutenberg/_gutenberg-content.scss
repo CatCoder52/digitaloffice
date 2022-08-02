@@ -62,22 +62,6 @@
     margin: 0 auto;
   }
 
-  .wp-block-gallery {
-    width: unset;
-    max-width: unset;
-    padding: 1.5rem;
-    gap: 1.5rem;
-
-    .blocks-gallery-grid {
-      gap: 1.5rem;
-    }
-
-    .blocks-gallery-item {
-      margin: 0;
-      padding: 0;
-    }
-  }
-
   p {
     line-height: $line-height;
     color: $color-paragraphs;
