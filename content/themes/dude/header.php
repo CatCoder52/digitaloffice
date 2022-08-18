@@ -6,15 +6,15 @@
  *
  * @Author:		Roni Laukkarinen
  * @Date:   		2021-10-12 15:47:41
- * @Last Modified by:   Timi Wahalahti
- * @Last Modified time: 2022-06-30 15:16:56
+ * @Last Modified by:   Roni Laukkarinen
+ * @Last Modified time: 2022-08-18 10:25:54
  *
  * @package dude
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */
 
 // Jobs
-$open_positions_count = '2';
+$open_positions_count = '1';
 
 // Sales phone
 $sales = get_sales_person();
