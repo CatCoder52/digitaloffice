@@ -19,7 +19,7 @@ This is a guide on:
 
 ## Features
 
-On top of features included in [digitoimistodude/air-light](https://github.com/digitoimistodude/air-light), this project contains:
+this project contains:
 
 - Custom off-canvas megamenu
 - Lazy load for images
@@ -36,7 +36,7 @@ Green checkmarks show if the environment is already set up and running, red cros
 
 ## Setting it up initially
 
-According to our handbook, you should have run `createproject`, inital setup by now. Your Vagrant machine (or macOS LEMP) should be up and running. If not, go back to [dudestack-instructions](https://github.com/digitoimistodude/dudestack-instructions) or [Dude handbook](https://handbook.dude.fi/wordpress-kehitys/projektin-aloitus) and read what you have do.
+According to our handbook, you should have run `createproject`, inital setup by now. Your Vagrant machine (or macOS LEMP) should be up and running. If not, go back to [Dude handbook](https://handbook.dude.fi/wordpress-kehitys/projektin-aloitus) and read what you have do.
 
 If dev environment is indeed running, you're ready to version control the project.
 
