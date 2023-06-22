@@ -3,7 +3,7 @@
 
 ## Stack
 
-This project is built on [digitoimistodude/dudestack](https://github.com/digitoimistodude/dudestack), [digitoimistodude/air-light](https://github.com/digitoimistodude/air-light), [digitoimistodude/marlin-vagrant](https://github.com/digitoimistodude/marlin-vagrant) or [digitoimistodude/macos-lemp-setup](https://github.com/digitoimistodude/macos-lemp-setup), [digitoimistodude/devpackages](https://github.com/digitoimistodude/devpackages) which are documented at their corresponding locations. This is a guide on:
+This is a guide on:
 
 - How to setup the project initially
 - How to update the project dependencies
@@ -11,7 +11,6 @@ This project is built on [digitoimistodude/dudestack](https://github.com/digitoi
 
 ## Basic details
 
-**Developers:** [ronilaukkarinen](https://github.com/ronilaukkarinen), [timiwahalahti](https://github.com/timiwahalahti)  
 **Custom post type plugin:** ACF Pro
 
 ## Theme screenshot
